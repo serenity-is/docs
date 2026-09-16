@@ -3,7 +3,7 @@
 Gets the old row, if any, otherwise `null`.
 
 ```csharp
-public IRow Old { get; }
+public IRow? Old { get; }
 ```
 
 ## See Also

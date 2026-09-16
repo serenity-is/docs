@@ -3,7 +3,7 @@
 Gets the validation errors.
 
 ```csharp
-public IDictionary<string, string> ValidationErrors { get; }
+public IDictionary<string, string>? ValidationErrors { get; }
 ```
 
 ## Property Value

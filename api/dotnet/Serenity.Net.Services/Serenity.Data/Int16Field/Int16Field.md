@@ -3,9 +3,9 @@
 Field with an Int16 value.
 
 ```csharp
-public Int16Field(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, short?> getValue = null, 
-    Action<IRow, short?> setValue = null)
+public Int16Field(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, short?>? getValue = null, 
+    Action<IRow, short?>? setValue = null)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 Fixes the type of the parameter to something suitable as a SQL parameter.
 
 ```csharp
-public static object FixParamType(object value)
+public static object? FixParamType(object? value)
 ```
 
 | parameter | description |

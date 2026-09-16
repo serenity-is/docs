@@ -1,7 +1,7 @@
 # SafeCriteriaJsonConverter.Read method
 
 ```csharp
-public override BaseCriteria Read(ref Utf8JsonReader reader, Type typeToConvert, 
+public override BaseCriteria? Read(ref Utf8JsonReader reader, Type typeToConvert, 
     JsonSerializerOptions options)
 ```
 

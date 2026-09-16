@@ -3,7 +3,7 @@
 Gets thumbnail URL for the file path.
 
 ```csharp
-public static string GetThumbnailUrl(this IUploadStorage uploadStorage, string path)
+public static string? GetThumbnailUrl(this IUploadStorage uploadStorage, string path)
 ```
 
 | parameter | description |

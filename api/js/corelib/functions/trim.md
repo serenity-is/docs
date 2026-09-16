@@ -24,4 +24,4 @@ The trimmed string, or `undefined` if `s` is `null`/`undefined`.
 
 ## Deprecated
 
-Use String.prototype.trim directly — this shim exists only for legacy `Q.trim` call sites.
+Use String.prototype.trim directly — this shim exists only for legacy `trim` call sites.

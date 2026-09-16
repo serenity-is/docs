@@ -21,15 +21,15 @@ public sealed class UserRow : Serenity.Extensions.Entities.LoggingRow<UserRow.Ro
     public int? TenantId { get => Fields.TenantId[this]; set => Fields.TenantId[this] = value; }
 
     [DisplayName("Tenant"), Expression("tnt.TenantName")]
-    public string TenantName { get => Fields.TenantName[this]; set => Fields.TenantName[this] = value; }
+    public string? TenantName { get => Fields.TenantName[this]; set => Fields.TenantName[this] = value; }
 
     //...
     public class RowFields : Serenity.Extensions.Entities.LoggingRowFields
     {
         //...
-        public DateTimeField LastDirectoryUpdate;
-        public StringField Password;
-        public StringField PasswordConfirm;
+        public DateTimeField LastDirectoryUpdate = null!;
+        public StringField Password = null!;
+        public StringField PasswordConfirm = null!;
         //...
     }
 }
@@ -47,8 +47,8 @@ public class UserForm
 {
     //...
     [OneWay]
-    public string Source { get; set; }
-    public bool IsActive { get; set; }
+    public string? Source { get; set; }
+    public bool? IsActive { get; set; }
     public int? TenantId { get; set; }
 }
 ```

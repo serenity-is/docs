@@ -3,7 +3,7 @@
 The source language ID.
 
 ```csharp
-public string SourceLanguageID { get; set; }
+public string? SourceLanguageID { get; set; }
 ```
 
 ## See Also

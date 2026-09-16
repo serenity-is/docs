@@ -15,6 +15,12 @@ public BaseCriteria Contains(string mask, bool upper = false)
 
 A new binary Contains criteria.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | mask is null |
+
 ## See Also
 
 * class [BaseCriteria](../BaseCriteria.md)

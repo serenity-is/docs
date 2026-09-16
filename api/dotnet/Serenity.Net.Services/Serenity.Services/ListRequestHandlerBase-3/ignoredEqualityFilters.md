@@ -3,7 +3,7 @@
 Set of ignored equality filter entries.
 
 ```csharp
-protected HashSet<string> ignoredEqualityFilters;
+protected HashSet<string>? ignoredEqualityFilters;
 ```
 
 ## See Also

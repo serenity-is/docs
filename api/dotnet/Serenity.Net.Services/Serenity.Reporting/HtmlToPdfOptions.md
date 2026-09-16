@@ -42,4 +42,4 @@ public class HtmlToPdfOptions : IHtmlToPdfOptions
 ## See Also
 
 * interface [IHtmlToPdfOptions](./IHtmlToPdfOptions.md)
-* **Source:** *[HtmlToPdfOptions.cs](https://github.com/serenity-is/Serenity/blob/87e7d42434a98fa20ee41a2acef52fac171f100f/src/services/Reporting/HtmlToPdf/HtmlToPdfOptions.cs)*
+* **Source:** *[HtmlToPdfOptions.cs](https://github.com/serenity-is/Serenity/blob/863efadd219f60621f4ec24faf3728a6a7a4290c/src/services/Reporting/HtmlToPdf/HtmlToPdfOptions.cs)*

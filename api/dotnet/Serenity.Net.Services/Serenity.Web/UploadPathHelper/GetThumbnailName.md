@@ -3,7 +3,7 @@
 Gets thumb file name.
 
 ```csharp
-public static string GetThumbnailName(string path, int? width = null, int? height = null)
+public static string? GetThumbnailName(string? path, int? width = null, int? height = null)
 ```
 
 | parameter | description |

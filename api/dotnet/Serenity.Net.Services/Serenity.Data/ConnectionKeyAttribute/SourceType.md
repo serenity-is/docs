@@ -3,7 +3,7 @@
 Gets the source type with connection key attribute if any.
 
 ```csharp
-public Type SourceType { get; }
+public Type? SourceType { get; }
 ```
 
 ## Property Value

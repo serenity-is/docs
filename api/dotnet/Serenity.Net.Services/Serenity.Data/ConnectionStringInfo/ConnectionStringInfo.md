@@ -3,7 +3,7 @@
 Contains a connection string, its key, and provider name.
 
 ```csharp
-public ConnectionStringInfo(string connectionKey, string connectionString, string providerName, 
+public ConnectionStringInfo(string connectionKey, string? connectionString, string? providerName, 
     ISqlDialect dialect)
 ```
 

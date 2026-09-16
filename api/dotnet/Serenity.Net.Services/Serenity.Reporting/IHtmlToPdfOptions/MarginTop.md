@@ -3,7 +3,7 @@
 Page top margin, default is unspecified.
 
 ```csharp
-public string MarginTop { get; set; }
+public string? MarginTop { get; set; }
 ```
 
 ## See Also

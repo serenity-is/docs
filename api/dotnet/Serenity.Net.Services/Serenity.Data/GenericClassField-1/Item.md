@@ -3,7 +3,7 @@
 Gets or sets the value of this field with the specified row.
 
 ```csharp
-public TValue this[IRow row] { get; set; }
+public TValue? this[IRow row] { get; set; }
 ```
 
 | parameter | description |

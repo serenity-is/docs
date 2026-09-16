@@ -3,7 +3,7 @@
 Gets or sets a semicolon-separated list of connection keys that fall back to this connection when they are not configured. For example, "ProFeatures;ProWorkLog".
 
 ```csharp
-public string FallbackFor { get; set; }
+public string? FallbackFor { get; set; }
 ```
 
 ## Remarks

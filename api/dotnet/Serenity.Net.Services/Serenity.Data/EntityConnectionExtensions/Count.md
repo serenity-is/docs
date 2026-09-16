@@ -28,7 +28,7 @@ Number of records in the table.
 Gets count of records matching a specified criteria.
 
 ```csharp
-public static int Count<TRow>(this IDbConnection connection, ICriteria where)
+public static int Count<TRow>(this IDbConnection connection, ICriteria? where)
     where TRow : class, IRow, new()
 ```
 

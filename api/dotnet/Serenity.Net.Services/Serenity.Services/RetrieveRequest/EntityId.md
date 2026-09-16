@@ -3,7 +3,7 @@
 The entity ID to retrieve
 
 ```csharp
-public object EntityId { get; set; }
+public object? EntityId { get; set; }
 ```
 
 ## See Also

@@ -39,7 +39,7 @@ A task representing the asynchronous operation. The task result is the single en
 Asynchronously finds a single entity matching the specified criteria. This method selects only the table fields, and no foreign / calculated fields. Use other overloads if you want to select different set of fields.
 
 ```csharp
-public static Task<TRow> SingleAsync<TRow>(this IDbConnection connection, ICriteria where, 
+public static Task<TRow> SingleAsync<TRow>(this IDbConnection connection, ICriteria? where, 
     CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```

@@ -4,7 +4,7 @@ Asynchronously lists the rows returned from executing the query.
 
 ```csharp
 public static Task<List<TRow>> ListAsync<TRow>(this SqlQuery query, IDbConnection connection, 
-    TRow loaderRow = default, CancellationToken cancellationToken = default)
+    TRow? loaderRow = default, CancellationToken cancellationToken = default)
     where TRow : class, IRow
 ```
 

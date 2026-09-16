@@ -3,7 +3,7 @@
 Gets or sets the suggested file name (without extension).
 
 ```csharp
-public string FileName { get; set; }
+public string? FileName { get; set; }
 ```
 
 ## See Also

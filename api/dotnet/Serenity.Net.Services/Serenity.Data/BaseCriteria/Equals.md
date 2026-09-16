@@ -3,7 +3,7 @@
 Must override this or will get operator overload warning.
 
 ```csharp
-public override bool Equals(object obj)
+public override bool Equals(object? obj)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 Gets the user from the request context.
 
 ```csharp
-protected ClaimsPrincipal User { get; }
+protected ClaimsPrincipal? User { get; }
 ```
 
 ## See Also

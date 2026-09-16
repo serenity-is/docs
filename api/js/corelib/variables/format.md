@@ -6,7 +6,7 @@
 
 Defined in: [src/compat/formatting-compat.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/formatting-compat.ts#L44)
 
-Legacy alias for [stringFormat](../functions/stringFormat.md) (`Q.format`).
+Legacy alias for [stringFormat](../functions/stringFormat.md) (`format`).
 
 Formats a string by replacing `{index[:format]}` placeholders with the supplied arguments, using [Culture](Culture.md) for locale-aware value formatting.
 

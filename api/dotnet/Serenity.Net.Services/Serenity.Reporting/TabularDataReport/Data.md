@@ -3,7 +3,7 @@
 The report data
 
 ```csharp
-protected IEnumerable Data { get; set; }
+protected IEnumerable? Data { get; set; }
 ```
 
 ## See Also

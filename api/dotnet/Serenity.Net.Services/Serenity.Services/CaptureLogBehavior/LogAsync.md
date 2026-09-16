@@ -3,7 +3,7 @@
 Asynchronously logs a capture log operation
 
 ```csharp
-public Task LogAsync(IUnitOfWork uow, IRow old, IRow row, object userId, 
+public Task LogAsync(IUnitOfWork uow, IRow? old, IRow? row, object? userId, 
     CancellationToken cancellationToken = default)
 ```
 

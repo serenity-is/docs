@@ -69,7 +69,7 @@ public TabularDataReport(IEnumerable data, Type columnsType, IServiceProvider se
 Initializes a new instance of the class with the given data, columns type and export columns.
 
 ```csharp
-public TabularDataReport(IEnumerable data, Type columnsType, IEnumerable<string> exportColumns, 
+public TabularDataReport(IEnumerable data, Type columnsType, IEnumerable<string>? exportColumns, 
     IServiceProvider serviceProvider)
 ```
 

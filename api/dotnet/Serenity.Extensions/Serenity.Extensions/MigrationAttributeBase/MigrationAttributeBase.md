@@ -5,7 +5,7 @@ Initializes a new instance of the [`MigrationAttributeBase`](../MigrationAttribu
 ```csharp
 public MigrationAttributeBase(long version, 
     TransactionBehavior transactionBehavior = TransactionBehavior.Default, 
-    string description = null)
+    string? description = null)
 ```
 
 | parameter | description |

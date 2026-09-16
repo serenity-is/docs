@@ -3,7 +3,7 @@
 The user-provided custom translation in the target language.
 
 ```csharp
-public string CustomText { get; set; }
+public string? CustomText { get; set; }
 ```
 
 ## See Also

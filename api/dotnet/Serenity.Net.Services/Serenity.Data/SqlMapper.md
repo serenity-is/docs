@@ -20,4 +20,4 @@ public static class SqlMapper
 
 ## See Also
 
-* **Source:** *[DapperCore.cs](https://github.com/serenity-is/Serenity/blob/5445cb1a4cff73ddcb1836e22ed93205899c0812/src/services/Data/SqlHelpers/DapperCore.cs)*
+* **Source:** *[DapperCore.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/SqlHelpers/DapperCore.cs)*

@@ -3,7 +3,7 @@
 Gets or sets the list of include column names as array.
 
 ```csharp
-public string[] IncludeColumnNames { get; set; }
+public string[]? IncludeColumnNames { get; set; }
 ```
 
 ## Property Value

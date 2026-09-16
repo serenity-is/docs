@@ -3,7 +3,7 @@
 The name of the uploaded Excel file.
 
 ```csharp
-public string FileName { get; set; }
+public string? FileName { get; set; }
 ```
 
 ## See Also

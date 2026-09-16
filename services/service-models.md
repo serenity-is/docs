@@ -11,7 +11,7 @@ Service models are the request/response objects exchanged between the client and
 ```cs
 public class ServiceRequest
 {
-    public Dictionary<string, object> CustomData { get; set; }
+    public Dictionary<string, object?>? CustomData { get; set; }
 }
 ```
 
@@ -24,8 +24,8 @@ public class ServiceRequest
 ```cs
 public class ServiceResponse
 {
-    public ServiceError Error { get; set; }
-    public Dictionary<string, object> CustomData { get; set; }
+    public ServiceError? Error { get; set; }
+    public Dictionary<string, object?>? CustomData { get; set; }
 }
 ```
 

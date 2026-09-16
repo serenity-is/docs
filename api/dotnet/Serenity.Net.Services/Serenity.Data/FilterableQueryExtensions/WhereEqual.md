@@ -3,7 +3,7 @@
 Adds a where statement with equality filter to a query, and sets the parameter value with a parameter.
 
 ```csharp
-public static T WhereEqual<T>(this T self, IField field, object value)
+public static T WhereEqual<T>(this T self, IField field, object? value)
     where T : IFilterableQuery
 ```
 

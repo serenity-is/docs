@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [LayoutTimer](../README.md) / trigger
 
-# ~~Function: trigger()~~
+# Function: trigger()
 
 > **trigger**(`key`): `void`
 

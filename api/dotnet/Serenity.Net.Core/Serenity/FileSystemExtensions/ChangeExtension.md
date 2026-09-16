@@ -3,7 +3,7 @@
 Changes the extension of a path string.
 
 ```csharp
-public static string ChangeExtension(this IFileSystem _, string path, string extension)
+public static string ChangeExtension(this IFileSystem _, string path, string? extension)
 ```
 
 | parameter | description |

@@ -16,4 +16,4 @@ The newly created and appended `HTMLDivElement`.
 
 ## Remarks
 
-Compat helper from `Q.newBodyDiv`; prefer `document.createElement` + explicit append in new code.
+Compat helper from `newBodyDiv`; prefer `document.createElement` + explicit append in new code.

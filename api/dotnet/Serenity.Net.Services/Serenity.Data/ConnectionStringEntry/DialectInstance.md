@@ -3,7 +3,7 @@
 Gets or sets the dialect instance.
 
 ```csharp
-public ISqlDialect DialectInstance { get; set; }
+public ISqlDialect? DialectInstance { get; set; }
 ```
 
 ## See Also

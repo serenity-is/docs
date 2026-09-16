@@ -3,7 +3,7 @@
 Gets the dictionary data.
 
 ```csharp
-public object GetDictionaryData(object key)
+public object? GetDictionaryData(object key)
 ```
 
 | parameter | description |

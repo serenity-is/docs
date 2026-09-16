@@ -3,7 +3,7 @@
 The environment settings used to resolve the internal URL of the web site.
 
 ```csharp
-protected readonly EnvironmentSettings environmentSettings;
+protected readonly EnvironmentSettings? environmentSettings;
 ```
 
 ## See Also

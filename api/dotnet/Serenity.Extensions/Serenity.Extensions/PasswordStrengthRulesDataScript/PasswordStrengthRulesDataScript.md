@@ -3,7 +3,7 @@
 This declares a dynamic script with key 'PasswordStrengthRules' that will be available from client side.
 
 ```csharp
-public PasswordStrengthRulesDataScript(IOptions<MembershipSettings> membershipSettings = null)
+public PasswordStrengthRulesDataScript(IOptions<MembershipSettings>? membershipSettings = null)
 ```
 
 ## See Also

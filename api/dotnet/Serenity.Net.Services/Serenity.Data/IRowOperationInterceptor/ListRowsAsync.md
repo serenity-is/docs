@@ -3,8 +3,8 @@
 Intercepts the async EntityConnectionExtensions List and Count methods. The default implementation forwards to [`ListRows`](./ListRows.md).
 
 ```csharp
-public Task<OptionalValue<IList>> ListRowsAsync(Type rowType, ICriteria where, 
-    Action<SqlQuery> editQuery, bool countOnly, CancellationToken cancellationToken = default)
+public Task<OptionalValue<IList>> ListRowsAsync(Type rowType, ICriteria? where, 
+    Action<SqlQuery>? editQuery, bool countOnly, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

@@ -4,7 +4,7 @@ Executes the default export of a module page, usually `pageInit`.
 
 ```csharp
 public static HtmlString ModulePageInit(this IHtmlHelper html, string module, 
-    object options = null, bool css = true)
+    object? options = null, bool css = true)
 ```
 
 | parameter | description |

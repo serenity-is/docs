@@ -3,7 +3,7 @@
 Determines whether the collection is empty or null.
 
 ```csharp
-public static bool IsEmptyOrNull(this ICollection collection)
+public static bool IsEmptyOrNull(this ICollection? collection)
 ```
 
 | parameter | description |

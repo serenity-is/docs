@@ -3,7 +3,7 @@
 Sets the parameter.
 
 ```csharp
-public void SetParam(string name, object value)
+public void SetParam(string name, object? value)
 ```
 
 | parameter | description |

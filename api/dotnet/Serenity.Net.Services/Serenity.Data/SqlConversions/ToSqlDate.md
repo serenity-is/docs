@@ -3,7 +3,7 @@
 Converts the value to a SQL date.
 
 ```csharp
-public static string ToSqlDate(this DateTime value, ISqlDialect dialect = null)
+public static string ToSqlDate(this DateTime value, ISqlDialect? dialect = null)
 ```
 
 | parameter | description |
@@ -27,7 +27,7 @@ The SQL date constant.
 Converts the value to a SQL date.
 
 ```csharp
-public static string ToSqlDate(this DateTime? value, ISqlDialect dialect = null)
+public static string ToSqlDate(this DateTime? value, ISqlDialect? dialect = null)
 ```
 
 | parameter | description |

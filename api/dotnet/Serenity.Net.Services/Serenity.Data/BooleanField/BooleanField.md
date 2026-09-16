@@ -3,9 +3,9 @@
 Field with a boolean value.
 
 ```csharp
-public BooleanField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, bool?> getValue = null, 
-    Action<IRow, bool?> setValue = null)
+public BooleanField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, bool?>? getValue = null, 
+    Action<IRow, bool?>? setValue = null)
 ```
 
 | parameter | description |

@@ -4,7 +4,7 @@ The default connection string source.
 
 ```csharp
 public DefaultConnectionStrings(IOptions<ConnectionStringOptions> options, 
-    ISqlDialectMapper sqlDialectMapper = null, ITypeSource typeSource = null)
+    ISqlDialectMapper? sqlDialectMapper = null, ITypeSource? typeSource = null)
 ```
 
 | parameter | description |

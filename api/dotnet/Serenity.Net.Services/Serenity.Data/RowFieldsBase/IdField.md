@@ -3,7 +3,7 @@
 Gets the identifier field.
 
 ```csharp
-public Field IdField { get; }
+public Field? IdField { get; }
 ```
 
 ## Property Value

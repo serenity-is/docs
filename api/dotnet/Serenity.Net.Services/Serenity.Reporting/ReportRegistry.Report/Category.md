@@ -3,7 +3,7 @@
 Gets the category.
 
 ```csharp
-public Category Category { get; }
+public Category? Category { get; }
 ```
 
 ## See Also

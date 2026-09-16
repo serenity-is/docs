@@ -108,7 +108,7 @@ The pro-features `MeetingRow` uses it for its attendee list:
 [DisplayName("Attendee List")]
 [MasterDetailRelation(nameof(MeetingAttendeeRow.MeetingId),
     ColumnsType = typeof(Columns.MeetingAttendeeColumns)), MeetingAttendeeEditor]
-public List<MeetingAttendeeRow> AttendeeList { get => fields.AttendeeList[this]; set => fields.AttendeeList[this] = value; }
+public List<MeetingAttendeeRow>? AttendeeList { get => fields.AttendeeList[this]; set => fields.AttendeeList[this] = value; }
 ```
 
 - `ForeignKey` (or the first argument) is the property name of the FK field in the detail table that matches the master's key.
@@ -125,7 +125,7 @@ The Northwind `CustomerRow` uses it for its representatives:
 [DisplayName("Representatives"), AsyncLookupEditor(typeof(EmployeeRow), Multiple = true), NotMapped]
 [LinkingSetRelation(typeof(CustomerRepresentativesRow), "CustomerId", "EmployeeId")]
 [MinSelectLevel(SelectLevel.Details), QuickFilter(CssClass = "hidden-xs")]
-public List<int> Representatives { get => fields.Representatives[this]; set => fields.Representatives[this] = value; }
+public List<int>? Representatives { get => fields.Representatives[this]; set => fields.Representatives[this] = value; }
 ```
 
 - `rowType` — the link row type.
@@ -143,7 +143,7 @@ Serenity has two ways to declare a unique constraint, both checked before save:
 
 ```cs
 [DisplayName("Product Name"), Size(40), NotNull, Unique]
-public string ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
+public string? ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
 ```
 
 Options include `CheckBeforeSave`, `IgnoreDeleted`, `IgnoreNulls`, and `ErrorMessage`.

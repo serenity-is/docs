@@ -16,4 +16,4 @@ public interface IUndeleteRequestProcessorAsync : IUndeleteRequestHandler
 ## See Also
 
 * interface [IUndeleteRequestHandler](./IUndeleteRequestHandler.md)
-* **Source:** *[IUndeleteRequestProcessorAsync.cs](https://github.com/serenity-is/Serenity/blob/574b0f91eebdcc8cdd7f9af77f617c5cf3fc4aec/src/services/RequestHandlers/Undelete/IUndeleteRequestProcessorAsync.cs)*
+* **Source:** *[IUndeleteRequestProcessorAsync.cs](https://github.com/serenity-is/Serenity/blob/a8d7b8ad81c84c4caad371e2eeca49085cf8de96/src/services/RequestHandlers/Undelete/IUndeleteRequestProcessorAsync.cs)*

@@ -3,7 +3,7 @@
 Deserializes this field's value from JSON.
 
 ```csharp
-protected virtual TValue ValueFromJson(JsonReader reader, JsonSerializer serializer)
+protected virtual TValue? ValueFromJson(JsonReader reader, JsonSerializer serializer)
 ```
 
 | parameter | description |
@@ -26,7 +26,7 @@ The deserialized value.
 Deserializes this field's value from JSON.
 
 ```csharp
-protected virtual TValue ValueFromJson(ref Utf8JsonReader reader, JsonSerializerOptions options)
+protected virtual TValue? ValueFromJson(ref Utf8JsonReader reader, JsonSerializerOptions options)
 ```
 
 | parameter | description |

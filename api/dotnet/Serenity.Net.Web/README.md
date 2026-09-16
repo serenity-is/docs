@@ -4,7 +4,6 @@
 
 | public type | description |
 | --- | --- |
-| static class [ArgumentExceptions](./Serenity/ArgumentExceptions.md) | This class contains methods for creating ArgumentException and subclasses while avoiding analyzer warnings regarding mismatched argument names. |
 | static class [DataProtectorBinaryTokenExtensions](./Serenity/DataProtectorBinaryTokenExtensions.md) | Extension methods for IDataProtector to support tokens created via a BinaryWriter. |
 | class [ScriptCulture](./Serenity/ScriptCulture.md) | Culture options that are passed to the client side. |
 
@@ -126,6 +125,7 @@
 | interface [IFileWatcherFactory](./Serenity.Web/IFileWatcherFactory.md) | An abstract factory for creating file system watchers. |
 | interface [IScriptBundleManager](./Serenity.Web/IScriptBundleManager.md) | Abstraction for a script bundling manager. |
 | interface [IScriptMinifier](./Serenity.Web/IScriptMinifier.md) | Abstraction for a script minifier. |
+| interface [IStartedProcess](./Serenity.Web/IStartedProcess.md) | Abstraction for a started system process, so it can be replaced in tests. |
 | interface [IUploadFileResponder](./Serenity.Web/IUploadFileResponder.md) | Abstraction for reading a file via `/upload/path`, e.g. the Read action in the FilePage. |
 | static class [KnownMimeTypes](./Serenity.Web/KnownMimeTypes.md) | Contains a set of known popular mime types. |
 | class [LocalTextDataScript](./Serenity.Web/LocalTextDataScript.md) | Local text data script to access local texts from an external app like mobile. |

@@ -4,7 +4,7 @@ Default implementation of IReportFactory.
 
 ```csharp
 public DefaultReportFactory(IReportRegistry reportRegistry, IServiceProvider serviceProvider, 
-    IHttpContextAccessor httpContextAccessor = null)
+    IHttpContextAccessor? httpContextAccessor = null)
 ```
 
 | parameter | description |

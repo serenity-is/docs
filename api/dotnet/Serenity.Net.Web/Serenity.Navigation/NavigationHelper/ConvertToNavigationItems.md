@@ -4,7 +4,7 @@ Converts a list of NavigationItemAttribute objects to a list of NavigationItem c
 
 ```csharp
 public static List<NavigationItem> ConvertToNavigationItems(IPermissionService permissions, 
-    ILookup<string, NavigationItemAttribute> attrByCategory, Func<string, string> resolveUrl)
+    ILookup<string, NavigationItemAttribute> attrByCategory, Func<string, string>? resolveUrl)
 ```
 
 | parameter | description |

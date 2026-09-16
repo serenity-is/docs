@@ -3,7 +3,7 @@
 Maps a field using IListFieldMappingBehavior's if any
 
 ```csharp
-protected abstract string MapFieldExpression(IField field, SqlQuery query)
+protected abstract string? MapFieldExpression(IField field, SqlQuery query)
 ```
 
 | parameter | description |

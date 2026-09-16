@@ -1,7 +1,7 @@
 # OracleSchemaProvider.GetForeignKeys method
 
 ```csharp
-public IEnumerable<ForeignKeyInfo> GetForeignKeys(IDbConnection connection, string schema, 
+public IEnumerable<ForeignKeyInfo> GetForeignKeys(IDbConnection connection, string? schema, 
     string table)
 ```
 

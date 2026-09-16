@@ -4,7 +4,7 @@ Extracts a report column from a FieldInfo
 
 ```csharp
 public static ReportColumn FromFieldInfo(FieldInfo field, ITextLocalizer localizer, 
-    Field baseField = null)
+    Field? baseField = null)
 ```
 
 | parameter | description |

@@ -5,7 +5,7 @@ Executes an UPSERT (insert or update) query on the connection asynchronously and
 ```csharp
 public static Task<int> ExecuteUpsertAsync(this SqlInsert query, IDbConnection connection, 
     IEnumerable<string> keyFields, ExpectedRows expectedRows = ExpectedRows.Ignore, 
-    ILogger logger = null, CancellationToken cancellationToken = default)
+    ILogger? logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

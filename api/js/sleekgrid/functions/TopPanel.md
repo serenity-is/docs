@@ -2,15 +2,17 @@
 
 # Function: TopPanel()
 
-> **TopPanel**(`__namedParameters`): `JSXElement`
+> **TopPanel**(`props`): `JSXElement`
 
-Defined in: [src/layouts/layout-components.tsx:65](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L65)
+Defined in: [src/layouts/layout-components.tsx:66](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L66)
 
 Top panel container attached to the main band; hidden when `hideTopPanel` is true.
 
 ## Parameters
 
-### \_\_namedParameters
+### props
+
+Component props containing refs and signals.
 
 #### refs
 

@@ -3,7 +3,7 @@
 Gets a reference to the [`IField`](../IField.md) object passed to the constructor.
 
 ```csharp
-public static IField Field { get; }
+public static IField? Field { get; }
 ```
 
 ## See Also

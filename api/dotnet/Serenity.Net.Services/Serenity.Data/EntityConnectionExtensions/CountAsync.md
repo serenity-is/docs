@@ -30,7 +30,7 @@ A task representing the asynchronous operation. The task result is the number of
 Asynchronously gets count of records matching a specified criteria.
 
 ```csharp
-public static Task<int> CountAsync<TRow>(this IDbConnection connection, ICriteria where, 
+public static Task<int> CountAsync<TRow>(this IDbConnection connection, ICriteria? where, 
     CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```

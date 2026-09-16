@@ -3,7 +3,7 @@
 Gets the title.
 
 ```csharp
-public string GetTitle(ITextLocalizer localizer)
+public string GetTitle(ITextLocalizer? localizer)
 ```
 
 | parameter | description |

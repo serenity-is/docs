@@ -3,7 +3,7 @@
 Gets the primary file path from a thumbnail path
 
 ```csharp
-public static string GetPrimaryFileFromThumb(this IUploadStorage uploadStorage, string thumbPath)
+public static string? GetPrimaryFileFromThumb(this IUploadStorage uploadStorage, string thumbPath)
 ```
 
 | parameter | description |

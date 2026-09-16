@@ -3,7 +3,7 @@
 Finds the field by its property name.
 
 ```csharp
-public static Field FindFieldByPropertyName(this IRow row, string name)
+public static Field? FindFieldByPropertyName(this IRow row, string? name)
 ```
 
 | parameter | description |

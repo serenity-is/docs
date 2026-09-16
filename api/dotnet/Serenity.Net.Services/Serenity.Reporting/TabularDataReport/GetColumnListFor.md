@@ -4,7 +4,7 @@ Extracts report columns from a columns type
 
 ```csharp
 public static List<ReportColumn> GetColumnListFor(Type columnsType, 
-    IEnumerable<string> exportColumns, IServiceProvider serviceProvider)
+    IEnumerable<string>? exportColumns, IServiceProvider? serviceProvider)
 ```
 
 | parameter | description |

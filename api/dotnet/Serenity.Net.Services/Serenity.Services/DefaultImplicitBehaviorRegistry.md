@@ -7,14 +7,28 @@ Default implementation for the [`IImplicitBehaviorRegistry`](./IImplicitBehavior
 public class DefaultImplicitBehaviorRegistry : IImplicitBehaviorRegistry
 ```
 
+| parameter | description |
+| --- | --- |
+| typeSource | The type source to extract [`IImplicitBehavior`](./IImplicitBehavior.md) types from |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultImplicitBehaviorRegistry](DefaultImplicitBehaviorRegistry/DefaultImplicitBehaviorRegistry.md)(…) | Initializes a new instance of the class. |
+| [DefaultImplicitBehaviorRegistry](DefaultImplicitBehaviorRegistry/DefaultImplicitBehaviorRegistry.md)(…) | Default implementation for the [`IImplicitBehaviorRegistry`](./IImplicitBehaviorRegistry.md) |
 | [GetTypes](DefaultImplicitBehaviorRegistry/GetTypes.md)() |  |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | *typeSource* is `null`. |
+
+## Remarks
+
+Initializes a new instance of the class.
 
 ## See Also
 
 * interface [IImplicitBehaviorRegistry](./IImplicitBehaviorRegistry.md)
-* **Source:** *[DefaultImplicitBehaviorRegistry.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Behavior/DefaultImplicitBehaviorRegistry.cs)*
+* **Source:** *[DefaultImplicitBehaviorRegistry.cs](https://github.com/serenity-is/Serenity/blob/0ecdd6666300147eb7b98189e3ebb71954692e8c/src/services/RequestHandlers/Behavior/DefaultImplicitBehaviorRegistry.cs)*

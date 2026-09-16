@@ -198,12 +198,12 @@ However, our `SaveResponse` derives from `ServiceResponse`, which is just a plai
 ```csharp
 public class ServiceResponse
 {
-    public ServiceError Error { get; set; }
+    public ServiceError? Error { get; set; }
 }
 
 public class SaveResponse : ServiceResponse
 {
-    public object EntityId { get; set; }
+    public object? EntityId { get; set; }
     // ...
 }
 ```
@@ -221,8 +221,8 @@ public class ServiceRequest
 
 public class SaveRequest<TEntity> : ServiceRequest, ISaveRequest
 {
-    public object EntityId { get; set; }
-    public TEntity Entity { get; set; }
+    public object? EntityId { get; set; }
+    public TEntity? Entity { get; set; }
 }
 
 ```

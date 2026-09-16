@@ -3,7 +3,7 @@
 Gets the response type for the handler instance
 
 ```csharp
-public static Type GetResponseType(this IRequestHandler handler)
+public static Type? GetResponseType(this IRequestHandler handler)
 ```
 
 | parameter | description |

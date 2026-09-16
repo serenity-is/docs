@@ -10,7 +10,7 @@ Consider a row with UI attributes placed directly on its properties:
 public sealed class OrderRow : Row<OrderRow.RowFields>, IIdRow
 {
     [CustomerEditor]
-    public string CustomerID { get; set; }
+    public string? CustomerID { get; set; }
 
     [AsyncLookupEditor(typeof(EmployeeRow))]
     public int? EmployeeID { get; set; }
@@ -28,7 +28,7 @@ namespace Serenity.Demo.Northwind.Annotations;
 public sealed class OrderRowAnnotations
 {
     [CustomerEditor]
-    public string CustomerID { get; set; }
+    public string? CustomerID { get; set; }
 
     [AsyncLookupEditor(typeof(EmployeeRow))]
     public int? EmployeeID { get; set; }

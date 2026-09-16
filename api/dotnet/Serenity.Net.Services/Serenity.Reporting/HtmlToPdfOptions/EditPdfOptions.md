@@ -1,7 +1,7 @@
 # HtmlToPdfOptions.EditPdfOptions property
 
 ```csharp
-public Action<object> EditPdfOptions { get; set; }
+public Action<object>? EditPdfOptions { get; set; }
 ```
 
 ## See Also

@@ -3,7 +3,7 @@
 Writes the JSON representation of the object.
 
 ```csharp
-public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
 ```
 
 | parameter | description |

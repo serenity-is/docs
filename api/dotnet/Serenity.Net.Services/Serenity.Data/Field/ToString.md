@@ -3,7 +3,7 @@
 Converts to string.
 
 ```csharp
-public override string ToString()
+public override string? ToString()
 ```
 
 ## Return Value

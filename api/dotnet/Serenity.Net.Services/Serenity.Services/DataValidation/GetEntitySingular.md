@@ -3,7 +3,7 @@
 Gets singular entity name for a table
 
 ```csharp
-public static string GetEntitySingular(string table, ITextLocalizer localizer)
+public static string GetEntitySingular(string table, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

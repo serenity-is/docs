@@ -3,7 +3,7 @@
 Gets the database.
 
 ```csharp
-public string Database { get; }
+public string? Database { get; }
 ```
 
 ## Property Value

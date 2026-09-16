@@ -1568,19 +1568,17 @@ The dialog type.
 
 ***
 
-### ~~getDialogTypeKey()~~
+### getDialogTypeKey()
 
 > `protected` **getDialogTypeKey**(): `string`
 
 Defined in: [src/ui/editors/comboboxeditor.tsx:1067](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1067)
 
+[DEPRECATED] Override getDialogType() instead
+
 #### Returns
 
 `string`
-
-#### Deprecated
-
-Override getDialogType() instead
 
 ***
 

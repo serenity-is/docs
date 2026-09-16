@@ -3,8 +3,8 @@
 Base class for custom fields with reference type values.
 
 ```csharp
-public CustomClassField(ICollection<Field> collection, string name, LocalText caption, int size, 
-    FieldFlags flags, Func<IRow, TValue> getValue, Action<IRow, TValue> setValue)
+public CustomClassField(ICollection<Field> collection, string name, LocalText? caption, int size, 
+    FieldFlags flags, Func<IRow, TValue?>? getValue = null, Action<IRow, TValue?>? setValue = null)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 Default implementation of IHttpContextItemsAccessor that reads the HttpContext items.
 
 ```csharp
-public HttpContextItemsAccessor(IHttpContextAccessor httpContextAccessor = null)
+public HttpContextItemsAccessor(IHttpContextAccessor? httpContextAccessor = null)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 Gets or sets the lookup parent ID field.
 
 ```csharp
-public string ParentIdField { get; set; }
+public string? ParentIdField { get; set; }
 ```
 
 ## See Also

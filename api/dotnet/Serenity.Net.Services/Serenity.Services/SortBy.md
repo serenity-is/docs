@@ -18,4 +18,4 @@ public class SortBy
 
 ## See Also
 
-* **Source:** *[SortBy.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Models/SortBy.cs)*
+* **Source:** *[SortBy.cs](https://github.com/serenity-is/Serenity/blob/2a28525933e32e2024b92a826ed8ec67fa1a48e0/src/services/Models/SortBy.cs)*

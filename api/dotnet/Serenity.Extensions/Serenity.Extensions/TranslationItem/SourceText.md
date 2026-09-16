@@ -3,7 +3,7 @@
 The text in the source language.
 
 ```csharp
-public string SourceText { get; set; }
+public string? SourceText { get; set; }
 ```
 
 ## See Also

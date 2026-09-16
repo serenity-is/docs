@@ -3,7 +3,7 @@
 Gets the table joined to.
 
 ```csharp
-public string ToTable { get; }
+public string? ToTable { get; }
 ```
 
 ## Property Value

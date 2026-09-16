@@ -1,6 +1,6 @@
 # PropertyItem constructor
 
-Initializes a new instance of the [`PropertyItem`](../PropertyItem.md) class.
+The default constructor.
 
 ```csharp
 public PropertyItem()

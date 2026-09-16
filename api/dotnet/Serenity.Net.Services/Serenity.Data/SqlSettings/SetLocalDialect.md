@@ -3,7 +3,7 @@
 Sets the local dialect for the current thread and async context. Useful for background tasks, async methods, and testing to set the dialect locally and for auto spawned threads.
 
 ```csharp
-public static ISqlDialect SetLocalDialect(ISqlDialect dialect)
+public static ISqlDialect? SetLocalDialect(ISqlDialect? dialect)
 ```
 
 | parameter | description |

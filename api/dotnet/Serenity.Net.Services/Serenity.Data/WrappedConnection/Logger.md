@@ -3,7 +3,7 @@
 Gets the logger instance for this connection, if any.
 
 ```csharp
-public ILogger Logger { get; }
+public ILogger? Logger { get; }
 ```
 
 ## See Also

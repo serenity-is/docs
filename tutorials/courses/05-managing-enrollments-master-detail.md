@@ -61,7 +61,7 @@ Now build the project.
 To show the editor in the Student dialog, add this property to `StudentsForm.cs`:
 ```csharp
 [DisplayName("Courses"), StudentCoursesEditor, SkipNameCheck]
-public List<StudentCoursesRow> CourseList { get; set; }
+public List<StudentCoursesRow>? CourseList { get; set; }
 ```
 The `StudentCoursesEditor` attribute tells Serenity which grid editor to use for this field, and `SkipNameCheck` stops Serenity from looking for a physical column for it in the `StudentsRow` table — this field represents the detail side of the relationship.
 
@@ -81,9 +81,9 @@ After this, the Student dialog will show a grid editor for the student's courses
 public class StudentCoursesForm
 {
     [Hidden]
-    public int StudentId { get; set; }
-    public int CourseId { get; set; }
-    public int TermId { get; set; }
+    public int? StudentId { get; set; }
+    public int? CourseId { get; set; }
+    public int? TermId { get; set; }
 }
 ```
 The master–detail relationship fills in `StudentId` for us, so hiding it in the dialog is all we need.
@@ -99,9 +99,9 @@ namespace CourseTutorial.CourseDB.Columns;
 public class StudentCoursesColumns
 {
     [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-    public int Id { get; set; }
-    public string CourseName { get; set; }
-    public string TermName { get; set; }
+    public int? Id { get; set; }
+    public string? CourseName { get; set; }
+    public string? TermName { get; set; }
 }
 ```
 Since detail rows are only shown inside the Student dialog, showing the student's name again in the grid would be redundant. The grid editor now displays just the course information.
@@ -165,11 +165,11 @@ The server side of the relationship is declared with the `MasterDetailRelation` 
 ```csharp
 [MasterDetailRelation(foreignKey: nameof(StudentCoursesRow.StudentId), ColumnsType = typeof(Columns.StudentCoursesColumns))]
 [DisplayName("Course List"), NotMapped]
-public List<StudentCoursesRow> CourseList { get => fields.CourseList[this]; set => fields.CourseList[this] = value; }
+public List<StudentCoursesRow>? CourseList { get => fields.CourseList[this]; set => fields.CourseList[this] = value; }
 
 public class RowFields : RowFieldsBase
 {
-    public RowListField<StudentCoursesRow> CourseList;
+    public RowListField<StudentCoursesRow> CourseList = null!;
 }
 ```
 `MasterDetailRelation` ties the StudentCourses records to their student; the foreign key it uses is `StudentCoursesRow.StudentId`.

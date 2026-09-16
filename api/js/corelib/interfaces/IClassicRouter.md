@@ -1,20 +1,17 @@
 [@serenity-is/corelib](../README.md) / IClassicRouter
 
-# ~~Interface: IClassicRouter~~
+# Interface: IClassicRouter
 
 Defined in: [src/compat/router.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/router.ts#L25)
 
 Contract for the legacy hash-based router.
-Compat shim for the old `Q.Router` / `Serenity.Router` singleton. The router synchronizes dialog open/close state
+Compat shim for the old `Router` / `Serenity.Router` singleton. The router synchronizes dialog open/close state
 with the URL hash using `"/+/"` delimited segments and fires `handleroute` events on designated handlers.
-
-## Deprecated
-
-Hash-based dialog routing is legacy. Prefer explicit client-side routing or modern dialog state management. Kept for backward compatibility.
+[DEPRECATED] Hash-based dialog routing is legacy. Prefer explicit client-side routing or modern dialog state management. Kept for backward compatibility.
 
 ## Properties
 
-### ~~enabled~~
+### enabled
 
 > **enabled**: `boolean`
 
@@ -24,7 +21,7 @@ When `false`, all routing operations become no-ops.
 
 ***
 
-### ~~mightBeRouteRegex~~
+### mightBeRouteRegex
 
 > **mightBeRouteRegex**: `RegExp`
 
@@ -34,7 +31,7 @@ Regex used to heuristically detect whether a single hash segment might represent
 
 ## Methods
 
-### ~~destroy()~~
+### destroy()
 
 > **destroy**(): `void`
 
@@ -48,7 +45,7 @@ Removes all event listeners registered by the router and releases resources.
 
 ***
 
-### ~~dialog()~~
+### dialog()
 
 > **dialog**(`owner`, `element`, `dialogHash`): `void`
 
@@ -82,7 +79,7 @@ Factory returning the hash segment for this dialog (e.g., `"!a1"`).
 
 ***
 
-### ~~ignoreHashChange()~~
+### ignoreHashChange()
 
 > **ignoreHashChange**(`expiration?`): `void`
 
@@ -104,7 +101,7 @@ Duration in milliseconds to ignore hash changes. Defaults to `1000`.
 
 ***
 
-### ~~navigate()~~
+### navigate()
 
 > **navigate**(`newHash`, `tryBack?`, `silent?`): `void`
 
@@ -138,7 +135,7 @@ When `true`, suppresses the subsequent `hashchange` handling via [ignoreHashChan
 
 ***
 
-### ~~replace()~~
+### replace()
 
 > **replace**(`newHash`, `tryBack?`): `void`
 
@@ -166,7 +163,7 @@ When `true`, prefers `history.back()` if applicable.
 
 ***
 
-### ~~replaceLast()~~
+### replaceLast()
 
 > **replaceLast**(`newHash`, `tryBack?`): `void`
 
@@ -194,7 +191,7 @@ When `true`, prefers `history.back()` if applicable.
 
 ***
 
-### ~~resolve()~~
+### resolve()
 
 > **resolve**(`newHash?`): `"disabled"` \| `"skipped"` \| `"shebang"` \| `"missinghandler"` \| `"calledhandler"`
 

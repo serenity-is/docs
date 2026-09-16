@@ -3,7 +3,7 @@
 Gets or sets the connection string.
 
 ```csharp
-public string ConnectionString { get; set; }
+public string? ConnectionString { get; set; }
 ```
 
 ## See Also

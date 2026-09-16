@@ -3,7 +3,7 @@
 Gets the switch expression.
 
 ```csharp
-public object Switch { get; set; }
+public object? Switch { get; set; }
 ```
 
 ## See Also

@@ -1,7 +1,7 @@
 # DynamicScriptManager.ReadScriptContent method
 
 ```csharp
-public IScriptContent ReadScriptContent(string name, bool json)
+public IScriptContent? ReadScriptContent(string name, bool json)
 ```
 
 ## See Also

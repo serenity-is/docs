@@ -2,7 +2,7 @@
 
 ```csharp
 public object Scale(object imageObj, int scaleWidth, int scaleHeight, ImageScaleMode mode, 
-    string backgroundColor, bool inplace)
+    string? backgroundColor, bool inplace)
 ```
 
 ## See Also

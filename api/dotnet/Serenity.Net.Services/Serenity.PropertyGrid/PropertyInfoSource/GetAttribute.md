@@ -1,7 +1,7 @@
 # PropertyInfoSource.GetAttribute&lt;TAttribute&gt; method
 
 ```csharp
-public TAttribute GetAttribute<TAttribute>(AttributeOrigin origin = AttributeOrigin.All)
+public TAttribute? GetAttribute<TAttribute>(AttributeOrigin origin = AttributeOrigin.All)
     where TAttribute : Attribute
 ```
 

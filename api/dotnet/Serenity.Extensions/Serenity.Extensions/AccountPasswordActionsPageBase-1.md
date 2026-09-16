@@ -37,4 +37,4 @@ public abstract class AccountPasswordActionsPageBase<TUserRow> : MembershipPageB
 * interface [IIdRow](../../Serenity.Net.Services/Serenity.Data/IIdRow.md)
 * interface [IEmailRow](../../Serenity.Net.Services/Serenity.Data/IEmailRow.md)
 * interface [IPasswordRow](../../Serenity.Net.Services/Serenity.Data/IPasswordRow.md)
-* **Source:** *[AccountPasswordActionsPageBase.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/Membership/PasswordActions/AccountPasswordActionsPageBase.cs)*
+* **Source:** *[AccountPasswordActionsPageBase.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/Membership/PasswordActions/AccountPasswordActionsPageBase.cs)*

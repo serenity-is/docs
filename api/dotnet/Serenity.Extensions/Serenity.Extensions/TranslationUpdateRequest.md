@@ -18,4 +18,4 @@ public class TranslationUpdateRequest : ServiceRequest
 ## See Also
 
 * class [ServiceRequest](../../Serenity.Net.Services/Serenity.Services/ServiceRequest.md)
-* **Source:** *[TranslationUpdateRequest.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/Translation/TranslationUpdateRequest.cs)*
+* **Source:** *[TranslationUpdateRequest.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/Translation/TranslationUpdateRequest.cs)*

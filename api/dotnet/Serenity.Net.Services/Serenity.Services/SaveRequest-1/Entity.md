@@ -3,7 +3,7 @@
 The entity containing only the fields that should be inserted / updated. Partial patch is only possible with Row types as only it provides assignment information from the originating JSON.
 
 ```csharp
-public TEntity Entity { get; set; }
+public TEntity? Entity { get; set; }
 ```
 
 ## See Also

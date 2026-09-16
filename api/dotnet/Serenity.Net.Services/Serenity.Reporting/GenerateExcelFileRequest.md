@@ -19,4 +19,4 @@ public class GenerateExcelFileRequest : ServiceRequest
 ## See Also
 
 * class [ServiceRequest](../Serenity.Services/ServiceRequest.md)
-* **Source:** *[GenerateExcelFileRequest.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Reporting/Model/GenerateExcelFileRequest.cs)*
+* **Source:** *[GenerateExcelFileRequest.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Reporting/Model/GenerateExcelFileRequest.cs)*

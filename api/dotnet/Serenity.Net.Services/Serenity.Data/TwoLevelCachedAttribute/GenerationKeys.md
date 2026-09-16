@@ -3,7 +3,7 @@
 Gets the generation keys.
 
 ```csharp
-public string[] GenerationKeys { get; set; }
+public string[]? GenerationKeys { get; set; }
 ```
 
 ## Property Value

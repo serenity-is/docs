@@ -3,7 +3,7 @@
 Gets or sets the insert permission.
 
 ```csharp
-public string InsertPermission { get; set; }
+public string? InsertPermission { get; set; }
 ```
 
 ## Property Value

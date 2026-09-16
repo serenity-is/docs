@@ -9,11 +9,11 @@ Right now `Average` is a plain input, so a user can type anything into it — wh
 Open `GradesForm.cs` and remove the `Average` property, so the form ends with `Midterm` and `Final`:
 
 ```csharp
-public int StudentId { get; set; }
-public int CourseId { get; set; }
-public int TermId { get; set; }
-public decimal Midterm { get; set; }
-public decimal Final { get; set; }
+public int? StudentId { get; set; }
+public int? CourseId { get; set; }
+public int? TermId { get; set; }
+public decimal? Midterm { get; set; }
+public decimal? Final { get; set; }
 ```
 ## Step 2 — Calculate the average in GradesRow
 
@@ -53,7 +53,7 @@ The Grades screen currently shows only the student's first name (Sergen generate
 Remove `StudentFirstName` and add a `FullName` field:
 ```csharp
 [DisplayName("Full Name"), Origin(jStudent, nameof(StudentsRow.FullName))]
-public string FullName 
+public string? FullName 
 { 
     get => fields.FullName[this]; 
     set => fields.FullName[this] = value; 
@@ -61,7 +61,7 @@ public string FullName
 ```
 ```csharp
 // Declaration in the Fields class
-public StringField FullName;
+public StringField FullName = null!;
 ```
 
 ### Update GradesColumns.cs
@@ -69,7 +69,7 @@ public StringField FullName;
 Add a `FullName` column to `GradesColumns.cs` and remove the old `StudentFirstName` property:
 
 ```csharp
-public string FullName { get; set; }
+public string? FullName { get; set; }
 ```
 ### Link StudentId to FullName
 
@@ -82,7 +82,7 @@ public int? StudentId { get => fields.StudentId[this]; set => fields.StudentId[t
 And move the `NameProperty`/`QuickSearch` in `StudentsRow` to the `FullName` field:
 ```csharp
 [DisplayName("Full Name"), Size(201), NotNull, NameProperty, QuickSearch]
-public string FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
+public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
 ```
 The Student column in the Grades screen now shows the full name.
 

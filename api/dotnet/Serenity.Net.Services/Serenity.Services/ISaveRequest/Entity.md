@@ -3,7 +3,7 @@
 Entity to insert / update
 
 ```csharp
-public object Entity { get; set; }
+public object? Entity { get; set; }
 ```
 
 ## See Also

@@ -2,15 +2,17 @@
 
 # Function: FooterRow()
 
-> **FooterRow**(`__namedParameters`): `JSXElement`
+> **FooterRow**(`props`): `JSXElement`
 
-Defined in: [src/layouts/layout-components.tsx:101](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L101)
+Defined in: [src/layouts/layout-components.tsx:103](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L103)
 
 Footer row shell for a single band.
 
 ## Parameters
 
-### \_\_namedParameters
+### props
+
+Component props containing band, refs, and signals.
 
 #### band
 

@@ -3,7 +3,7 @@
 Gets the default schema.
 
 ```csharp
-public string DefaultSchema { get; }
+public string? DefaultSchema { get; }
 ```
 
 ## Property Value

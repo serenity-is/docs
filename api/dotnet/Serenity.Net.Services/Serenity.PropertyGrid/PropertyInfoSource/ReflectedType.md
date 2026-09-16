@@ -1,7 +1,7 @@
 # PropertyInfoSource.ReflectedType property
 
 ```csharp
-public Type ReflectedType { get; }
+public Type? ReflectedType { get; }
 ```
 
 ## See Also

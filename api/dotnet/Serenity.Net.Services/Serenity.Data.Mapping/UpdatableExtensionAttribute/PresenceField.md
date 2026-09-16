@@ -3,7 +3,7 @@
 This extension should only be inserted if this field is equal to PresenceValue For example, you might have a PersonType column in PersonRow and student record should only be created (if not already) if PersonType = "Student".
 
 ```csharp
-public string PresenceField { get; set; }
+public string? PresenceField { get; set; }
 ```
 
 ## See Also

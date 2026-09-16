@@ -3,7 +3,7 @@
 Gets or sets the foreign join alias.
 
 ```csharp
-public Join ForeignJoinAlias { get; set; }
+public Join? ForeignJoinAlias { get; set; }
 ```
 
 ## Property Value

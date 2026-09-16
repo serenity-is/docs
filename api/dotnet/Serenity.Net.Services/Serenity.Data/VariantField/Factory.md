@@ -3,8 +3,8 @@
 Static factory for field, for backward compatibility, avoid using.
 
 ```csharp
-public static VariantField Factory(ICollection<Field> collection, string name, LocalText caption, 
-    int size, FieldFlags flags, Func<IRow, object> getValue, Action<IRow, object> setValue)
+public static VariantField Factory(ICollection<Field> collection, string name, LocalText? caption, 
+    int size, FieldFlags flags, Func<IRow, object?>? getValue, Action<IRow, object?>? setValue)
 ```
 
 | parameter | description |

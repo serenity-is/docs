@@ -6,7 +6,7 @@
 
 Defined in: [src/compat/dialogs-compat.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/dialogs-compat.ts#L36)
 
-Legacy `Q.warning` alias.
+Legacy `warning` alias.
 
 Displays a warning dialog with a single OK button.
 

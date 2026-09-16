@@ -3,9 +3,9 @@
 Initializes a new instance of the [`EnumField`](../EnumField-1.md) class.
 
 ```csharp
-public EnumField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, int?> getValue = null, 
-    Action<IRow, int?> setValue = null)
+public EnumField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, int?>? getValue = null, 
+    Action<IRow, int?>? setValue = null)
 ```
 
 | parameter | description |

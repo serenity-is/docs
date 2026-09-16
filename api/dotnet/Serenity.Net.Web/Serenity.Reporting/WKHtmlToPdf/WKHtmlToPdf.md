@@ -3,7 +3,7 @@
 HTML to PDF converter class using WKHTMLToPdf.
 
 ```csharp
-public WKHtmlToPdf(IHtmlToPdfOptions options = null)
+public WKHtmlToPdf(IHtmlToPdfOptions? options = null)
 ```
 
 | parameter | description |

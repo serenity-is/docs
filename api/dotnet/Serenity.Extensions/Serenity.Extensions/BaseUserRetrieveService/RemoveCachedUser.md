@@ -1,7 +1,7 @@
 # BaseUserRetrieveService.RemoveCachedUser method
 
 ```csharp
-public virtual void RemoveCachedUser(string userId, string username)
+public virtual void RemoveCachedUser(string? userId, string? username)
 ```
 
 ## See Also

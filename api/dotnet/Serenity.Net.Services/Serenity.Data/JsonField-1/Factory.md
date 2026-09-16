@@ -3,8 +3,8 @@
 Static factory for field, for backward compatibility, avoid using.
 
 ```csharp
-public static JsonField Factory(ICollection<Field> collection, string name, LocalText caption, 
-    int size, FieldFlags flags, Func<IRow, TValue> getValue, Action<IRow, TValue> setValue)
+public static JsonField Factory(ICollection<Field> collection, string name, LocalText? caption, 
+    int size, FieldFlags flags, Func<IRow, TValue?> getValue, Action<IRow, TValue?> setValue)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 Gets the report permission.
 
 ```csharp
-public string Permission { get; }
+public string? Permission { get; }
 ```
 
 ## See Also

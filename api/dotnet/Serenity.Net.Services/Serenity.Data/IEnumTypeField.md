@@ -15,4 +15,4 @@ public interface IEnumTypeField
 
 ## See Also
 
-* **Source:** *[IEnumTypeField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/IEnumTypeField.cs)*
+* **Source:** *[IEnumTypeField.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Entity/FieldTypes/IEnumTypeField.cs)*

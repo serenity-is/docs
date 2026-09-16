@@ -3,7 +3,7 @@
 Gets the identity column.
 
 ```csharp
-public string IdentityColumn()
+public string? IdentityColumn()
 ```
 
 ## Return Value

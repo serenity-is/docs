@@ -4,7 +4,7 @@ Generates an Excel workbook from the specified columns and rows.
 
 ```csharp
 public static XLWorkbook GeneratePackage(List<ReportColumn> columns, IList rows, 
-    string sheetName = "Page1", string tableName = "Table1", XLTableTheme tableStyle = null, 
+    string sheetName = "Page1", string tableName = "Table1", XLTableTheme? tableStyle = null, 
     int startRow = 1, int startCol = 1, int autoFitRows = 250)
 ```
 

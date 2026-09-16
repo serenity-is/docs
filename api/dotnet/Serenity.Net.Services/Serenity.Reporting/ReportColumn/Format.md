@@ -3,7 +3,7 @@
 Gets or sets the format string to use.
 
 ```csharp
-public string Format { get; set; }
+public string? Format { get; set; }
 ```
 
 ## See Also

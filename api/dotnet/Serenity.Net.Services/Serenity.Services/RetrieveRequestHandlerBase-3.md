@@ -16,6 +16,7 @@ public abstract class RetrieveRequestHandlerBase<TRow, TRetrieveRequest, TRetrie
 | TRow | Entity type |
 | TRetrieveRequest | Retrieve request type |
 | TRetrieveResponse | Retrieve response type |
+| context | Request context |
 
 ## Public Members
 
@@ -37,7 +38,7 @@ public abstract class RetrieveRequestHandlerBase<TRow, TRetrieveRequest, TRetrie
 
 | name | description |
 | --- | --- |
-| [RetrieveRequestHandlerBase](RetrieveRequestHandlerBase-3/RetrieveRequestHandlerBase.md)(…) | Initializes a new instance of the class. |
+| [RetrieveRequestHandlerBase](RetrieveRequestHandlerBase-3/RetrieveRequestHandlerBase.md)(…) | Abstract base class for retrieve request handlers that share state and mode neutral helper methods between synchronous and asynchronous retrieve request handlers. |
 | virtual [AllowSelectField](RetrieveRequestHandlerBase-3/AllowSelectField.md)(…) | Returns true if the field should be allowed to be selected, based on its read permission and the SelectLevel.Never flag. |
 | virtual [CreateQuery](RetrieveRequestHandlerBase-3/CreateQuery.md)() | Creates a query instance with the dialect for current connection. |
 | virtual [GetBehaviors](RetrieveRequestHandlerBase-3/GetBehaviors.md)() | Gets the list of retrieve behaviors. |
@@ -47,10 +48,20 @@ public abstract class RetrieveRequestHandlerBase<TRow, TRetrieveRequest, TRetrie
 | virtual [ShouldSelectField](RetrieveRequestHandlerBase-3/ShouldSelectField.md)(…) | Returns true if the field should be selected, based on current ColumnSelection, field [`MinSelectLevelAttribute`](../Serenity.Data.Mapping/MinSelectLevelAttribute.md), the field being a not mapped ([`NotMappedAttribute`](../Serenity.Data.Mapping/NotMappedAttribute.md)) field, table field, or a view / expression field. |
 | virtual [ValidatePermissions](RetrieveRequestHandlerBase-3/ValidatePermissions.md)() | Validates if the user is allowed to query this entity type by checking ReadPermissionAttribute and ServiceLookupPermissionAttribute if the request is in lookup access mode. |
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | *context* is `null`. |
+
+## Remarks
+
+Initializes a new instance of the class.
+
 ## See Also
 
 * interface [IRetrieveRequestHandler](./IRetrieveRequestHandler.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * class [RetrieveRequest](./RetrieveRequest.md)
 * class [RetrieveResponse&lt;T&gt;](./RetrieveResponse-1.md)
-* **Source:** *[RetrieveRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/aa5433b74475d7a249a3550344ee8ccea8e5a8eb/src/services/RequestHandlers/Retrieve/RetrieveRequestHandlerBase.cs)*
+* **Source:** *[RetrieveRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/Retrieve/RetrieveRequestHandlerBase.cs)*

@@ -26,4 +26,4 @@ Initializes a new instance of the [`DynamicScriptMiddleware`](./DynamicScriptMid
 
 ## See Also
 
-* **Source:** *[DynamicScriptMiddleware.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/web/DynamicScript/DynamicScript/DynamicScriptMiddleware.cs)*
+* **Source:** *[DynamicScriptMiddleware.cs](https://github.com/serenity-is/Serenity/blob/eef6be1d7741640aed4ce405c3b44984620b84be/src/web/DynamicScript/DynamicScript/DynamicScriptMiddleware.cs)*

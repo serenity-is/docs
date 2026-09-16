@@ -3,7 +3,7 @@
 Gets or sets the list of expected file extensions.
 
 ```csharp
-public IEnumerable<string> FileExtensions { get; set; }
+public IEnumerable<string>? FileExtensions { get; set; }
 ```
 
 ## See Also

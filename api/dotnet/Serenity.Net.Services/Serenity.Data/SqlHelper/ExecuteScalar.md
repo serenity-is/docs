@@ -3,7 +3,8 @@
 Executes the statement returning a scalar value.
 
 ```csharp
-public static object ExecuteScalar(IDbConnection connection, SqlQuery query, ILogger logger = null)
+public static object? ExecuteScalar(IDbConnection connection, SqlQuery query, 
+    ILogger? logger = null)
 ```
 
 | parameter | description |
@@ -34,8 +35,8 @@ The scalar value.
 Executes the statement returning a scalar value.
 
 ```csharp
-public static object ExecuteScalar(IDbConnection connection, string commandText, 
-    IDictionary<string, object> param = null, ILogger logger = null)
+public static object? ExecuteScalar(IDbConnection connection, string commandText, 
+    IDictionary<string, object?>? param = null, ILogger? logger = null)
 ```
 
 | parameter | description |

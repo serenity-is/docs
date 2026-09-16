@@ -3,7 +3,7 @@
 Gets the old entity for update.
 
 ```csharp
-public TRow Old { get; protected set; }
+public TRow? Old { get; protected set; }
 ```
 
 ## See Also

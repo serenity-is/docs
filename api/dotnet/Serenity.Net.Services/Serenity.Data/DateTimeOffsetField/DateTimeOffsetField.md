@@ -3,9 +3,9 @@
 Field with a DateTimeOffset value.
 
 ```csharp
-public DateTimeOffsetField(ICollection<Field> collection, string name, LocalText caption = null, 
+public DateTimeOffsetField(ICollection<Field> collection, string name, LocalText? caption = null, 
     int size = 0, FieldFlags flags = FieldFlags.Default, 
-    Func<IRow, DateTimeOffset?> getValue = null, Action<IRow, DateTimeOffset?> setValue = null)
+    Func<IRow, DateTimeOffset?>? getValue = null, Action<IRow, DateTimeOffset?>? setValue = null)
 ```
 
 | parameter | description |

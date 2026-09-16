@@ -4,7 +4,7 @@ Initializes a new instance of the [`ContentHashCache`](../ContentHashCache.md) c
 
 ```csharp
 public ContentHashCache(IOptions<CDNSettings> cdnSettings, IWebHostEnvironment hostEnvironment, 
-    IHttpContextAccessor httpContextAccessor = null)
+    IHttpContextAccessor? httpContextAccessor = null)
 ```
 
 | parameter | description |

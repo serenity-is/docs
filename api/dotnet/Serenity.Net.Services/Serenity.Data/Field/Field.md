@@ -3,7 +3,7 @@
 Initializes a new instance of the [`Field`](../Field.md) class.
 
 ```csharp
-protected Field(ICollection<Field> fields, FieldType type, string name, LocalText caption, 
+protected Field(ICollection<Field>? fields, FieldType type, string name, LocalText? caption, 
     int size, FieldFlags flags)
 ```
 

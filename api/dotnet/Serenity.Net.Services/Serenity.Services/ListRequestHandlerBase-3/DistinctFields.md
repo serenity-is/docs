@@ -3,7 +3,7 @@
 Gets the list of distinct fields.
 
 ```csharp
-public Field[] DistinctFields { get; protected set; }
+public Field[]? DistinctFields { get; protected set; }
 ```
 
 ## See Also

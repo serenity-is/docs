@@ -28,4 +28,4 @@ public class ServiceAuthorizeAttribute : Attribute, IResourceFilter
 
 ## See Also
 
-* **Source:** *[ServiceAuthorizeAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/ServiceAuthorizeAttribute.cs)*
+* **Source:** *[ServiceAuthorizeAttribute.cs](https://github.com/serenity-is/Serenity/blob/0ecdd6666300147eb7b98189e3ebb71954692e8c/src/web/Mvc/ServiceAuthorizeAttribute.cs)*

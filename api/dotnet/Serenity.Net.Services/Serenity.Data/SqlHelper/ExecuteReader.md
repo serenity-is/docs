@@ -4,7 +4,7 @@ Executes the query.
 
 ```csharp
 public static IDataReader ExecuteReader(this SqlQuery query, IDbConnection connection, 
-    ILogger logger = null)
+    ILogger? logger = null)
 ```
 
 | parameter | description |
@@ -30,7 +30,7 @@ Executes the command returning a data reader.
 
 ```csharp
 public static IDataReader ExecuteReader(IDbConnection connection, string commandText, 
-    IDictionary<string, object> param, ILogger logger = null)
+    IDictionary<string, object?>? param, ILogger? logger = null)
 ```
 
 | parameter | description |

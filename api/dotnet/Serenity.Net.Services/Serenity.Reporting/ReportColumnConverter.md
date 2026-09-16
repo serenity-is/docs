@@ -19,4 +19,4 @@ public static class ReportColumnConverter
 
 ## See Also
 
-* **Source:** *[ReportColumnConverter.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Reporting/DataReport/ReportColumnConverter.cs)*
+* **Source:** *[ReportColumnConverter.cs](https://github.com/serenity-is/Serenity/blob/82ddcbcec15bea4da3ab442efd774b56bd500d7d/src/services/Reporting/DataReport/ReportColumnConverter.cs)*

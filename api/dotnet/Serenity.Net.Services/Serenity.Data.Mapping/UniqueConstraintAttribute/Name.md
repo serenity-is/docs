@@ -3,7 +3,7 @@
 Gets or sets the constraint name. Not used at the moment.
 
 ```csharp
-public string Name { get; set; }
+public string? Name { get; set; }
 ```
 
 ## Property Value

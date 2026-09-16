@@ -3,7 +3,7 @@
 Gets a connection string by its key.
 
 ```csharp
-public IConnectionString TryGetConnectionString(string connectionKey)
+public IConnectionString? TryGetConnectionString(string connectionKey)
 ```
 
 | parameter | description |

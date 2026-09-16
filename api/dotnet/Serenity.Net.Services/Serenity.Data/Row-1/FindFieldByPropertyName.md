@@ -3,7 +3,7 @@
 Finds the field with the specified property name.
 
 ```csharp
-public Field FindFieldByPropertyName(string propertyName)
+public Field? FindFieldByPropertyName(string propertyName)
 ```
 
 | parameter | description |

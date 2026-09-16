@@ -4,7 +4,7 @@ Initializes a new instance of the [`DefaultUploadStorage`](../DefaultUploadStora
 
 ```csharp
 public DefaultUploadStorage(IOptions<UploadSettings> options, 
-    IWebHostEnvironment hostEnvironment = null, IDiskUploadFileSystem fileSystem = null)
+    IWebHostEnvironment? hostEnvironment = null, IDiskUploadFileSystem? fileSystem = null)
 ```
 
 | parameter | description |

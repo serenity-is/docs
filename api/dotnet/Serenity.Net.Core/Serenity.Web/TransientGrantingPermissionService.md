@@ -38,4 +38,4 @@ Creates a new instance of the [`TransientGrantingPermissionService`](./Transient
 
 * interface [IPermissionService](../Serenity.Abstractions/IPermissionService.md)
 * interface [ITransientGrantor](../Serenity.Abstractions/ITransientGrantor.md)
-* **Source:** *[TransientGrantingPermissionService.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/core/Authorization/TransientGrantingPermissionService.cs)*
+* **Source:** *[TransientGrantingPermissionService.cs](https://github.com/serenity-is/Serenity/blob/0ecdd6666300147eb7b98189e3ebb71954692e8c/src/core/Authorization/TransientGrantingPermissionService.cs)*

@@ -3,7 +3,7 @@
 Name of the key field in extension table. If not specified, ID field of extension table is assumed, unless there is a field with matching name to ThisKey in extension table.
 
 ```csharp
-public string OtherKey { get; set; }
+public string? OtherKey { get; set; }
 ```
 
 ## See Also

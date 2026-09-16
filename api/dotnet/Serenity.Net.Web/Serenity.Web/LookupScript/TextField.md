@@ -3,7 +3,7 @@
 Gets or sets the lookup text field.
 
 ```csharp
-public string TextField { get; set; }
+public string? TextField { get; set; }
 ```
 
 ## See Also

@@ -4,7 +4,7 @@ Returns an invalid date range error
 
 ```csharp
 public static ValidationError InvalidDateRangeError(DateTimeField start, DateTimeField finish, 
-    ITextLocalizer localizer)
+    ITextLocalizer? localizer)
 ```
 
 | parameter | description |

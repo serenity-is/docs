@@ -3,7 +3,7 @@
 Intercepts EntityConnectionExtensions.DeleteById method.
 
 ```csharp
-public OptionalValue<long?> ManipulateRow(Type rowType, OptionalValue<object> id, IRow row, 
+public OptionalValue<long?> ManipulateRow(Type rowType, OptionalValue<object?> id, IRow? row, 
     ExpectedRows expectedRows, bool getNewId)
 ```
 

@@ -3,7 +3,7 @@
 Initializes the specified annotations.
 
 ```csharp
-public void Initialize(IAnnotatedType annotations, ISqlDialect dialect)
+public void Initialize(IAnnotatedType? annotations, ISqlDialect dialect)
 ```
 
 | parameter | description |

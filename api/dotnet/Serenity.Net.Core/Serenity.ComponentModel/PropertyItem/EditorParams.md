@@ -3,7 +3,7 @@
 Gets or sets the editor parameters that should be passed to the editor while it is being created.
 
 ```csharp
-public Dictionary<string, object>? EditorParams { get; set; }
+public Dictionary<string, object?> EditorParams { get; set; }
 ```
 
 ## Property Value

@@ -3,7 +3,7 @@
 Validates the value using the specified context.
 
 ```csharp
-public string Validate(IValidationContext context)
+public string? Validate(IValidationContext context)
 ```
 
 | parameter | description |

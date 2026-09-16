@@ -6,7 +6,7 @@
 
 Defined in: [src/compat/dialogs-compat.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/dialogs-compat.ts#L29)
 
-Legacy `Q.success` alias.
+Legacy `success` alias.
 
 Displays a success dialog with a single OK button.
 

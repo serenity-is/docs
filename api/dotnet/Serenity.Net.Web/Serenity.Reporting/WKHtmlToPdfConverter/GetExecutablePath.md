@@ -3,7 +3,7 @@
 Gets the wkhtmltopdf executable path.
 
 ```csharp
-public virtual string GetExecutablePath()
+public virtual string? GetExecutablePath()
 ```
 
 ## Return Value

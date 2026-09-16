@@ -50,13 +50,13 @@ public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
 {
     //...
     [DisplayName("Title"), Size(200), NotNull, NameProperty, QuickSearch]
-    public string Title { get => fields.Title[this]; set => fields.Title[this] = value; }
+    public string? Title { get => fields.Title[this]; set => fields.Title[this] = value; }
 
     [DisplayName("Description"), Size(1000), QuickSearch]
-    public string Description { get => fields.Description[this]; set => fields.Description[this] = value; }
+    public string? Description { get => fields.Description[this]; set => fields.Description[this] = value; }
 
     [DisplayName("Storyline"), QuickSearch]
-    public string Storyline { get => fields.Storyline[this]; set => fields.Storyline[this] = value; }
+    public string? Storyline { get => fields.Storyline[this]; set => fields.Storyline[this] = value; }
     //...
 }
 ```
@@ -69,7 +69,7 @@ The `QuickSearch` attribute, by default, performs a search using a "contains" fi
 
 ```cs
 [DisplayName("Title"), Size(200), NotNull, NameProperty, QuickSearch(SearchType.StartsWith)]
-public string Title
+public string? Title
 ```
 
 In this example, the `SearchType.StartsWith` option is used, which filters for values that start with the specified text. This can be useful for matching values like SSN, serial numbers, identification numbers, phone numbers, and more.

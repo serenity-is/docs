@@ -4,7 +4,7 @@ Executes the specified query on the connection asynchronously.
 
 ```csharp
 public static Task ExecuteAsync(this SqlInsert query, IDbConnection connection, 
-    ILogger logger = null, CancellationToken cancellationToken = default)
+    ILogger? logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -31,7 +31,7 @@ Executes the specified delete query on the connection asynchronously and returns
 
 ```csharp
 public static Task<int> ExecuteAsync(this SqlDelete query, IDbConnection connection, 
-    ExpectedRows expectedRows = ExpectedRows.One, ILogger logger = null, 
+    ExpectedRows expectedRows = ExpectedRows.One, ILogger? logger = null, 
     CancellationToken cancellationToken = default)
 ```
 
@@ -61,7 +61,7 @@ Executes the specified update query on the connection asynchronously and returns
 
 ```csharp
 public static Task<int> ExecuteAsync(this SqlUpdate query, IDbConnection connection, 
-    ExpectedRows expectedRows = ExpectedRows.One, ILogger logger = null, 
+    ExpectedRows expectedRows = ExpectedRows.One, ILogger? logger = null, 
     CancellationToken cancellationToken = default)
 ```
 

@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [ScriptData](../README.md) / bindToChange
 
-# ~~Function: bindToChange()~~
+# Function: bindToChange()
 
 > **bindToChange**(`name`, `onChange`): `void` \| () => `void`
 

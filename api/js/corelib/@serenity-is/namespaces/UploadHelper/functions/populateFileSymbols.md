@@ -4,7 +4,7 @@
 
 > **populateFileSymbols**(`c`, `items`, `displayOriginalName?`, `urlPrefix?`): `void`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L265)
+Defined in: [src/ui/helpers/uploadhelper.tsx:264](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L264)
 
 Populates a container with file item elements for the given uploaded files.
 

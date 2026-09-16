@@ -25,7 +25,7 @@ A FileContentResult.
 Creates a FileContentResult containing the passed data and a download name.
 
 ```csharp
-public static FileContentResult Create(byte[] data, string downloadName)
+public static FileContentResult Create(byte[] data, string? downloadName)
 ```
 
 | parameter | description |

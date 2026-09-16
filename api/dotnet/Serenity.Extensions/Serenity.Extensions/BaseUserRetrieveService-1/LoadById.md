@@ -3,7 +3,7 @@
 Loads the user by the specified ID from database.
 
 ```csharp
-protected override IUserDefinition LoadById(string id)
+protected override IUserDefinition? LoadById(string id)
 ```
 
 | parameter | description |

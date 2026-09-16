@@ -33,10 +33,10 @@ public class CustomerGrossSalesReport(ISqlConnections sqlConnections, ITextLocal
     [BasedOnRow(typeof(CustomerGrossSalesRow), CheckNames = true)]
     public class Item
     {
-        public string CustomerId { get; set; }
-        public string ContactName { get; set; }
+        public string? CustomerId { get; set; }
+        public string? ContactName { get; set; }
         public int? ProductId { get; set; }
-        public string ProductName { get; set; }
+        public string? ProductName { get; set; }
         [CellDecorator(typeof(AmountDecorator))]
         public decimal GrossAmount { get; set; }
     }

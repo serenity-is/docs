@@ -13,7 +13,7 @@ Let's say we have such a row definition:
 ```cs
 public class CustomerRow : Row<CustomerRow.RowFields>
 {
-    public string StreetAddress
+    public string? StreetAddress
     {
         get => fields.StreetAddress[this];
         set => fields.StreetAddress[this] = value;
@@ -77,7 +77,7 @@ You can map a property to some other column name in the database using the [Colu
 public class CustomerRow : Row<CustomerRow.RowFields>
 {
     [Column("street_address")]
-    public string StreetAddress
+    public string? StreetAddress
     {
         get => fields.StreetAddress[this];
         set => fields.StreetAddress[this] = value;
@@ -99,7 +99,7 @@ It is also possible to manually add brackets:
 public class CustomerRow : Row<CustomerRow.RowFields>
 {
     [Column("[street_address]")]
-    public string StreetAddress
+    public string? StreetAddress
     {
         get => fields.StreetAddress[this];
         set => fields.StreetAddress[this] = value;
@@ -127,7 +127,7 @@ If the table name in the database is different from the row class name, use the[
 [TableName("TheCustomers")]
 public class CustomerRow : Row<CustomerRow.RowFields>
 {
-    public string StreetAddress
+    public string? StreetAddress
     {
         get => fields.StreetAddress[this];
         set => fields.StreetAddress[this] = value;
@@ -147,7 +147,7 @@ You may also use brackets or quotes:
 [TableName("[My Customers]")]
 public class CustomerRow : Row<CustomerRow.RowFields>
 {
-    public string StreetAddress
+    public string? StreetAddress
     {
         get => fields.StreetAddress[this];
         set => fields.StreetAddress[this] = value;
@@ -174,20 +174,20 @@ One example is a Fullname field with a calculated expression like `(T0.[Firstnam
 ```cs
 public class CustomerRow : Row<CustomerRow.RowFields>
 {
-    public string Firstname
+    public string? Firstname
     {
         get => fields.Firstname[this];
         set => fields.Firstname[this] = value;
     }
     
-    public string Lastname
+    public string? Lastname
     {
         get => fields.Lastname[this];
         set => fields.Lastname[this] = value;
     }
     
     [Expression("(T0.[Firstname] + ' ' + T0.[Lastname])")]
-    public string Fullname
+    public string? Fullname
     {
         get => fields.Fullname[this];
         set => fields.Fullname[this] = value;
@@ -219,7 +219,7 @@ The [ForeignKey](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/Fo
 public class CustomerRow : Row<CustomerRow.RowFields>
 {
     [ForeignKey("Countries", "Id")]
-    public string CountryId
+    public string? CountryId
     {
         get => fields.CountryId[this];
         set => fields.CountryId[this] = value;
@@ -237,7 +237,7 @@ If you have a Row class defined for the `Countries` table, it is also possible t
 public class CustomerRow : Row<CustomerRow.RowFields>
 {
     [typeof(CountryRow)]
-    public string CountryId
+    public string? CountryId
     {
         get => fields.CountryId[this];
         set => fields.CountryId[this] = value;
@@ -247,7 +247,7 @@ public class CustomerRow : Row<CustomerRow.RowFields>
 public class CountryRow : Row<CountryRow.RowFields>
 {
     [IdProperty]
-    public string Id
+    public string? Id
     {
         get => fields.Id[this];
         set => fields.Id[this] = value;
@@ -279,7 +279,7 @@ public class CustomerRow : Row<CustomerRow.RowFields>
     }
     
     [Expression("c.[Name]")]
-    public string CityName
+    public string? CityName
     {
         get => Fields.CityName[this];
         set => Fields.CityName[this] = value;
@@ -315,7 +315,7 @@ public class CustomerRow : Row<CustomerRow.RowFields>
     }
     
     [Expression("c.[Name]")]
-    public string CityName
+    public string? CityName
     {
         get => fields.CityName[this];
         set => fields.CityName[this] = value;
@@ -329,7 +329,7 @@ public class CustomerRow : Row<CustomerRow.RowFields>
     }
     
     [Expression("o.[Name]")]
-    public string CountryName
+    public string? CountryName
     {
         get => fields.CountryName[this];
         set => fields.CountryName[this] = value;
@@ -372,7 +372,7 @@ public class CustomerRow : Row<CustomerRow.RowFields>
     }
 
     [Expression("cd.[DeliveryAddress]")]
-    public string DeliveryAddress
+    public string? DeliveryAddress
     {
         get => return Fields.DeliveryAddress[this];
         set => Fields.DeliveryAddress[this] = value;
@@ -487,7 +487,7 @@ The [NotMapped](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/Not
 
 ```cs
 [DisplayName("Cast List"), NotMapped]
-public List<MovieCastRow> CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
+public List<MovieCastRow>? CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
 ```
 
 This is used for in-memory fields like master-detail lists, linking sets, and other computed data. The obsolete `[ClientSide]` attribute is an alias for `[NotMapped]`.
@@ -498,7 +498,7 @@ The [Origin](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/Origin
 
 ```cs
 [Origin("sup"), DisplayName("Supplier")]
-public string SupplierCompanyName { get => fields.SupplierCompanyName[this]; set => fields.SupplierCompanyName[this] = value; }
+public string? SupplierCompanyName { get => fields.SupplierCompanyName[this]; set => fields.SupplierCompanyName[this] = value; }
 ```
 
 Here `"sup"` is the join alias. The field's expression is derived from the join and the property name. You can also specify the source property explicitly: `[Origin("sup", "CompanyName")]`.
@@ -516,7 +516,7 @@ Here `"sup"` is the join alias. The field's expression is derived from the join 
 public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }
 
 [DisplayName("Full Name"), NameProperty]
-public string FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
+public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
 ```
 
 ## Size, Scale, and NotNull
@@ -527,7 +527,7 @@ public string FullName { get => fields.FullName[this]; set => fields.FullName[th
 
 ```cs
 [DisplayName("First Name"), Size(50), NotNull]
-public string FirstName { get => fields.FirstName[this]; set => fields.FirstName[this] = value; }
+public string? FirstName { get => fields.FirstName[this]; set => fields.FirstName[this] = value; }
 
 [DisplayName("Unit Price"), Scale(4)]
 public decimal? UnitPrice { get => fields.UnitPrice[this]; set => fields.UnitPrice[this] = value; }
@@ -539,7 +539,7 @@ The [QuickSearch](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/Q
 
 ```cs
 [DisplayName("Product Name"), Size(40), NotNull, QuickSearch]
-public string ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
+public string? ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
 ```
 
 The [SearchType](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/SearchType.md) enum controls how the search matches:
@@ -561,7 +561,7 @@ The [TextualField](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/
 public int? SupplierID { get => fields.SupplierID[this]; set => fields.SupplierID[this] = value; }
 
 [Origin("sup"), DisplayName("Supplier")]
-public string SupplierCompanyName { get => fields.SupplierCompanyName[this]; set => fields.SupplierCompanyName[this] = value; }
+public string? SupplierCompanyName { get => fields.SupplierCompanyName[this]; set => fields.SupplierCompanyName[this] = value; }
 ```
 
 ## Other Join Types
@@ -585,7 +585,7 @@ The [LookupInclude](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping
 
 ```cs
 [DisplayName("Product Name"), Size(40), NotNull, QuickSearch, LookupInclude]
-public string ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
+public string? ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
 ```
 
 ## TwoLevelCached
@@ -614,7 +614,7 @@ Beyond `[Expression]`, Serenity provides convenience attributes for common compu
 
 ```cs
 [DisplayName("Full Name"), Concat("t0.FirstName", "' '", "t0.LastName"), QuickSearch, NameProperty]
-public string FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
+public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
 ```
 
 ## MinSelectLevel and SelectLevel
@@ -633,7 +633,7 @@ The [MinSelectLevel](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mappin
 
 ```cs
 [MinSelectLevel(SelectLevel.Never)]
-public string PasswordHash { get => fields.PasswordHash[this]; set => fields.PasswordHash[this] = value; }
+public string? PasswordHash { get => fields.PasswordHash[this]; set => fields.PasswordHash[this] = value; }
 ```
 
 ## SetFieldFlags

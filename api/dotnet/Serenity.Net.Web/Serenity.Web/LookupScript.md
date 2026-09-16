@@ -34,4 +34,4 @@ public abstract class LookupScript : DynamicScript, IGetScriptData, INamedDynami
 * class [DynamicScript](../../Serenity.Net.Services/Serenity.Web/DynamicScript.md)
 * interface [IGetScriptData](../../Serenity.Net.Core/Serenity.Web/IGetScriptData.md)
 * interface [INamedDynamicScript](../../Serenity.Net.Core/Serenity.Web/INamedDynamicScript.md)
-* **Source:** *[LookupScript.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicScriptTypes/LookupScript.cs)*
+* **Source:** *[LookupScript.cs](https://github.com/serenity-is/Serenity/blob/eef6be1d7741640aed4ce405c3b44984620b84be/src/web/DynamicScript/DynamicScriptTypes/LookupScript.cs)*

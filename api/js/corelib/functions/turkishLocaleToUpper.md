@@ -28,7 +28,7 @@ Compat shim; for new code prefer `toLocaleUpperCase('tr')`.
 
 ## Deprecated
 
-Retained for legacy `Q.turkishLocaleToUpper` call sites.
+Retained for legacy `turkishLocaleToUpper` call sites.
 
 ## Example
 

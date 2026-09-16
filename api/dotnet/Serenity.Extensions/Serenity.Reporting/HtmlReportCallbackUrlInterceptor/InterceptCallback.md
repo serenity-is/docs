@@ -3,13 +3,13 @@
 Intercepts a report callback, applying impersonation and transient grants from the report auth cookie.
 
 ```csharp
-public ReportRenderResult InterceptCallback(ReportRenderOptions options, 
+public ReportRenderResult InterceptCallback(ReportRenderOptions renderOptions, 
     Func<ReportRenderOptions, ReportRenderResult> action)
 ```
 
 | parameter | description |
 | --- | --- |
-| options | The render options. |
+| renderOptions | The render options. |
 | action | The callback action. |
 
 ## Return Value

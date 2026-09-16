@@ -3,7 +3,7 @@
 Gets the else expression.
 
 ```csharp
-public object Else { get; set; }
+public object? Else { get; set; }
 ```
 
 ## See Also

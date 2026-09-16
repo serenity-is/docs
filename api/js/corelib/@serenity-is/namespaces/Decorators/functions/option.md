@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [Decorators](../README.md) / option
 
-# ~~Function: option()~~
+# Function: option()
 
 > **option**(): (`target`, `propertyKey`) => `void`
 

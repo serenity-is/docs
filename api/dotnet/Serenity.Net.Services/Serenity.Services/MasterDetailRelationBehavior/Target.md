@@ -1,7 +1,7 @@
 # MasterDetailRelationBehavior.Target property
 
 ```csharp
-public Field Target { get; set; }
+public Field? Target { get; set; }
 ```
 
 ## See Also

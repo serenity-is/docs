@@ -4,7 +4,7 @@ Intercepts the async [`SqlHelper`](../SqlHelper.md)`Execute` methods (SqlDelete/
 
 ```csharp
 public Task<OptionalValue<long?>> ExecuteNonQueryAsync(string commandText, 
-    IDictionary<string, object> parameters, ExpectedRows expectedRows, IQueryWithParams query, 
+    IDictionary<string, object?>? parameters, ExpectedRows expectedRows, IQueryWithParams? query, 
     bool getNewId, CancellationToken cancellationToken = default)
 ```
 

@@ -24,7 +24,7 @@ Formatted string — e.g. `1500` → `"1.01:00"`, `90` → `"01:30"`.
 
 ## Remarks
 
-Days are omitted when zero; minutes part `"00:00"` is omitted when zero unless days is also zero. Compat helper from `Q.formatDayHourAndMin`.
+Days are omitted when zero; minutes part `"00:00"` is omitted when zero unless days is also zero. Compat helper from `formatDayHourAndMin`.
 
 ## Example
 

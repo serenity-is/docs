@@ -3,7 +3,7 @@
 Static factory for field, for backward compatibility, avoid using.
 
 ```csharp
-public static DoubleField Factory(ICollection<Field> collection, string name, LocalText caption, 
+public static DoubleField Factory(ICollection<Field> collection, string name, LocalText? caption, 
     int size, FieldFlags flags, Func<IRow, double?> getValue, Action<IRow, double?> setValue)
 ```
 

@@ -3,7 +3,7 @@
 List of referenced joins in the field expression.
 
 ```csharp
-public HashSet<string> ReferencedAliases { get; }
+public HashSet<string>? ReferencedAliases { get; }
 ```
 
 ## See Also

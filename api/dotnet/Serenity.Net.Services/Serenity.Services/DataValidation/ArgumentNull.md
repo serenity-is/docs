@@ -3,7 +3,7 @@
 Returns an argument null error.
 
 ```csharp
-public static ValidationError ArgumentNull(string argument, ITextLocalizer localizer)
+public static ValidationError ArgumentNull(string argument, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

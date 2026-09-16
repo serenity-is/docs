@@ -20,6 +20,10 @@ A new binary IN criteria.
 | --- | --- |
 | ArgumentNullException | statement is null or empty |
 
+## Remarks
+
+The statement criteria is used as is, without adding parentheses around it. Use the [`In`](./In.md) overload for subqueries, which wraps the query in parentheses, or include them in the criteria expression.
+
 ## See Also
 
 * class [BaseCriteria](../BaseCriteria.md)
@@ -47,6 +51,10 @@ A new binary IN criteria.
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | statement is null |
+
+## Remarks
+
+Subqueries created via [`SubQuery`](../SqlQuery/SubQuery.md) already enclose themselves in parenthesis while rendering, so the statement is only wrapped in parenthesis when the query would render without them.
 
 ## See Also
 

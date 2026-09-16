@@ -1,7 +1,7 @@
 # DefaultImageProcessor.Load method
 
 ```csharp
-public object Load(Stream source, out ImageFormatInfo formatInfo)
+public object? Load(Stream source, out ImageFormatInfo? formatInfo)
 ```
 
 ## See Also

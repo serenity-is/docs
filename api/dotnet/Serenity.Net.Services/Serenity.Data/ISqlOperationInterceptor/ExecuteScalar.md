@@ -4,7 +4,7 @@ Intercepts the [`SqlHelper`](../SqlHelper.md)`ExecuteScalar` method.
 
 ```csharp
 public OptionalValue<object> ExecuteScalar(string commandText, 
-    IDictionary<string, object> parameters, SqlQuery query)
+    IDictionary<string, object?>? parameters, SqlQuery? query)
 ```
 
 | parameter | description |

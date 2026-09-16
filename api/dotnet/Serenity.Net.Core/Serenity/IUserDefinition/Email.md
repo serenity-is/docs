@@ -3,7 +3,7 @@
 Gets the email address of the user.
 
 ```csharp
-public string Email { get; }
+public string? Email { get; }
 ```
 
 ## See Also

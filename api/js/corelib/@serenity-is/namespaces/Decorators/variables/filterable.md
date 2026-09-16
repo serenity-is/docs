@@ -7,6 +7,7 @@
 Defined in: [src/types/decorators.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L153)
 
 Legacy decorator that attaches an [AdvancedFilteringAttribute](../../../../classes/AdvancedFilteringAttribute.md) to a grid class.
+[DEPRECATED] Prefer `static override [Symbol.typeInfo]` with [AdvancedFilteringAttribute](../../../../classes/AdvancedFilteringAttribute.md) metadata instead.
 
 ## Parameters
 
@@ -35,10 +36,6 @@ Class decorator.
 ### Returns
 
 `void`
-
-## Deprecated
-
-Prefer `static override [Symbol.typeInfo]` with [AdvancedFilteringAttribute](../../../../classes/AdvancedFilteringAttribute.md) metadata instead.
 
 ## Deprecated
 

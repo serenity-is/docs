@@ -4,7 +4,7 @@ Tries to read a value from local cache. If it is not found there produces value 
 
 ```csharp
 public static TItem? GetLocalStoreOnly<TItem>(this ITwoLevelCache cache, string cacheKey, 
-    TimeSpan localExpiration, string groupKey, Func<TItem?> loader)
+    TimeSpan localExpiration, string groupKey, Func<TItem?>? loader)
     where TItem : class
 ```
 

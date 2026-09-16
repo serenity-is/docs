@@ -3,7 +3,7 @@
 Gets the value of this row as an object.
 
 ```csharp
-public object AsObject(IRow row)
+public object? AsObject(IRow row)
 ```
 
 | parameter | description |
@@ -26,7 +26,7 @@ The value of the field in the row as an object.
 Sets the value of this field in specified row as object.
 
 ```csharp
-public abstract void AsObject(IRow row, object value)
+public abstract void AsObject(IRow row, object? value)
 ```
 
 | parameter | description |

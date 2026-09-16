@@ -3,8 +3,8 @@
 Gets the best matching attribute for the current dialect.
 
 ```csharp
-public TAttribute GetBestMatch<TAttribute>(IEnumerable<TAttribute> attributes, 
-    Func<TAttribute, string> getDialect)
+public TAttribute? GetBestMatch<TAttribute>(IEnumerable<TAttribute> attributes, 
+    Func<TAttribute, string?> getDialect)
     where TAttribute : class
 ```
 

@@ -29,7 +29,7 @@ Creates a panel page for the specified module and page title.
 
 ```csharp
 public static ModulePageResult PanelPage(this Controller controller, string module, 
-    LocalText pageTitle, object options = null, string layout = null)
+    LocalText pageTitle, object? options = null, string? layout = null)
 ```
 
 | parameter | description |

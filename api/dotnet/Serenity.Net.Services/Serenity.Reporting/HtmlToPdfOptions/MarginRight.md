@@ -1,7 +1,7 @@
 # HtmlToPdfOptions.MarginRight property
 
 ```csharp
-public string MarginRight { get; set; }
+public string? MarginRight { get; set; }
 ```
 
 ## See Also

@@ -3,9 +3,9 @@
 Field with an Int64 value.
 
 ```csharp
-public Int64Field(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, long?> getValue = null, 
-    Action<IRow, long?> setValue = null)
+public Int64Field(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, long?>? getValue = null, 
+    Action<IRow, long?>? setValue = null)
 ```
 
 | parameter | description |

@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [Decorators](../README.md) / registerFormatter
 
-# ~~Function: registerFormatter()~~
+# Function: registerFormatter()
 
 > **registerFormatter**(`nameOrIntf`, `intf2`): (`target`, `_context?`) => `void`
 

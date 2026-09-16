@@ -36,7 +36,7 @@ Number of matching elements.
 
 ## Deprecated
 
-Prefer `array.filter(predicate).length` or a manual loop. Retained as a `Q.count` compat shim.
+Prefer `array.filter(predicate).length` or a manual loop. Retained as a `count` compat shim.
 
 ## Example
 

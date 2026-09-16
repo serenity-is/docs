@@ -3,9 +3,9 @@
 Field with a Guid value.
 
 ```csharp
-public GuidField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, Guid?> getValue = null, 
-    Action<IRow, Guid?> setValue = null)
+public GuidField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, Guid?>? getValue = null, 
+    Action<IRow, Guid?>? setValue = null)
 ```
 
 | parameter | description |

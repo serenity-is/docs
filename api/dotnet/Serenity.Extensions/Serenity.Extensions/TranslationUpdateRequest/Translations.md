@@ -3,7 +3,7 @@
 The dictionary of text keys and their translated values.
 
 ```csharp
-public Dictionary<string, string> Translations { get; set; }
+public Dictionary<string, string>? Translations { get; set; }
 ```
 
 ## See Also

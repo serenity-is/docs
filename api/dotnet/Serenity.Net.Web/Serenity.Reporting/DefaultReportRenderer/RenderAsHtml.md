@@ -3,13 +3,13 @@
 Renders a report as HTML.
 
 ```csharp
-protected virtual ReportRenderResult RenderAsHtml(IReport report, ReportRenderOptions options)
+protected virtual ReportRenderResult RenderAsHtml(IReport report, ReportRenderOptions renderOptions)
 ```
 
 | parameter | description |
 | --- | --- |
 | report | The report. |
-| options | The options. |
+| renderOptions | The options. |
 
 ## Return Value
 

@@ -1,7 +1,7 @@
 # BaseCellDecorator.Format property
 
 ```csharp
-public string Format { get; set; }
+public string? Format { get; set; }
 ```
 
 ## See Also

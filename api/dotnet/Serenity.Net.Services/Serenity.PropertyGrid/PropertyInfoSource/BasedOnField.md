@@ -1,7 +1,7 @@
 # PropertyInfoSource.BasedOnField property
 
 ```csharp
-public Field BasedOnField { get; }
+public Field? BasedOnField { get; }
 ```
 
 ## See Also

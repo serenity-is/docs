@@ -4,7 +4,7 @@ Formats an INSERT query.
 
 ```csharp
 public static string Format(string tableName, IEnumerable<FieldExpressionPair> fieldExpressions, 
-    ISqlDialect dialect = null)
+    ISqlDialect? dialect = null)
 ```
 
 | parameter | description |

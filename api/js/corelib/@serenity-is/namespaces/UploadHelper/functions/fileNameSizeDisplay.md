@@ -4,7 +4,7 @@
 
 > **fileNameSizeDisplay**(`name`, `bytes`): `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L137)
+Defined in: [src/ui/helpers/uploadhelper.tsx:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L136)
 
 Returns a display string combining a file name and its size.
 

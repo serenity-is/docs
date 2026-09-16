@@ -3,7 +3,7 @@
 Gets the previous values.
 
 ```csharp
-public IRow PreviousValues { get; }
+public IRow? PreviousValues { get; }
 ```
 
 ## Property Value

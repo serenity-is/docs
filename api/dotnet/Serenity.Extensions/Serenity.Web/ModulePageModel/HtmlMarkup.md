@@ -3,7 +3,7 @@
 The HTML markup to render in the page body.
 
 ```csharp
-public string HtmlMarkup { get; set; }
+public string? HtmlMarkup { get; set; }
 ```
 
 ## See Also

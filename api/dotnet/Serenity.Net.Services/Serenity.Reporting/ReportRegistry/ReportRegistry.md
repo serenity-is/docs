@@ -1,6 +1,6 @@
 # ReportRegistry constructor
 
-Initializes a new instance of the class.
+Default report registry implementation
 
 ```csharp
 public ReportRegistry(ITypeSource typeSource, IPermissionService permissions, 
@@ -18,6 +18,10 @@ public ReportRegistry(ITypeSource typeSource, IPermissionService permissions,
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | *typeSource*, *permissions* or *localizer* is `null`. |
+
+## Remarks
+
+Initializes a new instance of the class.
 
 ## See Also
 

@@ -55,7 +55,7 @@ List of records matching the edited query.
 Lists the records matching specified where criteria. This method selects only the table fields, and no foreign / calculated fields. Use other overloads if you want to select different set of fields.
 
 ```csharp
-public static List<TRow> List<TRow>(this IDbConnection connection, ICriteria where)
+public static List<TRow> List<TRow>(this IDbConnection connection, ICriteria? where)
     where TRow : class, IRow, new()
 ```
 

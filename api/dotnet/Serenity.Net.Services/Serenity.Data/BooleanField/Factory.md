@@ -3,8 +3,8 @@
 Static factory for field, for backward compatibility, avoid using.
 
 ```csharp
-public static BooleanField Factory(ICollection<Field> collection, string name, LocalText caption, 
-    int size, FieldFlags flags, Func<IRow, bool?> getValue, Action<IRow, bool?> setValue)
+public static BooleanField Factory(ICollection<Field> collection, string name, LocalText? caption, 
+    int size, FieldFlags flags, Func<IRow, bool?> getValue, Action<IRow, bool?>? setValue)
 ```
 
 | parameter | description |

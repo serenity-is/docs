@@ -3,7 +3,7 @@
 Loads the image from the source stream
 
 ```csharp
-public object Load(Stream source, out ImageFormatInfo formatInfo)
+public object? Load(Stream source, out ImageFormatInfo? formatInfo)
 ```
 
 | parameter | description |

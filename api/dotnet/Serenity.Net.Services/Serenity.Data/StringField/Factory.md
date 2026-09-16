@@ -3,8 +3,8 @@
 Static factory for field, for backward compatibility, avoid using.
 
 ```csharp
-public static StringField Factory(ICollection<Field> collection, string name, LocalText caption, 
-    int size, FieldFlags flags, Func<IRow, string> getValue, Action<IRow, string> setValue)
+public static StringField Factory(ICollection<Field> collection, string name, LocalText? caption, 
+    int size, FieldFlags flags, Func<IRow, string?> getValue, Action<IRow, string?> setValue)
 ```
 
 | parameter | description |

@@ -24,7 +24,7 @@ Total minutes (`h*60+m`), `null` for empty/whitespace input, or `NaN` if the for
 
 ## Remarks
 
-Compat helper from `Q.parseHourAndMin`.
+Compat helper from `parseHourAndMin`.
 
 ## Example
 

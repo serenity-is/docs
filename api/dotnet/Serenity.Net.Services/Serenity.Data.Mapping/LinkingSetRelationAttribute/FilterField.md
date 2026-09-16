@@ -3,7 +3,7 @@
 Gets or sets the filter field.
 
 ```csharp
-public string FilterField { get; set; }
+public string? FilterField { get; set; }
 ```
 
 ## Property Value

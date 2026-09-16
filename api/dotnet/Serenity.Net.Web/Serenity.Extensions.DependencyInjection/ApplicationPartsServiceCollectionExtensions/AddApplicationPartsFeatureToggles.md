@@ -5,8 +5,9 @@ Adds the IFeatureToggles service to the registry, scanning for FeatureKeySetAttr
 ```csharp
 public static IServiceCollection AddApplicationPartsFeatureToggles(
     this IServiceCollection services, IConfiguration configuration, 
-    ApplicationPartManager applicationPartManager = null, object[] disableByDefault = null, 
-    Dictionary<string, List<RequiresFeatureAttribute>> dependencyMap = null)
+    ApplicationPartManager? applicationPartManager = null, object[]? disableByDefault = null, 
+    Dictionary<string, List<RequiresFeatureAttribute>>? dependencyMap = null, 
+    bool tryPartRecovery = true)
 ```
 
 | parameter | description |
@@ -16,6 +17,7 @@ public static IServiceCollection AddApplicationPartsFeatureToggles(
 | applicationPartManager | Optional application part manager to use. |
 | disableByDefault | Features to disable by default; pass `["*"]` to disable all features by default. |
 | dependencyMap | Feature dependency map. Features are dictionary keys and the list of features that they depend on (all must be enabled) for that feature to be enabled. |
+| tryPartRecovery | Whether to try recovering application parts when they were not discovered at build time. Defaults to `true`. |
 
 ## Return Value
 

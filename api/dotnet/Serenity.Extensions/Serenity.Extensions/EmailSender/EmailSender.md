@@ -4,7 +4,7 @@ Default implementation of [`IEmailSender`](../IEmailSender.md) that sends emails
 
 ```csharp
 public EmailSender(IWebHostEnvironment host, IOptions<SmtpSettings> settings, 
-    IEmailQueue emailQueue = null)
+    IEmailQueue? emailQueue = null)
 ```
 
 ## See Also

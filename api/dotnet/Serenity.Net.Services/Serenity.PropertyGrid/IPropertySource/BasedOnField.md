@@ -3,7 +3,7 @@
 Gets the based on field.
 
 ```csharp
-public Field BasedOnField { get; }
+public Field? BasedOnField { get; }
 ```
 
 ## Property Value

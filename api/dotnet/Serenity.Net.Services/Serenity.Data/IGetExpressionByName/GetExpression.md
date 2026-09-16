@@ -3,7 +3,7 @@
 Gets the expression.
 
 ```csharp
-public string GetExpression(string columnName)
+public string? GetExpression(string columnName)
 ```
 
 | parameter | description |

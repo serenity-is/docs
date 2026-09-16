@@ -11,11 +11,10 @@ public class CopyTemporaryFileOptions : FormatFilenameOptions
 
 | name | description |
 | --- | --- |
-| [CopyTemporaryFileOptions](CopyTemporaryFileOptions/CopyTemporaryFileOptions.md)() | The default constructor. |
 | [FilesToDelete](CopyTemporaryFileOptions/FilesToDelete.md) { get; set; } | Gets or sets the files to delete container. |
 | [TemporaryFile](CopyTemporaryFileOptions/TemporaryFile.md) { get; set; } | Gets or sets the temporary file. |
 
 ## See Also
 
 * class [FormatFilenameOptions](./FormatFilenameOptions.md)
-* **Source:** *[CopyTemporaryFileOptions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Upload/CopyTemporaryFileOptions.cs)*
+* **Source:** *[CopyTemporaryFileOptions.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Upload/CopyTemporaryFileOptions.cs)*

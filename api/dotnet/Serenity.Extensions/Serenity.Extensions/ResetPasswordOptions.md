@@ -17,4 +17,4 @@ public class ResetPasswordOptions
 
 ## See Also
 
-* **Source:** *[Extensions.ResetPasswordOptions.generated.cs](https://github.com/serenity-is/Serenity/blob/7345052967eb6b6cec2b0a8512d5916028ee30e9/common-features/src/extensions/Imports/ClientTypes/Extensions.ResetPasswordOptions.generated.cs)*
+* **Source:** *[Extensions.ResetPasswordOptions.generated.cs](https://github.com/serenity-is/Serenity/blob/2628abed3096f4ef947f5a72a8004e20a06da358/common-features/src/extensions/Imports/ClientTypes/Extensions.ResetPasswordOptions.generated.cs)*

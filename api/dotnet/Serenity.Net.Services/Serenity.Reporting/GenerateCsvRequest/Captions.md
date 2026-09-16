@@ -3,7 +3,7 @@
 List of column captions, e.g. column names in CSV
 
 ```csharp
-public List<string> Captions { get; set; }
+public List<string>? Captions { get; set; }
 ```
 
 ## See Also

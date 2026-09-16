@@ -3,9 +3,9 @@
 Field with a list value.
 
 ```csharp
-public ListField(ICollection<Field> collection, string name, LocalText caption = null, 
+public ListField(ICollection<Field> collection, string name, LocalText? caption = null, 
     int size = 0, FieldFlags flags = FieldFlags.NotMapped | FieldFlags.Default, 
-    Func<IRow, List<TItem>> getValue = null, Action<IRow, List<TItem>> setValue = null)
+    Func<IRow, List<TItem>?>? getValue = null, Action<IRow, List<TItem>?>? setValue = null)
 ```
 
 | parameter | description |

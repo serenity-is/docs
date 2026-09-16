@@ -1,7 +1,7 @@
 # ListRequest.IncludeColumns property
 
 ```csharp
-public HashSet<string> IncludeColumns { get; set; }
+public HashSet<string>? IncludeColumns { get; set; }
 ```
 
 ## See Also

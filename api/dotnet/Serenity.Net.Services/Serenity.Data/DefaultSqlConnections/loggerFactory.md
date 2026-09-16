@@ -3,7 +3,7 @@
 The logger factory.
 
 ```csharp
-protected readonly ILoggerFactory loggerFactory;
+protected readonly ILoggerFactory? loggerFactory;
 ```
 
 ## See Also

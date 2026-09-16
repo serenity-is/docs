@@ -3,7 +3,7 @@
 The URL that is being converted
 
 ```csharp
-public string Url { get; set; }
+public string? Url { get; set; }
 ```
 
 ## See Also

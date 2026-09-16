@@ -3,7 +3,7 @@
 The path where the translations were saved.
 
 ```csharp
-public string SavedPath { get; set; }
+public string? SavedPath { get; set; }
 ```
 
 ## See Also

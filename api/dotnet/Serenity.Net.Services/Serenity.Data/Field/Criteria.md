@@ -1,6 +1,6 @@
 # Field.Criteria property
 
-Gets the criteria.
+Gets the criteria object wrapping this field, it is cached for reuse.
 
 ```csharp
 public Criteria Criteria { get; }

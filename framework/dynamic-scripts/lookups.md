@@ -147,13 +147,13 @@ public sealed class RoleRow : Row<RoleRow.RowFields>, IIdRow, INameRow
     }
 
     [DisplayName("Role Name"), NameProperty]
-    public string RoleName
+    public string? RoleName
     {
         get => fields.RoleName[this];
         set => fields.RoleName[this] = value;
     }
 
-    public string RoleKey
+    public string? RoleKey
     {
         get => fields.RoleKey[this];
         set => fields.RoleKey[this] = value;
@@ -183,7 +183,7 @@ If you wanted to include some additional properties, you would need to add a `Lo
 
 ```cs
 [LookupInclude]
-public string RoleKey
+public string? RoleKey
 {
     get => fields.RoleKey[this];
     set => fields.RoleKey[this] = value;

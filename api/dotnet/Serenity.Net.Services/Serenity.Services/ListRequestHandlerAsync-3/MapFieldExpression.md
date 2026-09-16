@@ -1,7 +1,7 @@
 # ListRequestHandlerAsync&lt;TRow,TListRequest,TListResponse&gt;.MapFieldExpression method
 
 ```csharp
-protected override string MapFieldExpression(IField field, SqlQuery query)
+protected override string? MapFieldExpression(IField field, SqlQuery query)
 ```
 
 ## See Also

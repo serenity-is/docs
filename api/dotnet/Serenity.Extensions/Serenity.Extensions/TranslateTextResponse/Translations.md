@@ -3,7 +3,7 @@
 The list of translated texts.
 
 ```csharp
-public List<TranslateTextOutput> Translations { get; set; }
+public List<TranslateTextOutput>? Translations { get; set; }
 ```
 
 ## See Also

@@ -6,10 +6,10 @@
 
 > **panelPageInit**\<`TGrid`, `P`\>(`panel`): `TGrid`
 
-Defined in: [src/compat/layout.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L88)
+Defined in: [src/compat/layout.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L86)
 
 Initializes a Serenity panel page without hash-router integration.
-Compat shim for the legacy `Q.panelPageInit` / `Serenity.panelPageInit` API. Accepts either an existing panel instance or a widget class + props.
+Compat shim for the legacy `panelPageInit` / `Serenity.panelPageInit` API. Accepts either an existing panel instance or a widget class + props.
 
 ### Type Parameters
 
@@ -35,15 +35,11 @@ An existing panel widget instance (must expose `domNode`).
 
 The same panel widget after layout initialization (`noRoute: true`).
 
-### Deprecated
-
-Use direct widget construction with [initFullHeightGridPage](initFullHeightGridPage.md). Kept for legacy compatibility.
-
 ## Call Signature
 
 > **panelPageInit**\<`TGrid`, `P`\>(`type`, `props?`): `TGrid`
 
-Defined in: [src/compat/layout.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L95)
+Defined in: [src/compat/layout.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L93)
 
 Initializes a Serenity panel page without hash-router integration.
 

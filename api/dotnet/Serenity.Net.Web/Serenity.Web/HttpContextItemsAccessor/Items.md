@@ -1,7 +1,7 @@
 # HttpContextItemsAccessor.Items property
 
 ```csharp
-public IDictionary<object, object> Items { get; }
+public IDictionary<object, object?>? Items { get; }
 ```
 
 ## See Also

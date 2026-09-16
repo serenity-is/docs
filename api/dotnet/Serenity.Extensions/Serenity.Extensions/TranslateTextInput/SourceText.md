@@ -3,7 +3,7 @@
 The source text to translate.
 
 ```csharp
-public string SourceText { get; set; }
+public string? SourceText { get; set; }
 ```
 
 ## See Also

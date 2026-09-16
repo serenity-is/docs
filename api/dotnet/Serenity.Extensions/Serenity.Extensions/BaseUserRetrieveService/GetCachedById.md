@@ -3,7 +3,7 @@
 Gets the cached user by the specified ID.
 
 ```csharp
-protected virtual IUserDefinition GetCachedById(string id)
+protected virtual IUserDefinition? GetCachedById(string id)
 ```
 
 | parameter | description |

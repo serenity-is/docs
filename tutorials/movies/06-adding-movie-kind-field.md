@@ -59,8 +59,8 @@ To include TV series and mini-series in your movie database, you'll need to add 
    public class RowFields : RowFieldsBase
    {
        // ...
-       public Int32Field Runtime;
-       public EnumField<MovieKind> Kind;
+       public Int32Field Runtime = null!;
+       public EnumField<MovieKind> Kind = null!;
    }
    ```
 
@@ -71,8 +71,8 @@ To include TV series and mini-series in your movie database, you'll need to add 
     public class MovieForm
     {
         // ...
-        public int Runtime { get; set; }
-        public MovieKind Kind { get; set; }
+        public int? Runtime { get; set; }
+        public MovieKind? Kind { get; set; }
     }
     ```
 
@@ -83,8 +83,8 @@ To include TV series and mini-series in your movie database, you'll need to add 
     public class MovieColumns
     {
         // ...
-        public int Runtime { get; set; }
-        public MovieKind Kind { get; set; }
+        public int? Runtime { get; set; }
+        public MovieKind? Kind { get; set; }
     }
     ```
 

@@ -3,7 +3,7 @@
 Sets a field value with a parameter.
 
 ```csharp
-public static T Set<T>(this T self, IField field, object value)
+public static T Set<T>(this T self, IField field, object? value)
     where T : ISetFieldByStatement
 ```
 
@@ -30,7 +30,7 @@ The object itself.
 Sets all field values in a row with auto named parameters (field name prefixed with '@').
 
 ```csharp
-public static T Set<T>(this T self, IRow row, IField exclude = null)
+public static T Set<T>(this T self, IRow row, IField? exclude = null)
     where T : ISetFieldByStatement
 ```
 

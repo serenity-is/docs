@@ -40,7 +40,7 @@ public ForeignKeyAttribute(string table, string field)
 Specifies that this property is a foreign key to another field in a primary key table.
 
 ```csharp
-public ForeignKeyAttribute(Type rowType, string field)
+public ForeignKeyAttribute(Type rowType, string? field)
 ```
 
 | parameter | description |

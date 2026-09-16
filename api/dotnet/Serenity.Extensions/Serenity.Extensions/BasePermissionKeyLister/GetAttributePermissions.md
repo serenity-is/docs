@@ -4,7 +4,7 @@ Gets permissions from a member attribute.
 
 ```csharp
 protected virtual IEnumerable<string> GetAttributePermissions<TAttr>(MemberInfo member, 
-    Func<TAttr, string> getPermission)
+    Func<TAttr, string?> getPermission)
     where TAttr : Attribute
 ```
 
@@ -26,7 +26,7 @@ Gets permissions from a type attribute.
 
 ```csharp
 protected virtual IEnumerable<string> GetAttributePermissions<TAttr>(Type type, 
-    Func<TAttr, string> getPermission)
+    Func<TAttr, string?> getPermission)
     where TAttr : Attribute
 ```
 

@@ -3,7 +3,7 @@
 Page width like 21cm. Default value is unspecified.
 
 ```csharp
-public string PageWidth { get; set; }
+public string? PageWidth { get; set; }
 ```
 
 ## See Also

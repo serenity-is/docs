@@ -3,7 +3,7 @@
 The lazily built connection key fallback map.
 
 ```csharp
-protected Dictionary<string, string> fallbackMap;
+protected Dictionary<string, string>? fallbackMap;
 ```
 
 ## Remarks

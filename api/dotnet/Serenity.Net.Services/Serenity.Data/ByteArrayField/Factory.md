@@ -3,8 +3,9 @@
 Static factory for field, for backward compatibility, avoid using.
 
 ```csharp
-public static ByteArrayField Factory(ICollection<Field> collection, string name, LocalText caption, 
-    int size, FieldFlags flags, Func<IRow, byte[]> getValue, Action<IRow, byte[]> setValue)
+public static ByteArrayField Factory(ICollection<Field> collection, string name, 
+    LocalText? caption, int size, FieldFlags flags, Func<IRow, byte[]> getValue, 
+    Action<IRow, byte[]?> setValue)
 ```
 
 | parameter | description |

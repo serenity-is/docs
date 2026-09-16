@@ -3,7 +3,7 @@
 Gets the current user.
 
 ```csharp
-public ClaimsPrincipal User { get; }
+public ClaimsPrincipal? User { get; }
 ```
 
 ## See Also

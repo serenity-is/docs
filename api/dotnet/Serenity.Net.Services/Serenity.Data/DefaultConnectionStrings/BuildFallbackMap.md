@@ -3,7 +3,7 @@
 Builds the connection key fallback map from the given type source.
 
 ```csharp
-protected static Dictionary<string, string> BuildFallbackMap(ITypeSource typeSource)
+protected static Dictionary<string, string> BuildFallbackMap(ITypeSource? typeSource)
 ```
 
 | parameter | description |

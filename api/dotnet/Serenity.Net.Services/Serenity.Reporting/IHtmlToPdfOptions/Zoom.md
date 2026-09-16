@@ -3,7 +3,7 @@
 Zoom value like "0.33". Default is unspecified.
 
 ```csharp
-public string Zoom { get; set; }
+public string? Zoom { get; set; }
 ```
 
 ## See Also

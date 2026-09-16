@@ -4,7 +4,7 @@
 
 > **dbFileUrl**(`filename`): `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L198)
+Defined in: [src/ui/helpers/uploadhelper.tsx:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L197)
 
 Returns the resolved URL for a database-stored file.
 

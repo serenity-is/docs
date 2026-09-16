@@ -3,7 +3,7 @@
 Gets or sets the data type of values for the column.
 
 ```csharp
-public Type DataType { get; set; }
+public Type? DataType { get; set; }
 ```
 
 ## See Also

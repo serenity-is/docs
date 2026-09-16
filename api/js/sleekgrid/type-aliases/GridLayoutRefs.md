@@ -16,7 +16,7 @@ Aggregated refs for all bands and derived pinning/frozen indices.
 
 Defined in: [src/layouts/layout-refs.tsx:65](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L65)
 
-Writable config inputs; setters trigger createGridSignalsAndRefs recalculation.
+Writable config inputs; setters trigger [createGridSignalsAndRefs](createGridSignalsAndRefs.md) recalculation.
 
 #### colCount?
 

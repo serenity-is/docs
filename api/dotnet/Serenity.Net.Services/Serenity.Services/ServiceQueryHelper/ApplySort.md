@@ -47,7 +47,7 @@ public static SqlQuery ApplySort(this SqlQuery query, IList<SortBy> sortByList,
 Applies the sort order to the query
 
 ```csharp
-public static SqlQuery ApplySort(this SqlQuery query, string sort, bool descending)
+public static SqlQuery ApplySort(this SqlQuery query, string? sort, bool descending)
 ```
 
 | parameter | description |

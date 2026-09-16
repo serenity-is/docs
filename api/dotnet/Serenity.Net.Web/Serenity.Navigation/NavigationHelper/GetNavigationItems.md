@@ -5,7 +5,7 @@ Gets navigation items.
 ```csharp
 public static List<NavigationItem> GetNavigationItems(IPermissionService permissions, 
     ITypeSource typeSource, IServiceProvider serviceProvider, 
-    Func<string, string> resolveUrl = null, Func<NavigationItemAttribute, bool> filter = null)
+    Func<string, string>? resolveUrl = null, Func<NavigationItemAttribute, bool>? filter = null)
 ```
 
 | parameter | description |

@@ -40,7 +40,7 @@ If no element satisfies the predicate (`"first:No element satisfies the conditio
 
 ## Deprecated
 
-Prefer `array.find(predicate)` with explicit not-found handling. Retained as a `Q.first` compat shim.
+Prefer `array.find(predicate)` with explicit not-found handling. Retained as a `first` compat shim.
 
 ## Example
 

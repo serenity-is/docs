@@ -24,7 +24,7 @@ Total minutes, `null` for empty input, or `NaN` for invalid format/range (hours 
 
 ## Remarks
 
-Accepts `"d"` (days), `"hh:mm"`, or `"d.hh:mm"` (two-part split on `.`). Delegates the time part to [parseHourAndMin](parseHourAndMin.md). Compat helper from `Q.parseDayHourAndMin`.
+Accepts `"d"` (days), `"hh:mm"`, or `"d.hh:mm"` (two-part split on `.`). Delegates the time part to [parseHourAndMin](parseHourAndMin.md). Compat helper from `parseDayHourAndMin`.
 
 ## Example
 

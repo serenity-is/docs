@@ -5,7 +5,7 @@ Initializes a new instance of the [`ScriptBundleManager`](../ScriptBundleManager
 ```csharp
 public ScriptBundleManager(IOptions<ScriptBundlingOptions> options, IScriptMinifier scriptMinifier, 
     IDynamicScriptManager scriptManager, IWebHostEnvironment hostEnvironment, 
-    IHttpContextAccessor contextAccessor = null, ILogger<ScriptBundleManager> logger = null)
+    IHttpContextAccessor? contextAccessor = null, ILogger<ScriptBundleManager>? logger = null)
 ```
 
 | parameter | description |

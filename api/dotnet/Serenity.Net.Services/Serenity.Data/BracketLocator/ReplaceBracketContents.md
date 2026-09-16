@@ -3,7 +3,7 @@
 Replaces the bracket contents in SQL expression.
 
 ```csharp
-public static string ReplaceBracketContents(string expression, char validChar1, 
+public static string? ReplaceBracketContents(string? expression, char validChar1, 
     Func<string, string> replace)
 ```
 

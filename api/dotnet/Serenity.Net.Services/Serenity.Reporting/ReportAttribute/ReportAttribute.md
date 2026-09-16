@@ -3,7 +3,7 @@
 Marks a class as a report.
 
 ```csharp
-public ReportAttribute(string reportKey = null)
+public ReportAttribute(string? reportKey = null)
 ```
 
 | parameter | description |

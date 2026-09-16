@@ -1,7 +1,7 @@
 # BaseUserRetrieveService.ById method
 
 ```csharp
-public virtual IUserDefinition ById(string id)
+public virtual IUserDefinition? ById(string id)
 ```
 
 ## See Also

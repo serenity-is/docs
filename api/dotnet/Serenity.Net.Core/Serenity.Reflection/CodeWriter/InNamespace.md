@@ -3,7 +3,7 @@
 Executes action by opening namespace if it is not null or empty
 
 ```csharp
-public void InNamespace(string ns, Action action)
+public void InNamespace(string? ns, Action action)
 ```
 
 | parameter | description |

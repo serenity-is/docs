@@ -3,7 +3,7 @@
 Clones the specified value.
 
 ```csharp
-protected override List<TItem> Clone(List<TItem> value)
+protected override List<TItem>? Clone(List<TItem>? value)
 ```
 
 | parameter | description |

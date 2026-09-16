@@ -3,8 +3,8 @@
 Default ILocalTextInitializer that registers base texts and JSON texts from the `App_Data/texts` folder.
 
 ```csharp
-public DefaultLocalTextInitializer(ITypeSource typeSource, IRowTypeRegistry rowTypeRegistry = null, 
-    IWebHostEnvironment webHostEnvironment = null)
+public DefaultLocalTextInitializer(ITypeSource typeSource, 
+    IRowTypeRegistry? rowTypeRegistry = null, IWebHostEnvironment? webHostEnvironment = null)
 ```
 
 | parameter | description |

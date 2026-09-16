@@ -24,4 +24,4 @@ public static class HtmlScriptExtensions
 
 ## See Also
 
-* **Source:** *[HtmlScriptExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/HtmlScriptExtensions.cs)*
+* **Source:** *[HtmlScriptExtensions.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/src/web/Mvc/HtmlScriptExtensions.cs)*

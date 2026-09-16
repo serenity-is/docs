@@ -3,7 +3,7 @@
 Gets the MIME type for a given file.
 
 ```csharp
-public static string TryGet(string path)
+public static string? TryGet(string path)
 ```
 
 | parameter | description |

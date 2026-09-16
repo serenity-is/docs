@@ -29,7 +29,7 @@ Creates a grid page for the specified module and page title.
 
 ```csharp
 public static ModulePageResult GridPage(this Controller controller, string module, 
-    LocalText pageTitle, object options = null, string layout = null)
+    LocalText pageTitle, object? options = null, string? layout = null)
 ```
 
 | parameter | description |
@@ -58,7 +58,7 @@ Creates a grid page for the specified row type and module.
 
 ```csharp
 public static ModulePageResult GridPage<TRow>(this Controller controller, string module, 
-    object options = null, string layout = null, LocalText pageTitle = null)
+    object? options = null, string? layout = null, LocalText? pageTitle = null)
     where TRow : IRow, new()
 ```
 

@@ -2,7 +2,7 @@
 
 # Interface: UploadResponse
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:359](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L359)
+Defined in: [src/ui/helpers/uploadhelper.tsx:358](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L358)
 
 The response returned by a file upload service.
 
@@ -30,7 +30,7 @@ Error information when the request failed; `undefined` on success.
 
 > **Height**: `number`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:379](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L379)
+Defined in: [src/ui/helpers/uploadhelper.tsx:378](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L378)
 
 The image height.
 
@@ -40,7 +40,7 @@ The image height.
 
 > **IsImage**: `boolean`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:371](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L371)
+Defined in: [src/ui/helpers/uploadhelper.tsx:370](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L370)
 
 Whether the file is an image.
 
@@ -50,7 +50,7 @@ Whether the file is an image.
 
 > **Size**: `number`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:367](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L367)
+Defined in: [src/ui/helpers/uploadhelper.tsx:366](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L366)
 
 The file size in bytes.
 
@@ -60,7 +60,7 @@ The file size in bytes.
 
 > **TemporaryFile**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:363](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L363)
+Defined in: [src/ui/helpers/uploadhelper.tsx:362](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L362)
 
 The temporary file name.
 
@@ -70,6 +70,6 @@ The temporary file name.
 
 > **Width**: `number`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:375](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L375)
+Defined in: [src/ui/helpers/uploadhelper.tsx:374](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L374)
 
 The image width.

@@ -3,7 +3,7 @@
 The layout to use for the page.
 
 ```csharp
-public string Layout { get; set; }
+public string? Layout { get; set; }
 ```
 
 ## See Also

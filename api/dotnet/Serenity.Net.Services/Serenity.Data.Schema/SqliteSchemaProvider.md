@@ -22,4 +22,4 @@ public class SqliteSchemaProvider : ISchemaProvider
 ## See Also
 
 * interface [ISchemaProvider](./ISchemaProvider.md)
-* **Source:** *[SqliteSchemaProvider.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Schema/Providers/SqliteSchemaProvider.cs)*
+* **Source:** *[SqliteSchemaProvider.cs](https://github.com/serenity-is/Serenity/blob/2a28525933e32e2024b92a826ed8ec67fa1a48e0/src/services/Data/Schema/Providers/SqliteSchemaProvider.cs)*

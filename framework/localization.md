@@ -364,8 +364,8 @@ The topmost class (e.g. *Texts* here) for nested local text registration classes
 ```cs
 public sealed class NestedLocalTextsAttribute : Attribute
 {
-    public string LanguageID { get; set; }
-    public string Prefix { get; set; }
+    public string? LanguageID { get; set; }
+    public string? Prefix { get; set; }
 }
 ```
 
@@ -423,10 +423,10 @@ namespace Serene.Administration
         public int? UserId { ... }
 
         [DisplayName("Username"), Size(100), NotNull, QuickSearch, LookupInclude, NameProperty]
-        public string Username { ... }
+        public string? Username { ... }
 
         [DisplayName("Source"), Size(4), NotNull, Insertable(false), Updatable(false), DefaultValue("site")]
-        public string Source
+        public string? Source
         {
             get => fields.Source[this];
             set => fields.Source[this] = value;

@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [LayoutTimer](../README.md) / onWidthChange
 
-# ~~Function: onWidthChange()~~
+# Function: onWidthChange()
 
 > **onWidthChange**(`element`, `handler`, `opt?`): `number`
 

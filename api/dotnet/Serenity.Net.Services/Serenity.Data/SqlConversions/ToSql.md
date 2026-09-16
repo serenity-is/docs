@@ -135,7 +135,7 @@ The SQL constant, or NULL if the value has no value.
 Converts the value to SQL.
 
 ```csharp
-public static string ToSql(this DateTime value, ISqlDialect dialect = null)
+public static string ToSql(this DateTime value, ISqlDialect? dialect = null)
 ```
 
 | parameter | description |
@@ -159,7 +159,7 @@ The SQL constant.
 Converts the value to SQL.
 
 ```csharp
-public static string ToSql(this DateTime? value, ISqlDialect dialect = null)
+public static string ToSql(this DateTime? value, ISqlDialect? dialect = null)
 ```
 
 | parameter | description |
@@ -183,7 +183,7 @@ The SQL constant, or NULL if the value has no value.
 Converts the value to SQL.
 
 ```csharp
-public static string ToSql(this string value, ISqlDialect dialect = null)
+public static string ToSql(this string value, ISqlDialect? dialect = null)
 ```
 
 | parameter | description |

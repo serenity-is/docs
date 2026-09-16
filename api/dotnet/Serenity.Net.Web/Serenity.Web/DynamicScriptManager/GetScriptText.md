@@ -1,7 +1,7 @@
 # DynamicScriptManager.GetScriptText method
 
 ```csharp
-public string GetScriptText(string name, bool json)
+public string? GetScriptText(string name, bool json)
 ```
 
 ## See Also

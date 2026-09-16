@@ -4,7 +4,7 @@ Base permission service that provides common functionality for permission servic
 
 ```csharp
 protected BasePermissionService(IUserAccessor userAccessor, IRolePermissionService rolePermissions, 
-    IHttpContextItemsAccessor httpContextItemsAccessor = null)
+    IHttpContextItemsAccessor? httpContextItemsAccessor = null)
 ```
 
 | parameter | description |

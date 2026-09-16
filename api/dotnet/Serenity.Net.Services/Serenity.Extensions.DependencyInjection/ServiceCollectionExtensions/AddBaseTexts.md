@@ -4,7 +4,7 @@ Adds nested texts, enum texts, permission texts, row texts and json local text a
 
 ```csharp
 public static ILocalTextRegistry AddBaseTexts(this IServiceProvider provider, 
-    IFileProvider webFileProvider = null)
+    IFileProvider? webFileProvider = null)
 ```
 
 | parameter | description |
@@ -35,7 +35,7 @@ Adds nested texts, enum texts, permission texts, row texts and json local text a
 
 ```csharp
 public static ILocalTextRegistry AddBaseTexts(this ILocalTextRegistry textRegistry, 
-    ITypeSource typeSource, IRowTypeRegistry rowTypeRegistry = null, bool includeResources = true)
+    ITypeSource typeSource, IRowTypeRegistry? rowTypeRegistry = null, bool includeResources = true)
 ```
 
 | parameter | description |

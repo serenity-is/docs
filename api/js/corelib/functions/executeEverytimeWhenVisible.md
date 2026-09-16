@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / executeEverytimeWhenVisible
 
-# ~~Function: executeEverytimeWhenVisible()~~
+# Function: executeEverytimeWhenVisible()
 
 > **executeEverytimeWhenVisible**(`el`, `callback`, `callNowIfVisible`): `number`
 
@@ -34,7 +34,4 @@ When `true` and the element is already visible, invokes the callback immediately
 `number`
 
 The [LayoutTimer](../@serenity-is/namespaces/LayoutTimer/README.md) registration key, or `null` if the element is missing.
-
-## Deprecated
-
-Prefer `IntersectionObserver` / `ResizeObserver`. Kept for legacy `triggerLayoutOnShow` compatibility.
+[DEPRECATED] Prefer `IntersectionObserver` / `ResizeObserver`. Kept for legacy `triggerLayoutOnShow` compatibility.

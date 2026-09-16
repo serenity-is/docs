@@ -15,4 +15,4 @@ public interface IGetScriptData
 
 ## See Also
 
-* **Source:** *[IGetScriptData.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/DynamicScript/IGetScriptData.cs)*
+* **Source:** *[IGetScriptData.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/core/DynamicScript/IGetScriptData.cs)*

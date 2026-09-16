@@ -3,7 +3,7 @@
 The set value callback.
 
 ```csharp
-protected internal Action<IRow, TValue> _setValue;
+protected internal Action<IRow, TValue?> _setValue;
 ```
 
 ## See Also

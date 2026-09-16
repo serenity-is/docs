@@ -50,7 +50,7 @@ The generated Excel file bytes.
 Exports the specified data using the columns defined by the given type, limited to the specified columns.
 
 ```csharp
-public byte[] Export(IEnumerable data, Type columnsType, IEnumerable<string> exportColumns)
+public byte[] Export(IEnumerable data, Type columnsType, IEnumerable<string>? exportColumns)
 ```
 
 | parameter | description |

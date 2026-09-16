@@ -75,7 +75,7 @@ The DOM node this widget is bound to.
 
 > `protected` **entity**: [`UploadedFile`](../interfaces/UploadedFile.md)
 
-Defined in: [src/ui/editors/uploadeditors.tsx:329](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L329)
+Defined in: [src/ui/editors/uploadeditors.tsx:328](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L328)
 
 ***
 
@@ -83,7 +83,7 @@ Defined in: [src/ui/editors/uploadeditors.tsx:329](https://github.com/serenity-i
 
 > `protected` **fileSymbols**: `HTMLElement`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:332](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L332)
+Defined in: [src/ui/editors/uploadeditors.tsx:331](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L331)
 
 ***
 
@@ -91,7 +91,7 @@ Defined in: [src/ui/editors/uploadeditors.tsx:332](https://github.com/serenity-i
 
 > `protected` **hiddenInput**: `HTMLInputElement`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:334](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L334)
+Defined in: [src/ui/editors/uploadeditors.tsx:333](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L333)
 
 ***
 
@@ -127,7 +127,7 @@ The widget's options/props.
 
 > `protected` **progress**: `HTMLElement`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:331](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L331)
+Defined in: [src/ui/editors/uploadeditors.tsx:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L330)
 
 ***
 
@@ -135,7 +135,7 @@ Defined in: [src/ui/editors/uploadeditors.tsx:331](https://github.com/serenity-i
 
 > `protected` **toolbar**: [`Toolbar`](Toolbar.md)
 
-Defined in: [src/ui/editors/uploadeditors.tsx:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L330)
+Defined in: [src/ui/editors/uploadeditors.tsx:329](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L329)
 
 ***
 
@@ -157,7 +157,7 @@ A unique name for this widget instance, used for event namespacing.
 
 > `protected` **uploadInput**: [`Fluent`](../interfaces/Fluent.md)
 
-Defined in: [src/ui/editors/uploadeditors.tsx:333](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L333)
+Defined in: [src/ui/editors/uploadeditors.tsx:332](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L332)
 
 ***
 
@@ -275,7 +275,7 @@ Sets whether the editor is read-only.
 
 > **get** **value**(): [`UploadedFile`](../interfaces/UploadedFile.md)
 
-Defined in: [src/ui/editors/uploadeditors.tsx:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L248)
+Defined in: [src/ui/editors/uploadeditors.tsx:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L247)
 
 Returns the current uploaded file.
 
@@ -289,7 +289,7 @@ The uploaded file.
 
 > **set** **value**(`v`): `void`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L288)
+Defined in: [src/ui/editors/uploadeditors.tsx:287](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L287)
 
 Sets the uploaded file.
 
@@ -329,7 +329,7 @@ Adds the widget's CSS class to its DOM node.
 
 > `protected` **addFileButtonText**(): `string`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L110)
+Defined in: [src/ui/editors/uploadeditors.tsx:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L109)
 
 Returns the text for the add-file button.
 
@@ -600,7 +600,7 @@ The matching element, or null if not found.
 
 > **get\_readOnly**(): `boolean`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L186)
+Defined in: [src/ui/editors/uploadeditors.tsx:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L185)
 
 Returns whether the editor is read-only.
 
@@ -620,7 +620,7 @@ True when read-only.
 
 > **get\_required**(): `boolean`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L220)
+Defined in: [src/ui/editors/uploadeditors.tsx:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L219)
 
 Returns whether the field is required.
 
@@ -640,7 +640,7 @@ True when required.
 
 > **get\_value**(): [`UploadedFile`](../interfaces/UploadedFile.md)
 
-Defined in: [src/ui/editors/uploadeditors.tsx:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L236)
+Defined in: [src/ui/editors/uploadeditors.tsx:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L235)
 
 Returns the current uploaded file.
 
@@ -716,7 +716,7 @@ The matching attribute, or null.
 
 > `protected` **getDefaultAllowNonImage**(): `boolean`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L147)
+Defined in: [src/ui/editors/uploadeditors.tsx:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L146)
 
 Returns whether non-image files are allowed by default.
 
@@ -732,7 +732,7 @@ True when non-image files are allowed.
 
 > **getEditValue**(`property`, `target`): `void`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:297](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L297)
+Defined in: [src/ui/editors/uploadeditors.tsx:296](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L296)
 
 Gets the edit value into a target object.
 
@@ -784,7 +784,7 @@ A [Fluent](../functions/Fluent.md) wrapper for the grid field.
 
 > `protected` **getToolButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
 
-Defined in: [src/ui/editors/uploadeditors.tsx:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L118)
+Defined in: [src/ui/editors/uploadeditors.tsx:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L117)
 
 Returns the toolbar buttons for the editor.
 
@@ -800,7 +800,7 @@ Tool button definitions.
 
 > `protected` **getUploadInputOptions**(): [`UploadInputOptions`](../interfaces/UploadInputOptions.md)
 
-Defined in: [src/ui/editors/uploadeditors.tsx:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L79)
+Defined in: [src/ui/editors/uploadeditors.tsx:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L78)
 
 Returns the upload input options.
 
@@ -874,7 +874,7 @@ True if a legacy template was rendered.
 
 > `protected` **populate**(): `void`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L154)
+Defined in: [src/ui/editors/uploadeditors.tsx:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L153)
 
 Populates the file symbols from the current entity.
 
@@ -928,7 +928,7 @@ The rendered contents.
 
 > **set\_readOnly**(`value`): `void`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L194)
+Defined in: [src/ui/editors/uploadeditors.tsx:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L193)
 
 Sets whether the editor is read-only.
 
@@ -954,7 +954,7 @@ True to enable read-only mode.
 
 > **set\_required**(`value`): `void`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L228)
+Defined in: [src/ui/editors/uploadeditors.tsx:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L227)
 
 Sets whether the field is required.
 
@@ -980,7 +980,7 @@ True when required.
 
 > **set\_value**(`value`): `void`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:256](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L256)
+Defined in: [src/ui/editors/uploadeditors.tsx:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L255)
 
 Sets the uploaded file.
 
@@ -1002,7 +1002,7 @@ The uploaded file to set.
 
 > **setEditValue**(`source`, `property`): `void`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:306](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L306)
+Defined in: [src/ui/editors/uploadeditors.tsx:305](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L305)
 
 Sets the edit value from a source object.
 
@@ -1079,7 +1079,7 @@ The continuation invoked with the result.
 
 > `protected` **updateInterface**(): `void`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L174)
+Defined in: [src/ui/editors/uploadeditors.tsx:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L173)
 
 Updates the interface to reflect the current state.
 

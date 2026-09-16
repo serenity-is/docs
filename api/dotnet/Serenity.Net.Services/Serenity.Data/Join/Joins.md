@@ -3,7 +3,7 @@
 Gets the joins.
 
 ```csharp
-public IDictionary<string, Join> Joins { get; }
+public IDictionary<string, Join>? Joins { get; }
 ```
 
 ## Property Value

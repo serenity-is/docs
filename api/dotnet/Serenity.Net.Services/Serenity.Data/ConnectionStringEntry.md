@@ -21,4 +21,4 @@ public class ConnectionStringEntry
 
 ## See Also
 
-* **Source:** *[ConnectionStringEntry.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/services/Data/Connections/ConnectionStringEntry.cs)*
+* **Source:** *[ConnectionStringEntry.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Connections/ConnectionStringEntry.cs)*

@@ -36,7 +36,7 @@ The matched `HTMLElement`, or `null` if the source is `null` or no match is foun
 
 ## Remarks
 
-Tries `"#" + fromId + relativeId` then `"#" + fromId + "_" + relativeId`, progressively stripping trailing `"_segment"` segments from `fromId` until a match or exhaustion. Compat helper from `Q.findElementWithRelativeId`.
+Tries `"#" + fromId + relativeId` then `"#" + fromId + "_" + relativeId`, progressively stripping trailing `"_segment"` segments from `fromId` until a match or exhaustion. Compat helper from `findElementWithRelativeId`.
 
 ## Example
 

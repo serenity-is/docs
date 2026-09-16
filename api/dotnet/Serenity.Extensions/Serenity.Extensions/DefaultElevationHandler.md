@@ -21,4 +21,4 @@ public class DefaultElevationHandler : BaseRequestHandler, IElevationHandler
 
 * class [BaseRequestHandler](../../Serenity.Net.Services/Serenity.Services/BaseRequestHandler.md)
 * interface [IElevationHandler](../Serenity.Abstractions/IElevationHandler.md)
-* **Source:** *[DefaultElevationHandler.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/Elevation/DefaultElevationHandler.cs)*
+* **Source:** *[DefaultElevationHandler.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/Elevation/DefaultElevationHandler.cs)*

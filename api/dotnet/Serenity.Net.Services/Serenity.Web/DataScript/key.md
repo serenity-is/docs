@@ -3,7 +3,7 @@
 Key for the data script.
 
 ```csharp
-protected string key;
+protected string? key;
 ```
 
 ## See Also

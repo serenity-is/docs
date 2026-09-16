@@ -11,7 +11,6 @@ public class TableName
 
 | name | description |
 | --- | --- |
-| [TableName](TableName/TableName.md)() | The default constructor. |
 | [IsView](TableName/IsView.md) { get; set; } | Gets or sets a value indicating whether this instance is view. |
 | [Schema](TableName/Schema.md) { get; set; } | Gets or sets the schema. |
 | [Table](TableName/Table.md) { get; set; } | Gets or sets the table. |
@@ -19,4 +18,4 @@ public class TableName
 
 ## See Also
 
-* **Source:** *[TableName.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Schema/TableName.cs)*
+* **Source:** *[TableName.cs](https://github.com/serenity-is/Serenity/blob/2a28525933e32e2024b92a826ed8ec67fa1a48e0/src/services/Data/Schema/TableName.cs)*

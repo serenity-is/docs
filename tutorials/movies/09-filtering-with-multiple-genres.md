@@ -14,7 +14,7 @@ public class MovieColumns
 {
     //...
     [Width(200), GenreListFormatter, QuickFilter]
-    public List<int> GenreList { get; set; }
+    public List<int>? GenreList { get; set; }
 }
 ```
 
@@ -29,7 +29,7 @@ namespace MovieTutorial.MovieDB;
 
 public class MovieListRequest : ListRequest
 {
-    public List<int> Genres { get; set; }
+    public List<int>? Genres { get; set; }
 }
 ```
 

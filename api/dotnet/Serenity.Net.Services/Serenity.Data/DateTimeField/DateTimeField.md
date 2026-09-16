@@ -3,9 +3,9 @@
 Field with a DateTime value.
 
 ```csharp
-public DateTimeField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, DateTime?> getValue = null, 
-    Action<IRow, DateTime?> setValue = null)
+public DateTimeField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, DateTime?>? getValue = null, 
+    Action<IRow, DateTime?>? setValue = null)
 ```
 
 | parameter | description |

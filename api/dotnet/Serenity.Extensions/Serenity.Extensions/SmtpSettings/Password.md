@@ -3,7 +3,7 @@
 The password used to authenticate with the SMTP server.
 
 ```csharp
-public string Password { get; set; }
+public string? Password { get; set; }
 ```
 
 ## See Also

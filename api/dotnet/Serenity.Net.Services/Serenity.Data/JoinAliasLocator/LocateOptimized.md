@@ -3,7 +3,7 @@
 Locates the aliases in a SQL expression, returning first alias in an out parameter.
 
 ```csharp
-public static HashSet<string> LocateOptimized(string expression, out string singleAlias)
+public static HashSet<string>? LocateOptimized(string expression, out string? singleAlias)
 ```
 
 | parameter | description |

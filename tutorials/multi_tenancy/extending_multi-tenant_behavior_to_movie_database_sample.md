@@ -21,7 +21,7 @@ public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow, IMulti
     public class RowFields : RowFieldsBase
     {
         //...
-        public Int32Field TenantId;
+        public Int32Field TenantId = null!;
     }
 }
 

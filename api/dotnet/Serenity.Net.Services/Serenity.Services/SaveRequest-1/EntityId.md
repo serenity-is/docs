@@ -1,7 +1,7 @@
 # SaveRequest&lt;TEntity&gt;.EntityId property
 
 ```csharp
-public object EntityId { get; set; }
+public object? EntityId { get; set; }
 ```
 
 ## See Also

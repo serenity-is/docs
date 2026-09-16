@@ -69,16 +69,16 @@ public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
     public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }
 
     [DisplayName("First Name"), Size(50), NotNull]
-    public string FirstName { get => fields.FirstName[this]; set => fields.FirstName[this] = value; }
+    public string? FirstName { get => fields.FirstName[this]; set => fields.FirstName[this] = value; }
 
     [DisplayName("Gender")]
     public Gender? Gender { get => fields.Gender[this]; set => fields.Gender[this] = value; }
 
     public class RowFields : RowFieldsBase
     {
-        public Int32Field PersonId;
-        public StringField FirstName;
-        public EnumField<Gender> Gender;
+        public Int32Field PersonId = null!;
+        public StringField FirstName = null!;
+        public EnumField<Gender> Gender = null!;
     }
 }
 ```

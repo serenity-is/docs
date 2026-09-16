@@ -3,7 +3,7 @@
 Gets the logger for a connection if it implements the [`IHasLogger`](../IHasLogger.md) interface, or `null` if not.
 
 ```csharp
-public static ILogger GetLogger(this IDbConnection connection)
+public static ILogger? GetLogger(this IDbConnection connection)
 ```
 
 | parameter | description |

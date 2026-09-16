@@ -3,7 +3,7 @@
 Gets the AV scanner.
 
 ```csharp
-protected readonly IUploadAVScanner avScanner;
+protected readonly IUploadAVScanner? avScanner;
 ```
 
 ## See Also

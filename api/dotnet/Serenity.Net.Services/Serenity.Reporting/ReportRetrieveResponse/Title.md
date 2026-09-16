@@ -3,7 +3,7 @@
 The title of the report.
 
 ```csharp
-public string Title { get; set; }
+public string? Title { get; set; }
 ```
 
 ## See Also

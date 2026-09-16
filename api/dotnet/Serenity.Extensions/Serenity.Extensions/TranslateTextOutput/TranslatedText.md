@@ -3,7 +3,7 @@
 The translated text.
 
 ```csharp
-public string TranslatedText { get; set; }
+public string? TranslatedText { get; set; }
 ```
 
 ## See Also

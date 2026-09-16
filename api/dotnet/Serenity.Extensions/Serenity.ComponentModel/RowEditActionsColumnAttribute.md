@@ -18,4 +18,4 @@ public class RowEditActionsColumnAttribute : Attribute, IIntrinsicPropertyAttrib
 ## See Also
 
 * interface [IIntrinsicPropertyAttributeProvider](../../Serenity.Net.Core/Serenity.Reflection/IIntrinsicPropertyAttributeProvider.md)
-* **Source:** *[RowEditActionsColumnAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/GridEditor/RowEditActionsColumnAttribute.cs)*
+* **Source:** *[RowEditActionsColumnAttribute.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/GridEditor/RowEditActionsColumnAttribute.cs)*

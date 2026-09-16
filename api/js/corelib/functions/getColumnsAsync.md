@@ -7,7 +7,7 @@
 Defined in: [src/compat/scriptdata-compat.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L111)
 
 Asynchronously retrieves column metadata for a row/form key.
-Compat shim for `Q.getColumnsAsync`; delegates to `getColumnsScript(key)`.
+Compat shim for `getColumnsAsync`; delegates to `getColumnsScript(key)`.
 
 ## Parameters
 

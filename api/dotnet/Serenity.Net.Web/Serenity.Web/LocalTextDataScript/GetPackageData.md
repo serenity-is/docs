@@ -4,7 +4,7 @@ Gets a local text package as a dictionary.
 
 ```csharp
 public static IDictionary<string, string> GetPackageData(ILocalTextRegistry registry, 
-    string includes, string languageId, bool isPending, string packageId = null)
+    string? includes, string languageId, bool isPending, string? packageId = null)
 ```
 
 | parameter | description |

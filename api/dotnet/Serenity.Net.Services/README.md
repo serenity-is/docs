@@ -4,6 +4,8 @@
 
 | public type | description |
 | --- | --- |
+| static class [ArgumentChecks](./Serenity/ArgumentChecks.md) | Argument check helpers for validating that non-null values obtained from members (e.g. `request.Entity`) are not null, returning the value when it is not. Prefer ArgumentNullException static `ThrowIfNull` when checking an actual method parameter, as that keeps the parameter name recognized by CA2208 and null-state flow analysis. |
+| static class [ArgumentExceptions](./Serenity/ArgumentExceptions.md) | This class contains methods for creating ArgumentException and subclasses while avoiding analyzer warnings regarding mismatched argument names. |
 | enum [CaptureOperationType](./Serenity/CaptureOperationType.md) | Contains capture logging operation types |
 | static class [ChainableExtensions](./Serenity/ChainableExtensions.md) | Contains method chaining extensions for objects like SQL queries that implement [`IChainable`](./Serenity/IChainable.md). |
 | interface [IChainable](./Serenity/IChainable.md) | Interface for chainable objects, e.g. with functions returning themselves. |
@@ -84,7 +86,6 @@
 | class [FirebirdDialect](./Serenity.Data/FirebirdDialect.md) | SQL dialect for Firebird. |
 | abstract class [FunctionCallCriteria](./Serenity.Data/FunctionCallCriteria.md) | Criteria object that identifies a function call |
 | abstract class [GenericClassField&lt;TValue&gt;](./Serenity.Data/GenericClassField-1.md) | Base class for fields with reference type values. |
-| abstract class [GenericField&lt;TValue&gt;](./Serenity.Data/GenericField-1.md) | Base generic class for fields with a value. |
 | abstract class [GenericValueField&lt;TValue&gt;](./Serenity.Data/GenericValueField-1.md) | Base class for fields with a value type value. |
 | class [GuidField](./Serenity.Data/GuidField.md) | Field with a Guid value. |
 | interface [IAlias](./Serenity.Data/IAlias.md) | Interface for table aliases. |

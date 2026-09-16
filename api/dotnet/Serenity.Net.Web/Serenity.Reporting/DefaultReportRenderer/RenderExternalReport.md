@@ -4,13 +4,13 @@ Renders an external report, generally returns a ReportRenderResult with a redire
 
 ```csharp
 protected virtual ReportRenderResult RenderExternalReport(IExternalReport report, 
-    ReportRenderOptions options)
+    ReportRenderOptions renderOptions)
 ```
 
 | parameter | description |
 | --- | --- |
 | report | The report. |
-| options | The options. |
+| renderOptions | The options. |
 
 ## Return Value
 

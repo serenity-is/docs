@@ -3,7 +3,7 @@
 Initializes a new instance of the [`Column`](../SqlQuery.Column.md) class.
 
 ```csharp
-public Column(SqlQuery query, string expression, string columnName, object intoField)
+public Column(SqlQuery query, string expression, string? columnName, object? intoField)
 ```
 
 | parameter | description |
@@ -25,7 +25,7 @@ public Column(SqlQuery query, string expression, string columnName, object intoF
 Holds information about a column in SELECT clause.
 
 ```csharp
-public Column(string expression, string columnName, int intoRow, object intoField)
+public Column(string expression, string? columnName, int intoRow, object? intoField)
 ```
 
 | parameter | description |

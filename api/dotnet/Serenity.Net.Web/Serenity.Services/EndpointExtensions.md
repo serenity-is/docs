@@ -15,8 +15,9 @@ public static class EndpointExtensions
 | static [ExecuteMethod&lt;TResponse&gt;](EndpointExtensions/ExecuteMethod.md)(…) | Executes an action method and converts any exception to a service response. |
 | static [ExecuteMethodAsync&lt;TResponse&gt;](EndpointExtensions/ExecuteMethodAsync.md)(…) | Executes an action method asynchronously and converts any exception to a service response. |
 | static [InTransaction&lt;TResponse&gt;](EndpointExtensions/InTransaction.md)(…) | Executes a callback by passing a unit of work object and converts any exception raised inside to a service response. |
+| static [InTransactionAsync&lt;TResponse&gt;](EndpointExtensions/InTransactionAsync.md)(…) | Executes a callback by passing a unit of work object asynchronously and converts any exception raised inside to a service response. |
 | static [UseConnection&lt;TResponse&gt;](EndpointExtensions/UseConnection.md)(…) | Executes a callback by passing a connection object and converts any exception raised inside to a service response. |
 
 ## See Also
 
-* **Source:** *[EndpointExtensions.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/web/Mvc/EndpointExtensions.cs)*
+* **Source:** *[EndpointExtensions.cs](https://github.com/serenity-is/Serenity/blob/401a8738b9bbcc8a73ab6d1df38c8572bbe252c4/src/web/Mvc/EndpointExtensions.cs)*

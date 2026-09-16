@@ -1,6 +1,6 @@
 # UndeleteRequestHandlerBase&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt; constructor
 
-Initializes a new instance of the class.
+Abstract base class for undelete request handlers that share state and mode neutral helper methods between synchronous and asynchronous undelete request handlers.
 
 ```csharp
 protected UndeleteRequestHandlerBase(IRequestContext context)
@@ -8,6 +8,9 @@ protected UndeleteRequestHandlerBase(IRequestContext context)
 
 | parameter | description |
 | --- | --- |
+| TRow | Entity type |
+| TUndeleteRequest | Undelete request type |
+| TUndeleteResponse | Undelete response type |
 | context | Request context |
 
 ## Exceptions
@@ -15,6 +18,10 @@ protected UndeleteRequestHandlerBase(IRequestContext context)
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | *context* is `null`. |
+
+## Remarks
+
+Initializes a new instance of the class.
 
 ## See Also
 

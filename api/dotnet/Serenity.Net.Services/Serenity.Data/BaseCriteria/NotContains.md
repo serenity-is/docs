@@ -15,6 +15,12 @@ public BaseCriteria NotContains(string mask, bool upper = false)
 
 A new binary Not Contains criteria.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | mask is null |
+
 ## See Also
 
 * class [BaseCriteria](../BaseCriteria.md)

@@ -4,7 +4,7 @@
 
 > **insert**(`obj`, `index`, `item`): `void`
 
-Defined in: [src/compat/arrays-compat.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L150)
+Defined in: [src/compat/arrays-compat.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L149)
 
 Inserts an item into an array at the given index.
 
@@ -42,7 +42,7 @@ If `obj.insert` exists it is delegated to; otherwise `Array.prototype.splice` is
 
 ## Deprecated
 
-Prefer `array.splice(index, 0, item)` directly. Retained as a `Q.insert` compat shim.
+Prefer `array.splice(index, 0, item)` directly. Retained as a `insert` compat shim.
 
 ## Example
 

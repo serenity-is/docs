@@ -3,7 +3,7 @@
 Converts data returned from a `FOR XML` statement to a row type.
 
 ```csharp
-public static List<TRow> ToRows<TRow>(string forXml, Action<XElement, TRow> readRow)
+public static List<TRow> ToRows<TRow>(string? forXml, Action<XElement, TRow> readRow)
     where TRow : class, IRow, new()
 ```
 

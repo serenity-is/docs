@@ -3,7 +3,7 @@
 Gets the name field.
 
 ```csharp
-public Field NameField { get; }
+public Field? NameField { get; }
 ```
 
 ## Property Value

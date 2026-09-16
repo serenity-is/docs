@@ -1,7 +1,7 @@
 # DynamicScript.Permission property
 
 ```csharp
-public string Permission { get; set; }
+public string? Permission { get; set; }
 ```
 
 ## See Also

@@ -1,7 +1,7 @@
 # HttpContextUserAccessor.User property
 
 ```csharp
-public ClaimsPrincipal User { get; }
+public ClaimsPrincipal? User { get; }
 ```
 
 ## See Also

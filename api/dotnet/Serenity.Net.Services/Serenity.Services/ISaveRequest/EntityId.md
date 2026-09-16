@@ -3,7 +3,7 @@
 The entity ID to update, should only be passed for Update requests.
 
 ```csharp
-public object EntityId { get; set; }
+public object? EntityId { get; set; }
 ```
 
 ## See Also

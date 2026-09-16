@@ -3,7 +3,7 @@
 Converts the string to its double quoted representation.
 
 ```csharp
-public static string ToDoubleQuoted(this string str)
+public static string ToDoubleQuoted(this string? str)
 ```
 
 | parameter | description |

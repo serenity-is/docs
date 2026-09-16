@@ -18,4 +18,4 @@ public static class ExcelReportGenerator
 
 ## See Also
 
-* **Source:** *[ExcelReportGenerator.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/Reporting/DataReport/ExcelReportGenerator.cs)*
+* **Source:** *[ExcelReportGenerator.cs](https://github.com/serenity-is/Serenity/blob/0ecdd6666300147eb7b98189e3ebb71954692e8c/common-features/src/extensions/Modules/Reporting/DataReport/ExcelReportGenerator.cs)*

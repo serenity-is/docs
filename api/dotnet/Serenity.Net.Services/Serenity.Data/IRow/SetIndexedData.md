@@ -3,7 +3,7 @@
 Sets the indexed data.
 
 ```csharp
-public void SetIndexedData(int index, object value)
+public void SetIndexedData(int index, object? value)
 ```
 
 | parameter | description |

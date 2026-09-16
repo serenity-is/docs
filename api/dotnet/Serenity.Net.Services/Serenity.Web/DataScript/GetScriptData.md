@@ -1,7 +1,7 @@
 # DataScript.GetScriptData method
 
 ```csharp
-public object GetScriptData()
+public object? GetScriptData()
 ```
 
 ## See Also

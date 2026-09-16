@@ -4,7 +4,7 @@ Extracts a report column from a PropertyInfo
 
 ```csharp
 public static ReportColumn FromPropertyInfo(PropertyInfo property, ITextLocalizer localizer, 
-    Field baseField = null)
+    Field? baseField = null)
 ```
 
 | parameter | description |

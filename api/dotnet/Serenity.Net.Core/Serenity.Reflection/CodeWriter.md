@@ -29,6 +29,7 @@ public class CodeWriter
 | [Indentation](CodeWriter/Indentation.md) { get; } | Gets current indentation string |
 | [IsCSharp](CodeWriter/IsCSharp.md) { get; set; } | Gets / sets if the code writer is used for generating C# code. |
 | [LocalUsings](CodeWriter/LocalUsings.md) { get; } | Gets / sets local usings hash set |
+| [NullableDirective](CodeWriter/NullableDirective.md) { get; set; } | Add #nullable directive with the specified value |
 | [PragmaSuppressions](CodeWriter/PragmaSuppressions.md) { get; } | Gets the set of pragma warning suppressions to be added at the top of the generated code. |
 | [SuppressMissingXmlCommentWarning](CodeWriter/SuppressMissingXmlCommentWarning.md) { get; set; } | Gets or sets a value indicating whether to suppress the CS1591 warning for missing XML comments in the generated code. When set to true, the CS1591 warning will be added to the set of pragma warning suppressions; when set to false, it will be removed from the set of pragma warning suppressions. |
 | [Tab](CodeWriter/Tab.md) { get; } | Gets tab string |
@@ -63,4 +64,4 @@ Initializes a new instance of the [`CodeWriter`](./CodeWriter.md) class.
 
 ## See Also
 
-* **Source:** *[CodeWriter.cs](https://github.com/serenity-is/Serenity/blob/29e3c5749407b73f1ce944ccdc31bc628d59d7ef/src/core/Reflection/CodeWriter.cs)*
+* **Source:** *[CodeWriter.cs](https://github.com/serenity-is/Serenity/blob/4f9cdd10d9f5850749bf4e7aaaf7889bb3a65df8/src/core/Reflection/CodeWriter.cs)*

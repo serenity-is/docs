@@ -22,7 +22,7 @@ public sealed class RoleRow : Row<RoleRow.RowFields>, IIdRow, INameRow
     public class RowFields : RowFieldsBase
     {
         //...
-        public Int32Field TenantId;
+        public Int32Field TenantId = null!;
     }
 }
 ```

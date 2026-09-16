@@ -1,13 +1,13 @@
 [@serenity-is/corelib](../README.md) / initFullHeightGridPage
 
-# ~~Function: initFullHeightGridPage()~~
+# Function: initFullHeightGridPage()
 
 > **initFullHeightGridPage**(`gridDiv`, `opt?`): `void`
 
-Defined in: [src/compat/layout.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L109)
+Defined in: [src/compat/layout.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L107)
 
 Configures a full-height page layout for a grid or panel container.
-Compat shim for the legacy `Q.initFullHeightGridPage`. Adds `full-height-page` / `responsive-height` classes, wires resize or `layout` events, and optionally resolves the hash router.
+Compat shim for the legacy `initFullHeightGridPage`. Adds `full-height-page` / `responsive-height` classes, wires resize or `layout` events, and optionally resolves the hash router.
 
 ## Parameters
 
@@ -32,11 +32,8 @@ When `true`, skips the one-time [Router](../variables/Router.md).`resolve()` cal
 `boolean`
 
 When `true` forces height filling via [layoutFillHeight](layoutFillHeight.md); when `false` disables it; when omitted auto-detects via jQuery and element classes. Defaults to auto.
+[DEPRECATED] Prefer CSS flex / grid layouts or `Fluent` responsive utilities. Kept for legacy full-height pages.
 
 ## Returns
 
 `void`
-
-## Deprecated
-
-Prefer CSS flex / grid layouts or `Fluent` responsive utilities. Kept for legacy full-height pages.

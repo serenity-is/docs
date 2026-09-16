@@ -3,7 +3,7 @@
 List of all joins in the field's entity.
 
 ```csharp
-public IDictionary<string, Join> Joins { get; }
+public IDictionary<string, Join>? Joins { get; }
 ```
 
 ## See Also

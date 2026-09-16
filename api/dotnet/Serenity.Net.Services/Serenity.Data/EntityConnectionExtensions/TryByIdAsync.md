@@ -3,7 +3,7 @@
 Asynchronously tries to find an entity by its ID value. This method selects only the table fields, and no foreign / calculated fields. Use other overloads if you want to select different set of fields.
 
 ```csharp
-public static Task<TRow> TryByIdAsync<TRow>(this IDbConnection connection, object id, 
+public static Task<TRow?> TryByIdAsync<TRow>(this IDbConnection connection, object id, 
     CancellationToken cancellationToken = default)
     where TRow : class, IRow, IIdRow, new()
 ```
@@ -38,7 +38,7 @@ A task representing the asynchronous operation. The task result is the entity wi
 Asynchronously tries to find an entity by its ID value. This method does not select any fields by default and allows you to edit the query to select fields you want.
 
 ```csharp
-public static Task<TRow> TryByIdAsync<TRow>(this IDbConnection connection, object id, 
+public static Task<TRow?> TryByIdAsync<TRow>(this IDbConnection connection, object id, 
     Action<SqlQuery> editQuery, CancellationToken cancellationToken = default)
     where TRow : class, IRow, IIdRow, new()
 ```

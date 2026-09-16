@@ -3,7 +3,7 @@
 Service provider.
 
 ```csharp
-protected IServiceProvider ServiceProvider { get; set; }
+protected IServiceProvider? ServiceProvider { get; set; }
 ```
 
 ## See Also

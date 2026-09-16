@@ -3,7 +3,7 @@
 Gets or sets the filter value.
 
 ```csharp
-public object FilterValue { get; set; }
+public object? FilterValue { get; set; }
 ```
 
 ## Property Value

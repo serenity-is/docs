@@ -29,4 +29,4 @@ public abstract class LoggingRow<TFields> : Row<TFields>, ILoggingRow
 * class [Row&lt;TFields&gt;](../../Serenity.Net.Services/Serenity.Data/Row-1.md)
 * interface [ILoggingRow](../../Serenity.Net.Services/Serenity.Data/ILoggingRow.md)
 * class [LoggingRowFields](./LoggingRowFields.md)
-* **Source:** *[LoggingRow.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/BaseEntities/LoggingRow.cs)*
+* **Source:** *[LoggingRow.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/BaseEntities/LoggingRow.cs)*

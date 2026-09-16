@@ -3,9 +3,9 @@
 Field with a DateOnly value.
 
 ```csharp
-public DateOnlyField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, DateOnly?> getValue = null, 
-    Action<IRow, DateOnly?> setValue = null)
+public DateOnlyField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, DateOnly?>? getValue = null, 
+    Action<IRow, DateOnly?>? setValue = null)
 ```
 
 | parameter | description |

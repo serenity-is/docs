@@ -161,9 +161,9 @@ public abstract class DynamicScript : IDynamicScript
         if (Permission != null)
             permissions.ValidatePermission(Permission, localizer);
     }
-    public string GroupKey { get; set; }
+    public string? GroupKey { get; set; }
     public TimeSpan Expiration { get; set; }
-    public string Permission { get; set; }
+    public string? Permission { get; set; }
 }
 ```
 

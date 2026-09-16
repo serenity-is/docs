@@ -3,7 +3,7 @@
 Gets the join.
 
 ```csharp
-public Join Join { get; }
+public Join? Join { get; }
 ```
 
 ## Property Value

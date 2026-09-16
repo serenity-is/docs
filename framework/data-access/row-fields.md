@@ -18,11 +18,11 @@ The `RowFields` class is created automatically by the framework. When you declar
 ```cs
 public sealed class SimpleRow : Row<SimpleRow.RowFields>
 {
-    public string Name { get => fields.Name[this]; set => fields.Name[this] = value; }
+    public string? Name { get => fields.Name[this]; set => fields.Name[this] = value; }
 
     public class RowFields : RowFieldsBase
     {
-        public StringField Name;
+        public StringField Name = null!;
     }
 }
 ```

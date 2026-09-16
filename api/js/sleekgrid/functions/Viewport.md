@@ -2,7 +2,7 @@
 
 # Function: Viewport()
 
-> **Viewport**(`__namedParameters`): `JSXElement`
+> **Viewport**(`props`): `JSXElement`
 
 Defined in: [src/layouts/layout-components.tsx:83](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L83)
 
@@ -11,7 +11,9 @@ Hidden when the corresponding frozen/pinned count is `0`.
 
 ## Parameters
 
-### \_\_namedParameters
+### props
+
+Component props containing band, pane, refs, and signals.
 
 #### band
 

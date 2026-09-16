@@ -34,4 +34,4 @@ Display text for the option (`null`/`undefined` → `""`).
 
 ## Remarks
 
-Creates an `HTMLOptionElement` via `document.createElement("option")`. No-op if the resolved select element is falsy. Compat helper from `Q.addOption`.
+Creates an `HTMLOptionElement` via `document.createElement("option")`. No-op if the resolved select element is falsy. Compat helper from `addOption`.

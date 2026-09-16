@@ -4,7 +4,7 @@ Gets the property items for specified type
 
 ```csharp
 public IEnumerable<PropertyItem> GetPropertyItemsFor(Type type, 
-    Func<PropertyInfo, bool> predicate = null)
+    Func<PropertyInfo, bool>? predicate = null)
 ```
 
 | parameter | description |

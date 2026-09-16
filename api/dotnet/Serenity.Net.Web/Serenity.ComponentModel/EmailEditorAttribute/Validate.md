@@ -3,7 +3,7 @@
 Validates the email address.
 
 ```csharp
-public string Validate(IValidationContext context)
+public string? Validate(IValidationContext context)
 ```
 
 | parameter | description |

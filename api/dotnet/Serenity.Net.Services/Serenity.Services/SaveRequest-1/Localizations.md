@@ -3,7 +3,7 @@
 The set of localizations if translations are requested to be updated.
 
 ```csharp
-public Dictionary<string, TEntity> Localizations { get; set; }
+public Dictionary<string, TEntity>? Localizations { get; set; }
 ```
 
 ## See Also

@@ -3,7 +3,7 @@
 Gets the ON criteria.
 
 ```csharp
-public ICriteria OnCriteria { get; }
+public ICriteria? OnCriteria { get; }
 ```
 
 ## Property Value

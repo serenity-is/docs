@@ -28,4 +28,4 @@ public static class DataReaderExtensions
 
 ## See Also
 
-* **Source:** *[DataReaderExtensions.cs](https://github.com/serenity-is/Serenity/blob/41745e6f6cee341e0662ee7a59c54637f6b1e8de/src/services/Data/Connections/DataReaderExtensions.cs)*
+* **Source:** *[DataReaderExtensions.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Connections/DataReaderExtensions.cs)*

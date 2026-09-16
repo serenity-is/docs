@@ -3,7 +3,7 @@
 Optional options passed to the module script.
 
 ```csharp
-public object Options { get; set; }
+public object? Options { get; set; }
 ```
 
 ## See Also

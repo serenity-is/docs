@@ -1,6 +1,6 @@
 # RetrieveRequestHandlerBase&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt; constructor
 
-Initializes a new instance of the class.
+Abstract base class for retrieve request handlers that share state and mode neutral helper methods between synchronous and asynchronous retrieve request handlers.
 
 ```csharp
 protected RetrieveRequestHandlerBase(IRequestContext context)
@@ -8,6 +8,9 @@ protected RetrieveRequestHandlerBase(IRequestContext context)
 
 | parameter | description |
 | --- | --- |
+| TRow | Entity type |
+| TRetrieveRequest | Retrieve request type |
+| TRetrieveResponse | Retrieve response type |
 | context | Request context |
 
 ## Exceptions
@@ -15,6 +18,10 @@ protected RetrieveRequestHandlerBase(IRequestContext context)
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | *context* is `null`. |
+
+## Remarks
+
+Initializes a new instance of the class.
 
 ## See Also
 

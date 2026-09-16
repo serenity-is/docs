@@ -4,8 +4,8 @@ Registers all the services required for request handlers
 
 ```csharp
 public static IServiceCollection AddServiceHandlers(this IServiceCollection collection, 
-    ITypeSource customHandlerTypeSource = null, 
-    Func<Type, Type, bool> customHandlerPredicate = null)
+    ITypeSource? customHandlerTypeSource = null, 
+    Func<Type, Type, bool>? customHandlerPredicate = null)
 ```
 
 | parameter | description |

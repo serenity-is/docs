@@ -4,8 +4,8 @@ Default implementation for [`IUploadProcessor`](../IUploadProcessor.md).
 
 ```csharp
 public DefaultUploadProcessor(IImageProcessor imageProcessor, IUploadStorage uploadStorage, 
-    IUploadValidator uploadValidator, ILogger<DefaultUploadProcessor> logger = null, 
-    IUploadAVScanner avScanner = null)
+    IUploadValidator uploadValidator, ILogger<DefaultUploadProcessor>? logger = null, 
+    IUploadAVScanner? avScanner = null)
 ```
 
 | parameter | description |

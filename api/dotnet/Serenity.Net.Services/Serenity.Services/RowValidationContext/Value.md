@@ -3,7 +3,7 @@
 Gets the value.
 
 ```csharp
-public object Value { get; set; }
+public object? Value { get; set; }
 ```
 
 ## Property Value

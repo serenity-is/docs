@@ -1,7 +1,7 @@
 # DefaultReportFactory.Create method
 
 ```csharp
-public IReport Create(string reportKey, string reportOptions, bool validatePermission)
+public IReport Create(string reportKey, string? reportOptions, bool validatePermission)
 ```
 
 ## See Also

@@ -3,7 +3,7 @@
 Gets or sets the columns type with properties to include in column selection
 
 ```csharp
-public Type ColumnsType { get; set; }
+public Type? ColumnsType { get; set; }
 ```
 
 ## Property Value

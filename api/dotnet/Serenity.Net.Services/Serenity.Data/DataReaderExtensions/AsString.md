@@ -3,7 +3,7 @@
 Reads the value at the field index. Returns `null` if the value is DBNull.
 
 ```csharp
-public static string AsString(this IDataReader reader, int index)
+public static string? AsString(this IDataReader reader, int index)
 ```
 
 | parameter | description |

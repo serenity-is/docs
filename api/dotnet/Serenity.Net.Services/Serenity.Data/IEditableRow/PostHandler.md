@@ -3,7 +3,7 @@
 Gets or sets the post handler.
 
 ```csharp
-public Action<IRow> PostHandler { get; set; }
+public Action<IRow>? PostHandler { get; set; }
 ```
 
 ## Property Value

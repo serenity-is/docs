@@ -29,6 +29,12 @@ public Criteria(ISqlQuery query)
 | --- | --- |
 | query | The query. |
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | query is null |
+
 ## See Also
 
 * interface [ISqlQuery](../ISqlQuery.md)
@@ -71,6 +77,12 @@ public Criteria(IAlias alias, IField field)
 | alias | The alias. |
 | field | The field. |
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | alias or field is null |
+
 ## See Also
 
 * interface [IAlias](../IAlias.md)
@@ -91,6 +103,12 @@ public Criteria(IAlias alias, string field)
 | --- | --- |
 | alias | The alias. |
 | field | The field. |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | alias is null |
 
 ## See Also
 
@@ -131,6 +149,12 @@ public Criteria(int joinNumber, IField field)
 | --- | --- |
 | joinNumber | The join number. |
 | field | The field. |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | field is null |
 
 ## See Also
 
@@ -177,6 +201,12 @@ public Criteria(string join, IField field)
 | --- | --- |
 | join | The join. |
 | field | The field. |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | field is null |
 
 ## See Also
 

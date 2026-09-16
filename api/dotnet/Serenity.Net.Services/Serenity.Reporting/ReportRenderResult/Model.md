@@ -3,7 +3,7 @@
 Gets or sets the view model, only returned in preview mode for HTML.
 
 ```csharp
-public object Model { get; set; }
+public object? Model { get; set; }
 ```
 
 ## See Also

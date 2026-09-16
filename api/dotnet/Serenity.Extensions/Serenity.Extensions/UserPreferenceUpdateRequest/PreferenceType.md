@@ -3,7 +3,7 @@
 The preference type.
 
 ```csharp
-public string PreferenceType { get; set; }
+public string? PreferenceType { get; set; }
 ```
 
 ## See Also

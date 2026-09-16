@@ -3,8 +3,8 @@
 Ensures the current user has the specified permission, throwing a validation error with code `AccessDenied` otherwise.
 
 ```csharp
-public static void ValidatePermission(this IPermissionService permissions, string permission, 
-    ITextLocalizer localizer)
+public static void ValidatePermission(this IPermissionService permissions, string? permission, 
+    ITextLocalizer? localizer)
 ```
 
 | parameter | description |

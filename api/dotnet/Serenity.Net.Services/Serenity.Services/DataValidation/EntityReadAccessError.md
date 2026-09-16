@@ -3,7 +3,7 @@
 Returns an entity read access error
 
 ```csharp
-public static ValidationError EntityReadAccessError(IRow row, object id, ITextLocalizer localizer)
+public static ValidationError EntityReadAccessError(IRow row, object id, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

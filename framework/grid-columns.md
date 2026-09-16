@@ -11,10 +11,10 @@ A columns class is a plain class with public properties. Each property becomes a
 public class OrderColumns
 {
     [Width(150), EditLink]
-    public string CustomerID { get; set; }
+    public string? CustomerID { get; set; }
 
     [Width(200)]
-    public string ShipCity { get; set; }
+    public string? ShipCity { get; set; }
 
     [Width(120), AlignRight]
     public decimal? Freight { get; set; }
@@ -73,7 +73,7 @@ A columns class often maps to a row. The [BasedOnRowAttribute](../api/dotnet/Ser
 public class OrderColumns
 {
     [Width(150)]
-    public string CustomerID { get; set; }
+    public string? CustomerID { get; set; }
     // ...
 }
 ```

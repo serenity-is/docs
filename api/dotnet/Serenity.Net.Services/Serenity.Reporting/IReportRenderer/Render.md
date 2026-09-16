@@ -3,13 +3,13 @@
 Renders a report.
 
 ```csharp
-public ReportRenderResult Render(IReport report, ReportRenderOptions options)
+public ReportRenderResult Render(IReport report, ReportRenderOptions renderOptions)
 ```
 
 | parameter | description |
 | --- | --- |
 | report | Report object |
-| options | Report render options |
+| renderOptions | Report render options |
 
 ## Return Value
 

@@ -3,7 +3,7 @@
 Gets the field infos.
 
 ```csharp
-public IEnumerable<FieldInfo> GetFieldInfos(IDbConnection connection, string schema, string table)
+public IEnumerable<FieldInfo> GetFieldInfos(IDbConnection connection, string? schema, string table)
 ```
 
 | parameter | description |

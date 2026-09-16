@@ -31,7 +31,4 @@ Function to invoke when visible.
 `number`
 
 The [LayoutTimer](../../LayoutTimer/README.md) registration key, or `null` if already visible / element missing.
-
-## Deprecated
-
-Prefer `IntersectionObserver` or `ResizeObserver`. Kept for legacy `triggerLayoutOnShow` compatibility.
+[DEPRECATED] Prefer `IntersectionObserver` or `ResizeObserver`. Kept for legacy `triggerLayoutOnShow` compatibility.

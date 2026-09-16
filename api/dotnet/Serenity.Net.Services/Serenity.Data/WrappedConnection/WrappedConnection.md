@@ -3,7 +3,7 @@
 Initializes a new instance of the [`WrappedConnection`](../WrappedConnection.md) class.
 
 ```csharp
-public WrappedConnection(IDbConnection connection, ISqlDialect dialect, ILogger logger = null)
+public WrappedConnection(IDbConnection connection, ISqlDialect dialect, ILogger? logger = null)
 ```
 
 | parameter | description |

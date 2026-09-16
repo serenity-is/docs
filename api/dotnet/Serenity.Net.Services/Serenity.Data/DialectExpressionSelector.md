@@ -31,4 +31,4 @@ Initializes a new instance of the [`DialectExpressionSelector`](./DialectExpress
 
 ## See Also
 
-* **Source:** *[DialectExpressionSelector.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Row/DialectExpressionSelector.cs)*
+* **Source:** *[DialectExpressionSelector.cs](https://github.com/serenity-is/Serenity/blob/1aeda44fbef1518b2bacf271b373a747258f80cd/src/services/Entity/Row/DialectExpressionSelector.cs)*

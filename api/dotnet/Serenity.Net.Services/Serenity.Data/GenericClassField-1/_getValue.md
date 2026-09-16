@@ -3,7 +3,7 @@
 The get value callback.
 
 ```csharp
-protected internal Func<IRow, TValue> _getValue;
+protected internal Func<IRow, TValue?> _getValue;
 ```
 
 ## See Also

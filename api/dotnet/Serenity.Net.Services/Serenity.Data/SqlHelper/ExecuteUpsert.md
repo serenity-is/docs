@@ -5,7 +5,7 @@ Executes an UPSERT (insert or update) query on the connection and returns the nu
 ```csharp
 public static int ExecuteUpsert(this SqlInsert query, IDbConnection connection, 
     IEnumerable<string> keyFields, ExpectedRows expectedRows = ExpectedRows.Ignore, 
-    ILogger logger = null)
+    ILogger? logger = null)
 ```
 
 | parameter | description |

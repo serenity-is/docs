@@ -4,7 +4,7 @@ Formats an SQL UPDATE statement.
 
 ```csharp
 public static string Format(string tableName, string where, 
-    IEnumerable<FieldExpressionPair> fieldExpressions, ISqlDialect dialect = null)
+    IEnumerable<FieldExpressionPair> fieldExpressions, ISqlDialect? dialect = null)
 ```
 
 | parameter | description |

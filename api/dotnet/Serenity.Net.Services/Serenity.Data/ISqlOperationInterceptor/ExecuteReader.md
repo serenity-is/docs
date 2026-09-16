@@ -4,7 +4,7 @@ Intercepts the [`SqlHelper`](../SqlHelper.md)`ExecuteReader` method.
 
 ```csharp
 public OptionalValue<IDataReader> ExecuteReader(string commandText, 
-    IDictionary<string, object> parameters, SqlQuery query)
+    IDictionary<string, object?>? parameters, SqlQuery? query)
 ```
 
 | parameter | description |

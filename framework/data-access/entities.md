@@ -14,7 +14,7 @@ using Serenity.Data;
 
 public class SimpleRow : Row<SimpleRow.RowFields>
 {
-    public string Name
+    public string? Name
     {
         get => fields.Name[this];
         set => fields.Name[this] = value;
@@ -22,14 +22,14 @@ public class SimpleRow : Row<SimpleRow.RowFields>
     
     public int? Age
     {
-        get => return fields.Age[this];
+        get => fields.Age[this];
         set => fields.Age[this] = value;
     }
     
     public class RowFields : RowFieldsBase
     {
-        public StringField Name;
-        public Int32Field Age;
+        public StringField Name = null!;
+        public Int32Field Age = null!;
     }
 }
 ```
@@ -53,7 +53,7 @@ Here we define an entity named SimpleRow, which should map to a table named `Sim
 All entity classes should derive from `Serenity.Data.Row<TFields>` generic base class which accepts the type of `RowFields` class for the row with the field definitions.
 
 ```cs
-public string Name
+public string? Name
 {
     get => fields.Name[this];
     set => fields.Name[this] = value;
@@ -99,7 +99,7 @@ Serenity entity properties are always nullable, even if the database column is n
 
 This might seem unlogical if you have a background in other ORMs, but consider that it is possible for a not-null field to have a null value, if you query it through a left/right join. How can you say, if its retrieved value is null or zero in that case?
 
-Note that reference types are already nullable, so you shouldn't write `"String?"`.
+Value types are declared with `?` (e.g. `int?`), and reference types are also declared nullable (`string?`, `List<T>?`) because a row property can be null even when the column is not. When `<Nullable>` is `enable` or `annotations` in your project, the generated rows follow this convention.
 
 ```cs
 public SimpleRow()
@@ -112,8 +112,8 @@ Now we define SimpleRow's parameterless constructor. This is optional unless you
 ```cs
 public class RowFields : RowFieldsBase
 {
-    public StringField Name;
-    public Int32Field Age;
+    public StringField Name = null!;
+    public Int32Field Age = null!;
 }
 ```
 
@@ -123,7 +123,7 @@ We declared a `StringField` and an `Int32Field`. Their type is based on their pr
 
 Their names should also match the property names, or you'll get an initialization error.
 
-We didn't initialize these field objects, so their values are initially null. 
+When `<Nullable>` is `enable` or `annotations`, the generated fields get the null-forgiving `= null!` initializer to suppress nullable warnings until the framework initializes them. With nullable disabled, they are emitted as `= null` (or without an initializer) instead.
 
 Serenity automatically creates these field objects based on the corresponding property declaration, matching them by the property name.
 
@@ -137,7 +137,7 @@ If you are using `StartSharp` and have a reference to the `Serenity.Pro.Coder` p
 [GenerateFields]
 public partial class SimpleRow
 {
-    public partial string Name { get; set; }
+    public partial string? Name { get; set; }
     public partial int? Age { get; set; }
 }
 ```
@@ -151,10 +151,10 @@ using Serenity.Data;
 
 partial class SimpleRow : Row<SimpleRow.RowFields>
 {
-    private string name;
+    private string? name;
     private int? age;
 
-    public partial string Name
+    public partial string? Name
     {
         get { if (name is null && ((IRow)this).TrackWithChecks) OnFieldGet(fields.Name); return name; }
         set { name = value; if (((IRow)this).TrackAssignments) OnFieldSet(fields.Name); }
@@ -168,8 +168,8 @@ partial class SimpleRow : Row<SimpleRow.RowFields>
 
     public partial class RowFields : RowFieldsBase
     {
-        public StringField Name;
-        public Int32Field Age;
+        public StringField Name = null!;
+        public Int32Field Age = null!;
 
         protected override void CreateGeneratedFields()
         {
@@ -196,7 +196,7 @@ public partial class SimpleRow
 {
     private class RowTemplate
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public int? Age { get; set; }
     }
 }
@@ -209,10 +209,10 @@ using Serenity.Data;
 
 partial class SimpleRow : Row<SimpleRow.RowFields>
 {
-    private string name;
+    private string? name;
     private int? age;
 
-    public string Name
+    public string? Name
     {
         get => fields.Name[this];
         set => fields.Name[this] = value;
@@ -226,8 +226,8 @@ partial class SimpleRow : Row<SimpleRow.RowFields>
 
     public partial class RowFields : RowFieldsBase
     {
-        public StringField Name;
-        public Int32Field Age;
+        public StringField Name = null!;
+        public Int32Field Age = null!;
 
         protected override void CreateGeneratedFields()
         {

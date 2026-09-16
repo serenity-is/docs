@@ -11,8 +11,8 @@ public interface IHasLogger
 
 | name | description |
 | --- | --- |
-| [Logger](IHasLogger/Logger.md) { get; } | Gets the logger (that can be used by SqlHelper methods for logging). |
+| [Logger](IHasLogger/Logger.md) { get; } | Gets the logger (that can be used by SqlHelper methods for logging), if any. |
 
 ## See Also
 
-* **Source:** *[IHasLogger.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Connections/IHasLogger.cs)*
+* **Source:** *[IHasLogger.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Connections/IHasLogger.cs)*

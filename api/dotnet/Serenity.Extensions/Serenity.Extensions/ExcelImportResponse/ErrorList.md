@@ -3,7 +3,7 @@
 The list of errors encountered during import, if any.
 
 ```csharp
-public List<string> ErrorList { get; set; }
+public List<string>? ErrorList { get; set; }
 ```
 
 ## See Also

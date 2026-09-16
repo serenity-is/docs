@@ -3,7 +3,7 @@
 Gets the primary keys.
 
 ```csharp
-public Field[] PrimaryKeys { get; }
+public Field[]? PrimaryKeys { get; }
 ```
 
 ## Property Value

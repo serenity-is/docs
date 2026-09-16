@@ -26,4 +26,4 @@ Creates a new instance.
 ## See Also
 
 * class [BaseAssemblyTypeSource](./BaseAssemblyTypeSource.md)
-* **Source:** *[DefaultTypeSource.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Extensibility/DefaultTypeSource.cs)*
+* **Source:** *[DefaultTypeSource.cs](https://github.com/serenity-is/Serenity/blob/0ecdd6666300147eb7b98189e3ebb71954692e8c/src/core/ComponentModel/Extensibility/DefaultTypeSource.cs)*

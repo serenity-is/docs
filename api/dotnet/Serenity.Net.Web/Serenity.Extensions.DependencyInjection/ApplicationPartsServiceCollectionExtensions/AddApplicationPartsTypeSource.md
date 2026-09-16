@@ -4,8 +4,9 @@ Adds an application part type source to the service collection. Note that this a
 
 ```csharp
 public static ApplicationPartsTypeSource AddApplicationPartsTypeSource(
-    this IServiceCollection collection, ApplicationPartManager partManager = null, 
-    IFeatureToggles featureToggles = null, bool topologicalSort = true)
+    this IServiceCollection collection, ApplicationPartManager? partManager = null, 
+    IFeatureToggles? featureToggles = null, bool topologicalSort = true, 
+    bool tryPartRecovery = true)
 ```
 
 | parameter | description |
@@ -14,6 +15,7 @@ public static ApplicationPartsTypeSource AddApplicationPartsTypeSource(
 | partManager | The ApplicationPartManager instance. |
 | featureToggles | The feature toggles. |
 | topologicalSort | Whether to sort assemblies topologically by references. |
+| tryPartRecovery | Whether to try recovering application parts when they were not discovered at build time. Defaults to `true`. |
 
 ## Return Value
 

@@ -3,13 +3,13 @@
 Renders the specified report to PDF.
 
 ```csharp
-public byte[] Render(IReport report, ReportRenderOptions options)
+public byte[] Render(IReport report, ReportRenderOptions renderOptions)
 ```
 
 | parameter | description |
 | --- | --- |
 | report | The report. |
-| options | Report render options |
+| renderOptions | Report render options |
 
 ## See Also
 

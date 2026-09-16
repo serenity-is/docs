@@ -3,7 +3,7 @@
 Gets the primary key fields.
 
 ```csharp
-public IEnumerable<string> GetPrimaryKeyFields(IDbConnection connection, string schema, 
+public IEnumerable<string> GetPrimaryKeyFields(IDbConnection connection, string? schema, 
     string table)
 ```
 

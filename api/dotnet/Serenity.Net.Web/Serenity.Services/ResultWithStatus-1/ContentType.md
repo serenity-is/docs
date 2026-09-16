@@ -3,7 +3,7 @@
 Gets or sets the content type.
 
 ```csharp
-public string ContentType { get; set; }
+public string? ContentType { get; set; }
 ```
 
 ## See Also

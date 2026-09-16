@@ -1,7 +1,7 @@
 # DefaultPropertyItemProvider.GetPropertyItemsFor method
 
 ```csharp
-public IEnumerable<PropertyItem> GetPropertyItemsFor(Type type, Func<PropertyInfo, bool> predicate)
+public IEnumerable<PropertyItem> GetPropertyItemsFor(Type type, Func<PropertyInfo, bool>? predicate)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 Reads the content of a dynamic script.
 
 ```csharp
-public IScriptContent ReadScriptContent(string name, bool json = false)
+public IScriptContent? ReadScriptContent(string name, bool json = false)
 ```
 
 | parameter | description |

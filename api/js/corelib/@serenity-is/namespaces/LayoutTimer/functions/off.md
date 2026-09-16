@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [LayoutTimer](../README.md) / off
 
-# ~~Function: off()~~
+# Function: off()
 
 > **off**(`key`): `number`
 

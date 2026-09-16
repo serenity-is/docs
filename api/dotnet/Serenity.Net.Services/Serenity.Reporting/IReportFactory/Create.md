@@ -3,7 +3,7 @@
 Creates a report for the given report key.
 
 ```csharp
-public IReport Create(string reportKey, string reportParams, bool validatePermission = true)
+public IReport Create(string reportKey, string? reportParams, bool validatePermission = true)
 ```
 
 | parameter | description |

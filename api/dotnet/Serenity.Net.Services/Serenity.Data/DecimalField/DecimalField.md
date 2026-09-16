@@ -3,9 +3,9 @@
 Field with a Decimal value.
 
 ```csharp
-public DecimalField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, decimal?> getValue = null, 
-    Action<IRow, decimal?> setValue = null)
+public DecimalField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, decimal?>? getValue = null, 
+    Action<IRow, decimal?>? setValue = null)
 ```
 
 | parameter | description |

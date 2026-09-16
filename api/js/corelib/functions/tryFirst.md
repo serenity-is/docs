@@ -4,7 +4,7 @@
 
 > **tryFirst**\<`TItem`\>(`array`, `predicate`): `TItem`
 
-Defined in: [src/compat/arrays-compat.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L238)
+Defined in: [src/compat/arrays-compat.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L236)
 
 Returns the first element satisfying the predicate, or `undefined` if none matches (LINQ `FirstOrDefault`).
 
@@ -36,7 +36,7 @@ The first matching element, or `undefined` when no match is found.
 
 ## Deprecated
 
-Prefer `Array.prototype.find` — `array.find(predicate)`. Retained as a `Q.tryFirst` compat shim.
+Prefer `Array.prototype.find` — `array.find(predicate)`. Retained as a `tryFirst` compat shim.
 
 ## Example
 

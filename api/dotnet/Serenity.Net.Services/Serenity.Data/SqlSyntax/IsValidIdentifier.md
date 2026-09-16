@@ -3,7 +3,7 @@
 Determines whether the specified string is a valid SQL identifier.
 
 ```csharp
-public static bool IsValidIdentifier(string s)
+public static bool IsValidIdentifier(string? s)
 ```
 
 | parameter | description |

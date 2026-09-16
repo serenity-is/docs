@@ -6,7 +6,7 @@
 
 Defined in: [src/compat/scriptdata-compat.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L127)
 
-Alias for [getColumnsScript](../functions/getColumnsScript.md). Compat shim for `Q.getColumnsDataAsync`.
+Alias for [getColumnsScript](../functions/getColumnsScript.md). Compat shim for `getColumnsDataAsync`.
 
 Loads a `ColumnsScript` bundle for the given key.
 

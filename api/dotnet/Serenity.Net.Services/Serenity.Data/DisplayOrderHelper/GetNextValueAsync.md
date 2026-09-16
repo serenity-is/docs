@@ -4,7 +4,7 @@ Asynchronously gets the next display order value for a table or a group of recor
 
 ```csharp
 public static Task<int> GetNextValueAsync(IDbConnection connection, IDisplayOrderRow row, 
-    ICriteria filter = null, CancellationToken cancellationToken = default)
+    ICriteria? filter = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -32,7 +32,7 @@ Asynchronously gets the next display order value for a table or a group of recor
 
 ```csharp
 public static Task<int> GetNextValueAsync(IDbConnection connection, string tableName, 
-    Field orderField, ICriteria filter, CancellationToken cancellationToken = default)
+    Field orderField, ICriteria? filter, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

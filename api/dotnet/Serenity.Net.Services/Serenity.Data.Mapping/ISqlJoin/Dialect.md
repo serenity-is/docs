@@ -3,7 +3,7 @@
 Gets the dialect.
 
 ```csharp
-public string Dialect { get; }
+public string? Dialect { get; }
 ```
 
 ## See Also

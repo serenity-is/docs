@@ -3,7 +3,7 @@
 Gets the debug text.
 
 ```csharp
-public string DebugText { get; }
+public string? DebugText { get; }
 ```
 
 ## Property Value

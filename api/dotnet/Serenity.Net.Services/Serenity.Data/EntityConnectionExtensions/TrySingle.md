@@ -3,7 +3,7 @@
 Tries to find a single entity, allowing caller to edit the criteria and set of fields to load through a editQuery callback.
 
 ```csharp
-public static TRow TrySingle<TRow>(this IDbConnection connection, Action<SqlQuery> editQuery)
+public static TRow? TrySingle<TRow>(this IDbConnection connection, Action<SqlQuery> editQuery)
     where TRow : class, IRow, new()
 ```
 
@@ -36,7 +36,7 @@ Single entity matching the criteria set by editQuery, or null if not found.
 Tries to find a single entity matching the specified criteria. This method selects only the table fields, and no foreign / calculated fields. Use other overloads if you want to select different set of fields.
 
 ```csharp
-public static TRow TrySingle<TRow>(this IDbConnection connection, ICriteria where)
+public static TRow? TrySingle<TRow>(this IDbConnection connection, ICriteria? where)
     where TRow : class, IRow, new()
 ```
 

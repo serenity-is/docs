@@ -52,10 +52,10 @@ The request is a [RetrieveRequest](../api/dotnet/Serenity.Net.Services/Serenity.
 ```cs
 public class RetrieveRequest : ServiceRequest, IIncludeExcludeColumns
 {
-    public object EntityId { get; set; }
+    public object? EntityId { get; set; }
     public RetrieveColumnSelection ColumnSelection { get; set; }
-    public HashSet<string> IncludeColumns { get; set; }
-    public HashSet<string> ExcludeColumns { get; set; }
+    public HashSet<string>? IncludeColumns { get; set; }
+    public HashSet<string>? ExcludeColumns { get; set; }
 }
 ```
 
@@ -68,8 +68,8 @@ The response is a [RetrieveResponse&lt;T&gt;](../api/dotnet/Serenity.Net.Service
 ```cs
 public class RetrieveResponse<T> : ServiceResponse, IRetrieveResponse
 {
-    public T Entity { get; set; }
-    public Dictionary<string, T> Localizations { get; set; }
+    public T? Entity { get; set; }
+    public Dictionary<string, T>? Localizations { get; set; }
 }
 ```
 

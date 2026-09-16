@@ -3,7 +3,7 @@
 Gets or sets the provider name.
 
 ```csharp
-public string ProviderName { get; set; }
+public string? ProviderName { get; set; }
 ```
 
 ## See Also

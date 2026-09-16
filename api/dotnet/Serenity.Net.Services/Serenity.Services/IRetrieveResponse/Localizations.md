@@ -3,7 +3,7 @@
 Dictionary containing localizations if requested.
 
 ```csharp
-public IDictionary Localizations { get; set; }
+public IDictionary? Localizations { get; set; }
 ```
 
 ## See Also

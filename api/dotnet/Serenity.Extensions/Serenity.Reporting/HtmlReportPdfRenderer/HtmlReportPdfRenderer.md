@@ -4,7 +4,8 @@ Default implementation for IHtmlReportPdfRenderer
 
 ```csharp
 public HtmlReportPdfRenderer(IHtmlToPdfConverter htmlToPdfConverter, 
-    IHtmlReportRenderUrlBuilder renderUrlBuilder, IWKHtmlToPdfConverter wkHtmlToPdfConverter = null)
+    IHtmlReportRenderUrlBuilder renderUrlBuilder, 
+    IWKHtmlToPdfConverter? wkHtmlToPdfConverter = null)
 ```
 
 ## See Also

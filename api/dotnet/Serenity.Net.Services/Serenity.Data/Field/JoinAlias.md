@@ -3,7 +3,7 @@
 Gets the join alias.
 
 ```csharp
-public string JoinAlias { get; }
+public string? JoinAlias { get; }
 ```
 
 ## Property Value

@@ -20,4 +20,4 @@ public class BinaryCriteria : BaseCriteria
 ## See Also
 
 * class [BaseCriteria](./BaseCriteria.md)
-* **Source:** *[BinaryCriteria.cs](https://github.com/serenity-is/Serenity/blob/9dd7db586970bccd1b22a6b4d0ef9892b529b61d/src/services/Data/Criteria/BinaryCriteria.cs)*
+* **Source:** *[BinaryCriteria.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Criteria/BinaryCriteria.cs)*

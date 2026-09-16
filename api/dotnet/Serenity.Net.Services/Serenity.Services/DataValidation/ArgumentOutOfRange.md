@@ -3,7 +3,7 @@
 Returns an argument out of range error.
 
 ```csharp
-public static ValidationError ArgumentOutOfRange(string argument, ITextLocalizer localizer)
+public static ValidationError ArgumentOutOfRange(string argument, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

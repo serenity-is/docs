@@ -16,4 +16,4 @@ public interface IListRequestProcessorAsync : IListRequestHandler
 ## See Also
 
 * interface [IListRequestHandler](./IListRequestHandler.md)
-* **Source:** *[IListRequestProcessorAsync.cs](https://github.com/serenity-is/Serenity/blob/6b0ee5bf7cf3317b3c89e88bd6a74f4e510d83c6/src/services/RequestHandlers/List/IListRequestProcessorAsync.cs)*
+* **Source:** *[IListRequestProcessorAsync.cs](https://github.com/serenity-is/Serenity/blob/a8d7b8ad81c84c4caad371e2eeca49085cf8de96/src/services/RequestHandlers/List/IListRequestProcessorAsync.cs)*

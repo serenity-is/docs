@@ -4,7 +4,7 @@ Generates a thumbnail of the source image based on parameters.
 
 ```csharp
 public object Scale(object image, int width, int height, ImageScaleMode mode, 
-    string backgroundColor, bool inplace)
+    string? backgroundColor, bool inplace)
 ```
 
 | parameter | description |

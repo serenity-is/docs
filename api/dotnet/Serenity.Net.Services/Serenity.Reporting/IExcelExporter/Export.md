@@ -50,7 +50,7 @@ The generated Excel file content.
 Exports the specified data to Excel format, deriving the report columns from a columns type and restricting the output to the given column names.
 
 ```csharp
-public byte[] Export(IEnumerable data, Type columnsType, IEnumerable<string> exportColumns)
+public byte[] Export(IEnumerable data, Type columnsType, IEnumerable<string>? exportColumns)
 ```
 
 | parameter | description |

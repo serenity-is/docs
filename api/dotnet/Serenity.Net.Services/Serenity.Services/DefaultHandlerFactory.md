@@ -32,4 +32,4 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IDefaultHandlerFactory](./IDefaultHandlerFactory.md)
-* **Source:** *[DefaultHandlerFactory.cs](https://github.com/serenity-is/Serenity/blob/04ac3ea58a41048bed911555c87969edcf6ea031/src/services/RequestHandlers/Handler/DefaultHandlerFactory.cs)*
+* **Source:** *[DefaultHandlerFactory.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/RequestHandlers/Handler/DefaultHandlerFactory.cs)*

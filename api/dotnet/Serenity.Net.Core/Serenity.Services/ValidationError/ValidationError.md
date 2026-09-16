@@ -161,7 +161,7 @@ Initializes a new instance of the [`ValidationError`](../ValidationError.md) cla
 
 ```csharp
 public ValidationError(string errorCode, string? arguments, string errorMessageFormat, 
-    params object[] formatArgs)
+    params object?[] formatArgs)
 ```
 
 | parameter | description |

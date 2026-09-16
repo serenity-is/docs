@@ -3,9 +3,9 @@
 Field with a Double value.
 
 ```csharp
-public DoubleField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, double?> getValue = null, 
-    Action<IRow, double?> setValue = null)
+public DoubleField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, double?>? getValue = null, 
+    Action<IRow, double?>? setValue = null)
 ```
 
 | parameter | description |

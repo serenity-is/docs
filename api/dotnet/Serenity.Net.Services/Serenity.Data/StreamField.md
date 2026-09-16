@@ -37,4 +37,4 @@ Initializes a new instance of the [`StreamField`](./StreamField.md) class.
 ## See Also
 
 * class [GenericClassField&lt;TValue&gt;](./GenericClassField-1.md)
-* **Source:** *[StreamField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/StreamField.cs)*
+* **Source:** *[StreamField.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Entity/FieldTypes/StreamField.cs)*

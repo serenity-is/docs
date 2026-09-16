@@ -3,7 +3,7 @@
 The connection key fallbacks, if the connection string source supports them.
 
 ```csharp
-protected readonly IConnectionKeyFallbacks connectionKeyFallbacks;
+protected readonly IConnectionKeyFallbacks? connectionKeyFallbacks;
 ```
 
 ## See Also

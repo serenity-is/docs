@@ -3,8 +3,8 @@
 Static factory for field, for backward compatibility, avoid using.
 
 ```csharp
-public static StreamField Factory(ICollection<Field> collection, string name, LocalText caption, 
-    int size, FieldFlags flags, Func<IRow, Stream> getValue, Action<IRow, Stream> setValue)
+public static StreamField Factory(ICollection<Field> collection, string name, LocalText? caption, 
+    int size, FieldFlags flags, Func<IRow, Stream?> getValue, Action<IRow, Stream?> setValue)
 ```
 
 | parameter | description |

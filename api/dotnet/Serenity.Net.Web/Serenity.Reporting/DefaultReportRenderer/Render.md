@@ -1,7 +1,7 @@
 # DefaultReportRenderer.Render method
 
 ```csharp
-public ReportRenderResult Render(IReport report, ReportRenderOptions options)
+public ReportRenderResult Render(IReport report, ReportRenderOptions renderOptions)
 ```
 
 ## See Also

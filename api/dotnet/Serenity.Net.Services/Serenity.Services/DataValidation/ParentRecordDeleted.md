@@ -3,7 +3,7 @@
 Returns a parent record deleted error
 
 ```csharp
-public static ValidationError ParentRecordDeleted(string foreignTable, ITextLocalizer localizer)
+public static ValidationError ParentRecordDeleted(string foreignTable, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

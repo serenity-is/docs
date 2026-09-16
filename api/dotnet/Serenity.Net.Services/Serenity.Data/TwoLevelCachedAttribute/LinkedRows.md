@@ -3,7 +3,7 @@
 Gets the types of the linked rows.
 
 ```csharp
-public Type[] LinkedRows { get; set; }
+public Type[]? LinkedRows { get; set; }
 ```
 
 ## Property Value

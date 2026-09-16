@@ -36,7 +36,7 @@ Function invoked per element; should return `true` for a match.
 
 ## Deprecated
 
-Prefer native `Array.prototype.some` — e.g. `array.some(predicate)`. Retained as a `Q.any` compat shim.
+Prefer native `Array.prototype.some` — e.g. `array.some(predicate)`. Retained as a `any` compat shim.
 
 ## Example
 

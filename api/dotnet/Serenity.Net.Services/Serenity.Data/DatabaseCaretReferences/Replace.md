@@ -3,7 +3,7 @@
 Replaces caret references like [^ConnectionKey] in the specified expression with actual database names.
 
 ```csharp
-public static string Replace(string expression)
+public static string? Replace(string? expression)
 ```
 
 | parameter | description |

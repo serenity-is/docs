@@ -3,7 +3,7 @@
 Asynchronously tries to find first entity, allowing the caller to set criteria and fields to select through an editQuery callback.
 
 ```csharp
-public static Task<TRow> TryFirstAsync<TRow>(this IDbConnection connection, 
+public static Task<TRow?> TryFirstAsync<TRow>(this IDbConnection connection, 
     Action<SqlQuery> editQuery, CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```
@@ -32,7 +32,7 @@ A task representing the asynchronous operation. The task result is the first ent
 Asynchronously tries to find first entity matching a where criteria.
 
 ```csharp
-public static Task<TRow> TryFirstAsync<TRow>(this IDbConnection connection, ICriteria where, 
+public static Task<TRow?> TryFirstAsync<TRow>(this IDbConnection connection, ICriteria? where, 
     CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```

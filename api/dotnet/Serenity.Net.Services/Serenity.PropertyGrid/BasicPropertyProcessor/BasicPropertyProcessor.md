@@ -3,7 +3,7 @@
 Basic property processor
 
 ```csharp
-public BasicPropertyProcessor(IOptions<PropertyProcessorOptions> options = null)
+public BasicPropertyProcessor(IOptions<PropertyProcessorOptions>? options = null)
 ```
 
 | parameter | description |

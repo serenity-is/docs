@@ -4,9 +4,9 @@ Implementation for IReportCallbackInterceptor that uses callback report cookie t
 
 ```csharp
 public HtmlReportCallbackUrlInterceptor(ILogger<HtmlReportCallbackUrlBuilder> logger, 
-    IPermissionService permissionService = null, IUserAccessor userAccessor = null, 
-    IUserClaimCreator userClaimCreator = null, IHttpContextAccessor httpContextAccessor = null, 
-    IDataProtectionProvider dataProtectionProvider = null)
+    IPermissionService? permissionService = null, IUserAccessor? userAccessor = null, 
+    IUserClaimCreator? userClaimCreator = null, IHttpContextAccessor? httpContextAccessor = null, 
+    IDataProtectionProvider? dataProtectionProvider = null)
 ```
 
 ## See Also

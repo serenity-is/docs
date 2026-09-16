@@ -3,7 +3,7 @@
 Gets or sets the set of columns to export. This should only be used to specify list of columns for contexts like Excel export etc.
 
 ```csharp
-public List<string> ExportColumns { get; set; }
+public List<string>? ExportColumns { get; set; }
 ```
 
 ## See Also

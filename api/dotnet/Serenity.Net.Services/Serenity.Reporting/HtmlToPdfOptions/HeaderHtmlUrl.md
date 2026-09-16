@@ -1,7 +1,7 @@
 # HtmlToPdfOptions.HeaderHtmlUrl property
 
 ```csharp
-public string HeaderHtmlUrl { get; set; }
+public string? HeaderHtmlUrl { get; set; }
 ```
 
 ## See Also

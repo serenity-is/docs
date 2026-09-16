@@ -7,7 +7,7 @@
 Defined in: [src/compat/services-compat.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/services-compat.tsx#L11)
 
 Sets an equality filter value on a list request.
-Compat shim for the legacy `Q.setEquality` helper. Lazily initializes `request.EqualityFilter` if needed.
+Compat shim for the legacy `setEquality` helper. Lazily initializes `request.EqualityFilter` if needed.
 
 ## Parameters
 

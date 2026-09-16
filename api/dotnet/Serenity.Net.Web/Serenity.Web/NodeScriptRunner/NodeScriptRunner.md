@@ -3,9 +3,11 @@
 Initializes a new instance of the [`NodeScriptRunner`](../NodeScriptRunner.md) class.
 
 ```csharp
-public NodeScriptRunner(string scriptName, string arguments = null, string workingDirectory = null, 
-    IDictionary<string, string> envVars = null, string pkgManagerCommand = "node", 
-    DiagnosticSource diagnosticSource = null, CancellationToken applicationStoppingToken = default)
+public NodeScriptRunner(string scriptName, string? arguments = null, 
+    string? workingDirectory = null, IDictionary<string, string>? envVars = null, 
+    string pkgManagerCommand = "node", DiagnosticSource? diagnosticSource = null, 
+    Func<ProcessStartInfo, IStartedProcess>? processFactory = null, 
+    CancellationToken applicationStoppingToken = default)
 ```
 
 | parameter | description |
@@ -17,6 +19,7 @@ public NodeScriptRunner(string scriptName, string arguments = null, string worki
 | pkgManagerCommand | The package manager command. Defaults to `node`. |
 | diagnosticSource | The diagnostics source used to emit start events. |
 | applicationStoppingToken | A token that stops the process when the application is shutting down. |
+| processFactory | An optional factory used to create the process, mainly for testing. |
 
 ## Exceptions
 
@@ -26,4 +29,5 @@ public NodeScriptRunner(string scriptName, string arguments = null, string worki
 
 ## See Also
 
+* interface [IStartedProcess](../IStartedProcess.md)
 * class [NodeScriptRunner](../NodeScriptRunner.md)

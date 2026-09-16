@@ -4,7 +4,7 @@ Creates a report for the given report type
 
 ```csharp
 public static TReport Create<TReport>(this IReportFactory factory, 
-    Action<TReport> setParams = null, bool validatePermission = true)
+    Action<TReport>? setParams = null, bool validatePermission = true)
     where TReport : IReport
 ```
 

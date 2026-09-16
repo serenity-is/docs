@@ -3,7 +3,7 @@
 Gets or sets the content encoding.
 
 ```csharp
-public Encoding ContentEncoding { get; set; }
+public Encoding? ContentEncoding { get; set; }
 ```
 
 ## See Also

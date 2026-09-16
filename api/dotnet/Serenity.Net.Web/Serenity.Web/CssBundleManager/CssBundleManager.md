@@ -5,7 +5,7 @@ Initializes a new instance of the [`CssBundleManager`](../CssBundleManager.md) c
 ```csharp
 public CssBundleManager(IOptions<CssBundlingOptions> options, IDynamicScriptManager scriptManager, 
     ICssMinifier cssMinifier, IWebHostEnvironment hostEnvironment, 
-    IHttpContextAccessor contextAccessor = null, ILogger<CssBundleManager> logger = null)
+    IHttpContextAccessor? contextAccessor = null, ILogger<CssBundleManager>? logger = null)
 ```
 
 | parameter | description |

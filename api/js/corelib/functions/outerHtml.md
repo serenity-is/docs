@@ -24,4 +24,4 @@ Outer HTML string. For non-Elements, clones the node into a temporary `<i>` wrap
 
 ## Remarks
 
-Compat helper from `Q.outerHtml`; for new code prefer `element.outerHTML` directly.
+Compat helper from `outerHtml`; for new code prefer `element.outerHTML` directly.

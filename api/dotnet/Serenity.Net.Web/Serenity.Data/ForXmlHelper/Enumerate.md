@@ -3,7 +3,7 @@
 Enumerates data returned from a `FOR XML` statement.
 
 ```csharp
-public static IEnumerable<XElement> Enumerate(string forXml)
+public static IEnumerable<XElement> Enumerate(string? forXml)
 ```
 
 | parameter | description |

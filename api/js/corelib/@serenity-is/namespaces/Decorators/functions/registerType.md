@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [Decorators](../README.md) / registerType
 
-# ~~Function: registerType()~~
+# Function: registerType()
 
 > **registerType**(): (`target`, `_context?`) => `void`
 

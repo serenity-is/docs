@@ -1,10 +1,10 @@
 [@serenity-is/corelib](../README.md) / groupBy
 
-# ~~Function: groupBy()~~
+# Function: groupBy()
 
 > **groupBy**\<`TItem`\>(`items`, `getKey`): [`GroupByResult`](../type-aliases/GroupByResult.md)\<`TItem`\>
 
-Defined in: [src/compat/arrays-compat.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L94)
+Defined in: [src/compat/arrays-compat.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L93)
 
 Groups an array with keys determined by specified getKey() callback.
 Resulting object contains group objects in order and a dictionary to access by key.
@@ -40,10 +40,6 @@ A [GroupByResult](../type-aliases/GroupByResult.md) with `byKey` dictionary and 
 ## Remarks
 
 Similar to LINQ `ToLookup` with extra `order`/`start` metadata. Uses `Object.create(null)` so prototype keys are safe.
-
-## Deprecated
-
-Kept as a `Q.groupBy` compat shim; for new code consider `Map`-based grouping or `toGrouping`.
 
 ## Example
 

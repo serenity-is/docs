@@ -3,7 +3,7 @@
 Default implementation of IUserAccessor that reads the current user from the HTTP context.
 
 ```csharp
-public HttpContextUserAccessor(IHttpContextAccessor httpContextAccessor = null)
+public HttpContextUserAccessor(IHttpContextAccessor? httpContextAccessor = null)
 ```
 
 | parameter | description |

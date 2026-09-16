@@ -21,4 +21,4 @@ public class ScriptBundleManager : IScriptBundleManager
 ## See Also
 
 * interface [IScriptBundleManager](./IScriptBundleManager.md)
-* **Source:** *[ScriptBundleManager.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/ScriptBundleManager.cs)*
+* **Source:** *[ScriptBundleManager.cs](https://github.com/serenity-is/Serenity/blob/401a8738b9bbcc8a73ab6d1df38c8572bbe252c4/src/web/Mvc/ScriptBundleManager.cs)*

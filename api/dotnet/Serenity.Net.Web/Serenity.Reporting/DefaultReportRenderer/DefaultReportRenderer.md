@@ -5,7 +5,7 @@ Default implementation of IReportRenderer.
 ```csharp
 public DefaultReportRenderer(IDataReportExcelRenderer excelRenderer, 
     IHtmlReportPdfRenderer htmlReportPdfRenderer, IServiceProvider serviceProvider, 
-    IHttpContextAccessor httpContextAccessor = null)
+    IHttpContextAccessor? httpContextAccessor = null)
 ```
 
 | parameter | description |

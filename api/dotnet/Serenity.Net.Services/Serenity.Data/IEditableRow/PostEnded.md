@@ -3,7 +3,7 @@
 The post ended event
 
 ```csharp
-public event EventHandler PostEnded;
+public event EventHandler? PostEnded;
 ```
 
 ## See Also

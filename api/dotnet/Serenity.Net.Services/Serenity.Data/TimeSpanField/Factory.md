@@ -3,7 +3,7 @@
 Static factory for field, for backward compatibility, avoid using.
 
 ```csharp
-public static TimeSpanField Factory(ICollection<Field> collection, string name, LocalText caption, 
+public static TimeSpanField Factory(ICollection<Field> collection, string name, LocalText? caption, 
     int size, FieldFlags flags, Func<IRow, TimeSpan?> getValue, Action<IRow, TimeSpan?> setValue)
 ```
 

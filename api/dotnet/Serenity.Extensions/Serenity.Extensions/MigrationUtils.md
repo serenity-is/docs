@@ -28,4 +28,4 @@ public static class MigrationUtils
 
 ## See Also
 
-* **Source:** *[MigrationUtils.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/MigrationUtils/MigrationUtils.cs)*
+* **Source:** *[MigrationUtils.cs](https://github.com/serenity-is/Serenity/blob/25d0bf6e6c1b7983e41847d16761292df1c71db5/common-features/src/extensions/Modules/MigrationUtils/MigrationUtils.cs)*

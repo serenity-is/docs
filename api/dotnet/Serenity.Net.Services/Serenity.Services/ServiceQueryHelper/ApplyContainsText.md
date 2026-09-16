@@ -3,7 +3,7 @@
 Applies contains text criteria to the query
 
 ```csharp
-public static SqlQuery ApplyContainsText(this SqlQuery query, string containsText, 
+public static SqlQuery ApplyContainsText(this SqlQuery query, string? containsText, 
     Action<string, long?> filter)
 ```
 

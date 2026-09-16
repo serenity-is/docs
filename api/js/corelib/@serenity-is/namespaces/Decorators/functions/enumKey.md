@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [Decorators](../README.md) / enumKey
 
-# ~~Function: enumKey()~~
+# Function: enumKey()
 
 > **enumKey**(`value`): (`target`, `_context?`) => `void`
 

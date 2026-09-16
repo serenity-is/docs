@@ -2,7 +2,7 @@
 
 # Interface: IntegerEditorOptions
 
-Defined in: [src/ui/editors/integereditor.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L11)
+Defined in: [src/ui/editors/integereditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L10)
 
 Options for the [IntegerEditor](../classes/IntegerEditor.md).
 
@@ -12,7 +12,7 @@ Options for the [IntegerEditor](../classes/IntegerEditor.md).
 
 > `optional` **allowNegatives**: `boolean`
 
-Defined in: [src/ui/editors/integereditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L17)
+Defined in: [src/ui/editors/integereditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L16)
 
 Whether negative values are allowed.
 
@@ -22,7 +22,7 @@ Whether negative values are allowed.
 
 > `optional` **maxValue**: `number`
 
-Defined in: [src/ui/editors/integereditor.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L15)
+Defined in: [src/ui/editors/integereditor.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L14)
 
 Maximum allowed value.
 
@@ -32,6 +32,6 @@ Maximum allowed value.
 
 > `optional` **minValue**: `number`
 
-Defined in: [src/ui/editors/integereditor.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L13)
+Defined in: [src/ui/editors/integereditor.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L12)
 
 Minimum allowed value.

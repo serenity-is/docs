@@ -3,7 +3,7 @@
 Intercepts ReportController Render action callbacks.
 
 ```csharp
-public ReportRenderResult InterceptCallback(ReportRenderOptions options, 
+public ReportRenderResult InterceptCallback(ReportRenderOptions renderOptions, 
     Func<ReportRenderOptions, ReportRenderResult> action)
 ```
 

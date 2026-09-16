@@ -4,7 +4,7 @@ Adds an entry to the import map for the current HTML view, associating a module 
 
 ```csharp
 public static void AddImportMapEntry(this HttpContext context, string specifier, string address, 
-    string integrity = null, bool? csp = null, bool overwrite = true)
+    string? integrity = null, bool? csp = null, bool overwrite = true)
 ```
 
 | parameter | description |

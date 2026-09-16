@@ -21,4 +21,4 @@ public static class ServiceCollectionExtensions
 
 ## See Also
 
-* **Source:** *[ServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/6b0ee5bf7cf3317b3c89e88bd6a74f4e510d83c6/src/services/RequestHandlers/Helpers/ServiceCollectionExtensions.cs)*
+* **Source:** *[ServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/RequestHandlers/Helpers/ServiceCollectionExtensions.cs)*

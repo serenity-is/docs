@@ -3,7 +3,7 @@
 List of distinct values, if DistinctFields are passed in the list request. Each element of the list is an array of distinct values if multiple distinct fields are requested.
 
 ```csharp
-public List<object> Values { get; set; }
+public List<object?>? Values { get; set; }
 ```
 
 ## See Also

@@ -92,13 +92,13 @@ public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }
 
     [DisplayName("Genre"), Expression($"{jGenre}.Name")]
-    public string GenreName { get => fields.GenreName[this]; set => fields.GenreName[this] = value; }
+    public string? GenreName { get => fields.GenreName[this]; set => fields.GenreName[this] = value; }
 
     public class RowFields : RowFieldsBase
     {
         // ...
-        public Int32Field GenreId;
-        public StringField GenreName;
+        public Int32Field GenreId = null!;
+        public StringField GenreName = null!;
     }
 }
 ```
@@ -121,7 +121,7 @@ In the provided code:
 
    ```csharp
     [DisplayName("Genre"), Origin(jGenre, nameof(GenreRow.Name))]
-    public string GenreName { get => fields.GenreName[this]; set => fields.GenreName[this] = value; }
+    public string? GenreName { get => fields.GenreName[this]; set => fields.GenreName[this] = value; }
    ```
 
 In essence, these code modifications define the relationship between the Movie and Genre tables and ensure that the correct data is retrieved when needed.
@@ -153,8 +153,8 @@ Let's enhance the Movie form by adding a Genre selection field. To do this, make
 public class MovieForm
 {
     //...
-    public int GenreId { get; set; }
-    public MovieKind Kind { get; set; }
+    public int? GenreId { get; set; }
+    public MovieKind? Kind { get; set; }
 }
 ```
 
@@ -165,8 +165,8 @@ Additionally, add the `GenreName` property to the `MovieColumns` class:
 public class MovieColumns
 {
     //...
-    public string GenreName { get; set; }
-    public MovieKind Kind { get; set; }
+    public string? GenreName { get; set; }
+    public MovieKind? Kind { get; set; }
 }
 ```
 
@@ -319,7 +319,7 @@ public class MovieColumns
 {
     //...
     [Width(100), QuickFilter]
-    public string GenreName { get; set; }
+    public string? GenreName { get; set; }
 }
 ```
 

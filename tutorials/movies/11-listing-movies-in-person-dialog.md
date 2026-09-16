@@ -15,15 +15,15 @@ Edit the `PersonForm.cs` file to include a `MoviesGrid` property and two new tab
 public class PersonForm
 {
     [Tab("Person")]
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public DateTime BirthDate { get; set; }
-    public string BirthPlace { get; set; }
-    public Gender Gender { get; set; }
-    public int Height { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+    public DateTime? BirthDate { get; set; }
+    public string? BirthPlace { get; set; }
+    public Gender? Gender { get; set; }
+    public int? Height { get; set; }
 
     [Tab("Movies"), SkipNameCheck]
-    public string MoviesGrid { get; set; }
+    public string? MoviesGrid { get; set; }
 }
 ```
 
@@ -47,9 +47,9 @@ namespace MovieTutorial.MovieDB.Columns;
 public class PersonMovieColumns
 {
     [Width(220)]
-    public string MovieTitle { get; set; }
+    public string? MovieTitle { get; set; }
     [Width(200)]
-    public string Character { get; set; }
+    public string? Character { get; set; }
 }
 ```
 
@@ -82,7 +82,7 @@ public class PersonForm
 {
     //...
     [Tab("Movies"), SkipNameCheck, PersonMovieGrid]
-    public string MoviesGrid { get; set; }
+    public string? MoviesGrid { get; set; }
 }
 ```
 
@@ -106,7 +106,7 @@ namespace MovieTutorial.MovieDB.Forms
     {
         //...
         [Tab("Movies"), SkipNameCheck, PersonMovieGrid, LabelWidth("0")]
-        public string MoviesGrid { get; set; }
+        public string? MoviesGrid { get; set; }
     }
 }
 ```

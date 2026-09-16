@@ -3,8 +3,8 @@
 Intercepts the async EntityConnectionExtensions DeleteById/Insert/Update methods. The default implementation forwards to [`ManipulateRow`](./ManipulateRow.md).
 
 ```csharp
-public Task<OptionalValue<long?>> ManipulateRowAsync(Type rowType, OptionalValue<object> id, 
-    IRow row, ExpectedRows expectedRows, bool getNewId, 
+public Task<OptionalValue<long?>> ManipulateRowAsync(Type rowType, OptionalValue<object?> id, 
+    IRow? row, ExpectedRows expectedRows, bool getNewId, 
     CancellationToken cancellationToken = default)
 ```
 

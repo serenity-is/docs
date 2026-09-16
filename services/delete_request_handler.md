@@ -52,7 +52,7 @@ The request is a [DeleteRequest](../api/dotnet/Serenity.Net.Services/Serenity.Se
 ```cs
 public class DeleteRequest : ServiceRequest
 {
-    public object EntityId { get; set; }
+    public object? EntityId { get; set; }
 }
 ```
 

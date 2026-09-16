@@ -1,7 +1,7 @@
 # DynamicScript.GroupKey property
 
 ```csharp
-public string GroupKey { get; set; }
+public string? GroupKey { get; set; }
 ```
 
 ## See Also

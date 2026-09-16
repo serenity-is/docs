@@ -3,7 +3,7 @@
 Tries to finds an entity by its ID value. This method selects only the table fields, and no foreign / calculated fields. Use other overloads if you want to select different set of fields.
 
 ```csharp
-public static TRow TryById<TRow>(this IDbConnection connection, object id)
+public static TRow? TryById<TRow>(this IDbConnection connection, object id)
     where TRow : class, IRow, IIdRow, new()
 ```
 
@@ -36,7 +36,7 @@ Entity with the given ID, or null if not found.
 Tries to find an entity by its ID value. This method does not select any fields by default and allows you to edit the query to select fields you want.
 
 ```csharp
-public static TRow TryById<TRow>(this IDbConnection connection, object id, 
+public static TRow? TryById<TRow>(this IDbConnection connection, object id, 
     Action<SqlQuery> editQuery)
     where TRow : class, IRow, IIdRow, new()
 ```

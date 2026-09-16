@@ -30,8 +30,8 @@ The converted service response.
 Converts the exception to a service response.
 
 ```csharp
-public static TResponse ConvertToResponse<TResponse>(this Exception exception, ILogger logger, 
-    ITextLocalizer localizer, bool showDetails)
+public static TResponse ConvertToResponse<TResponse>(this Exception exception, ILogger? logger, 
+    ITextLocalizer? localizer, bool showDetails)
     where TResponse : ServiceResponse, new()
 ```
 

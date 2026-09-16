@@ -16,7 +16,8 @@ public static class RowExtensions
 | static [FindField](RowExtensions/FindField.md)(…) | Finds the field by its name. |
 | static [FindFieldByPropertyName](RowExtensions/FindFieldByPropertyName.md)(…) | Finds the field by its property name. |
 | static [GetFields](RowExtensions/GetFields.md)(…) | Gets the fields. |
+| static [GetIdField](RowExtensions/GetIdField.md)(…) | Returns Row's IdField. If row's IdField is null it throws. |
 
 ## See Also
 
-* **Source:** *[RowExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Extensions/RowExtensions.cs)*
+* **Source:** *[RowExtensions.cs](https://github.com/serenity-is/Serenity/blob/1a8f0b8d86a82010fb35e1c2b9f853493e7f539f/src/services/Entity/Extensions/RowExtensions.cs)*

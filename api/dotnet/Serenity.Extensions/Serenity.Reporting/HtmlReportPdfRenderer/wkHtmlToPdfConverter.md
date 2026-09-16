@@ -3,7 +3,7 @@
 The optional WKHtmlToPdf converter used when a report requests it.
 
 ```csharp
-protected readonly IWKHtmlToPdfConverter wkHtmlToPdfConverter;
+protected readonly IWKHtmlToPdfConverter? wkHtmlToPdfConverter;
 ```
 
 ## See Also

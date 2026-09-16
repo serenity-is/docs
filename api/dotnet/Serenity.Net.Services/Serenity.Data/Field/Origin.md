@@ -3,7 +3,7 @@
 Gets the origin.
 
 ```csharp
-public string Origin { get; }
+public string? Origin { get; }
 ```
 
 ## Property Value

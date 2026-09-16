@@ -3,7 +3,7 @@
 Checks if the equality filter value is empty. It returns true for null, empty string, or empty IEnumerable.
 
 ```csharp
-protected bool IsEmptyEqualityFilterValue(object value)
+protected bool IsEmptyEqualityFilterValue(object? value)
 ```
 
 | parameter | description |

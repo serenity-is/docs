@@ -1,10 +1,10 @@
 [@serenity-is/corelib](../README.md) / toGrouping
 
-# ~~Function: toGrouping()~~
+# Function: toGrouping()
 
 > **toGrouping**\<`TItem`\>(`items`, `getKey`): [`Grouping`](../type-aliases/Grouping.md)\<`TItem`\>
 
-Defined in: [src/compat/arrays-compat.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L214)
+Defined in: [src/compat/arrays-compat.ts:212](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L212)
 
 Groups an array into a dictionary keyed by `getKey`.
 
@@ -37,10 +37,6 @@ A [Grouping](../type-aliases/Grouping.md) dictionary whose values are arrays of 
 ## Remarks
 
 Lighter alternative to [groupBy](groupBy.md) when ordered metadata is not needed.
-
-## Deprecated
-
-Retained as a `Q.toGrouping` compat shim; new code may prefer `Map`-grouping.
 
 ## Example
 

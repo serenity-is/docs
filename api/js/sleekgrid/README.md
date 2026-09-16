@@ -113,6 +113,7 @@ A modern, lightweight, and highly customizable data grid component for web appli
 - [CellStylesHash](type-aliases/CellStylesHash.md)
 - [ColumnFormat](type-aliases/ColumnFormat.md)
 - [CompatFormatter](type-aliases/CompatFormatter.md)
+- [createGridSignalsAndRefs](type-aliases/createGridSignalsAndRefs.md)
 - [EventCallback](type-aliases/EventCallback.md)
 - [EventData](type-aliases/EventData.md)
 - [FooterColumnEvent](type-aliases/FooterColumnEvent.md)

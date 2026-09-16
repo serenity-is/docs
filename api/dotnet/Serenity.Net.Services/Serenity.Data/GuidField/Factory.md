@@ -3,7 +3,7 @@
 Static factory for field, for backward compatibility, avoid using.
 
 ```csharp
-public static GuidField Factory(ICollection<Field> collection, string name, LocalText caption, 
+public static GuidField Factory(ICollection<Field> collection, string name, LocalText? caption, 
     int size, FieldFlags flags, Func<IRow, Guid?> getValue, Action<IRow, Guid?> setValue)
 ```
 

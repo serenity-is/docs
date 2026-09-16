@@ -21,4 +21,4 @@ A connection key fallback maps a logical connection key (e.g. "ProMeeting") to a
 
 ## See Also
 
-* **Source:** *[IConnectionKeyFallbacks.cs](https://github.com/serenity-is/Serenity/blob/d7ef4960ed2723e5081d907f7610b7cabba6cf08/src/services/Data/Connections/IConnectionKeyFallbacks.cs)*
+* **Source:** *[IConnectionKeyFallbacks.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Connections/IConnectionKeyFallbacks.cs)*

@@ -3,7 +3,7 @@
 Initializes a new instance of the [`PropertyInfoSource`](../PropertyInfoSource.md) class.
 
 ```csharp
-public PropertyInfoSource(PropertyInfo property, IRow basedOnRow)
+public PropertyInfoSource(PropertyInfo property, IRow? basedOnRow)
 ```
 
 | parameter | description |

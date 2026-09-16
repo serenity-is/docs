@@ -6,7 +6,7 @@
 
 Defined in: [src/compat/dialogs-compat.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/dialogs-compat.ts#L22)
 
-Legacy `Q.information` alias.
+Legacy `information` alias.
 
 Displays an informational dialog with a single OK button.
 

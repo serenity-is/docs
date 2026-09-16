@@ -3,7 +3,7 @@
 Should deserialize extension
 
 ```csharp
-public static Func<IRow, string, bool> ShouldDeserializeExtension { get; set; }
+public static Func<IRow, string, bool>? ShouldDeserializeExtension { get; set; }
 ```
 
 ## See Also

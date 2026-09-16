@@ -3,7 +3,8 @@
 Returns an invalid value error.
 
 ```csharp
-public static ValidationError InvalidValueError(Field field, object value, ITextLocalizer localizer)
+public static ValidationError InvalidValueError(Field field, object value, 
+    ITextLocalizer? localizer)
 ```
 
 | parameter | description |
@@ -30,7 +31,7 @@ The invalid value error.
 Returns an invalid value error.
 
 ```csharp
-public static ValidationError InvalidValueError(IRow row, Field field, ITextLocalizer localizer)
+public static ValidationError InvalidValueError(IRow row, Field field, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

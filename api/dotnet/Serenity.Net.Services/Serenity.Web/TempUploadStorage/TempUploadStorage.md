@@ -3,7 +3,7 @@
 Initializes a new instance of the class.
 
 ```csharp
-public TempUploadStorage(DiskUploadStorageOptions options, IDiskUploadFileSystem fileSystem = null)
+public TempUploadStorage(DiskUploadStorageOptions options, IDiskUploadFileSystem? fileSystem = null)
 ```
 
 | parameter | description |

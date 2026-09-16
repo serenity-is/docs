@@ -1,7 +1,7 @@
 # BaseCellDecorator.Value property
 
 ```csharp
-public object Value { get; set; }
+public object? Value { get; set; }
 ```
 
 ## See Also

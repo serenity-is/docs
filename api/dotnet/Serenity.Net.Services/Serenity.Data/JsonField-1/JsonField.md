@@ -3,9 +3,9 @@
 Field with a JSON value.
 
 ```csharp
-public JsonField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, TValue> getValue = null, 
-    Action<IRow, TValue> setValue = null)
+public JsonField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, TValue?>? getValue = null, 
+    Action<IRow, TValue?>? setValue = null)
 ```
 
 | parameter | description |

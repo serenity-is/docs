@@ -3,7 +3,7 @@
 Gets or sets the primary key table.
 
 ```csharp
-public string PKTable { get; set; }
+public string? PKTable { get; set; }
 ```
 
 ## Property Value

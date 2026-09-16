@@ -3,7 +3,7 @@
 Gets FOR JSON part if any.
 
 ```csharp
-public string ForJson { get; }
+public string? ForJson { get; }
 ```
 
 ## See Also

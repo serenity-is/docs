@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [Decorators](../README.md) / registerClass
 
-# ~~Function: registerClass()~~
+# Function: registerClass()
 
 > **registerClass**(`nameOrIntf?`, `intf2?`): (`target`, `_context?`) => `void`
 

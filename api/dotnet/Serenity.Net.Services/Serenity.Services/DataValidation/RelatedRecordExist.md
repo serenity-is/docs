@@ -3,7 +3,7 @@
 Returns a related record exist error.
 
 ```csharp
-public static ValidationError RelatedRecordExist(string foreignTable, ITextLocalizer localizer)
+public static ValidationError RelatedRecordExist(string foreignTable, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

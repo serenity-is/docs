@@ -17,9 +17,11 @@ public class UnitOfWork : IDisposable, IUnitOfWork
 | event [OnCommit](UnitOfWork/OnCommit.md) | Occurs when transaction is committed. |
 | event [OnRollback](UnitOfWork/OnRollback.md) | Occurs when transaction is rolled back. |
 | [Commit](UnitOfWork/Commit.md)() | Commits this transaction. |
+| [CommitAsync](UnitOfWork/CommitAsync.md)(…) | Commits this transaction asynchronously. |
 | [Dispose](UnitOfWork/Dispose.md)() | Rollbacks the transaction if any and calls onRollback event. |
+| [DisposeAsync](UnitOfWork/DisposeAsync.md)() | Rollbacks the transaction if any and calls onRollback event asynchronously. |
 
 ## See Also
 
 * interface [IUnitOfWork](./IUnitOfWork.md)
-* **Source:** *[UnitOfWork.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Connections/UnitOfWork.cs)*
+* **Source:** *[UnitOfWork.cs](https://github.com/serenity-is/Serenity/blob/51c903b5f428c7969f62fffda94e0024919a43f5/src/services/Data/Connections/UnitOfWork.cs)*

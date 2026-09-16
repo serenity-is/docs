@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [ScriptData](../README.md) / reload
 
-# ~~Function: reload()~~
+# Function: reload()
 
 > **reload**\<`TData`\>(`name`, `dynJS?`): `TData`
 
@@ -33,7 +33,4 @@ When `true`, passed through to the underlying `ensure` call (legacy flag).
 `TData`
 
 The reloaded script data.
-
-## Deprecated
-
-Prefer `getScriptData(name, true)` or `getScriptDataAsync`. Kept for legacy callers.
+[DEPRECATED] Prefer `getScriptData(name, true)` or `getScriptDataAsync`. Kept for legacy callers.

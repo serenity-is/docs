@@ -3,7 +3,7 @@
 Gets or sets the title for the column.
 
 ```csharp
-public string Title { get; set; }
+public string? Title { get; set; }
 ```
 
 ## See Also

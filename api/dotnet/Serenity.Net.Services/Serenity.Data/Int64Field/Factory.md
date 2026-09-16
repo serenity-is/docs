@@ -3,7 +3,7 @@
 Static factory for field, for backward compatibility, avoid using.
 
 ```csharp
-public static Int64Field Factory(ICollection<Field> collection, string name, LocalText caption, 
+public static Int64Field Factory(ICollection<Field> collection, string name, LocalText? caption, 
     int size, FieldFlags flags, Func<IRow, long?> getValue, Action<IRow, long?> setValue)
 ```
 

@@ -5,7 +5,7 @@ Formats an UPSERT query, i.e. a query that updates the row matching the key fiel
 ```csharp
 public static string FormatUpsert(string tableName, 
     IEnumerable<FieldExpressionPair> fieldExpressions, IEnumerable<string> keyFields, 
-    ISqlDialect dialect = null)
+    ISqlDialect? dialect = null)
 ```
 
 | parameter | description |

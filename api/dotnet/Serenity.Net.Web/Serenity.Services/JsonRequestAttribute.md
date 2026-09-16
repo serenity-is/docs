@@ -24,4 +24,4 @@ public class JsonRequestAttribute : ActionFilterAttribute
 
 ## See Also
 
-* **Source:** *[JsonRequestAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/web/Mvc/JsonRequestAttribute.cs)*
+* **Source:** *[JsonRequestAttribute.cs](https://github.com/serenity-is/Serenity/blob/eef6be1d7741640aed4ce405c3b44984620b84be/src/web/Mvc/JsonRequestAttribute.cs)*

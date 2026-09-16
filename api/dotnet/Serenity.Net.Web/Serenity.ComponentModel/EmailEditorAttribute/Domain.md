@@ -3,7 +3,7 @@
 Gets or sets the domain.
 
 ```csharp
-public string Domain { get; set; }
+public string? Domain { get; set; }
 ```
 
 ## See Also

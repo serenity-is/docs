@@ -20,4 +20,4 @@ public class ContentHashCache : IContentHashCache
 ## See Also
 
 * interface [IContentHashCache](./IContentHashCache.md)
-* **Source:** *[ContentHashCache.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/ContentHashCache.cs)*
+* **Source:** *[ContentHashCache.cs](https://github.com/serenity-is/Serenity/blob/eef6be1d7741640aed4ce405c3b44984620b84be/src/web/Mvc/ContentHashCache.cs)*

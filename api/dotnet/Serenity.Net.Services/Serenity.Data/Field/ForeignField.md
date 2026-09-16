@@ -3,7 +3,7 @@
 Gets or sets the foreign field.
 
 ```csharp
-public string ForeignField { get; set; }
+public string? ForeignField { get; set; }
 ```
 
 ## Property Value

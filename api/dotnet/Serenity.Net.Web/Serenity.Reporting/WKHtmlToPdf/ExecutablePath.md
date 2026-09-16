@@ -3,7 +3,7 @@
 Gets or sets the path to the wkhtmltopdf executable.
 
 ```csharp
-public string ExecutablePath { get; set; }
+public string? ExecutablePath { get; set; }
 ```
 
 ## See Also

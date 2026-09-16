@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [Decorators](../README.md) / registerInterface
 
-# ~~Function: registerInterface()~~
+# Function: registerInterface()
 
 > **registerInterface**(`nameOrIntf?`, `intf2?`): (`target`, `_context?`) => `void`
 

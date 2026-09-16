@@ -1,7 +1,7 @@
 # ServiceEndpointModelBinderProvider.GetBinder method
 
 ```csharp
-public IModelBinder GetBinder(ModelBinderProviderContext context)
+public IModelBinder? GetBinder(ModelBinderProviderContext context)
 ```
 
 ## See Also

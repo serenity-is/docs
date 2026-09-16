@@ -3,7 +3,7 @@
 Replaces the brackets in an SQL expression with the dialect specific ones.
 
 ```csharp
-public static string ReplaceBrackets(string expression, ISqlDialect dialect)
+public static string? ReplaceBrackets(string? expression, ISqlDialect dialect)
 ```
 
 | parameter | description |

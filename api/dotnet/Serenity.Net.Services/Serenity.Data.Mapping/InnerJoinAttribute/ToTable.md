@@ -3,7 +3,7 @@
 Gets the table.
 
 ```csharp
-public string ToTable { get; }
+public string? ToTable { get; }
 ```
 
 ## Property Value

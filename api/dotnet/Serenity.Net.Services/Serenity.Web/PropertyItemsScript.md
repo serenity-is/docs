@@ -43,4 +43,4 @@ Creates a new instance of the class.
 
 * interface [IGetScriptData](../../Serenity.Net.Core/Serenity.Web/IGetScriptData.md)
 * interface [INamedDynamicScript](../../Serenity.Net.Core/Serenity.Web/INamedDynamicScript.md)
-* **Source:** *[PropertyItemsScript.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/DynamicScript/PropertyItemsScript.cs)*
+* **Source:** *[PropertyItemsScript.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/DynamicScript/PropertyItemsScript.cs)*

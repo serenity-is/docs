@@ -3,7 +3,7 @@
 Converts a path to absolute.
 
 ```csharp
-public static string ToAbsolute(HttpContext context, string contentPath)
+public static string ToAbsolute(HttpContext? context, string contentPath)
 ```
 
 | parameter | description |
@@ -26,7 +26,7 @@ The absolute path.
 Converts a path to absolute.
 
 ```csharp
-public static string ToAbsolute(IHttpContextAccessor accessor, string contentPath)
+public static string ToAbsolute(IHttpContextAccessor? accessor, string contentPath)
 ```
 
 | parameter | description |

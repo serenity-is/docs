@@ -3,7 +3,7 @@
 Tries to extract the permission from a controller action.
 
 ```csharp
-public static string GetPermissionFromController(Type controller, string action)
+public static string? GetPermissionFromController(Type controller, string action)
 ```
 
 | parameter | description |

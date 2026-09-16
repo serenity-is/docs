@@ -3,7 +3,7 @@
 The email address of the account to reset the password for.
 
 ```csharp
-public string Email { get; set; }
+public string? Email { get; set; }
 ```
 
 ## See Also

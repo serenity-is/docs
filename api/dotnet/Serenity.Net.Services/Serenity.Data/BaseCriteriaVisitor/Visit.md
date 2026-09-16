@@ -3,7 +3,7 @@
 Visits the specified criteria.
 
 ```csharp
-protected virtual BaseCriteria Visit(BaseCriteria criteria)
+protected virtual BaseCriteria? Visit(BaseCriteria? criteria)
 ```
 
 | parameter | description |

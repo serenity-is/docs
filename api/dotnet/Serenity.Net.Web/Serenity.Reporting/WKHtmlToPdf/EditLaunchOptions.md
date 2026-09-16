@@ -3,7 +3,7 @@
 Unused for WKHtmlToPdf
 
 ```csharp
-public Action<object> EditLaunchOptions { get; set; }
+public Action<object>? EditLaunchOptions { get; set; }
 ```
 
 ## See Also

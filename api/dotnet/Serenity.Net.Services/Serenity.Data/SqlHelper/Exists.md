@@ -3,7 +3,7 @@
 Executes the query returning true if it has at least one result.
 
 ```csharp
-public static bool Exists(this SqlQuery query, IDbConnection connection, ILogger logger = null)
+public static bool Exists(this SqlQuery query, IDbConnection connection, ILogger? logger = null)
 ```
 
 | parameter | description |

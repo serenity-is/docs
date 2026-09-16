@@ -11,7 +11,6 @@ public class ScaleImageAsResult
 
 | name | description |
 | --- | --- |
-| [ScaleImageAsResult](DefaultUploadProcessor.ScaleImageAsResult/ScaleImageAsResult.md)() | The default constructor. |
 | [Filename](DefaultUploadProcessor.ScaleImageAsResult/Filename.md) { get; set; } | Resulting filename |
 | [Height](DefaultUploadProcessor.ScaleImageAsResult/Height.md) { get; set; } | Resulting image height |
 | [Width](DefaultUploadProcessor.ScaleImageAsResult/Width.md) { get; set; } | Resulting image width |

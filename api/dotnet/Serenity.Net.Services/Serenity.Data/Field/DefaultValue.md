@@ -3,7 +3,7 @@
 Gets or sets the default value.
 
 ```csharp
-public object DefaultValue { get; set; }
+public object? DefaultValue { get; set; }
 ```
 
 ## Property Value

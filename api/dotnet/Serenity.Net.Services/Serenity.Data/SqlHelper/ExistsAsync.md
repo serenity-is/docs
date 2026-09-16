@@ -4,7 +4,7 @@ Executes the query asynchronously returning true if it has at least one result.
 
 ```csharp
 public static Task<bool> ExistsAsync(this SqlQuery query, IDbConnection connection, 
-    ILogger logger = null, CancellationToken cancellationToken = default)
+    ILogger? logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

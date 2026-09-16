@@ -3,7 +3,7 @@
 Logs a capture log operation
 
 ```csharp
-public void Log(IUnitOfWork uow, IRow old, IRow row, object userId)
+public void Log(IUnitOfWork uow, IRow? old, IRow? row, object? userId)
 ```
 
 | parameter | description |

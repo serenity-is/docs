@@ -3,7 +3,7 @@
 Calls custom validator.
 
 ```csharp
-protected virtual string CustomValidate(RowValidationContext context, Field field, 
+protected virtual string? CustomValidate(RowValidationContext context, Field field, 
     ICustomValidator validator)
 ```
 

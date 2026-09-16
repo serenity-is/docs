@@ -3,7 +3,7 @@
 Returns an unexpected error
 
 ```csharp
-public static ValidationError UnexpectedError(ITextLocalizer localizer)
+public static ValidationError UnexpectedError(ITextLocalizer? localizer)
 ```
 
 | parameter | description |

@@ -20,4 +20,4 @@ public interface IRowOperationInterceptor
 
 ## See Also
 
-* **Source:** *[IRowOperationInterceptor.cs](https://github.com/serenity-is/Serenity/blob/73168d59056410d43d88aeecc9e4fe750d71793a/src/services/Entity/Extensions/IRowOperationInterceptor.cs)*
+* **Source:** *[IRowOperationInterceptor.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Entity/Extensions/IRowOperationInterceptor.cs)*

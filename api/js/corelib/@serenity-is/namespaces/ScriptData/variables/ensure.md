@@ -1,12 +1,12 @@
 [@serenity-is/corelib](../../../../README.md) / [ScriptData](../README.md) / ensure
 
-# ~~Variable: ensure()~~
+# Variable: ensure()
 
 > `const` **ensure**: \<`TData`\>(`name`, `dynJS?`) => `TData` = `ensureScriptDataSync`
 
 Defined in: [src/compat/scriptdata-compat.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L16)
 
-Alias for [ensureScriptDataSync](../../../../functions/ensureScriptDataSync.md).
+Alias for [ensureScriptDataSync](../../../../functions/ensureScriptDataSync.md). [DEPRECATED] Use `ensureScriptDataSync` directly.
 
 Synchronous (blocking) version of [getScriptData](../../../../functions/getScriptData.md) for legacy compatibility.
 Avoid in new code — it performs a synchronous XHR and blocks the UI thread.
@@ -42,7 +42,3 @@ The script data (wrapped as [Lookup](../../../../classes/Lookup.md) for `Lookup.
 ## Throws
 
 If the hook returns a promise in sync mode or the HTTP request fails.
-
-## Deprecated
-
-Use `ensureScriptDataSync` directly.

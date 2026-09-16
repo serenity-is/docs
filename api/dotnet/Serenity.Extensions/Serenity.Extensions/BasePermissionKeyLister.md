@@ -45,4 +45,4 @@ public abstract class BasePermissionKeyLister : IPermissionKeyLister
 ## See Also
 
 * interface [IPermissionKeyLister](../../Serenity.Net.Core/Serenity.Abstractions/IPermissionKeyLister.md)
-* **Source:** *[BasePermissionKeyLister.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/Authorization/BasePermissionKeyLister.cs)*
+* **Source:** *[BasePermissionKeyLister.cs](https://github.com/serenity-is/Serenity/blob/66eac10b1061416a97fb54c0dd241c2fb3231e4d/common-features/src/extensions/Modules/Authorization/BasePermissionKeyLister.cs)*

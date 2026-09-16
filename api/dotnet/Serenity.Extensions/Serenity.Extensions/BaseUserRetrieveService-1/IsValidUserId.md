@@ -3,7 +3,7 @@
 Checks if the specified user ID is valid.
 
 ```csharp
-protected override bool IsValidUserId(string userId)
+protected override bool IsValidUserId(string? userId)
 ```
 
 | parameter | description |

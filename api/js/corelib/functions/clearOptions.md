@@ -22,4 +22,4 @@ Target element or array-like/jQuery-like wrapper containing it.
 
 ## Remarks
 
-Resolves array-like wrappers via `isArrayLike` and clears with `innerHTML = ''`. No-op if the resolved element is falsy. Compat helper from `Q.clearOptions`.
+Resolves array-like wrappers via `isArrayLike` and clears with `innerHTML = ''`. No-op if the resolved element is falsy. Compat helper from `clearOptions`.

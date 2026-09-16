@@ -3,7 +3,7 @@
 Gets or sets the caption.
 
 ```csharp
-public LocalText Caption { get; set; }
+public LocalText? Caption { get; set; }
 ```
 
 ## Property Value

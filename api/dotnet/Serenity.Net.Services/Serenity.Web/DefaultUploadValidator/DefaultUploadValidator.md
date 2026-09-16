@@ -4,7 +4,7 @@ Default implementation for [`IUploadValidator`](../IUploadValidator.md).
 
 ```csharp
 public DefaultUploadValidator(IImageProcessor imageProcessor, ITextLocalizer localizer, 
-    ILogger<DefaultUploadValidator> logger = null, IOptions<UploadSettings> uploadSettings = null)
+    ILogger<DefaultUploadValidator>? logger = null, IOptions<UploadSettings>? uploadSettings = null)
 ```
 
 | parameter | description |

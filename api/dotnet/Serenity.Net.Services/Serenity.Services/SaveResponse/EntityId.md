@@ -3,7 +3,7 @@
 The entity ID of the created / updated entity.
 
 ```csharp
-public object EntityId { get; set; }
+public object? EntityId { get; set; }
 ```
 
 ## See Also

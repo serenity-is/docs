@@ -4,7 +4,7 @@
 
 > **itemLink**\<`TItem`\>(`itemType`, `idField`, `getText`, `cssClass?`, `encode?`): [`Format`](../../../../type-aliases/Format.md)\<`TItem`\>
 
-Defined in: [src/ui/helpers/slickformatting.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickformatting.tsx#L21)
+Defined in: [src/ui/helpers/slickformatting.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickformatting.tsx#L20)
 
 Returns a formatter that renders an edit link for an item.
 

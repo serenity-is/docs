@@ -3,7 +3,7 @@
 Gets the native sort order, which includes name field by default, unless the row has [SortOrder] attributes.
 
 ```csharp
-protected virtual SortBy[] GetNativeSort()
+protected virtual SortBy[]? GetNativeSort()
 ```
 
 ## Return Value

@@ -3,7 +3,7 @@
 Gets the two level cache from the request context.
 
 ```csharp
-public ITwoLevelCache Cache { get; }
+public ITwoLevelCache? Cache { get; }
 ```
 
 ## See Also

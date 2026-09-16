@@ -3,7 +3,7 @@
 Intercepts EntityConnectionExtensions.List and Count methods.
 
 ```csharp
-public OptionalValue<IList> ListRows(Type rowType, ICriteria where, Action<SqlQuery> editQuery, 
+public OptionalValue<IList> ListRows(Type rowType, ICriteria? where, Action<SqlQuery>? editQuery, 
     bool countOnly)
 ```
 

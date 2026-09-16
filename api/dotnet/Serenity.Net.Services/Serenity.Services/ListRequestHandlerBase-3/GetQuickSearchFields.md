@@ -3,7 +3,7 @@
 Gets the list of quick search fields ([`QuickSearchAttribute`](../../Serenity.Data.Mapping/QuickSearchAttribute.md)) based on the containsField argument.
 
 ```csharp
-protected virtual IEnumerable<Field> GetQuickSearchFields(string containsField)
+protected virtual IEnumerable<Field> GetQuickSearchFields(string? containsField)
 ```
 
 | parameter | description |

@@ -9,7 +9,7 @@ Defined in: [src/compat/scriptdata-compat.ts:14](https://github.com/serenity-is/
 Alias for [canLoadScriptData](../../../../functions/canLoadScriptData.md).
 
 Checks whether a dynamic script with the given name is available in the cache or is a registered script name.
-Compat shim for the legacy `Q.canLoadScriptData` global; delegates to `peekScriptData` and `getScriptDataHash`.
+Compat shim for the legacy `canLoadScriptData` global; delegates to `peekScriptData` and `getScriptDataHash`.
 
 ## Parameters
 
@@ -24,10 +24,7 @@ Dynamic script name (e.g., `"Lookup.Administration.User"`).
 `boolean`
 
 `true` if the script is already cached or its hash is registered; otherwise `false`.
-
-## Deprecated
-
-Prefer `peekScriptData` / `getScriptDataHash` checks or `getScriptData` directly.
+[DEPRECATED] Prefer `peekScriptData` / `getScriptDataHash` checks or `getScriptData` directly.
 
 ## Deprecated
 

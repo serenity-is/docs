@@ -13,20 +13,20 @@ namespace CourseTutorial.CourseDB.Columns;
 public class GradesColumns
 {
     [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-    public int Id { get; set; }
+    public int? Id { get; set; }
 
     [QuickFilter]
-    public string FullName { get; set; }
+    public string? FullName { get; set; }
 
     [QuickFilter]
-    public string CourseName { get; set; }
+    public string? CourseName { get; set; }
 
     [QuickFilter]
-    public string TermName { get; set; }
+    public string? TermName { get; set; }
 
-    public decimal Midterm { get; set; }
-    public decimal Final { get; set; }
-    public decimal Average { get; set; }
+    public decimal? Midterm { get; set; }
+    public decimal? Final { get; set; }
+    public decimal? Average { get; set; }
 }
 ```
 ![Quick filters in the Grades screen](./img/quick_filter.png)

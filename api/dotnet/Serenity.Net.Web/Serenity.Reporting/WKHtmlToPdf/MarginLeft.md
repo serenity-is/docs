@@ -1,7 +1,7 @@
 # WKHtmlToPdf.MarginLeft property
 
 ```csharp
-public string MarginLeft { get; set; }
+public string? MarginLeft { get; set; }
 ```
 
 ## See Also

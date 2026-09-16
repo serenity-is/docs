@@ -3,7 +3,7 @@
 Group key for cached items
 
 ```csharp
-public string GroupKey { get; }
+public string? GroupKey { get; }
 ```
 
 ## See Also

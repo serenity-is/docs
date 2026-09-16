@@ -24,4 +24,4 @@ public static class UploadPathHelper
 
 ## See Also
 
-* **Source:** *[UploadPathHelper.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Upload/UploadPathHelper.cs)*
+* **Source:** *[UploadPathHelper.cs](https://github.com/serenity-is/Serenity/blob/42811c904bc10d02498100f24545a67ee8d110e4/src/services/Upload/UploadPathHelper.cs)*

@@ -3,7 +3,7 @@
 The input item
 
 ```csharp
-public object this { get; set; }
+public object? this { get; set; }
 ```
 
 ## See Also

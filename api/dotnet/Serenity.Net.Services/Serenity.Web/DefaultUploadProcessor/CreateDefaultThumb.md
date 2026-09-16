@@ -3,7 +3,7 @@
 Creates the default thumbnail for image if the size is provided in the upload image options (ThumbWidth and ThumbHeight &gt;= 0) and saves it to the target upload storage file
 
 ```csharp
-public virtual ScaleImageAsResult CreateDefaultThumb(object image, IUploadImageOptions options, 
+public virtual ScaleImageAsResult? CreateDefaultThumb(object image, IUploadImageOptions options, 
     string imageFile)
 ```
 

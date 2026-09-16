@@ -3,7 +3,7 @@
 The HTTP context accessor used to access the current request.
 
 ```csharp
-protected readonly IHttpContextAccessor httpContextAccessor;
+protected readonly IHttpContextAccessor? httpContextAccessor;
 ```
 
 ## See Also

@@ -1,7 +1,7 @@
 # HtmlToPdfOptions.PageHeight property
 
 ```csharp
-public string PageHeight { get; set; }
+public string? PageHeight { get; set; }
 ```
 
 ## See Also

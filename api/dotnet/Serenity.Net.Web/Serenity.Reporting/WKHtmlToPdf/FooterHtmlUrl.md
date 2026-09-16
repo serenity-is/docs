@@ -1,7 +1,7 @@
 # WKHtmlToPdf.FooterHtmlUrl property
 
 ```csharp
-public string FooterHtmlUrl { get; set; }
+public string? FooterHtmlUrl { get; set; }
 ```
 
 ## See Also

@@ -36,7 +36,4 @@ When `true` and the element is already visible, invokes the callback immediately
 `number`
 
 The [LayoutTimer](../../LayoutTimer/README.md) registration key, or `null` if the element is missing.
-
-## Deprecated
-
-Prefer `IntersectionObserver` / `ResizeObserver`. Kept for legacy `triggerLayoutOnShow` compatibility.
+[DEPRECATED] Prefer `IntersectionObserver` / `ResizeObserver`. Kept for legacy `triggerLayoutOnShow` compatibility.

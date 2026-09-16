@@ -3,7 +3,7 @@
 Gets the lookup parameters dictionary.
 
 ```csharp
-public Dictionary<string, object> LookupParams { get; }
+public Dictionary<string, object?> LookupParams { get; }
 ```
 
 ## See Also

@@ -3,7 +3,7 @@
 Scales the temporary image with provided upload image options if required based on the options and saves the result to the target upload storage file
 
 ```csharp
-protected virtual ScaleImageAsResult ScaleMainImage(object image, IUploadImageOptions options, 
+protected virtual ScaleImageAsResult? ScaleMainImage(object image, IUploadImageOptions options, 
     string imageFile)
 ```
 

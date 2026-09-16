@@ -4,7 +4,7 @@ Default implementation of [`IElevationHandler`](../../Serenity.Abstractions/IEle
 
 ```csharp
 public DefaultElevationHandler(IRequestContext context, IHttpContextAccessor httpContextAccessor, 
-    IDataProtectionProvider dataProtectionProvider, TimeProvider systemClock = null)
+    IDataProtectionProvider dataProtectionProvider, TimeProvider? systemClock = null)
 ```
 
 ## See Also

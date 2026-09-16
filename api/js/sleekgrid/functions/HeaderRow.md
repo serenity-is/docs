@@ -2,15 +2,17 @@
 
 # Function: HeaderRow()
 
-> **HeaderRow**(`__namedParameters`): `JSXElement`
+> **HeaderRow**(`props`): `JSXElement`
 
-Defined in: [src/layouts/layout-components.tsx:49](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L49)
+Defined in: [src/layouts/layout-components.tsx:48](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L48)
 
 Header-row (filter row) shell for a single band.
 
 ## Parameters
 
-### \_\_namedParameters
+### props
+
+Component props containing band, refs, and signals.
 
 #### band
 

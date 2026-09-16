@@ -3,7 +3,7 @@
 Gets or sets the settings.
 
 ```csharp
-public JsonSerializerOptions SerializerOptions { get; set; }
+public JsonSerializerOptions? SerializerOptions { get; set; }
 ```
 
 ## Property Value

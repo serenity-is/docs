@@ -3,9 +3,9 @@
 Field with a Variant (e.g. SQL VARIANT) value.
 
 ```csharp
-public VariantField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, object> getValue = null, 
-    Action<IRow, object> setValue = null)
+public VariantField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, object?>? getValue = null, 
+    Action<IRow, object?>? setValue = null)
 ```
 
 | parameter | description |

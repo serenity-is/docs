@@ -3,7 +3,7 @@
 Gets or sets the `token` property.
 
 ```csharp
-public string token { get; set; }
+public string? token { get; set; }
 ```
 
 ## See Also

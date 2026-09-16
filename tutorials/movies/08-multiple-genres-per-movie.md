@@ -53,23 +53,23 @@ Remove the `GenreId` and `GenreName` properties along with their related field o
 public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }
 
 [DisplayName("Genre"), Expression($"{jGenre}.Name")]
-public string GenreName { get => fields.GenreName[this]; set => fields.GenreName[this]; }
+public string? GenreName { get => fields.GenreName[this]; set => fields.GenreName[this]; }
 
-Int32Field GenreId;
-StringField GenreName;
+Int32Field GenreId = null!;
+StringField GenreName = null!;
 ```
 
 Remove the `GenreName` property from `MovieColumns.cs`:
 
 ```csharp
 [Width(100), QuickFilter]
-public string GenreName { get; set; }
+public string? GenreName { get; set; }
 ```
 
 Remove the `GenreId` property from `MovieForm.cs`:
 
 ```csharp
-public int GenreId { get; set; }
+public int? GenreId { get; set; }
 ```
 
 After removing these properties, rebuild your project, and you'll have a functional "Movies" page, albeit without the ability to select multiple genres yet.
@@ -93,12 +93,12 @@ Now that a movie can have multiple genres, the way genre information is stored n
 //...
 [DisplayName("Genres"), LookupEditor(typeof(GenreRow), Multiple = true), NotMapped]
 [LinkingSetRelation(typeof(MovieGenresRow), nameof(MovieGenresRow.MovieId), nameof(MovieGenresRow.GenreId))]
-public List<int> GenreList { get => fields.GenreList[this]; set => fields.GenreList[this] = value; }
+public List<int>? GenreList { get => fields.GenreList[this]; set => fields.GenreList[this] = value; }
 
 public class RowFields : RowFieldsBase
 {
     //...
-    public ListField<int> GenreList;
+    public ListField<int> GenreList = null!;
 }
 ```
 
@@ -124,7 +124,7 @@ Next, modify the `MovieForm.cs` file to include the `GenreList` property:
 public class MovieForm
 {
     //...
-    public List<int> GenreList { get; set; }
+    public List<int>? GenreList { get; set; }
 }
 ```
 
@@ -143,7 +143,7 @@ public class MovieColumns
 {
     // ...
     [Width(200)]
-    public List<int> GenreList { get; set; }
+    public List<int>? GenreList { get; set; }
 }
 ```
 
@@ -279,7 +279,7 @@ public class MovieColumns
 {
     //...
     [Width(200), GenreListFormatter]
-    public List<int> GenreList { get; set; }
+    public List<int>? GenreList { get; set; }
 }
 ```
 

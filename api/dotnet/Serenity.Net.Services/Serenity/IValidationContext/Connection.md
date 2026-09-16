@@ -3,7 +3,7 @@
 Gets the connection.
 
 ```csharp
-public IDbConnection Connection { get; }
+public IDbConnection? Connection { get; }
 ```
 
 ## Property Value

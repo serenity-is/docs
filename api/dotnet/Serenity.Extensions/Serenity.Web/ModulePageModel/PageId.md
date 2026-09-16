@@ -3,7 +3,7 @@
 The page ID.
 
 ```csharp
-public string PageId { get; set; }
+public string? PageId { get; set; }
 ```
 
 ## See Also

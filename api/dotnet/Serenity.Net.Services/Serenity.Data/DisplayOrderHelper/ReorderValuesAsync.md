@@ -4,7 +4,7 @@ Sets a records display order to to requested value, and also renumbers other rec
 
 ```csharp
 public static Task<bool> ReorderValuesAsync(IDbConnection connection, IDisplayOrderRow row, 
-    ICriteria filter = null, object recordID = null, int newDisplayOrder = 1, 
+    ICriteria? filter = null, object? recordID = null, int newDisplayOrder = 1, 
     bool descendingKeyOrder = false, bool hasUniqueConstraint = false, 
     CancellationToken cancellationToken = default)
 ```
@@ -38,7 +38,7 @@ Asynchronously sets a records display order to to requested value, and also renu
 
 ```csharp
 public static Task<bool> ReorderValuesAsync(IDbConnection connection, string tableName, 
-    Field keyField, Field orderField, ICriteria filter = null, object recordID = null, 
+    Field keyField, Field orderField, ICriteria? filter = null, object? recordID = null, 
     int newDisplayOrder = 1, bool descendingKeyOrder = false, bool hasUniqueConstraint = false, 
     CancellationToken cancellationToken = default)
 ```

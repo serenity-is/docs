@@ -3,7 +3,7 @@
 Gets the dynamic script text.
 
 ```csharp
-public string GetScriptText(string name, bool json = false)
+public string? GetScriptText(string name, bool json = false)
 ```
 
 | parameter | description |

@@ -11,7 +11,6 @@ public class OrderRecord
 
 | name | description |
 | --- | --- |
-| [OrderRecord](DisplayOrderHelper.OrderRecord/OrderRecord.md)() | The default constructor. |
 | [newOrder](DisplayOrderHelper.OrderRecord/newOrder.md) | New order |
 | [oldOrder](DisplayOrderHelper.OrderRecord/oldOrder.md) | Old order |
 | [recordID](DisplayOrderHelper.OrderRecord/recordID.md) | Record ID |

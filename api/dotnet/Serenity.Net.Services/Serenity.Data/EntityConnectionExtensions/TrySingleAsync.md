@@ -3,7 +3,7 @@
 Asynchronously tries to find a single entity, allowing caller to edit the criteria and set of fields to load through a editQuery callback.
 
 ```csharp
-public static Task<TRow> TrySingleAsync<TRow>(this IDbConnection connection, 
+public static Task<TRow?> TrySingleAsync<TRow>(this IDbConnection connection, 
     Action<SqlQuery> editQuery, CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```
@@ -38,7 +38,7 @@ A task representing the asynchronous operation. The task result is the single en
 Asynchronously tries to find a single entity matching the specified criteria. This method selects only the table fields, and no foreign / calculated fields. Use other overloads if you want to select different set of fields.
 
 ```csharp
-public static Task<TRow> TrySingleAsync<TRow>(this IDbConnection connection, ICriteria where, 
+public static Task<TRow?> TrySingleAsync<TRow>(this IDbConnection connection, ICriteria? where, 
     CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```

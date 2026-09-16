@@ -4,7 +4,7 @@ Validates image constraints
 
 ```csharp
 public void ValidateImage(IUploadImageConstraints constraints, Stream stream, string filename, 
-    out object image)
+    out object? image)
 ```
 
 | parameter | description |

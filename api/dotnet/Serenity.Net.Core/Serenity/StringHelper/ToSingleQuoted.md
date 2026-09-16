@@ -3,7 +3,7 @@
 Converts the string to its single quoted representation.
 
 ```csharp
-public static string ToSingleQuoted(this string str)
+public static string ToSingleQuoted(this string? str)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 The lookup parameters.
 
 ```csharp
-public Dictionary<string, object> Params { get; set; }
+public Dictionary<string, object?> Params { get; set; }
 ```
 
 ## See Also

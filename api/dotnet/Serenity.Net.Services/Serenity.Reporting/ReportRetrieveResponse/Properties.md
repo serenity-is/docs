@@ -3,7 +3,7 @@
 List of parameters as property items to show in report execution form.
 
 ```csharp
-public List<PropertyItem> Properties { get; set; }
+public List<PropertyItem>? Properties { get; set; }
 ```
 
 ## See Also

@@ -3,7 +3,7 @@
 Gets not deleted criteria for a row type, e.g. for rows that support soft delete.
 
 ```csharp
-public static BaseCriteria GetNotDeletedCriteria(IRow row)
+public static BaseCriteria? GetNotDeletedCriteria(IRow row)
 ```
 
 | parameter | description |

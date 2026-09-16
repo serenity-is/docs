@@ -27,4 +27,4 @@ public class SiteAbsoluteUrl : ISiteAbsoluteUrl
 ## See Also
 
 * interface [ISiteAbsoluteUrl](../../Serenity.Net.Core/Serenity.Abstractions/ISiteAbsoluteUrl.md)
-* **Source:** *[SiteAbsoluteUrl.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/Options/SiteAbsoluteUrl.cs)*
+* **Source:** *[SiteAbsoluteUrl.cs](https://github.com/serenity-is/Serenity/blob/f83e2f7b8fb3e25c6753d2977affaec63900ac96/common-features/src/extensions/Modules/Options/SiteAbsoluteUrl.cs)*

@@ -18,4 +18,4 @@ public class ReportTree
 
 ## See Also
 
-* **Source:** *[ReportTree.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/Reporting/Tree/ReportTree.cs)*
+* **Source:** *[ReportTree.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/Reporting/Tree/ReportTree.cs)*

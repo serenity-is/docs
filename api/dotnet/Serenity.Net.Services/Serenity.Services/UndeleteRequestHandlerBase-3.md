@@ -16,6 +16,7 @@ public abstract class UndeleteRequestHandlerBase<TRow, TUndeleteRequest, TUndele
 | TRow | Entity type |
 | TUndeleteRequest | Undelete request type |
 | TUndeleteResponse | Undelete response type |
+| context | Request context |
 
 ## Public Members
 
@@ -37,12 +38,22 @@ public abstract class UndeleteRequestHandlerBase<TRow, TUndeleteRequest, TUndele
 
 | name | description |
 | --- | --- |
-| [UndeleteRequestHandlerBase](UndeleteRequestHandlerBase-3/UndeleteRequestHandlerBase.md)(…) | Initializes a new instance of the class. |
+| [UndeleteRequestHandlerBase](UndeleteRequestHandlerBase-3/UndeleteRequestHandlerBase.md)(…) | Abstract base class for undelete request handlers that share state and mode neutral helper methods between synchronous and asynchronous undelete request handlers. |
 | virtual [GetBehaviors](UndeleteRequestHandlerBase-3/GetBehaviors.md)() | Gets the list of undelete behaviors. |
 | virtual [GetDisplayOrderFilter](UndeleteRequestHandlerBase-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements [`IDisplayOrderRow`](../Serenity.Data/IDisplayOrderRow.md) interface |
 | virtual [InvalidateCacheOnCommit](UndeleteRequestHandlerBase-3/InvalidateCacheOnCommit.md)() | Attaches a cache invalidation call to to OnCommit callback of the current unit of work. This would clear cached items related to this row type. |
 | virtual [IsDeleted](UndeleteRequestHandlerBase-3/IsDeleted.md)() | Checks that row type implements one of IIsActiveDeletedRow, IIsDeletedRow or IDeleteLogRow interfaces and it is actual marked as deleted |
 | virtual [ValidatePermissions](UndeleteRequestHandlerBase-3/ValidatePermissions.md)() | Validates the user permissions for undelete operation |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | *context* is `null`. |
+
+## Remarks
+
+Initializes a new instance of the class.
 
 ## See Also
 
@@ -51,4 +62,4 @@ public abstract class UndeleteRequestHandlerBase<TRow, TUndeleteRequest, TUndele
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [UndeleteRequest](./UndeleteRequest.md)
 * class [UndeleteResponse](./UndeleteResponse.md)
-* **Source:** *[UndeleteRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/574b0f91eebdcc8cdd7f9af77f617c5cf3fc4aec/src/services/RequestHandlers/Undelete/UndeleteRequestHandlerBase.cs)*
+* **Source:** *[UndeleteRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/Undelete/UndeleteRequestHandlerBase.cs)*

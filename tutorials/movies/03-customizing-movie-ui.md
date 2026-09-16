@@ -57,7 +57,7 @@ public class MovieColumns
 {
     //...
 
-    public int Runtime { get; set; }
+    public int? Runtime { get; set; }
 }
 ```
 
@@ -73,7 +73,7 @@ public class MovieColumns
     //...
 
     [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
-    public int Runtime { get; set; }
+    public int? Runtime { get; set; }
 }
 ```
 
@@ -93,9 +93,9 @@ To change the editor type for the Description and Storyline fields to a textarea
 [BasedOnRow(typeof(MovieRow), CheckNames = true)]
 public class MovieForm
 {
-    public string Title { get; set; }
-    public string Description { get; set; }
-    public string Storyline { get; set; }
+    public string? Title { get; set; }
+    public string? Description { get; set; }
+    public string? Storyline { get; set; }
     //...
 }
 ```
@@ -108,11 +108,11 @@ Add the `[TextAreaEditor]` attribute to both the `Description` and `Storyline` p
 [BasedOnRow(typeof(MovieRow), CheckNames = true)]
 public class MovieForm
 {
-    public string Title { get; set; }
+    public string? Title { get; set; }
     [TextAreaEditor(Rows = 3)]
-    public string Description { get; set; }
+    public string? Description { get; set; }
     [TextAreaEditor(Rows = 8)]
-    public string Storyline { get; set; }
+    public string? Storyline { get; set; }
     //...
 }
 ```

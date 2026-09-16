@@ -18,7 +18,7 @@ Decorating a `String` field on your **row** (not the form) with an upload editor
 ```cs
 [DisplayName("User Image"), Size(100)]
 [ImageUploadEditor(FilenameFormat = "UserImage/~", CopyToHistory = true)]
-public string UserImage { get => fields.UserImage[this]; set => fields.UserImage[this] = value; }
+public string? UserImage { get => fields.UserImage[this]; set => fields.UserImage[this] = value; }
 ```
 
 The Northwind sample uses the same pattern:
@@ -26,7 +26,7 @@ The Northwind sample uses the same pattern:
 ```cs
 [DisplayName("Product Image"), Size(100)]
 [ImageUploadEditor(FilenameFormat = "ProductImage/~", CopyToHistory = true)]
-public string ProductImage { get => fields.ProductImage[this]; set => fields.ProductImage[this] = value; }
+public string? ProductImage { get => fields.ProductImage[this]; set => fields.ProductImage[this] = value; }
 ```
 
 ### Upload editor attributes
@@ -154,7 +154,7 @@ Uploaded files are served through `/upload/{path}`. By default, access to a file
 ```cs
 [ImageUploadEditor(FilenameFormat = "UserImage/~")]
 [FileReadPermission("Administration:Security")]
-public string UserImage { get; set; }
+public string? UserImage { get; set; }
 ```
 
 ### `[FileReadAccess]`

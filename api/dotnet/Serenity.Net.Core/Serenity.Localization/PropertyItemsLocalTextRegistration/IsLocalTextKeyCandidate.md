@@ -3,7 +3,7 @@
 Returns `true` if the text value can be a local text key that could be passed to the client side.
 
 ```csharp
-public static bool IsLocalTextKeyCandidate(string text)
+public static bool IsLocalTextKeyCandidate(string? text)
 ```
 
 | parameter | description |

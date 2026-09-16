@@ -3,7 +3,7 @@
 The SMTP server host.
 
 ```csharp
-public string Host { get; set; }
+public string? Host { get; set; }
 ```
 
 ## See Also

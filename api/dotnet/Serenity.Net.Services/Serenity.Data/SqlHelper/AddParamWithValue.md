@@ -4,7 +4,7 @@ Adds the parameter with value to the target command.
 
 ```csharp
 public static IDbDataParameter AddParamWithValue(this IDbCommand command, string name, 
-    object value, ISqlDialect dialect)
+    object? value, ISqlDialect dialect)
 ```
 
 | parameter | description |

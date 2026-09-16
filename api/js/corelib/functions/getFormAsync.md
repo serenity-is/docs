@@ -7,7 +7,7 @@
 Defined in: [src/compat/scriptdata-compat.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L146)
 
 Asynchronously retrieves form metadata for a key.
-Compat shim for `Q.getFormAsync`; delegates to `getFormScript(key)`.
+Compat shim for `getFormAsync`; delegates to `getFormScript(key)`.
 
 ## Parameters
 

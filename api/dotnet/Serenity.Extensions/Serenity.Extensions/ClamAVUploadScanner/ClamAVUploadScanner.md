@@ -4,7 +4,7 @@ Implementation of IUploadAVScanner which connects to ClamAV service
 
 ```csharp
 public ClamAVUploadScanner(IOptionsMonitor<ClamAVSettings> options, 
-    ITextLocalizer localizer = null, ILogger<ClamAVUploadScanner> logger = null)
+    ITextLocalizer? localizer = null, ILogger<ClamAVUploadScanner>? logger = null)
 ```
 
 | parameter | description |

@@ -2,7 +2,7 @@
 
 # Class: HtmlNoteContentEditor\<P\>
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:496](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L496)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:495](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L495)
 
 Html content editor variant for notes with limited toolbar options, e.g. undo redo and bold / italic / underline for now
 
@@ -22,7 +22,7 @@ Html content editor variant for notes with limited toolbar options, e.g. undo re
 
 > **new HtmlNoteContentEditor**\<`P`\>(`props`): `HtmlNoteContentEditor`\<`P`\>
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:499](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L499)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:498](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L498)
 
 #### Parameters
 
@@ -44,7 +44,7 @@ Defined in: [src/ui/editors/htmlcontenteditor.tsx:499](https://github.com/sereni
 
 > `readonly` **domNode**: `HTMLTextAreaElement`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L45)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L44)
 
 The DOM node this widget is bound to.
 
@@ -100,7 +100,7 @@ A unique name for this widget instance, used for event namespacing.
 
 > `static` **\[typeInfo\]**: [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:497](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L497)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:496](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L496)
 
 #### Overrides
 
@@ -112,7 +112,7 @@ Defined in: [src/ui/editors/htmlcontenteditor.tsx:497](https://github.com/sereni
 
 > `static` **CKEditorBasePath**: `string`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:448](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L448)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:447](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L447)
 
 Base path for CKEditor assets.
 
@@ -126,7 +126,7 @@ Base path for CKEditor assets.
 
 > `static` **CKEditorVer**: `string` = `"4.22.1"`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:446](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L446)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:445](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L445)
 
 CKEditor version to load.
 
@@ -140,7 +140,7 @@ CKEditor version to load.
 
 > `static` **defaultEditorProvider**: [`HtmlContentEditorProvider`](../type-aliases/HtmlContentEditorProvider.md)
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L62)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L61)
 
 Default editor provider.
 
@@ -154,7 +154,7 @@ Default editor provider.
 
 > `readonly` `static` **defaultOptions**: `Partial`\<[`HtmlContentEditorOptions`](../interfaces/HtmlContentEditorOptions.md)\> = `{}`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L65)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L64)
 
 Default options for the editor.
 
@@ -180,7 +180,7 @@ Defined in: [src/ui/widgets/widget.ts:334](https://github.com/serenity-is/sereni
 
 > `static` **tiptapModule**: [`TiptapModule`](../interfaces/TiptapModule.md) \| () => [`TiptapModule`](../interfaces/TiptapModule.md) \| `Promise`\<[`TiptapModule`](../interfaces/TiptapModule.md)\>
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L48)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L47)
 
 The Tiptap module loader.
 
@@ -196,7 +196,7 @@ The Tiptap module loader.
 
 > **get** **editorProvider**(): [`HtmlContentEditorProvider`](../type-aliases/HtmlContentEditorProvider.md)
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:490](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L490)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:489](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L489)
 
 Returns the active editor provider.
 
@@ -298,7 +298,7 @@ Sets whether the editor is read-only.
 
 > **get** **value**(): `string`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:380](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L380)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:379](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L379)
 
 Returns the current HTML value.
 
@@ -312,7 +312,7 @@ The HTML value.
 
 > **set** **value**(`v`): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:406](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L406)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:405](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L405)
 
 Sets the HTML value.
 
@@ -535,7 +535,7 @@ The change event handler.
 
 > `protected` **configureTiptapExtension**(`extension`): `any`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L519)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:518](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L518)
 
 Configures a Tiptap extension.
 
@@ -563,7 +563,7 @@ The configured extension.
 
 > `protected` **createTiptapToolbar**(`editor`, `hidden`): `HTMLElement`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L330)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:329](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L329)
 
 Creates the Tiptap toolbar.
 
@@ -618,7 +618,7 @@ True to defer rendering.
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:347](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L347)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:346](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L346)
 
 Cleans up the editor instance.
 
@@ -670,7 +670,7 @@ The matching element, or null if not found.
 
 > **get\_readOnly**(): `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:414](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L414)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:413](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L413)
 
 Returns whether the editor is read-only.
 
@@ -690,7 +690,7 @@ True when read-only.
 
 > **get\_value**(): `string`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:363](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L363)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:362](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L362)
 
 Returns the current HTML value.
 
@@ -710,7 +710,7 @@ The HTML value.
 
 > `protected` **getCKEditorConfig**(): [`CKEditorConfig`](../interfaces/CKEditorConfig.md)
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:506](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L506)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:505](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L505)
 
 Returns the CKEditor configuration.
 
@@ -730,7 +730,7 @@ The CKEditor config.
 
 > `protected` **getCKEditorInstance**(): `any`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L288)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:287](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L287)
 
 Returns the CKEditor instance for this editor.
 
@@ -750,7 +750,7 @@ The CKEditor instance.
 
 > `protected` **getCKEditorLanguage**(): `string`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L204)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L203)
 
 Returns the CKEditor language code.
 
@@ -766,19 +766,17 @@ The language code.
 
 ***
 
-### ~~getConfig()~~
+### getConfig()
 
 > `protected` **getConfig**(): [`CKEditorConfig`](../interfaces/CKEditorConfig.md)
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L226)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:225](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L225)
+
+[DEPRECATED] Override and use getCKEditorConfig()
 
 #### Returns
 
 [`CKEditorConfig`](../interfaces/CKEditorConfig.md)
-
-#### Deprecated
-
-Override and use getCKEditorConfig()
 
 #### Inherited from
 
@@ -870,7 +868,7 @@ A [Fluent](../functions/Fluent.md) wrapper for the grid field.
 
 > `protected` **getTiptapExtensions**(`tiptap`): `any`[]
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L543)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:542](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L542)
 
 Returns the Tiptap extensions for this editor.
 
@@ -898,7 +896,7 @@ The extensions.
 
 > `protected` **getTiptapToolbarHidden**(`editor`): [`TiptapToolbarHiddenOption`](../interfaces/TiptapToolbarHiddenOption.md)
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:339](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L339)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:338](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L338)
 
 Returns the hidden Tiptap toolbar options.
 
@@ -926,7 +924,7 @@ The hidden options.
 
 > `protected` **handleCKEditorChange**(`e`): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L178)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L177)
 
 Handles the CKEditor change event.
 
@@ -952,7 +950,7 @@ The CKEditor event.
 
 > `protected` **handleCKInstanceReady**(`x`): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L161)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L160)
 
 Handles the CKEditor instance-ready event.
 
@@ -978,7 +976,7 @@ The CKEditor event.
 
 > `protected` **handleCKKey**(`e`): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:196](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L196)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:195](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L195)
 
 Handles the CKEditor key event.
 
@@ -1102,7 +1100,7 @@ The rendered contents.
 
 > **set\_readOnly**(`value`): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:422](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L422)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:421](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L421)
 
 Sets whether the editor is read-only.
 
@@ -1128,7 +1126,7 @@ True to enable read-only mode.
 
 > **set\_value**(`value`): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L388)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:387](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L387)
 
 Sets the HTML value.
 
@@ -1258,7 +1256,7 @@ The created widget instance.
 
 > `static` **createDefaultElement**(): `HTMLTextAreaElement`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L59)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L58)
 
 Creates the default DOM element for a widget.
 
@@ -1278,7 +1276,7 @@ A new `div` element.
 
 > `static` **getCKEditorBasePath**(): `string`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:454](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L454)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:453](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L453)
 
 Returns the base path for CKEditor assets.
 
@@ -1326,7 +1324,7 @@ The widget name.
 
 > `static` **includeCKEditor**(`then`): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:471](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L471)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:470](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L470)
 
 Includes the CKEditor script and invokes the callback when loaded.
 

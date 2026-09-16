@@ -3,7 +3,7 @@
 Returns the dialect for a dialect or provider name, or `null` if none is found.
 
 ```csharp
-public ISqlDialect TryGet(string dialectOrProviderName)
+public ISqlDialect? TryGet(string? dialectOrProviderName)
 ```
 
 | parameter | description |

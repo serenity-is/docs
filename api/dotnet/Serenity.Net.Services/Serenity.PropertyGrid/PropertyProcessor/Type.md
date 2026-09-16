@@ -1,7 +1,7 @@
 # PropertyProcessor.Type property
 
 ```csharp
-public Type Type { get; set; }
+public Type? Type { get; set; }
 ```
 
 ## See Also

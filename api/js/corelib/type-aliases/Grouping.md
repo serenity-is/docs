@@ -4,7 +4,7 @@
 
 > **Grouping**\<`TItem`\> = `object`
 
-Defined in: [src/compat/arrays-compat.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L202)
+Defined in: [src/compat/arrays-compat.ts:201](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L201)
 
 Dictionary mapping a stringified key to the array of items sharing that key.
 Produced by [toGrouping](../functions/toGrouping.md).

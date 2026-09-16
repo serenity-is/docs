@@ -3,7 +3,7 @@
 Returns report with the report key, optionally validating its permissions.
 
 ```csharp
-public Report GetReport(string reportKey, bool validatePermission = true)
+public Report? GetReport(string reportKey, bool validatePermission = true)
 ```
 
 | parameter | description |

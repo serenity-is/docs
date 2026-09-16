@@ -3,7 +3,7 @@
 The display name of the user.
 
 ```csharp
-public string DisplayName { get; set; }
+public string? DisplayName { get; set; }
 ```
 
 ## See Also

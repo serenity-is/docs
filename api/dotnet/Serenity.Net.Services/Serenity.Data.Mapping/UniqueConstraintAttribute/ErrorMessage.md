@@ -3,7 +3,7 @@
 Gets or sets the error message.
 
 ```csharp
-public string ErrorMessage { get; set; }
+public string? ErrorMessage { get; set; }
 ```
 
 ## Property Value

@@ -3,7 +3,7 @@
 Gets the type of the enum.
 
 ```csharp
-public Type EnumType { get; }
+public Type? EnumType { get; }
 ```
 
 ## Property Value

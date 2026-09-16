@@ -19,7 +19,9 @@ public class JsonRowConverter : JsonConverter
 | override [WriteJson](JsonRowConverter/WriteJson.md)(…) | Writes the JSON representation of the object. |
 | static [ShouldDeserializeExtension](JsonRowConverter/ShouldDeserializeExtension.md) { get; set; } | Should deserialize extension |
 | static [ShouldSerializeExtension](JsonRowConverter/ShouldSerializeExtension.md) { get; set; } | Should serialize extension |
+| static [SetLocalShouldDeserializeExtension](JsonRowConverter/SetLocalShouldDeserializeExtension.md)(…) | Sets the local [`ShouldDeserializeExtension`](./JsonRowConverter/ShouldDeserializeExtension.md) hook for the current thread and async context. Useful for background tasks, async methods, and testing to set the hook locally without affecting other threads or tests. |
+| static [SetLocalShouldSerializeExtension](JsonRowConverter/SetLocalShouldSerializeExtension.md)(…) | Sets the local [`ShouldSerializeExtension`](./JsonRowConverter/ShouldSerializeExtension.md) hook for the current thread and async context. Useful for background tasks, async methods, and testing to set the hook locally without affecting other threads or tests. |
 
 ## See Also
 
-* **Source:** *[Newtonsoft.JsonRowConverter.cs](https://github.com/serenity-is/Serenity/blob/a208f637c41c1cd64c6a2dff54e77302d53f73a8/src/services/Entity/Row/Newtonsoft.JsonRowConverter.cs)*
+* **Source:** *[Newtonsoft.JsonRowConverter.cs](https://github.com/serenity-is/Serenity/blob/2c895c355fe09b3459b5091b6d2e792ced719b68/src/services/Entity/Row/Newtonsoft.JsonRowConverter.cs)*

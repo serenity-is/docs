@@ -3,8 +3,8 @@
 Executes the statement asynchronously returning a scalar value.
 
 ```csharp
-public static Task<object> ExecuteScalarAsync(IDbConnection connection, SqlQuery query, 
-    ILogger logger = null, CancellationToken cancellationToken = default)
+public static Task<object?> ExecuteScalarAsync(IDbConnection connection, SqlQuery query, 
+    ILogger? logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -36,8 +36,8 @@ A task that represents the asynchronous operation. The task result contains the 
 Executes the statement asynchronously returning a scalar value.
 
 ```csharp
-public static Task<object> ExecuteScalarAsync(IDbConnection connection, string commandText, 
-    IDictionary<string, object> param = null, ILogger logger = null, 
+public static Task<object?> ExecuteScalarAsync(IDbConnection connection, string commandText, 
+    IDictionary<string, object?>? param = null, ILogger? logger = null, 
     CancellationToken cancellationToken = default)
 ```
 

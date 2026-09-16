@@ -4,7 +4,7 @@ Sets a records display order to to requested value, and also renumbers other rec
 
 ```csharp
 public static bool ReorderValues(IDbConnection connection, IDisplayOrderRow row, 
-    ICriteria filter = null, object recordID = null, int newDisplayOrder = 1, 
+    ICriteria? filter = null, object? recordID = null, int newDisplayOrder = 1, 
     bool descendingKeyOrder = false, bool hasUniqueConstraint = false)
 ```
 
@@ -36,7 +36,7 @@ Sets a records display order to to requested value, and also renumbers other rec
 
 ```csharp
 public static bool ReorderValues(IDbConnection connection, string tableName, Field keyField, 
-    Field orderField, ICriteria filter = null, object recordID = null, int newDisplayOrder = 1, 
+    Field orderField, ICriteria? filter = null, object? recordID = null, int newDisplayOrder = 1, 
     bool descendingKeyOrder = false, bool hasUniqueConstraint = false)
 ```
 

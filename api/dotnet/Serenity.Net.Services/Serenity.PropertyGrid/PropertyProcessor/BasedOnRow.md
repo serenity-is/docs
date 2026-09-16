@@ -1,7 +1,7 @@
 # PropertyProcessor.BasedOnRow property
 
 ```csharp
-public IRow BasedOnRow { get; set; }
+public IRow? BasedOnRow { get; set; }
 ```
 
 ## See Also

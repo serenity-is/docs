@@ -3,7 +3,7 @@
 Loads the user by the specified username from database.
 
 ```csharp
-protected override IUserDefinition LoadByUsername(string username)
+protected override IUserDefinition? LoadByUsername(string username)
 ```
 
 | parameter | description |

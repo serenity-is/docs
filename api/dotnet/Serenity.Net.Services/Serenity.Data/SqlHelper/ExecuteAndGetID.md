@@ -4,7 +4,7 @@ Executes the query and returns the generated identity value. Only works for auto
 
 ```csharp
 public static long? ExecuteAndGetID(this SqlInsert query, IDbConnection connection, 
-    ILogger logger = null)
+    ILogger? logger = null)
 ```
 
 | parameter | description |

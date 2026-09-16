@@ -3,9 +3,9 @@
 Field with a String value.
 
 ```csharp
-public StringField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, string> getValue = null, 
-    Action<IRow, string> setValue = null)
+public StringField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, string?>? getValue = null, 
+    Action<IRow, string?>? setValue = null)
 ```
 
 | parameter | description |

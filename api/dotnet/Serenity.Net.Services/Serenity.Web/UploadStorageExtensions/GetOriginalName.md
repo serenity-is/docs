@@ -3,7 +3,7 @@
 Gets original name of a file.
 
 ```csharp
-public static string GetOriginalName(this IUploadStorage uploadStorage, string path)
+public static string? GetOriginalName(this IUploadStorage uploadStorage, string path)
 ```
 
 | parameter | description |

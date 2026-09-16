@@ -3,7 +3,7 @@
 Maps field's expression to a custom one. Returns null if not mapped to a custom expression.
 
 ```csharp
-public string MapFieldExpression(IListRequestHandler handler, SqlQuery query, IField field)
+public string? MapFieldExpression(IListRequestHandler handler, SqlQuery query, IField field)
 ```
 
 | parameter | description |

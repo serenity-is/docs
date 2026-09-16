@@ -3,7 +3,7 @@
 Gets access to internal union query if any.
 
 ```csharp
-public ISqlQuery UnionQuery { get; }
+public ISqlQuery? UnionQuery { get; }
 ```
 
 ## See Also

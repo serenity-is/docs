@@ -3,7 +3,7 @@
 Clones the specified value.
 
 ```csharp
-protected override byte[] Clone(byte[] value)
+protected override byte[]? Clone(byte[]? value)
 ```
 
 | parameter | description |

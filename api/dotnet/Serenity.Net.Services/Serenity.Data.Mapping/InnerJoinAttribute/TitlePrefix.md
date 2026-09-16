@@ -3,7 +3,7 @@
 Gets or sets the title prefix.
 
 ```csharp
-public string TitlePrefix { get; set; }
+public string? TitlePrefix { get; set; }
 ```
 
 ## Property Value

@@ -1,7 +1,7 @@
 # SortByJsonConverter.Read method
 
 ```csharp
-public override SortBy Read(ref Utf8JsonReader reader, Type typeToConvert, 
+public override SortBy? Read(ref Utf8JsonReader reader, Type typeToConvert, 
     JsonSerializerOptions options)
 ```
 

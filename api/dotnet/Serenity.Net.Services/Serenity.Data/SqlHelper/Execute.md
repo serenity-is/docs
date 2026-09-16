@@ -3,7 +3,7 @@
 Executes the specified query on the connection.
 
 ```csharp
-public static void Execute(this SqlInsert query, IDbConnection connection, ILogger logger = null)
+public static void Execute(this SqlInsert query, IDbConnection connection, ILogger? logger = null)
 ```
 
 | parameter | description |
@@ -25,7 +25,7 @@ Executes the specified delete query on the connection and returns the number of 
 
 ```csharp
 public static int Execute(this SqlDelete query, IDbConnection connection, 
-    ExpectedRows expectedRows = ExpectedRows.One, ILogger logger = null)
+    ExpectedRows expectedRows = ExpectedRows.One, ILogger? logger = null)
 ```
 
 | parameter | description |
@@ -53,7 +53,7 @@ Executes the specified update query on the connection and returns the number of 
 
 ```csharp
 public static int Execute(this SqlUpdate query, IDbConnection connection, 
-    ExpectedRows expectedRows = ExpectedRows.One, ILogger logger = null)
+    ExpectedRows expectedRows = ExpectedRows.One, ILogger? logger = null)
 ```
 
 | parameter | description |

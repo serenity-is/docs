@@ -3,7 +3,7 @@
 Gets the value of the field with the specified name.
 
 ```csharp
-public object GetFieldValue(string fieldName)
+public object? GetFieldValue(string fieldName)
 ```
 
 | parameter | description |

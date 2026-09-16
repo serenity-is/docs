@@ -18,4 +18,4 @@ public static class ServiceAuthorizationExtensions
 
 ## See Also
 
-* **Source:** *[ServiceAuthorizationExtensions.cs](https://github.com/serenity-is/Serenity/blob/9dd7db586970bccd1b22a6b4d0ef9892b529b61d/src/services/ServiceAuthorizationExtensions.cs)*
+* **Source:** *[ServiceAuthorizationExtensions.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/ServiceAuthorizationExtensions.cs)*

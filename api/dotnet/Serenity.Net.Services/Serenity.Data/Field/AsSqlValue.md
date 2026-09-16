@@ -3,7 +3,7 @@
 Gets the value of this row as an SQL value.
 
 ```csharp
-public virtual object AsSqlValue(IRow row)
+public virtual object? AsSqlValue(IRow row)
 ```
 
 | parameter | description |

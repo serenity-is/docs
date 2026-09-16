@@ -3,7 +3,7 @@
 Returns a field is readonly error
 
 ```csharp
-public static ValidationError ReadOnlyError(Field field, ITextLocalizer localizer)
+public static ValidationError ReadOnlyError(Field field, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

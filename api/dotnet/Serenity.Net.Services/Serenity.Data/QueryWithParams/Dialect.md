@@ -1,9 +1,9 @@
-# QueryWithParams.dialect field
+# QueryWithParams.Dialect method
 
-The dialect.
+Gets the dialect (SQL server type / version) for query.
 
 ```csharp
-protected ISqlDialect dialect;
+public ISqlDialect Dialect()
 ```
 
 ## See Also

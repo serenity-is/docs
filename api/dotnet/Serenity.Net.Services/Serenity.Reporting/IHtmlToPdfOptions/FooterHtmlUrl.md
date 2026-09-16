@@ -3,7 +3,7 @@
 Url of footer HTML page
 
 ```csharp
-public string FooterHtmlUrl { get; set; }
+public string? FooterHtmlUrl { get; set; }
 ```
 
 ## See Also

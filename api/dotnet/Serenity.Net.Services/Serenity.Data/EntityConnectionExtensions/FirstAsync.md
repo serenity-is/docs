@@ -38,7 +38,7 @@ A task representing the asynchronous operation. The task result is the first ent
 Asynchronously finds first entity matching a where criteria.
 
 ```csharp
-public static Task<TRow> FirstAsync<TRow>(this IDbConnection connection, ICriteria where, 
+public static Task<TRow?> FirstAsync<TRow>(this IDbConnection connection, ICriteria? where, 
     CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```

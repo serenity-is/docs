@@ -3,7 +3,7 @@
 The error returned if any.
 
 ```csharp
-public ServiceError Error { get; set; }
+public ServiceError? Error { get; set; }
 ```
 
 ## See Also

@@ -3,7 +3,7 @@
 Asynchronously checks if record matching specified criteria exists.
 
 ```csharp
-public static Task<bool> ExistsAsync<TRow>(this IDbConnection connection, ICriteria where, 
+public static Task<bool> ExistsAsync<TRow>(this IDbConnection connection, ICriteria? where, 
     CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```

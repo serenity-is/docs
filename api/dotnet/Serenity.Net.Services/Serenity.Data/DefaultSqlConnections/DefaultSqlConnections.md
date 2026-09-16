@@ -4,7 +4,7 @@ The default connection factory.
 
 ```csharp
 public DefaultSqlConnections(IConnectionStrings connectionStrings, 
-    IConnectionProfiler profiler = null, ILoggerFactory loggerFactory = null)
+    IConnectionProfiler? profiler = null, ILoggerFactory? loggerFactory = null)
 ```
 
 | parameter | description |

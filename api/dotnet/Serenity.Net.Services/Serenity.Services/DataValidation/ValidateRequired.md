@@ -3,7 +3,7 @@
 Validates that the field does not contain a null value or an empty string.
 
 ```csharp
-public static void ValidateRequired(this IRow row, Field field, ITextLocalizer localizer)
+public static void ValidateRequired(this IRow row, Field field, ITextLocalizer? localizer)
 ```
 
 | parameter | description |
@@ -27,7 +27,7 @@ Validates the fields does not contain null or empty string values. This does not
 
 ```csharp
 public static void ValidateRequired(this IRow row, IEnumerable<Field> fields, 
-    ITextLocalizer localizer)
+    ITextLocalizer? localizer)
 ```
 
 | parameter | description |

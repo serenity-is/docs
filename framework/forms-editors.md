@@ -11,10 +11,10 @@ A form class is a plain class with public properties. Each property becomes a fo
 public class OrderForm
 {
     [DisplayName("Customer"), LookupEditor(typeof(CustomerRow))]
-    public string CustomerID { get; set; }
+    public string? CustomerID { get; set; }
 
     [TextAreaEditor(Rows = 3)]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     [HalfWidth]
     public DateTime? OrderDate { get; set; }
@@ -33,7 +33,7 @@ Just like columns, a form class is usually based on a row. The [BasedOnRowAttrib
 public class OrderForm
 {
     [HalfWidth]
-    public string CustomerID { get; set; }
+    public string? CustomerID { get; set; }
     // ...
 }
 ```
@@ -136,7 +136,7 @@ All of these derive from [FormWidthAttribute](../api/dotnet/Serenity.Net.Core/Se
 
 ```cs
 [EditorAddon("MyAddon", Option = "value")]
-public string SomeField { get; set; }
+public string? SomeField { get; set; }
 ```
 
 The add-on type and its options are transferred to the `PropertyItem`'s `editorAddons` collection (see [EditorAddonItem](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/EditorAddonItem.md)).

@@ -3,7 +3,7 @@
 The list of texts to translate.
 
 ```csharp
-public List<TranslateTextInput> Inputs { get; set; }
+public List<TranslateTextInput>? Inputs { get; set; }
 ```
 
 ## See Also

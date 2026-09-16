@@ -1,7 +1,7 @@
 # PropertyInfoSource.BasedOnRow property
 
 ```csharp
-public IRow BasedOnRow { get; }
+public IRow? BasedOnRow { get; }
 ```
 
 ## See Also

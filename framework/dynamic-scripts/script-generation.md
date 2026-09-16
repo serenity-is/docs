@@ -17,7 +17,7 @@ These attributes mark a type so that a dynamic script is generated and registere
 public class OrderColumns
 {
     [Width(150)]
-    public string CustomerID { get; set; }
+    public string? CustomerID { get; set; }
     // ...
 }
 ```
@@ -34,7 +34,7 @@ public class OrderColumns
 public class OrderForm
 {
     [TextAreaEditor(Rows = 3)]
-    public string Description { get; set; }
+    public string? Description { get; set; }
     // ...
 }
 ```

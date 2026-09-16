@@ -40,17 +40,17 @@ public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
 
     [DisplayName("Primary Image"), Size(100)]
     [ImageUploadEditor(FilenameFormat = "Person/PrimaryImage/~")]
-    public string PrimaryImage { get => fields.PrimaryImage[this]; set => fields.PrimaryImage[this] = value; }
+    public string? PrimaryImage { get => fields.PrimaryImage[this]; set => fields.PrimaryImage[this] = value; }
 
     [DisplayName("Gallery Images")]
     [MultipleImageUploadEditor(FilenameFormat = "Person/GalleryImages/~")]
-    public string GalleryImages { get => fields.GalleryImages[this]; set => fields.GalleryImages[this] = value; }
+    public string? GalleryImages { get => fields.GalleryImages[this]; set => fields.GalleryImages[this] = value; }
 
     public class RowFields : RowFieldsBase
     {
         // ...
-        public StringField PrimaryImage;
-        public StringField GalleryImages;
+        public StringField PrimaryImage = null!;
+        public StringField GalleryImages = null!;
     }
 }
 ```
@@ -61,17 +61,17 @@ public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     // ...
     [DisplayName("Primary Image"), Size(100)]
     [ImageUploadEditor(FilenameFormat = "Movie/PrimaryImage/~")]
-    public string PrimaryImage { get => fields.PrimaryImage[this]; set => fields.PrimaryImage[this] = value; }
+    public string? PrimaryImage { get => fields.PrimaryImage[this]; set => fields.PrimaryImage[this] = value; }
 
     [DisplayName("Gallery Images")]
     [MultipleImageUploadEditor(FilenameFormat = "Movie/GalleryImages/~")]
-    public string GalleryImages { get => fields.GalleryImages[this]; set => fields.GalleryImages[this] = value; }
+    public string? GalleryImages { get => fields.GalleryImages[this]; set => fields.GalleryImages[this] = value; }
 
     public class RowFields : RowFieldsBase
     {
         // ...
-        public StringField PrimaryImage;
-        public StringField GalleryImages;
+        public StringField PrimaryImage = null!;
+        public StringField GalleryImages = null!;
     }
 }
 ```
@@ -110,8 +110,8 @@ The next step involves adding these fields to the forms in MovieForm.cs and Pers
 public class PersonForm
 {
     //...
-    public string PrimaryImage { get; set; }
-    public string GalleryImages { get; set; }
+    public string? PrimaryImage { get; set; }
+    public string? GalleryImages { get; set; }
 }
 ```
 
@@ -119,8 +119,8 @@ public class PersonForm
 public class MovieForm
 {
     //...
-    public string PrimaryImage { get; set; }
-    public string GalleryImages { get; set; }
+    public string? PrimaryImage { get; set; }
+    public string? GalleryImages { get; set; }
 }
 ```
 

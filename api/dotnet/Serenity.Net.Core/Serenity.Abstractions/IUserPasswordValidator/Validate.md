@@ -3,7 +3,7 @@
 Validates the specified username and password.
 
 ```csharp
-public PasswordValidationResult Validate(ref string username, string password)
+public PasswordValidationResult Validate(ref string? username, string? password)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 Gets directly assigned permissions for the specified user.
 
 ```csharp
-protected virtual IDictionary<string, bool> GetUserPermissions(ClaimsPrincipal user)
+protected virtual IDictionary<string, bool>? GetUserPermissions(ClaimsPrincipal user)
 ```
 
 | parameter | description |

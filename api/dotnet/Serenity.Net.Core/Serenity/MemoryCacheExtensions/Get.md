@@ -4,7 +4,7 @@ Reads the value with specified key from the local cache. If it doesn't exists in
 
 ```csharp
 public static TItem? Get<TItem>(this IMemoryCache cache, object cacheKey, TimeSpan expiration, 
-    Func<TItem?> loader)
+    Func<TItem?>? loader)
     where TItem : class
 ```
 

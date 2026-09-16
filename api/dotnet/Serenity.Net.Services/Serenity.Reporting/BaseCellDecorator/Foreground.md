@@ -1,7 +1,7 @@
 # BaseCellDecorator.Foreground property
 
 ```csharp
-public string Foreground { get; set; }
+public string? Foreground { get; set; }
 ```
 
 ## See Also

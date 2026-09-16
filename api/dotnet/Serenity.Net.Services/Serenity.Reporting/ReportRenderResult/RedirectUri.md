@@ -3,7 +3,7 @@
 Gets or sets a redirect URI, only returned for external reports.
 
 ```csharp
-public string RedirectUri { get; set; }
+public string? RedirectUri { get; set; }
 ```
 
 ## See Also

@@ -4,7 +4,7 @@ Intercepts the async [`SqlHelper`](../SqlHelper.md)`ExecuteReader` methods. The 
 
 ```csharp
 public Task<OptionalValue<IDataReader>> ExecuteReaderAsync(string commandText, 
-    IDictionary<string, object> parameters, SqlQuery query, 
+    IDictionary<string, object?>? parameters, SqlQuery? query, 
     CancellationToken cancellationToken = default)
 ```
 

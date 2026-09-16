@@ -7,11 +7,17 @@ Default report registry implementation
 public class ReportRegistry : IReportRegistry
 ```
 
+| parameter | description |
+| --- | --- |
+| typeSource | The type source to search report types in |
+| permissions | Permission service |
+| localizer | Text localizer |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [ReportRegistry](ReportRegistry/ReportRegistry.md)(…) | Initializes a new instance of the class. |
+| [ReportRegistry](ReportRegistry/ReportRegistry.md)(…) | Default report registry implementation |
 | [GetAvailableReportsInCategory](ReportRegistry/GetAvailableReportsInCategory.md)(…) |  |
 | [GetReport](ReportRegistry/GetReport.md)(…) | Returns report with the report key, optionally validating its permissions. |
 | [HasAvailableReportsInCategory](ReportRegistry/HasAvailableReportsInCategory.md)(…) |  |
@@ -20,7 +26,17 @@ public class ReportRegistry : IReportRegistry
 | class [Category](ReportRegistry.Category.md) | Model for a report category. |
 | class [Report](ReportRegistry.Report.md) | Metadata for a registered report. |
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | *typeSource*, *permissions* or *localizer* is `null`. |
+
+## Remarks
+
+Initializes a new instance of the class.
+
 ## See Also
 
 * interface [IReportRegistry](./IReportRegistry.md)
-* **Source:** *[ReportRegistry.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Reporting/Registry/ReportRegistry.cs)*
+* **Source:** *[ReportRegistry.cs](https://github.com/serenity-is/Serenity/blob/1a8f0b8d86a82010fb35e1c2b9f853493e7f539f/src/services/Reporting/Registry/ReportRegistry.cs)*

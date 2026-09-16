@@ -54,4 +54,4 @@ public abstract class BaseCriteria : ICriteria
 ## See Also
 
 * interface [ICriteria](../Serenity/ICriteria.md)
-* **Source:** *[BaseCriteria.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Criteria/BaseCriteria.cs)*
+* **Source:** *[BaseCriteria.cs](https://github.com/serenity-is/Serenity/blob/1a8f0b8d86a82010fb35e1c2b9f853493e7f539f/src/services/Data/Criteria/BaseCriteria.cs)*

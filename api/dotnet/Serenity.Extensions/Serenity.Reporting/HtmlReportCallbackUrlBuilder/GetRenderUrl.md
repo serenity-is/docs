@@ -3,13 +3,13 @@
 Gets the render URL for the specified report and options.
 
 ```csharp
-public virtual HtmlReportRenderUrl GetRenderUrl(IReport report, ReportRenderOptions options)
+public virtual HtmlReportRenderUrl GetRenderUrl(IReport report, ReportRenderOptions renderOptions)
 ```
 
 | parameter | description |
 | --- | --- |
 | report | The report. |
-| options | The render options. |
+| renderOptions | The render options. |
 
 ## Return Value
 

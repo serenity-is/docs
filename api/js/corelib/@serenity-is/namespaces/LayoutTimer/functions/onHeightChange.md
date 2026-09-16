@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [LayoutTimer](../README.md) / onHeightChange
 
-# ~~Function: onHeightChange()~~
+# Function: onHeightChange()
 
 > **onHeightChange**(`element`, `handler`, `opt?`): `number`
 

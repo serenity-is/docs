@@ -3,7 +3,7 @@
 Gets or sets the textual field.
 
 ```csharp
-public string TextualField { get; set; }
+public string? TextualField { get; set; }
 ```
 
 ## Property Value

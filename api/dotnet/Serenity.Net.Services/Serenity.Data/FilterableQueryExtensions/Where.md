@@ -3,7 +3,7 @@
 Adds a filter to query.
 
 ```csharp
-public static T Where<T>(this T self, ICriteria filter)
+public static T Where<T>(this T self, ICriteria? filter)
     where T : IFilterableQuery
 ```
 

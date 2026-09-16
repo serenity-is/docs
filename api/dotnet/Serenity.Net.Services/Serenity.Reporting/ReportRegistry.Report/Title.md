@@ -3,7 +3,7 @@
 Gets the report title.
 
 ```csharp
-public string Title { get; }
+public string? Title { get; }
 ```
 
 ## See Also

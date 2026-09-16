@@ -3,7 +3,7 @@
 List of blacklisted extensions
 
 ```csharp
-public string ExtensionBlacklist { get; set; }
+public string? ExtensionBlacklist { get; set; }
 ```
 
 ## See Also

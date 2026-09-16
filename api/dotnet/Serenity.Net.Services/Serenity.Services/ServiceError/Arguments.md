@@ -3,7 +3,7 @@
 Custom arguments info for the error. In some cases, this might be the field name the error is related to.
 
 ```csharp
-public string Arguments { get; set; }
+public string? Arguments { get; set; }
 ```
 
 ## See Also

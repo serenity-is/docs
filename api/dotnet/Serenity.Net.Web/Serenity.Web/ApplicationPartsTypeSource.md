@@ -19,6 +19,7 @@ public class ApplicationPartsTypeSource : BaseAssemblyTypeSource
 
 | name | description |
 | --- | --- |
+| virtual [EnsureApplicationParts](ApplicationPartsTypeSource/EnsureApplicationParts.md)() | Tries to recover application parts when the generated application parts assembly info (e.g. `*.MvcApplicationPartsAssemblyInfo.cs`) was not included in the build. In that case the ApplicationPartManager only contains the entry assembly, which makes pages and navigation items from referenced assemblies disappear. This reads the application deps file, finds the assemblies that reference MVC and adds them to the part manager, just like the Razor SDK would have done at build time. It is only attempted once, and only when the entry assembly has no ApplicationPartAttribute at all and this assembly (Serenity.Net.Web) is missing from the part manager. Concurrent callers block until the recovery completes. |
 | virtual [GetApplicationPartAssemblies](ApplicationPartsTypeSource/GetApplicationPartAssemblies.md)() | Gets all the assemblies from the application part manager. |
 | virtual [GetImplicitAssemblies](ApplicationPartsTypeSource/GetImplicitAssemblies.md)() | Gets the set of implicitly included assemblies, by default from Serenity.Net.Core to Serenity.Net.Web. |
 | virtual [IsTypeSourceAssembly](ApplicationPartsTypeSource/IsTypeSourceAssembly.md)(…) | Returns `true` for assemblies that are marked with TypeSourceAssemblyAttribute. |
@@ -27,4 +28,4 @@ public class ApplicationPartsTypeSource : BaseAssemblyTypeSource
 ## See Also
 
 * class [BaseAssemblyTypeSource](../../Serenity.Net.Core/Serenity.Abstractions/BaseAssemblyTypeSource.md)
-* **Source:** *[ApplicationPartsTypeSource.cs](https://github.com/serenity-is/Serenity/blob/478a0d557f5fa9d9eccec0603e34cc9daadb1091/src/web/Mvc/ApplicationPartsTypeSource.cs)*
+* **Source:** *[ApplicationPartsTypeSource.cs](https://github.com/serenity-is/Serenity/blob/6246a6a0dcfa77021b805dede26464e4de2cb2f6/src/web/Mvc/ApplicationPartsTypeSource.cs)*

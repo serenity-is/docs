@@ -3,7 +3,7 @@
 The entity
 
 ```csharp
-public object Entity { get; }
+public object? Entity { get; }
 ```
 
 ## See Also

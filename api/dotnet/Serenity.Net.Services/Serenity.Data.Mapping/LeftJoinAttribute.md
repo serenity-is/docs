@@ -25,4 +25,4 @@ public class LeftJoinAttribute : Attribute, ISqlJoin
 ## See Also
 
 * interface [ISqlJoin](./ISqlJoin.md)
-* **Source:** *[LeftJoinAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Mapping/LeftJoinAttribute.cs)*
+* **Source:** *[LeftJoinAttribute.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Data/Mapping/LeftJoinAttribute.cs)*

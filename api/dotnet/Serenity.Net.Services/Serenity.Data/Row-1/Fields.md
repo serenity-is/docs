@@ -1,10 +1,14 @@
-# Row&lt;TFields&gt;.fields field
+# Row&lt;TFields&gt;.Fields property
 
-The fields
+Gets the fields.
 
 ```csharp
-protected readonly TFields fields;
+public static TFields Fields { get; }
 ```
+
+## Property Value
+
+The fields.
 
 ## See Also
 

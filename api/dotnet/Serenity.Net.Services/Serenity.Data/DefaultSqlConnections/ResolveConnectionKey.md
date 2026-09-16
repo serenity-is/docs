@@ -1,7 +1,7 @@
 # DefaultSqlConnections.ResolveConnectionKey method
 
 ```csharp
-public string ResolveConnectionKey(string connectionKey)
+public string? ResolveConnectionKey(string connectionKey)
 ```
 
 ## See Also

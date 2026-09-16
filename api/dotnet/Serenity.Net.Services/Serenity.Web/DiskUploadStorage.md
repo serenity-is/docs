@@ -37,4 +37,4 @@ public class DiskUploadStorage : IUploadStorage
 ## See Also
 
 * interface [IUploadStorage](./IUploadStorage.md)
-* **Source:** *[DiskUploadStorage.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/services/Upload/DiskUploadStorage.cs)*
+* **Source:** *[DiskUploadStorage.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Upload/DiskUploadStorage.cs)*

@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [LayoutTimer](../README.md) / store
 
-# ~~Function: store()~~
+# Function: store()
 
 > **store**(`key`): `void`
 

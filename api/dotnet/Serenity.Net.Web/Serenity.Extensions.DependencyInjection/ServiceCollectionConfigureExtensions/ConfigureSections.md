@@ -4,7 +4,7 @@ Calls `Configure<TOptionsType>` for all setting classes that have a DefaultSecti
 
 ```csharp
 public static IServiceCollection ConfigureSections(this IServiceCollection services, 
-    IConfiguration config, ITypeSource typeSource = null, Func<Type, bool> predicate = null)
+    IConfiguration config, ITypeSource? typeSource = null, Func<Type, bool>? predicate = null)
 ```
 
 | parameter | description |

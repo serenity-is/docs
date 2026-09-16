@@ -1,7 +1,7 @@
 # TabularDataReport.GetData method
 
 ```csharp
-public virtual object GetData()
+public virtual object? GetData()
 ```
 
 ## See Also

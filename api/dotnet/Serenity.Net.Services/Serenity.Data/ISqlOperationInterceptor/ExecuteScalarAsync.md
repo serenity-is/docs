@@ -4,7 +4,7 @@ Intercepts the async [`SqlHelper`](../SqlHelper.md)`ExecuteScalar` methods. The 
 
 ```csharp
 public Task<OptionalValue<object>> ExecuteScalarAsync(string commandText, 
-    IDictionary<string, object> parameters, SqlQuery query, 
+    IDictionary<string, object?>? parameters, SqlQuery? query, 
     CancellationToken cancellationToken = default)
 ```
 

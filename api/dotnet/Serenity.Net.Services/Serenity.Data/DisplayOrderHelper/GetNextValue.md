@@ -4,7 +4,7 @@ Gets the next display order value for a table or a group of records.
 
 ```csharp
 public static int GetNextValue(IDbConnection connection, IDisplayOrderRow row, 
-    ICriteria filter = null)
+    ICriteria? filter = null)
 ```
 
 | parameter | description |
@@ -31,7 +31,7 @@ Gets the next display order value for a table or a group of records.
 
 ```csharp
 public static int GetNextValue(IDbConnection connection, string tableName, Field orderField, 
-    ICriteria filter)
+    ICriteria? filter)
 ```
 
 | parameter | description |

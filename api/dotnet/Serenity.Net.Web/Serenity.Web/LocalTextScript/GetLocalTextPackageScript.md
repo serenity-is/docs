@@ -38,8 +38,8 @@ The script content.
 Gets a local text package script content.
 
 ```csharp
-public static string GetLocalTextPackageScript(ILocalTextRegistry registry, string includes, 
-    string languageId, bool isPending, string packageId = null)
+public static string GetLocalTextPackageScript(ILocalTextRegistry registry, string? includes, 
+    string languageId, bool isPending, string? packageId = null)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 Gets localization match for a field
 
 ```csharp
-public static Field GetLocalizationMatch(Field field, ILocalizationRow localRowInstance, 
+public static Field? GetLocalizationMatch(Field field, ILocalizationRow localRowInstance, 
     int localRowPrefixLength = 0, int rowPrefixLength = 0)
 ```
 

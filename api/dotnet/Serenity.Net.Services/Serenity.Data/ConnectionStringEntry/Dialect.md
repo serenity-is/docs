@@ -3,7 +3,7 @@
 Gets or sets the dialect name.
 
 ```csharp
-public string Dialect { get; set; }
+public string? Dialect { get; set; }
 ```
 
 ## See Also

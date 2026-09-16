@@ -3,7 +3,7 @@
 Gets or sets the schema.
 
 ```csharp
-public string Schema { get; set; }
+public string? Schema { get; set; }
 ```
 
 ## Property Value

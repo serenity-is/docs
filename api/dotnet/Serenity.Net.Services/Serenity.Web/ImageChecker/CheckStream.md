@@ -4,7 +4,7 @@ Checks if the given image if it is a valid or not. If so, controls its complianc
 
 ```csharp
 public ImageCheckResult CheckStream(Stream inputStream, IImageProcessor imageProcessor, 
-    bool returnImage, out object image, out ImageFormatInfo formatInfo, ILogger logger = null)
+    bool returnImage, out object? image, out ImageFormatInfo? formatInfo, ILogger? logger = null)
 ```
 
 | parameter | description |

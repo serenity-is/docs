@@ -3,7 +3,7 @@
 Gets or sets the default MIME type.
 
 ```csharp
-public string MimeType { get; set; }
+public string? MimeType { get; set; }
 ```
 
 ## See Also

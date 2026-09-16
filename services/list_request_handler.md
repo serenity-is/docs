@@ -34,19 +34,19 @@ First we should have a look at what members a ListRequest object have:
   {
       public int Skip { get; set; }
       public int Take { get; set; }
-      public SortBy[] Sort { get; set; }
-      public string ContainsText { get; set; }
-      public string ContainsField { get; set; }
-      public Dictionary<string, object> EqualityFilter { get; set; }
+      public SortBy[]? Sort { get; set; }
+      public string? ContainsText { get; set; }
+      public string? ContainsField { get; set; }
+      public Dictionary<string, object?>? EqualityFilter { get; set; }
       [JsonConverter(typeof(JsonSafeCriteriaConverter))]
-      public BaseCriteria Criteria { get; set; }
+      public BaseCriteria? Criteria { get; set; }
       public bool IncludeDeleted { get; set; }
       public bool ExcludeTotalCount { get; set; }
       public ColumnSelection ColumnSelection { get; set; }
       [JsonConverter(typeof(JsonStringHashSetConverter))]
-      public HashSet<string> IncludeColumns { get; set; }
+      public HashSet<string>? IncludeColumns { get; set; }
       [JsonConverter(typeof(JsonStringHashSetConverter))]
-      public HashSet<string> ExcludeColumns { get; set; }
+      public HashSet<string>? ExcludeColumns { get; set; }
   }
 ```
 
@@ -104,7 +104,7 @@ public class SortBy
         Descending = descending;
     }
 
-    public string Field { get; set; }
+    public string Field { get; set; } = null!;
     public bool Descending { get; set; }
 }
 ```

@@ -4,7 +4,7 @@ Populates the specified worksheet with the given columns and rows.
 
 ```csharp
 public static void PopulateSheet(IXLWorksheet worksheet, List<ReportColumn> columns, IList rows, 
-    string tableName = "Table1", XLTableTheme tableStyle = null, int startRow = 1, 
+    string tableName = "Table1", XLTableTheme? tableStyle = null, int startRow = 1, 
     int startCol = 1, int autoFitRows = 250)
 ```
 

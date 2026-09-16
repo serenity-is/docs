@@ -3,7 +3,7 @@
 The reset password link to include in the email.
 
 ```csharp
-public string ResetLink { get; set; }
+public string? ResetLink { get; set; }
 ```
 
 ## See Also

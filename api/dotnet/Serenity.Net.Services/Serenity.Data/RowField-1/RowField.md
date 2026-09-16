@@ -3,9 +3,9 @@
 Field with a Row value.
 
 ```csharp
-public RowField(ICollection<Field> collection, string name, LocalText caption = null, int size = 0, 
-    FieldFlags flags = FieldFlags.NotMapped | FieldFlags.Default, 
-    Func<IRow, TForeign> getValue = null, Action<IRow, TForeign> setValue = null)
+public RowField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.NotMapped | FieldFlags.Default, 
+    Func<IRow, TForeign?>? getValue = null, Action<IRow, TForeign?>? setValue = null)
 ```
 
 | parameter | description |

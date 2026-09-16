@@ -3,7 +3,7 @@
 Checks if the specified user ID is valid. By default, it checks if it is not null or empty.
 
 ```csharp
-protected virtual bool IsValidUserId(string userId)
+protected virtual bool IsValidUserId(string? userId)
 ```
 
 | parameter | description |

@@ -1,7 +1,7 @@
 # BaseReport.GetData method
 
 ```csharp
-public abstract object GetData()
+public abstract object? GetData()
 ```
 
 ## See Also

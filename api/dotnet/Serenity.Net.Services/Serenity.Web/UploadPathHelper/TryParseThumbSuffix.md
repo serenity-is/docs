@@ -3,7 +3,7 @@
 Tries to parse a thumbnail filename suffix, e.g. it ends with "_t.jpg", or "_tNxN.jpg" where N is a number
 
 ```csharp
-public static bool TryParseThumbSuffix(string path, out string baseName, out string suffix, 
+public static bool TryParseThumbSuffix(string path, out string? baseName, out string? suffix, 
     out int width, out int height)
 ```
 

@@ -3,9 +3,9 @@
 Field with a TimeSpan value.
 
 ```csharp
-public TimeSpanField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, TimeSpan?> getValue = null, 
-    Action<IRow, TimeSpan?> setValue = null)
+public TimeSpanField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, TimeSpan?>? getValue = null, 
+    Action<IRow, TimeSpan?>? setValue = null)
 ```
 
 | parameter | description |

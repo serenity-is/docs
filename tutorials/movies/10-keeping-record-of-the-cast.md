@@ -137,7 +137,7 @@ public Gender? Gender { get => fields.Gender[this]; set => fields.Gender[this] =
 public class RowFields : RowFieldsBase
 {
     //..
-    public EnumField<Gender> Gender;
+    public EnumField<Gender> Gender = null!;
 }
 ```
 
@@ -151,7 +151,7 @@ In `PersonColumns.cs`:
 public class PersonColumns
 {
     //...
-    public Gender Gender { get; set; }
+    public Gender? Gender { get; set; }
 }
 ```
 
@@ -161,7 +161,7 @@ In `PersonForm.cs`:
 public class PersonForm
 {
     //...
-    public Gender Gender { get; set; }
+    public Gender? Gender { get; set; }
 }
 ```
 
@@ -183,17 +183,17 @@ public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
 {
     //... Remove QuickSearch and NameProperty from FirstName
     [DisplayName("First Name"), Size(50), NotNull]
-    public string FirstName { get => fields.FirstName[this]; set => fields.FirstName[this] = value; }
+    public string? FirstName { get => fields.FirstName[this]; set => fields.FirstName[this] = value; }
     
     //...
 
     [DisplayName("Full Name"), Concat("t0.FirstName", "' '", "t0.LastName"), QuickSearch, NameProperty]
-    public string FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
+    public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
 
     public class RowFields : RowFieldsBase
     {
         //...
-        public StringField FullName;
+        public StringField FullName = null!;
     }
 }
 ```
@@ -319,13 +319,13 @@ public class MovieForm
 {
     //...
     [TextAreaEditor(Rows = 3)]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     [DisplayName("Cast"), MovieCastEditor, SkipNameCheck]
-    public List<MovieCastRow> CastList { get; set; }
+    public List<MovieCastRow>? CastList { get; set; }
 
     [TextAreaEditor(Rows = 8)]
-    public string Storyline { get; set; }
+    public string? Storyline { get; set; }
     //...
 }
 ```
@@ -410,8 +410,8 @@ To make changes to the `MovieCastForm.cs` file, consider the following modificat
 //...
 public class MovieCastForm
 {
-    public int PersonId { get; set; }
-    public string Character { get; set; }
+    public int? PersonId { get; set; }
+    public string? Character { get; set; }
 }
 ```
 
@@ -427,7 +427,7 @@ public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this
 
 //...
 [DisplayName("Actor/Actress"), Origin(jPerson, nameof(PersonRow.FullName))]
-public string PersonFullName { get => fields.PersonFullName[this]; set => fields.PersonFullName[this] = value; }
+public string? PersonFullName { get => fields.PersonFullName[this]; set => fields.PersonFullName[this] = value; }
 ```
 
 After making these changes, rebuild the solution and launch it. Now, the `MovieCastEditDialog` should provide a better editing experience, but you may still find that it's too wide.
@@ -467,9 +467,9 @@ Currently, the `MovieCastEditor` is utilizing columns defined in `MovieCastColum
 public class MovieCastColumns
 {
     [EditLink, Width(250)]
-    public string PersonFullName { get; set; }
+    public string? PersonFullName { get; set; }
     [EditLink, Width(250)]
-    public string Character { get; set; }
+    public string? Character { get; set; }
 }
 ```
 
@@ -499,8 +499,8 @@ These fields correspond to the form fields you previously set in `MovieCastForm.
 ```csharp
 public class MovieCastForm
 {
-    public int PersonId { get; set; }
-    public string Character { get; set; }
+    public int? PersonId { get; set; }
+    public string? Character { get; set; }
 }
 ```
 
@@ -509,8 +509,8 @@ But in the grid, we are showing these columns:
 ```csharp
 public class MovieCastColumns
 {
-    public string PersonFullName { get; set; }
-    public string Character { get; set; }
+    public string? PersonFullName { get; set; }
+    public string? Character { get; set; }
 }
 ```
 
@@ -593,12 +593,12 @@ public sealed class MovieRow : Row, IIdRow, INameRow
 {
     //
     [DisplayName("Cast List"), NotMapped]
-    public List<MovieCastRow> CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
+    public List<MovieCastRow>? CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
 
     public class RowFields : RowFieldsBase
     {
         // ...
-        public RowListField<MovieCastRow> CastList;
+        public RowListField<MovieCastRow> CastList = null!;
     }
 }
 ```
@@ -779,7 +779,7 @@ Open `MovieRow.cs` and modify the `CastList` property as follows:
 ```csharp
 [MasterDetailRelation(foreignKey: nameof(MovieCastRow.MovieId), ColumnsType = typeof(Columns.MovieCastColumns))]
 [DisplayName("Cast List"), NotMapped]
-public List<MovieCastRow> CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
+public List<MovieCastRow>? CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
 ```
 
 We specified that this field is a detail list of a master/detail relation, and the master ID field (foreignKey) of the detail table is `MovieId`.

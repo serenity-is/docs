@@ -3,7 +3,7 @@
 Sets the dictionary data.
 
 ```csharp
-public void SetDictionaryData(object key, object value)
+public void SetDictionaryData(object key, object? value)
 ```
 
 | parameter | description |

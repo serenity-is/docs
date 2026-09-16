@@ -3,7 +3,7 @@
 The target language ID.
 
 ```csharp
-public string TargetLanguageID { get; set; }
+public string? TargetLanguageID { get; set; }
 ```
 
 ## See Also

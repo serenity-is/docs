@@ -39,4 +39,4 @@ Initializes a new instance of the [`JsonField`](./JsonField-1.md) class.
 ## See Also
 
 * class [GenericClassField&lt;TValue&gt;](./GenericClassField-1.md)
-* **Source:** *[JsonField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/JsonField.cs)*
+* **Source:** *[JsonField.cs](https://github.com/serenity-is/Serenity/blob/1a8f0b8d86a82010fb35e1c2b9f853493e7f539f/src/services/Entity/FieldTypes/JsonField.cs)*

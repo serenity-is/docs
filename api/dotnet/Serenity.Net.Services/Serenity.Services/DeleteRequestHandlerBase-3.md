@@ -62,4 +62,4 @@ Initializes a new instance of the class.
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [DeleteRequest](./DeleteRequest.md)
 * class [DeleteResponse](./DeleteResponse.md)
-* **Source:** *[DeleteRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/d867db7e483c51f5b1e62c31118c3b729fc6b78f/src/services/RequestHandlers/Delete/DeleteRequestHandlerBase.cs)*
+* **Source:** *[DeleteRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/Delete/DeleteRequestHandlerBase.cs)*

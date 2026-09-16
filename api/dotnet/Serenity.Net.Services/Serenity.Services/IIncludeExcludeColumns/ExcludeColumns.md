@@ -3,7 +3,7 @@
 Set of exclude columns. These columns should not be selected even if they are selected by default by the select level.
 
 ```csharp
-public HashSet<string> ExcludeColumns { get; set; }
+public HashSet<string>? ExcludeColumns { get; set; }
 ```
 
 ## See Also

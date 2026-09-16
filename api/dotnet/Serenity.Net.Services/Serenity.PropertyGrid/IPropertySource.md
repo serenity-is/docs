@@ -20,4 +20,4 @@ public interface IPropertySource : IPropertyInfo
 ## See Also
 
 * interface [IPropertyInfo](../../Serenity.Net.Core/Serenity.Reflection/IPropertyInfo.md)
-* **Source:** *[IPropertySource.cs](https://github.com/serenity-is/Serenity/blob/4d2aea70b1129eefd7b1c32874a242aeee51b48a/src/services/Entity/PropertyGrid/IPropertySource.cs)*
+* **Source:** *[IPropertySource.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Entity/PropertyGrid/IPropertySource.cs)*

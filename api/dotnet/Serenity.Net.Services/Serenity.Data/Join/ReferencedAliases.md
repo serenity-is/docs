@@ -3,7 +3,7 @@
 Gets the referenced aliases.
 
 ```csharp
-public HashSet<string> ReferencedAliases { get; }
+public HashSet<string>? ReferencedAliases { get; }
 ```
 
 ## Property Value

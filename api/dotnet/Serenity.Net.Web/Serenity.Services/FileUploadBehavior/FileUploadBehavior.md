@@ -3,8 +3,8 @@
 Behavior class that handles FileUploadEditorAttribute and ImageUploadEditorAttribute.
 
 ```csharp
-public FileUploadBehavior(IUploadStorage storage, IUploadProcessor uploadProcessor, 
-    IFilenameFormatSanitizer formatSanitizer = null)
+public FileUploadBehavior(IUploadStorage? storage, IUploadProcessor? uploadProcessor, 
+    IFilenameFormatSanitizer? formatSanitizer = null)
 ```
 
 | parameter | description |

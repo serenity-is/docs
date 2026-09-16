@@ -3,7 +3,7 @@
 Returns the data for the report.
 
 ```csharp
-public object GetData()
+public object? GetData()
 ```
 
 ## Return Value

@@ -6,7 +6,7 @@
 
 Defined in: [src/compat/dialogs-compat.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/dialogs-compat.ts#L15)
 
-Legacy `Q.confirm` alias.
+Legacy `confirm` alias.
 
 Displays a confirmation dialog with Yes / No (and optional Cancel) buttons.
 

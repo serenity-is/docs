@@ -3,7 +3,7 @@
 Gets the foreign keys.
 
 ```csharp
-public IEnumerable<ForeignKeyInfo> GetForeignKeys(IDbConnection connection, string schema, 
+public IEnumerable<ForeignKeyInfo> GetForeignKeys(IDbConnection connection, string? schema, 
     string table)
 ```
 

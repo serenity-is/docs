@@ -12,9 +12,9 @@ It is also possible to hide a field by passing *false* as its value, but [Hidden
 public class SomeColumns
 {
     [Visible]
-    public string ExplicitlyVisible { get; set; }
+    public string? ExplicitlyVisible { get; set; }
     [Visible(false)]
-    public string ExplicitlyHidden { get; set; }
+    public string? ExplicitlyHidden { get; set; }
 }
 ```
 
@@ -32,7 +32,7 @@ This is just a subclass of *VisibleAttribute* with *false* value.
 public class SomeColumns
 {
     [Hidden]
-    public string HiddenColumn { get; set; }
+    public string? HiddenColumn { get; set; }
 }
 ```
 
@@ -50,9 +50,9 @@ Controls whether a field is visible on new record mode.
 public class SomeColumns
 {
     [HideOnInsert]
-    public string HideMeOnInsert { get; set; }
+    public string? HideMeOnInsert { get; set; }
     [HideOnInsert(false)]
-    public string DontHideMeOnInsert { get; set; }
+    public string? DontHideMeOnInsert { get; set; }
 }
 ```
 
@@ -68,9 +68,9 @@ Controls whether a field is visible on edit record mode.
 public class SomeColumns
 {
     [HideOnUpdate]
-    public string HideMeOnUpdate { get; set; }
+    public string? HideMeOnUpdate { get; set; }
     [HideOnUpdate(false)]
-    public string DontHideMeOnUpdate { get; set; }
+    public string? DontHideMeOnUpdate { get; set; }
 }
 ```
 
@@ -88,7 +88,7 @@ Controls if a property is editable in new record mode.
 public class SomeForm
 {
     [Insertable(false)]
-    public string ReadOnlyOnInsert { get; set; }
+    public string? ReadOnlyOnInsert { get; set; }
 }
 ```
 
@@ -106,7 +106,7 @@ Controls if a property is editable in edit record mode.
 public class SomeForm
 {
     [Updatable(false)]
-    public string ReadOnlyOnUpdate { get; set; }
+    public string? ReadOnlyOnUpdate { get; set; }
 }
 ```
 
@@ -120,7 +120,7 @@ Determines default title for grid columns or form fields.
 public class SomeForm
 {
     [DisplayName("Title for Some Field")]
-    public string SomeField { get; set; }
+    public string? SomeField { get; set; }
 }
 ```
 
@@ -179,25 +179,25 @@ Sets the display format for a column.
 public class SomeColumns
 {
     [DisplayFormat("d")]
-    public DateTime DateWithCultureDMYOrder { get; set; }
+    public DateTime? DateWithCultureDMYOrder { get; set; }
     [DisplayFormat("dd/MM/yyyy")]
-    public DateTime DateWithConstantDMYOrder { get; set; }
+    public DateTime? DateWithConstantDMYOrder { get; set; }
     [DisplayFormat("g")]
-    public DateTime DateTimeToMinWithCultureDMYOrder { get; set; }
+    public DateTime? DateTimeToMinWithCultureDMYOrder { get; set; }
     [DisplayFormat("dd/MM/yyyy HH:mm")]
-    public DateTime DateTimeToMinConstantDMYOrder { get; set; }
+    public DateTime? DateTimeToMinConstantDMYOrder { get; set; }
     [DisplayFormat("G")]
-    public DateTime DateTimeToSecWithCultureDMYOrder { get; set; }
+    public DateTime? DateTimeToSecWithCultureDMYOrder { get; set; }
     [DisplayFormat("dd/MM/yyyy HH:mm:ss")]
-    public DateTime DateTimeToSecWithConstantDMYOrder { get; set; }
+    public DateTime? DateTimeToSecWithConstantDMYOrder { get; set; }
     [DisplayFormat("s")]
-    public DateTime SortableDateTime { get; set; }
+    public DateTime? SortableDateTime { get; set; }
     [DisplayFormat("u")]
-    public DateTime ISO8601UTC { get; set; }
+    public DateTime? ISO8601UTC { get; set; }
     [DisplayFormat("#,##0.00")]
-    public Decimal ShowTwoZerosAfterDecimalWithGrouping { get; set; }
+    public Decimal? ShowTwoZerosAfterDecimalWithGrouping { get; set; }
     [DisplayFormat("0.00")]
-    public Decimal ShowTwoZerosAfterDecimalNoGrouping { get; set; }
+    public Decimal? ShowTwoZerosAfterDecimalNoGrouping { get; set; }
 }
 ```
 
@@ -214,7 +214,7 @@ Sets a placeholder for a form field.
 public class SomeForm
 {
     [Placeholder("Show this inside the editor when it is empty")]
-    public string FieldWithPlaceHolder { get; set; }
+    public string? FieldWithPlaceHolder { get; set; }
 }
 ```
 
@@ -232,7 +232,7 @@ Sets a hint for a form field.
 public class SomeForm
 {
     [Hint("Show this when my caption is hovered")]
-    public string FieldWithHint { get; set; }
+    public string? FieldWithHint { get; set; }
 }
 ```
 
@@ -252,13 +252,13 @@ Sets CSS class for grid columns and form fields.
 public class SomeForm
 {
     [CssClass("extra-class")]
-    public string FieldWithExtraClass { get; set; }
+    public string? FieldWithExtraClass { get; set; }
 }
 
 public class SomeColumn
 {
     [CssClass("extra-class")]
-    public string CellWithExtraClass { get; set; }
+    public string? CellWithExtraClass { get; set; }
 }
 ```
 
@@ -276,7 +276,7 @@ Sets CSS class for grid column headers.
 public class SomeColumn
 {
     [HeaderCssClass("extra-class")]
-    public string FieldWithExtraHeaderClass { get; set; }
+    public string? FieldWithExtraHeaderClass { get; set; }
 }
 ```
 
@@ -320,6 +320,6 @@ Declaration at the same time.
 public class SomeColumns
 {
     [Ignore]
-    public string DontGenerateAColumnForMe { get; set; }
+    public string? DontGenerateAColumnForMe { get; set; }
 }
 ```

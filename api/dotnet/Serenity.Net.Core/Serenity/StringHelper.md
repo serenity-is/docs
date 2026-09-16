@@ -34,4 +34,4 @@ public static class StringHelper
 
 ## See Also
 
-* **Source:** *[StringHelper.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Helpers/StringHelper.cs)*
+* **Source:** *[StringHelper.cs](https://github.com/serenity-is/Serenity/blob/e73171eee74614aa99e4aa58e4dc02b46e012d0d/src/core/Helpers/StringHelper.cs)*

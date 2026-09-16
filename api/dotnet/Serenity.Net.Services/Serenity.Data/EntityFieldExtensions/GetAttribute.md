@@ -3,7 +3,7 @@
 Gets the attribute.
 
 ```csharp
-public static TAttribute GetAttribute<TAttribute>(this Field field)
+public static TAttribute? GetAttribute<TAttribute>(this Field field)
     where TAttribute : Attribute
 ```
 

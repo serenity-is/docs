@@ -3,7 +3,7 @@
 The returned entity
 
 ```csharp
-public T Entity { get; set; }
+public T? Entity { get; set; }
 ```
 
 ## See Also

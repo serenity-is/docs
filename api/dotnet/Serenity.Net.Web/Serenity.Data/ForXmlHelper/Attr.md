@@ -3,7 +3,7 @@
 Gets the attribute value from an XElement.
 
 ```csharp
-public static string Attr(this XElement e, string attr)
+public static string? Attr(this XElement e, string attr)
 ```
 
 | parameter | description |

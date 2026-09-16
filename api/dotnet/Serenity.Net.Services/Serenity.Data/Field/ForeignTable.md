@@ -3,7 +3,7 @@
 Gets or sets the foreign table.
 
 ```csharp
-public string ForeignTable { get; set; }
+public string? ForeignTable { get; set; }
 ```
 
 ## Property Value

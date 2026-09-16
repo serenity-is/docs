@@ -3,7 +3,7 @@
 The parent query with param storage.
 
 ```csharp
-protected QueryWithParams parent;
+protected QueryWithParams? parent;
 ```
 
 ## See Also

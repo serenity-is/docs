@@ -14,7 +14,7 @@ public abstract class Field : IFieldWithJoinInfo
 | [AutoTextKey](Field/AutoTextKey.md) { get; } | Gets the automatic text key. |
 | [Caption](Field/Caption.md) { get; set; } | Gets or sets the caption. |
 | [ColumnAlias](Field/ColumnAlias.md) { get; } | Gets the column alias. Can be equal to the property name or the name. |
-| [Criteria](Field/Criteria.md) { get; } | Gets the criteria. |
+| [Criteria](Field/Criteria.md) { get; } | Gets the criteria object wrapping this field, it is cached for reuse. |
 | [CustomAttributes](Field/CustomAttributes.md) { get; set; } | Gets or sets the custom attributes. |
 | [DefaultValue](Field/DefaultValue.md) { get; set; } | Gets or sets the default value. |
 | [Expression](Field/Expression.md) { get; set; } | Gets or sets the expression (can be equal to the name if there is no expression). |
@@ -88,4 +88,4 @@ public abstract class Field : IFieldWithJoinInfo
 ## See Also
 
 * interface [IFieldWithJoinInfo](./IFieldWithJoinInfo.md)
-* **Source:** *[Field.CriteriaOperators.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/Field.CriteriaOperators.cs)*
+* **Source:** *[Field.CriteriaOperators.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Entity/FieldTypes/Field.CriteriaOperators.cs)*

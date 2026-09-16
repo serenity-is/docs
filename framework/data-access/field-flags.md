@@ -49,7 +49,7 @@ To turn off the `Insertable` flag for a field put an `Insertable(false)` attribu
 
 ```cs
 [Insertable(false)]
-public string MyField
+public string? MyField
 {
     get => fields.MyField[this];
     set => fields.MyField[this] = value;
@@ -70,9 +70,9 @@ To turn off the `Updatable` flag for a field, put an `[Updatable(false)]` attrib
 
 ```cs
 [Updatable(false)]
-public string MyField
+public string? MyField
 {
-    get => return fields.MyField[this];
+    get => fields.MyField[this];
     set => fields.MyField[this] = value;
 }
 ```
@@ -102,7 +102,7 @@ To turn on the TrimToEmpty flag on a field, we use it like this:
 
 ```cs
 [SetFieldFlags(FieldFlags.TrimToEmpty)]
-public string MyField
+public string? MyField
 {
     get => fields.MyField[this];
     set => fields.MyField[this] = value;
@@ -113,9 +113,9 @@ To turn off the Trim flag:
 
 ```cs
 [SetFieldFlags(FieldFlags.None, FieldFlags.TrimToEmpty)]
-public string MyField
+public string? MyField
 {
-    get => return fields.MyField[this];
+    get => fields.MyField[this];
     set => fields.MyField[this] = value;
 }
 ```
@@ -126,7 +126,7 @@ To include TrimToEmpty and Updatable but remove Insertable:
 [SetFieldFlags(
     FieldFlags.Updatable | FieldFlags.TrimToEmpty,
     FieldFlags.Insertable)]
-public string MyField
+public string? MyField
 {
     get => fields.MyField[this];
     set => fields.MyField[this] = value;

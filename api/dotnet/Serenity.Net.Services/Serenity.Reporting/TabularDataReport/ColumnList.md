@@ -3,7 +3,7 @@
 The column list
 
 ```csharp
-protected List<ReportColumn> ColumnList { get; set; }
+protected List<ReportColumn>? ColumnList { get; set; }
 ```
 
 ## See Also

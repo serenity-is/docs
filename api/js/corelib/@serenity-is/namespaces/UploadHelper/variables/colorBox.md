@@ -4,7 +4,7 @@
 
 > `const` **colorBox**: (`link`) => `void` = `lightbox`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:256](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L256)
+Defined in: [src/ui/helpers/uploadhelper.tsx:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L255)
 
 Creates a lightbox for a single upload thumbnail anchor element.
 It uses one of glightbox, simplelightbox or colorbox if available.

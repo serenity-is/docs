@@ -3,7 +3,7 @@
 Gets access to GROUP BY part if any.
 
 ```csharp
-public string GroupBy { get; }
+public string? GroupBy { get; }
 ```
 
 ## See Also

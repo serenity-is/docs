@@ -4,7 +4,7 @@
 
 > **thumbFileName**(`filename`): `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L184)
+Defined in: [src/ui/helpers/uploadhelper.tsx:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L183)
 
 Returns the thumbnail file name for the given filename.
 

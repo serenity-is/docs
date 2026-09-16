@@ -3,7 +3,7 @@
 Returns an entity not found error
 
 ```csharp
-public static ValidationError EntityNotFoundError(IRow row, object id, ITextLocalizer localizer)
+public static ValidationError EntityNotFoundError(IRow row, object? id, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

@@ -26,4 +26,4 @@ public class FileWatcher : IDisposable, IFileWatcher
 ## See Also
 
 * interface [IFileWatcher](./IFileWatcher.md)
-* **Source:** *[FileWatcher.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Common/FileWatcher.cs)*
+* **Source:** *[FileWatcher.cs](https://github.com/serenity-is/Serenity/blob/eef6be1d7741640aed4ce405c3b44984620b84be/src/web/Common/FileWatcher.cs)*

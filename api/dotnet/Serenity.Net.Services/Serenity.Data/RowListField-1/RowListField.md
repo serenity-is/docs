@@ -3,9 +3,9 @@
 Field with a RowList value.
 
 ```csharp
-public RowListField(ICollection<Field> collection, string name, LocalText caption = null, 
+public RowListField(ICollection<Field> collection, string name, LocalText? caption = null, 
     int size = 0, FieldFlags flags = FieldFlags.NotMapped | FieldFlags.Default, 
-    Func<IRow, List<TForeign>> getValue = null, Action<IRow, List<TForeign>> setValue = null)
+    Func<IRow, List<TForeign>?>? getValue = null, Action<IRow, List<TForeign>?>? setValue = null)
 ```
 
 | parameter | description |

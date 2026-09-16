@@ -3,7 +3,7 @@
 Returns an invalid ID error.
 
 ```csharp
-public static ValidationError InvalidIdError(Field field, long value, ITextLocalizer localizer)
+public static ValidationError InvalidIdError(Field field, long value, ITextLocalizer? localizer)
 ```
 
 | parameter | description |
@@ -30,7 +30,7 @@ The invalid ID error.
 Returns a Invalid ID error
 
 ```csharp
-public static ValidationError InvalidIdError(IRow row, Field field, ITextLocalizer localizer)
+public static ValidationError InvalidIdError(IRow row, Field field, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

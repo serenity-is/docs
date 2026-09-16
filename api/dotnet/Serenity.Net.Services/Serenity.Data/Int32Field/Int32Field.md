@@ -3,9 +3,9 @@
 Field with an Int32 value.
 
 ```csharp
-public Int32Field(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, int?> getValue = null, 
-    Action<IRow, int?> setValue = null)
+public Int32Field(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, int?>? getValue = null, 
+    Action<IRow, int?>? setValue = null)
 ```
 
 | parameter | description |

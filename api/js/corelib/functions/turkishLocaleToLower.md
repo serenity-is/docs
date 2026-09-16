@@ -28,7 +28,7 @@ Compat shim retained because native `String.prototype.toLocaleLowerCase('tr')` b
 
 ## Deprecated
 
-Retained for legacy `Q.turkishLocaleToLower` call sites.
+Retained for legacy `turkishLocaleToLower` call sites.
 
 ## Example
 

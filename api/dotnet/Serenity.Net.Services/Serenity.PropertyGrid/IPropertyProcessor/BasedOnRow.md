@@ -3,7 +3,7 @@
 Gets or sets the based on row.
 
 ```csharp
-public IRow BasedOnRow { get; set; }
+public IRow? BasedOnRow { get; set; }
 ```
 
 ## Property Value

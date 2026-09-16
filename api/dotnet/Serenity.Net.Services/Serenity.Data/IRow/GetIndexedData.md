@@ -3,7 +3,7 @@
 Gets the indexed data.
 
 ```csharp
-public object GetIndexedData(int index)
+public object? GetIndexedData(int index)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 The serial representation of the number, including the prefix.
 
 ```csharp
-public string Serial { get; set; }
+public string? Serial { get; set; }
 ```
 
 ## See Also

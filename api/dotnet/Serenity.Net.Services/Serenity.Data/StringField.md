@@ -35,4 +35,4 @@ Initializes a new instance of the [`StringField`](./StringField.md) class.
 ## See Also
 
 * class [GenericClassField&lt;TValue&gt;](./GenericClassField-1.md)
-* **Source:** *[StringField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/StringField.cs)*
+* **Source:** *[StringField.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Entity/FieldTypes/StringField.cs)*

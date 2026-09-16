@@ -25,4 +25,4 @@ public class ReportController : Controller
 
 ## See Also
 
-* **Source:** *[ReportController.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/Reporting/ReportController.cs)*
+* **Source:** *[ReportController.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/Reporting/ReportController.cs)*

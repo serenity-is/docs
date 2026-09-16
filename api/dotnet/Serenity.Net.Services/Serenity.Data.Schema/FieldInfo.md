@@ -11,7 +11,6 @@ public class FieldInfo
 
 | name | description |
 | --- | --- |
-| [FieldInfo](FieldInfo/FieldInfo.md)() | The default constructor. |
 | [DataType](FieldInfo/DataType.md) { get; set; } | Gets or sets the type of the data. |
 | [FieldName](FieldInfo/FieldName.md) { get; set; } | Gets or sets the name of the field. |
 | [IsIdentity](FieldInfo/IsIdentity.md) { get; set; } | Gets or sets a value indicating whether the field is an identity column. |
@@ -25,4 +24,4 @@ public class FieldInfo
 
 ## See Also
 
-* **Source:** *[FieldInfo.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Schema/FieldInfo.cs)*
+* **Source:** *[FieldInfo.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Schema/FieldInfo.cs)*

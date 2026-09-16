@@ -4,7 +4,7 @@
 
 > **single**\<`TItem`\>(`array`, `predicate`): `TItem`
 
-Defined in: [src/compat/arrays-compat.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L179)
+Defined in: [src/compat/arrays-compat.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L178)
 
 Returns the single element satisfying the predicate (LINQ `Single` semantics).
 
@@ -40,7 +40,7 @@ If no element matches (`"single:No element satisfies the condition."`) or more t
 
 ## Deprecated
 
-Retained as a `Q.single` compat shim; prefer explicit `filter` + length check for clarity.
+Retained as a `single` compat shim; prefer explicit `filter` + length check for clarity.
 
 ## Example
 

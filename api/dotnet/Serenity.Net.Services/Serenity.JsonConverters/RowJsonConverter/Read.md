@@ -1,7 +1,7 @@
 # RowJsonConverter.Read method
 
 ```csharp
-public override IRow Read(ref Utf8JsonReader reader, Type typeToConvert, 
+public override IRow? Read(ref Utf8JsonReader reader, Type typeToConvert, 
     JsonSerializerOptions options)
 ```
 

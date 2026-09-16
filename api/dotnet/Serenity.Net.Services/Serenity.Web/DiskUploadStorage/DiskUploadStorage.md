@@ -3,7 +3,7 @@
 Initializes a new instance of the class.
 
 ```csharp
-public DiskUploadStorage(DiskUploadStorageOptions options, IDiskUploadFileSystem fileSystem = null)
+public DiskUploadStorage(DiskUploadStorageOptions options, IDiskUploadFileSystem? fileSystem = null)
 ```
 
 | parameter | description |

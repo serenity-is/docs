@@ -3,7 +3,7 @@
 Sets the value of this field in specified row as object using ConvertValue with InvariantCulture.
 
 ```csharp
-public void AsInvariant(IRow row, object value)
+public void AsInvariant(IRow row, object? value)
 ```
 
 | parameter | description |

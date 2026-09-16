@@ -4,7 +4,7 @@ Executes the query asynchronously and returns the generated identity value. Only
 
 ```csharp
 public static Task<long?> ExecuteAndGetIDAsync(this SqlInsert query, IDbConnection connection, 
-    ILogger logger = null, CancellationToken cancellationToken = default)
+    ILogger? logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

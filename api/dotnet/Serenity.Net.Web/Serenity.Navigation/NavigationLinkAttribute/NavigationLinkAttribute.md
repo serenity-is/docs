@@ -3,7 +3,7 @@
 Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 
 ```csharp
-public NavigationLinkAttribute(string path, string url, object permission, string icon = null)
+public NavigationLinkAttribute(string path, string url, object? permission, string? icon = null)
 ```
 
 | parameter | description |
@@ -24,7 +24,7 @@ public NavigationLinkAttribute(string path, string url, object permission, strin
 Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 
 ```csharp
-public NavigationLinkAttribute(string path, Type controller, string icon = null, 
+public NavigationLinkAttribute(string path, Type controller, string? icon = null, 
     string action = "Index")
 ```
 
@@ -46,8 +46,8 @@ public NavigationLinkAttribute(string path, Type controller, string icon = null,
 Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 
 ```csharp
-public NavigationLinkAttribute(int order, string path, string url, object permission, 
-    string icon = null)
+public NavigationLinkAttribute(int order, string path, string url, object? permission, 
+    string? icon = null)
 ```
 
 | parameter | description |
@@ -69,7 +69,7 @@ public NavigationLinkAttribute(int order, string path, string url, object permis
 Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 
 ```csharp
-public NavigationLinkAttribute(int order, string path, Type controller, string icon = null, 
+public NavigationLinkAttribute(int order, string path, Type controller, string? icon = null, 
     string action = "Index")
 ```
 

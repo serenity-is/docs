@@ -3,7 +3,7 @@
 Gets script data
 
 ```csharp
-public object GetScriptData()
+public object? GetScriptData()
 ```
 
 ## See Also

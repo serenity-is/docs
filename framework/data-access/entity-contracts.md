@@ -15,7 +15,7 @@ public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
     public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }
 
     [DisplayName("Full Name"), NameProperty]
-    public string FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
+    public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
 }
 ```
 

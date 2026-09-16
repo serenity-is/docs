@@ -3,8 +3,8 @@
 Creates a [`ReportColumn`](../ReportColumn.md) from a PropertyItem
 
 ```csharp
-public static ReportColumn FromPropertyItem(PropertyItem item, Field field, PropertyInfo property, 
-    IServiceProvider provider, ITextLocalizer localizer)
+public static ReportColumn FromPropertyItem(PropertyItem item, Field? field, 
+    PropertyInfo? property, IServiceProvider provider, ITextLocalizer localizer)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 Column name
 
 ```csharp
-public readonly string ColumnName;
+public readonly string? ColumnName;
 ```
 
 ## See Also

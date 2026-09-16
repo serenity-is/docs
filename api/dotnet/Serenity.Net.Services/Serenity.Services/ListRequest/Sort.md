@@ -3,7 +3,7 @@
 Columns to sort returned records by
 
 ```csharp
-public SortBy[] Sort { get; set; }
+public SortBy[]? Sort { get; set; }
 ```
 
 ## See Also

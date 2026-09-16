@@ -4,7 +4,7 @@ Renders a CSHTML view to a string.
 
 ```csharp
 public static string RenderViewToString(IServiceProvider serviceProvider, string viewName, 
-    object model, Action<ViewContext> beforeRender = null)
+    object? model, Action<ViewContext>? beforeRender = null)
 ```
 
 | parameter | description |

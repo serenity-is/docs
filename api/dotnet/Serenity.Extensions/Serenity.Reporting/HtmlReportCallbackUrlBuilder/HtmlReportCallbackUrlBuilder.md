@@ -4,10 +4,10 @@ Default implementation for IHtmlReportRenderUrlBuilder
 
 ```csharp
 public HtmlReportCallbackUrlBuilder(ISiteAbsoluteUrl siteAbsoluteUrl, 
-    IOptionsMonitor<CookieAuthenticationOptions> cookieOptions = null, 
-    IPermissionService permissionService = null, IUserAccessor userAccessor = null, 
-    IHttpContextAccessor httpContextAccessor = null, 
-    IDataProtectionProvider dataProtectionProvider = null)
+    IOptionsMonitor<CookieAuthenticationOptions>? cookieOptions = null, 
+    IPermissionService? permissionService = null, IUserAccessor? userAccessor = null, 
+    IHttpContextAccessor? httpContextAccessor = null, 
+    IDataProtectionProvider? dataProtectionProvider = null)
 ```
 
 ## See Also

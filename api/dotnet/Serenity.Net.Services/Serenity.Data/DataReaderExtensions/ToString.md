@@ -3,7 +3,7 @@
 Reads and converts the value at the field index to String. Returns `null` if the value is DBNull.
 
 ```csharp
-public static string ToString(this IDataReader reader, int index)
+public static string? ToString(this IDataReader reader, int index)
 ```
 
 | parameter | description |

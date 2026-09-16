@@ -21,7 +21,7 @@ Options for the [FileUploadEditor](../classes/FileUploadEditor.md).
 
 > `optional` **allowNonImage**: `boolean`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:413](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L413)
+Defined in: [src/ui/helpers/uploadhelper.tsx:412](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L412)
 
 Whether non-image files are allowed.
 
@@ -45,7 +45,7 @@ Whether to display the original file name.
 
 > `optional` **maxHeight**: `number`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:401](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L401)
+Defined in: [src/ui/helpers/uploadhelper.tsx:400](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L400)
 
 The maximum image height.
 
@@ -59,7 +59,7 @@ The maximum image height.
 
 > `optional` **maxSize**: `number`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:409](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L409)
+Defined in: [src/ui/helpers/uploadhelper.tsx:408](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L408)
 
 The maximum file size in bytes.
 
@@ -73,7 +73,7 @@ The maximum file size in bytes.
 
 > `optional` **maxWidth**: `number`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:393](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L393)
+Defined in: [src/ui/helpers/uploadhelper.tsx:392](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L392)
 
 The maximum image width.
 
@@ -87,7 +87,7 @@ The maximum image width.
 
 > `optional` **minHeight**: `number`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:397](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L397)
+Defined in: [src/ui/helpers/uploadhelper.tsx:396](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L396)
 
 The minimum image height.
 
@@ -101,7 +101,7 @@ The minimum image height.
 
 > `optional` **minSize**: `number`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:405](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L405)
+Defined in: [src/ui/helpers/uploadhelper.tsx:404](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L404)
 
 The minimum file size in bytes.
 
@@ -115,7 +115,7 @@ The minimum file size in bytes.
 
 > `optional` **minWidth**: `number`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:389](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L389)
+Defined in: [src/ui/helpers/uploadhelper.tsx:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L388)
 
 The minimum image width.
 
@@ -129,7 +129,7 @@ The minimum image width.
 
 > `optional` **originalNameProperty**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:417](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L417)
+Defined in: [src/ui/helpers/uploadhelper.tsx:416](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L416)
 
 The name of the property holding the original file name.
 

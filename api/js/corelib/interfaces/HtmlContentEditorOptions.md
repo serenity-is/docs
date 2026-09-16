@@ -2,7 +2,7 @@
 
 # Interface: HtmlContentEditorOptions
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L17)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L16)
 
 Options for the [HtmlContentEditor](../classes/HtmlContentEditor.md).
 
@@ -12,7 +12,7 @@ Options for the [HtmlContentEditor](../classes/HtmlContentEditor.md).
 
 > `optional` **cols**: `number`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L19)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L18)
 
 Number of columns.
 
@@ -22,7 +22,7 @@ Number of columns.
 
 > `optional` **editorProvider**: [`HtmlContentEditorProvider`](../type-aliases/HtmlContentEditorProvider.md)
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L23)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L22)
 
 The editor provider to use.
 
@@ -32,6 +32,6 @@ The editor provider to use.
 
 > `optional` **rows**: `number`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L21)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L20)
 
 Number of rows.

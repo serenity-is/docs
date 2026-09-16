@@ -1,7 +1,7 @@
 # BaseUserRetrieveService.ByUsername method
 
 ```csharp
-public virtual IUserDefinition ByUsername(string username)
+public virtual IUserDefinition? ByUsername(string username)
 ```
 
 ## See Also

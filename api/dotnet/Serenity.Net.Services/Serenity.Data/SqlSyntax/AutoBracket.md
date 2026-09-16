@@ -3,7 +3,7 @@
 Automatically brackets the string based on the [`AutoQuotedIdentifiers`](../SqlSettings/AutoQuotedIdentifiers.md) setting and keywords for the passed dialect.
 
 ```csharp
-public static string AutoBracket(string s, ISqlDialect dialect = null)
+public static string AutoBracket(string s, ISqlDialect? dialect = null)
 ```
 
 | parameter | description |

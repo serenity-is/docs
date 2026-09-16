@@ -3,7 +3,7 @@
 Determines whether the specified Object, is equal to this instance.
 
 ```csharp
-public override bool Equals(object obj)
+public override bool Equals(object? obj)
 ```
 
 | parameter | description |

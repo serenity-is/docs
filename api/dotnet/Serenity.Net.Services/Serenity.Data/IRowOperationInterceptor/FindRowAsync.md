@@ -3,8 +3,8 @@
 Intercepts the async EntityConnectionExtensions ById/TryById/First/TryFirst/Single/TrySingle methods. The default implementation forwards to [`FindRow`](./FindRow.md).
 
 ```csharp
-public Task<OptionalValue<IRow>> FindRowAsync(Type rowType, OptionalValue<object> id, 
-    ICriteria where, Action<SqlQuery> editQuery, bool byIdOrSingle, 
+public Task<OptionalValue<IRow>> FindRowAsync(Type rowType, OptionalValue<object?> id, 
+    ICriteria? where, Action<SqlQuery>? editQuery, bool byIdOrSingle, 
     CancellationToken cancellationToken = default)
 ```
 

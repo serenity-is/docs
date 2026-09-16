@@ -3,7 +3,7 @@
 Gets or sets the type of the row.
 
 ```csharp
-public Type RowType { get; set; }
+public Type? RowType { get; set; }
 ```
 
 ## Property Value

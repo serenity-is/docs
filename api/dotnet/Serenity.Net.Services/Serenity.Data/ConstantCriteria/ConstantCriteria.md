@@ -75,7 +75,7 @@ public ConstantCriteria(long value)
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 
 ```csharp
-public ConstantCriteria(IEnumerable<string> values, ISqlDialect dialect = null)
+public ConstantCriteria(IEnumerable<string> values, ISqlDialect? dialect = null)
 ```
 
 | parameter | description |
@@ -95,7 +95,7 @@ public ConstantCriteria(IEnumerable<string> values, ISqlDialect dialect = null)
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 
 ```csharp
-public ConstantCriteria(string value, ISqlDialect dialect = null)
+public ConstantCriteria(string value, ISqlDialect? dialect = null)
 ```
 
 | parameter | description |

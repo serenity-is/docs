@@ -3,7 +3,7 @@
 Gets the schema.
 
 ```csharp
-public string Schema { get; }
+public string? Schema { get; }
 ```
 
 ## Property Value

@@ -29,4 +29,4 @@ public class DefaultLocalTextInitializer : ILocalTextInitializer
 ## See Also
 
 * interface [ILocalTextInitializer](../../Serenity.Net.Core/Serenity.Abstractions/ILocalTextInitializer.md)
-* **Source:** *[DefaultLocalTextInitializer.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Common/DefaultLocalTextInitializer.cs)*
+* **Source:** *[DefaultLocalTextInitializer.cs](https://github.com/serenity-is/Serenity/blob/eef6be1d7741640aed4ce405c3b44984620b84be/src/web/Common/DefaultLocalTextInitializer.cs)*

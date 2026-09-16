@@ -3,8 +3,8 @@
 Executes a parameterized SQL statement.
 
 ```csharp
-public static int Execute(this IDbConnection cnn, string sql, object param = null, 
-    IDbTransaction transaction = null, int? commandTimeout = null, 
+public static int Execute(this IDbConnection cnn, string sql, object? param = null, 
+    IDbTransaction? transaction = null, int? commandTimeout = null, 
     CommandType? commandType = default)
 ```
 

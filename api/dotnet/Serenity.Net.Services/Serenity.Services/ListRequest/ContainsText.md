@@ -3,7 +3,7 @@
 The text to search in columns with the [`QuickSearchAttribute`](../../Serenity.Data.Mapping/QuickSearchAttribute.md).
 
 ```csharp
-public string ContainsText { get; set; }
+public string? ContainsText { get; set; }
 ```
 
 ## See Also

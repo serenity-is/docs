@@ -12,10 +12,11 @@ public static class SqlSettings
 | name | description |
 | --- | --- |
 | static [AutoQuotedIdentifiers](SqlSettings/AutoQuotedIdentifiers.md) { get; set; } | Gets or sets a value indicating whether to automatically quote identifiers. This is used as a fallback if the dialect and [`DefaultDialect`](./SqlSettings/DefaultDialect.md) do not provide a value. Default is true. |
-| static [DefaultCommandTimeout](SqlSettings/DefaultCommandTimeout.md) { get; set; } | Gets or sets the default command timeout. |
+| static [DefaultCommandTimeout](SqlSettings/DefaultCommandTimeout.md) { get; set; } | Gets or sets the default command timeout. Returns the local timeout if any is set through [`SetLocalCommandTimeout`](./SqlSettings/SetLocalCommandTimeout.md), otherwise the default timeout. The local timeout should be used for unit tests. |
 | static [DefaultDialect](SqlSettings/DefaultDialect.md) { get; set; } | Gets or sets the default dialect. Returns the local dialect if any is set through [`SetLocalDialect`](./SqlSettings/SetLocalDialect.md), otherwise the default dialect. This should only be set on application start. The local dialect should be used for unit tests. |
+| static [SetLocalCommandTimeout](SqlSettings/SetLocalCommandTimeout.md)(…) | Sets the local command timeout for the current thread and async context. Useful for background tasks, async methods, and testing to set the timeout locally and for auto spawned threads. |
 | static [SetLocalDialect](SqlSettings/SetLocalDialect.md)(…) | Sets the local dialect for the current thread and async context. Useful for background tasks, async methods, and testing to set the dialect locally and for auto spawned threads. |
 
 ## See Also
 
-* **Source:** *[SqlSettings.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/services/Data/SqlHelpers/SqlSettings.cs)*
+* **Source:** *[SqlSettings.cs](https://github.com/serenity-is/Serenity/blob/2c895c355fe09b3459b5091b6d2e792ced719b68/src/services/Data/SqlHelpers/SqlSettings.cs)*

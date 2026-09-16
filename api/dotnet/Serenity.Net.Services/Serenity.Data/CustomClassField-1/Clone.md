@@ -3,7 +3,7 @@
 Clones the specified value.
 
 ```csharp
-protected virtual TValue Clone(TValue value)
+protected virtual TValue? Clone(TValue? value)
 ```
 
 | parameter | description |

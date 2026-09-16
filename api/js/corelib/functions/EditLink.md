@@ -4,7 +4,7 @@
 
 > **EditLink**(`props`): `HTMLAnchorElement`
 
-Defined in: [src/ui/helpers/editlink.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/editlink.tsx#L13)
+Defined in: [src/ui/helpers/editlink.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/editlink.tsx#L11)
 
 Renders an edit link for a given item type and ID.
 The link will have a CSS class based on the item type and will point to a URL fragment

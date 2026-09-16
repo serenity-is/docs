@@ -3,7 +3,7 @@
 Fields for a [`LoggingRow`](../LoggingRow-1.md).
 
 ```csharp
-public LoggingRowFields(string tableName = null, string fieldPrefix = null)
+public LoggingRowFields(string? tableName = null, string fieldPrefix = "")
 ```
 
 ## See Also

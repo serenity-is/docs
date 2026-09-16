@@ -3,7 +3,7 @@
 Locates the aliases in specified expression.
 
 ```csharp
-public static HashSet<string> Locate(string expression)
+public static HashSet<string>? Locate(string expression)
 ```
 
 | parameter | description |

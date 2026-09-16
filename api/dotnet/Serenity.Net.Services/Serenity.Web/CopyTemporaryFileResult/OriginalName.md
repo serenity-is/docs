@@ -3,7 +3,7 @@
 Gets or sets the original name.
 
 ```csharp
-public string OriginalName { get; set; }
+public string? OriginalName { get; set; }
 ```
 
 ## See Also

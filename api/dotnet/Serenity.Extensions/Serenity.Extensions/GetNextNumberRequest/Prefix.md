@@ -3,7 +3,7 @@
 The prefix of the number.
 
 ```csharp
-public string Prefix { get; set; }
+public string? Prefix { get; set; }
 ```
 
 ## See Also

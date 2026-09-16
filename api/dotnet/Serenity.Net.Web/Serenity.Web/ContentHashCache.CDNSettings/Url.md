@@ -3,7 +3,7 @@
 Gets or sets the CDN URL.
 
 ```csharp
-public string Url { get; set; }
+public string? Url { get; set; }
 ```
 
 ## See Also

@@ -3,7 +3,7 @@
 Sets local row fields provider for current thread and async context. Useful for background tasks, async methods, and testing to set provider locally and for auto spawned threads.
 
 ```csharp
-public static IRowFieldsProvider SetLocal(IRowFieldsProvider provider)
+public static IRowFieldsProvider? SetLocal(IRowFieldsProvider? provider)
 ```
 
 | parameter | description |

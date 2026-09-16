@@ -4,7 +4,7 @@ Returns a list of dynamic objects; the reader is closed after the call. Serenity
 
 ```csharp
 public static IEnumerable<object> Query(this IDbConnection cnn, ISqlQuery sql, 
-    IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, 
+    IDbTransaction? transaction = null, bool buffered = true, int? commandTimeout = null, 
     CommandType? commandType = default)
 ```
 
@@ -33,8 +33,8 @@ List of dynamic objects.
 Returns a list of dynamic objects; the reader is closed after the call.
 
 ```csharp
-public static IEnumerable<object> Query(this IDbConnection cnn, string sql, object param = null, 
-    IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, 
+public static IEnumerable<object> Query(this IDbConnection cnn, string sql, object? param = null, 
+    IDbTransaction? transaction = null, bool buffered = true, int? commandTimeout = null, 
     CommandType? commandType = default)
 ```
 
@@ -64,7 +64,7 @@ Returns a list of values; the reader is closed after the call. Serenity specific
 
 ```csharp
 public static IEnumerable<T> Query<T>(this IDbConnection cnn, ISqlQuery sql, 
-    IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, 
+    IDbTransaction? transaction = null, bool buffered = true, int? commandTimeout = null, 
     CommandType? commandType = default)
 ```
 
@@ -94,8 +94,8 @@ List of values.
 Returns a list of objects; the reader is closed after the call.
 
 ```csharp
-public static IEnumerable<T> Query<T>(this IDbConnection cnn, string sql, object param = null, 
-    IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, 
+public static IEnumerable<T> Query<T>(this IDbConnection cnn, string sql, object? param = null, 
+    IDbTransaction? transaction = null, bool buffered = true, int? commandTimeout = null, 
     CommandType? commandType = default)
 ```
 

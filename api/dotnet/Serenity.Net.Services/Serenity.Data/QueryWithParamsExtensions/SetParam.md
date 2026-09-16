@@ -3,7 +3,7 @@
 Sets the parameter.
 
 ```csharp
-public static T SetParam<T>(this T self, Parameter param, object value)
+public static T SetParam<T>(this T self, Parameter param, object? value)
     where T : IQueryWithParams
 ```
 

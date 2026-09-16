@@ -4,7 +4,7 @@ A dynamic script that is formed from the concatenation of other scripts.
 
 ```csharp
 public ConcatenatedScript(IEnumerable<Func<string>> scriptParts, string separator = "\r\n;\r\n", 
-    Action<IPermissionService, ITextLocalizer> checkRights = null)
+    Action<IPermissionService, ITextLocalizer>? checkRights = null)
 ```
 
 | parameter | description |

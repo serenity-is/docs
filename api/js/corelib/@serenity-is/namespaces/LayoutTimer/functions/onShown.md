@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [LayoutTimer](../README.md) / onShown
 
-# ~~Function: onShown()~~
+# Function: onShown()
 
 > **onShown**(`element`, `handler`, `opt?`): `number`
 

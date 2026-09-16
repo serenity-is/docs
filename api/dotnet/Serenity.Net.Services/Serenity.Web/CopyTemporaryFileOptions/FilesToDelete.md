@@ -3,7 +3,7 @@
 Gets or sets the files to delete container.
 
 ```csharp
-public IFilesToDelete FilesToDelete { get; set; }
+public IFilesToDelete? FilesToDelete { get; set; }
 ```
 
 ## See Also

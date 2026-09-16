@@ -4,13 +4,13 @@ Renders an unknown format. Can be overridden in derived classes.
 
 ```csharp
 protected virtual ReportRenderResult RenderUnknownFormat(IReport report, 
-    ReportRenderOptions options)
+    ReportRenderOptions renderOptions)
 ```
 
 | parameter | description |
 | --- | --- |
 | report | The report. |
-| options | The options. |
+| renderOptions | The options. |
 
 ## Return Value
 

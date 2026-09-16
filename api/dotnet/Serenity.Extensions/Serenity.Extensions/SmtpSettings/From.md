@@ -3,7 +3,7 @@
 The default sender address used when a message has no From address.
 
 ```csharp
-public string From { get; set; }
+public string? From { get; set; }
 ```
 
 ## See Also

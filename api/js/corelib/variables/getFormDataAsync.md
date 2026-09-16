@@ -6,7 +6,7 @@
 
 Defined in: [src/compat/scriptdata-compat.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L162)
 
-Alias for [getFormScript](../functions/getFormScript.md). Compat shim for `Q.getFormDataAsync`.
+Alias for [getFormScript](../functions/getFormScript.md). Compat shim for `getFormDataAsync`.
 
 Loads a `FormScript` bundle for the given key.
 

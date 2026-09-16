@@ -3,7 +3,7 @@
 Converts the value.
 
 ```csharp
-public override object ConvertValue(object source, IFormatProvider provider)
+public override object? ConvertValue(object? source, IFormatProvider provider)
 ```
 
 | parameter | description |

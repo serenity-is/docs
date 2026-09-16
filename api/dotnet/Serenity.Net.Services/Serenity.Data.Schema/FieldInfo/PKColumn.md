@@ -3,7 +3,7 @@
 Gets or sets the primary key column.
 
 ```csharp
-public string PKColumn { get; set; }
+public string? PKColumn { get; set; }
 ```
 
 ## Property Value

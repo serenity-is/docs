@@ -29,4 +29,4 @@ public class SqlInsert : QueryWithParams, ISetFieldByStatement
 
 * class [QueryWithParams](./QueryWithParams.md)
 * interface [ISetFieldByStatement](./ISetFieldByStatement.md)
-* **Source:** *[SqlInsert.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/FluentSql/SqlInsert.cs)*
+* **Source:** *[SqlInsert.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/FluentSql/SqlInsert.cs)*

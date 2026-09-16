@@ -3,7 +3,7 @@
 Converts the specified XLCellValue to its corresponding .NET object.
 
 ```csharp
-public static object AsObject(this XLCellValue value)
+public static object? AsObject(this XLCellValue value)
 ```
 
 | parameter | description |

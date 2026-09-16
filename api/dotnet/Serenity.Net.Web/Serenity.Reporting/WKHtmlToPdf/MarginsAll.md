@@ -1,7 +1,7 @@
 # WKHtmlToPdf.MarginsAll property
 
 ```csharp
-public string MarginsAll { set; }
+public string? MarginsAll { set; }
 ```
 
 ## See Also

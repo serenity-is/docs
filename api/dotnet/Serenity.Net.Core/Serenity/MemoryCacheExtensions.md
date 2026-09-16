@@ -18,4 +18,4 @@ public static class MemoryCacheExtensions
 
 ## See Also
 
-* **Source:** *[MemoryCacheExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Caching/MemoryCacheExtensions.cs)*
+* **Source:** *[MemoryCacheExtensions.cs](https://github.com/serenity-is/Serenity/blob/eef6be1d7741640aed4ce405c3b44984620b84be/src/core/Caching/MemoryCacheExtensions.cs)*

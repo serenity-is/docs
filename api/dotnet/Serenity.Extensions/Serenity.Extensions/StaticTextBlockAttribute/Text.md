@@ -3,7 +3,7 @@
 Gets or sets the `text` option.
 
 ```csharp
-public string Text { get; set; }
+public string? Text { get; set; }
 ```
 
 ## See Also

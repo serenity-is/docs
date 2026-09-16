@@ -3,7 +3,7 @@
 Sets local row fields provider by resolving it from the service provider.
 
 ```csharp
-public static IRowFieldsProvider SetLocalFrom(IServiceProvider services)
+public static IRowFieldsProvider? SetLocalFrom(IServiceProvider services)
 ```
 
 | parameter | description |

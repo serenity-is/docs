@@ -3,7 +3,7 @@
 Gets the current transaction.
 
 ```csharp
-public IDbTransaction CurrentTransaction { get; }
+public IDbTransaction? CurrentTransaction { get; }
 ```
 
 ## Property Value

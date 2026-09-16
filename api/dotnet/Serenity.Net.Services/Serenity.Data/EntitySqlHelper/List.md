@@ -4,7 +4,7 @@ Lists the rows returned from executing the query.
 
 ```csharp
 public static List<TRow> List<TRow>(this SqlQuery query, IDbConnection connection, 
-    TRow loaderRow = default)
+    TRow? loaderRow = default)
     where TRow : class, IRow
 ```
 

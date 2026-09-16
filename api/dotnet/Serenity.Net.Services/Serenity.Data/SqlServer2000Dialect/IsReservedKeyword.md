@@ -1,7 +1,7 @@
 # SqlServer2000Dialect.IsReservedKeyword method
 
 ```csharp
-public bool IsReservedKeyword(string keyword)
+public bool IsReservedKeyword(string? keyword)
 ```
 
 ## See Also

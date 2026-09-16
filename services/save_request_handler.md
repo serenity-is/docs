@@ -62,9 +62,9 @@ The request is a [SaveRequest&lt;TEntity&gt;](../api/dotnet/Serenity.Net.Service
 ```cs
 public class SaveRequest<TEntity> : ServiceRequest, ISaveRequest
 {
-    public object EntityId { get; set; }
-    public TEntity Entity { get; set; }
-    public Dictionary<string, TEntity> Localizations { get; set; }
+    public object? EntityId { get; set; }
+    public TEntity? Entity { get; set; }
+    public Dictionary<string, TEntity>? Localizations { get; set; }
 }
 ```
 
@@ -77,7 +77,7 @@ The response is a [SaveResponse](../api/dotnet/Serenity.Net.Services/Serenity.Se
 ```cs
 public class SaveResponse : ServiceResponse
 {
-    public object EntityId { get; set; }
+    public object? EntityId { get; set; }
 }
 ```
 

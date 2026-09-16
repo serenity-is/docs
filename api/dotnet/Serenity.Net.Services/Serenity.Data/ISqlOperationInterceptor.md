@@ -20,4 +20,4 @@ public interface ISqlOperationInterceptor
 
 ## See Also
 
-* **Source:** *[ISqlOperationInterceptor.cs](https://github.com/serenity-is/Serenity/blob/73168d59056410d43d88aeecc9e4fe750d71793a/src/services/Data/SqlHelpers/ISqlOperationInterceptor.cs)*
+* **Source:** *[ISqlOperationInterceptor.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/SqlHelpers/ISqlOperationInterceptor.cs)*

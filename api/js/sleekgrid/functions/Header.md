@@ -2,16 +2,18 @@
 
 # Function: Header()
 
-> **Header**(`__namedParameters`): `JSXElement`
+> **Header**(`props`): `JSXElement`
 
-Defined in: [src/layouts/layout-components.tsx:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L32)
+Defined in: [src/layouts/layout-components.tsx:30](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L30)
 
 Header shell component for a single band. Hosts the column-header container
 and hides automatically when the band is empty or the header is hidden.
 
 ## Parameters
 
-### \_\_namedParameters
+### props
+
+Component props containing band, refs, and signals.
 
 #### band
 

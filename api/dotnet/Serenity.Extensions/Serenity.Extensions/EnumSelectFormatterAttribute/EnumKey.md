@@ -3,7 +3,7 @@
 Gets or sets the `enumKey` option.
 
 ```csharp
-public string EnumKey { get; set; }
+public string? EnumKey { get; set; }
 ```
 
 ## See Also

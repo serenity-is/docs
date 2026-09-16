@@ -1,7 +1,7 @@
 # PropertyInfoSource.EnumType property
 
 ```csharp
-public Type EnumType { get; }
+public Type? EnumType { get; }
 ```
 
 ## See Also

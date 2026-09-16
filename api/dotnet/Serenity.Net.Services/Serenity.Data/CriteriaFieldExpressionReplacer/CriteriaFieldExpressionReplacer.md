@@ -4,8 +4,8 @@ Converts field names in a criteria to their corresponding SQL field expressions.
 
 ```csharp
 public CriteriaFieldExpressionReplacer(IRow row, IPermissionService permissions, 
-    bool lookupAccessMode = false, ISqlDialect dialect = null, 
-    Func<IField, BaseCriteria> toCriteria = null)
+    bool lookupAccessMode = false, ISqlDialect? dialect = null, 
+    Func<IField, BaseCriteria>? toCriteria = null)
 ```
 
 | parameter | description |

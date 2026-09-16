@@ -3,7 +3,7 @@
 Callback to get the data.
 
 ```csharp
-protected Func<object> getData;
+protected Func<object?>? getData;
 ```
 
 ## See Also

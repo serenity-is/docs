@@ -3,7 +3,7 @@
 Assign to set text color of the current cell
 
 ```csharp
-public string Foreground { get; set; }
+public string? Foreground { get; set; }
 ```
 
 ## See Also

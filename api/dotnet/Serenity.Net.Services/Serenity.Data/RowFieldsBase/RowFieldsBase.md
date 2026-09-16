@@ -3,7 +3,7 @@
 Initializes a new instance of the [`RowFieldsBase`](../RowFieldsBase.md) class.
 
 ```csharp
-protected RowFieldsBase(string tableName = null, string fieldPrefix = "")
+protected RowFieldsBase(string? tableName = null, string fieldPrefix = "")
 ```
 
 | parameter | description |

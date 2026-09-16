@@ -3,7 +3,7 @@
 Sets the value of this field in specified row as object.
 
 ```csharp
-public override void AsObject(IRow row, object value)
+public override void AsObject(IRow row, object? value)
 ```
 
 | parameter | description |

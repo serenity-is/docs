@@ -3,7 +3,7 @@
 Automatically includes the corresponding `.css` file for an ES module if it exists next to the `.js` file.
 
 ```csharp
-public static HtmlString AutoIncludeModuleCss(this IHtmlHelper helper, string module)
+public static HtmlString AutoIncludeModuleCss(this IHtmlHelper helper, string? module)
 ```
 
 | parameter | description |

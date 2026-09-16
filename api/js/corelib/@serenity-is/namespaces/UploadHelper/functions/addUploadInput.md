@@ -4,7 +4,7 @@
 
 > **addUploadInput**(`options`): [`Fluent`](../../../../interfaces/Fluent.md)
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L15)
+Defined in: [src/ui/helpers/uploadhelper.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L14)
 
 Adds an upload input to a container and returns a Fluent wrapper around it.
 

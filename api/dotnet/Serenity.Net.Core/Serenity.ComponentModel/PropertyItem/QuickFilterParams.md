@@ -3,7 +3,7 @@
 Gets or sets the quick filter parameters.
 
 ```csharp
-public Dictionary<string, object>? QuickFilterParams { get; set; }
+public Dictionary<string, object?> QuickFilterParams { get; set; }
 ```
 
 ## Property Value

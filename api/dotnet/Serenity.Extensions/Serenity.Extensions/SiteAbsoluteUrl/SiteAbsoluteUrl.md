@@ -4,7 +4,7 @@ Default implementation for ISiteAbsoluteUrl
 
 ```csharp
 public SiteAbsoluteUrl(IOptionsMonitor<EnvironmentSettings> environmentSettings, 
-    IHttpContextAccessor httpContextAccessor = null)
+    IHttpContextAccessor? httpContextAccessor = null)
 ```
 
 ## See Also

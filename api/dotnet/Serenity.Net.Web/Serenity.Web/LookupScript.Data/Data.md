@@ -3,7 +3,7 @@
 Data format for a lookup script.
 
 ```csharp
-public Data(IEnumerable Items, Dictionary<string, object> Params)
+public Data(IEnumerable Items, Dictionary<string, object?> Params)
 ```
 
 | parameter | description |

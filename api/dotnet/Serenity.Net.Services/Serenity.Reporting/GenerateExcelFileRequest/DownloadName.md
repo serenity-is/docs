@@ -3,7 +3,7 @@
 The download name for the exported file.
 
 ```csharp
-public string DownloadName { get; set; }
+public string? DownloadName { get; set; }
 ```
 
 ## See Also

@@ -6,7 +6,7 @@
 
 Defined in: [src/compat/dialogs-compat.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/dialogs-compat.ts#L8)
 
-Legacy `Q.alert` alias.
+Legacy `alert` alias.
 
 Displays a modal alert dialog with a single OK button.
 
@@ -42,7 +42,7 @@ alertDialog("An error occurred!");
 
 ## Deprecated
 
-Use [alertDialog](../functions/alertDialog.md) from `"@serenity-is/corelib"` instead. This re-export is retained for compat with code that imports `Q.alert` / `Serenity.alert`.
+Use [alertDialog](../functions/alertDialog.md) from `"@serenity-is/corelib"` instead. This re-export is retained for compat with code that imports `alert` / `Serenity.alert`.
 
 ## See
 

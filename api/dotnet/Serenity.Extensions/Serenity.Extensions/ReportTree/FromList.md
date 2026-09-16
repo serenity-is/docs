@@ -4,7 +4,7 @@ Builds a report tree from the specified reports.
 
 ```csharp
 public static ReportTree FromList(IEnumerable<Report> reports, ITextLocalizer localizer, 
-    string rootPath = null, string categoryOrder = null)
+    string? rootPath = null, string? categoryOrder = null)
 ```
 
 | parameter | description |

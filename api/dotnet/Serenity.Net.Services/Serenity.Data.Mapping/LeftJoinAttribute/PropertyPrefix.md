@@ -3,7 +3,7 @@
 Gets the property prefix.
 
 ```csharp
-public string PropertyPrefix { get; set; }
+public string? PropertyPrefix { get; set; }
 ```
 
 ## Property Value

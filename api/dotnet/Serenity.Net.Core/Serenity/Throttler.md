@@ -21,4 +21,4 @@ public class Throttler
 
 ## See Also
 
-* **Source:** *[Throttler.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Authorization/Throttler.cs)*
+* **Source:** *[Throttler.cs](https://github.com/serenity-is/Serenity/blob/35abf840262b98e2da886ffc4a8d963839587adb/src/core/Authorization/Throttler.cs)*

@@ -4,7 +4,7 @@
 
 > `const` **parse**: \{(`expression`, `params?`): `any`[]; (`strings`, ...`values`): `any`[]; \} = `parseCriteria`
 
-Defined in: [src/base/criteria.ts:978](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L978)
+Defined in: [src/base/criteria.ts:980](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L980)
 
 Alias for [parseCriteria](../../../../functions/parseCriteria.md) — parses a criteria expression string or tagged template.
 
@@ -91,14 +91,10 @@ Accepts either `"A >= @p1"` with a params object, or a tagged template
 ## Examples
 
 ```ts
-Criteria.parse("A >=
+Criteria.parse("A >= @p1 and B < @p2", { p1: 5, p2: 4 });
 ```
 
 ```ts
 let a = 5, b = 4;
-Criteria.parse`A >= ${a} and B < ${b}`;
+Criteria.parse`A >= ${a} and B < ${b}`;`
 ```
-
-## P1
-
-and B < @p2", { p1: 5, p2: 4 });

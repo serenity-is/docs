@@ -40,13 +40,13 @@ namespace CourseTutorial.CourseDB.Columns;
 public class TermsColumns
 {
     [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-    public int Id { get; set; }
+    public int? Id { get; set; }
     [EditLink]
-    public string Name { get; set; }
-    public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
-    public bool IsActive { get; set; }
-    public bool IsRegistrationOpen { get; set; }
+    public string? Name { get; set; }
+    public DateTime? StartDate { get; set; }
+    public DateTime? EndDate { get; set; }
+    public bool? IsActive { get; set; }
+    public bool? IsRegistrationOpen { get; set; }
 }
 ```
 
@@ -60,17 +60,17 @@ namespace CourseTutorial.CourseDB.Columns;
 public class TermsColumns
 {
     [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-    public int Id { get; set; }
+    public int? Id { get; set; }
     [EditLink]
-    public string Name { get; set; }
-    public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
+    public string? Name { get; set; }
+    public DateTime? StartDate { get; set; }
+    public DateTime? EndDate { get; set; }
 
     [DisplayName("IsCurrent"), Width(150), AlignRight]
-    public bool IsActive { get; set; }
+    public bool? IsActive { get; set; }
 
     [DisplayName("IsEnrollmentOpen"), Width(150), AlignRight]
-    public bool IsRegistrationOpen { get; set; }
+    public bool? IsRegistrationOpen { get; set; }
 }
 ```
 

@@ -3,7 +3,7 @@
 Checks if record matching specified criteria exists.
 
 ```csharp
-public static bool Exists<TRow>(this IDbConnection connection, ICriteria where)
+public static bool Exists<TRow>(this IDbConnection connection, ICriteria? where)
     where TRow : class, IRow, new()
 ```
 

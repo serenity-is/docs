@@ -4,7 +4,7 @@ Intercepts the [`SqlHelper`](../SqlHelper.md)`Execute` method (SqlDelete/SqlUpda
 
 ```csharp
 public OptionalValue<long?> ExecuteNonQuery(string commandText, 
-    IDictionary<string, object> parameters, ExpectedRows expectedRows, IQueryWithParams query, 
+    IDictionary<string, object?>? parameters, ExpectedRows expectedRows, IQueryWithParams? query, 
     bool getNewId)
 ```
 

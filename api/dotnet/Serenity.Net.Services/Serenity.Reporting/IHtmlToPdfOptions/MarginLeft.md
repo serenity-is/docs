@@ -3,7 +3,7 @@
 Page left margin, default is unspecified.
 
 ```csharp
-public string MarginLeft { get; set; }
+public string? MarginLeft { get; set; }
 ```
 
 ## See Also

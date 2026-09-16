@@ -3,7 +3,7 @@
 Returns a required validation error
 
 ```csharp
-public static ValidationError RequiredError(Field field, ITextLocalizer localizer)
+public static ValidationError RequiredError(Field field, ITextLocalizer? localizer)
 ```
 
 | parameter | description |
@@ -25,8 +25,8 @@ public static ValidationError RequiredError(Field field, ITextLocalizer localize
 Returns a required validation error.
 
 ```csharp
-public static ValidationError RequiredError(string name, ITextLocalizer localizer, 
-    string title = null)
+public static ValidationError RequiredError(string name, ITextLocalizer? localizer, 
+    string? title = null)
 ```
 
 | parameter | description |

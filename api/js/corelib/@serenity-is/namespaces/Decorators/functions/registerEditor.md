@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [Decorators](../README.md) / registerEditor
 
-# ~~Function: registerEditor()~~
+# Function: registerEditor()
 
 > **registerEditor**(`nameOrIntf?`, `intf2?`): (`target`, `_context?`) => `void`
 

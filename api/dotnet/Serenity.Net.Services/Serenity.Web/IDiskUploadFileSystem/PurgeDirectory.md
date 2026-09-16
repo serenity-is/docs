@@ -4,7 +4,7 @@ Purges target directory, cleaning temporary files
 
 ```csharp
 public void PurgeDirectory(string directoryToClean, TimeSpan? autoExpireTime = default, 
-    int? maxFilesInDirectory = null, string checkFileName = null)
+    int? maxFilesInDirectory = null, string? checkFileName = null)
 ```
 
 | parameter | description |

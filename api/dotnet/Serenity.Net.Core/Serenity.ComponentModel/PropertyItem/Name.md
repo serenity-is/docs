@@ -3,7 +3,7 @@
 Gets or sets the property name.
 
 ```csharp
-public string? Name { get; set; }
+public string Name { get; set; }
 ```
 
 ## Property Value

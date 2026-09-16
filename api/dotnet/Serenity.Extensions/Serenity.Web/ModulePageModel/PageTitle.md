@@ -3,7 +3,7 @@
 The page title.
 
 ```csharp
-public LocalText PageTitle { get; set; }
+public LocalText? PageTitle { get; set; }
 ```
 
 ## See Also

@@ -3,13 +3,13 @@
 Gets the view name for the report.
 
 ```csharp
-protected virtual string GetViewName(IReport report, ReportRenderOptions options)
+protected virtual string GetViewName(IReport report, ReportRenderOptions renderOptions)
 ```
 
 | parameter | description |
 | --- | --- |
 | report | The report. |
-| options | The options. |
+| renderOptions | The options. |
 
 ## Return Value
 

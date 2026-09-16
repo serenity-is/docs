@@ -3,7 +3,7 @@
 Creates a contains text criteria
 
 ```csharp
-public static BaseCriteria GetContainsTextFilter(string containsText, Criteria[] textFields)
+public static BaseCriteria? GetContainsTextFilter(string? containsText, Criteria[] textFields)
 ```
 
 | parameter | description |

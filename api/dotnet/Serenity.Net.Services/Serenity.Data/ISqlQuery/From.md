@@ -3,7 +3,7 @@
 Gets access to FROM part if any.
 
 ```csharp
-public string From { get; }
+public string? From { get; }
 ```
 
 ## See Also

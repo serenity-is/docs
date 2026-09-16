@@ -3,7 +3,7 @@
 The generated URL for header content
 
 ```csharp
-public string HeaderUrl { get; set; }
+public string? HeaderUrl { get; set; }
 ```
 
 ## See Also

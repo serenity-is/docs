@@ -3,8 +3,8 @@
 Intercepts EntityConnectionExtensions's ById/TryById/First/TryFirst/Single/TrySingle methods.
 
 ```csharp
-public OptionalValue<IRow> FindRow(Type rowType, OptionalValue<object> id, ICriteria where, 
-    Action<SqlQuery> editQuery, bool byIdOrSingle)
+public OptionalValue<IRow> FindRow(Type rowType, OptionalValue<object?> id, ICriteria? where, 
+    Action<SqlQuery>? editQuery, bool byIdOrSingle)
 ```
 
 | parameter | description |

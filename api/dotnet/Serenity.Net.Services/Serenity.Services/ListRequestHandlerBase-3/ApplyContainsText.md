@@ -3,7 +3,7 @@
 Applies contains text filter to the query
 
 ```csharp
-protected virtual void ApplyContainsText(SqlQuery query, string containsText)
+protected virtual void ApplyContainsText(SqlQuery query, string? containsText)
 ```
 
 | parameter | description |

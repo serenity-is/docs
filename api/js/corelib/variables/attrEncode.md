@@ -32,7 +32,7 @@ htmlEncode('<a href="x">a & b</a>'); // "&lt;a href=&quot;x&quot;&gt;a &amp; b&l
 
 ## Deprecated
 
-Use [htmlEncode](../functions/htmlEncode.md) directly (it also encodes quotes). Retained as `Q.attrEncode` compat shim.
+Use [htmlEncode](../functions/htmlEncode.md) directly (it also encodes quotes). Retained as `attrEncode` compat shim.
 
 ## See
 

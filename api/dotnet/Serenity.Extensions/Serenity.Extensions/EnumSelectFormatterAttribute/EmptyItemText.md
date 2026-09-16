@@ -3,7 +3,7 @@
 Gets or sets the `emptyItemText` option.
 
 ```csharp
-public string EmptyItemText { get; set; }
+public string? EmptyItemText { get; set; }
 ```
 
 ## See Also

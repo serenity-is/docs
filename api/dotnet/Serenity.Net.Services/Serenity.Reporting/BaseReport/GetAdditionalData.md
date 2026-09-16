@@ -1,7 +1,7 @@
 # BaseReport.GetAdditionalData method
 
 ```csharp
-public virtual IDictionary<string, object> GetAdditionalData()
+public virtual IDictionary<string, object?>? GetAdditionalData()
 ```
 
 ## See Also

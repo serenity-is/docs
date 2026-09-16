@@ -3,7 +3,7 @@
 Implements the operator ^.
 
 ```csharp
-public static BaseCriteria operator ^(BaseCriteria criteria1, BaseCriteria criteria2)
+public static BaseCriteria? operator ^(BaseCriteria? criteria1, BaseCriteria? criteria2)
 ```
 
 | parameter | description |

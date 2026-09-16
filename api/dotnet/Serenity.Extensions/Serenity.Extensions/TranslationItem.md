@@ -11,7 +11,6 @@ public class TranslationItem
 
 | name | description |
 | --- | --- |
-| [TranslationItem](TranslationItem/TranslationItem.md)() | The default constructor. |
 | [CustomText](TranslationItem/CustomText.md) { get; set; } | The user-provided custom translation in the target language. |
 | [HasTranslation](TranslationItem/HasTranslation.md) { get; set; } | Gets or sets a value indicating whether the item has a translation. |
 | [Key](TranslationItem/Key.md) { get; set; } | The local text key. |
@@ -21,4 +20,4 @@ public class TranslationItem
 
 ## See Also
 
-* **Source:** *[TranslationItem.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/Translation/TranslationItem.cs)*
+* **Source:** *[TranslationItem.cs](https://github.com/serenity-is/Serenity/blob/863efadd219f60621f4ec24faf3728a6a7a4290c/common-features/src/extensions/Modules/Translation/TranslationItem.cs)*

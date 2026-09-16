@@ -3,7 +3,7 @@
 Gets or sets the decorator to use for the column.
 
 ```csharp
-public ICellDecorator Decorator { get; set; }
+public ICellDecorator? Decorator { get; set; }
 ```
 
 ## See Also

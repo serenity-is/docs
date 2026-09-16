@@ -3,7 +3,7 @@
 The username used to authenticate with the SMTP server.
 
 ```csharp
-public string Username { get; set; }
+public string? Username { get; set; }
 ```
 
 ## See Also

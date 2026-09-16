@@ -3,7 +3,7 @@
 The generated URL for footer content
 
 ```csharp
-public string FooterUrl { get; set; }
+public string? FooterUrl { get; set; }
 ```
 
 ## See Also

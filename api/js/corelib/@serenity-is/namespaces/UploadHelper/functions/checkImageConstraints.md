@@ -4,7 +4,7 @@
 
 > **checkImageConstraints**(`file`, `opt`): `boolean`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L92)
+Defined in: [src/ui/helpers/uploadhelper.tsx:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L91)
 
 Checks an uploaded file against the given image constraints, notifying the
 user of any violation.

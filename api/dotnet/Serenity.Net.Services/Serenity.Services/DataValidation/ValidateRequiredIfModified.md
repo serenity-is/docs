@@ -4,7 +4,7 @@ Validates that field values does not contain a null or empty string if the field
 
 ```csharp
 public static void ValidateRequiredIfModified(this IRow row, IEnumerable<Field> fields, 
-    ITextLocalizer localizer)
+    ITextLocalizer? localizer)
 ```
 
 | parameter | description |

@@ -3,7 +3,7 @@
 Reads the JSON representation of the object.
 
 ```csharp
-public override object ReadJson(JsonReader reader, Type objectType, object existingValue, 
+public override object? ReadJson(JsonReader reader, Type objectType, object? existingValue, 
     JsonSerializer serializer)
 ```
 

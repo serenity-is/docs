@@ -4,7 +4,7 @@
 
 > `const` **isArray**: (`arg`) => `arg is any[]` = `Array.isArray`
 
-Defined in: [src/compat/arrays-compat.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L167)
+Defined in: [src/compat/arrays-compat.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L166)
 
 Tests whether a value is an array.
 
@@ -20,7 +20,7 @@ Tests whether a value is an array.
 
 ## Remarks
 
-Thin re-export of `Array.isArray` for legacy `Q.isArray` call sites.
+Thin re-export of `Array.isArray` for legacy `isArray` call sites.
 
 ## Deprecated
 

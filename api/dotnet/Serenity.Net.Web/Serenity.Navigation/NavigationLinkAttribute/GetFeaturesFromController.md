@@ -3,7 +3,7 @@
 Tries to extract features from a controller action.
 
 ```csharp
-public static string[] GetFeaturesFromController(Type controller, string action, 
+public static string[]? GetFeaturesFromController(Type controller, string action, 
     out bool requireAny)
 ```
 

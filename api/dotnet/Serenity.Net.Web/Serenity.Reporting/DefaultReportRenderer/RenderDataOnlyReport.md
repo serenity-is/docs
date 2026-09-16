@@ -4,13 +4,13 @@ Renders a data only report.
 
 ```csharp
 protected virtual ReportRenderResult RenderDataOnlyReport(IDataOnlyReport report, 
-    ReportRenderOptions options)
+    ReportRenderOptions renderOptions)
 ```
 
 | parameter | description |
 | --- | --- |
 | report | The report. |
-| options | The options. |
+| renderOptions | The options. |
 
 ## Return Value
 

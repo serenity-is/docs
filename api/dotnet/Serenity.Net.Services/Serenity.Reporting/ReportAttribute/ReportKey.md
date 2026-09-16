@@ -3,7 +3,7 @@
 Gets the report key.
 
 ```csharp
-public string ReportKey { get; }
+public string? ReportKey { get; }
 ```
 
 ## See Also

@@ -3,7 +3,7 @@
 Property processor that passes the recaptcha site key to the client side.
 
 ```csharp
-public RecaptchaPropertyProcessor(IOptions<RecaptchaSettings> options = null)
+public RecaptchaPropertyProcessor(IOptions<RecaptchaSettings>? options = null)
 ```
 
 ## Remarks

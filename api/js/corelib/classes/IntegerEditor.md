@@ -2,7 +2,7 @@
 
 # Class: IntegerEditor\<P\>
 
-Defined in: [src/ui/editors/integereditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L24)
+Defined in: [src/ui/editors/integereditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L23)
 
 An editor that renders an integer input with AutoNumeric formatting.
 
@@ -28,7 +28,7 @@ Widget props type.
 
 > **new IntegerEditor**\<`P`\>(`props`): `IntegerEditor`\<`P`\>
 
-Defined in: [src/ui/editors/integereditor.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L37)
+Defined in: [src/ui/editors/integereditor.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L36)
 
 Creates an integer editor.
 
@@ -54,7 +54,7 @@ Widget props.
 
 > `readonly` **domNode**: `HTMLInputElement`
 
-Defined in: [src/ui/editors/integereditor.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L31)
+Defined in: [src/ui/editors/integereditor.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L30)
 
 The text input element that backs the editor.
 
@@ -110,7 +110,7 @@ A unique name for this widget instance, used for event namespacing.
 
 > `static` **\[typeInfo\]**: [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/editors/integereditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L25)
+Defined in: [src/ui/editors/integereditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L24)
 
 #### Implementation of
 
@@ -220,7 +220,7 @@ Sets whether the editor is read-only.
 
 > **get** **value**(): `number`
 
-Defined in: [src/ui/editors/integereditor.tsx:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L104)
+Defined in: [src/ui/editors/integereditor.tsx:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L103)
 
 Returns the current integer value.
 
@@ -234,7 +234,7 @@ The value, or null when empty.
 
 > **set** **value**(`v`): `void`
 
-Defined in: [src/ui/editors/integereditor.tsx:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L123)
+Defined in: [src/ui/editors/integereditor.tsx:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L122)
 
 Sets the integer value.
 
@@ -476,7 +476,7 @@ True to defer rendering.
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/editors/integereditor.tsx:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L47)
+Defined in: [src/ui/editors/integereditor.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L46)
 
 Cleans up the AutoNumeric instance.
 
@@ -528,7 +528,7 @@ The matching element, or null if not found.
 
 > **get\_isValid**(): `boolean`
 
-Defined in: [src/ui/editors/integereditor.tsx:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L131)
+Defined in: [src/ui/editors/integereditor.tsx:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L130)
 
 Whether the current value is valid.
 
@@ -544,7 +544,7 @@ True when valid.
 
 > **get\_value**(): `number`
 
-Defined in: [src/ui/editors/integereditor.tsx:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L83)
+Defined in: [src/ui/editors/integereditor.tsx:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L82)
 
 Returns the current integer value.
 
@@ -564,7 +564,7 @@ The value, or null when empty.
 
 > `protected` **getAutoNumericOptions**(): [`AutoNumericOptions`](../interfaces/AutoNumericOptions.md)
 
-Defined in: [src/ui/editors/integereditor.tsx:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L63)
+Defined in: [src/ui/editors/integereditor.tsx:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L62)
 
 Returns the AutoNumeric options for this editor.
 
@@ -680,7 +680,7 @@ This widget instance.
 
 > `protected` **initAutoNumeric**(): `void`
 
-Defined in: [src/ui/editors/integereditor.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L55)
+Defined in: [src/ui/editors/integereditor.tsx:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L54)
 
 Initializes the AutoNumeric instance.
 
@@ -772,7 +772,7 @@ The rendered contents.
 
 > **set\_value**(`value`): `void`
 
-Defined in: [src/ui/editors/integereditor.tsx:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L112)
+Defined in: [src/ui/editors/integereditor.tsx:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L111)
 
 Sets the integer value.
 
@@ -902,7 +902,7 @@ The created widget instance.
 
 > `static` **createDefaultElement**(): `HTMLInputElement`
 
-Defined in: [src/ui/editors/integereditor.tsx:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L29)
+Defined in: [src/ui/editors/integereditor.tsx:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L28)
 
 Creates the default text input element.
 

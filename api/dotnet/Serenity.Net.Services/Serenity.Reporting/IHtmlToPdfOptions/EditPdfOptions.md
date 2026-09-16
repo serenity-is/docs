@@ -3,7 +3,7 @@
 Allows editing PdfOptions, only available for Puppeteer
 
 ```csharp
-public Action<object> EditPdfOptions { get; set; }
+public Action<object>? EditPdfOptions { get; set; }
 ```
 
 ## See Also

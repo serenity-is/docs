@@ -4,7 +4,7 @@ Executes the query asynchronously.
 
 ```csharp
 public static Task<IDataReader> ExecuteReaderAsync(this SqlQuery query, IDbConnection connection, 
-    ILogger logger = null, CancellationToken cancellationToken = default)
+    ILogger? logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -31,7 +31,7 @@ Executes the command asynchronously returning a data reader.
 
 ```csharp
 public static Task<IDataReader> ExecuteReaderAsync(IDbConnection connection, string commandText, 
-    IDictionary<string, object> param, ILogger logger = null, 
+    IDictionary<string, object?>? param, ILogger? logger = null, 
     CancellationToken cancellationToken = default)
 ```
 

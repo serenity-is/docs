@@ -4,7 +4,7 @@ Registers all the custom request handlers implementing IRequestHandler interface
 
 ```csharp
 public static IServiceCollection AddCustomRequestHandlers(this IServiceCollection collection, 
-    ITypeSource typeSource = null, Func<Type, Type, bool> predicate = null)
+    ITypeSource? typeSource = null, Func<Type, Type, bool>? predicate = null)
 ```
 
 | parameter | description |

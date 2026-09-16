@@ -3,9 +3,9 @@
 Field with a Single value.
 
 ```csharp
-public SingleField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, float?> getValue = null, 
-    Action<IRow, float?> setValue = null)
+public SingleField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, float?>? getValue = null, 
+    Action<IRow, float?>? setValue = null)
 ```
 
 | parameter | description |

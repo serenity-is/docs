@@ -3,7 +3,8 @@
 Initializes a new instance of the [`Join`](../Join.md) class.
 
 ```csharp
-protected Join(IDictionary<string, Join> joins, string toTable, string alias, ICriteria onCriteria)
+protected Join(IDictionary<string, Join>? joins, string toTable, string alias, 
+    ICriteria? onCriteria)
 ```
 
 | parameter | description |

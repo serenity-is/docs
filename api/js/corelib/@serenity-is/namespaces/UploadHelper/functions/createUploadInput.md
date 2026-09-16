@@ -4,7 +4,7 @@
 
 > **createUploadInput**(`options`): `object`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L24)
+Defined in: [src/ui/helpers/uploadhelper.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L23)
 
 Creates an upload input element and its associated Uploader.
 

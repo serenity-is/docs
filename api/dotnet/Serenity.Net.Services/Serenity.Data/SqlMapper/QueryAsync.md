@@ -4,7 +4,7 @@ Returns a list of dynamic objects asynchronously; the reader is closed after the
 
 ```csharp
 public static Task<IEnumerable<object>> QueryAsync(this IDbConnection cnn, ISqlQuery sql, 
-    IDbTransaction transaction = null, int? commandTimeout = null, 
+    IDbTransaction? transaction = null, int? commandTimeout = null, 
     CommandType? commandType = default, CancellationToken cancellationToken = default)
 ```
 
@@ -34,7 +34,7 @@ Returns a list of dynamic objects asynchronously; the reader is closed after the
 
 ```csharp
 public static Task<IEnumerable<object>> QueryAsync(this IDbConnection cnn, string sql, 
-    object param = null, IDbTransaction transaction = null, int? commandTimeout = null, 
+    object? param = null, IDbTransaction? transaction = null, int? commandTimeout = null, 
     CommandType? commandType = default, CancellationToken cancellationToken = default)
 ```
 
@@ -64,7 +64,7 @@ Returns a list of values asynchronously; the reader is closed after the call. Se
 
 ```csharp
 public static Task<IEnumerable<T>> QueryAsync<T>(this IDbConnection cnn, ISqlQuery sql, 
-    IDbTransaction transaction = null, int? commandTimeout = null, 
+    IDbTransaction? transaction = null, int? commandTimeout = null, 
     CommandType? commandType = default, CancellationToken cancellationToken = default)
 ```
 
@@ -95,7 +95,7 @@ Returns a list of objects asynchronously; the reader is closed after the call.
 
 ```csharp
 public static Task<IEnumerable<T>> QueryAsync<T>(this IDbConnection cnn, string sql, 
-    object param = null, IDbTransaction transaction = null, int? commandTimeout = null, 
+    object? param = null, IDbTransaction? transaction = null, int? commandTimeout = null, 
     CommandType? commandType = default, CancellationToken cancellationToken = default)
 ```
 

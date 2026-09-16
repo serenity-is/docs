@@ -1,9 +1,9 @@
 # IHasCurrentTransaction.CurrentTransaction property
 
-Gets the current transaction.
+Gets the current transaction, if any.
 
 ```csharp
-public IDbTransaction CurrentTransaction { get; }
+public IDbTransaction? CurrentTransaction { get; }
 ```
 
 ## See Also

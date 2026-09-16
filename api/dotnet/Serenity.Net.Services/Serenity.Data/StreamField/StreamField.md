@@ -3,9 +3,9 @@
 Field with a Stream value.
 
 ```csharp
-public StreamField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, Stream> getValue = null, 
-    Action<IRow, Stream> setValue = null)
+public StreamField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, Stream?>? getValue = null, 
+    Action<IRow, Stream?>? setValue = null)
 ```
 
 | parameter | description |

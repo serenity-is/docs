@@ -36,7 +36,7 @@ First entity matching the criteria.
 Finds first entity matching a where criteria.
 
 ```csharp
-public static TRow First<TRow>(this IDbConnection connection, ICriteria where)
+public static TRow First<TRow>(this IDbConnection connection, ICriteria? where)
     where TRow : class, IRow, new()
 ```
 

@@ -3,13 +3,13 @@
 Gets the render URL for the specified report. The response object implements IDisposable.
 
 ```csharp
-public HtmlReportRenderUrl GetRenderUrl(IReport report, ReportRenderOptions options)
+public HtmlReportRenderUrl GetRenderUrl(IReport report, ReportRenderOptions renderOptions)
 ```
 
 | parameter | description |
 | --- | --- |
 | report | The report. |
-| options | Report render options |
+| renderOptions | Report render options |
 
 ## See Also
 

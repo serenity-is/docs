@@ -3,7 +3,7 @@
 The enum type.
 
 ```csharp
-protected internal Type _enumType;
+protected internal Type? _enumType;
 ```
 
 ## See Also

@@ -4,7 +4,7 @@ Implementation of a type source that uses ApplicationPartManager to get assembli
 
 ```csharp
 public ApplicationPartsTypeSource(ApplicationPartManager partManager, bool topologicalSort = true, 
-    IFeatureToggles featureToggles = null)
+    IFeatureToggles? featureToggles = null, bool tryPartRecovery = true)
 ```
 
 ## See Also

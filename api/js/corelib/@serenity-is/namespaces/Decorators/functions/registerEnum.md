@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../../../../README.md) / [Decorators](../README.md) / registerEnum
 
-# ~~Function: registerEnum()~~
+# Function: registerEnum()
 
 > **registerEnum**(`target`, `enumKey?`, `name?`): `void`
 

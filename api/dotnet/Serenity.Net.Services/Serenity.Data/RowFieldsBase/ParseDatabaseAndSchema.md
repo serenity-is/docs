@@ -3,8 +3,8 @@
 Parses the database and schema.
 
 ```csharp
-public static string ParseDatabaseAndSchema(string tableName, out string database, 
-    out string schema)
+public static string? ParseDatabaseAndSchema(string tableName, out string? database, 
+    out string? schema)
 ```
 
 | parameter | description |

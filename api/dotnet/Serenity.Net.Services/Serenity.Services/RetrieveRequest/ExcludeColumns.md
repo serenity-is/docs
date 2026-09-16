@@ -1,7 +1,7 @@
 # RetrieveRequest.ExcludeColumns property
 
 ```csharp
-public HashSet<string> ExcludeColumns { get; set; }
+public HashSet<string>? ExcludeColumns { get; set; }
 ```
 
 ## See Also

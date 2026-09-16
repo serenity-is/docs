@@ -3,7 +3,7 @@
 The profiler.
 
 ```csharp
-protected readonly IConnectionProfiler profiler;
+protected readonly IConnectionProfiler? profiler;
 ```
 
 ## See Also

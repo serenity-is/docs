@@ -1,15 +1,12 @@
 [@serenity-is/corelib](../README.md) / ClassicRouter
 
-# ~~Class: ClassicRouter~~
+# Class: ClassicRouter
 
 Defined in: [src/compat/router.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/router.ts#L78)
 
 Legacy hash-based router that maps dialog stack to `"/+/"` delimited hash segments.
-Compat shim for the old `Q.Router` implementation. Listens to `hashchange`, dialog open/close, and anchor clicks to keep the URL in sync with visible dialogs and to dispatch `handleroute` events.
-
-## Deprecated
-
-Use explicit routing or state-driven dialog management. Kept solely for backward compatibility with legacy Serenity pages.
+Compat shim for the old `Router` implementation. Listens to `hashchange`, dialog open/close, and anchor clicks to keep the URL in sync with visible dialogs and to dispatch `handleroute` events.
+[DEPRECATED] Use explicit routing or state-driven dialog management. Kept solely for backward compatibility with legacy Serenity pages.
 
 ## Implements
 
@@ -29,7 +26,7 @@ Defined in: [src/compat/router.ts:443](https://github.com/serenity-is/serenity/b
 
 ## Properties
 
-### ~~enabled~~
+### enabled
 
 > **enabled**: `boolean` = `true`
 
@@ -43,7 +40,7 @@ When `false`, all routing operations become no-ops.
 
 ***
 
-### ~~mightBeRouteRegex~~
+### mightBeRouteRegex
 
 > **mightBeRouteRegex**: `RegExp`
 
@@ -57,7 +54,7 @@ Regex used to heuristically detect whether a single hash segment might represent
 
 ## Methods
 
-### ~~destroy()~~
+### destroy()
 
 > **destroy**(): `void`
 
@@ -75,7 +72,7 @@ Removes all event listeners registered by the router and releases resources.
 
 ***
 
-### ~~dialog()~~
+### dialog()
 
 > **dialog**(`owner`, `element`, `dialogHash`): `void`
 
@@ -113,7 +110,7 @@ Factory returning the hash segment for this dialog (e.g., `"!a1"`).
 
 ***
 
-### ~~ignoreHashChange()~~
+### ignoreHashChange()
 
 > **ignoreHashChange**(`expiration?`): `void`
 
@@ -139,7 +136,7 @@ Duration in milliseconds to ignore hash changes. Defaults to `1000`.
 
 ***
 
-### ~~navigate()~~
+### navigate()
 
 > **navigate**(`newHash`, `tryBack?`, `silent?`): `void`
 
@@ -177,7 +174,7 @@ When `true`, suppresses the subsequent `hashchange` handling via [ignoreHashChan
 
 ***
 
-### ~~replace()~~
+### replace()
 
 > **replace**(`newHash`, `tryBack?`): `void`
 
@@ -209,7 +206,7 @@ When `true`, prefers `history.back()` if applicable.
 
 ***
 
-### ~~replaceLast()~~
+### replaceLast()
 
 > **replaceLast**(`newHash`, `tryBack?`): `void`
 
@@ -241,7 +238,7 @@ When `true`, prefers `history.back()` if applicable.
 
 ***
 
-### ~~resolve()~~
+### resolve()
 
 > **resolve**(`newHash?`): `"disabled"` \| `"skipped"` \| `"shebang"` \| `"missinghandler"` \| `"calledhandler"`
 

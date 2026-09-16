@@ -3,7 +3,7 @@
 Criteria object with one value
 
 ```csharp
-public ValueCriteria(object value)
+public ValueCriteria(object? value)
 ```
 
 | parameter | description |

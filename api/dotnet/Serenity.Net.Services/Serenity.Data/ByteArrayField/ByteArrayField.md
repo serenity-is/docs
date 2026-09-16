@@ -3,9 +3,9 @@
 Field with a byte[] value.
 
 ```csharp
-public ByteArrayField(ICollection<Field> collection, string name, LocalText caption = null, 
-    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, byte[]> getValue = null, 
-    Action<IRow, byte[]> setValue = null)
+public ByteArrayField(ICollection<Field> collection, string name, LocalText? caption = null, 
+    int size = 0, FieldFlags flags = FieldFlags.Default, Func<IRow, byte[]?>? getValue = null, 
+    Action<IRow, byte[]?>? setValue = null)
 ```
 
 | parameter | description |

@@ -3,8 +3,8 @@
 Implementation of IWKHtmlToPdfConverter.
 
 ```csharp
-public WKHtmlToPdfConverter(IOptions<WKHtmlToPdfSettings> options = null, 
-    IWebHostEnvironment webHostEnvironment = null, IFileSystem fileSystem = null)
+public WKHtmlToPdfConverter(IOptions<WKHtmlToPdfSettings>? options = null, 
+    IWebHostEnvironment? webHostEnvironment = null, IFileSystem? fileSystem = null)
 ```
 
 | parameter | description |

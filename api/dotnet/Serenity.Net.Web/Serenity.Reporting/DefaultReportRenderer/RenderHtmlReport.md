@@ -3,13 +3,13 @@
 Renders an HTML report.
 
 ```csharp
-protected ReportRenderResult RenderHtmlReport(IReport report, ReportRenderOptions options)
+protected ReportRenderResult RenderHtmlReport(IReport report, ReportRenderOptions renderOptions)
 ```
 
 | parameter | description |
 | --- | --- |
 | report | The report. |
-| options | The options. |
+| renderOptions | The options. |
 
 ## Return Value
 

@@ -2,7 +2,7 @@
 
 # Class: MultipleImageUploadEditor\<P\>
 
-Defined in: [src/ui/editors/uploadeditors.tsx:636](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L636)
+Defined in: [src/ui/editors/uploadeditors.tsx:644](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L644)
 
 An editor that uploads and displays multiple images.
 
@@ -24,7 +24,7 @@ Widget props type.
 
 > **new MultipleImageUploadEditor**\<`P`\>(`props`): `MultipleImageUploadEditor`\<`P`\>
 
-Defined in: [src/ui/editors/uploadeditors.tsx:643](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L643)
+Defined in: [src/ui/editors/uploadeditors.tsx:651](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L651)
 
 Creates a multiple image upload editor.
 
@@ -64,7 +64,7 @@ The DOM node this widget is bound to.
 
 > `protected` **hiddenInput**: `HTMLInputElement`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L385)
+Defined in: [src/ui/editors/uploadeditors.tsx:383](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L383)
 
 #### Inherited from
 
@@ -104,7 +104,7 @@ The widget's options/props.
 
 > `protected` **progress**: `HTMLElement`
 
-Defined in: [src/ui/editors/uploadeditors.tsx:384](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L384)
+Defined in: [src/ui/editors/uploadeditors.tsx:382](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L382)
 
 #### Inherited from
 
@@ -130,7 +130,7 @@ A unique name for this widget instance, used for event namespacing.
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/editors/uploadeditors.tsx:637](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L637)
+Defined in: [src/ui/editors/uploadeditors.tsx:645](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L645)
 
 #### Overrides
 
@@ -724,6 +724,26 @@ The matching attribute, or null.
 #### Inherited from
 
 [`MultipleFileUploadEditor`](MultipleFileUploadEditor.md).[`getCustomAttribute`](MultipleFileUploadEditor.md#getcustomattribute)
+
+***
+
+### getDefaultAllowNonImage()
+
+> `protected` **getDefaultAllowNonImage**(): `boolean`
+
+Defined in: [src/ui/editors/uploadeditors.tsx:664](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L664)
+
+Whether non-image files are allowed.
+
+#### Returns
+
+`boolean`
+
+False for multiple image editors.
+
+#### Overrides
+
+[`MultipleFileUploadEditor`](MultipleFileUploadEditor.md).[`getDefaultAllowNonImage`](MultipleFileUploadEditor.md#getdefaultallownonimage)
 
 ***
 

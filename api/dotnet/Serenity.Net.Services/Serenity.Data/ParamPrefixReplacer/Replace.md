@@ -3,7 +3,7 @@
 Replaces the param prefixes in specified expression.
 
 ```csharp
-public static string Replace(string expression, char paramPrefix)
+public static string? Replace(string? expression, char paramPrefix)
 ```
 
 | parameter | description |

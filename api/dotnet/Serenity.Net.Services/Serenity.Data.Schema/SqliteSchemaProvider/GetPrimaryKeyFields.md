@@ -1,7 +1,7 @@
 # SqliteSchemaProvider.GetPrimaryKeyFields method
 
 ```csharp
-public IEnumerable<string> GetPrimaryKeyFields(IDbConnection connection, string schema, 
+public IEnumerable<string> GetPrimaryKeyFields(IDbConnection connection, string? schema, 
     string table)
 ```
 

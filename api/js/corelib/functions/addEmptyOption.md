@@ -22,4 +22,4 @@ Target `<select>` or array-like/jQuery-like wrapper containing it.
 
 ## Remarks
 
-Uses SelectEditorTexts.EmptyItemText as the display text and `""` as the value; delegates to [addOption](addOption.md). Compat helper from `Q.addEmptyOption`.
+Uses SelectEditorTexts.EmptyItemText as the display text and `""` as the value; delegates to [addOption](addOption.md). Compat helper from `addEmptyOption`.

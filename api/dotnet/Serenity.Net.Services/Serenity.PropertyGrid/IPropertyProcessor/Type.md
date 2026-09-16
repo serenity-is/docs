@@ -3,7 +3,7 @@
 Gets or sets the type property processor is working on.
 
 ```csharp
-public Type Type { get; set; }
+public Type? Type { get; set; }
 ```
 
 ## Property Value

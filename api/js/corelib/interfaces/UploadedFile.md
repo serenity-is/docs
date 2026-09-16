@@ -2,7 +2,7 @@
 
 # Interface: UploadedFile
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L307)
+Defined in: [src/ui/helpers/uploadhelper.tsx:306](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L306)
 
 Represents an uploaded file.
 
@@ -12,7 +12,7 @@ Represents an uploaded file.
 
 > `optional` **Filename**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:311](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L311)
+Defined in: [src/ui/helpers/uploadhelper.tsx:310](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L310)
 
 The stored file name.
 
@@ -22,6 +22,6 @@ The stored file name.
 
 > `optional` **OriginalName**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:315](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L315)
+Defined in: [src/ui/helpers/uploadhelper.tsx:314](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L314)
 
 The original file name.

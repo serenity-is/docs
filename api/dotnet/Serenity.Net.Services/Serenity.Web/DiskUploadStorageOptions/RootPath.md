@@ -3,7 +3,7 @@
 Gets or sets the root path.
 
 ```csharp
-public string RootPath { get; set; }
+public string? RootPath { get; set; }
 ```
 
 ## See Also

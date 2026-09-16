@@ -4,8 +4,8 @@ Scales an image and saves it to an upload storage file
 
 ```csharp
 protected virtual ScaleImageAsResult ScaleImageAs(object image, int width, int height, 
-    ImageScaleMode mode, string backgroundColor, ImageEncoderParams encoderParams, 
-    string targetFile, string primaryFile)
+    ImageScaleMode mode, string? backgroundColor, ImageEncoderParams encoderParams, 
+    string targetFile, string? primaryFile)
 ```
 
 | parameter | description |

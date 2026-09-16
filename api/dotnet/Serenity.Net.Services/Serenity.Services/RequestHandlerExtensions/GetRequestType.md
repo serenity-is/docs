@@ -3,7 +3,7 @@
 Gets the request type for the handler instance
 
 ```csharp
-public static Type GetRequestType(this IRequestHandler handler)
+public static Type? GetRequestType(this IRequestHandler handler)
 ```
 
 | parameter | description |

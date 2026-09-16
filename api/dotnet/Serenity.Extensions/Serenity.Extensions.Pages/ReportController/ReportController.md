@@ -4,7 +4,7 @@ Controller for rendering and downloading reports.
 
 ```csharp
 public ReportController(IReportFactory reportFactory, IReportRenderer reportRenderer, 
-    IReportCallbackInterceptor callbackInterceptor = null)
+    IReportCallbackInterceptor? callbackInterceptor = null)
 ```
 
 ## See Also

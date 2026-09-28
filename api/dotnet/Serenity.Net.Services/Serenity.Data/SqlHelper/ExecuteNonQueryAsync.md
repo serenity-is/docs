@@ -4,7 +4,7 @@ Executes the statement asynchronously.
 
 ```csharp
 public static Task<int> ExecuteNonQueryAsync(IDbConnection connection, string commandText, 
-    IDictionary<string, object?>? param = null, ILogger? logger = null, 
+    IReadOnlyDictionary<string, object?>? param = null, ILogger? logger = null, 
     CancellationToken cancellationToken = default)
 ```
 

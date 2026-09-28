@@ -26,18 +26,21 @@ The static [`Sql`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/Sql.md) 
 | `Sql.Coalesce(a, b, c)` | `COALESCE(a, b, c)` |
 | `Sql.Convert(type, field)` | `CONVERT(<type>, <field>)` |
 | `Sql.SubString(expr, start, length)` | `SUBSTRING(<expr>, <start>, <length>)` |
+| `Sql.Expr<T>(expression)` | Marks a SQL expression in a `QueryProjected` selector; see [Entity SQL Projections](entity-projections.md). |
 
 For example, inside a `SqlQuery`:
 
 ```csharp
 var fld = PersonRow.Fields;
 
-var query = new SqlQuery()
-    .From(fld)
+var query = new SqlQuery().From(fld);
+var displayName = query.Coalesce(fld.Nickname, fld.Firstname, "N/A");
+
+query
     .Select(fld.Firstname)
     .Select(Sql.Count())
     .Select(Sql.Sum(fld.Age))
-    .Select(query.Coalesce(fld.Nickname, fld.Firstname, "N/A"), "DisplayName");
+    .Select(displayName, "DisplayName");
 ```
 
 The `Coalesce` overload that takes the query adds non-expression values as parameters rather than concatenating them. Note it is called on the query instance (`query.Coalesce(...)`), not on the static `Sql` class.
@@ -47,17 +50,17 @@ The `Coalesce` overload that takes the query adds non-expression values as param
 For a `CASE` statement you use the query-based overload, which lets you chain `WHEN`/`THEN` pairs. `Then` and `Else` values that aren't expressions are added as parameters:
 
 ```csharp
-var query = new SqlQuery()
-    .From(fld)
-    .Select(fld.Firstname)
-    .Select(
-        query.Case(cb => cb
-            .When(fld.Age > 18).Then("Adult")
-            .Else("Minor")),
-        "AgeGroup");
+var query = new SqlQuery().From(fld);
+var ageGroup = query.Case(cb => cb
+    .When(fld.Age > 18).Then("Adult")
+    .Else("Minor"));
+
+query.Select(fld.Firstname).Select(ageGroup, "AgeGroup");
 ```
 
 This produces something like `CASE WHEN Age > @p1 THEN @p2 ELSE @p3 END AS AgeGroup`.
+
+`Sql.Expr<T>` is interpreted only inside a `QueryProjected` selector. Its SQL text is inserted as an expression, not bound as a parameter; use query parameters for values and never interpolate user input into the expression. See [Entity SQL Projections](entity-projections.md) for examples.
 
 ## `SqlSyntax`
 
@@ -175,25 +178,25 @@ There are also Serenity-specific overloads that accept an `ISqlQuery` (e.g. a `S
 
 [`ISqlOperationInterceptor`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ISqlOperationInterceptor.md) lets a connection interceptor the basic SQL operations performed through `SqlHelper` (execute, execute reader, execute scalar), mostly for testing. It is implemented by a mock connection — for example to assert on the generated SQL or to return canned results.
 
+Each callback receives a typed argument record instead of separate positional arguments. `InterceptExecuteNonQueryArgs` adds `ExpectedRows`, an `IQueryWithParams? Query`, and `GetNewId`; `InterceptExecuteReaderArgs` and `InterceptExecuteScalarArgs` each add a `SqlQuery? Query`. All three inherit `CommandText`, a read-only `Parameters` dictionary, `CancellationToken`, and `IsAsync`. The query is null for raw command-text operations; otherwise it provides the query associated with the execution.
+
 ```csharp
 public class FakeConnectionInterceptor : ISqlOperationInterceptor
 {
-    public OptionalValue<long?> ExecuteNonQuery(string commandText,
-        IDictionary<string, object> parameters, ExpectedRows expectedRows,
-        IQueryWithParams query, bool getNewId)
+    public OptionalValue<long?> ExecuteNonQuery(InterceptExecuteNonQueryArgs args)
     {
-        // Return default to let the operation run normally.
-        // Return a meaningful value (HasValue = true) to short-circuit it.
+        // Inspect args.CommandText, args.Parameters, args.Query,
+        // args.ExpectedRows, and args.GetNewId as needed.
         return default;
     }
 
-    public OptionalValue<IDataReader> ExecuteReader(string commandText,
-        IDictionary<string, object> parameters, SqlQuery query) => default;
+    public OptionalValue<IDataReader> ExecuteReader(InterceptExecuteReaderArgs args) => default;
 
-    public OptionalValue<object> ExecuteScalar(string commandText,
-        IDictionary<string, object> parameters, SqlQuery query) => default;
+    public OptionalValue<object> ExecuteScalar(InterceptExecuteScalarArgs args) => default;
 }
 ```
+
+The async callbacks default to forwarding to these synchronous methods with `IsAsync` set to `true`; override them to provide genuinely asynchronous interception. Async calls also carry their `CancellationToken` in the argument record. Return the default `OptionalValue` to continue with normal command execution, or set `HasValue` to short-circuit it.
 
 It does not intercept Dapper operations.
 

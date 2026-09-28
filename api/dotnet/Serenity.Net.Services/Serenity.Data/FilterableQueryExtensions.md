@@ -11,9 +11,9 @@ public static class FilterableQueryExtensions
 
 | name | description |
 | --- | --- |
-| static [Where&lt;T&gt;](FilterableQueryExtensions/Where.md)(…) | Adds a filter to query. |
+| static [Where&lt;T&gt;](FilterableQueryExtensions/Where.md)(…) | Adds a filter string to query. |
 | static [WhereEqual&lt;T&gt;](FilterableQueryExtensions/WhereEqual.md)(…) | Adds a where statement with equality filter to a query, and sets the parameter value with a parameter. |
 
 ## See Also
 
-* **Source:** *[FilterableQueryExtensions.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/QueryExtensions/FilterableQueryExtensions.cs)*
+* **Source:** *[FilterableQueryExtensions.cs](https://github.com/serenity-is/Serenity/blob/de0a044eefe64e0284eb9b4ee9ae4d70a32f1359/src/services/Data/QueryExtensions/FilterableQueryExtensions.cs)*

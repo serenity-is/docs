@@ -3,7 +3,7 @@
 Gets or sets the ID of the user who last updated the row.
 
 ```csharp
-public int? UpdateUserId { get; set; }
+public object? UpdateUserId { get; set; }
 ```
 
 ## See Also

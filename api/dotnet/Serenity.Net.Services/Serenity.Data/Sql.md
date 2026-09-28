@@ -17,6 +17,7 @@ public static class Sql
 | static [Convert](Sql/Convert.md)(…) | Creates a Convert() expression. |
 | static [Count](Sql/Count.md)() | Returns COUNT(*). |
 | static [Count](Sql/Count.md)(…) | Creates a COUNT() expression. (3 methods) |
+| static [Expr&lt;T&gt;](Sql/Expr.md)(…) | Marks a SQL expression as a projected value in a `QueryProjected` selector. |
 | static [Max](Sql/Max.md)(…) | Creates a MAX() expression. (3 methods) |
 | static [Min](Sql/Min.md)(…) | Creates a MIN() expression. (3 methods) |
 | static [SubString](Sql/SubString.md)(…) | Creates a SUBSTRING() expression. |
@@ -25,4 +26,4 @@ public static class Sql
 
 ## See Also
 
-* **Source:** *[Sql.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/SqlHelpers/Sql.cs)*
+* **Source:** *[Sql.cs](https://github.com/serenity-is/Serenity/blob/0c293f68db65ac83eb383b31fa543fcb5e4ad533/src/services/Data/SqlHelpers/Sql.cs)*

@@ -1,15 +1,16 @@
 # IFilterableQuery.Where method
 
-Filters a query by a filter string.
+Filters a query by a criteria.
 
 ```csharp
-public void Where(string filter)
+public void Where(ICriteria? criteria)
 ```
 
 | parameter | description |
 | --- | --- |
-| filter | Filter string. |
+| criteria | Filter criteria. |
 
 ## See Also
 
+* interface [ICriteria](../../Serenity/ICriteria.md)
 * interface [IFilterableQuery](../IFilterableQuery.md)

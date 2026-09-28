@@ -4,13 +4,15 @@ Executes the specified query on the connection asynchronously.
 
 ```csharp
 public static Task ExecuteAsync(this SqlInsert query, IDbConnection connection, 
-    ILogger? logger = null, CancellationToken cancellationToken = default)
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null, 
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
+| parameters | Values that override the query's parameters for this execution. |
 | logger | The logger. |
 | cancellationToken | The cancellation token. |
 
@@ -31,7 +33,8 @@ Executes the specified delete query on the connection asynchronously and returns
 
 ```csharp
 public static Task<int> ExecuteAsync(this SqlDelete query, IDbConnection connection, 
-    ExpectedRows expectedRows = ExpectedRows.One, ILogger? logger = null, 
+    ExpectedRows expectedRows = ExpectedRows.One, 
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null, 
     CancellationToken cancellationToken = default)
 ```
 
@@ -40,6 +43,7 @@ public static Task<int> ExecuteAsync(this SqlDelete query, IDbConnection connect
 | query | The query. |
 | connection | The connection. |
 | expectedRows | The expected rows. Used to validate the expected number of affected rows. |
+| parameters | Values that override the query's parameters for this execution. |
 | logger | The logger. |
 | cancellationToken | The cancellation token. |
 
@@ -61,7 +65,8 @@ Executes the specified update query on the connection asynchronously and returns
 
 ```csharp
 public static Task<int> ExecuteAsync(this SqlUpdate query, IDbConnection connection, 
-    ExpectedRows expectedRows = ExpectedRows.One, ILogger? logger = null, 
+    ExpectedRows expectedRows = ExpectedRows.One, 
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null, 
     CancellationToken cancellationToken = default)
 ```
 
@@ -70,6 +75,7 @@ public static Task<int> ExecuteAsync(this SqlUpdate query, IDbConnection connect
 | query | The query. |
 | connection | The connection. |
 | expectedRows | The expected rows. Used to validate the expected number of affected rows. |
+| parameters | Values that override the query's parameters for this execution. |
 | logger | The logger. |
 | cancellationToken | The cancellation token. |
 

@@ -3,10 +3,10 @@
 The ID of the user who inserted the row.
 
 ```csharp
-public Int32Field InsertUserId;
+public Field InsertUserId;
 ```
 
 ## See Also
 
-* class [Int32Field](../../../Serenity.Net.Services/Serenity.Data/Int32Field.md)
+* class [Field](../../../Serenity.Net.Services/Serenity.Data/Field.md)
 * class [LoggingRowFields](../LoggingRowFields.md)

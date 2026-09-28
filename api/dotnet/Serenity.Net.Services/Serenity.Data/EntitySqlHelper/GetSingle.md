@@ -3,13 +3,15 @@
 Gets the single entity returned by executing the query. The values are loaded into the loader row of the query.
 
 ```csharp
-public static bool GetSingle(this SqlQuery query, IDbConnection connection)
+public static bool GetSingle(this SqlQuery query, IDbConnection connection, 
+    IReadOnlyDictionary<string, object?>? parameters = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
+| parameters | Values that override the query's parameters for this execution. |
 
 ## Return Value
 

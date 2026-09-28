@@ -4,13 +4,15 @@ Executes the statement asynchronously returning a scalar value.
 
 ```csharp
 public static Task<object?> ExecuteScalarAsync(IDbConnection connection, SqlQuery query, 
-    ILogger? logger = null, CancellationToken cancellationToken = default)
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null, 
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
 | --- | --- |
 | connection | The connection. |
 | query | The select query. |
+| parameters | Parameter values that override the query's parameters. |
 | logger | The logger. |
 | cancellationToken | The cancellation token. |
 
@@ -37,7 +39,7 @@ Executes the statement asynchronously returning a scalar value.
 
 ```csharp
 public static Task<object?> ExecuteScalarAsync(IDbConnection connection, string commandText, 
-    IDictionary<string, object?>? param = null, ILogger? logger = null, 
+    IReadOnlyDictionary<string, object?>? param = null, ILogger? logger = null, 
     CancellationToken cancellationToken = default)
 ```
 

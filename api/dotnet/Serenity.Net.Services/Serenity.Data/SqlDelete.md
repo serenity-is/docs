@@ -17,7 +17,7 @@ public sealed class SqlDelete : QueryWithParams, IFilterableQuery
 | --- | --- |
 | [SqlDelete](SqlDelete/SqlDelete.md)(…) | Class to generate queries of form `DELETE FROM tablename WHERE [conditions]`. |
 | override [ToString](SqlDelete/ToString.md)() | Gets string representation of the query. |
-| [Where](SqlDelete/Where.md)(…) | Adds a new condition to the WHERE part of the query with an "AND" between. (2 methods) |
+| [Where](SqlDelete/Where.md)(…) | Adds a criteria to the WHERE part of the query with an "AND" between. |
 | static [Format](SqlDelete/Format.md)(…) | Formats a DELETE query. |
 
 ## Remarks
@@ -28,4 +28,4 @@ Creates a new SqlDelete query.
 
 * class [QueryWithParams](./QueryWithParams.md)
 * interface [IFilterableQuery](./IFilterableQuery.md)
-* **Source:** *[SqlDelete.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/FluentSql/SqlDelete.cs)*
+* **Source:** *[SqlDelete.cs](https://github.com/serenity-is/Serenity/blob/de0a044eefe64e0284eb9b4ee9ae4d70a32f1359/src/services/Data/FluentSql/SqlDelete.cs)*

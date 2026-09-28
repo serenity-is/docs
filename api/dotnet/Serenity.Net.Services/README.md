@@ -58,6 +58,7 @@
 | class [DateTimeKindAttribute](./Serenity.Data/DateTimeKindAttribute.md) | Determines Time kind for a DateTime field. |
 | class [DateTimeOffsetField](./Serenity.Data/DateTimeOffsetField.md) | Field with a DateTimeOffset value. |
 | class [DecimalField](./Serenity.Data/DecimalField.md) | Field with a Decimal value. |
+| class [DefaultConnectionAttribute](./Serenity.Data/DefaultConnectionAttribute.md) | Specifies the "Default" connection key. |
 | class [DefaultConnectionStrings](./Serenity.Data/DefaultConnectionStrings.md) | The default connection string source. |
 | class [DefaultRowFieldsProvider](./Serenity.Data/DefaultRowFieldsProvider.md) | Default row fields instance provider, that resolves row fields instances using ActivatorUtilities.CreateInstance through a IServiceProvider. |
 | class [DefaultRowTypeRegistry](./Serenity.Data/DefaultRowTypeRegistry.md) | Default row type registry |
@@ -74,7 +75,8 @@
 | static class [EntityFieldExtensions](./Serenity.Data/EntityFieldExtensions.md) | Contains static extension methods for Field objects. |
 | static class [EntityQueryExtensions](./Serenity.Data/EntityQueryExtensions.md) | Extensions for objects implementing the [`IFilterableQuery`](./Serenity.Data/IFilterableQuery.md) interface. |
 | static class [EntitySqlHelper](./Serenity.Data/EntitySqlHelper.md) | Contains extension methods to query entities directly. |
-| static class [EntitySqlQueryExtensions](./Serenity.Data/EntitySqlQueryExtensions.md) | Extensions for [`SqlQuery`](./Serenity.Data/SqlQuery.md). |
+| static class [EntitySqlQueryExtensions](./Serenity.Data/EntitySqlQueryExtensions.md) | Extensions for [`SqlQuery`](./Serenity.Data/SqlQuery.md) related to entities. |
+| static class [EntitySqlQueryProjection](./Serenity.Data/EntitySqlQueryProjection.md) | Extensions for SQL query projections. |
 | class [EnumField&lt;TEnum&gt;](./Serenity.Data/EnumField-1.md) | Field with an Enum value. |
 | enum [ExpectedRows](./Serenity.Data/ExpectedRows.md) | Expected number of rows enumeration for SQL Update / Delete operations. This enumeration is used to avoid updating/deleting multiple records by mistake when one forgets to add a WHERE statement. |
 | class [FallbackRowFieldsProvider](./Serenity.Data/FallbackRowFieldsProvider.md) | Fallback row fields provider for cases where a IServiceProvider is not available. |
@@ -133,8 +135,17 @@
 | class [Int16Field](./Serenity.Data/Int16Field.md) | Field with an Int16 value. |
 | class [Int32Field](./Serenity.Data/Int32Field.md) | Field with an Int32 value. |
 | class [Int64Field](./Serenity.Data/Int64Field.md) | Field with an Int64 value. |
+| record [InterceptExecuteNonQueryArgs](./Serenity.Data/InterceptExecuteNonQueryArgs.md) | Arguments for intercepting a non-query SQL operation. |
+| record [InterceptExecuteReaderArgs](./Serenity.Data/InterceptExecuteReaderArgs.md) | Arguments for intercepting a SQL reader operation. |
+| record [InterceptExecuteScalarArgs](./Serenity.Data/InterceptExecuteScalarArgs.md) | Arguments for intercepting a scalar SQL operation. |
+| record [InterceptFindRowArgs](./Serenity.Data/InterceptFindRowArgs.md) | Arguments for intercepting an entity find operation. |
+| record [InterceptListRowsArgs](./Serenity.Data/InterceptListRowsArgs.md) | Arguments for intercepting an entity list or count operation. |
+| record [InterceptManipulateRowArgs](./Serenity.Data/InterceptManipulateRowArgs.md) | Arguments for intercepting an entity row manipulation operation. |
+| abstract record [InterceptOperationArgs](./Serenity.Data/InterceptOperationArgs.md) | Base arguments shared by intercepted operations. |
+| abstract record [InterceptSqlOperationArgs](./Serenity.Data/InterceptSqlOperationArgs.md) | Base arguments shared by SQL interceptor operations. |
 | interface [IParentIdRow](./Serenity.Data/IParentIdRow.md) | Interface for rows that have a ParentId field. |
 | interface [IPasswordRow](./Serenity.Data/IPasswordRow.md) | An interface that provides access to the password hash and salt fields. |
+| interface [IProjectedQuery&lt;TResult&gt;](./Serenity.Data/IProjectedQuery-1.md) | A reusable projected query that can be executed with per-call parameter overrides. |
 | interface [IQueryWithParams](./Serenity.Data/IQueryWithParams.md) | Interface for objects setting parameters by PARAM method (like SqlInsert, SqlUpdate, SqlDelete...). |
 | interface [IRow&lt;TFields&gt;](./Serenity.Data/IRow-1.md) | Base interface for Rows with a known Fields type |
 | interface [IRow](./Serenity.Data/IRow.md) | Row interface |
@@ -218,6 +229,7 @@
 | class [UnaryCriteria](./Serenity.Data/UnaryCriteria.md) | Unary criteria with one operand and operator |
 | class [UnitOfWork](./Serenity.Data/UnitOfWork.md) | Unit of work implementation. |
 | class [UpperFunctionCriteria](./Serenity.Data/UpperFunctionCriteria.md) | Criteria object that identifies an UPPER function call |
+| class [UserEntityOptions](./Serenity.Data/UserEntityOptions.md) | Configures the user row type and identifier storage settings, including the user table and ID column names. |
 | class [ValueCriteria](./Serenity.Data/ValueCriteria.md) | Criteria object with one value |
 | class [VariantField](./Serenity.Data/VariantField.md) | Field with a Variant (e.g. SQL VARIANT) value. |
 | class [WrappedConnection](./Serenity.Data/WrappedConnection.md) | Wraps a connection to add current transaction and dialect support. |
@@ -238,6 +250,7 @@
 | class [DatePartAttribute](./Serenity.Data.Mapping/DatePartAttribute.md) | DatePart expression attribute |
 | class [ExpressionAttribute](./Serenity.Data.Mapping/ExpressionAttribute.md) | Specifies SQL expression this property corresponds to. You may use brackets ([]) to escape identifiers. Brackets will be converted to database specific quotes. |
 | class [ForeignKeyAttribute](./Serenity.Data.Mapping/ForeignKeyAttribute.md) | Specifies that this property is a foreign key to another field in a primary key table. There is no need for foreign key to exist in database actually. It is not checked. This is mostly used for joins. |
+| class [ForeignRowAttribute](./Serenity.Data.Mapping/ForeignRowAttribute.md) | Determines the foreign key property on this row for a foreign row property. This is used to locate the FK property. |
 | class [IdentityAttribute](./Serenity.Data.Mapping/IdentityAttribute.md) | Marks the field as Identity, a combination of PrimaryKey, AutoIncrement and NotNull flags. |
 | class [InnerJoinAttribute](./Serenity.Data.Mapping/InnerJoinAttribute.md) | INNER JOIN type. |
 | interface [ISqlJoin](./Serenity.Data.Mapping/ISqlJoin.md) | Interface for SQL join types. |
@@ -264,6 +277,8 @@
 | class [UniqueAttribute](./Serenity.Data.Mapping/UniqueAttribute.md) | Defines a unique constraint on the field. |
 | class [UniqueConstraintAttribute](./Serenity.Data.Mapping/UniqueConstraintAttribute.md) | Adds a unique constraint check to the row. |
 | class [UpdatableExtensionAttribute](./Serenity.Data.Mapping/UpdatableExtensionAttribute.md) | Marks the JOIN as an updatable extension. |
+| class [UserIdFieldTypeAttribute](./Serenity.Data.Mapping/UserIdFieldTypeAttribute.md) | Declares that the field generated for this property should be of IDFieldType specified [`UserEntityOptions`](./Serenity.Data/UserEntityOptions.md). |
+| class [UserIdJoinKeyAttribute](./Serenity.Data.Mapping/UserIdJoinKeyAttribute.md) | Declares that the the join key (ForeignKeyAttribute) for this property should be based on [`UserEntityOptions`](./Serenity.Data/UserEntityOptions.md), e.g. use its TableName and IdColumnName properties. |
 
 ## Serenity.Data.Schema namespace
 

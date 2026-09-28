@@ -12,6 +12,7 @@ public static class MigrationUtils
 | name | description |
 | --- | --- |
 | static [AddOracleIdentity](MigrationUtils/AddOracleIdentity.md)(…) | Adds an Oracle sequence and trigger to generate identity values for the specified column. |
+| static [AsUserIdType](MigrationUtils/AsUserIdType.md)(…) | Sets the column type based on the UserEntityOptions.IdFieldType, which can be Int32Field, Int64Field, StringField, or GuidField. |
 | static [AutoIncrement](MigrationUtils/AutoIncrement.md)(…) | Declares column as auto increment (e.g. Identity()) if the database is something other than Oracle, defines an Oracle sequence otherwise. It also calls NotNullable() as it is not possible for auto increment / sequence columns to be nullable. This assumes the column will NOT be set as PrimaryKey(), just as an auto incrementing value. As MySql does not support AUTO_INCREMENT without primary key or an index, this first creates the column as a regular one, then creates an index and modifies it to be an AUTO_INCREMENT. |
 | static [CreateTableWithId32](MigrationUtils/CreateTableWithId32.md)(…) | Please prefer IdentityKey(this) on the fluent column builder |
 | static [CreateTableWithId64](MigrationUtils/CreateTableWithId64.md)(…) | Please prefer IdentityKey(this) on the fluent column builder |
@@ -25,7 +26,8 @@ public static class MigrationUtils
 | static [IsPostgres](MigrationUtils/IsPostgres.md)(…) | Determines whether the migration is running against a Postgres database. |
 | static [IsSqlite](MigrationUtils/IsSqlite.md)(…) | Determines whether the migration is running against a Sqlite database. |
 | static [IsSqlServer](MigrationUtils/IsSqlServer.md)(…) | Determines whether the migration is running against a SqlServer database. |
+| static [UserIdForeignKey&lt;TNext,TNextFk&gt;](MigrationUtils/UserIdForeignKey.md)(…) | Sets the foreign key for a user ID column based on the UserEntityOptions, linking it to the "Users" table and "UserId" column. |
 
 ## See Also
 
-* **Source:** *[MigrationUtils.cs](https://github.com/serenity-is/Serenity/blob/25d0bf6e6c1b7983e41847d16761292df1c71db5/common-features/src/extensions/Modules/MigrationUtils/MigrationUtils.cs)*
+* **Source:** *[MigrationUtils.cs](https://github.com/serenity-is/Serenity/blob/946b4765d8a337deec82c919259aeeb4b626bd6f/common-features/src/extensions/Modules/MigrationUtils/MigrationUtils.cs)*

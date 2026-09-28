@@ -114,6 +114,12 @@ const inputRef = useRef<HTMLInputElement>();
 return <input ref={inputRef} />;
 ```
 
+`RefObject<T>.current` has type `T | null` and starts as `null`. Check it before use; optional chaining is convenient when the element may not have been assigned yet:
+
+```tsx
+inputRef.current?.focus();
+```
+
 ### useSignal and useUpdatableComputed
 
 `useSignal` is an alias for `signal`, and `useUpdatableComputed` creates computed signals that are only recalculated when you call `update()`. See [Signals and Reactivity](signals.md).
@@ -130,13 +136,20 @@ useImperativeHandle(ref, () => ({ focus: () => inputRef.current?.focus() }));
 
 ## Conditional Rendering
 
-The domwise source defines a `Show` component for declarative conditional rendering (similar to Solid's `<Show>`), but it is not currently exported from the `@serenity-is/domwise` package entry, so it is not yet available to template users. For conditional rendering, use signals and JSX directly:
+`Show` is exported by both `@serenity-is/domwise` and `@serenity-is/corelib`. It renders `children` when `when` is truthy and `fallback` otherwise; `when` can be a plain value or a signal. Function-valued branches are evaluated when shown, and previous branch content is disposed by default when the condition changes or the rendered element is disposed.
 
 ```tsx
-const loggedIn = signal(false);
+import { Show, signal } from "@serenity-is/corelib";
 
-{loggedIn.value ? <Dashboard /> : <Login />}
+const loggedIn = signal(false);
+return (
+    <Show when={loggedIn} fallback={<Login />}>
+        <Dashboard />
+    </Show>
+);
 ```
+
+Set `autoDispose={false}` only when the branch content's lifecycle is managed elsewhere.
 
 ## Components or Widgets?
 

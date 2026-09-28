@@ -3,7 +3,7 @@
 Gets or sets the ID of the user who inserted the row.
 
 ```csharp
-public int? InsertUserId { get; set; }
+public object? InsertUserId { get; set; }
 ```
 
 ## See Also

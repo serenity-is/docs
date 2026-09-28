@@ -76,6 +76,7 @@
       * [SQL Helpers & Settings](framework/data-access/sql-helpers.md)
       * [Query Extensions](framework/data-access/query-extensions.md)
       * [Joins & Aliases](framework/data-access/joins-aliases.md)
+      * [Entity SQL Projections](framework/data-access/entity-projections.md)
       * [SQL Query Utilities](framework/data-access/sql-query-utilities.md)
       * [SQL Connections](framework/data-access/sql-connections.md)
       * [SQL Dialects](framework/data-access/sql-dialects.md)

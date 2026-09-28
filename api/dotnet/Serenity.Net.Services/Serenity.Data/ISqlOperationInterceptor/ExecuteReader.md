@@ -3,18 +3,15 @@
 Intercepts the [`SqlHelper`](../SqlHelper.md)`ExecuteReader` method.
 
 ```csharp
-public OptionalValue<IDataReader> ExecuteReader(string commandText, 
-    IDictionary<string, object?>? parameters, SqlQuery? query)
+public OptionalValue<IDataReader> ExecuteReader(InterceptExecuteReaderArgs args)
 ```
 
 | parameter | description |
 | --- | --- |
-| commandText | The command text. |
-| parameters | The parameters. |
-| query | The query. |
+| args | The operation arguments. |
 
 ## See Also
 
 * struct [OptionalValue&lt;T&gt;](../../Serenity/OptionalValue-1.md)
-* class [SqlQuery](../SqlQuery.md)
+* record [InterceptExecuteReaderArgs](../InterceptExecuteReaderArgs.md)
 * interface [ISqlOperationInterceptor](../ISqlOperationInterceptor.md)

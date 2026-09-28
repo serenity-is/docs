@@ -11,9 +11,11 @@ public interface IFilterableQuery : IQueryWithParams
 
 | name | description |
 | --- | --- |
-| [Where](IFilterableQuery/Where.md)(…) | Filters a query by a filter string. |
+| [GetWhereClause](IFilterableQuery/GetWhereClause.md)() | Gets the WHERE conditions as SQL text, without the WHERE keyword. |
+| [GetWhereCriteria](IFilterableQuery/GetWhereCriteria.md)() | Gets the criteria passed to the query's WHERE method. |
+| [Where](IFilterableQuery/Where.md)(…) | Filters a query by a criteria. |
 
 ## See Also
 
 * interface [IQueryWithParams](./IQueryWithParams.md)
-* **Source:** *[IFilterableQuery.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/QueryModel/IFilterableQuery.cs)*
+* **Source:** *[IFilterableQuery.cs](https://github.com/serenity-is/Serenity/blob/de0a044eefe64e0284eb9b4ee9ae4d70a32f1359/src/services/Data/QueryModel/IFilterableQuery.cs)*

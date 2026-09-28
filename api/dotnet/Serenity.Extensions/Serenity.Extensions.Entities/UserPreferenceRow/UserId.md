@@ -3,7 +3,7 @@
 The ID of the user the preference belongs to.
 
 ```csharp
-public int? UserId { get; set; }
+public object? UserId { get; set; }
 ```
 
 ## See Also

@@ -731,6 +731,9 @@ The `Alias` and join classes (`InnerJoin`, `LeftJoin`, `RightJoin`,
 `CrossApply`, `OuterApply`) are described on the
 [Joins & Aliases](joins-aliases.md) page.
 
+For typed row-field joins with alias-aware `ON` callbacks, or joins inferred
+from foreign-key metadata, see [typed joins and `JoinVia`](joins-aliases.md#using-joins-in-queries).
+
 ## Subqueries
 
 `SqlQuery` supports subqueries in the `FROM` clause (derived tables) and in the

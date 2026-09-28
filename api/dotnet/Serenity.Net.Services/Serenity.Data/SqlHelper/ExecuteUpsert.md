@@ -5,7 +5,7 @@ Executes an UPSERT (insert or update) query on the connection and returns the nu
 ```csharp
 public static int ExecuteUpsert(this SqlInsert query, IDbConnection connection, 
     IEnumerable<string> keyFields, ExpectedRows expectedRows = ExpectedRows.Ignore, 
-    ILogger? logger = null)
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null)
 ```
 
 | parameter | description |
@@ -14,6 +14,7 @@ public static int ExecuteUpsert(this SqlInsert query, IDbConnection connection,
 | connection | The connection. |
 | keyFields | List of key fields (e.g. primary key columns) used to match an existing record. |
 | expectedRows | The expected rows. Used to validate the expected number of affected rows. |
+| parameters | Values that override the query's parameters for this execution. |
 | logger | The logger. |
 
 ## Return Value

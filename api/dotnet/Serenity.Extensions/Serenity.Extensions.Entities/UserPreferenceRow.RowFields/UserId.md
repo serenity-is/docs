@@ -3,10 +3,10 @@
 The ID of the user the preference belongs to.
 
 ```csharp
-public readonly Int32Field UserId;
+public readonly Field UserId;
 ```
 
 ## See Also
 
-* class [Int32Field](../../../Serenity.Net.Services/Serenity.Data/Int32Field.md)
+* class [Field](../../../Serenity.Net.Services/Serenity.Data/Field.md)
 * class [RowFields](../UserPreferenceRow.RowFields.md)

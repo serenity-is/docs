@@ -3,7 +3,8 @@
 Executes the specified callback for all rows returned from executing the query.
 
 ```csharp
-public static int ForEach(this SqlQuery query, IDbConnection connection, Action callBack)
+public static int ForEach(this SqlQuery query, IDbConnection connection, Action callBack, 
+    IReadOnlyDictionary<string, object?>? parameters = null)
 ```
 
 | parameter | description |
@@ -11,6 +12,7 @@ public static int ForEach(this SqlQuery query, IDbConnection connection, Action 
 | query | The query. |
 | connection | The connection. |
 | callBack | The call back. |
+| parameters | Values that override the query's parameters for this execution. |
 
 ## Return Value
 
@@ -29,7 +31,7 @@ Executes the specified data reader callback for all rows returned from executing
 
 ```csharp
 public static int ForEach(this SqlQuery query, IDbConnection connection, 
-    Action<IDataReader> callback)
+    Action<IDataReader> callback, IReadOnlyDictionary<string, object?>? parameters = null)
 ```
 
 | parameter | description |
@@ -37,6 +39,7 @@ public static int ForEach(this SqlQuery query, IDbConnection connection,
 | query | The query. |
 | connection | The connection. |
 | callback | The call back. |
+| parameters | Values that override the query's parameters for this execution. |
 
 ## Return Value
 

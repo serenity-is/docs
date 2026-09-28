@@ -44,4 +44,4 @@ public static class EntityConnectionExtensions
 
 ## See Also
 
-* **Source:** *[EntityConnectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Entity/Extensions/EntityConnectionExtensions.cs)*
+* **Source:** *[EntityConnectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/1547fabf1541054fe943b6a29c0d181fd84080e0/src/services/Entity/Extensions/EntityConnectionExtensions.cs)*

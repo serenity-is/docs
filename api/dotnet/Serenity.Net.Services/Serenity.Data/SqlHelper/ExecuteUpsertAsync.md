@@ -5,7 +5,8 @@ Executes an UPSERT (insert or update) query on the connection asynchronously and
 ```csharp
 public static Task<int> ExecuteUpsertAsync(this SqlInsert query, IDbConnection connection, 
     IEnumerable<string> keyFields, ExpectedRows expectedRows = ExpectedRows.Ignore, 
-    ILogger? logger = null, CancellationToken cancellationToken = default)
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null, 
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -14,6 +15,7 @@ public static Task<int> ExecuteUpsertAsync(this SqlInsert query, IDbConnection c
 | connection | The connection. |
 | keyFields | List of key fields (e.g. primary key columns) used to match an existing record. |
 | expectedRows | The expected rows. Used to validate the expected number of affected rows. |
+| parameters | Values that override the query's parameters for this execution. |
 | logger | The logger. |
 | cancellationToken | The cancellation token. |
 

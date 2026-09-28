@@ -4,13 +4,14 @@ Executes the statement returning a scalar value.
 
 ```csharp
 public static object? ExecuteScalar(IDbConnection connection, SqlQuery query, 
-    ILogger? logger = null)
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | connection | The connection. |
 | query | The select query. |
+| parameters | Parameter values that override the query's parameters. |
 | logger | The logger. |
 
 ## Return Value
@@ -36,7 +37,7 @@ Executes the statement returning a scalar value.
 
 ```csharp
 public static object? ExecuteScalar(IDbConnection connection, string commandText, 
-    IDictionary<string, object?>? param = null, ILogger? logger = null)
+    IReadOnlyDictionary<string, object?>? param = null, ILogger? logger = null)
 ```
 
 | parameter | description |

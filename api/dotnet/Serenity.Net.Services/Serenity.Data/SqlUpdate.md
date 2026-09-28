@@ -16,14 +16,13 @@ public class SqlUpdate : QueryWithParams, IFilterableQuery, ISetFieldByStatement
 | [Dec](SqlUpdate/Dec.md)(…) | Decreases a fields value. (2 methods) |
 | [Dialect](SqlUpdate/Dialect.md)(…) | Sets the dialect (SQL server type / version) for query. |
 | [GetFieldExpressions](SqlUpdate/GetFieldExpressions.md)() | Returns field and value expression pairs. |
-| [GetWhereClause](SqlUpdate/GetWhereClause.md)() | Returns the WHERE clause (excluding WHERE keyword). |
 | [GetWhereConditions](SqlUpdate/GetWhereConditions.md)() | Returns the WHERE conditions. |
 | [Inc](SqlUpdate/Inc.md)(…) | Increases a fields value. (2 methods) |
 | [SetNull](SqlUpdate/SetNull.md)(…) | Sets field value to NULL. |
 | [SetTo](SqlUpdate/SetTo.md)(…) | Sets field value to the expression. (2 methods) |
 | [TableName](SqlUpdate/TableName.md)() | Gets the table name. |
 | override [ToString](SqlUpdate/ToString.md)() | Gets string representation of SqlUpdate query. |
-| [Where](SqlUpdate/Where.md)(…) | Adds a condition to WHERE clause of the query. |
+| [Where](SqlUpdate/Where.md)(…) | Adds a criteria to WHERE clause of the query. |
 | static [Format](SqlUpdate/Format.md)(…) | Formats an SQL UPDATE statement. |
 | static [RemoveT0Reference](SqlUpdate/RemoveT0Reference.md)(…) | Removes the t0 reference from an SQL field reference. |
 
@@ -36,4 +35,4 @@ To determine updated field values, Set(field, value) should be called several ti
 * class [QueryWithParams](./QueryWithParams.md)
 * interface [IFilterableQuery](./IFilterableQuery.md)
 * interface [ISetFieldByStatement](./ISetFieldByStatement.md)
-* **Source:** *[SqlUpdate.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/FluentSql/SqlUpdate.cs)*
+* **Source:** *[SqlUpdate.cs](https://github.com/serenity-is/Serenity/blob/de0a044eefe64e0284eb9b4ee9ae4d70a32f1359/src/services/Data/FluentSql/SqlUpdate.cs)*

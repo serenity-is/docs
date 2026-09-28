@@ -198,6 +198,25 @@ update(); // forces recalculation
 
 Signal subscriptions created through JSX bindings and `observeSignal` are registered as disposing listeners on the DOM node that owns them. When the node is removed (for example via `Fluent.remove()` or `empty()`), the subscriptions are disposed automatically. This is the same disposal mechanism that Serenity widgets use, so reactive UI and widgets clean up together.
 
+### Scoping subscriptions with `withLifecycleRoot`
+
+The lifecycle root is not installed automatically during JSX construction. Use `withLifecycleRoot(root, callback)` to temporarily set it, and pass `{ useLifecycleRoot: true }` to `observeSignal` to associate that subscription with the root's `disposing` event:
+
+```tsx
+import { observeSignal, signal, withLifecycleRoot } from "@serenity-is/corelib";
+
+const root = document.createElement("div");
+const count = signal(0);
+
+withLifecycleRoot(root, () => {
+    observeSignal(count, ({ newValue }) => {
+        root.textContent = String(newValue);
+    }, { useLifecycleRoot: true });
+});
+```
+
+`withLifecycleRoot` restores the previous root after the callback returns, even if it throws. Keep the callback synchronous: an `async` callback returns a promise immediately, so the previous root is restored before code after an `await` runs. Use `observeSignal`'s `lifecycleNode` option when a subscription should be tied directly to a specific node instead.
+
 ## Reactive or Imperative?
 
 Signals are the recommended way to manage state that drives the DOM. They give you fine-grained updates without a virtual DOM, and they compose well with Serenity widgets.

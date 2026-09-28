@@ -3,7 +3,7 @@
 Dumps the specified SQL, replacing parameters with SQL constants, fixing brackets and database caret references.
 
 ```csharp
-public static string? Dump(string? sql, IDictionary<string, object?>? parameters, 
+public static string? Dump(string? sql, IReadOnlyDictionary<string, object?>? parameters, 
     ISqlDialect? dialect = null)
 ```
 

@@ -7,6 +7,11 @@ Fields for a [`LoggingRow`](./LoggingRow-1.md).
 public class LoggingRowFields : RowFieldsBase
 ```
 
+| parameter | description |
+| --- | --- |
+| tableName | Tablename |
+| fieldPrefix | Field prefix |
+
 ## Public Members
 
 | name | description |
@@ -17,7 +22,11 @@ public class LoggingRowFields : RowFieldsBase
 | [UpdateDate](LoggingRowFields/UpdateDate.md) | The date and time the row was last updated. |
 | [UpdateUserId](LoggingRowFields/UpdateUserId.md) | The ID of the user who last updated the row. |
 
+## Remarks
+
+Initializes a new instance of the [`LoggingRowFields`](./LoggingRowFields.md) class.
+
 ## See Also
 
 * class [RowFieldsBase](../../Serenity.Net.Services/Serenity.Data/RowFieldsBase.md)
-* **Source:** *[LoggingRow.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/BaseEntities/LoggingRow.cs)*
+* **Source:** *[LoggingRow.cs](https://github.com/serenity-is/Serenity/blob/946b4765d8a337deec82c919259aeeb4b626bd6f/common-features/src/extensions/Modules/BaseEntities/LoggingRow.cs)*

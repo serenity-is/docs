@@ -1,23 +1,24 @@
 # Query Extensions
 
-The fluent SQL builders expose a small set of extension methods that add convenience on top of the query interfaces. They come from three static classes:
+The fluent SQL builders expose extension methods that add convenience on top of their query interfaces. The core query extensions come from three static classes:
 
 - [`FilterableQueryExtensions`](#filterablequeryextensions) — adds typed `WHERE` filters
 - [`QueryWithParamsExtensions`](#querywithparamsextensions) — adds and sets parameters
 - [`SetFieldByStatementExtensions`](#setfieldbystatementextensions) — assigns values in `INSERT`/`UPDATE`
 
-Each extension targets an interface rather than a concrete builder, so the methods apply to any builder that implements that interface — for example `SqlQuery` (filtering and parameters), and `SqlInsert`/`SqlUpdate` (setting values and parameters).
+These core extensions target an interface rather than a concrete builder, so the methods apply to any builder that implements that interface — for example `SqlQuery` (filtering and parameters), and `SqlInsert`/`SqlUpdate` (setting values and parameters). The entity query extensions described below add row-aware sources and subqueries.
 
 ## `FilterableQueryExtensions`
 
-[`FilterableQueryExtensions`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/FilterableQueryExtensions.md) adds methods to anything implementing [`IFilterableQuery`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/IFilterableQuery.md) (which already has a `Where(string)` method).
+[`FilterableQueryExtensions`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/FilterableQueryExtensions.md) adds methods to anything implementing [`IFilterableQuery`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/IFilterableQuery.md). The interface itself defines `Where(ICriteria?)`; `Where(string)` is an extension method.
 
 | Method | What it does |
 | --- | --- |
-| `Where(ICriteria filter)` | Adds an `AND` condition built from a [`Criteria`](criteria.md) object. Empty criteria are skipped. |
-| `WhereEqual(field, value)` | Adds an equality filter (`field = @param`) and adds the value as a parameter. |
+| `Where(ICriteria? criteria)` (interface method) | Adds an `AND` condition built from a [`Criteria`](criteria.md) object. Empty criteria are skipped. |
+| `Where(string filter)` (extension method) | Adds one raw criteria expression. Call it repeatedly to add more `AND` conditions. |
+| `WhereEqual(field, value)` (extension method) | Adds an equality filter (`field = @param`) and adds the value as a parameter. |
 
-`Where(ICriteria)` is what lets you build filters from `Criteria` expressions instead of raw SQL strings. This is the safe, parameterized way to filter a query:
+`Where(ICriteria)` lets you build filters from `Criteria` expressions instead of raw SQL strings. Values in criteria expressions are parameterized:
 
 ```csharp
 var fld = PersonRow.Fields;
@@ -30,6 +31,8 @@ var query = new SqlQuery()
 
 This produces `WHERE Age > @p1 AND Country = @p2` rather than concatenating the values into the SQL. See [Criteria Objects](criteria.md) for how the `&`/`==` operators build the criteria.
 
+`Where(string)` wraps the supplied string as a criteria expression; it does not parameterize values interpolated into that string. Use it only for trusted SQL fragments, and bind values separately with query parameters as shown below.
+
 `WhereEqual` is a shortcut for the common single-field equality case:
 
 ```csharp
@@ -40,6 +43,8 @@ var query = new SqlQuery()
 ```
 
 It is equivalent to `.Where(fld.PersonId == 5)`, and the value is always added as a parameter.
+
+`IFilterableQuery` also exposes `GetWhereCriteria()` and `GetWhereClause()`. The former returns a read-only list of criteria passed to `Where`; the latter returns the combined conditions joined with `AND`, without the `WHERE` keyword. Its parameters are added when `Where` is called, so reading the clause repeatedly does not add duplicate parameters.
 
 ## `QueryWithParamsExtensions`
 
@@ -88,9 +93,33 @@ new SqlUpdate(fld.TableName)
 
 `Set(field, value)` adds the value as a parameter and calls `SetTo` with that parameter name. See [SQL Data Manipulation](sql-data-manipulation.md) for `Set`, `SetTo`, and `SetNull` in full.
 
+## Row-Aware Sources and Subqueries
+
+[`EntitySqlQueryExtensions`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/EntitySqlQueryExtensions.md) adds helpers for using row fields as query sources:
+
+- `From(row, out fields)` adds the row as a source, sets it as the query's `INTO` target, and returns the fields instance with the alias actually used by the query. An overload accepts an explicit alias.
+- `SubQueryFrom(fields, out aliased)` creates a child `SqlQuery` and adds the fields as its source without setting an `INTO` target. If the fields use the default `T0` alias, an available alias is assigned and returned through `aliased`.
+- `WithSelf(out reference)` assigns the query itself to `reference` and returns the same query, making the parent available from within a fluent chain.
+
+For example, use `WithSelf` when a filter needs a subquery built from the outer query:
+
+```csharp
+var query = new SqlQuery()
+    .From(new RolePermissionRow(), out var permission)
+    .WithSelf(out var outer)
+    .Select(permission.PermissionKey)
+    .Where(permission.RoleId.In(
+        outer.SubQueryFrom(UserRoleRow.Fields, out var userRole)
+            .Select(userRole.RoleId)
+            .Where(userRole.UserId == userId)));
+```
+
+Use the fields returned by `out` for expressions and criteria so they carry the alias assigned to that source. `From(row, ...)` sets the single `INTO` target; for additional row sources, add aliased fields with `From(fields).Into(row)`. See [Entity SQL Projections](entity-projections.md) for projecting results from one or more source rows.
+
 ## See Also
 
 - [Fluent SQL](fluent-sql.md) — building `SELECT` queries with `SqlQuery`
 - [SQL Data Manipulation](sql-data-manipulation.md) — `SqlInsert`, `SqlUpdate`, `SqlDelete`, `Set`/`SetTo`/`SetNull`
 - [Criteria Objects](criteria.md) — building typed `WHERE` conditions
 - [SQL Helpers & Settings](sql-helpers.md) — the `Sql` expression helper, `SqlSyntax`, `SqlSettings`
+- [Entity SQL Projections](entity-projections.md) — selecting flat results from row sources

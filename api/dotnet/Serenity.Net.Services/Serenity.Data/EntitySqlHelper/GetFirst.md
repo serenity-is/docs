@@ -3,13 +3,15 @@
 Gets the first entity returned by executing the query. The result is loaded into the loader row of the query.
 
 ```csharp
-public static bool GetFirst(this SqlQuery query, IDbConnection connection)
+public static bool GetFirst(this SqlQuery query, IDbConnection connection, 
+    IReadOnlyDictionary<string, object?>? parameters = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
+| parameters | Values that override the query's parameters for this execution. |
 
 ## Return Value
 

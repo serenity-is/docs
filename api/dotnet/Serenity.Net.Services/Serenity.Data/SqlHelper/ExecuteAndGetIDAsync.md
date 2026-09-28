@@ -4,13 +4,15 @@ Executes the query asynchronously and returns the generated identity value. Only
 
 ```csharp
 public static Task<long?> ExecuteAndGetIDAsync(this SqlInsert query, IDbConnection connection, 
-    ILogger? logger = null, CancellationToken cancellationToken = default)
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null, 
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
+| parameters | Values that override the query's parameters for this execution. |
 | logger | The logger. |
 | cancellationToken | The cancellation token. |
 

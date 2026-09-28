@@ -3,13 +3,15 @@
 Executes the specified query on the connection.
 
 ```csharp
-public static void Execute(this SqlInsert query, IDbConnection connection, ILogger? logger = null)
+public static void Execute(this SqlInsert query, IDbConnection connection, 
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
+| parameters | Values that override the query's parameters for this execution. |
 | logger | The logger. |
 
 ## See Also
@@ -25,7 +27,8 @@ Executes the specified delete query on the connection and returns the number of 
 
 ```csharp
 public static int Execute(this SqlDelete query, IDbConnection connection, 
-    ExpectedRows expectedRows = ExpectedRows.One, ILogger? logger = null)
+    ExpectedRows expectedRows = ExpectedRows.One, 
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null)
 ```
 
 | parameter | description |
@@ -33,6 +36,7 @@ public static int Execute(this SqlDelete query, IDbConnection connection,
 | query | The query. |
 | connection | The connection. |
 | expectedRows | The expected rows. Used to validate the expected number of affected rows. |
+| parameters | Values that override the query's parameters for this execution. |
 | logger | The logger. |
 
 ## Return Value
@@ -53,7 +57,8 @@ Executes the specified update query on the connection and returns the number of 
 
 ```csharp
 public static int Execute(this SqlUpdate query, IDbConnection connection, 
-    ExpectedRows expectedRows = ExpectedRows.One, ILogger? logger = null)
+    ExpectedRows expectedRows = ExpectedRows.One, 
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null)
 ```
 
 | parameter | description |
@@ -61,6 +66,7 @@ public static int Execute(this SqlUpdate query, IDbConnection connection,
 | query | The query. |
 | connection | The connection. |
 | expectedRows | The expected rows. Used to validate the expected number of affected rows. |
+| parameters | Values that override the query's parameters for this execution. |
 | logger | The logger. |
 
 ## Return Value

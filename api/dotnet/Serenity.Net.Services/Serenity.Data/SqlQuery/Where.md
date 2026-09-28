@@ -1,25 +1,20 @@
 # SqlQuery.Where method
 
-Adds an expression to WHERE clause. If query already has a WHERE clause, inserts AND between existing one and new one.
+Adds a criteria to the WHERE clause.
 
 ```csharp
-public SqlQuery Where(string expression)
+public SqlQuery Where(ICriteria? criteria)
 ```
 
 | parameter | description |
 | --- | --- |
-| expression | An expression |
+| criteria | The criteria to add. |
 
 ## Return Value
 
 The query itself.
 
-## Exceptions
-
-| exception | condition |
-| --- | --- |
-| ArgumentNullException | expression is null or empty. |
-
 ## See Also
 
+* interface [ICriteria](../../Serenity/ICriteria.md)
 * class [SqlQuery](../SqlQuery.md)

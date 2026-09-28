@@ -102,7 +102,17 @@ This is useful when a query joins the same table more than once.
 
 ## `IRowOperationInterceptor`
 
-[IRowOperationInterceptor](../../api/dotnet/Serenity.Net.Services/Serenity.Data/IRowOperationInterceptor.md) lets you intercept the entity CRUD operations performed through `EntityConnectionExtensions` (find, list, count, insert/update/delete). It's primarily implemented by mock connections in tests to avoid hitting a real database.
+[`IRowOperationInterceptor`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/IRowOperationInterceptor.md) intercepts entity operations performed through `EntityConnectionExtensions`. Each callback receives one typed argument record:
+
+| Callback | Argument data |
+| --- | --- |
+| `FindRow` (ById/TryById, First/TryFirst, Single/TrySingle) | `InterceptFindRowArgs`: row `Type`, optional `Id`, the `SqlQuery`, and `ByIdOrSingle` indicating a ById/Single-style lookup rather than First. |
+| `ListRows` (List/Count) | `InterceptListRowsArgs`: row `Type`, the `SqlQuery`, and `CountOnly` to distinguish a count from a row list. |
+| `ManipulateRow` (Insert/Update/DeleteById) | `InterceptManipulateRowArgs`: row `Type`, optional `Id`, optional `Row`, `ExpectedRows`, and `GetNewId`. |
+
+For find and list callbacks, `Query` is the actual query being executed, including changes made by the caller's query-edit callback. An interceptor can inspect its selected fields, criteria, parameters, or other configuration when returning a result. For example, the query passed to `ListRows` is the same query instance configured by the `editQuery` callback.
+
+All three argument records inherit `CancellationToken` and `IsAsync` from `InterceptOperationArgs`. The async interceptor methods default to forwarding to their synchronous counterparts with `IsAsync` set to `true`; implement the async methods when the interception itself needs asynchronous work. A callback can return the default `OptionalValue` to let the normal database operation proceed, or return a value with `HasValue` set to short-circuit it.
 
 ## See Also
 

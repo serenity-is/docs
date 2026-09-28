@@ -4,7 +4,7 @@
 Base class for row fields collection
 
 ```csharp
-public class RowFieldsBase : Collection<Field>, IAlias, IHaveJoins
+public class RowFieldsBase : Collection<Field>, IAlias, IHasDialect, IHaveJoins
 ```
 
 ## Public Members
@@ -44,6 +44,7 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHaveJoins
 | [RowFieldsBase](RowFieldsBase/RowFieldsBase.md)(…) | Initializes a new instance of the [`RowFieldsBase`](./RowFieldsBase.md) class. |
 | virtual [AfterInitialize](RowFieldsBase/AfterInitialize.md)() | Afters the initialize. |
 | virtual [CreateGeneratedFields](RowFieldsBase/CreateGeneratedFields.md)() | Should be only used by row source generator to create field objects it generated |
+| virtual [GetFieldTypeToCreate](RowFieldsBase/GetFieldTypeToCreate.md)(…) | Gets the type of the field to create when a Field member is null. This can be overridden to provide custom field types for specific properties, especially when the field's type is Field, which is abstract and cannot be instantiated directly. By default, it returns the field's declared type. |
 | override [InsertItem](RowFieldsBase/InsertItem.md)(…) | Inserts an element into the Collection at the specified index. |
 | override [RemoveItem](RowFieldsBase/RemoveItem.md)(…) | Removes the element at the specified index of the Collection. |
 | override [SetItem](RowFieldsBase/SetItem.md)(…) | Replaces the element at the specified index. |
@@ -53,4 +54,5 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHaveJoins
 * interface [IAlias](./IAlias.md)
 * interface [IHaveJoins](./IHaveJoins.md)
 * class [Field](./Field.md)
-* **Source:** *[RowFieldsBase.cs](https://github.com/serenity-is/Serenity/blob/1a8f0b8d86a82010fb35e1c2b9f853493e7f539f/src/services/Entity/Row/RowFieldsBase.cs)*
+* interface [IHasDialect](./IHasDialect.md)
+* **Source:** *[RowFieldsBase.cs](https://github.com/serenity-is/Serenity/blob/a33f821b7a5431477e50f129ce63ce324c984018/src/services/Entity/Row/RowFieldsBase.cs)*

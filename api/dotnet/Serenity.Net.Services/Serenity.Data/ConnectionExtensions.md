@@ -22,4 +22,4 @@ public static class ConnectionExtensions
 
 ## See Also
 
-* **Source:** *[ConnectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Connections/ConnectionExtensions.cs)*
+* **Source:** *[ConnectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/ed6136b1a50635501eead65a0429620cba7613e2/src/services/Data/Connections/ConnectionExtensions.cs)*

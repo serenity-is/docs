@@ -4,7 +4,7 @@ Lists the rows returned from executing the query.
 
 ```csharp
 public static List<TRow> List<TRow>(this SqlQuery query, IDbConnection connection, 
-    TRow? loaderRow = default)
+    TRow? loaderRow = default, IReadOnlyDictionary<string, object?>? parameters = null)
     where TRow : class, IRow
 ```
 
@@ -14,6 +14,7 @@ public static List<TRow> List<TRow>(this SqlQuery query, IDbConnection connectio
 | query | The query. |
 | connection | The connection. |
 | loaderRow | The loader row. |
+| parameters | Values that override the query's parameters for this execution. |
 
 ## Return Value
 

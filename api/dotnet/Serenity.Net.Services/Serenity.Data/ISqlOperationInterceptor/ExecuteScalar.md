@@ -3,18 +3,15 @@
 Intercepts the [`SqlHelper`](../SqlHelper.md)`ExecuteScalar` method.
 
 ```csharp
-public OptionalValue<object> ExecuteScalar(string commandText, 
-    IDictionary<string, object?>? parameters, SqlQuery? query)
+public OptionalValue<object> ExecuteScalar(InterceptExecuteScalarArgs args)
 ```
 
 | parameter | description |
 | --- | --- |
-| commandText | The command text. |
-| parameters | The parameters. |
-| query | The query. |
+| args | The operation arguments. |
 
 ## See Also
 
 * struct [OptionalValue&lt;T&gt;](../../Serenity/OptionalValue-1.md)
-* class [SqlQuery](../SqlQuery.md)
+* record [InterceptExecuteScalarArgs](../InterceptExecuteScalarArgs.md)
 * interface [ISqlOperationInterceptor](../ISqlOperationInterceptor.md)

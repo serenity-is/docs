@@ -1,9 +1,9 @@
 # FilterableQueryExtensions.Where&lt;T&gt; method
 
-Adds a filter to query.
+Adds a filter string to query.
 
 ```csharp
-public static T Where<T>(this T self, ICriteria? filter)
+public static T Where<T>(this T self, string filter)
     where T : IFilterableQuery
 ```
 
@@ -11,7 +11,7 @@ public static T Where<T>(this T self, ICriteria? filter)
 | --- | --- |
 | T | Query class. |
 | self | Query. |
-| filter | Filter. |
+| filter | Filter string. |
 
 ## Return Value
 
@@ -19,6 +19,5 @@ Query itself.
 
 ## See Also
 
-* interface [ICriteria](../../Serenity/ICriteria.md)
 * interface [IFilterableQuery](../IFilterableQuery.md)
 * class [FilterableQueryExtensions](../FilterableQueryExtensions.md)

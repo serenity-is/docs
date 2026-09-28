@@ -46,4 +46,4 @@ public class RetrieveRequestHandlerAsync<TRow, TRetrieveRequest, TRetrieveRespon
 * interface [IRow](../Serenity.Data/IRow.md)
 * class [RetrieveRequest](./RetrieveRequest.md)
 * class [RetrieveResponse&lt;T&gt;](./RetrieveResponse-1.md)
-* **Source:** *[RetrieveRequestHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/Retrieve/RetrieveRequestHandlerAsync.cs)*
+* **Source:** *[RetrieveRequestHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/2a803ec2ea06e7ccde726327384096507a8532d0/src/services/RequestHandlers/Retrieve/RetrieveRequestHandlerAsync.cs)*

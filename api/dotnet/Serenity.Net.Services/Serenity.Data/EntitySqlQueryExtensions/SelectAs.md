@@ -20,7 +20,7 @@ The query itself.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field or alias |
+| ArgumentNullException | expression is null or empty, or intoField is null. |
 
 ## See Also
 

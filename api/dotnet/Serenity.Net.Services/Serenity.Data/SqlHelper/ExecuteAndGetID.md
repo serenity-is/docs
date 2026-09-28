@@ -4,13 +4,14 @@ Executes the query and returns the generated identity value. Only works for auto
 
 ```csharp
 public static long? ExecuteAndGetID(this SqlInsert query, IDbConnection connection, 
-    ILogger? logger = null)
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
+| parameters | Values that override the query's parameters for this execution. |
 | logger | The logger. |
 
 ## Return Value

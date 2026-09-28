@@ -4,7 +4,7 @@ Executes the statement.
 
 ```csharp
 public static int ExecuteNonQuery(IDbConnection connection, string commandText, 
-    IDictionary<string, object?>? param = null, ILogger? logger = null)
+    IReadOnlyDictionary<string, object?>? param = null, ILogger? logger = null)
 ```
 
 | parameter | description |

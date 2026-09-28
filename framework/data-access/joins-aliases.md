@@ -46,6 +46,18 @@ alias, so fields are referenced as `T0.<Field>`. Joined tables use their declare
 aliases. The `T0` alias is described in more detail in
 [Row Fields](row-fields.md).
 
+When a row is added with `From(row, out fields)`, use the returned fields instance in query expressions. It has the alias assigned to that source:
+
+```csharp
+var query = new SqlQuery()
+    .From(new CustomerRow(), out var customer)
+    .Select(customer.Name);
+```
+
+To use more than one row as a query source, add later field collections with an alias and associate each with its `INTO` row using `Into(row)`. See [Query Extensions](query-extensions.md#row-aware-sources-and-subqueries) for the source helpers and [Entity SQL Projections](entity-projections.md) for typed selectors over multiple rows.
+
+Subqueries created by `SubQueryFrom(fields, out aliased)` participate in the query's alias allocation. When the supplied fields use `T0`, the helper assigns an available alias to the child query's source; use the returned `aliased` fields rather than the original collection inside that subquery.
+
 ## `AliasExtensions`
 
 [`AliasExtensions`](../api/dotnet/Serenity.Net.Services/Serenity.Data/AliasExtensions.md)
@@ -112,6 +124,49 @@ var query = new SqlQuery()
     .Select(p["Firstname"])
     .Select(c["Name"], "CityName");
 ```
+
+For joins between typed row fields, use the entity query extensions. Their
+`InnerJoin`, `LeftJoin`, and `RightJoin` overloads take the fields to join, a
+callback that builds the `ON` criteria from those fields after alias allocation,
+and an `out` parameter that receives the aliased fields. Use that returned
+fields object in later criteria and selections:
+
+```csharp
+var query = new SqlQuery()
+    .From(CustomerRow.Fields, out var customer)
+    .InnerJoin(OrderRow.Fields,
+        order => order.CustomerID == customer.CustomerID,
+        out var order)
+    .Select(customer.CompanyName)
+    .Select(order.OrderID, "OrderID");
+```
+
+The query chooses an available alias for the joined fields. The callback is
+invoked with that alias already applied, so the `ON` expression refers to the
+actual query aliases. The `out` fields are required; the no-`out` convenience
+overloads are not provided. The same pattern is available for inner and right
+joins.
+
+When the source field already describes a foreign key, use `LeftJoinVia`,
+`RightJoinVia`, or `InnerJoinVia` to build the `ON` criteria from its metadata:
+
+```csharp
+var query = new SqlQuery()
+    .From(OrderRow.Fields, out var order)
+    .LeftJoinVia(CustomerRow.Fields, order.CustomerID, out var customer)
+    .Select(order.OrderID)
+    .Select(customer.CompanyName, "CompanyName");
+```
+
+Pass the referenced row's fields first, followed by the source foreign-key
+field. This lets the compiler infer `TFields`; the supplied fields are used to
+infer and validate the target type. A custom alias on those fields is preserved;
+when they use the default `T0` alias, the method assigns an available query alias.
+The `out` parameter returns the fields with the alias used by the join. These methods use the field's
+`ForeignJoinAlias` when available; otherwise they use its
+`ForeignKey` metadata (including the referenced row type, foreign table, and
+foreign field). When a `ForeignJoinAlias` is used, its `ON` criteria is retained
+and its join alias is rewritten to the allocated query alias.
 
 You can also construct a join yourself and pass it to `SqlQuery.Join(Join)`.
 This is useful for `CROSS APPLY` / `OUTER APPLY`, which don't have dedicated

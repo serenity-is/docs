@@ -3,12 +3,12 @@
 Selects the into row.
 
 ```csharp
-public void IntoRowSelection(object into)
+public void IntoRowSelection(object? into)
 ```
 
 | parameter | description |
 | --- | --- |
-| into | The into. |
+| into | The into row. |
 
 ## See Also
 

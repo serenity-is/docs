@@ -4,7 +4,7 @@
 Determines the connection key used for a class.
 
 ```csharp
-[AttributeUsage(AttributeTargets.All)]
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Method | AttributeTargets.Interface)]
 public class ConnectionKeyAttribute : Attribute
 ```
 
@@ -18,4 +18,4 @@ public class ConnectionKeyAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[ConnectionKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Mapping/ConnectionKeyAttribute.cs)*
+* **Source:** *[ConnectionKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/ab38d62505c08ddc4bb238600a765939de111cea/src/services/Data/Mapping/ConnectionKeyAttribute.cs)*

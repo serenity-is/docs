@@ -519,6 +519,21 @@ public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this
 public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
 ```
 
+## Configurable User ID Mapping
+
+[`UserEntityOptions`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/UserEntityOptions.md) configures the user row type and the user table and ID column names used by Serenity. Register it before running the initial database migrations:
+
+```csharp
+services.Configure<UserEntityOptions>(options =>
+    options.RowType = typeof(Administration.UserRow));
+```
+
+`RowType` must implement `IRow` and have an `[IdProperty]`. Its ID property supplies the default ID column name, supported ID type (`int`, `long`, `Guid`, or `string`), and string size; its `[TableName]` supplies the default user table name. Set `TableName` or `IdColumnName` to override the names, or set `IdFieldType` and `IdColumnSize` when you need to override the inferred field type or string size. Changing these settings after the database has been created requires a migration and corresponding application changes.
+
+Mark user ID properties on other rows with [`UserIdFieldType`](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/UserIdFieldTypeAttribute.md) and declare their `RowFields` member as `Field`, so the field type follows this configuration. Use [`UserIdJoinKey`](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/UserIdJoinKeyAttribute.md) instead of a hard-coded `[ForeignKey("Users", "UserId")]` when a join targets the configured user row; it uses the configured table and ID column names.
+
+Migrations should use the same options: `.AsUserIdType(userEntityOptions)` selects the user ID column type, and `.UserIdForeignKey(userEntityOptions, "FK_Name")` targets the configured user table and ID column. For `Guid` or `string` IDs, use a primary key rather than an auto-incrementing identity and supply IDs through the application's chosen strategy.
+
 ## Size, Scale, and NotNull
 
 - [Size](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/SizeAttribute.md) — sets the max length (for strings) or numeric precision.
@@ -639,3 +654,53 @@ public string? PasswordHash { get => fields.PasswordHash[this]; set => fields.Pa
 ## SetFieldFlags
 
 Many of the attributes above (e.g. `[NotNull]`, `[Identity]`, `[NotMapped]`) derive from [SetFieldFlagsAttribute](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/SetFieldFlagsAttribute.md), which turns field flags on or off. See [Field Flags](field-flags.md) for the full list of flags.
+
+## Row-Valued Foreign Properties
+
+A row can expose a joined row as a row-valued property, in addition to exposing individual fields from the join. Mark that property with [`ForeignRow`](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/ForeignRowAttribute.md), naming the foreign-key property on the same row. The foreign-key property must define the join, typically with `ForeignKey` and `LeftJoin`:
+
+```csharp
+public class EmployeeRow : Row<EmployeeRow.RowFields>
+{
+    [Identity, IdProperty]
+    public int? ID
+    {
+        get => fields.ID[this];
+        set => fields.ID[this] = value;
+    }
+
+    [ForeignKey(typeof(EmployeeRow), nameof(ID)), LeftJoin("jManager")]
+    public int? ManagerID
+    {
+        get => fields.ManagerID[this];
+        set => fields.ManagerID[this] = value;
+    }
+
+    [ForeignRow(nameof(ManagerID))]
+    public EmployeeRow? Manager
+    {
+        get => fields.Manager[this];
+        set => fields.Manager[this] = value;
+    }
+
+    public class RowFields : RowFieldsBase
+    {
+        public Int32Field ID = null!;
+        public Int32Field ManagerID = null!;
+        public RowField<EmployeeRow> Manager = null!;
+    }
+}
+```
+
+`IntoForeignRow` selects values from that existing join into the row-valued property on the query's current `INTO` row:
+
+```csharp
+var employee = new EmployeeRow();
+var query = new SqlQuery()
+    .From(employee, out var employeeFields)
+    .Select(employeeFields.ID)
+    .IntoForeignRow<EmployeeRow.RowFields>(employeeFields.Manager,
+        (managerFields, q) => q.Select(managerFields.ID));
+```
+
+The query's `INTO` row must be set before `IntoForeignRow` is called, and the foreign row field must identify a valid foreign key and join. `IntoForeignRow` supports selecting one joined row at a time; nested calls are not currently supported. See [Entity SQL Projections](entity-projections.md) for projecting a flat result from a mapped foreign-row path.

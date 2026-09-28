@@ -1,25 +1,20 @@
 # SqlUpdate.Where method
 
-Adds a condition to WHERE clause of the query.
+Adds a criteria to WHERE clause of the query.
 
 ```csharp
-public SqlUpdate Where(string condition)
+public SqlUpdate Where(ICriteria? criteria)
 ```
 
 | parameter | description |
 | --- | --- |
-| condition | Condition. |
+| criteria | Condition criteria. |
 
 ## Return Value
 
 SqlUpdate object itself.
 
-## Exceptions
-
-| exception | condition |
-| --- | --- |
-| ArgumentNullException | condition is null or empty. |
-
 ## See Also
 
+* interface [ICriteria](../../Serenity/ICriteria.md)
 * class [SqlUpdate](../SqlUpdate.md)

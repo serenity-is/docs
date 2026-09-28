@@ -3,13 +3,15 @@
 Executes the query returning true if it has at least one result.
 
 ```csharp
-public static bool Exists(this SqlQuery query, IDbConnection connection, ILogger? logger = null)
+public static bool Exists(this SqlQuery query, IDbConnection connection, 
+    IReadOnlyDictionary<string, object?>? parameters = null, ILogger? logger = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
+| parameters | Parameter values that override the query's parameters. |
 | logger | The logger. |
 
 ## Return Value

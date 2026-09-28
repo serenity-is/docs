@@ -12,15 +12,15 @@ public static class EntitySqlHelper
 | name | description |
 | --- | --- |
 | static [ForEach](EntitySqlHelper/ForEach.md)(…) | Executes the specified callback for all rows returned from executing the query. (2 methods) |
-| static [ForEachAsync](EntitySqlHelper/ForEachAsync.md)(…) | Asynchronously executes the specified callback for all rows returned from executing the query. (2 methods) |
+| static [ForEachAsync](EntitySqlHelper/ForEachAsync.md)(…) | Asynchronously executes the specified callback for all rows returned from executing the query. (4 methods) |
 | static [GetFirst](EntitySqlHelper/GetFirst.md)(…) | Gets the first entity returned by executing the query. The result is loaded into the loader row of the query. |
-| static [GetFirstAsync](EntitySqlHelper/GetFirstAsync.md)(…) | Gets the first entity returned by executing the query asynchronously. The result is loaded into the loader row of the query. |
+| static [GetFirstAsync](EntitySqlHelper/GetFirstAsync.md)(…) | Gets the first entity returned by executing the query asynchronously. The result is loaded into the loader row of the query. (2 methods) |
 | static [GetFromReader](EntitySqlHelper/GetFromReader.md)(…) | Gets field values from data reader into the query loader row. (2 methods) |
 | static [GetSingle](EntitySqlHelper/GetSingle.md)(…) | Gets the single entity returned by executing the query. The values are loaded into the loader row of the query. |
-| static [GetSingleAsync](EntitySqlHelper/GetSingleAsync.md)(…) | Gets the single entity returned by executing the query asynchronously. The values are loaded into the loader row of the query. |
+| static [GetSingleAsync](EntitySqlHelper/GetSingleAsync.md)(…) | Gets the single entity returned by executing the query asynchronously. The values are loaded into the loader row of the query. (2 methods) |
 | static [List&lt;TRow&gt;](EntitySqlHelper/List.md)(…) | Lists the rows returned from executing the query. |
-| static [ListAsync&lt;TRow&gt;](EntitySqlHelper/ListAsync.md)(…) | Asynchronously lists the rows returned from executing the query. |
+| static [ListAsync&lt;TRow&gt;](EntitySqlHelper/ListAsync.md)(…) | Asynchronously lists the rows returned from executing the query. (2 methods) |
 
 ## See Also
 
-* **Source:** *[EntitySqlHelper.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Entity/Extensions/EntitySqlHelper.cs)*
+* **Source:** *[EntitySqlHelper.cs](https://github.com/serenity-is/Serenity/blob/1547fabf1541054fe943b6a29c0d181fd84080e0/src/services/Entity/Extensions/EntitySqlHelper.cs)*

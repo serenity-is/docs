@@ -3,20 +3,15 @@
 Intercepts the async [`SqlHelper`](../SqlHelper.md)`ExecuteScalar` methods. The default implementation forwards to [`ExecuteScalar`](./ExecuteScalar.md).
 
 ```csharp
-public Task<OptionalValue<object>> ExecuteScalarAsync(string commandText, 
-    IDictionary<string, object?>? parameters, SqlQuery? query, 
-    CancellationToken cancellationToken = default)
+public Task<OptionalValue<object>> ExecuteScalarAsync(InterceptExecuteScalarArgs args)
 ```
 
 | parameter | description |
 | --- | --- |
-| commandText | The command text. |
-| parameters | The parameters. |
-| query | The query. |
-| cancellationToken | Cancellation token |
+| args | The operation arguments. |
 
 ## See Also
 
 * struct [OptionalValue&lt;T&gt;](../../Serenity/OptionalValue-1.md)
-* class [SqlQuery](../SqlQuery.md)
+* record [InterceptExecuteScalarArgs](../InterceptExecuteScalarArgs.md)
 * interface [ISqlOperationInterceptor](../ISqlOperationInterceptor.md)

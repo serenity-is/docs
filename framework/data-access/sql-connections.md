@@ -79,6 +79,17 @@ As listed above, only the SQL Server and the `SQLite` connection factories are r
 
 The default implementations for the `ISqlConnections` and other related services are registered via an [AddSqlConnections](../../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/DataServiceCollectionExtensions.md) call. You may not see it in the `Startup.cs` file as it is indirectly called by the `AddServiceHandlers` method.
 
+### The default connection key
+
+The [`DefaultConnection`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/DefaultConnectionAttribute.md) attribute selects the `Default` connection key, whose constant is `DefaultConnectionAttribute.Key`. It is equivalent to `[ConnectionKey(DefaultConnectionAttribute.Key)]` and maps to the `Data:Default` entry in `appsettings.json`:
+
+```cs
+[DefaultConnection]
+public class UserRow
+{
+}
+```
+
 ## ConnectionExtensions.NewFor`<TClass>` extension method
 
 If you don't want to memorize connection string keys, but instead reuse information on a row (in form of a `ConnectionKey` attribute), you may prefer this variant.
@@ -106,6 +117,25 @@ This corresponds to `SqlConnections.NewByKey("Northwind")`.
 Here we didn't have to open the connection, as the `List` extension method opens it automatically.
 
 The class used with this method doesn't have to be a `Row`, any class with a `ConnectionKey` attribute would work, even though it would be a row type most of the time.
+
+When a connection or module key is shared by many rows, define your own attributes instead of repeating string literals. A connection attribute derives from `ConnectionKeyAttribute`; a module attribute derives from `ModuleAttribute`. Give each a public `Key` constant and pass it to the base constructor:
+
+```cs
+using Serenity.ComponentModel;
+using Serenity.Data;
+
+public class NorthwindConnectionAttribute() : ConnectionKeyAttribute(Key)
+{
+  public const string Key = "Northwind";
+}
+
+public class NorthwindModuleAttribute() : ModuleAttribute(Key)
+{
+  public const string Key = "Northwind";
+}
+```
+
+Then use `[NorthwindConnection, NorthwindModule]` on rows. This keeps keys centralized and makes attribute usage concise. Current Serenity code generators support these derived key attributes, so generated metadata can use them instead of repeating literal `[ConnectionKey("Northwind")]` and `[Module("Northwind")]` values.
 
 ## WrappedConnection
 
@@ -214,6 +244,28 @@ void CreateATask(IUnitOfWork uow, TaskRow task)
        // optional, do something else if it fails
     };
 }
+  ```
+
+For code that owns a `UnitOfWork` directly, asynchronous paths can explicitly await `CommitAsync` and `DisposeAsync`:
+
+```cs
+async Task SaveBatchAsync(CancellationToken cancellationToken)
+{
+  using var connection = sqlConnections.NewByKey("Default");
+  var uow = new UnitOfWork(connection);
+  try
+  {
+    // Perform the batch's database operations through uow.Connection.
+    await uow.CommitAsync(cancellationToken);
+  }
+  finally
+  {
+    await uow.DisposeAsync();
+  }
+}
+```
+
+`CommitAsync` accepts a cancellation token and uses the transaction's asynchronous commit when supported by the underlying connection. It is a method on `UnitOfWork`, not `IUnitOfWork`; an `IUnitOfWork` supplied to a service endpoint remains managed by the service framework. `OnCommit` and `OnRollback` handlers are synchronous callbacks, including when `CommitAsync` is used.
 
 ## TransactionlessUnitOfWork
 
@@ -326,7 +378,6 @@ The `ServiceEndpoint` base class uses everything above automatically: it resolve
 - [Fluent SQL](fluent-sql.md) — building `SELECT` queries with `SqlQuery`
 - [Criteria Objects](criteria.md) — building typed filter conditions
 - [Entity CRUD & Query Helpers](entity-crud.md) — higher-level row helpers
-```
 
 
 

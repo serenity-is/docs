@@ -44,4 +44,4 @@ Initializes a new instance of the class.
 * interface [IRetrieveBehaviorAsync](./IRetrieveBehaviorAsync.md)
 * interface [IRetrieveBehaviorSync](./IRetrieveBehaviorSync.md)
 * interface [ISaveBehaviorSync](./ISaveBehaviorSync.md)
-* **Source:** *[LocalizationBehavior.cs](https://github.com/serenity-is/Serenity/blob/63ce072b9679163702dbbb6e8202d62faebaa4a4/src/services/RequestHandlers/IntegratedFeatures/Localization/LocalizationBehavior.cs)*
+* **Source:** *[LocalizationBehavior.cs](https://github.com/serenity-is/Serenity/blob/2a803ec2ea06e7ccde726327384096507a8532d0/src/services/RequestHandlers/IntegratedFeatures/Localization/LocalizationBehavior.cs)*

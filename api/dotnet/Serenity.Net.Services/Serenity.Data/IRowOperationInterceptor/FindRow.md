@@ -3,17 +3,12 @@
 Intercepts EntityConnectionExtensions's ById/TryById/First/TryFirst/Single/TrySingle methods.
 
 ```csharp
-public OptionalValue<IRow> FindRow(Type rowType, OptionalValue<object?> id, ICriteria? where, 
-    Action<SqlQuery>? editQuery, bool byIdOrSingle)
+public OptionalValue<IRow> FindRow(InterceptFindRowArgs args)
 ```
 
 | parameter | description |
 | --- | --- |
-| rowType | Type of the row. |
-| id | The identifier if one of the ById methods is used. |
-| where | The where criteria for the First/TryFirst/Single/TrySingle methods. |
-| editQuery | Callback to edit the query. |
-| byIdOrSingle | True if one of the ById/TryById/Single/TrySingle methods is used. |
+| args | The find operation arguments. |
 
 ## Return Value
 
@@ -23,6 +18,5 @@ Entity with the given ID, or null if not found.
 
 * struct [OptionalValue&lt;T&gt;](../../Serenity/OptionalValue-1.md)
 * interface [IRow](../IRow.md)
-* interface [ICriteria](../../Serenity/ICriteria.md)
-* class [SqlQuery](../SqlQuery.md)
+* record [InterceptFindRowArgs](../InterceptFindRowArgs.md)
 * interface [IRowOperationInterceptor](../IRowOperationInterceptor.md)

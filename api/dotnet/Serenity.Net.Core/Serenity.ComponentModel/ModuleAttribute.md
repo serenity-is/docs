@@ -4,7 +4,7 @@
 Sets the module name for the row. The module name is usually the folder name under the ~/Modules folder that the entity resides in.
 
 ```csharp
-[AttributeUsage(AttributeTargets.All)]
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Interface)]
 public class ModuleAttribute : Attribute
 ```
 
@@ -25,4 +25,4 @@ Initializes a new instance of the [`ModuleAttribute`](./ModuleAttribute.md) clas
 
 ## See Also
 
-* **Source:** *[ModuleAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Common/ModuleAttribute.cs)*
+* **Source:** *[ModuleAttribute.cs](https://github.com/serenity-is/Serenity/blob/ab38d62505c08ddc4bb238600a765939de111cea/src/core/ComponentModel/Common/ModuleAttribute.cs)*

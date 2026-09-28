@@ -33,7 +33,7 @@ Creates a new command.
 
 ```csharp
 public static IDbCommand NewCommand(IDbConnection connection, string commandText, 
-    IDictionary<string, object?>? param)
+    IReadOnlyDictionary<string, object?>? param)
 ```
 
 | parameter | description |

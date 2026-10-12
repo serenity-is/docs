@@ -18,6 +18,7 @@ DomWise is a lightweight, high-performance JSX library that compiles your JSX te
 
 - [BasicClassList](interfaces/BasicClassList.md)
 - [ComponentClass](interfaces/ComponentClass.md)
+- [ComponentInstance](interfaces/ComponentInstance.md)
 - [Computed](interfaces/Computed.md)
 - [CustomDomAttributes](interfaces/CustomDomAttributes.md)
 - [EffectOptions](interfaces/EffectOptions.md)
@@ -51,7 +52,7 @@ DomWise is a lightweight, high-performance JSX library that compiles your JSX te
 - [SignalOrValue](type-aliases/SignalOrValue.md)
 - [StyleAttributes](type-aliases/StyleAttributes.md)
 - [StyleProperties](type-aliases/StyleProperties.md)
-- [StylePropertiesBase](type-aliases/StylePropertiesBase.md)
+- [StylePropertyKeys](type-aliases/StylePropertyKeys.md)
 
 ## Variables
 
@@ -81,18 +82,22 @@ DomWise is a lightweight, high-performance JSX library that compiles your JSX te
 - [inNamespaceURI](functions/inNamespaceURI.md)
 - [inSVGNamespace](functions/inSVGNamespace.md)
 - [invokeDisposingListeners](functions/invokeDisposingListeners.md)
+- [isReadonlySignal](functions/isReadonlySignal.md)
 - [isSignalLike](functions/isSignalLike.md)
+- [isWritableSignal](functions/isWritableSignal.md)
 - [jsx](functions/jsx.md)
 - [observeSignal](functions/observeSignal.md)
 - [removeDisposingListener](functions/removeDisposingListener.md)
 - [setRef](functions/setRef.md)
 - [ShadowRootNode](functions/ShadowRootNode.md)
+- [Show](functions/Show.md)
 - [useClassList](functions/useClassList.md)
 - [useImperativeHandle](functions/useImperativeHandle.md)
 - [usePropBinding](functions/usePropBinding.md)
 - [useSignal](functions/useSignal.md)
 - [useText](functions/useText.md)
 - [useUpdatableComputed](functions/useUpdatableComputed.md)
+- [withLifecycleRoot](functions/withLifecycleRoot.md)
 
 ## References
 

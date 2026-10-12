@@ -13,7 +13,7 @@ Manages rules, messages, error display, and async pending state for a single for
 
 > **new Validator**(`form`, `options`): `Validator`
 
-Defined in: [src/base/validator.tsx:621](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L621)
+Defined in: [src/base/validator.tsx:663](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L663)
 
 Creates a validator for a form and wires up submit / focus / key handlers.
 
@@ -41,7 +41,7 @@ Validator options merged over [Validator.defaults](#defaults).
 
 > **dependTypes**: `object`
 
-Defined in: [src/base/validator.tsx:1643](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1643)
+Defined in: [src/base/validator.tsx:1685](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1685)
 
 Handlers for depend-type checks used by [Validator.depend](#depend).
 
@@ -101,7 +101,7 @@ Handlers for depend-type checks used by [Validator.depend](#depend).
 
 > **lastActive**: [`ValidatableElement`](../interfaces/ValidatableElement.md)
 
-Defined in: [src/base/validator.tsx:600](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L600)
+Defined in: [src/base/validator.tsx:642](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L642)
 
 Last element that received focus, used by [Validator.focusInvalid](#focusinvalid).
 
@@ -111,7 +111,7 @@ Last element that received focus, used by [Validator.focusInvalid](#focusinvalid
 
 > `readonly` **settings**: [`ValidatorOptions`](../interfaces/ValidatorOptions.md)
 
-Defined in: [src/base/validator.tsx:598](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L598)
+Defined in: [src/base/validator.tsx:640](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L640)
 
 Effective settings for this validator instance (merged defaults + constructor options).
 
@@ -121,7 +121,7 @@ Effective settings for this validator instance (merged defaults + constructor op
 
 > `static` **autoCreateRanges**: `boolean` = `false`
 
-Defined in: [src/base/validator.tsx:322](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L322)
+Defined in: [src/base/validator.tsx:349](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L349)
 
 When `true` automatically combines `min`+`max` into `range` and `minlength`+`maxlength` into `rangelength` during rule normalization.
 
@@ -131,7 +131,7 @@ When `true` automatically combines `min`+`max` into `range` and `minlength`+`max
 
 > `static` **classRuleSettings**: `Record`\<`string`, [`ValidationRules`](../type-aliases/ValidationRules.md)\>
 
-Defined in: [src/base/validator.tsx:1753](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1753)
+Defined in: [src/base/validator.tsx:1795](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1795)
 
 CSS-class to rule mapping (e.g. `"required"` → `{ required: true }`).
 
@@ -141,7 +141,7 @@ CSS-class to rule mapping (e.g. `"required"` → `{ required: true }`).
 
 > `static` **defaults**: [`ValidatorOptions`](../interfaces/ValidatorOptions.md)
 
-Defined in: [src/base/validator.tsx:325](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L325)
+Defined in: [src/base/validator.tsx:352](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L352)
 
 Default options applied to every new validator instance.
 
@@ -151,7 +151,7 @@ Default options applied to every new validator instance.
 
 > `readonly` `static` **excludedModifierKeys**: `Set`\<`string`\>
 
-Defined in: [src/base/validator.tsx:2065](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2065)
+Defined in: [src/base/validator.tsx:2121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2121)
 
 Modifier / navigation keys that should not trigger `onkeyup` re-validation.
 
@@ -161,7 +161,7 @@ Modifier / navigation keys that should not trigger `onkeyup` re-validation.
 
 > `readonly` `static` **messages**: `Record`\<`string`, `string` \| `Function`\>
 
-Defined in: [src/base/validator.tsx:418](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L418)
+Defined in: [src/base/validator.tsx:445](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L445)
 
 Default messages keyed by validation method name. Values may be translation keys or functions.
 
@@ -171,7 +171,7 @@ Default messages keyed by validation method name. Values may be translation keys
 
 > `readonly` `static` **methods**: `Record`\<`string`, [`ValidationProvider`](../type-aliases/ValidationProvider.md)\>
 
-Defined in: [src/base/validator.tsx:441](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L441)
+Defined in: [src/base/validator.tsx:469](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L469)
 
 Built-in validation methods keyed by rule name. Extend via [Validator.addMethod](#addmethod).
 
@@ -181,7 +181,7 @@ Built-in validation methods keyed by rule name. Extend via [Validator.addMethod]
 
 > **abortRequest**(`element`): `void`
 
-Defined in: [src/base/validator.tsx:1710](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1710)
+Defined in: [src/base/validator.tsx:1752](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1752)
 
 Aborts a pending async request for an element, if any.
 
@@ -203,7 +203,7 @@ Element whose pending request should be aborted.
 
 > **check**(`element`): `boolean`
 
-Defined in: [src/base/validator.tsx:1293](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1293)
+Defined in: [src/base/validator.tsx:1335](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1335)
 
 Runs all applicable validation rules for an element.
 
@@ -227,7 +227,7 @@ Element to check.
 
 > **checkForm**(): `boolean`
 
-Defined in: [src/base/validator.tsx:1005](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1005)
+Defined in: [src/base/validator.tsx:1047](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1047)
 
 Validates all elements in the form without updating the display.
 
@@ -243,7 +243,7 @@ Validates all elements in the form without updating the display.
 
 > **customDataMessage**(`element`, `method`): `string`
 
-Defined in: [src/base/validator.tsx:1380](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1380)
+Defined in: [src/base/validator.tsx:1422](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1422)
 
 Gets a custom message from HTML5 `data-msg*` attributes for an element/method.
 
@@ -273,7 +273,7 @@ The data message, if present.
 
 > **customMessage**(`name`, `method`): `any`
 
-Defined in: [src/base/validator.tsx:1391](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1391)
+Defined in: [src/base/validator.tsx:1433](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1433)
 
 Gets a custom message from `settings.messages` for a field/method.
 
@@ -303,7 +303,7 @@ The configured message, if present.
 
 > **defaultMessage**(`element`, `rule`): `any`
 
-Defined in: [src/base/validator.tsx:1417](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1417)
+Defined in: [src/base/validator.tsx:1459](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1459)
 
 Resolves the default error message for a rule, checking custom messages, data attributes, and [Validator.messages](#messages).
 
@@ -339,7 +339,7 @@ The resolved message string.
 
 > **defaultShowErrors**(): `void`
 
-Defined in: [src/base/validator.tsx:1458](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1458)
+Defined in: [src/base/validator.tsx:1500](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1500)
 
 Default error display: highlights invalid elements, shows labels, and hides stale errors.
 
@@ -353,7 +353,7 @@ Default error display: highlights invalid elements, shows labels, and hides stal
 
 > **depend**(`param`, `element`): `any`
 
-Defined in: [src/base/validator.tsx:1661](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1661)
+Defined in: [src/base/validator.tsx:1703](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1703)
 
 Evaluates whether a dependency condition is met.
 
@@ -383,7 +383,7 @@ Context element.
 
 > **destroy**(): `void`
 
-Defined in: [src/base/validator.tsx:1745](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1745)
+Defined in: [src/base/validator.tsx:1787](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1787)
 
 Cleans up event handlers and removes the validator instance from the form.
 
@@ -397,7 +397,7 @@ Cleans up event handlers and removes the validator instance from the form.
 
 > **element**(`element`): `boolean`
 
-Defined in: [src/base/validator.tsx:1018](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1018)
+Defined in: [src/base/validator.tsx:1060](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1060)
 
 Validates a single element and updates error display.
 
@@ -421,7 +421,7 @@ Element to validate.
 
 > **elements**(): [`ValidatableElement`](../interfaces/ValidatableElement.md)[]
 
-Defined in: [src/base/validator.tsx:1199](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1199)
+Defined in: [src/base/validator.tsx:1241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1241)
 
 Gets all validatable elements in the form that have rules and are not ignored.
 
@@ -437,7 +437,7 @@ Array of elements to validate.
 
 > **errors**(): `HTMLElement`[]
 
-Defined in: [src/base/validator.tsx:1248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1248)
+Defined in: [src/base/validator.tsx:1290](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1290)
 
 Gets existing error label elements in the form.
 
@@ -453,7 +453,7 @@ Array of error label elements.
 
 > **errorsFor**(`element`): `HTMLElement`[]
 
-Defined in: [src/base/validator.tsx:1591](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1591)
+Defined in: [src/base/validator.tsx:1633](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1633)
 
 Gets error labels associated with an element via `for` attribute or `aria-describedby`.
 
@@ -477,7 +477,7 @@ Matching error label elements.
 
 > **findByName**(`name`): [`ValidatableElement`](../interfaces/ValidatableElement.md)[]
 
-Defined in: [src/base/validator.tsx:1638](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1638)
+Defined in: [src/base/validator.tsx:1680](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1680)
 
 Finds all elements in the form with the given name.
 
@@ -501,7 +501,7 @@ Matching elements.
 
 > **findDefined**(...`args`): `any`
 
-Defined in: [src/base/validator.tsx:1402](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1402)
+Defined in: [src/base/validator.tsx:1444](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1444)
 
 Returns the first defined argument, allowing empty strings.
 
@@ -525,7 +525,7 @@ The first non-`undefined` value.
 
 > **findLastActive**(): [`ValidatableElement`](../interfaces/ValidatableElement.md)
 
-Defined in: [src/base/validator.tsx:1190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1190)
+Defined in: [src/base/validator.tsx:1232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1232)
 
 Finds the last active element among current errors, if it is still invalid.
 
@@ -541,7 +541,7 @@ The last active invalid element, or falsy if none.
 
 > **focusInvalid**(): `void`
 
-Defined in: [src/base/validator.tsx:1168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1168)
+Defined in: [src/base/validator.tsx:1210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1210)
 
 Focuses the last active invalid element or the first invalid element.
 Honors `abortHandler` and `focusInvalid` settings.
@@ -556,7 +556,7 @@ Honors `abortHandler` and `focusInvalid` settings.
 
 > **form**(): `boolean`
 
-Defined in: [src/base/validator.tsx:990](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L990)
+Defined in: [src/base/validator.tsx:1032](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1032)
 
 Validates the entire form, updates error state, and shows errors.
 
@@ -572,7 +572,7 @@ Validates the entire form, updates error state, and shows errors.
 
 > **formatAndAdd**(`element`, `rule`): `void`
 
-Defined in: [src/base/validator.tsx:1444](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1444)
+Defined in: [src/base/validator.tsx:1486](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1486)
 
 Formats the error message for a failed rule and records it in the error map/list.
 
@@ -606,7 +606,7 @@ Rule that failed.
 
 > **hideErrors**(): `void`
 
-Defined in: [src/base/validator.tsx:1133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1133)
+Defined in: [src/base/validator.tsx:1175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1175)
 
 Hides currently tracked error labels.
 
@@ -620,7 +620,7 @@ Hides currently tracked error labels.
 
 > **hideThese**(`errors`): `void`
 
-Defined in: [src/base/validator.tsx:1141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1141)
+Defined in: [src/base/validator.tsx:1183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1183)
 
 Hides a set of error labels.
 
@@ -642,7 +642,7 @@ Error label elements to hide.
 
 > **idOrName**(`element`): `string`
 
-Defined in: [src/base/validator.tsx:1612](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1612)
+Defined in: [src/base/validator.tsx:1654](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1654)
 
 Gets the identifier used for error label association (`name` for radio/checkbox, otherwise `id` or `name`).
 
@@ -666,7 +666,7 @@ The identifier string.
 
 > **invalidElements**(): [`ValidatableElement`](../interfaces/ValidatableElement.md)[]
 
-Defined in: [src/base/validator.tsx:1500](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1500)
+Defined in: [src/base/validator.tsx:1542](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1542)
 
 Gets elements that are currently invalid.
 
@@ -682,7 +682,7 @@ Invalid elements.
 
 > **numberOfInvalids**(): `number`
 
-Defined in: [src/base/validator.tsx:1114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1114)
+Defined in: [src/base/validator.tsx:1156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1156)
 
 Gets the count of currently invalid fields.
 
@@ -698,7 +698,7 @@ Number of invalid entries.
 
 > **prepareElement**(`element`): `void`
 
-Defined in: [src/base/validator.tsx:1283](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1283)
+Defined in: [src/base/validator.tsx:1325](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1325)
 
 Prepares state for validating a single element.
 
@@ -720,7 +720,7 @@ Element to prepare for.
 
 > **prepareForm**(): `void`
 
-Defined in: [src/base/validator.tsx:1274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1274)
+Defined in: [src/base/validator.tsx:1316](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1316)
 
 Prepares state for a full form validation pass.
 
@@ -734,7 +734,7 @@ Prepares state for a full form validation pass.
 
 > **previousValue**(`element`, `method`): `any`
 
-Defined in: [src/base/validator.tsx:1731](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1731)
+Defined in: [src/base/validator.tsx:1773](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1773)
 
 Gets or creates the cached previous value for a remote validation method.
 
@@ -764,7 +764,7 @@ The cached previous value object.
 
 > **reset**(): `void`
 
-Defined in: [src/base/validator.tsx:1263](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1263)
+Defined in: [src/base/validator.tsx:1305](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1305)
 
 Resets internal state and clears the current element list.
 
@@ -778,7 +778,7 @@ Resets internal state and clears the current element list.
 
 > **resetAll**(): `void`
 
-Defined in: [src/base/validator.tsx:1269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1269)
+Defined in: [src/base/validator.tsx:1311](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1311)
 
 Resets all validation state including displayed errors.
 
@@ -792,7 +792,7 @@ Resets all validation state including displayed errors.
 
 > **resetElements**(`elements`): `void`
 
-Defined in: [src/base/validator.tsx:1094](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1094)
+Defined in: [src/base/validator.tsx:1136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1136)
 
 Resets visual validation state for a set of elements.
 
@@ -814,7 +814,7 @@ Elements to reset.
 
 > **resetForm**(): `void`
 
-Defined in: [src/base/validator.tsx:1076](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1076)
+Defined in: [src/base/validator.tsx:1118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1118)
 
 Resets form validation state, hides errors, and clears `aria-invalid` attributes.
 
@@ -828,7 +828,7 @@ Resets form validation state, hides errors, and clears `aria-invalid` attributes
 
 > **resetInternals**(): `void`
 
-Defined in: [src/base/validator.tsx:1254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1254)
+Defined in: [src/base/validator.tsx:1296](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1296)
 
 Resets internal error tracking without touching the DOM.
 
@@ -842,7 +842,7 @@ Resets internal error tracking without touching the DOM.
 
 > **showErrors**(`errors?`): `void`
 
-Defined in: [src/base/validator.tsx:1052](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1052)
+Defined in: [src/base/validator.tsx:1094](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1094)
 
 Displays validation errors, merging optional additional errors into the current state.
 
@@ -864,7 +864,7 @@ Optional additional error map to merge before display.
 
 > **showLabel**(`element`, `message?`): `void`
 
-Defined in: [src/base/validator.tsx:1509](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1509)
+Defined in: [src/base/validator.tsx:1551](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1551)
 
 Creates or updates the error label for an element.
 
@@ -892,7 +892,7 @@ Error message; when omitted shows the success state if configured.
 
 > **size**(): `number`
 
-Defined in: [src/base/validator.tsx:1160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1160)
+Defined in: [src/base/validator.tsx:1202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1202)
 
 Gets the number of current validation errors.
 
@@ -908,7 +908,7 @@ Error count.
 
 > **startRequest**(`element`): `void`
 
-Defined in: [src/base/validator.tsx:1669](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1669)
+Defined in: [src/base/validator.tsx:1711](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1711)
 
 Marks an async validation request as pending for an element.
 
@@ -930,7 +930,7 @@ Element with a pending remote check.
 
 > **stopRequest**(`element`, `valid`): `void`
 
-Defined in: [src/base/validator.tsx:1682](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1682)
+Defined in: [src/base/validator.tsx:1724](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1724)
 
 Clears a pending async request and triggers form submit / invalid-form handling as needed.
 
@@ -958,7 +958,7 @@ Whether the async result was valid.
 
 > **valid**(): `boolean`
 
-Defined in: [src/base/validator.tsx:1152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1152)
+Defined in: [src/base/validator.tsx:1194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1194)
 
 Whether there are currently no validation errors.
 
@@ -974,7 +974,7 @@ Whether there are currently no validation errors.
 
 > **validationTargetFor**(`element`): [`ValidatableElement`](../interfaces/ValidatableElement.md)
 
-Defined in: [src/base/validator.tsx:1621](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1621)
+Defined in: [src/base/validator.tsx:1663](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1663)
 
 Resolves the actual element to validate (first member of a radio/checkbox group, filtered by `ignore`).
 
@@ -998,7 +998,7 @@ The validation target, or `undefined` if filtered out.
 
 > **validElements**(): [`ValidatableElement`](../interfaces/ValidatableElement.md)[]
 
-Defined in: [src/base/validator.tsx:1491](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1491)
+Defined in: [src/base/validator.tsx:1533](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1533)
 
 Gets elements among Validator.currentElements that are currently valid.
 
@@ -1014,7 +1014,7 @@ Valid elements.
 
 > `static` **addClassRules**(`className`, `rules`): `void`
 
-Defined in: [src/base/validator.tsx:1770](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1770)
+Defined in: [src/base/validator.tsx:1812](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1812)
 
 Adds validation rules associated with a CSS class.
 
@@ -1042,7 +1042,7 @@ Rules to associate when `className` is a string.
 
 > `static` **addCustomRule**(`element`, `rule`, `uniqueName?`): `void`
 
-Defined in: [src/base/validator.tsx:2023](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2023)
+Defined in: [src/base/validator.tsx:2079](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2079)
 
 Adds a custom validation callback for an element. Multiple callbacks can be registered under distinct `uniqueName` keys.
 
@@ -1076,7 +1076,7 @@ Optional key to allow independent removal; defaults to `""`.
 
 > `static` **addMethod**(`name`, `method`, `message?`): `void`
 
-Defined in: [src/base/validator.tsx:1993](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1993)
+Defined in: [src/base/validator.tsx:2049](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2049)
 
 Registers a new validation method.
 
@@ -1110,7 +1110,7 @@ Optional default error message for the method.
 
 > `static` **attributeRules**(`element`): [`ValidationRules`](../type-aliases/ValidationRules.md)
 
-Defined in: [src/base/validator.tsx:1832](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1832)
+Defined in: [src/base/validator.tsx:1888](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1888)
 
 Gets rules derived from HTML attributes (e.g. `required`, `minlength`, `type`).
 
@@ -1134,7 +1134,7 @@ Attribute-derived rules.
 
 > `static` **classRules**(`element`): [`ValidationRules`](../type-aliases/ValidationRules.md)
 
-Defined in: [src/base/validator.tsx:1783](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1783)
+Defined in: [src/base/validator.tsx:1825](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1825)
 
 Gets rules derived from the element's CSS classes.
 
@@ -1154,11 +1154,43 @@ Rules inferred from classes.
 
 ***
 
+### compareBound()
+
+> `static` **compareBound**(`value`, `param`): `number`
+
+Defined in: [src/base/validator.tsx:329](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L329)
+
+Compares a form value against a min/max/range bound. When the bound is a `bigint`
+(used for 64-bit integer bounds beyond the safe integer range), the value is compared
+exactly as a bigint instead of losing precision through `Number` coercion.
+
+#### Parameters
+
+##### value
+
+`any`
+
+The value to compare.
+
+##### param
+
+`any`
+
+The bound (number, string or bigint).
+
+#### Returns
+
+`number`
+
+Negative if value &lt; bound, positive if value &gt; bound, `0` if equal, or `NaN` when not comparable.
+
+***
+
 ### dataRules()
 
 > `static` **dataRules**(`element`): `any`
 
-Defined in: [src/base/validator.tsx:1874](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1874)
+Defined in: [src/base/validator.tsx:1930](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1930)
 
 Gets rules derived from `data-rule-*` attributes.
 
@@ -1182,7 +1214,7 @@ Data-attribute rules.
 
 > `static` **elementValue**(`element`): `any`
 
-Defined in: [src/base/validator.tsx:816](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L816)
+Defined in: [src/base/validator.tsx:858](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L858)
 
 Extracts the current value from a form element, normalizing special cases
 (radio / checkbox groups, number inputs, file inputs, contenteditable).
@@ -1207,7 +1239,7 @@ The extracted value (`string`, `number`, `string[]`, or `null`).
 
 > `static` **getHighlightTarget**(`el`): `HTMLElement`
 
-Defined in: [src/base/validator.tsx:2007](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2007)
+Defined in: [src/base/validator.tsx:2063](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2063)
 
 Gets the element that should be highlighted for validation feedback.
 Checks `data-vx-highlight`, hidden `textarea` editors, and `select2-offscreen`.
@@ -1232,7 +1264,7 @@ The highlight target element, or `undefined` if none.
 
 > `static` **getInstance**(`element`): `Validator`
 
-Defined in: [src/base/validator.tsx:723](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L723)
+Defined in: [src/base/validator.tsx:765](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L765)
 
 Gets the validator instance associated with a form or an element inside a form.
 
@@ -1256,7 +1288,7 @@ The validator instance, or `null` if not found.
 
 > `static` **getLength**(`value`, `element`): `number`
 
-Defined in: [src/base/validator.tsx:787](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L787)
+Defined in: [src/base/validator.tsx:829](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L829)
 
 Gets the logical length of a value for `minlength` / `maxlength` checks.
 Handles selects, checkbox groups, and plain strings.
@@ -1287,7 +1319,7 @@ Length of the value.
 
 > `static` **isCheckOrRadio**(`element`): `element is HTMLInputElement`
 
-Defined in: [src/base/validator.tsx:776](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L776)
+Defined in: [src/base/validator.tsx:818](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L818)
 
 Whether the element is a checkbox or radio input.
 
@@ -1311,7 +1343,7 @@ Element to test.
 
 > `static` **isContentEditable**(`element`): `boolean`
 
-Defined in: [src/base/validator.tsx:805](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L805)
+Defined in: [src/base/validator.tsx:847](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L847)
 
 Whether the element is content-editable.
 
@@ -1335,7 +1367,7 @@ Element to test.
 
 > `static` **isValidatableElement**(`element`): `element is ValidatableElement`
 
-Defined in: [src/base/validator.tsx:767](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L767)
+Defined in: [src/base/validator.tsx:809](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L809)
 
 Checks if `element` is validatable (`input`, `select`, `textarea`).
 
@@ -1359,7 +1391,7 @@ The element to check.
 
 > `static` **normalizeAttributeRule**(`rules`, `type`, `method`, `value`): `void`
 
-Defined in: [src/base/validator.tsx:1804](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1804)
+Defined in: [src/base/validator.tsx:1846](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1846)
 
 Normalizes a single attribute rule value (e.g. coercing `min`/`max`/`step` to numbers).
 
@@ -1385,9 +1417,9 @@ Rule method name.
 
 ##### value
 
-[`ValidationValue`](../type-aliases/ValidationValue.md)
-
 Raw attribute value.
+
+`bigint` | [`ValidationValue`](../type-aliases/ValidationValue.md)
 
 #### Returns
 
@@ -1399,7 +1431,7 @@ Raw attribute value.
 
 > `static` **normalizeRules**(`rules`, `element`): [`ValidationRules`](../type-aliases/ValidationRules.md)
 
-Defined in: [src/base/validator.tsx:1914](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1914)
+Defined in: [src/base/validator.tsx:1970](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1970)
 
 Normalizes a merged rules object: handles `depends`, coerces numeric params, and optionally auto-creates ranges.
 
@@ -1459,7 +1491,7 @@ Truthy optional marker or falsy when required / non-empty; `"dependency-mismatch
 
 > `static` **removeCustomRule**(`element`, `uniqueName`): `void`
 
-Defined in: [src/base/validator.tsx:2048](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2048)
+Defined in: [src/base/validator.tsx:2104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2104)
 
 Removes a custom validation callback previously added with [Validator.addCustomRule](#addcustomrule).
 
@@ -1487,7 +1519,7 @@ Key under which the rule was registered.
 
 > `static` **rules**(`element`, `command?`, `argument?`): [`ValidationRules`](../type-aliases/ValidationRules.md)
 
-Defined in: [src/base/validator.tsx:910](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L910)
+Defined in: [src/base/validator.tsx:952](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L952)
 
 Gets or mutates the validation rules for an element.
 
@@ -1523,7 +1555,7 @@ The aggregated rules (or removed rules when `command` is `"remove"`).
 
 > `static` **staticRules**(`element`): [`ValidationRules`](../type-aliases/ValidationRules.md)
 
-Defined in: [src/base/validator.tsx:1897](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1897)
+Defined in: [src/base/validator.tsx:1953](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1953)
 
 Gets rules from the validator's static `settings.rules` for the element's name.
 
@@ -1547,7 +1579,7 @@ Static rules object.
 
 > `static` **valid**(`element`): `boolean`
 
-Defined in: [src/base/validator.tsx:888](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L888)
+Defined in: [src/base/validator.tsx:930](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L930)
 
 Validates a form or a single element using its associated validator.
 

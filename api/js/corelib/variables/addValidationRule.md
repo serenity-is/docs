@@ -4,7 +4,7 @@
 
 > `const` **addValidationRule**: (`element`, `rule`, `uniqueName?`) => `void` = `Validator.addCustomRule`
 
-Defined in: [src/base/validator.tsx:2074](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2074)
+Defined in: [src/base/validator.tsx:2130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2130)
 
 Alias for [Validator.addCustomRule](../classes/Validator.md#addcustomrule).
 

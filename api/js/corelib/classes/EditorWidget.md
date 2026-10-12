@@ -19,6 +19,7 @@ Base class for editor widgets, providing read-only handling.
 - [`DecimalEditor`](DecimalEditor.md)
 - [`EmailEditor`](EmailEditor.md)
 - [`HtmlContentEditor`](HtmlContentEditor.md)
+- [`Int64Editor`](Int64Editor.md)
 - [`IntegerEditor`](IntegerEditor.md)
 - [`MaskedEditor`](MaskedEditor.md)
 - [`RadioButtonEditor`](RadioButtonEditor.md)

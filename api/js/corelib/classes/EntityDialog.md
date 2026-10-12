@@ -120,7 +120,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:38](https://github.com/serenity-is/
 
 > `protected` **editClicked**: `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1138)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1188)
 
 ***
 
@@ -436,7 +436,7 @@ Returns the widget's props/options.
 
 > **get** **readOnly**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1050](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1050)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1083](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1083)
 
 Whether the dialog is in read-only mode.
 
@@ -448,7 +448,7 @@ Whether the dialog is in read-only mode.
 
 > **set** **readOnly**(`value`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1055](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1055)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1088](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1088)
 
 Sets whether the dialog is in read-only mode.
 
@@ -470,7 +470,7 @@ Sets whether the dialog is in read-only mode.
 
 > **get** `static` **defaultLanguageList**(): `string`[][]
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1179)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1229)
 
 Returns the default language list for localization.
 
@@ -484,7 +484,7 @@ The default language list.
 
 > **set** `static` **defaultLanguageList**(`value`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1184)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1234)
 
 Sets the default language list for localization.
 
@@ -604,7 +604,7 @@ Hook invoked after the dialog is initialized.
 
 > `protected` **afterLoadEntity**(): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:520](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L520)
+Defined in: [src/ui/dialogs/entitydialog.tsx:530](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L530)
 
 Hook invoked after loading an entity; updates the interface and title.
 
@@ -662,7 +662,7 @@ Triggers layout on all elements that require it.
 
 > `protected` **beforeLoadEntity**(`entity`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:513](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L513)
+Defined in: [src/ui/dialogs/entitydialog.tsx:523](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L523)
 
 Hook invoked before loading an entity; clears localization state.
 
@@ -771,7 +771,7 @@ The change event handler.
 
 > `protected` **commitEdits**(): `Promise`\<`boolean`\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:742](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L742)
+Defined in: [src/ui/dialogs/entitydialog.tsx:765](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L765)
 
 Commits pending edits in the property grid.
 
@@ -982,7 +982,7 @@ use entityId
 
 > **get\_readOnly**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1063](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1063)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1096](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1096)
 
 Returns whether the dialog is in read-only mode.
 
@@ -1002,7 +1002,7 @@ True when read-only.
 
 > `protected` **getCloningEntity**(): `TItem`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:958](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L958)
+Defined in: [src/ui/dialogs/entitydialog.tsx:991](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L991)
 
 Returns a clone of the current entity with identity and state fields removed.
 
@@ -1014,11 +1014,27 @@ The cloning entity.
 
 ***
 
+### getConcurrencyVersionProperty()
+
+> `protected` **getConcurrencyVersionProperty**(): `string`
+
+Defined in: [src/ui/dialogs/entitydialog.tsx:414](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L414)
+
+Returns the concurrency version property for the entity, if any.
+
+#### Returns
+
+`string`
+
+The concurrency version property name.
+
+***
+
 ### getCreateServiceMethod()
 
 > `protected` **getCreateServiceMethod**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:762](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L762)
+Defined in: [src/ui/dialogs/entitydialog.tsx:785](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L785)
 
 Returns the create service method name.
 
@@ -1118,7 +1134,7 @@ Service options.
 
 > `protected` **getDeletePermission**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1099](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1099)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1132)
 
 Returns the delete permission for the entity.
 
@@ -1342,7 +1358,7 @@ The initial title text.
 
 > `protected` **getInsertPermission**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1083](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1083)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1116)
 
 Returns the insert permission for the entity.
 
@@ -1386,7 +1402,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:406](https://github.com/serenity-is
 
 > `protected` **getLanguages**(): [`LanguageList`](../type-aliases/LanguageList.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:674](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L674)
+Defined in: [src/ui/dialogs/entitydialog.tsx:685](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L685)
 
 Returns the list of languages for localization.
 
@@ -1402,7 +1418,7 @@ The language list.
 
 > `protected` **getLoadByIdOptions**(`id`, `callback`): [`ServiceOptions`](../interfaces/ServiceOptions.md)\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:560](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L560)
+Defined in: [src/ui/dialogs/entitydialog.tsx:570](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L570)
 
 Returns the options for the retrieve service call.
 
@@ -1432,7 +1448,7 @@ Service options.
 
 > `protected` **getLoadByIdRequest**(`id`): [`RetrieveRequest`](../interfaces/RetrieveRequest.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:578](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L578)
+Defined in: [src/ui/dialogs/entitydialog.tsx:588](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L588)
 
 Returns the retrieve request for an entity id.
 
@@ -1456,7 +1472,7 @@ The retrieve request.
 
 > `protected` **getLocalizerOptions**(): [`EntityLocalizerOptions`](../interfaces/EntityLocalizerOptions.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:646](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L646)
+Defined in: [src/ui/dialogs/entitydialog.tsx:656](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L656)
 
 Returns the options for the entity localizer.
 
@@ -1520,7 +1536,7 @@ The name property name.
 
 > `protected` **getPropertyGridOptions**(): [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:729](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L729)
+Defined in: [src/ui/dialogs/entitydialog.tsx:752](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L752)
 
 Returns the options for the property grid.
 
@@ -1536,7 +1552,7 @@ Property grid options.
 
 > `protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:693](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L693)
+Defined in: [src/ui/dialogs/entitydialog.tsx:716](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L716)
 
 Returns the property items for this dialog.
 
@@ -1552,7 +1568,7 @@ The property items.
 
 > `protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:701](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L701)
+Defined in: [src/ui/dialogs/entitydialog.tsx:724](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L724)
 
 Loads the property items data, either from script data or local items.
 
@@ -1568,7 +1584,7 @@ The property items data.
 
 > `protected` **getPropertyItemsDataAsync**(): `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:720](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L720)
+Defined in: [src/ui/dialogs/entitydialog.tsx:743](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L743)
 
 Asynchronously loads the property items data.
 
@@ -1584,7 +1600,7 @@ A promise resolving to the property items data.
 
 > `protected` **getRetrieveServiceMethod**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:595](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L595)
+Defined in: [src/ui/dialogs/entitydialog.tsx:605](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L605)
 
 Returns the retrieve service method name.
 
@@ -1616,7 +1632,7 @@ The row definition, or null.
 
 > `protected` **getSaveEntity**(): `TItem`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:801](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L801)
+Defined in: [src/ui/dialogs/entitydialog.tsx:824](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L824)
 
 Returns the entity populated from the property grid.
 
@@ -1632,7 +1648,7 @@ The saved entity.
 
 > `protected` **getSaveOptions**(`callback`, `initiator?`): [`ServiceOptions`](../interfaces/ServiceOptions.md)\<[`SaveResponse`](../interfaces/SaveResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:780](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L780)
+Defined in: [src/ui/dialogs/entitydialog.tsx:803](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L803)
 
 Returns the options for the save service call.
 
@@ -1662,7 +1678,7 @@ Service options.
 
 > `protected` **getSaveRequest**(): [`SaveRequest`](../interfaces/SaveRequest.md)\<`TItem`\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:818](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L818)
+Defined in: [src/ui/dialogs/entitydialog.tsx:851](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L851)
 
 Returns the save request for the current entity.
 
@@ -1678,7 +1694,7 @@ The save request.
 
 > `protected` **getService**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:412](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L412)
+Defined in: [src/ui/dialogs/entitydialog.tsx:420](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L420)
 
 #### Returns
 
@@ -1690,7 +1706,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:412](https://github.com/serenity-is
 
 > `protected` **getToolbarButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:885](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L885)
+Defined in: [src/ui/dialogs/entitydialog.tsx:918](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L918)
 
 Returns the toolbar buttons for the entity dialog.
 
@@ -1710,7 +1726,7 @@ Tool button definitions.
 
 > `protected` **getUndeleteOptions**(`callback?`): [`ServiceOptions`](../interfaces/ServiceOptions.md)\<[`UndeleteResponse`](../interfaces/UndeleteResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1002](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1002)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1035](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1035)
 
 Returns the options for the undelete service call.
 
@@ -1730,11 +1746,27 @@ Service options.
 
 ***
 
+### getUndeletePermission()
+
+> `protected` **getUndeletePermission**(): `string`
+
+Defined in: [src/ui/dialogs/entitydialog.tsx:1149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1149)
+
+Returns the permission key required to undelete a row.
+
+#### Returns
+
+`string`
+
+Undelete permission or undefined.
+
+***
+
 ### getUndeleteRequest()
 
 > `protected` **getUndeleteRequest**(): [`UndeleteRequest`](../interfaces/UndeleteRequest.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:993](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L993)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1026](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1026)
 
 Returns the undelete request for the current entity.
 
@@ -1750,7 +1782,7 @@ The undelete request.
 
 > `protected` **getUndeleteServiceMethod**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1033](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1033)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1066](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1066)
 
 Returns the undelete service method name.
 
@@ -1766,7 +1798,7 @@ The service method.
 
 > `protected` **getUpdatePermission**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1091](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1091)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1124)
 
 Returns the update permission for the entity.
 
@@ -1782,7 +1814,7 @@ The update permission, or undefined.
 
 > `protected` **getUpdateServiceMethod**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:770](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L770)
+Defined in: [src/ui/dialogs/entitydialog.tsx:793](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L793)
 
 Returns the update service method name.
 
@@ -1836,7 +1868,7 @@ Handles responsive layout for the dialog.
 
 > `protected` **hasDeletePermission**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1107)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1140)
 
 Whether the current user has delete permission.
 
@@ -1852,7 +1884,7 @@ True when permitted.
 
 > `protected` **hasInsertPermission**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1116)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1166)
 
 Whether the current user has insert permission.
 
@@ -1868,7 +1900,7 @@ True when permitted.
 
 > `protected` **hasSavePermission**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1134)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1184)
 
 Whether the current user has save permission (insert or update).
 
@@ -1880,11 +1912,27 @@ True when permitted.
 
 ***
 
+### hasUndeletePermission()
+
+> `protected` **hasUndeletePermission**(): `boolean`
+
+Defined in: [src/ui/dialogs/entitydialog.tsx:1157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1157)
+
+Checks whether the current user may undelete rows.
+
+#### Returns
+
+`boolean`
+
+True when undeletion is allowed.
+
+***
+
 ### hasUpdatePermission()
 
 > `protected` **hasUpdatePermission**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1125](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1125)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1175)
 
 Whether the current user has update permission.
 
@@ -1938,7 +1986,7 @@ Initializes the underlying dialog element.
 
 > `protected` **initLocalizer**(): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:665](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L665)
+Defined in: [src/ui/dialogs/entitydialog.tsx:676](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L676)
 
 Initializes the entity localizer.
 
@@ -1952,7 +2000,7 @@ Initializes the entity localizer.
 
 > `protected` **initPropertyGrid**(): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:681](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L681)
+Defined in: [src/ui/dialogs/entitydialog.tsx:704](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L704)
 
 Initializes the property grid from the PropertyGrid element.
 
@@ -2156,7 +2204,7 @@ True when static.
 
 > `protected` **isViewMode**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1144)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1194)
 
 Whether the dialog is in view mode (read-only display of an existing entity).
 
@@ -2192,7 +2240,7 @@ True if a legacy template was rendered.
 
 > **load**(`entityOrId`, `done`, `fail?`): `PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:426](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L426)
+Defined in: [src/ui/dialogs/entitydialog.tsx:434](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L434)
 
 Loads an entity or id into the dialog.
 
@@ -2232,7 +2280,7 @@ A promise resolving to the retrieve response.
 
 > **loadById**(`id`, `callback?`, `fail?`): `PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:606](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L606)
+Defined in: [src/ui/dialogs/entitydialog.tsx:616](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L616)
 
 Loads an entity by id.
 
@@ -2268,7 +2316,7 @@ A promise resolving to the retrieve response.
 
 > **loadByIdAndOpenDialog**(`entityId`, `asPanel?`, `callback?`, `fail?`): `PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:533](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L533)
+Defined in: [src/ui/dialogs/entitydialog.tsx:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L543)
 
 Loads an entity by id and opens the dialog.
 
@@ -2310,7 +2358,7 @@ A promise resolving to the retrieve response.
 
 > `protected` **loadByIdHandler**(`options`, `callback`, `fail`): `PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:617](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L617)
+Defined in: [src/ui/dialogs/entitydialog.tsx:627](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L627)
 
 Executes the retrieve service call.
 
@@ -2346,7 +2394,7 @@ A promise resolving to the retrieve response.
 
 > `protected` **loadEntity**(`entity`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:499](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L499)
+Defined in: [src/ui/dialogs/entitydialog.tsx:507](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L507)
 
 Loads an entity into the property grid.
 
@@ -2368,7 +2416,7 @@ The entity to load.
 
 > **loadEntityAndOpenDialog**(`entity`, `asPanel?`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:475](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L475)
+Defined in: [src/ui/dialogs/entitydialog.tsx:483](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L483)
 
 Loads an entity and opens the dialog.
 
@@ -2396,7 +2444,7 @@ When true, opens as a panel.
 
 > **loadNewAndOpenDialog**(`asPanel?`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L465)
+Defined in: [src/ui/dialogs/entitydialog.tsx:473](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L473)
 
 Loads a new empty entity and opens the dialog.
 
@@ -2418,7 +2466,7 @@ When true, opens as a panel.
 
 > `protected` **loadResponse**(`data`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:484](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L484)
+Defined in: [src/ui/dialogs/entitydialog.tsx:492](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L492)
 
 Loads a retrieve response into the dialog.
 
@@ -2433,6 +2481,33 @@ The retrieve response data.
 #### Returns
 
 `void`
+
+***
+
+### mapSourceItem()
+
+> `protected` **mapSourceItem**(`item`): [`PropertyItem`](../interfaces/PropertyItem.md)
+
+Defined in: [src/ui/dialogs/entitydialog.tsx:697](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L697)
+
+Maps a property item to the item used in the localization grid. The default returns
+the item as is (return null for the same effect). Override to clear or modify
+permissions / insertable / updatable flags, or to exclude items by returning an item
+with `localizable: false`.
+
+#### Parameters
+
+##### item
+
+[`PropertyItem`](../interfaces/PropertyItem.md)
+
+Property item.
+
+#### Returns
+
+[`PropertyItem`](../interfaces/PropertyItem.md)
+
+The item to use, or null to use the item as is.
 
 ***
 
@@ -2540,7 +2615,7 @@ Hook invoked when the dialog opens; focuses the first input and arranges layout.
 
 > `protected` **onLoadingData**(`data`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:551](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L551)
+Defined in: [src/ui/dialogs/entitydialog.tsx:561](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L561)
 
 Hook invoked when data starts loading.
 
@@ -2596,7 +2671,7 @@ Attaches a dialog/modal/panel open event handler. See Dialog.open for more info.
 
 > `protected` **onSaveSuccess**(`response`, `initiator?`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:834](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L834)
+Defined in: [src/ui/dialogs/entitydialog.tsx:867](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L867)
 
 Hook invoked after a successful save.
 
@@ -2646,7 +2721,7 @@ Property items data.
 
 > `protected` **reloadById**(): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:587](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L587)
+Defined in: [src/ui/dialogs/entitydialog.tsx:597](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L597)
 
 Reloads the current entity by id.
 
@@ -2680,7 +2755,7 @@ this method should not be overridden. Override renderContents() instead.
 
 > `protected` **renderContents**(): `any`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1160)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1210)
 
 Renders the dialog contents with toolbar, form, and property grid.
 
@@ -2718,7 +2793,7 @@ Resets all validation state.
 
 > `protected` **retrieveLocalizations**(): `Promise`\<`Record`\<`string`, `Partial`\<`TItem`\>\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:627](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L627)
+Defined in: [src/ui/dialogs/entitydialog.tsx:637](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L637)
 
 Retrieves existing localizations for the current entity.
 
@@ -2734,7 +2809,7 @@ A promise resolving to the localizations keyed by language.
 
 > `protected` **save**(`callback?`, `initiator?`): `false` \| `PromiseLike`\<[`SaveResponse`](../interfaces/SaveResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:855](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L855)
+Defined in: [src/ui/dialogs/entitydialog.tsx:888](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L888)
 
 Validates and saves the entity.
 
@@ -2764,7 +2839,7 @@ A promise resolving to the save response, or false when validation fails.
 
 > `protected` **save\_submitHandler**(`callback`, `initiator`): `PromiseLike`\<[`SaveResponse`](../interfaces/SaveResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:844](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L844)
+Defined in: [src/ui/dialogs/entitydialog.tsx:877](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L877)
 
 Submits the save after validation.
 
@@ -2794,7 +2869,7 @@ A promise resolving to the save response.
 
 > `protected` **saveHandler**(`options`, `callback`, `initiator`): `PromiseLike`\<[`SaveResponse`](../interfaces/SaveResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:868](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L868)
+Defined in: [src/ui/dialogs/entitydialog.tsx:901](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L901)
 
 Executes the save service call.
 
@@ -2830,7 +2905,7 @@ A promise resolving to the save response.
 
 > **set\_readOnly**(`value`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1071](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1071)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1104)
 
 Sets whether the dialog is in read-only mode and updates the interface.
 
@@ -2856,7 +2931,7 @@ True to enable read-only mode.
 
 > `protected` **showSaveSuccessMessage**(`response`, `initiator?`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:877](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L877)
+Defined in: [src/ui/dialogs/entitydialog.tsx:910](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L910)
 
 Shows a success message after saving.
 
@@ -2929,7 +3004,7 @@ The continuation invoked with the result.
 
 > `protected` **undelete**(`callback?`): `void` \| `PromiseLike`\<[`UndeleteResponse`](../interfaces/UndeleteResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1042](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1042)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1075](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1075)
 
 Undeletes the current entity.
 
@@ -2953,7 +3028,7 @@ Void or a promise resolving to the undelete response.
 
 > `protected` **undeleteHandler**(`options`, `callback?`): `PromiseLike`\<[`UndeleteResponse`](../interfaces/UndeleteResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1025](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1025)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1058](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1058)
 
 Executes the undelete service call.
 
@@ -2983,7 +3058,7 @@ A promise resolving to the undelete response.
 
 > `protected` **updateInterface**(): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:980](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L980)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1013](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1013)
 
 Updates the interface to reflect the current mode and permissions.
 
@@ -3047,7 +3122,7 @@ An [IdPrefixType](../type-aliases/IdPrefixType.md) proxy for this widget's id pr
 
 > `protected` **useViewMode**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:1152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1152)
+Defined in: [src/ui/dialogs/entitydialog.tsx:1202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L1202)
 
 Whether view mode is enabled for this dialog.
 
@@ -3063,7 +3138,7 @@ True when view mode is used.
 
 > `protected` **validateBeforeSave**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:754](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L754)
+Defined in: [src/ui/dialogs/entitydialog.tsx:777](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L777)
 
 Validates the form before saving.
 

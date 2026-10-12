@@ -4,7 +4,7 @@
 
 > **bindThis**\<`T`\>(`obj`): `T`
 
-Defined in: [src/bind-this.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/bind-this.ts#L46)
+Defined in: [src/bind-this.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/bind-this.ts#L56)
 
 Creates a proxy that automatically binds method calls to the given object.
 Intended for use in classes, e.g. when attaching event handlers.

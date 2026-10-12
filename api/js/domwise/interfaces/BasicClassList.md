@@ -97,7 +97,7 @@ Class names to add.
 
 > **contains**(`token`): `boolean`
 
-Defined in: [types/basic-types.d.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L44)
+Defined in: [types/basic-types.d.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L45)
 
 Checks whether the list contains the given token.
 
@@ -141,9 +141,9 @@ Class names to remove.
 
 ### toggle()
 
-> **toggle**(`token`, `force?`): `void`
+> **toggle**(`token`, `force?`): `boolean`
 
-Defined in: [types/basic-types.d.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L38)
+Defined in: [types/basic-types.d.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L39)
 
 Toggles a token, optionally forcing the presence or absence.
 
@@ -163,4 +163,6 @@ When provided, forces add (`true`) or remove (`false`).
 
 #### Returns
 
-`void`
+`boolean`
+
+`true` if the token is now present, otherwise `false`.

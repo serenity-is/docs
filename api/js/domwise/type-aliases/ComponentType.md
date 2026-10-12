@@ -4,7 +4,7 @@
 
 > **ComponentType**\<`P`, `T`\> = [`ComponentClass`](../interfaces/ComponentClass.md)\<`P`, `T`\> \| [`FunctionComponent`](FunctionComponent.md)\<`P`, `T`\>
 
-Defined in: [types/components.d.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L41)
+Defined in: [types/components.d.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L53)
 
 A JSX component: either a class-based or a function-based component.
 

@@ -4,7 +4,7 @@
 
 > **ComponentChild** = `string` \| `number` \| `Iterable`\<`ComponentChild`\> \| `ComponentChild`[] \| \{ `peek`: () => `ComponentChild`; `subscribe`: (`cb`) => `void`; `value`: `ComponentChild`; \} \| [`JSXElement`](JSXElement.md) \| `NodeList` \| `ChildNode` \| `HTMLCollection` \| [`ShadowRootContainer`](ShadowRootContainer.md) \| `DocumentFragment` \| `Text` \| `Comment` \| `boolean` \| `null` \| `undefined`
 
-Defined in: [../domwise/dist/index.d.ts:2269](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2269)
+Defined in: [../domwise/dist/index.d.ts:2281](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2281)
 
 A single child that can be rendered inside a JSX element.
 

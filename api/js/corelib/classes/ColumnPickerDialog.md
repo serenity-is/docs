@@ -2,7 +2,7 @@
 
 # Class: ColumnPickerDialog\<P\>
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L54)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L53)
 
 Dialog that lets users show/hide, reorder, and pin grid columns.
 
@@ -24,7 +24,7 @@ Options type for the dialog.
 
 > **new ColumnPickerDialog**\<`P`\>(`opt`): `ColumnPickerDialog`\<`P`\>
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L73)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L72)
 
 Creates a column picker dialog.
 
@@ -154,7 +154,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:24](https://github.com/serenity-is/se
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L56)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L55)
 
 #### Overrides
 
@@ -475,7 +475,7 @@ The change event handler.
 
 > `protected` **createColumnItems**(): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:485](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L485)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:484](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L484)
 
 Creates the list items for all columns.
 
@@ -489,7 +489,7 @@ Creates the list items for all columns.
 
 > `protected` **createSearch**(`div`): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L251)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:250](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L250)
 
 Creates the quick search input in the dialog.
 
@@ -532,7 +532,7 @@ True to defer rendering.
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L156)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L155)
 
 Cleans up handlers and delegates to the base destroy.
 
@@ -696,7 +696,7 @@ The matching attribute, or null.
 
 > `protected` **getDialogButtons**(): [`DialogButton`](../interfaces/DialogButton.md)[]
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:419](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L419)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:418](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L418)
 
 Returns no dialog buttons; the picker uses its own controls.
 
@@ -716,7 +716,7 @@ Null.
 
 > `protected` **getDialogOptions**(): [`DialogOptions`](../interfaces/DialogOptions.md)
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:408](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L408)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:407](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L407)
 
 Returns the dialog options, sized for the column picker.
 
@@ -834,7 +834,7 @@ Handles responsive layout for the dialog.
 
 > `protected` **handleRestoreDefaults**(): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L275)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L274)
 
 Restores the default column order and visibility.
 
@@ -848,7 +848,7 @@ Restores the default column order and visibility.
 
 > `protected` **handleSearch**(`args`): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:352](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L352)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:351](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L351)
 
 Filters the column list based on the search query.
 
@@ -870,7 +870,7 @@ Quick search arguments.
 
 > `protected` **handleToggleAllClick**(): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:322](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L322)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L321)
 
 Handles clicks on the toggle-all checkbox.
 
@@ -884,7 +884,7 @@ Handles clicks on the toggle-all checkbox.
 
 > `protected` **handleToggleClick**(`e`): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L197)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:196](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L196)
 
 Handles clicks on a column's visibility toggle.
 
@@ -1074,7 +1074,7 @@ True if a legacy template was rendered.
 
 > `protected` **onChange**(`args`): `PromiseLike`\<`any`\>
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L189)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L188)
 
 Invokes the change callback with the given arguments.
 
@@ -1158,7 +1158,7 @@ The close result.
 
 > `protected` **onDialogOpen**(): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:508](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L508)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:507](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L507)
 
 Called when the dialog opens; builds the column list and focuses search.
 
@@ -1230,7 +1230,7 @@ this method should not be overridden. Override renderContents() instead.
 
 > `protected` **renderContents**(): `any`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L222)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L221)
 
 Renders the dialog contents.
 
@@ -1250,7 +1250,7 @@ The rendered dialog content.
 
 > `protected` **reorderColumns**(`columnIds`, `setVisible?`, `restoredDefaults?`): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L266)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L265)
 
 Reorders columns using the configured handler.
 
@@ -1347,7 +1347,7 @@ The continuation invoked with the result.
 
 > `protected` **toggleColumns**(`columnIds`, `show?`): `Column`\<`any`\>[]
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L176)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L175)
 
 Toggles visibility of the specified columns.
 
@@ -1377,7 +1377,7 @@ The columns whose visibility changed.
 
 > `protected` **updateToggleAllValue**(): `boolean`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:343](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L343)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:342](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L342)
 
 Updates the toggle-all checkbox to reflect the current visibility state.
 
@@ -1492,7 +1492,7 @@ A new `div` element.
 
 > `static` **createToolButton**(`optOrDataGrid`): [`ToolButton`](../interfaces/ToolButton.md)
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:379](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L379)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:378](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L378)
 
 Creates a toolbar button that opens the column picker dialog.
 
@@ -1544,7 +1544,7 @@ The widget name.
 
 > `static` **openDialog**(`opt`): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:520](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L520)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L519)
 
 Opens a column picker dialog with the given options.
 

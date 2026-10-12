@@ -4,7 +4,7 @@
 
 > **RefCallback**\<`T`\> = (`instance`) => `void`
 
-Defined in: [types/basic-types.d.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L63)
+Defined in: [types/basic-types.d.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L65)
 
 A callback invoked with the referenced instance.
 

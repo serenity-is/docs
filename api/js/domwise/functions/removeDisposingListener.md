@@ -4,15 +4,16 @@
 
 > **removeDisposingListener**\<`T`\>(`target`, `handler`, `regKey?`): `T` \| `null` \| `undefined`
 
-Defined in: [src/disposing-listener.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L163)
+Defined in: [src/disposing-listener.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L176)
 
 Removes a previously registered disposing listener from an element.
 
 This removes the entry from the internal disposing-listener registry, not a
-direct DOM `EventListener`. A listener matches when either its `handler`
-reference equals the stored callback or its `regKey` equals the stored key.
-When the last listener is removed the underlying `disposing` DOM listener
-is also detached from the target.
+direct DOM `EventListener`. When both `handler` and `regKey` are provided, a
+listener matches only when **both** its callback reference and its `regKey`
+match. When only one is provided, matching uses that one (by `regKey`, or by
+callback reference). When the last listener is removed the underlying
+`disposing` DOM listener is also detached from the target.
 
 ## Type Parameters
 

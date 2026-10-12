@@ -4,7 +4,7 @@
 
 > **RefObject**\<`T`\> = `object`
 
-Defined in: [types/basic-types.d.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L58)
+Defined in: [types/basic-types.d.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L60)
 
 A mutable reference container with a `current` property.
 
@@ -22,4 +22,4 @@ The type of the referenced value.
 
 > **current**: `T` \| `null`
 
-Defined in: [types/basic-types.d.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L58)
+Defined in: [types/basic-types.d.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L60)

@@ -4,7 +4,7 @@
 
 > **and**(`c1`, `c2`, ...`rest`): `any`[]
 
-Defined in: [src/base/criteria.ts:924](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L924)
+Defined in: [src/base/criteria.ts:1130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1130)
 
 Combines two or more criteria with `and`, skipping empty entries.
 

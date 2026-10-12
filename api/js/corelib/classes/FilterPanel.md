@@ -270,7 +270,7 @@ Sets whether the search button is shown.
 
 > `protected` **addButtonClick**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:329](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L329)
+Defined in: [src/ui/filtering/filterpanel.tsx:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L330)
 
 Handles the add-button click.
 
@@ -310,7 +310,7 @@ Adds the widget's CSS class to its DOM node.
 
 > `protected` **addEmptyRow**(`popupField`): `HTMLElement`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:381](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L381)
+Defined in: [src/ui/filtering/filterpanel.tsx:382](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L382)
 
 Adds an empty filter row.
 
@@ -428,7 +428,7 @@ The callback to run after rendering.
 
 > `protected` **andOrClick**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:593](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L593)
+Defined in: [src/ui/filtering/filterpanel.tsx:594](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L594)
 
 Handles the and/or toggle click.
 
@@ -558,7 +558,7 @@ True to defer rendering.
 
 > `protected` **deleteRowClick**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:568](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L568)
+Defined in: [src/ui/filtering/filterpanel.tsx:569](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L569)
 
 Handles the delete-row click.
 
@@ -650,7 +650,7 @@ The matching element, or null if not found.
 
 > `protected` **findEmptyRow**(): `HTMLElement`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:359](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L359)
+Defined in: [src/ui/filtering/filterpanel.tsx:360](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L360)
 
 Finds an empty row, if any.
 
@@ -762,7 +762,7 @@ The matching attribute, or null.
 
 > `protected` **getFieldFor**(`row`): [`PropertyItem`](../interfaces/PropertyItem.md)
 
-Defined in: [src/ui/filtering/filterpanel.tsx:475](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L475)
+Defined in: [src/ui/filtering/filterpanel.tsx:476](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L476)
 
 Returns the field for a row.
 
@@ -786,7 +786,7 @@ The field, or null.
 
 > `protected` **getFilteringFor**(`row`): [`IFiltering`](IFiltering.md)
 
-Defined in: [src/ui/filtering/filterpanel.tsx:493](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L493)
+Defined in: [src/ui/filtering/filterpanel.tsx:494](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L494)
 
 Returns the filtering handler for a row.
 
@@ -868,7 +868,7 @@ Renders the widget's contents and runs any queued after-render callbacks.
 
 > `protected` **leftRightParenClick**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:604](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L604)
+Defined in: [src/ui/filtering/filterpanel.tsx:605](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L605)
 
 Handles the left/right parenthesis click.
 
@@ -910,7 +910,7 @@ True if a legacy template was rendered.
 
 > `protected` **onRowFieldChange**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:423](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L423)
+Defined in: [src/ui/filtering/filterpanel.tsx:424](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L424)
 
 Handles the field change event.
 
@@ -932,7 +932,7 @@ The change event.
 
 > `protected` **onRowOperatorChange**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:520](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L520)
+Defined in: [src/ui/filtering/filterpanel.tsx:521](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L521)
 
 Handles the operator change event.
 
@@ -954,7 +954,7 @@ The change event.
 
 > `protected` **populateOperatorList**(`row`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:455](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L455)
+Defined in: [src/ui/filtering/filterpanel.tsx:456](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L456)
 
 Populates the operator list for a row.
 
@@ -976,7 +976,7 @@ The row element.
 
 > `protected` **removeFiltering**(`row`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:446](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L446)
+Defined in: [src/ui/filtering/filterpanel.tsx:447](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L447)
 
 Removes the filtering handler from a row.
 
@@ -1038,7 +1038,7 @@ The rendered content.
 
 > `protected` **resetButtonClick**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:338](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L338)
+Defined in: [src/ui/filtering/filterpanel.tsx:339](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L339)
 
 Handles the reset-button click.
 
@@ -1060,7 +1060,7 @@ The click event.
 
 > `protected` **rowFieldChange**(`row`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:433](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L433)
+Defined in: [src/ui/filtering/filterpanel.tsx:434](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L434)
 
 Handles a field change for a row.
 
@@ -1082,7 +1082,7 @@ The row element.
 
 > `protected` **rowOperatorChange**(`row`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:535](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L535)
+Defined in: [src/ui/filtering/filterpanel.tsx:536](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L536)
 
 Handles an operator change for a row.
 
@@ -1211,7 +1211,7 @@ The continuation invoked with the result.
 
 > `protected` **updateButtons**(): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:584](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L584)
+Defined in: [src/ui/filtering/filterpanel.tsx:585](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L585)
 
 Updates the visibility of the search and reset buttons.
 
@@ -1225,7 +1225,7 @@ Updates the visibility of the search and reset buttons.
 
 > `protected` **updateParens**(): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:613](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L613)
+Defined in: [src/ui/filtering/filterpanel.tsx:614](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L614)
 
 Updates the parenthesis indicators for all rows.
 

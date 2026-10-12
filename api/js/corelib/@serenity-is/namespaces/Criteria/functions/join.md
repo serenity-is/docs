@@ -4,7 +4,7 @@
 
 > **join**(`c1`, `op`, `c2`): `any`[]
 
-Defined in: [src/base/criteria.ts:895](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L895)
+Defined in: [src/base/criteria.ts:1101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1101)
 
 Joins two criteria with an operator, skipping empty sides.
 

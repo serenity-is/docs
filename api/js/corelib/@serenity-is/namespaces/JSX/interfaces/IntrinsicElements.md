@@ -2,7 +2,7 @@
 
 # Interface: IntrinsicElements
 
-Defined in: [../domwise/dist/index.d.ts:2304](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2304)
+Defined in: [../domwise/dist/index.d.ts:2316](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2316)
 
 Augment to declare custom HTML element tag/type mappings.
 
@@ -16,7 +16,7 @@ Augment to declare custom HTML element tag/type mappings.
 
 > **a**: `AnchorHTMLAttributes`\<`HTMLAnchorElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2039](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2039)
+Defined in: [../domwise/dist/index.d.ts:2051](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2051)
 
 #### Inherited from
 
@@ -28,7 +28,7 @@ Defined in: [../domwise/dist/index.d.ts:2039](https://github.com/serenity-is/ser
 
 > **abbr**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2040](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2040)
+Defined in: [../domwise/dist/index.d.ts:2052](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2052)
 
 #### Inherited from
 
@@ -40,7 +40,7 @@ Defined in: [../domwise/dist/index.d.ts:2040](https://github.com/serenity-is/ser
 
 > **address**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2041](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2041)
+Defined in: [../domwise/dist/index.d.ts:2053](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2053)
 
 #### Inherited from
 
@@ -52,7 +52,7 @@ Defined in: [../domwise/dist/index.d.ts:2041](https://github.com/serenity-is/ser
 
 > **animate**: `AnimateSVGAttributes`\<`SVGAnimateElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2156](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2156)
+Defined in: [../domwise/dist/index.d.ts:2168](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2168)
 
 #### Inherited from
 
@@ -64,7 +64,7 @@ Defined in: [../domwise/dist/index.d.ts:2156](https://github.com/serenity-is/ser
 
 > **animateMotion**: `AnimateMotionSVGAttributes`\<`SVGAnimateMotionElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2157](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2157)
+Defined in: [../domwise/dist/index.d.ts:2169](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2169)
 
 #### Inherited from
 
@@ -76,7 +76,7 @@ Defined in: [../domwise/dist/index.d.ts:2157](https://github.com/serenity-is/ser
 
 > **animateTransform**: `AnimateTransformSVGAttributes`\<`SVGAnimateTransformElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2158](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2158)
+Defined in: [../domwise/dist/index.d.ts:2170](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2170)
 
 #### Inherited from
 
@@ -88,7 +88,7 @@ Defined in: [../domwise/dist/index.d.ts:2158](https://github.com/serenity-is/ser
 
 > **annotation**: `MathMLAnnotationElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2217](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2217)
+Defined in: [../domwise/dist/index.d.ts:2229](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2229)
 
 #### Inherited from
 
@@ -100,7 +100,7 @@ Defined in: [../domwise/dist/index.d.ts:2217](https://github.com/serenity-is/ser
 
 > **annotation-xml**: `MathMLAnnotationXmlElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2218](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2218)
+Defined in: [../domwise/dist/index.d.ts:2230](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2230)
 
 #### Inherited from
 
@@ -112,7 +112,7 @@ Defined in: [../domwise/dist/index.d.ts:2218](https://github.com/serenity-is/ser
 
 > **area**: `AreaHTMLAttributes`\<`HTMLAreaElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2042](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2042)
+Defined in: [../domwise/dist/index.d.ts:2054](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2054)
 
 #### Inherited from
 
@@ -124,7 +124,7 @@ Defined in: [../domwise/dist/index.d.ts:2042](https://github.com/serenity-is/ser
 
 > **article**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2043](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2043)
+Defined in: [../domwise/dist/index.d.ts:2055](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2055)
 
 #### Inherited from
 
@@ -136,7 +136,7 @@ Defined in: [../domwise/dist/index.d.ts:2043](https://github.com/serenity-is/ser
 
 > **aside**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2044](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2044)
+Defined in: [../domwise/dist/index.d.ts:2056](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2056)
 
 #### Inherited from
 
@@ -148,7 +148,7 @@ Defined in: [../domwise/dist/index.d.ts:2044](https://github.com/serenity-is/ser
 
 > **audio**: `AudioHTMLAttributes`\<`HTMLAudioElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2045](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2045)
+Defined in: [../domwise/dist/index.d.ts:2057](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2057)
 
 #### Inherited from
 
@@ -160,7 +160,7 @@ Defined in: [../domwise/dist/index.d.ts:2045](https://github.com/serenity-is/ser
 
 > **b**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2046](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2046)
+Defined in: [../domwise/dist/index.d.ts:2058](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2058)
 
 #### Inherited from
 
@@ -172,7 +172,7 @@ Defined in: [../domwise/dist/index.d.ts:2046](https://github.com/serenity-is/ser
 
 > **base**: `BaseHTMLAttributes`\<`HTMLBaseElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2047](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2047)
+Defined in: [../domwise/dist/index.d.ts:2059](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2059)
 
 #### Inherited from
 
@@ -184,7 +184,7 @@ Defined in: [../domwise/dist/index.d.ts:2047](https://github.com/serenity-is/ser
 
 > **bdi**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2048](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2048)
+Defined in: [../domwise/dist/index.d.ts:2060](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2060)
 
 #### Inherited from
 
@@ -196,7 +196,7 @@ Defined in: [../domwise/dist/index.d.ts:2048](https://github.com/serenity-is/ser
 
 > **bdo**: `BdoHTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2049](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2049)
+Defined in: [../domwise/dist/index.d.ts:2061](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2061)
 
 #### Inherited from
 
@@ -208,7 +208,7 @@ Defined in: [../domwise/dist/index.d.ts:2049](https://github.com/serenity-is/ser
 
 > **blockquote**: `BlockquoteHTMLAttributes`\<`HTMLQuoteElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2050](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2050)
+Defined in: [../domwise/dist/index.d.ts:2062](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2062)
 
 #### Inherited from
 
@@ -220,7 +220,7 @@ Defined in: [../domwise/dist/index.d.ts:2050](https://github.com/serenity-is/ser
 
 > **body**: `BodyHTMLAttributes`\<`HTMLBodyElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2051](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2051)
+Defined in: [../domwise/dist/index.d.ts:2063](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2063)
 
 #### Inherited from
 
@@ -232,7 +232,7 @@ Defined in: [../domwise/dist/index.d.ts:2051](https://github.com/serenity-is/ser
 
 > **br**: `HTMLAttributes`\<`HTMLBRElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2052](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2052)
+Defined in: [../domwise/dist/index.d.ts:2064](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2064)
 
 #### Inherited from
 
@@ -244,7 +244,7 @@ Defined in: [../domwise/dist/index.d.ts:2052](https://github.com/serenity-is/ser
 
 > **button**: `ButtonHTMLAttributes`\<`HTMLButtonElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2053](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2053)
+Defined in: [../domwise/dist/index.d.ts:2065](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2065)
 
 #### Inherited from
 
@@ -256,7 +256,7 @@ Defined in: [../domwise/dist/index.d.ts:2053](https://github.com/serenity-is/ser
 
 > **canvas**: `CanvasHTMLAttributes`\<`HTMLCanvasElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2054](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2054)
+Defined in: [../domwise/dist/index.d.ts:2066](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2066)
 
 #### Inherited from
 
@@ -268,7 +268,7 @@ Defined in: [../domwise/dist/index.d.ts:2054](https://github.com/serenity-is/ser
 
 > **caption**: `CaptionHTMLAttributes`\<`HTMLTableCaptionElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2055](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2055)
+Defined in: [../domwise/dist/index.d.ts:2067](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2067)
 
 #### Inherited from
 
@@ -280,7 +280,7 @@ Defined in: [../domwise/dist/index.d.ts:2055](https://github.com/serenity-is/ser
 
 > **circle**: `CircleSVGAttributes`\<`SVGCircleElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2159](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2159)
+Defined in: [../domwise/dist/index.d.ts:2171](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2171)
 
 #### Inherited from
 
@@ -292,7 +292,7 @@ Defined in: [../domwise/dist/index.d.ts:2159](https://github.com/serenity-is/ser
 
 > **cite**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2056](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2056)
+Defined in: [../domwise/dist/index.d.ts:2068](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2068)
 
 #### Inherited from
 
@@ -304,7 +304,7 @@ Defined in: [../domwise/dist/index.d.ts:2056](https://github.com/serenity-is/ser
 
 > **clipPath**: `ClipPathSVGAttributes`\<`SVGClipPathElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2160](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2160)
+Defined in: [../domwise/dist/index.d.ts:2172](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2172)
 
 #### Inherited from
 
@@ -316,7 +316,7 @@ Defined in: [../domwise/dist/index.d.ts:2160](https://github.com/serenity-is/ser
 
 > **code**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2057](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2057)
+Defined in: [../domwise/dist/index.d.ts:2069](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2069)
 
 #### Inherited from
 
@@ -328,7 +328,7 @@ Defined in: [../domwise/dist/index.d.ts:2057](https://github.com/serenity-is/ser
 
 > **col**: `ColHTMLAttributes`\<`HTMLTableColElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2058](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2058)
+Defined in: [../domwise/dist/index.d.ts:2070](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2070)
 
 #### Inherited from
 
@@ -340,7 +340,7 @@ Defined in: [../domwise/dist/index.d.ts:2058](https://github.com/serenity-is/ser
 
 > **colgroup**: `ColgroupHTMLAttributes`\<`HTMLTableColElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2059](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2059)
+Defined in: [../domwise/dist/index.d.ts:2071](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2071)
 
 #### Inherited from
 
@@ -352,7 +352,7 @@ Defined in: [../domwise/dist/index.d.ts:2059](https://github.com/serenity-is/ser
 
 > **data**: `DataHTMLAttributes`\<`HTMLDataElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2060](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2060)
+Defined in: [../domwise/dist/index.d.ts:2072](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2072)
 
 #### Inherited from
 
@@ -364,7 +364,7 @@ Defined in: [../domwise/dist/index.d.ts:2060](https://github.com/serenity-is/ser
 
 > **datalist**: `HTMLAttributes`\<`HTMLDataListElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2061](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2061)
+Defined in: [../domwise/dist/index.d.ts:2073](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2073)
 
 #### Inherited from
 
@@ -376,7 +376,7 @@ Defined in: [../domwise/dist/index.d.ts:2061](https://github.com/serenity-is/ser
 
 > **dd**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2062](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2062)
+Defined in: [../domwise/dist/index.d.ts:2074](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2074)
 
 #### Inherited from
 
@@ -388,7 +388,7 @@ Defined in: [../domwise/dist/index.d.ts:2062](https://github.com/serenity-is/ser
 
 > **defs**: `DefsSVGAttributes`\<`SVGDefsElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2161](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2161)
+Defined in: [../domwise/dist/index.d.ts:2173](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2173)
 
 #### Inherited from
 
@@ -400,7 +400,7 @@ Defined in: [../domwise/dist/index.d.ts:2161](https://github.com/serenity-is/ser
 
 > **del**: `ModHTMLAttributes`\<`HTMLModElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2063](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2063)
+Defined in: [../domwise/dist/index.d.ts:2075](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2075)
 
 #### Inherited from
 
@@ -412,7 +412,7 @@ Defined in: [../domwise/dist/index.d.ts:2063](https://github.com/serenity-is/ser
 
 > **desc**: `DescSVGAttributes`\<`SVGDescElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2162](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2162)
+Defined in: [../domwise/dist/index.d.ts:2174](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2174)
 
 #### Inherited from
 
@@ -424,7 +424,7 @@ Defined in: [../domwise/dist/index.d.ts:2162](https://github.com/serenity-is/ser
 
 > **details**: `DetailsHtmlAttributes`\<`HTMLDetailsElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2064](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2064)
+Defined in: [../domwise/dist/index.d.ts:2076](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2076)
 
 #### Inherited from
 
@@ -436,7 +436,7 @@ Defined in: [../domwise/dist/index.d.ts:2064](https://github.com/serenity-is/ser
 
 > **dfn**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2065](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2065)
+Defined in: [../domwise/dist/index.d.ts:2077](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2077)
 
 #### Inherited from
 
@@ -448,7 +448,7 @@ Defined in: [../domwise/dist/index.d.ts:2065](https://github.com/serenity-is/ser
 
 > **dialog**: `DialogHtmlAttributes`\<`HTMLDialogElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2066](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2066)
+Defined in: [../domwise/dist/index.d.ts:2078](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2078)
 
 #### Inherited from
 
@@ -460,7 +460,7 @@ Defined in: [../domwise/dist/index.d.ts:2066](https://github.com/serenity-is/ser
 
 > **div**: `HTMLAttributes`\<`HTMLDivElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2067](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2067)
+Defined in: [../domwise/dist/index.d.ts:2079](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2079)
 
 #### Inherited from
 
@@ -472,7 +472,7 @@ Defined in: [../domwise/dist/index.d.ts:2067](https://github.com/serenity-is/ser
 
 > **dl**: `HTMLAttributes`\<`HTMLDListElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2068](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2068)
+Defined in: [../domwise/dist/index.d.ts:2080](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2080)
 
 #### Inherited from
 
@@ -484,7 +484,7 @@ Defined in: [../domwise/dist/index.d.ts:2068](https://github.com/serenity-is/ser
 
 > **dt**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2069](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2069)
+Defined in: [../domwise/dist/index.d.ts:2081](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2081)
 
 #### Inherited from
 
@@ -496,7 +496,7 @@ Defined in: [../domwise/dist/index.d.ts:2069](https://github.com/serenity-is/ser
 
 > **ellipse**: `EllipseSVGAttributes`\<`SVGEllipseElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2163](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2163)
+Defined in: [../domwise/dist/index.d.ts:2175](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2175)
 
 #### Inherited from
 
@@ -508,7 +508,7 @@ Defined in: [../domwise/dist/index.d.ts:2163](https://github.com/serenity-is/ser
 
 > **em**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2070](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2070)
+Defined in: [../domwise/dist/index.d.ts:2082](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2082)
 
 #### Inherited from
 
@@ -520,7 +520,7 @@ Defined in: [../domwise/dist/index.d.ts:2070](https://github.com/serenity-is/ser
 
 > **embed**: `EmbedHTMLAttributes`\<`HTMLEmbedElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2071](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2071)
+Defined in: [../domwise/dist/index.d.ts:2083](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2083)
 
 #### Inherited from
 
@@ -532,7 +532,7 @@ Defined in: [../domwise/dist/index.d.ts:2071](https://github.com/serenity-is/ser
 
 > **feBlend**: `FeBlendSVGAttributes`\<`SVGFEBlendElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2164](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2164)
+Defined in: [../domwise/dist/index.d.ts:2176](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2176)
 
 #### Inherited from
 
@@ -544,7 +544,7 @@ Defined in: [../domwise/dist/index.d.ts:2164](https://github.com/serenity-is/ser
 
 > **feColorMatrix**: `FeColorMatrixSVGAttributes`\<`SVGFEColorMatrixElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2165](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2165)
+Defined in: [../domwise/dist/index.d.ts:2177](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2177)
 
 #### Inherited from
 
@@ -556,7 +556,7 @@ Defined in: [../domwise/dist/index.d.ts:2165](https://github.com/serenity-is/ser
 
 > **feComponentTransfer**: `FeComponentTransferSVGAttributes`\<`SVGFEComponentTransferElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2166](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2166)
+Defined in: [../domwise/dist/index.d.ts:2178](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2178)
 
 #### Inherited from
 
@@ -568,7 +568,7 @@ Defined in: [../domwise/dist/index.d.ts:2166](https://github.com/serenity-is/ser
 
 > **feComposite**: `FeCompositeSVGAttributes`\<`SVGFECompositeElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2167](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2167)
+Defined in: [../domwise/dist/index.d.ts:2179](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2179)
 
 #### Inherited from
 
@@ -580,7 +580,7 @@ Defined in: [../domwise/dist/index.d.ts:2167](https://github.com/serenity-is/ser
 
 > **feConvolveMatrix**: `FeConvolveMatrixSVGAttributes`\<`SVGFEConvolveMatrixElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2168](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2168)
+Defined in: [../domwise/dist/index.d.ts:2180](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2180)
 
 #### Inherited from
 
@@ -592,7 +592,7 @@ Defined in: [../domwise/dist/index.d.ts:2168](https://github.com/serenity-is/ser
 
 > **feDiffuseLighting**: `FeDiffuseLightingSVGAttributes`\<`SVGFEDiffuseLightingElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2169](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2169)
+Defined in: [../domwise/dist/index.d.ts:2181](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2181)
 
 #### Inherited from
 
@@ -604,7 +604,7 @@ Defined in: [../domwise/dist/index.d.ts:2169](https://github.com/serenity-is/ser
 
 > **feDisplacementMap**: `FeDisplacementMapSVGAttributes`\<`SVGFEDisplacementMapElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2170](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2170)
+Defined in: [../domwise/dist/index.d.ts:2182](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2182)
 
 #### Inherited from
 
@@ -616,7 +616,7 @@ Defined in: [../domwise/dist/index.d.ts:2170](https://github.com/serenity-is/ser
 
 > **feDistantLight**: `FeDistantLightSVGAttributes`\<`SVGFEDistantLightElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2171](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2171)
+Defined in: [../domwise/dist/index.d.ts:2183](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2183)
 
 #### Inherited from
 
@@ -628,7 +628,7 @@ Defined in: [../domwise/dist/index.d.ts:2171](https://github.com/serenity-is/ser
 
 > **feDropShadow**: `FeDropShadowSVGAttributes`\<`SVGFEDropShadowElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2172](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2172)
+Defined in: [../domwise/dist/index.d.ts:2184](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2184)
 
 #### Inherited from
 
@@ -640,7 +640,7 @@ Defined in: [../domwise/dist/index.d.ts:2172](https://github.com/serenity-is/ser
 
 > **feFlood**: `FeFloodSVGAttributes`\<`SVGFEFloodElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2173](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2173)
+Defined in: [../domwise/dist/index.d.ts:2185](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2185)
 
 #### Inherited from
 
@@ -652,7 +652,7 @@ Defined in: [../domwise/dist/index.d.ts:2173](https://github.com/serenity-is/ser
 
 > **feFuncA**: `FeFuncSVGAttributes`\<`SVGFEFuncAElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2174](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2174)
+Defined in: [../domwise/dist/index.d.ts:2186](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2186)
 
 #### Inherited from
 
@@ -664,7 +664,7 @@ Defined in: [../domwise/dist/index.d.ts:2174](https://github.com/serenity-is/ser
 
 > **feFuncB**: `FeFuncSVGAttributes`\<`SVGFEFuncBElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2175](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2175)
+Defined in: [../domwise/dist/index.d.ts:2187](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2187)
 
 #### Inherited from
 
@@ -676,7 +676,7 @@ Defined in: [../domwise/dist/index.d.ts:2175](https://github.com/serenity-is/ser
 
 > **feFuncG**: `FeFuncSVGAttributes`\<`SVGFEFuncGElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2176](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2176)
+Defined in: [../domwise/dist/index.d.ts:2188](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2188)
 
 #### Inherited from
 
@@ -688,7 +688,7 @@ Defined in: [../domwise/dist/index.d.ts:2176](https://github.com/serenity-is/ser
 
 > **feFuncR**: `FeFuncSVGAttributes`\<`SVGFEFuncRElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2177](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2177)
+Defined in: [../domwise/dist/index.d.ts:2189](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2189)
 
 #### Inherited from
 
@@ -700,7 +700,7 @@ Defined in: [../domwise/dist/index.d.ts:2177](https://github.com/serenity-is/ser
 
 > **feGaussianBlur**: `FeGaussianBlurSVGAttributes`\<`SVGFEGaussianBlurElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2178](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2178)
+Defined in: [../domwise/dist/index.d.ts:2190](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2190)
 
 #### Inherited from
 
@@ -712,7 +712,7 @@ Defined in: [../domwise/dist/index.d.ts:2178](https://github.com/serenity-is/ser
 
 > **feImage**: `FeImageSVGAttributes`\<`SVGFEImageElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2179](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2179)
+Defined in: [../domwise/dist/index.d.ts:2191](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2191)
 
 #### Inherited from
 
@@ -724,7 +724,7 @@ Defined in: [../domwise/dist/index.d.ts:2179](https://github.com/serenity-is/ser
 
 > **feMerge**: `FeMergeSVGAttributes`\<`SVGFEMergeElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2180](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2180)
+Defined in: [../domwise/dist/index.d.ts:2192](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2192)
 
 #### Inherited from
 
@@ -736,7 +736,7 @@ Defined in: [../domwise/dist/index.d.ts:2180](https://github.com/serenity-is/ser
 
 > **feMergeNode**: `FeMergeNodeSVGAttributes`\<`SVGFEMergeNodeElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2181](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2181)
+Defined in: [../domwise/dist/index.d.ts:2193](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2193)
 
 #### Inherited from
 
@@ -748,7 +748,7 @@ Defined in: [../domwise/dist/index.d.ts:2181](https://github.com/serenity-is/ser
 
 > **feMorphology**: `FeMorphologySVGAttributes`\<`SVGFEMorphologyElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2182](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2182)
+Defined in: [../domwise/dist/index.d.ts:2194](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2194)
 
 #### Inherited from
 
@@ -760,7 +760,7 @@ Defined in: [../domwise/dist/index.d.ts:2182](https://github.com/serenity-is/ser
 
 > **feOffset**: `FeOffsetSVGAttributes`\<`SVGFEOffsetElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2183](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2183)
+Defined in: [../domwise/dist/index.d.ts:2195](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2195)
 
 #### Inherited from
 
@@ -772,7 +772,7 @@ Defined in: [../domwise/dist/index.d.ts:2183](https://github.com/serenity-is/ser
 
 > **fePointLight**: `FePointLightSVGAttributes`\<`SVGFEPointLightElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2184](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2184)
+Defined in: [../domwise/dist/index.d.ts:2196](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2196)
 
 #### Inherited from
 
@@ -784,7 +784,7 @@ Defined in: [../domwise/dist/index.d.ts:2184](https://github.com/serenity-is/ser
 
 > **feSpecularLighting**: `FeSpecularLightingSVGAttributes`\<`SVGFESpecularLightingElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2185](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2185)
+Defined in: [../domwise/dist/index.d.ts:2197](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2197)
 
 #### Inherited from
 
@@ -796,7 +796,7 @@ Defined in: [../domwise/dist/index.d.ts:2185](https://github.com/serenity-is/ser
 
 > **feSpotLight**: `FeSpotLightSVGAttributes`\<`SVGFESpotLightElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2186](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2186)
+Defined in: [../domwise/dist/index.d.ts:2198](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2198)
 
 #### Inherited from
 
@@ -808,7 +808,7 @@ Defined in: [../domwise/dist/index.d.ts:2186](https://github.com/serenity-is/ser
 
 > **feTile**: `FeTileSVGAttributes`\<`SVGFETileElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2187](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2187)
+Defined in: [../domwise/dist/index.d.ts:2199](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2199)
 
 #### Inherited from
 
@@ -820,7 +820,7 @@ Defined in: [../domwise/dist/index.d.ts:2187](https://github.com/serenity-is/ser
 
 > **feTurbulence**: `FeTurbulanceSVGAttributes`\<`SVGFETurbulenceElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2188](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2188)
+Defined in: [../domwise/dist/index.d.ts:2200](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2200)
 
 #### Inherited from
 
@@ -832,7 +832,7 @@ Defined in: [../domwise/dist/index.d.ts:2188](https://github.com/serenity-is/ser
 
 > **fieldset**: `FieldsetHTMLAttributes`\<`HTMLFieldSetElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2072](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2072)
+Defined in: [../domwise/dist/index.d.ts:2084](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2084)
 
 #### Inherited from
 
@@ -844,7 +844,7 @@ Defined in: [../domwise/dist/index.d.ts:2072](https://github.com/serenity-is/ser
 
 > **figcaption**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2073](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2073)
+Defined in: [../domwise/dist/index.d.ts:2085](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2085)
 
 #### Inherited from
 
@@ -856,7 +856,7 @@ Defined in: [../domwise/dist/index.d.ts:2073](https://github.com/serenity-is/ser
 
 > **figure**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2074](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2074)
+Defined in: [../domwise/dist/index.d.ts:2086](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2086)
 
 #### Inherited from
 
@@ -868,7 +868,7 @@ Defined in: [../domwise/dist/index.d.ts:2074](https://github.com/serenity-is/ser
 
 > **filter**: `FilterSVGAttributes`\<`SVGFilterElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2189](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2189)
+Defined in: [../domwise/dist/index.d.ts:2201](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2201)
 
 #### Inherited from
 
@@ -880,7 +880,7 @@ Defined in: [../domwise/dist/index.d.ts:2189](https://github.com/serenity-is/ser
 
 > **footer**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2075](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2075)
+Defined in: [../domwise/dist/index.d.ts:2087](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2087)
 
 #### Inherited from
 
@@ -892,7 +892,7 @@ Defined in: [../domwise/dist/index.d.ts:2075](https://github.com/serenity-is/ser
 
 > **foreignObject**: `ForeignObjectSVGAttributes`\<`SVGForeignObjectElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2190](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2190)
+Defined in: [../domwise/dist/index.d.ts:2202](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2202)
 
 #### Inherited from
 
@@ -904,7 +904,7 @@ Defined in: [../domwise/dist/index.d.ts:2190](https://github.com/serenity-is/ser
 
 > **form**: `FormHTMLAttributes`\<`HTMLFormElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2076](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2076)
+Defined in: [../domwise/dist/index.d.ts:2088](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2088)
 
 #### Inherited from
 
@@ -916,7 +916,7 @@ Defined in: [../domwise/dist/index.d.ts:2076](https://github.com/serenity-is/ser
 
 > **g**: `GSVGAttributes`\<`SVGGElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2191](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2191)
+Defined in: [../domwise/dist/index.d.ts:2203](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2203)
 
 #### Inherited from
 
@@ -928,7 +928,7 @@ Defined in: [../domwise/dist/index.d.ts:2191](https://github.com/serenity-is/ser
 
 > **h1**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2077](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2077)
+Defined in: [../domwise/dist/index.d.ts:2089](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2089)
 
 #### Inherited from
 
@@ -940,7 +940,7 @@ Defined in: [../domwise/dist/index.d.ts:2077](https://github.com/serenity-is/ser
 
 > **h2**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2078](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2078)
+Defined in: [../domwise/dist/index.d.ts:2090](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2090)
 
 #### Inherited from
 
@@ -952,7 +952,7 @@ Defined in: [../domwise/dist/index.d.ts:2078](https://github.com/serenity-is/ser
 
 > **h3**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2079](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2079)
+Defined in: [../domwise/dist/index.d.ts:2091](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2091)
 
 #### Inherited from
 
@@ -964,7 +964,7 @@ Defined in: [../domwise/dist/index.d.ts:2079](https://github.com/serenity-is/ser
 
 > **h4**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2080](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2080)
+Defined in: [../domwise/dist/index.d.ts:2092](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2092)
 
 #### Inherited from
 
@@ -976,7 +976,7 @@ Defined in: [../domwise/dist/index.d.ts:2080](https://github.com/serenity-is/ser
 
 > **h5**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2081](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2081)
+Defined in: [../domwise/dist/index.d.ts:2093](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2093)
 
 #### Inherited from
 
@@ -988,7 +988,7 @@ Defined in: [../domwise/dist/index.d.ts:2081](https://github.com/serenity-is/ser
 
 > **h6**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2082](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2082)
+Defined in: [../domwise/dist/index.d.ts:2094](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2094)
 
 #### Inherited from
 
@@ -1000,7 +1000,7 @@ Defined in: [../domwise/dist/index.d.ts:2082](https://github.com/serenity-is/ser
 
 > **head**: `HTMLAttributes`\<`HTMLHeadElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2083](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2083)
+Defined in: [../domwise/dist/index.d.ts:2095](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2095)
 
 #### Inherited from
 
@@ -1012,7 +1012,7 @@ Defined in: [../domwise/dist/index.d.ts:2083](https://github.com/serenity-is/ser
 
 > **header**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2084](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2084)
+Defined in: [../domwise/dist/index.d.ts:2096](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2096)
 
 #### Inherited from
 
@@ -1024,7 +1024,7 @@ Defined in: [../domwise/dist/index.d.ts:2084](https://github.com/serenity-is/ser
 
 > **hgroup**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2085](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2085)
+Defined in: [../domwise/dist/index.d.ts:2097](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2097)
 
 #### Inherited from
 
@@ -1036,7 +1036,7 @@ Defined in: [../domwise/dist/index.d.ts:2085](https://github.com/serenity-is/ser
 
 > **hr**: `HTMLAttributes`\<`HTMLHRElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2086](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2086)
+Defined in: [../domwise/dist/index.d.ts:2098](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2098)
 
 #### Inherited from
 
@@ -1048,7 +1048,7 @@ Defined in: [../domwise/dist/index.d.ts:2086](https://github.com/serenity-is/ser
 
 > **html**: `HTMLAttributes`\<`HTMLHtmlElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2087](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2087)
+Defined in: [../domwise/dist/index.d.ts:2099](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2099)
 
 #### Inherited from
 
@@ -1060,7 +1060,7 @@ Defined in: [../domwise/dist/index.d.ts:2087](https://github.com/serenity-is/ser
 
 > **i**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2088](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2088)
+Defined in: [../domwise/dist/index.d.ts:2100](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2100)
 
 #### Inherited from
 
@@ -1072,7 +1072,7 @@ Defined in: [../domwise/dist/index.d.ts:2088](https://github.com/serenity-is/ser
 
 > **iframe**: `IframeHTMLAttributes`\<`HTMLIFrameElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2089](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2089)
+Defined in: [../domwise/dist/index.d.ts:2101](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2101)
 
 #### Inherited from
 
@@ -1084,7 +1084,7 @@ Defined in: [../domwise/dist/index.d.ts:2089](https://github.com/serenity-is/ser
 
 > **image**: `ImageSVGAttributes`\<`SVGImageElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2192](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2192)
+Defined in: [../domwise/dist/index.d.ts:2204](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2204)
 
 #### Inherited from
 
@@ -1096,7 +1096,7 @@ Defined in: [../domwise/dist/index.d.ts:2192](https://github.com/serenity-is/ser
 
 > **img**: `ImgHTMLAttributes`\<`HTMLImageElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2090](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2090)
+Defined in: [../domwise/dist/index.d.ts:2102](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2102)
 
 #### Inherited from
 
@@ -1108,7 +1108,7 @@ Defined in: [../domwise/dist/index.d.ts:2090](https://github.com/serenity-is/ser
 
 > **input**: `InputHTMLAttributes`\<`HTMLInputElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2091](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2091)
+Defined in: [../domwise/dist/index.d.ts:2103](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2103)
 
 #### Inherited from
 
@@ -1120,7 +1120,7 @@ Defined in: [../domwise/dist/index.d.ts:2091](https://github.com/serenity-is/ser
 
 > **ins**: `ModHTMLAttributes`\<`HTMLModElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2092](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2092)
+Defined in: [../domwise/dist/index.d.ts:2104](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2104)
 
 #### Inherited from
 
@@ -1132,7 +1132,7 @@ Defined in: [../domwise/dist/index.d.ts:2092](https://github.com/serenity-is/ser
 
 > **kbd**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2093](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2093)
+Defined in: [../domwise/dist/index.d.ts:2105](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2105)
 
 #### Inherited from
 
@@ -1144,7 +1144,7 @@ Defined in: [../domwise/dist/index.d.ts:2093](https://github.com/serenity-is/ser
 
 > **label**: `LabelHTMLAttributes`\<`HTMLLabelElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2094](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2094)
+Defined in: [../domwise/dist/index.d.ts:2106](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2106)
 
 #### Inherited from
 
@@ -1156,7 +1156,7 @@ Defined in: [../domwise/dist/index.d.ts:2094](https://github.com/serenity-is/ser
 
 > **legend**: `HTMLAttributes`\<`HTMLLegendElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2095](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2095)
+Defined in: [../domwise/dist/index.d.ts:2107](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2107)
 
 #### Inherited from
 
@@ -1168,7 +1168,7 @@ Defined in: [../domwise/dist/index.d.ts:2095](https://github.com/serenity-is/ser
 
 > **li**: `LiHTMLAttributes`\<`HTMLLIElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2096](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2096)
+Defined in: [../domwise/dist/index.d.ts:2108](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2108)
 
 #### Inherited from
 
@@ -1180,7 +1180,7 @@ Defined in: [../domwise/dist/index.d.ts:2096](https://github.com/serenity-is/ser
 
 > **line**: `LineSVGAttributes`\<`SVGLineElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2193](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2193)
+Defined in: [../domwise/dist/index.d.ts:2205](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2205)
 
 #### Inherited from
 
@@ -1192,7 +1192,7 @@ Defined in: [../domwise/dist/index.d.ts:2193](https://github.com/serenity-is/ser
 
 > **linearGradient**: `LinearGradientSVGAttributes`\<`SVGLinearGradientElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2194](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2194)
+Defined in: [../domwise/dist/index.d.ts:2206](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2206)
 
 #### Inherited from
 
@@ -1204,7 +1204,7 @@ Defined in: [../domwise/dist/index.d.ts:2194](https://github.com/serenity-is/ser
 
 > **link**: `LinkHTMLAttributes`\<`HTMLLinkElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2097](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2097)
+Defined in: [../domwise/dist/index.d.ts:2109](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2109)
 
 #### Inherited from
 
@@ -1216,7 +1216,7 @@ Defined in: [../domwise/dist/index.d.ts:2097](https://github.com/serenity-is/ser
 
 > **maction**: `MathMLMactionElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2249](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2249)
+Defined in: [../domwise/dist/index.d.ts:2261](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2261)
 
 #### Deprecated
 
@@ -1230,7 +1230,7 @@ Defined in: [../domwise/dist/index.d.ts:2249](https://github.com/serenity-is/ser
 
 > **main**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2098](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2098)
+Defined in: [../domwise/dist/index.d.ts:2110](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2110)
 
 #### Inherited from
 
@@ -1242,7 +1242,7 @@ Defined in: [../domwise/dist/index.d.ts:2098](https://github.com/serenity-is/ser
 
 > **map**: `MapHTMLAttributes`\<`HTMLMapElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2099](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2099)
+Defined in: [../domwise/dist/index.d.ts:2111](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2111)
 
 #### Inherited from
 
@@ -1254,7 +1254,7 @@ Defined in: [../domwise/dist/index.d.ts:2099](https://github.com/serenity-is/ser
 
 > **mark**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2100](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2100)
+Defined in: [../domwise/dist/index.d.ts:2112](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2112)
 
 #### Inherited from
 
@@ -1266,7 +1266,7 @@ Defined in: [../domwise/dist/index.d.ts:2100](https://github.com/serenity-is/ser
 
 > **marker**: `MarkerSVGAttributes`\<`SVGMarkerElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2195](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2195)
+Defined in: [../domwise/dist/index.d.ts:2207](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2207)
 
 #### Inherited from
 
@@ -1278,7 +1278,7 @@ Defined in: [../domwise/dist/index.d.ts:2195](https://github.com/serenity-is/ser
 
 > **mask**: `MaskSVGAttributes`\<`SVGMaskElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2196](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2196)
+Defined in: [../domwise/dist/index.d.ts:2208](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2208)
 
 #### Inherited from
 
@@ -1290,7 +1290,7 @@ Defined in: [../domwise/dist/index.d.ts:2196](https://github.com/serenity-is/ser
 
 > **math**: `MathMLMathElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2219](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2219)
+Defined in: [../domwise/dist/index.d.ts:2231](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2231)
 
 #### Inherited from
 
@@ -1302,7 +1302,7 @@ Defined in: [../domwise/dist/index.d.ts:2219](https://github.com/serenity-is/ser
 
 > **menclose**: `MathMLMencloseElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2247](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2247)
+Defined in: [../domwise/dist/index.d.ts:2259](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2259)
 
 #### Non-standard
 
@@ -1316,7 +1316,7 @@ Defined in: [../domwise/dist/index.d.ts:2247](https://github.com/serenity-is/ser
 
 > **menu**: `MenuHTMLAttributes`\<`HTMLMenuElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2101](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2101)
+Defined in: [../domwise/dist/index.d.ts:2113](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2113)
 
 #### Inherited from
 
@@ -1328,7 +1328,7 @@ Defined in: [../domwise/dist/index.d.ts:2101](https://github.com/serenity-is/ser
 
 > **merror**: `MathMLMerrorElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2220](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2220)
+Defined in: [../domwise/dist/index.d.ts:2232](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2232)
 
 #### Inherited from
 
@@ -1340,7 +1340,7 @@ Defined in: [../domwise/dist/index.d.ts:2220](https://github.com/serenity-is/ser
 
 > **meta**: `MetaHTMLAttributes`\<`HTMLMetaElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2102](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2102)
+Defined in: [../domwise/dist/index.d.ts:2114](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2114)
 
 #### Inherited from
 
@@ -1352,7 +1352,7 @@ Defined in: [../domwise/dist/index.d.ts:2102](https://github.com/serenity-is/ser
 
 > **metadata**: `MetadataSVGAttributes`\<`SVGMetadataElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2197](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2197)
+Defined in: [../domwise/dist/index.d.ts:2209](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2209)
 
 #### Inherited from
 
@@ -1364,7 +1364,7 @@ Defined in: [../domwise/dist/index.d.ts:2197](https://github.com/serenity-is/ser
 
 > **meter**: `MeterHTMLAttributes`\<`HTMLMeterElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2103](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2103)
+Defined in: [../domwise/dist/index.d.ts:2115](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2115)
 
 #### Inherited from
 
@@ -1376,7 +1376,7 @@ Defined in: [../domwise/dist/index.d.ts:2103](https://github.com/serenity-is/ser
 
 > **mfenced**: `MathMLMfencedElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2251](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2251)
+Defined in: [../domwise/dist/index.d.ts:2263](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2263)
 
 #### Deprecated
 
@@ -1392,7 +1392,7 @@ Defined in: [../domwise/dist/index.d.ts:2251](https://github.com/serenity-is/ser
 
 > **mfrac**: `MathMLMfracElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2221](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2221)
+Defined in: [../domwise/dist/index.d.ts:2233](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2233)
 
 #### Inherited from
 
@@ -1404,7 +1404,7 @@ Defined in: [../domwise/dist/index.d.ts:2221](https://github.com/serenity-is/ser
 
 > **mi**: `MathMLMiElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2222](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2222)
+Defined in: [../domwise/dist/index.d.ts:2234](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2234)
 
 #### Inherited from
 
@@ -1416,7 +1416,7 @@ Defined in: [../domwise/dist/index.d.ts:2222](https://github.com/serenity-is/ser
 
 > **mmultiscripts**: `MathMLMmultiscriptsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2223](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2223)
+Defined in: [../domwise/dist/index.d.ts:2235](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2235)
 
 #### Inherited from
 
@@ -1428,7 +1428,7 @@ Defined in: [../domwise/dist/index.d.ts:2223](https://github.com/serenity-is/ser
 
 > **mn**: `MathMLMnElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2224](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2224)
+Defined in: [../domwise/dist/index.d.ts:2236](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2236)
 
 #### Inherited from
 
@@ -1440,7 +1440,7 @@ Defined in: [../domwise/dist/index.d.ts:2224](https://github.com/serenity-is/ser
 
 > **mo**: `MathMLMoElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2225](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2225)
+Defined in: [../domwise/dist/index.d.ts:2237](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2237)
 
 #### Inherited from
 
@@ -1452,7 +1452,7 @@ Defined in: [../domwise/dist/index.d.ts:2225](https://github.com/serenity-is/ser
 
 > **mover**: `MathMLMoverElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2226](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2226)
+Defined in: [../domwise/dist/index.d.ts:2238](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2238)
 
 #### Inherited from
 
@@ -1464,7 +1464,7 @@ Defined in: [../domwise/dist/index.d.ts:2226](https://github.com/serenity-is/ser
 
 > **mpadded**: `MathMLMpaddedElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2227](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2227)
+Defined in: [../domwise/dist/index.d.ts:2239](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2239)
 
 #### Inherited from
 
@@ -1476,7 +1476,7 @@ Defined in: [../domwise/dist/index.d.ts:2227](https://github.com/serenity-is/ser
 
 > **mpath**: `MPathSVGAttributes`\<`SVGMPathElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2198](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2198)
+Defined in: [../domwise/dist/index.d.ts:2210](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2210)
 
 #### Inherited from
 
@@ -1488,7 +1488,7 @@ Defined in: [../domwise/dist/index.d.ts:2198](https://github.com/serenity-is/ser
 
 > **mphantom**: `MathMLMphantomElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2228](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2228)
+Defined in: [../domwise/dist/index.d.ts:2240](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2240)
 
 #### Inherited from
 
@@ -1500,7 +1500,7 @@ Defined in: [../domwise/dist/index.d.ts:2228](https://github.com/serenity-is/ser
 
 > **mprescripts**: `MathMLMprescriptsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2229](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2229)
+Defined in: [../domwise/dist/index.d.ts:2241](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2241)
 
 #### Inherited from
 
@@ -1512,7 +1512,7 @@ Defined in: [../domwise/dist/index.d.ts:2229](https://github.com/serenity-is/ser
 
 > **mroot**: `MathMLMrootElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2230](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2230)
+Defined in: [../domwise/dist/index.d.ts:2242](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2242)
 
 #### Inherited from
 
@@ -1524,7 +1524,7 @@ Defined in: [../domwise/dist/index.d.ts:2230](https://github.com/serenity-is/ser
 
 > **mrow**: `MathMLMrowElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2231](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2231)
+Defined in: [../domwise/dist/index.d.ts:2243](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2243)
 
 #### Inherited from
 
@@ -1536,7 +1536,7 @@ Defined in: [../domwise/dist/index.d.ts:2231](https://github.com/serenity-is/ser
 
 > **ms**: `MathMLMsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2232](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2232)
+Defined in: [../domwise/dist/index.d.ts:2244](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2244)
 
 #### Inherited from
 
@@ -1548,7 +1548,7 @@ Defined in: [../domwise/dist/index.d.ts:2232](https://github.com/serenity-is/ser
 
 > **mspace**: `MathMLMspaceElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2233](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2233)
+Defined in: [../domwise/dist/index.d.ts:2245](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2245)
 
 #### Inherited from
 
@@ -1560,7 +1560,7 @@ Defined in: [../domwise/dist/index.d.ts:2233](https://github.com/serenity-is/ser
 
 > **msqrt**: `MathMLMsqrtElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2234](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2234)
+Defined in: [../domwise/dist/index.d.ts:2246](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2246)
 
 #### Inherited from
 
@@ -1572,7 +1572,7 @@ Defined in: [../domwise/dist/index.d.ts:2234](https://github.com/serenity-is/ser
 
 > **mstyle**: `MathMLMstyleElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2235](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2235)
+Defined in: [../domwise/dist/index.d.ts:2247](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2247)
 
 #### Inherited from
 
@@ -1584,7 +1584,7 @@ Defined in: [../domwise/dist/index.d.ts:2235](https://github.com/serenity-is/ser
 
 > **msub**: `MathMLMsubElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2236](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2236)
+Defined in: [../domwise/dist/index.d.ts:2248](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2248)
 
 #### Inherited from
 
@@ -1596,7 +1596,7 @@ Defined in: [../domwise/dist/index.d.ts:2236](https://github.com/serenity-is/ser
 
 > **msubsup**: `MathMLMsubsupElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2237](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2237)
+Defined in: [../domwise/dist/index.d.ts:2249](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2249)
 
 #### Inherited from
 
@@ -1608,7 +1608,7 @@ Defined in: [../domwise/dist/index.d.ts:2237](https://github.com/serenity-is/ser
 
 > **msup**: `MathMLMsupElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2238](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2238)
+Defined in: [../domwise/dist/index.d.ts:2250](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2250)
 
 #### Inherited from
 
@@ -1620,7 +1620,7 @@ Defined in: [../domwise/dist/index.d.ts:2238](https://github.com/serenity-is/ser
 
 > **mtable**: `MathMLMtableElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2239](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2239)
+Defined in: [../domwise/dist/index.d.ts:2251](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2251)
 
 #### Inherited from
 
@@ -1632,7 +1632,7 @@ Defined in: [../domwise/dist/index.d.ts:2239](https://github.com/serenity-is/ser
 
 > **mtd**: `MathMLMtdElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2240](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2240)
+Defined in: [../domwise/dist/index.d.ts:2252](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2252)
 
 #### Inherited from
 
@@ -1644,7 +1644,7 @@ Defined in: [../domwise/dist/index.d.ts:2240](https://github.com/serenity-is/ser
 
 > **mtext**: `MathMLMtextElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2241](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2241)
+Defined in: [../domwise/dist/index.d.ts:2253](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2253)
 
 #### Inherited from
 
@@ -1656,7 +1656,7 @@ Defined in: [../domwise/dist/index.d.ts:2241](https://github.com/serenity-is/ser
 
 > **mtr**: `MathMLMtrElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2242](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2242)
+Defined in: [../domwise/dist/index.d.ts:2254](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2254)
 
 #### Inherited from
 
@@ -1668,7 +1668,7 @@ Defined in: [../domwise/dist/index.d.ts:2242](https://github.com/serenity-is/ser
 
 > **munder**: `MathMLMunderElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2243](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2243)
+Defined in: [../domwise/dist/index.d.ts:2255](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2255)
 
 #### Inherited from
 
@@ -1680,7 +1680,7 @@ Defined in: [../domwise/dist/index.d.ts:2243](https://github.com/serenity-is/ser
 
 > **munderover**: `MathMLMunderoverElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2244](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2244)
+Defined in: [../domwise/dist/index.d.ts:2256](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2256)
 
 #### Inherited from
 
@@ -1692,7 +1692,7 @@ Defined in: [../domwise/dist/index.d.ts:2244](https://github.com/serenity-is/ser
 
 > **nav**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2104](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2104)
+Defined in: [../domwise/dist/index.d.ts:2116](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2116)
 
 #### Inherited from
 
@@ -1704,7 +1704,7 @@ Defined in: [../domwise/dist/index.d.ts:2104](https://github.com/serenity-is/ser
 
 > **noscript**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2105](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2105)
+Defined in: [../domwise/dist/index.d.ts:2117](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2117)
 
 #### Inherited from
 
@@ -1716,7 +1716,7 @@ Defined in: [../domwise/dist/index.d.ts:2105](https://github.com/serenity-is/ser
 
 > **object**: `ObjectHTMLAttributes`\<`HTMLObjectElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2106](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2106)
+Defined in: [../domwise/dist/index.d.ts:2118](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2118)
 
 #### Inherited from
 
@@ -1728,7 +1728,7 @@ Defined in: [../domwise/dist/index.d.ts:2106](https://github.com/serenity-is/ser
 
 > **ol**: `OlHTMLAttributes`\<`HTMLOListElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2107](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2107)
+Defined in: [../domwise/dist/index.d.ts:2119](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2119)
 
 #### Inherited from
 
@@ -1740,7 +1740,7 @@ Defined in: [../domwise/dist/index.d.ts:2107](https://github.com/serenity-is/ser
 
 > **optgroup**: `OptgroupHTMLAttributes`\<`HTMLOptGroupElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2108](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2108)
+Defined in: [../domwise/dist/index.d.ts:2120](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2120)
 
 #### Inherited from
 
@@ -1752,7 +1752,7 @@ Defined in: [../domwise/dist/index.d.ts:2108](https://github.com/serenity-is/ser
 
 > **option**: `OptionHTMLAttributes`\<`HTMLOptionElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2109](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2109)
+Defined in: [../domwise/dist/index.d.ts:2121](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2121)
 
 #### Inherited from
 
@@ -1764,7 +1764,7 @@ Defined in: [../domwise/dist/index.d.ts:2109](https://github.com/serenity-is/ser
 
 > **output**: `OutputHTMLAttributes`\<`HTMLOutputElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2110](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2110)
+Defined in: [../domwise/dist/index.d.ts:2122](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2122)
 
 #### Inherited from
 
@@ -1776,7 +1776,7 @@ Defined in: [../domwise/dist/index.d.ts:2110](https://github.com/serenity-is/ser
 
 > **p**: `HTMLAttributes`\<`HTMLParagraphElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2111](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2111)
+Defined in: [../domwise/dist/index.d.ts:2123](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2123)
 
 #### Inherited from
 
@@ -1788,7 +1788,7 @@ Defined in: [../domwise/dist/index.d.ts:2111](https://github.com/serenity-is/ser
 
 > **path**: `PathSVGAttributes`\<`SVGPathElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2199](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2199)
+Defined in: [../domwise/dist/index.d.ts:2211](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2211)
 
 #### Inherited from
 
@@ -1800,7 +1800,7 @@ Defined in: [../domwise/dist/index.d.ts:2199](https://github.com/serenity-is/ser
 
 > **pattern**: `PatternSVGAttributes`\<`SVGPatternElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2200](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2200)
+Defined in: [../domwise/dist/index.d.ts:2212](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2212)
 
 #### Inherited from
 
@@ -1812,7 +1812,7 @@ Defined in: [../domwise/dist/index.d.ts:2200](https://github.com/serenity-is/ser
 
 > **picture**: `HTMLAttributes`\<`HTMLPictureElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2112](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2112)
+Defined in: [../domwise/dist/index.d.ts:2124](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2124)
 
 #### Inherited from
 
@@ -1824,7 +1824,7 @@ Defined in: [../domwise/dist/index.d.ts:2112](https://github.com/serenity-is/ser
 
 > **polygon**: `PolygonSVGAttributes`\<`SVGPolygonElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2201](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2201)
+Defined in: [../domwise/dist/index.d.ts:2213](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2213)
 
 #### Inherited from
 
@@ -1836,7 +1836,7 @@ Defined in: [../domwise/dist/index.d.ts:2201](https://github.com/serenity-is/ser
 
 > **polyline**: `PolylineSVGAttributes`\<`SVGPolylineElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2202](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2202)
+Defined in: [../domwise/dist/index.d.ts:2214](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2214)
 
 #### Inherited from
 
@@ -1848,7 +1848,7 @@ Defined in: [../domwise/dist/index.d.ts:2202](https://github.com/serenity-is/ser
 
 > **pre**: `HTMLAttributes`\<`HTMLPreElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2113](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2113)
+Defined in: [../domwise/dist/index.d.ts:2125](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2125)
 
 #### Inherited from
 
@@ -1860,7 +1860,7 @@ Defined in: [../domwise/dist/index.d.ts:2113](https://github.com/serenity-is/ser
 
 > **progress**: `ProgressHTMLAttributes`\<`HTMLProgressElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2114](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2114)
+Defined in: [../domwise/dist/index.d.ts:2126](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2126)
 
 #### Inherited from
 
@@ -1872,7 +1872,7 @@ Defined in: [../domwise/dist/index.d.ts:2114](https://github.com/serenity-is/ser
 
 > **q**: `QuoteHTMLAttributes`\<`HTMLQuoteElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2115](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2115)
+Defined in: [../domwise/dist/index.d.ts:2127](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2127)
 
 #### Inherited from
 
@@ -1884,7 +1884,7 @@ Defined in: [../domwise/dist/index.d.ts:2115](https://github.com/serenity-is/ser
 
 > **radialGradient**: `RadialGradientSVGAttributes`\<`SVGRadialGradientElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2203](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2203)
+Defined in: [../domwise/dist/index.d.ts:2215](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2215)
 
 #### Inherited from
 
@@ -1896,7 +1896,7 @@ Defined in: [../domwise/dist/index.d.ts:2203](https://github.com/serenity-is/ser
 
 > **rect**: `RectSVGAttributes`\<`SVGRectElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2204](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2204)
+Defined in: [../domwise/dist/index.d.ts:2216](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2216)
 
 #### Inherited from
 
@@ -1908,7 +1908,7 @@ Defined in: [../domwise/dist/index.d.ts:2204](https://github.com/serenity-is/ser
 
 > **rp**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2116](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2116)
+Defined in: [../domwise/dist/index.d.ts:2128](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2128)
 
 #### Inherited from
 
@@ -1920,7 +1920,7 @@ Defined in: [../domwise/dist/index.d.ts:2116](https://github.com/serenity-is/ser
 
 > **rt**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2117](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2117)
+Defined in: [../domwise/dist/index.d.ts:2129](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2129)
 
 #### Inherited from
 
@@ -1932,7 +1932,7 @@ Defined in: [../domwise/dist/index.d.ts:2117](https://github.com/serenity-is/ser
 
 > **ruby**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2118](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2118)
+Defined in: [../domwise/dist/index.d.ts:2130](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2130)
 
 #### Inherited from
 
@@ -1944,7 +1944,7 @@ Defined in: [../domwise/dist/index.d.ts:2118](https://github.com/serenity-is/ser
 
 > **s**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2119](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2119)
+Defined in: [../domwise/dist/index.d.ts:2131](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2131)
 
 #### Inherited from
 
@@ -1956,7 +1956,7 @@ Defined in: [../domwise/dist/index.d.ts:2119](https://github.com/serenity-is/ser
 
 > **samp**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2120](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2120)
+Defined in: [../domwise/dist/index.d.ts:2132](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2132)
 
 #### Inherited from
 
@@ -1968,7 +1968,7 @@ Defined in: [../domwise/dist/index.d.ts:2120](https://github.com/serenity-is/ser
 
 > **script**: `ScriptHTMLAttributes`\<`HTMLScriptElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2121](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2121)
+Defined in: [../domwise/dist/index.d.ts:2133](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2133)
 
 #### Inherited from
 
@@ -1980,7 +1980,7 @@ Defined in: [../domwise/dist/index.d.ts:2121](https://github.com/serenity-is/ser
 
 > **search**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2122](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2122)
+Defined in: [../domwise/dist/index.d.ts:2134](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2134)
 
 #### Inherited from
 
@@ -1992,7 +1992,7 @@ Defined in: [../domwise/dist/index.d.ts:2122](https://github.com/serenity-is/ser
 
 > **section**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2123](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2123)
+Defined in: [../domwise/dist/index.d.ts:2135](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2135)
 
 #### Inherited from
 
@@ -2004,7 +2004,7 @@ Defined in: [../domwise/dist/index.d.ts:2123](https://github.com/serenity-is/ser
 
 > **select**: `SelectHTMLAttributes`\<`HTMLSelectElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2124](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2124)
+Defined in: [../domwise/dist/index.d.ts:2136](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2136)
 
 #### Inherited from
 
@@ -2016,7 +2016,7 @@ Defined in: [../domwise/dist/index.d.ts:2124](https://github.com/serenity-is/ser
 
 > **semantics**: `MathMLSemanticsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2245](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2245)
+Defined in: [../domwise/dist/index.d.ts:2257](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2257)
 
 #### Inherited from
 
@@ -2028,7 +2028,7 @@ Defined in: [../domwise/dist/index.d.ts:2245](https://github.com/serenity-is/ser
 
 > **set**: `SetSVGAttributes`\<`SVGSetElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2205](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2205)
+Defined in: [../domwise/dist/index.d.ts:2217](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2217)
 
 #### Inherited from
 
@@ -2040,7 +2040,7 @@ Defined in: [../domwise/dist/index.d.ts:2205](https://github.com/serenity-is/ser
 
 > **slot**: `HTMLSlotElementAttributes`\<`HTMLSlotElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2125](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2125)
+Defined in: [../domwise/dist/index.d.ts:2137](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2137)
 
 #### Inherited from
 
@@ -2052,7 +2052,7 @@ Defined in: [../domwise/dist/index.d.ts:2125](https://github.com/serenity-is/ser
 
 > **small**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2126](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2126)
+Defined in: [../domwise/dist/index.d.ts:2138](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2138)
 
 #### Inherited from
 
@@ -2064,7 +2064,7 @@ Defined in: [../domwise/dist/index.d.ts:2126](https://github.com/serenity-is/ser
 
 > **source**: `SourceHTMLAttributes`\<`HTMLSourceElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2127](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2127)
+Defined in: [../domwise/dist/index.d.ts:2139](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2139)
 
 #### Inherited from
 
@@ -2076,7 +2076,7 @@ Defined in: [../domwise/dist/index.d.ts:2127](https://github.com/serenity-is/ser
 
 > **span**: `HTMLAttributes`\<`HTMLSpanElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2128](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2128)
+Defined in: [../domwise/dist/index.d.ts:2140](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2140)
 
 #### Inherited from
 
@@ -2088,7 +2088,7 @@ Defined in: [../domwise/dist/index.d.ts:2128](https://github.com/serenity-is/ser
 
 > **stop**: `StopSVGAttributes`\<`SVGStopElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2206](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2206)
+Defined in: [../domwise/dist/index.d.ts:2218](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2218)
 
 #### Inherited from
 
@@ -2100,7 +2100,7 @@ Defined in: [../domwise/dist/index.d.ts:2206](https://github.com/serenity-is/ser
 
 > **strong**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2129](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2129)
+Defined in: [../domwise/dist/index.d.ts:2141](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2141)
 
 #### Inherited from
 
@@ -2112,7 +2112,7 @@ Defined in: [../domwise/dist/index.d.ts:2129](https://github.com/serenity-is/ser
 
 > **style**: `StyleHTMLAttributes`\<`HTMLStyleElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2130](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2130)
+Defined in: [../domwise/dist/index.d.ts:2142](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2142)
 
 #### Inherited from
 
@@ -2124,7 +2124,7 @@ Defined in: [../domwise/dist/index.d.ts:2130](https://github.com/serenity-is/ser
 
 > **sub**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2131](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2131)
+Defined in: [../domwise/dist/index.d.ts:2143](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2143)
 
 #### Inherited from
 
@@ -2136,7 +2136,7 @@ Defined in: [../domwise/dist/index.d.ts:2131](https://github.com/serenity-is/ser
 
 > **summary**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2132](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2132)
+Defined in: [../domwise/dist/index.d.ts:2144](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2144)
 
 #### Inherited from
 
@@ -2148,7 +2148,7 @@ Defined in: [../domwise/dist/index.d.ts:2132](https://github.com/serenity-is/ser
 
 > **sup**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2133](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2133)
+Defined in: [../domwise/dist/index.d.ts:2145](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2145)
 
 #### Inherited from
 
@@ -2160,7 +2160,7 @@ Defined in: [../domwise/dist/index.d.ts:2133](https://github.com/serenity-is/ser
 
 > **svg**: `SvgSVGAttributes`\<`SVGSVGElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2207](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2207)
+Defined in: [../domwise/dist/index.d.ts:2219](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2219)
 
 #### Inherited from
 
@@ -2172,7 +2172,7 @@ Defined in: [../domwise/dist/index.d.ts:2207](https://github.com/serenity-is/ser
 
 > **switch**: `SwitchSVGAttributes`\<`SVGSwitchElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2208](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2208)
+Defined in: [../domwise/dist/index.d.ts:2220](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2220)
 
 #### Inherited from
 
@@ -2184,7 +2184,7 @@ Defined in: [../domwise/dist/index.d.ts:2208](https://github.com/serenity-is/ser
 
 > **symbol**: `SymbolSVGAttributes`\<`SVGSymbolElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2209](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2209)
+Defined in: [../domwise/dist/index.d.ts:2221](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2221)
 
 #### Inherited from
 
@@ -2196,7 +2196,7 @@ Defined in: [../domwise/dist/index.d.ts:2209](https://github.com/serenity-is/ser
 
 > **table**: `HTMLAttributes`\<`HTMLTableElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2134](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2134)
+Defined in: [../domwise/dist/index.d.ts:2146](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2146)
 
 #### Inherited from
 
@@ -2208,7 +2208,7 @@ Defined in: [../domwise/dist/index.d.ts:2134](https://github.com/serenity-is/ser
 
 > **tbody**: `HTMLAttributes`\<`HTMLTableSectionElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2135](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2135)
+Defined in: [../domwise/dist/index.d.ts:2147](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2147)
 
 #### Inherited from
 
@@ -2220,7 +2220,7 @@ Defined in: [../domwise/dist/index.d.ts:2135](https://github.com/serenity-is/ser
 
 > **td**: `TdHTMLAttributes`\<`HTMLTableCellElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2136](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2136)
+Defined in: [../domwise/dist/index.d.ts:2148](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2148)
 
 #### Inherited from
 
@@ -2232,7 +2232,7 @@ Defined in: [../domwise/dist/index.d.ts:2136](https://github.com/serenity-is/ser
 
 > **template**: `TemplateHTMLAttributes`\<`HTMLTemplateElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2137](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2137)
+Defined in: [../domwise/dist/index.d.ts:2149](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2149)
 
 #### Inherited from
 
@@ -2244,7 +2244,7 @@ Defined in: [../domwise/dist/index.d.ts:2137](https://github.com/serenity-is/ser
 
 > **text**: `TextSVGAttributes`\<`SVGTextElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2210](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2210)
+Defined in: [../domwise/dist/index.d.ts:2222](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2222)
 
 #### Inherited from
 
@@ -2256,7 +2256,7 @@ Defined in: [../domwise/dist/index.d.ts:2210](https://github.com/serenity-is/ser
 
 > **textarea**: `TextareaHTMLAttributes`\<`HTMLTextAreaElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2138](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2138)
+Defined in: [../domwise/dist/index.d.ts:2150](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2150)
 
 #### Inherited from
 
@@ -2268,7 +2268,7 @@ Defined in: [../domwise/dist/index.d.ts:2138](https://github.com/serenity-is/ser
 
 > **textPath**: `TextPathSVGAttributes`\<`SVGTextPathElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2211](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2211)
+Defined in: [../domwise/dist/index.d.ts:2223](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2223)
 
 #### Inherited from
 
@@ -2280,7 +2280,7 @@ Defined in: [../domwise/dist/index.d.ts:2211](https://github.com/serenity-is/ser
 
 > **tfoot**: `HTMLAttributes`\<`HTMLTableSectionElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2139](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2139)
+Defined in: [../domwise/dist/index.d.ts:2151](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2151)
 
 #### Inherited from
 
@@ -2292,7 +2292,7 @@ Defined in: [../domwise/dist/index.d.ts:2139](https://github.com/serenity-is/ser
 
 > **th**: `ThHTMLAttributes`\<`HTMLTableCellElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2140](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2140)
+Defined in: [../domwise/dist/index.d.ts:2152](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2152)
 
 #### Inherited from
 
@@ -2304,7 +2304,7 @@ Defined in: [../domwise/dist/index.d.ts:2140](https://github.com/serenity-is/ser
 
 > **thead**: `HTMLAttributes`\<`HTMLTableSectionElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2141](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2141)
+Defined in: [../domwise/dist/index.d.ts:2153](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2153)
 
 #### Inherited from
 
@@ -2316,7 +2316,7 @@ Defined in: [../domwise/dist/index.d.ts:2141](https://github.com/serenity-is/ser
 
 > **time**: `TimeHTMLAttributes`\<`HTMLTimeElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2142](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2142)
+Defined in: [../domwise/dist/index.d.ts:2154](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2154)
 
 #### Inherited from
 
@@ -2328,7 +2328,7 @@ Defined in: [../domwise/dist/index.d.ts:2142](https://github.com/serenity-is/ser
 
 > **title**: `HTMLAttributes`\<`HTMLTitleElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2143](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2143)
+Defined in: [../domwise/dist/index.d.ts:2155](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2155)
 
 #### Inherited from
 
@@ -2340,7 +2340,7 @@ Defined in: [../domwise/dist/index.d.ts:2143](https://github.com/serenity-is/ser
 
 > **tr**: `HTMLAttributes`\<`HTMLTableRowElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2144](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2144)
+Defined in: [../domwise/dist/index.d.ts:2156](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2156)
 
 #### Inherited from
 
@@ -2352,7 +2352,7 @@ Defined in: [../domwise/dist/index.d.ts:2144](https://github.com/serenity-is/ser
 
 > **track**: `TrackHTMLAttributes`\<`HTMLTrackElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2145](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2145)
+Defined in: [../domwise/dist/index.d.ts:2157](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2157)
 
 #### Inherited from
 
@@ -2364,7 +2364,7 @@ Defined in: [../domwise/dist/index.d.ts:2145](https://github.com/serenity-is/ser
 
 > **tspan**: `TSpanSVGAttributes`\<`SVGTSpanElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2212](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2212)
+Defined in: [../domwise/dist/index.d.ts:2224](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2224)
 
 #### Inherited from
 
@@ -2376,7 +2376,7 @@ Defined in: [../domwise/dist/index.d.ts:2212](https://github.com/serenity-is/ser
 
 > **u**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2146](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2146)
+Defined in: [../domwise/dist/index.d.ts:2158](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2158)
 
 #### Inherited from
 
@@ -2388,7 +2388,7 @@ Defined in: [../domwise/dist/index.d.ts:2146](https://github.com/serenity-is/ser
 
 > **ul**: `HTMLAttributes`\<`HTMLUListElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2147](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2147)
+Defined in: [../domwise/dist/index.d.ts:2159](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2159)
 
 #### Inherited from
 
@@ -2400,7 +2400,7 @@ Defined in: [../domwise/dist/index.d.ts:2147](https://github.com/serenity-is/ser
 
 > **use**: `UseSVGAttributes`\<`SVGUseElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2213](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2213)
+Defined in: [../domwise/dist/index.d.ts:2225](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2225)
 
 #### Inherited from
 
@@ -2412,7 +2412,7 @@ Defined in: [../domwise/dist/index.d.ts:2213](https://github.com/serenity-is/ser
 
 > **var**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2148](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2148)
+Defined in: [../domwise/dist/index.d.ts:2160](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2160)
 
 #### Inherited from
 
@@ -2424,7 +2424,7 @@ Defined in: [../domwise/dist/index.d.ts:2148](https://github.com/serenity-is/ser
 
 > **video**: `VideoHTMLAttributes`\<`HTMLVideoElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2149](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2149)
+Defined in: [../domwise/dist/index.d.ts:2161](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2161)
 
 #### Inherited from
 
@@ -2436,7 +2436,7 @@ Defined in: [../domwise/dist/index.d.ts:2149](https://github.com/serenity-is/ser
 
 > **view**: `ViewSVGAttributes`\<`SVGViewElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2214](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2214)
+Defined in: [../domwise/dist/index.d.ts:2226](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2226)
 
 #### Inherited from
 
@@ -2448,7 +2448,7 @@ Defined in: [../domwise/dist/index.d.ts:2214](https://github.com/serenity-is/ser
 
 > **wbr**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2150](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2150)
+Defined in: [../domwise/dist/index.d.ts:2162](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2162)
 
 #### Inherited from
 
@@ -2460,7 +2460,7 @@ Defined in: [../domwise/dist/index.d.ts:2150](https://github.com/serenity-is/ser
 
 > **webview**: `WebViewHTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2152](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2152)
+Defined in: [../domwise/dist/index.d.ts:2164](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2164)
 
 #### Url
 

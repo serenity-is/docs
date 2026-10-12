@@ -2,7 +2,7 @@
 
 # Interface: SignalLike\<T\>
 
-Defined in: [types/basic-types.d.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L82)
+Defined in: [types/basic-types.d.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L84)
 
 A read-only signal-like value that can be subscribed to and peeked.
 Compatible with `@preact/signals-core` and any duck-typed signal that
@@ -29,7 +29,7 @@ The type of the signal's value.
 
 > **get** **value**(): `T`
 
-Defined in: [types/basic-types.d.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L84)
+Defined in: [types/basic-types.d.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L86)
 
 Current value; reading may track a dependency when inside an effect/computed.
 
@@ -43,7 +43,7 @@ Current value; reading may track a dependency when inside an effect/computed.
 
 > **peek**(): `T`
 
-Defined in: [types/basic-types.d.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L89)
+Defined in: [types/basic-types.d.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L91)
 
 Returns the current value without creating a dependency.
 
@@ -59,7 +59,7 @@ The current value.
 
 > **subscribe**(`fn`): [`EffectDisposer`](../type-aliases/EffectDisposer.md)
 
-Defined in: [types/basic-types.d.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L95)
+Defined in: [types/basic-types.d.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L97)
 
 Subscribes to value changes.
 

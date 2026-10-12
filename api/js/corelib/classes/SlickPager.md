@@ -195,7 +195,7 @@ True if the page change was handled, false otherwise.
 
 > **\_updatePager**(): `void`
 
-Defined in: [src/ui/datagrid/slickpager.tsx:129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.tsx#L129)
+Defined in: [src/ui/datagrid/slickpager.tsx:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.tsx#L130)
 
 Refreshes the pager UI from the current view paging info.
 

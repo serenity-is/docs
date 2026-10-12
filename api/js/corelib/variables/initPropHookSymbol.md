@@ -4,7 +4,7 @@
 
 > `const` **initPropHookSymbol**: unique `symbol`
 
-Defined in: [../domwise/dist/index.d.ts:2757](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2757)
+Defined in: [../domwise/dist/index.d.ts:2798](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2798)
 
 Well-known symbol (`Symbol.for("Serenity.initPropHook")`) that marks a value
 as a JSX prop hook.

@@ -4,7 +4,7 @@
 
 > **Ref**\<`T`\> = [`RefCallback`](RefCallback.md)\<`T`\> \| [`RefObject`](RefObject.md)\<`T`\> \| `null`
 
-Defined in: [types/basic-types.d.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L69)
+Defined in: [types/basic-types.d.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L71)
 
 A reference to a DOM node or component instance: either a `RefObject`, a ref
 callback, or `null`.

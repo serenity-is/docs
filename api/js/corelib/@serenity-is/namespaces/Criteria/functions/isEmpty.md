@@ -4,7 +4,7 @@
 
 > **isEmpty**(`c`): `boolean`
 
-Defined in: [src/base/criteria.ts:881](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L881)
+Defined in: [src/base/criteria.ts:1087](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1087)
 
 Returns `true` if the criteria is empty / falsy.
 

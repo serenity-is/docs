@@ -11,7 +11,7 @@ Global `Element` + `Node` interface keys, shared by all tags regardless of their
 
 ## Extends
 
-- [`CustomDomAttributes`](CustomDomAttributes.md)\<`T`\>.`DirectiveAttributes`.`DirectiveFunctionAttributes`\<`T`\>.`PropAttributes`.`OnAttributes`\<`T`\>.`EventHandlersElement`\<`T`\>.`AriaAttributes`
+- [`CustomDomAttributes`](CustomDomAttributes.md)\<`T`\>.`DirectiveAttributes`.`DirectiveFunctionAttributes`\<`T`\>.`PropAttributes`.`OnAttributes`\<`T`\>.`EventHandlersElement`\<`T`\>.`AriaAttributes`.`CapturePhaseEventHandlers`\<`T`\>
 
 ## Type Parameters
 
@@ -947,7 +947,7 @@ Child nodes / JSX children for the element.
 
 ### class?
 
-> `optional` **class**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false` \| `DOMTokenList` \| \{\[`key`: `string`\]: `boolean`; \} \| [`ClassName`](../type-aliases/ClassName.md)[] \| `Iterable`\<`string`, `any`, `any`\> \| `null` \| `undefined`\> \| \{\[`key`: `string`\]: [`PropValue`](../type-aliases/PropValue.md)\<true \| RemoveAttribute\>; \}
+> `optional` **class**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false` \| `DOMTokenList` \| [`SignalLike`](SignalLike.md)\<`string` \| `boolean` \| `null` \| `undefined`\> \| \{\[`key`: `string`\]: `boolean` \| [`SignalLike`](SignalLike.md)\<`string` \| `boolean` \| `null` \| `undefined`\>; \} \| [`ClassName`](../type-aliases/ClassName.md)[] \| `Iterable`\<[`ClassName`](../type-aliases/ClassName.md), `any`, `any`\> \| `null` \| `undefined`\> \| \{\[`key`: `string`\]: [`PropValue`](../type-aliases/PropValue.md)\<true \| RemoveAttribute\>; \}
 
 Defined in: [types/jsx-elements.d.ts:570](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L570)
 
@@ -955,9 +955,9 @@ Defined in: [types/jsx-elements.d.ts:570](https://github.com/serenity-is/serenit
 
 ### className?
 
-> `optional` **className**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false` \| `DOMTokenList` \| \{\[`key`: `string`\]: `boolean`; \} \| [`ClassName`](../type-aliases/ClassName.md)[] \| `Iterable`\<`string`, `any`, `any`\> \| `null` \| `undefined`\> \| \{\[`key`: `string`\]: [`PropValue`](../type-aliases/PropValue.md)\<true \| RemoveAttribute\>; \}
+> `optional` **className**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false` \| `DOMTokenList` \| [`SignalLike`](SignalLike.md)\<`string` \| `boolean` \| `null` \| `undefined`\> \| \{\[`key`: `string`\]: `boolean` \| [`SignalLike`](SignalLike.md)\<`string` \| `boolean` \| `null` \| `undefined`\>; \} \| [`ClassName`](../type-aliases/ClassName.md)[] \| `Iterable`\<[`ClassName`](../type-aliases/ClassName.md), `any`, `any`\> \| `null` \| `undefined`\> \| \{\[`key`: `string`\]: [`PropValue`](../type-aliases/PropValue.md)\<true \| RemoveAttribute\>; \}
 
-Defined in: [types/custom-attributes.d.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L26)
+Defined in: [types/custom-attributes.d.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L31)
 
 ***
 
@@ -999,7 +999,7 @@ Defined in: [types/jsx-elements.d.ts:572](https://github.com/serenity-is/serenit
 
 > `optional` **namespaceURI**: `string`
 
-Defined in: [types/custom-attributes.d.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L28)
+Defined in: [types/custom-attributes.d.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L33)
 
 ***
 
@@ -1037,6 +1037,12 @@ Defined in: [types/jsx-elements.d.ts:413](https://github.com/serenity-is/serenit
 
 ***
 
+### onAbortCapture?
+
+> `optional` **onAbortCapture**: `EventHandler`\<`T`, `UIEvent`\>
+
+***
+
 ### onAnimationCancel?
 
 > `optional` **onAnimationCancel**: `EventHandler`\<`T`, `AnimationEvent`\>
@@ -1046,6 +1052,12 @@ Defined in: [types/jsx-elements.d.ts:414](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onAnimationCancel`
+
+***
+
+### onAnimationCancelCapture?
+
+> `optional` **onAnimationCancelCapture**: `EventHandler`\<`T`, `AnimationEvent`\>
 
 ***
 
@@ -1061,6 +1073,12 @@ Defined in: [types/jsx-elements.d.ts:415](https://github.com/serenity-is/serenit
 
 ***
 
+### onAnimationEndCapture?
+
+> `optional` **onAnimationEndCapture**: `EventHandler`\<`T`, `AnimationEvent`\>
+
+***
+
 ### onAnimationIteration?
 
 > `optional` **onAnimationIteration**: `EventHandler`\<`T`, `AnimationEvent`\>
@@ -1070,6 +1088,12 @@ Defined in: [types/jsx-elements.d.ts:416](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onAnimationIteration`
+
+***
+
+### onAnimationIterationCapture?
+
+> `optional` **onAnimationIterationCapture**: `EventHandler`\<`T`, `AnimationEvent`\>
 
 ***
 
@@ -1085,6 +1109,12 @@ Defined in: [types/jsx-elements.d.ts:417](https://github.com/serenity-is/serenit
 
 ***
 
+### onAnimationStartCapture?
+
+> `optional` **onAnimationStartCapture**: `EventHandler`\<`T`, `AnimationEvent`\>
+
+***
+
 ### onAuxClick?
 
 > `optional` **onAuxClick**: `EventHandler`\<`T`, `PointerEvent`\>
@@ -1094,6 +1124,12 @@ Defined in: [types/jsx-elements.d.ts:418](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onAuxClick`
+
+***
+
+### onAuxClickCapture?
+
+> `optional` **onAuxClickCapture**: `EventHandler`\<`T`, `PointerEvent`\>
 
 ***
 
@@ -1109,6 +1145,12 @@ Defined in: [types/jsx-elements.d.ts:419](https://github.com/serenity-is/serenit
 
 ***
 
+### onBeforeCopyCapture?
+
+> `optional` **onBeforeCopyCapture**: `EventHandler`\<`T`, `ClipboardEvent`\>
+
+***
+
 ### onBeforeCut?
 
 > `optional` **onBeforeCut**: `EventHandler`\<`T`, `ClipboardEvent`\>
@@ -1118,6 +1160,12 @@ Defined in: [types/jsx-elements.d.ts:420](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onBeforeCut`
+
+***
+
+### onBeforeCutCapture?
+
+> `optional` **onBeforeCutCapture**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
 ***
 
@@ -1133,6 +1181,12 @@ Defined in: [types/jsx-elements.d.ts:421](https://github.com/serenity-is/serenit
 
 ***
 
+### onBeforeInputCapture?
+
+> `optional` **onBeforeInputCapture**: `InputEventHandler`\<`T`, `InputEvent`\>
+
+***
+
 ### onBeforeMatch?
 
 > `optional` **onBeforeMatch**: `EventHandler`\<`T`, `Event`\>
@@ -1142,6 +1196,12 @@ Defined in: [types/jsx-elements.d.ts:422](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onBeforeMatch`
+
+***
+
+### onBeforeMatchCapture?
+
+> `optional` **onBeforeMatchCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -1157,6 +1217,12 @@ Defined in: [types/jsx-elements.d.ts:423](https://github.com/serenity-is/serenit
 
 ***
 
+### onBeforePasteCapture?
+
+> `optional` **onBeforePasteCapture**: `EventHandler`\<`T`, `ClipboardEvent`\>
+
+***
+
 ### onBeforeToggle?
 
 > `optional` **onBeforeToggle**: `EventHandler`\<`T`, `ToggleEvent`\>
@@ -1166,6 +1232,12 @@ Defined in: [types/jsx-elements.d.ts:424](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onBeforeToggle`
+
+***
+
+### onBeforeToggleCapture?
+
+> `optional` **onBeforeToggleCapture**: `EventHandler`\<`T`, `ToggleEvent`\>
 
 ***
 
@@ -1181,6 +1253,12 @@ Defined in: [types/jsx-elements.d.ts:425](https://github.com/serenity-is/serenit
 
 ***
 
+### onBeforeXRSelectCapture?
+
+> `optional` **onBeforeXRSelectCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onBlur?
 
 > `optional` **onBlur**: `FocusEventHandler`\<`T`, `FocusEvent`\>
@@ -1190,6 +1268,12 @@ Defined in: [types/jsx-elements.d.ts:426](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onBlur`
+
+***
+
+### onBlurCapture?
+
+> `optional` **onBlurCapture**: `FocusEventHandler`\<`T`, `FocusEvent`\>
 
 ***
 
@@ -1205,6 +1289,12 @@ Defined in: [types/jsx-elements.d.ts:427](https://github.com/serenity-is/serenit
 
 ***
 
+### onCancelCapture?
+
+> `optional` **onCancelCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onCanPlay?
 
 > `optional` **onCanPlay**: `EventHandler`\<`T`, `Event`\>
@@ -1217,6 +1307,12 @@ Defined in: [types/jsx-elements.d.ts:428](https://github.com/serenity-is/serenit
 
 ***
 
+### onCanPlayCapture?
+
+> `optional` **onCanPlayCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onCanPlayThrough?
 
 > `optional` **onCanPlayThrough**: `EventHandler`\<`T`, `Event`\>
@@ -1226,6 +1322,12 @@ Defined in: [types/jsx-elements.d.ts:429](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onCanPlayThrough`
+
+***
+
+### onCanPlayThroughCapture?
+
+> `optional` **onCanPlayThroughCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -1255,6 +1357,12 @@ Defined in: [types/jsx-elements.d.ts:430](https://github.com/serenity-is/serenit
 
 ***
 
+### onChangeCapture?
+
+> `optional` **onChangeCapture**: `ChangeEventHandler`\<`T`, `Event`\>
+
+***
+
 ### onClick?
 
 > `optional` **onClick**: `EventHandler`\<`T`, `MouseEvent`\>
@@ -1271,7 +1379,7 @@ Defined in: [types/jsx-elements.d.ts:431](https://github.com/serenity-is/serenit
 
 > `optional` **onClickCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/custom-attributes.d.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L29)
+Defined in: [types/custom-attributes.d.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L34)
 
 ***
 
@@ -1287,6 +1395,12 @@ Defined in: [types/jsx-elements.d.ts:432](https://github.com/serenity-is/serenit
 
 ***
 
+### onCloseCapture?
+
+> `optional` **onCloseCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onCommand?
 
 > `optional` **onCommand**: `EventHandler`\<`T`, `Event`\>
@@ -1296,6 +1410,12 @@ Defined in: [types/jsx-elements.d.ts:434](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onCommand`
+
+***
+
+### onCommandCapture?
+
+> `optional` **onCommandCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -1311,6 +1431,12 @@ Defined in: [types/jsx-elements.d.ts:435](https://github.com/serenity-is/serenit
 
 ***
 
+### onCompositionEndCapture?
+
+> `optional` **onCompositionEndCapture**: `EventHandler`\<`T`, `CompositionEvent`\>
+
+***
+
 ### onCompositionStart?
 
 > `optional` **onCompositionStart**: `EventHandler`\<`T`, `CompositionEvent`\>
@@ -1320,6 +1446,12 @@ Defined in: [types/jsx-elements.d.ts:436](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onCompositionStart`
+
+***
+
+### onCompositionStartCapture?
+
+> `optional` **onCompositionStartCapture**: `EventHandler`\<`T`, `CompositionEvent`\>
 
 ***
 
@@ -1335,6 +1467,12 @@ Defined in: [types/jsx-elements.d.ts:437](https://github.com/serenity-is/serenit
 
 ***
 
+### onCompositionUpdateCapture?
+
+> `optional` **onCompositionUpdateCapture**: `EventHandler`\<`T`, `CompositionEvent`\>
+
+***
+
 ### onContentVisibilityAutoStateChange?
 
 > `optional` **onContentVisibilityAutoStateChange**: `EventHandler`\<`T`, `ContentVisibilityAutoStateChangeEvent`\>
@@ -1344,6 +1482,12 @@ Defined in: [types/jsx-elements.d.ts:438](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onContentVisibilityAutoStateChange`
+
+***
+
+### onContentVisibilityAutoStateChangeCapture?
+
+> `optional` **onContentVisibilityAutoStateChangeCapture**: `EventHandler`\<`T`, `ContentVisibilityAutoStateChangeEvent`\>
 
 ***
 
@@ -1359,6 +1503,12 @@ Defined in: [types/jsx-elements.d.ts:441](https://github.com/serenity-is/serenit
 
 ***
 
+### onContextLostCapture?
+
+> `optional` **onContextLostCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onContextMenu?
 
 > `optional` **onContextMenu**: `EventHandler`\<`T`, `PointerEvent`\>
@@ -1368,6 +1518,12 @@ Defined in: [types/jsx-elements.d.ts:442](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onContextMenu`
+
+***
+
+### onContextMenuCapture?
+
+> `optional` **onContextMenuCapture**: `EventHandler`\<`T`, `PointerEvent`\>
 
 ***
 
@@ -1383,6 +1539,12 @@ Defined in: [types/jsx-elements.d.ts:443](https://github.com/serenity-is/serenit
 
 ***
 
+### onContextRestoredCapture?
+
+> `optional` **onContextRestoredCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onCopy?
 
 > `optional` **onCopy**: `EventHandler`\<`T`, `ClipboardEvent`\>
@@ -1392,6 +1554,12 @@ Defined in: [types/jsx-elements.d.ts:444](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onCopy`
+
+***
+
+### onCopyCapture?
+
+> `optional` **onCopyCapture**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
 ***
 
@@ -1407,6 +1575,12 @@ Defined in: [types/jsx-elements.d.ts:445](https://github.com/serenity-is/serenit
 
 ***
 
+### onCueChangeCapture?
+
+> `optional` **onCueChangeCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onCut?
 
 > `optional` **onCut**: `EventHandler`\<`T`, `ClipboardEvent`\>
@@ -1416,6 +1590,12 @@ Defined in: [types/jsx-elements.d.ts:446](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onCut`
+
+***
+
+### onCutCapture?
+
+> `optional` **onCutCapture**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
 ***
 
@@ -1435,7 +1615,7 @@ Defined in: [types/jsx-elements.d.ts:447](https://github.com/serenity-is/serenit
 
 > `optional` **onDblClickCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/custom-attributes.d.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L30)
+Defined in: [types/custom-attributes.d.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L35)
 
 ***
 
@@ -1443,7 +1623,7 @@ Defined in: [types/custom-attributes.d.ts:30](https://github.com/serenity-is/ser
 
 > `optional` **onDoubleClick**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/custom-attributes.d.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L31)
+Defined in: [types/custom-attributes.d.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L36)
 
 ***
 
@@ -1451,7 +1631,7 @@ Defined in: [types/custom-attributes.d.ts:31](https://github.com/serenity-is/ser
 
 > `optional` **onDoubleClickCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/custom-attributes.d.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L32)
+Defined in: [types/custom-attributes.d.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L37)
 
 ***
 
@@ -1467,6 +1647,12 @@ Defined in: [types/jsx-elements.d.ts:448](https://github.com/serenity-is/serenit
 
 ***
 
+### onDragCapture?
+
+> `optional` **onDragCapture**: `EventHandler`\<`T`, `DragEvent`\>
+
+***
+
 ### onDragEnd?
 
 > `optional` **onDragEnd**: `EventHandler`\<`T`, `DragEvent`\>
@@ -1476,6 +1662,12 @@ Defined in: [types/jsx-elements.d.ts:449](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onDragEnd`
+
+***
+
+### onDragEndCapture?
+
+> `optional` **onDragEndCapture**: `EventHandler`\<`T`, `DragEvent`\>
 
 ***
 
@@ -1491,6 +1683,12 @@ Defined in: [types/jsx-elements.d.ts:450](https://github.com/serenity-is/serenit
 
 ***
 
+### onDragEnterCapture?
+
+> `optional` **onDragEnterCapture**: `EventHandler`\<`T`, `DragEvent`\>
+
+***
+
 ### onDragExit?
 
 > `optional` **onDragExit**: `EventHandler`\<`T`, `DragEvent`\>
@@ -1500,6 +1698,12 @@ Defined in: [types/jsx-elements.d.ts:451](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onDragExit`
+
+***
+
+### onDragExitCapture?
+
+> `optional` **onDragExitCapture**: `EventHandler`\<`T`, `DragEvent`\>
 
 ***
 
@@ -1515,6 +1719,12 @@ Defined in: [types/jsx-elements.d.ts:452](https://github.com/serenity-is/serenit
 
 ***
 
+### onDragLeaveCapture?
+
+> `optional` **onDragLeaveCapture**: `EventHandler`\<`T`, `DragEvent`\>
+
+***
+
 ### onDragOver?
 
 > `optional` **onDragOver**: `EventHandler`\<`T`, `DragEvent`\>
@@ -1524,6 +1734,12 @@ Defined in: [types/jsx-elements.d.ts:453](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onDragOver`
+
+***
+
+### onDragOverCapture?
+
+> `optional` **onDragOverCapture**: `EventHandler`\<`T`, `DragEvent`\>
 
 ***
 
@@ -1539,6 +1755,12 @@ Defined in: [types/jsx-elements.d.ts:454](https://github.com/serenity-is/serenit
 
 ***
 
+### onDragStartCapture?
+
+> `optional` **onDragStartCapture**: `EventHandler`\<`T`, `DragEvent`\>
+
+***
+
 ### onDrop?
 
 > `optional` **onDrop**: `EventHandler`\<`T`, `DragEvent`\>
@@ -1548,6 +1770,12 @@ Defined in: [types/jsx-elements.d.ts:455](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onDrop`
+
+***
+
+### onDropCapture?
+
+> `optional` **onDropCapture**: `EventHandler`\<`T`, `DragEvent`\>
 
 ***
 
@@ -1563,6 +1791,12 @@ Defined in: [types/jsx-elements.d.ts:456](https://github.com/serenity-is/serenit
 
 ***
 
+### onDurationChangeCapture?
+
+> `optional` **onDurationChangeCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onEmptied?
 
 > `optional` **onEmptied**: `EventHandler`\<`T`, `Event`\>
@@ -1572,6 +1806,12 @@ Defined in: [types/jsx-elements.d.ts:457](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onEmptied`
+
+***
+
+### onEmptiedCapture?
+
+> `optional` **onEmptiedCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -1587,6 +1827,12 @@ Defined in: [types/jsx-elements.d.ts:458](https://github.com/serenity-is/serenit
 
 ***
 
+### onEndedCapture?
+
+> `optional` **onEndedCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onError?
 
 > `optional` **onError**: `EventHandler`\<`T`, `ErrorEvent`\>
@@ -1596,6 +1842,12 @@ Defined in: [types/jsx-elements.d.ts:459](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onError`
+
+***
+
+### onErrorCapture?
+
+> `optional` **onErrorCapture**: `EventHandler`\<`T`, `ErrorEvent`\>
 
 ***
 
@@ -1611,6 +1863,12 @@ Defined in: [types/jsx-elements.d.ts:460](https://github.com/serenity-is/serenit
 
 ***
 
+### onFocusCapture?
+
+> `optional` **onFocusCapture**: `FocusEventHandler`\<`T`, `FocusEvent`\>
+
+***
+
 ### onFocusIn?
 
 > `optional` **onFocusIn**: `FocusEventHandler`\<`T`, `FocusEvent`\>
@@ -1620,6 +1878,12 @@ Defined in: [types/jsx-elements.d.ts:461](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onFocusIn`
+
+***
+
+### onFocusInCapture?
+
+> `optional` **onFocusInCapture**: `FocusEventHandler`\<`T`, `FocusEvent`\>
 
 ***
 
@@ -1635,6 +1899,12 @@ Defined in: [types/jsx-elements.d.ts:462](https://github.com/serenity-is/serenit
 
 ***
 
+### onFocusOutCapture?
+
+> `optional` **onFocusOutCapture**: `FocusEventHandler`\<`T`, `FocusEvent`\>
+
+***
+
 ### onFormData?
 
 > `optional` **onFormData**: `EventHandler`\<`T`, `FormDataEvent`\>
@@ -1644,6 +1914,12 @@ Defined in: [types/jsx-elements.d.ts:463](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onFormData`
+
+***
+
+### onFormDataCapture?
+
+> `optional` **onFormDataCapture**: `EventHandler`\<`T`, `FormDataEvent`\>
 
 ***
 
@@ -1659,6 +1935,12 @@ Defined in: [types/jsx-elements.d.ts:464](https://github.com/serenity-is/serenit
 
 ***
 
+### onFullscreenChangeCapture?
+
+> `optional` **onFullscreenChangeCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onFullscreenError?
 
 > `optional` **onFullscreenError**: `EventHandler`\<`T`, `Event`\>
@@ -1668,6 +1950,12 @@ Defined in: [types/jsx-elements.d.ts:465](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onFullscreenError`
+
+***
+
+### onFullscreenErrorCapture?
+
+> `optional` **onFullscreenErrorCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -1683,6 +1971,12 @@ Defined in: [types/jsx-elements.d.ts:466](https://github.com/serenity-is/serenit
 
 ***
 
+### onGotPointerCaptureCapture?
+
+> `optional` **onGotPointerCaptureCapture**: `EventHandler`\<`T`, `PointerEvent`\>
+
+***
+
 ### onInput?
 
 > `optional` **onInput**: `InputEventHandler`\<`T`, `InputEvent`\>
@@ -1692,6 +1986,12 @@ Defined in: [types/jsx-elements.d.ts:467](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onInput`
+
+***
+
+### onInputCapture?
+
+> `optional` **onInputCapture**: `InputEventHandler`\<`T`, `InputEvent`\>
 
 ***
 
@@ -1707,6 +2007,12 @@ Defined in: [types/jsx-elements.d.ts:468](https://github.com/serenity-is/serenit
 
 ***
 
+### onInvalidCapture?
+
+> `optional` **onInvalidCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onKeyDown?
 
 > `optional` **onKeyDown**: `EventHandler`\<`T`, `KeyboardEvent`\>
@@ -1716,6 +2022,12 @@ Defined in: [types/jsx-elements.d.ts:469](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onKeyDown`
+
+***
+
+### onKeyDownCapture?
+
+> `optional` **onKeyDownCapture**: `EventHandler`\<`T`, `KeyboardEvent`\>
 
 ***
 
@@ -1731,6 +2043,12 @@ Defined in: [types/jsx-elements.d.ts:470](https://github.com/serenity-is/serenit
 
 ***
 
+### onKeyPressCapture?
+
+> `optional` **onKeyPressCapture**: `EventHandler`\<`T`, `KeyboardEvent`\>
+
+***
+
 ### onKeyUp?
 
 > `optional` **onKeyUp**: `EventHandler`\<`T`, `KeyboardEvent`\>
@@ -1740,6 +2058,12 @@ Defined in: [types/jsx-elements.d.ts:471](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onKeyUp`
+
+***
+
+### onKeyUpCapture?
+
+> `optional` **onKeyUpCapture**: `EventHandler`\<`T`, `KeyboardEvent`\>
 
 ***
 
@@ -1755,6 +2079,12 @@ Defined in: [types/jsx-elements.d.ts:472](https://github.com/serenity-is/serenit
 
 ***
 
+### onLoadCapture?
+
+> `optional` **onLoadCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onLoadedData?
 
 > `optional` **onLoadedData**: `EventHandler`\<`T`, `Event`\>
@@ -1764,6 +2094,12 @@ Defined in: [types/jsx-elements.d.ts:473](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onLoadedData`
+
+***
+
+### onLoadedDataCapture?
+
+> `optional` **onLoadedDataCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -1779,6 +2115,12 @@ Defined in: [types/jsx-elements.d.ts:474](https://github.com/serenity-is/serenit
 
 ***
 
+### onLoadedMetadataCapture?
+
+> `optional` **onLoadedMetadataCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onLoadStart?
 
 > `optional` **onLoadStart**: `EventHandler`\<`T`, `Event`\>
@@ -1788,6 +2130,12 @@ Defined in: [types/jsx-elements.d.ts:475](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onLoadStart`
+
+***
+
+### onLoadStartCapture?
+
+> `optional` **onLoadStartCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -1803,6 +2151,12 @@ Defined in: [types/jsx-elements.d.ts:476](https://github.com/serenity-is/serenit
 
 ***
 
+### onLostPointerCaptureCapture?
+
+> `optional` **onLostPointerCaptureCapture**: `EventHandler`\<`T`, `PointerEvent`\>
+
+***
+
 ### onMouseDown?
 
 > `optional` **onMouseDown**: `EventHandler`\<`T`, `MouseEvent`\>
@@ -1812,6 +2166,12 @@ Defined in: [types/jsx-elements.d.ts:477](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onMouseDown`
+
+***
+
+### onMouseDownCapture?
+
+> `optional` **onMouseDownCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
 ***
 
@@ -1827,6 +2187,12 @@ Defined in: [types/jsx-elements.d.ts:478](https://github.com/serenity-is/serenit
 
 ***
 
+### onMouseEnterCapture?
+
+> `optional` **onMouseEnterCapture**: `EventHandler`\<`T`, `MouseEvent`\>
+
+***
+
 ### onMouseLeave?
 
 > `optional` **onMouseLeave**: `EventHandler`\<`T`, `MouseEvent`\>
@@ -1836,6 +2202,12 @@ Defined in: [types/jsx-elements.d.ts:479](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onMouseLeave`
+
+***
+
+### onMouseLeaveCapture?
+
+> `optional` **onMouseLeaveCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
 ***
 
@@ -1851,6 +2223,12 @@ Defined in: [types/jsx-elements.d.ts:480](https://github.com/serenity-is/serenit
 
 ***
 
+### onMouseMoveCapture?
+
+> `optional` **onMouseMoveCapture**: `EventHandler`\<`T`, `MouseEvent`\>
+
+***
+
 ### onMouseOut?
 
 > `optional` **onMouseOut**: `EventHandler`\<`T`, `MouseEvent`\>
@@ -1860,6 +2238,12 @@ Defined in: [types/jsx-elements.d.ts:481](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onMouseOut`
+
+***
+
+### onMouseOutCapture?
+
+> `optional` **onMouseOutCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
 ***
 
@@ -1875,6 +2259,12 @@ Defined in: [types/jsx-elements.d.ts:482](https://github.com/serenity-is/serenit
 
 ***
 
+### onMouseOverCapture?
+
+> `optional` **onMouseOverCapture**: `EventHandler`\<`T`, `MouseEvent`\>
+
+***
+
 ### onMouseUp?
 
 > `optional` **onMouseUp**: `EventHandler`\<`T`, `MouseEvent`\>
@@ -1884,6 +2274,12 @@ Defined in: [types/jsx-elements.d.ts:483](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onMouseUp`
+
+***
+
+### onMouseUpCapture?
+
+> `optional` **onMouseUpCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
 ***
 
@@ -1899,6 +2295,12 @@ Defined in: [types/jsx-elements.d.ts:484](https://github.com/serenity-is/serenit
 
 ***
 
+### onPasteCapture?
+
+> `optional` **onPasteCapture**: `EventHandler`\<`T`, `ClipboardEvent`\>
+
+***
+
 ### onPause?
 
 > `optional` **onPause**: `EventHandler`\<`T`, `Event`\>
@@ -1908,6 +2310,12 @@ Defined in: [types/jsx-elements.d.ts:485](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onPause`
+
+***
+
+### onPauseCapture?
+
+> `optional` **onPauseCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -1923,6 +2331,12 @@ Defined in: [types/jsx-elements.d.ts:486](https://github.com/serenity-is/serenit
 
 ***
 
+### onPlayCapture?
+
+> `optional` **onPlayCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onPlaying?
 
 > `optional` **onPlaying**: `EventHandler`\<`T`, `Event`\>
@@ -1932,6 +2346,12 @@ Defined in: [types/jsx-elements.d.ts:487](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onPlaying`
+
+***
+
+### onPlayingCapture?
+
+> `optional` **onPlayingCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -1947,6 +2367,12 @@ Defined in: [types/jsx-elements.d.ts:488](https://github.com/serenity-is/serenit
 
 ***
 
+### onPointerCancelCapture?
+
+> `optional` **onPointerCancelCapture**: `EventHandler`\<`T`, `PointerEvent`\>
+
+***
+
 ### onPointerDown?
 
 > `optional` **onPointerDown**: `EventHandler`\<`T`, `PointerEvent`\>
@@ -1956,6 +2382,12 @@ Defined in: [types/jsx-elements.d.ts:489](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onPointerDown`
+
+***
+
+### onPointerDownCapture?
+
+> `optional` **onPointerDownCapture**: `EventHandler`\<`T`, `PointerEvent`\>
 
 ***
 
@@ -1971,6 +2403,12 @@ Defined in: [types/jsx-elements.d.ts:490](https://github.com/serenity-is/serenit
 
 ***
 
+### onPointerEnterCapture?
+
+> `optional` **onPointerEnterCapture**: `EventHandler`\<`T`, `PointerEvent`\>
+
+***
+
 ### onPointerLeave?
 
 > `optional` **onPointerLeave**: `EventHandler`\<`T`, `PointerEvent`\>
@@ -1980,6 +2418,12 @@ Defined in: [types/jsx-elements.d.ts:491](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onPointerLeave`
+
+***
+
+### onPointerLeaveCapture?
+
+> `optional` **onPointerLeaveCapture**: `EventHandler`\<`T`, `PointerEvent`\>
 
 ***
 
@@ -1995,6 +2439,12 @@ Defined in: [types/jsx-elements.d.ts:492](https://github.com/serenity-is/serenit
 
 ***
 
+### onPointerMoveCapture?
+
+> `optional` **onPointerMoveCapture**: `EventHandler`\<`T`, `PointerEvent`\>
+
+***
+
 ### onPointerOut?
 
 > `optional` **onPointerOut**: `EventHandler`\<`T`, `PointerEvent`\>
@@ -2004,6 +2454,12 @@ Defined in: [types/jsx-elements.d.ts:493](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onPointerOut`
+
+***
+
+### onPointerOutCapture?
+
+> `optional` **onPointerOutCapture**: `EventHandler`\<`T`, `PointerEvent`\>
 
 ***
 
@@ -2019,6 +2475,12 @@ Defined in: [types/jsx-elements.d.ts:494](https://github.com/serenity-is/serenit
 
 ***
 
+### onPointerOverCapture?
+
+> `optional` **onPointerOverCapture**: `EventHandler`\<`T`, `PointerEvent`\>
+
+***
+
 ### onPointerRawUpdate?
 
 > `optional` **onPointerRawUpdate**: `EventHandler`\<`T`, `PointerEvent`\>
@@ -2028,6 +2490,12 @@ Defined in: [types/jsx-elements.d.ts:495](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onPointerRawUpdate`
+
+***
+
+### onPointerRawUpdateCapture?
+
+> `optional` **onPointerRawUpdateCapture**: `EventHandler`\<`T`, `PointerEvent`\>
 
 ***
 
@@ -2043,6 +2511,12 @@ Defined in: [types/jsx-elements.d.ts:496](https://github.com/serenity-is/serenit
 
 ***
 
+### onPointerUpCapture?
+
+> `optional` **onPointerUpCapture**: `EventHandler`\<`T`, `PointerEvent`\>
+
+***
+
 ### onProgress?
 
 > `optional` **onProgress**: `EventHandler`\<`T`, `ProgressEvent`\<`EventTarget`\>\>
@@ -2052,6 +2526,12 @@ Defined in: [types/jsx-elements.d.ts:497](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onProgress`
+
+***
+
+### onProgressCapture?
+
+> `optional` **onProgressCapture**: `EventHandler`\<`T`, `ProgressEvent`\<`EventTarget`\>\>
 
 ***
 
@@ -2067,6 +2547,12 @@ Defined in: [types/jsx-elements.d.ts:498](https://github.com/serenity-is/serenit
 
 ***
 
+### onRateChangeCapture?
+
+> `optional` **onRateChangeCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onReset?
 
 > `optional` **onReset**: `EventHandler`\<`T`, `Event`\>
@@ -2076,6 +2562,12 @@ Defined in: [types/jsx-elements.d.ts:499](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onReset`
+
+***
+
+### onResetCapture?
+
+> `optional` **onResetCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -2091,6 +2583,12 @@ Defined in: [types/jsx-elements.d.ts:500](https://github.com/serenity-is/serenit
 
 ***
 
+### onResizeCapture?
+
+> `optional` **onResizeCapture**: `EventHandler`\<`T`, `UIEvent`\>
+
+***
+
 ### onScroll?
 
 > `optional` **onScroll**: `EventHandler`\<`T`, `Event`\>
@@ -2100,6 +2598,12 @@ Defined in: [types/jsx-elements.d.ts:501](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onScroll`
+
+***
+
+### onScrollCapture?
+
+> `optional` **onScrollCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -2115,6 +2619,12 @@ Defined in: [types/jsx-elements.d.ts:502](https://github.com/serenity-is/serenit
 
 ***
 
+### onScrollEndCapture?
+
+> `optional` **onScrollEndCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onScrollSnapChange?
 
 > `optional` **onScrollSnapChange**: `EventHandler`\<`T`, `Event`\>
@@ -2124,6 +2634,12 @@ Defined in: [types/jsx-elements.d.ts:503](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onScrollSnapChange`
+
+***
+
+### onScrollSnapChangeCapture?
+
+> `optional` **onScrollSnapChangeCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -2139,6 +2655,12 @@ Defined in: [types/jsx-elements.d.ts:504](https://github.com/serenity-is/serenit
 
 ***
 
+### onScrollSnapChangingCapture?
+
+> `optional` **onScrollSnapChangingCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onSecurityPolicyViolation?
 
 > `optional` **onSecurityPolicyViolation**: `EventHandler`\<`T`, `SecurityPolicyViolationEvent`\>
@@ -2148,6 +2670,12 @@ Defined in: [types/jsx-elements.d.ts:505](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onSecurityPolicyViolation`
+
+***
+
+### onSecurityPolicyViolationCapture?
+
+> `optional` **onSecurityPolicyViolationCapture**: `EventHandler`\<`T`, `SecurityPolicyViolationEvent`\>
 
 ***
 
@@ -2163,6 +2691,12 @@ Defined in: [types/jsx-elements.d.ts:506](https://github.com/serenity-is/serenit
 
 ***
 
+### onSeekedCapture?
+
+> `optional` **onSeekedCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onSeeking?
 
 > `optional` **onSeeking**: `EventHandler`\<`T`, `Event`\>
@@ -2172,6 +2706,12 @@ Defined in: [types/jsx-elements.d.ts:507](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onSeeking`
+
+***
+
+### onSeekingCapture?
+
+> `optional` **onSeekingCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -2187,6 +2727,12 @@ Defined in: [types/jsx-elements.d.ts:508](https://github.com/serenity-is/serenit
 
 ***
 
+### onSelectCapture?
+
+> `optional` **onSelectCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onSelectionChange?
 
 > `optional` **onSelectionChange**: `EventHandler`\<`T`, `Event`\>
@@ -2196,6 +2742,12 @@ Defined in: [types/jsx-elements.d.ts:509](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onSelectionChange`
+
+***
+
+### onSelectionChangeCapture?
+
+> `optional` **onSelectionChangeCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -2211,6 +2763,12 @@ Defined in: [types/jsx-elements.d.ts:510](https://github.com/serenity-is/serenit
 
 ***
 
+### onSelectStartCapture?
+
+> `optional` **onSelectStartCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onSlotChange?
 
 > `optional` **onSlotChange**: `EventHandler`\<`T`, `Event`\>
@@ -2220,6 +2778,12 @@ Defined in: [types/jsx-elements.d.ts:511](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onSlotChange`
+
+***
+
+### onSlotChangeCapture?
+
+> `optional` **onSlotChangeCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -2235,6 +2799,12 @@ Defined in: [types/jsx-elements.d.ts:512](https://github.com/serenity-is/serenit
 
 ***
 
+### onStalledCapture?
+
+> `optional` **onStalledCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onSubmit?
 
 > `optional` **onSubmit**: `EventHandler`\<`T`, `SubmitEvent`\>
@@ -2244,6 +2814,12 @@ Defined in: [types/jsx-elements.d.ts:513](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onSubmit`
+
+***
+
+### onSubmitCapture?
+
+> `optional` **onSubmitCapture**: `EventHandler`\<`T`, `SubmitEvent`\>
 
 ***
 
@@ -2259,6 +2835,12 @@ Defined in: [types/jsx-elements.d.ts:514](https://github.com/serenity-is/serenit
 
 ***
 
+### onSuspendCapture?
+
+> `optional` **onSuspendCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onTimeUpdate?
 
 > `optional` **onTimeUpdate**: `EventHandler`\<`T`, `Event`\>
@@ -2268,6 +2850,12 @@ Defined in: [types/jsx-elements.d.ts:515](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onTimeUpdate`
+
+***
+
+### onTimeUpdateCapture?
+
+> `optional` **onTimeUpdateCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -2283,6 +2871,12 @@ Defined in: [types/jsx-elements.d.ts:516](https://github.com/serenity-is/serenit
 
 ***
 
+### onToggleCapture?
+
+> `optional` **onToggleCapture**: `EventHandler`\<`T`, `ToggleEvent`\>
+
+***
+
 ### onTouchCancel?
 
 > `optional` **onTouchCancel**: `EventHandler`\<`T`, `TouchEvent`\>
@@ -2292,6 +2886,12 @@ Defined in: [types/jsx-elements.d.ts:517](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onTouchCancel`
+
+***
+
+### onTouchCancelCapture?
+
+> `optional` **onTouchCancelCapture**: `EventHandler`\<`T`, `TouchEvent`\>
 
 ***
 
@@ -2307,6 +2907,12 @@ Defined in: [types/jsx-elements.d.ts:518](https://github.com/serenity-is/serenit
 
 ***
 
+### onTouchEndCapture?
+
+> `optional` **onTouchEndCapture**: `EventHandler`\<`T`, `TouchEvent`\>
+
+***
+
 ### onTouchMove?
 
 > `optional` **onTouchMove**: `EventHandler`\<`T`, `TouchEvent`\>
@@ -2316,6 +2922,12 @@ Defined in: [types/jsx-elements.d.ts:519](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onTouchMove`
+
+***
+
+### onTouchMoveCapture?
+
+> `optional` **onTouchMoveCapture**: `EventHandler`\<`T`, `TouchEvent`\>
 
 ***
 
@@ -2331,6 +2943,12 @@ Defined in: [types/jsx-elements.d.ts:520](https://github.com/serenity-is/serenit
 
 ***
 
+### onTouchStartCapture?
+
+> `optional` **onTouchStartCapture**: `EventHandler`\<`T`, `TouchEvent`\>
+
+***
+
 ### onTransitionCancel?
 
 > `optional` **onTransitionCancel**: `EventHandler`\<`T`, `TransitionEvent`\>
@@ -2340,6 +2958,12 @@ Defined in: [types/jsx-elements.d.ts:521](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onTransitionCancel`
+
+***
+
+### onTransitionCancelCapture?
+
+> `optional` **onTransitionCancelCapture**: `EventHandler`\<`T`, `TransitionEvent`\>
 
 ***
 
@@ -2355,6 +2979,12 @@ Defined in: [types/jsx-elements.d.ts:522](https://github.com/serenity-is/serenit
 
 ***
 
+### onTransitionEndCapture?
+
+> `optional` **onTransitionEndCapture**: `EventHandler`\<`T`, `TransitionEvent`\>
+
+***
+
 ### onTransitionRun?
 
 > `optional` **onTransitionRun**: `EventHandler`\<`T`, `TransitionEvent`\>
@@ -2364,6 +2994,12 @@ Defined in: [types/jsx-elements.d.ts:523](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onTransitionRun`
+
+***
+
+### onTransitionRunCapture?
+
+> `optional` **onTransitionRunCapture**: `EventHandler`\<`T`, `TransitionEvent`\>
 
 ***
 
@@ -2379,6 +3015,12 @@ Defined in: [types/jsx-elements.d.ts:524](https://github.com/serenity-is/serenit
 
 ***
 
+### onTransitionStartCapture?
+
+> `optional` **onTransitionStartCapture**: `EventHandler`\<`T`, `TransitionEvent`\>
+
+***
+
 ### onVolumeChange?
 
 > `optional` **onVolumeChange**: `EventHandler`\<`T`, `Event`\>
@@ -2388,6 +3030,12 @@ Defined in: [types/jsx-elements.d.ts:525](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onVolumeChange`
+
+***
+
+### onVolumeChangeCapture?
+
+> `optional` **onVolumeChangeCapture**: `EventHandler`\<`T`, `Event`\>
 
 ***
 
@@ -2403,6 +3051,12 @@ Defined in: [types/jsx-elements.d.ts:526](https://github.com/serenity-is/serenit
 
 ***
 
+### onWaitingCapture?
+
+> `optional` **onWaitingCapture**: `EventHandler`\<`T`, `Event`\>
+
+***
+
 ### onWheel?
 
 > `optional` **onWheel**: `EventHandler`\<`T`, `WheelEvent`\>
@@ -2412,6 +3066,12 @@ Defined in: [types/jsx-elements.d.ts:527](https://github.com/serenity-is/serenit
 #### Inherited from
 
 `EventHandlersElement.onWheel`
+
+***
+
+### onWheelCapture?
+
+> `optional` **onWheelCapture**: `EventHandler`\<`T`, `WheelEvent`\>
 
 ***
 
@@ -2459,7 +3119,7 @@ Defined in: [types/jsx-elements.d.ts:575](https://github.com/serenity-is/serenit
 
 ### style?
 
-> `optional` **style**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `RemoveAttribute` \| [`StyleProperties`](../type-aliases/StyleProperties.md)\>
+> `optional` **style**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `RemoveAttribute` \| [`StyleProperties`](../type-aliases/StyleProperties.md) \| [`StyleProperties`](../type-aliases/StyleProperties.md)[]\>
 
 Defined in: [types/jsx-elements.d.ts:576](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L576)
 
@@ -2477,7 +3137,7 @@ Defined in: [types/jsx-elements.d.ts:577](https://github.com/serenity-is/serenit
 
 > `optional` **tabIndex**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `RemoveAttribute`\>
 
-Defined in: [types/custom-attributes.d.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L27)
+Defined in: [types/custom-attributes.d.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L32)
 
 ***
 

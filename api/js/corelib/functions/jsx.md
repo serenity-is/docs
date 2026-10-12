@@ -6,7 +6,7 @@
 
 > **jsx**\<`THtmlTag`, `TElement`\>(`type`, `props?`): `TElement`
 
-Defined in: [../domwise/dist/index.d.ts:2739](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2739)
+Defined in: [../domwise/dist/index.d.ts:2780](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2780)
 
 Creates a JSX element. This is the automatic JSX factory used by the
 compiler (imported as `jsx` and `jsxs`). Handles HTML/SVG/MathML elements
@@ -56,7 +56,7 @@ The created DOM node (or component render result).
 
 > **jsx**\<`TSVGTag`, `TElement`\>(`type`, `props?`): `TElement`
 
-Defined in: [../domwise/dist/index.d.ts:2740](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2740)
+Defined in: [../domwise/dist/index.d.ts:2781](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2781)
 
 Creates a JSX element. This is the automatic JSX factory used by the
 compiler (imported as `jsx` and `jsxs`). Handles HTML/SVG/MathML elements
@@ -106,7 +106,7 @@ The created DOM node (or component render result).
 
 > **jsx**(`type`, `props?`): [`JSXElement`](../type-aliases/JSXElement.md)
 
-Defined in: [../domwise/dist/index.d.ts:2741](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2741)
+Defined in: [../domwise/dist/index.d.ts:2782](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2782)
 
 Creates a JSX element. This is the automatic JSX factory used by the
 compiler (imported as `jsx` and `jsxs`). Handles HTML/SVG/MathML elements
@@ -146,7 +146,7 @@ The created DOM node (or component render result).
 
 > **jsx**\<`P`, `TElement`\>(`type`, `props?`): `TElement`
 
-Defined in: [../domwise/dist/index.d.ts:2742](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2742)
+Defined in: [../domwise/dist/index.d.ts:2783](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2783)
 
 Creates a JSX element. This is the automatic JSX factory used by the
 compiler (imported as `jsx` and `jsxs`). Handles HTML/SVG/MathML elements

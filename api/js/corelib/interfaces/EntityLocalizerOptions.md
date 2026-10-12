@@ -32,7 +32,7 @@ Resolves an element by id within the dialog.
 
 > **getButton**: () => [`Fluent`](Fluent.md)
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L15)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L22)
 
 Returns the localization toggle button.
 
@@ -46,7 +46,7 @@ Returns the localization toggle button.
 
 > **getEntity**: () => `any`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L17)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L24)
 
 Returns the current entity.
 
@@ -60,7 +60,7 @@ Returns the current entity.
 
 > **getLanguages**: () => [`LanguageList`](../type-aliases/LanguageList.md)
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L19)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L26)
 
 Returns the list of available languages.
 
@@ -74,7 +74,7 @@ Returns the list of available languages.
 
 > **getPropertyGrid**: () => [`Fluent`](Fluent.md)
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L21)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L28)
 
 Returns the property grid element.
 
@@ -88,7 +88,7 @@ Returns the property grid element.
 
 > **getToolButtons**: () => `HTMLElement`[]
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L23)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L30)
 
 Returns the toolbar button elements.
 
@@ -122,11 +122,34 @@ Whether the entity is new (no id).
 
 ***
 
+### mapSourceItem()?
+
+> `optional` **mapSourceItem**: (`item`) => [`PropertyItem`](PropertyItem.md)
+
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L20)
+
+Maps a source property item to the item used in the localization grid. The default
+returns the item as is. Return an item with `localizable: false` to skip it, or a copy
+with modified permissions / insertable / updatable flags to customize editability
+(e.g. require a translation specific permission).
+
+#### Parameters
+
+##### item
+
+[`PropertyItem`](PropertyItem.md)
+
+#### Returns
+
+[`PropertyItem`](PropertyItem.md)
+
+***
+
 ### pgOptions
 
 > **pgOptions**: [`PropertyGridOptions`](PropertyGridOptions.md)
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L25)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L32)
 
 Options for the localization property grid.
 
@@ -136,7 +159,7 @@ Options for the localization property grid.
 
 > **retrieveLocalizations**: () => `PromiseLike`\<\{\[`languageId`: `string`\]: `any`; \}\>
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L27)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L34)
 
 Retrieves existing localizations for the entity.
 
@@ -150,7 +173,7 @@ Retrieves existing localizations for the entity.
 
 > **validateForm**: () => `boolean`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L29)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L36)
 
 Validates the main form before switching modes.
 

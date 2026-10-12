@@ -4,7 +4,7 @@
 
 > **isSignalLike**\<`T`\>(`obj`): `obj is SignalLike<T>`
 
-Defined in: [src/signal-util.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L10)
+Defined in: [src/signal-util.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L18)
 
 A type guard that checks if an object is signal-like, meaning it has `subscribe` and `peek` methods,
 and a `value` property.

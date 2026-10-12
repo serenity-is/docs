@@ -2,7 +2,7 @@
 
 # Interface: Computed\<T\>
 
-Defined in: [types/basic-types.d.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L110)
+Defined in: [types/basic-types.d.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L112)
 
 A read-only (computed) signal.
 
@@ -26,7 +26,7 @@ The type of the computed value.
 
 > **get** **value**(): `T`
 
-Defined in: [types/basic-types.d.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L84)
+Defined in: [types/basic-types.d.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L86)
 
 Current value; reading may track a dependency when inside an effect/computed.
 
@@ -44,7 +44,7 @@ Current value; reading may track a dependency when inside an effect/computed.
 
 > **peek**(): `T`
 
-Defined in: [types/basic-types.d.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L89)
+Defined in: [types/basic-types.d.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L91)
 
 Returns the current value without creating a dependency.
 
@@ -64,7 +64,7 @@ The current value.
 
 > **subscribe**(`fn`): [`EffectDisposer`](../type-aliases/EffectDisposer.md)
 
-Defined in: [types/basic-types.d.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L95)
+Defined in: [types/basic-types.d.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L97)
 
 Subscribes to value changes.
 

@@ -4,7 +4,7 @@
 
 > **RemoteViewAjaxCallback**\<`TItem`\> = (`view`, `options`) => `boolean` \| `void`
 
-Defined in: [src/slick/iremoteview.ts:317](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L317)
+Defined in: [src/slick/iremoteview.ts:320](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L320)
 
 Callback function for AJAX calls made by the view
 

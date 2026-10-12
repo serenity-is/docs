@@ -4,7 +4,7 @@
 
 > **createRef**\<`T`\>(): [`RefObject`](../type-aliases/RefObject.md)\<`T`\>
 
-Defined in: [../domwise/dist/index.d.ts:2593](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2593)
+Defined in: [../domwise/dist/index.d.ts:2634](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2634)
 
 Creates a new sealed `RefObject` whose `current` is initially `null`.
 

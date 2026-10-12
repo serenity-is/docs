@@ -4,7 +4,7 @@
 
 > **CancellableViewCallback**\<`TItem`\> = (`view`) => `boolean` \| `void`
 
-Defined in: [src/slick/iremoteview.ts:309](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L309)
+Defined in: [src/slick/iremoteview.ts:312](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L312)
 
 Callback function that can cancel a view operation
 

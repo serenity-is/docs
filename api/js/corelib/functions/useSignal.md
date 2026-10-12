@@ -4,7 +4,7 @@
 
 > **useSignal**\<`T`\>(`initialValue`): [`Signal`](../interfaces/Signal.md)\<`T`\>
 
-Defined in: [../domwise/dist/index.d.ts:2967](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2967)
+Defined in: [../domwise/dist/index.d.ts:3080](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3080)
 
 Creates a writable signal with the given initial value.
 Convenience wrapper around [signal](../variables/signal.md).

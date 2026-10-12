@@ -4,7 +4,7 @@
 
 > **inNamespaceURI**(`namespaceURI`, `children`): [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-Defined in: [../domwise/dist/index.d.ts:2697](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2697)
+Defined in: [../domwise/dist/index.d.ts:2738](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2738)
 
 Executes a children factory within a scoped namespace URI.
 

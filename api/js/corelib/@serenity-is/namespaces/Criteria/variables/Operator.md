@@ -4,6 +4,6 @@
 
 > `const` **Operator**: *typeof* [`CriteriaOperator`](../../../../enumerations/CriteriaOperator.md) = `CriteriaOperator`
 
-Defined in: [src/base/criteria.ts:873](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L873)
+Defined in: [src/base/criteria.ts:1079](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1079)
 
 Alias for [CriteriaOperator](../../../../enumerations/CriteriaOperator.md) — the set of valid operator tokens.

@@ -66,7 +66,7 @@ Defined in: [src/ui/formatters/numberformatter.ts:7](https://github.com/serenity
 
 > **get** **displayFormat**(): `string`
 
-Defined in: [src/ui/formatters/numberformatter.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/numberformatter.ts#L53)
+Defined in: [src/ui/formatters/numberformatter.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/numberformatter.ts#L64)
 
 Gets the number display format.
 
@@ -80,7 +80,7 @@ The display format string.
 
 > **set** **displayFormat**(`value`): `void`
 
-Defined in: [src/ui/formatters/numberformatter.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/numberformatter.ts#L58)
+Defined in: [src/ui/formatters/numberformatter.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/numberformatter.ts#L69)
 
 Sets the number display format.
 
@@ -132,7 +132,38 @@ Formatted number string.
 
 Defined in: [src/ui/formatters/numberformatter.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/numberformatter.ts#L33)
 
+Static compat helper to format any numeric-like value with HTML encoding.
+
+#### Parameters
+
+##### value
+
+`any`
+
+Number or numeric string.
+
+##### format?
+
+`string`
+
+Format string (default `"0.##"`).
+
+#### Returns
+
+`string`
+
+Formatted string.
+
+***
+
+### formatValue()
+
+> `static` **formatValue**(`value`, `format?`): `string`
+
+Defined in: [src/ui/formatters/numberformatter.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/numberformatter.ts#L44)
+
 Static helper to format any numeric-like value.
+This does not HTML encode returned value.
 
 #### Parameters
 

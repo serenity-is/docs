@@ -16,7 +16,7 @@ Parameter values or interpolated template values.
 
 > **parseCriteria**(`expression`, `params?`): `any`[]
 
-Defined in: [src/base/criteria.ts:759](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L759)
+Defined in: [src/base/criteria.ts:965](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L965)
 
 Parses a criteria expression string to Serenity criteria array format.
 
@@ -55,7 +55,7 @@ via a shunting-yard pass; string literals use single quotes with `''` escaping.
 
 > **parseCriteria**(`strings`, ...`values`): `any`[]
 
-Defined in: [src/base/criteria.ts:773](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L773)
+Defined in: [src/base/criteria.ts:979](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L979)
 
 Parses a tagged-template criteria expression to Serenity criteria array format.
 

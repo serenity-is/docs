@@ -49,7 +49,7 @@ Space-separated string of all tokens (mirrors `DOMTokenList.value`).
 
 > **\[initPropHookSymbol\]**(`node`, `propName`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2759](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2759)
+Defined in: [../domwise/dist/index.d.ts:2800](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2800)
 
 #### Parameters
 
@@ -97,7 +97,7 @@ Class names to add.
 
 > **contains**(`token`): `boolean`
 
-Defined in: [../domwise/dist/index.d.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L42)
+Defined in: [../domwise/dist/index.d.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L43)
 
 Checks whether the list contains the given token.
 
@@ -141,9 +141,9 @@ Class names to remove.
 
 ### toggle()
 
-> **toggle**(`token`, `force?`): `void`
+> **toggle**(`token`, `force?`): `boolean`
 
-Defined in: [../domwise/dist/index.d.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L36)
+Defined in: [../domwise/dist/index.d.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L37)
 
 Toggles a token, optionally forcing the presence or absence.
 
@@ -163,4 +163,6 @@ When provided, forces add (`true`) or remove (`false`).
 
 #### Returns
 
-`void`
+`boolean`
+
+`true` if the token is now present, otherwise `false`.

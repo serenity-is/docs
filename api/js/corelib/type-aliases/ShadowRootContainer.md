@@ -4,7 +4,7 @@
 
 > **ShadowRootContainer** = `object`
 
-Defined in: [../domwise/dist/index.d.ts:2353](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2353)
+Defined in: [../domwise/dist/index.d.ts:2376](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2376)
 
 A virtual descriptor for a `ShadowRoot` created by `ShadowRootNode`.
 Recognized by the JSX factory to create a shadow root on the parent element
@@ -16,7 +16,7 @@ via `attachShadow`. See [ShadowRootNode](../functions/ShadowRootNode.md).
 
 > **attr**: `object`
 
-Defined in: [../domwise/dist/index.d.ts:2357](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2357)
+Defined in: [../domwise/dist/index.d.ts:2380](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2380)
 
 `ShadowRootInit` options forwarded to `attachShadow`.
 
@@ -62,7 +62,7 @@ Slot assignment mode (`"manual"` or `"named"`).
 
 > **children**: [`ComponentChildren`](ComponentChildren.md)
 
-Defined in: [../domwise/dist/index.d.ts:2372](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2372)
+Defined in: [../domwise/dist/index.d.ts:2395](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2395)
 
 Children rendered inside the shadow root.
 
@@ -72,6 +72,6 @@ Children rendered inside the shadow root.
 
 > **ref**: [`Ref`](Ref.md)\<`ShadowRoot`\>
 
-Defined in: [../domwise/dist/index.d.ts:2355](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2355)
+Defined in: [../domwise/dist/index.d.ts:2378](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2378)
 
 Optional ref that receives the created `ShadowRoot`.

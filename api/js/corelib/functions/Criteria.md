@@ -4,7 +4,7 @@
 
 > **Criteria**(`field`): [`CriteriaBuilder`](../classes/CriteriaBuilder.md)
 
-Defined in: [src/base/criteria.ts:855](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L855)
+Defined in: [src/base/criteria.ts:1061](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1061)
 
 Creates a fluent [CriteriaBuilder](../classes/CriteriaBuilder.md) for the given field.
 

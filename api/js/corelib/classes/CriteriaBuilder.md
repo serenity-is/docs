@@ -96,9 +96,14 @@ Criteria("Amount").bw(10, 20);
 
 > **contains**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L37)
+Defined in: [src/base/criteria.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L42)
 
 Creates a `LIKE '%value%'` (contains) criteria.
+
+The value is treated as literal text: LIKE special characters are
+escaped (see [escapeLikeWildcards](../functions/escapeLikeWildcards.md)) and a 4-element array with
+`ESCAPE '!'` is produced only when escaping was necessary, otherwise
+a plain 3-element array, so older servers keep working.
 
 #### Parameters
 
@@ -112,7 +117,7 @@ Substring to search for. Wrapped with `%` on both sides.
 
 `any`[]
 
-Criteria `[field, "like", "%value%"]`.
+Criteria `[field, "like", "%value%"]` or `[field, "like", "%value%", "!"]`.
 
 #### Example
 
@@ -126,9 +131,14 @@ Criteria("Name").contains("ser"); // [["Name"], "like", "%ser%"]
 
 > **endsWith**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L49)
+Defined in: [src/base/criteria.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L59)
 
 Creates a `LIKE '%value'` (ends-with) criteria.
+
+The value is treated as literal text: LIKE special characters are
+escaped (see [escapeLikeWildcards](../functions/escapeLikeWildcards.md)) and a 4-element array with
+`ESCAPE '!'` is produced only when escaping was necessary, otherwise
+a plain 3-element array, so older servers keep working.
 
 #### Parameters
 
@@ -142,7 +152,7 @@ Suffix to match. Prefixed with `%`.
 
 `any`[]
 
-Criteria `[field, "like", "%value"]`.
+Criteria `[field, "like", "%value"]` or `[field, "like", "%value", "!"]`.
 
 #### Example
 
@@ -156,7 +166,7 @@ Criteria("Email").endsWith("@example.com");
 
 > **eq**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L61)
+Defined in: [src/base/criteria.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L71)
 
 Creates an equality (`=`) criteria.
 
@@ -186,7 +196,7 @@ Criteria("IsActive").eq(true);
 
 > **ge**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L81)
+Defined in: [src/base/criteria.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L91)
 
 Creates a greater-than-or-equal (`>=`) criteria.
 
@@ -210,7 +220,7 @@ Criteria `[field, ">=", value]`.
 
 > **gt**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L71)
+Defined in: [src/base/criteria.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L81)
 
 Creates a greater-than (`>`) criteria.
 
@@ -234,7 +244,7 @@ Criteria `[field, ">", value]`.
 
 > **in**(`values`): `any`[]
 
-Defined in: [src/base/criteria.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L93)
+Defined in: [src/base/criteria.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L103)
 
 Creates an `IN` criteria.
 
@@ -264,7 +274,7 @@ Criteria("Status").in([1, 2]); // [["Status"], "in", [[1, 2]]]
 
 > **isNotNull**(): `any`[]
 
-Defined in: [src/base/criteria.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L111)
+Defined in: [src/base/criteria.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L121)
 
 Creates an `IS NOT NULL` criteria.
 
@@ -280,7 +290,7 @@ Criteria `["is not null", field]`.
 
 > **isNull**(): `any`[]
 
-Defined in: [src/base/criteria.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L102)
+Defined in: [src/base/criteria.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L112)
 
 Creates an `IS NULL` criteria.
 
@@ -296,7 +306,7 @@ Criteria `["is null", field]`.
 
 > **le**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L121)
+Defined in: [src/base/criteria.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L131)
 
 Creates a less-than-or-equal (`<=`) criteria.
 
@@ -320,7 +330,7 @@ Criteria `[field, "<=", value]`.
 
 > **like**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L153)
+Defined in: [src/base/criteria.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L163)
 
 Creates a `LIKE` criteria with the exact pattern provided.
 
@@ -346,11 +356,48 @@ Criteria("Name").like("A%");
 
 ***
 
+### likeEscaped()
+
+> **likeEscaped**(`mask`): `any`[]
+
+Defined in: [src/base/criteria.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L182)
+
+Creates a `LIKE ... ESCAPE '!'` criteria with a pre-escaped mask.
+
+The mask must already be escaped (see [escapeLikeWildcards](../functions/escapeLikeWildcards.md));
+it is used as is. A 4-element array is produced only when the mask
+contains the escape character, otherwise a plain 3-element array,
+so older servers keep working. For literal values prefer
+[CriteriaBuilder.contains](#contains), [CriteriaBuilder.startsWith](#startswith)
+or [CriteriaBuilder.endsWith](#endswith).
+
+#### Parameters
+
+##### mask
+
+`string`
+
+LIKE mask, already escaped for `!`.
+
+#### Returns
+
+`any`[]
+
+Criteria `[field, "like", mask]` or `[field, "like", mask, "!"]`.
+
+#### Example
+
+```ts
+Criteria("Name").likeEscaped("%a!%b%"); // [["Name"], "like", "%a!%b%", "!"]
+```
+
+***
+
 ### lt()
 
 > **lt**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L131)
+Defined in: [src/base/criteria.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L141)
 
 Creates a less-than (`<`) criteria.
 
@@ -374,7 +421,7 @@ Criteria `[field, "<", value]`.
 
 > **ne**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L141)
+Defined in: [src/base/criteria.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L151)
 
 Creates a not-equal (`!=`) criteria.
 
@@ -398,7 +445,7 @@ Criteria `[field, "!=", value]`.
 
 > **notIn**(`values`): `any`[]
 
-Defined in: [src/base/criteria.ts:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L175)
+Defined in: [src/base/criteria.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L211)
 
 Creates a `NOT IN` criteria.
 
@@ -422,7 +469,7 @@ Criteria `[field, "not in", [values]]`.
 
 > **notLike**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L185)
+Defined in: [src/base/criteria.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L221)
 
 Creates a `NOT LIKE` criteria.
 
@@ -442,13 +489,52 @@ Criteria `[field, "not like", value]`.
 
 ***
 
+### notLikeEscaped()
+
+> **notLikeEscaped**(`mask`): `any`[]
+
+Defined in: [src/base/criteria.ts:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L237)
+
+Creates a `NOT LIKE ... ESCAPE '!'` criteria with a pre-escaped mask.
+
+The mask must already be escaped (see [escapeLikeWildcards](../functions/escapeLikeWildcards.md));
+it is used as is. A 4-element array is produced only when the mask
+contains the escape character, otherwise a plain 3-element array.
+
+#### Parameters
+
+##### mask
+
+`string`
+
+LIKE mask, already escaped for `!`.
+
+#### Returns
+
+`any`[]
+
+Criteria `[field, "not like", mask]` or `[field, "not like", mask, "!"]`.
+
+#### Example
+
+```ts
+Criteria("Name").notLikeEscaped("%a!%b%"); // [["Name"], "not like", "%a!%b%", "!"]
+```
+
+***
+
 ### startsWith()
 
 > **startsWith**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L165)
+Defined in: [src/base/criteria.ts:201](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L201)
 
 Creates a `LIKE 'value%'` (starts-with) criteria.
+
+The value is treated as literal text: LIKE special characters are
+escaped (see [escapeLikeWildcards](../functions/escapeLikeWildcards.md)) and a 4-element array with
+`ESCAPE '!'` is produced only when escaping was necessary, otherwise
+a plain 3-element array, so older servers keep working.
 
 #### Parameters
 
@@ -462,7 +548,7 @@ Prefix to match. Suffixed with `%`.
 
 `any`[]
 
-Criteria `[field, "like", "value%"]`.
+Criteria `[field, "like", "value%"]` or `[field, "like", "value%", "!"]`.
 
 #### Example
 

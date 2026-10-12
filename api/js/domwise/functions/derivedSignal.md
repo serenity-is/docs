@@ -4,7 +4,7 @@
 
 > **derivedSignal**\<`TDerived`, `TInput`\>(`input`, `fn`): `DerivedSignalLike`\<`TDerived`\>
 
-Defined in: [src/signal-util.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L226)
+Defined in: [src/signal-util.ts:288](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L288)
 
 Creates a derived (computed) signal from a source signal and a transform.
 

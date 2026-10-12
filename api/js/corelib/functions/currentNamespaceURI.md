@@ -4,7 +4,7 @@
 
 > **currentNamespaceURI**(`value?`): `string`
 
-Defined in: [../domwise/dist/index.d.ts:2680](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2680)
+Defined in: [../domwise/dist/index.d.ts:2721](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2721)
 
 Gets or sets the ambient JSX namespace URI used for `createElement`/`jsx`.
 

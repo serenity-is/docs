@@ -2,7 +2,7 @@
 
 # Interface: ComponentClass\<P, T\>
 
-Defined in: [types/components.d.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L10)
+Defined in: [types/components.d.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L29)
 
 A class-based JSX component. Extend `Component` or implement this interface
 and override `render` to return a `JSXElement`.
@@ -25,9 +25,9 @@ The type of the DOM node the component renders.
 
 ### Constructor
 
-> **new ComponentClass**(`props`): `ComponentClass`\<`P`, `T`\>
+> **new ComponentClass**(`props`): [`ComponentInstance`](ComponentInstance.md)\<`P`, `T`\>
 
-Defined in: [types/components.d.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L15)
+Defined in: [types/components.d.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L34)
 
 Constructs the component with the given props.
 
@@ -41,7 +41,7 @@ Props including optional `children`.
 
 #### Returns
 
-`ComponentClass`\<`P`, `T`\>
+[`ComponentInstance`](ComponentInstance.md)\<`P`, `T`\>
 
 ## Properties
 
@@ -49,7 +49,7 @@ Props including optional `children`.
 
 > `optional` **defaultProps**: `Partial`\<`P`\>
 
-Defined in: [types/components.d.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L22)
+Defined in: [types/components.d.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L36)
 
 Optional default prop values merged in by the JSX factory before construction.
 
@@ -59,38 +59,6 @@ Optional default prop values merged in by the JSX factory before construction.
 
 > `optional` **displayName**: `string`
 
-Defined in: [types/components.d.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L26)
+Defined in: [types/components.d.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L38)
 
 Optional display name used in devtools / error messages.
-
-***
-
-### props?
-
-> `readonly` `optional` **props**: `P` & `object`
-
-Defined in: [types/components.d.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L24)
-
-Props passed to the instance, including optional `children`.
-
-#### Type Declaration
-
-##### children?
-
-> `optional` **children**: [`ComponentChildren`](../type-aliases/ComponentChildren.md)
-
-## Methods
-
-### render()
-
-> **render**(): [`JSXElement`](../type-aliases/JSXElement.md) \| `null`
-
-Defined in: [types/components.d.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/components.d.ts#L20)
-
-Renders the component.
-
-#### Returns
-
-[`JSXElement`](../type-aliases/JSXElement.md) \| `null`
-
-The rendered `JSXElement` or `null`.

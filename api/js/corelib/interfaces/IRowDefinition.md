@@ -10,11 +10,21 @@ permissions, identity and display name resolution.
 
 ## Properties
 
+### concurrencyVersionProperty?
+
+> `readonly` `optional` **concurrencyVersionProperty**: `string`
+
+Defined in: [src/ui/datagrid/irowdefinition.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L8)
+
+Name of the property that holds the optimistic concurrency version, if any.
+
+***
+
 ### deletePermission?
 
 > `readonly` `optional` **deletePermission**: `string`
 
-Defined in: [src/ui/datagrid/irowdefinition.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L8)
+Defined in: [src/ui/datagrid/irowdefinition.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L10)
 
 Permission required to delete rows.
 
@@ -24,7 +34,7 @@ Permission required to delete rows.
 
 > `readonly` `optional` **idProperty**: `string`
 
-Defined in: [src/ui/datagrid/irowdefinition.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L10)
+Defined in: [src/ui/datagrid/irowdefinition.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L12)
 
 Name of the identity / primary key property.
 
@@ -34,7 +44,7 @@ Name of the identity / primary key property.
 
 > `readonly` `optional` **insertPermission**: `string`
 
-Defined in: [src/ui/datagrid/irowdefinition.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L12)
+Defined in: [src/ui/datagrid/irowdefinition.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L14)
 
 Permission required to insert rows.
 
@@ -44,7 +54,7 @@ Permission required to insert rows.
 
 > `readonly` `optional` **isActiveProperty**: `string`
 
-Defined in: [src/ui/datagrid/irowdefinition.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L14)
+Defined in: [src/ui/datagrid/irowdefinition.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L16)
 
 Name of the boolean property that marks a row as active.
 
@@ -54,7 +64,7 @@ Name of the boolean property that marks a row as active.
 
 > `readonly` `optional` **isDeletedProperty**: `string`
 
-Defined in: [src/ui/datagrid/irowdefinition.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L16)
+Defined in: [src/ui/datagrid/irowdefinition.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L18)
 
 Name of the boolean property that marks a row as soft-deleted.
 
@@ -64,7 +74,7 @@ Name of the boolean property that marks a row as soft-deleted.
 
 > `readonly` `optional` **localTextPrefix**: `string`
 
-Defined in: [src/ui/datagrid/irowdefinition.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L18)
+Defined in: [src/ui/datagrid/irowdefinition.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L20)
 
 Local text prefix for entity texts (display names, dialogs).
 
@@ -74,7 +84,7 @@ Local text prefix for entity texts (display names, dialogs).
 
 > `readonly` `optional` **nameProperty**: `string`
 
-Defined in: [src/ui/datagrid/irowdefinition.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L20)
+Defined in: [src/ui/datagrid/irowdefinition.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L22)
 
 Name of the property used as the display / name field.
 
@@ -84,9 +94,19 @@ Name of the property used as the display / name field.
 
 > `readonly` `optional` **readPermission**: `string`
 
-Defined in: [src/ui/datagrid/irowdefinition.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L22)
+Defined in: [src/ui/datagrid/irowdefinition.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L24)
 
 Permission required to read rows.
+
+***
+
+### undeletePermission?
+
+> `readonly` `optional` **undeletePermission**: `string`
+
+Defined in: [src/ui/datagrid/irowdefinition.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L26)
+
+Permission required to undelete rows.
 
 ***
 
@@ -94,6 +114,6 @@ Permission required to read rows.
 
 > `readonly` `optional` **updatePermission**: `string`
 
-Defined in: [src/ui/datagrid/irowdefinition.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L24)
+Defined in: [src/ui/datagrid/irowdefinition.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L28)
 
 Permission required to update rows.

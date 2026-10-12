@@ -28,7 +28,7 @@ Optional behavior flags.
 
 `boolean`
 
-When `true`, also invokes listeners registered on descendant elements/text/comment nodes found via `createNodeIterator`.
+When `true`, also invokes listeners registered on descendant nodes, descending into shadow roots, `<template>` content and `DocumentFragment`s as well as elements/text/comments.
 
 #### excludeSelf?
 

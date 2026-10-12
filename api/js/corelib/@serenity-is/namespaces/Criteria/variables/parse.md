@@ -4,7 +4,7 @@
 
 > `const` **parse**: \{(`expression`, `params?`): `any`[]; (`strings`, ...`values`): `any`[]; \} = `parseCriteria`
 
-Defined in: [src/base/criteria.ts:980](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L980)
+Defined in: [src/base/criteria.ts:1217](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1217)
 
 Alias for [parseCriteria](../../../../functions/parseCriteria.md) — parses a criteria expression string or tagged template.
 

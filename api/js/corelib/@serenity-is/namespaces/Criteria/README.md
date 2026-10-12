@@ -19,8 +19,10 @@ unconditionally combine optional filters.
 ## Functions
 
 - [and](functions/and.md)
+- [functionCall](functions/functionCall.md)
 - [isEmpty](functions/isEmpty.md)
 - [join](functions/join.md)
 - [not](functions/not.md)
 - [or](functions/or.md)
 - [paren](functions/paren.md)
+- [upper](functions/upper.md)

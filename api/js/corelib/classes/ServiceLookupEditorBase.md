@@ -2,7 +2,7 @@
 
 # Abstract Class: ServiceLookupEditorBase\<P, TItem\>
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L43)
+Defined in: [src/ui/editors/servicelookupeditor.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L52)
 
 Base editor that renders a combobox over service list results.
 
@@ -178,7 +178,7 @@ A unique name for this widget instance, used for event namespacing.
 
 > `static` **\[typeInfo\]**: [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L44)
+Defined in: [src/ui/editors/servicelookupeditor.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L53)
 
 #### Overrides
 
@@ -968,7 +968,7 @@ True when clear is allowed.
 
 > `protected` **asyncSearch**(`query`): `Promise`\<[`ComboboxSearchResult`](../interfaces/ComboboxSearchResult.md)\<`TItem`\>\>
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L247)
+Defined in: [src/ui/editors/servicelookupeditor.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L262)
 
 Performs an asynchronous search over the service results.
 
@@ -1030,7 +1030,7 @@ A [Fluent](../functions/Fluent.md) wrapper for the matching element.
 
 > `protected` **canSearch**(`byId`): `boolean`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L232)
+Defined in: [src/ui/editors/servicelookupeditor.ts:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L247)
 
 Whether a search can be performed.
 
@@ -1558,7 +1558,7 @@ The values.
 
 > `protected` **getCascadeCriteria**(): `any`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L115)
+Defined in: [src/ui/editors/servicelookupeditor.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L124)
 
 Returns the cascade criteria for the request.
 
@@ -1688,7 +1688,7 @@ The search choice callback.
 
 > `protected` **getCriteria**(`query`): `any`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L172)
+Defined in: [src/ui/editors/servicelookupeditor.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L181)
 
 Returns the combined criteria for the request.
 
@@ -1792,7 +1792,7 @@ The dialog type.
 
 > `protected` **getDialogTypeKey**(): `string`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L50)
+Defined in: [src/ui/editors/servicelookupeditor.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L59)
 
 Returns the dialog type key for in-place add.
 
@@ -1844,7 +1844,7 @@ The target object.
 
 > `protected` **getFilterCriteria**(): `any`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L137)
+Defined in: [src/ui/editors/servicelookupeditor.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L146)
 
 Returns the filter criteria for the request.
 
@@ -1900,7 +1900,7 @@ The id field.
 
 > `protected` **getIdListCriteria**(`idList`): `any`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L153)
+Defined in: [src/ui/editors/servicelookupeditor.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L162)
 
 Returns the criteria for the given id list.
 
@@ -1924,7 +1924,7 @@ The criteria.
 
 > `protected` **getIncludeColumns**(): `string`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L89)
+Defined in: [src/ui/editors/servicelookupeditor.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L98)
 
 Returns the columns to include in the request.
 
@@ -1940,7 +1940,7 @@ The include columns.
 
 > `protected` **getListRequest**(`query`): [`ListRequest`](../interfaces/ListRequest.md)
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L183)
+Defined in: [src/ui/editors/servicelookupeditor.ts:192](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L192)
 
 Returns the list request for the given query.
 
@@ -1984,7 +1984,7 @@ The page size.
 
 > `protected` **getService**(): `string`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L69)
+Defined in: [src/ui/editors/servicelookupeditor.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L78)
 
 Returns the service endpoint path.
 
@@ -2000,7 +2000,7 @@ The service path.
 
 > `protected` **getServiceCallOptions**(`query`): [`ServiceOptions`](../interfaces/ServiceOptions.md)\<[`ListResponse`](../interfaces/ListResponse.md)\<`TItem`\>\>
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L210)
+Defined in: [src/ui/editors/servicelookupeditor.ts:225](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L225)
 
 Returns the service call options for the given query.
 
@@ -2024,7 +2024,7 @@ Service options.
 
 > `protected` **getServiceUrl**(): `string`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L77)
+Defined in: [src/ui/editors/servicelookupeditor.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L86)
 
 Returns the resolved service URL.
 
@@ -2040,7 +2040,7 @@ The service URL.
 
 > `protected` **getSort**(): `any`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L107)
+Defined in: [src/ui/editors/servicelookupeditor.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L116)
 
 Returns the sort order for results.
 
@@ -2096,7 +2096,7 @@ The delay in milliseconds.
 
 > `protected` **hasAsyncSource**(): `boolean`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L223)
+Defined in: [src/ui/editors/servicelookupeditor.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L238)
 
 Whether the editor has an asynchronous item source.
 

@@ -4,7 +4,7 @@
 
 > `const` **signal**: \{\<`T`\>(`value`, `options?`): [`Signal`](../interfaces/Signal.md)\<`T`\>; \<`T`\>(): [`Signal`](../interfaces/Signal.md)\<`T`\>; \}
 
-Defined in: [../domwise/dist/index.d.ts:2918](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2918)
+Defined in: [../domwise/dist/index.d.ts:3031](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3031)
 
 Creates a new writable signal with an optional initial value.
 Re-exported from `@preact/signals-core` with typed overloads.

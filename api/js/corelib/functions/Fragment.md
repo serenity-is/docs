@@ -4,7 +4,7 @@
 
 > **Fragment**(`attr`): `any`
 
-Defined in: [../domwise/dist/index.d.ts:2575](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2575)
+Defined in: [../domwise/dist/index.d.ts:2616](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2616)
 
 Creates a `DocumentFragment` containing the given children.
 

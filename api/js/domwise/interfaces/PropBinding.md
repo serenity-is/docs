@@ -2,7 +2,7 @@
 
 # Interface: PropBinding()\<T, TElement\>
 
-Defined in: [types/basic-types.d.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L127)
+Defined in: [types/basic-types.d.ts:129](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L129)
 
 A two-way prop binding hook created by `usePropBinding`. It acts as a
 getter when called with no arguments and a setter when called with a value;
@@ -31,7 +31,7 @@ The type of the element the binding is attached to.
 
 > **PropBinding**(): `T`
 
-Defined in: [types/basic-types.d.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L132)
+Defined in: [types/basic-types.d.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L134)
 
 Gets the current bound value.
 
@@ -45,7 +45,7 @@ The current value.
 
 > **PropBinding**(`value`): `T`
 
-Defined in: [types/basic-types.d.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L138)
+Defined in: [types/basic-types.d.ts:140](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L140)
 
 Sets the bound value and synchronizes it to the attached element (if any).
 

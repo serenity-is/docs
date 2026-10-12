@@ -2,11 +2,12 @@
 
 # Class: FrozenLayout
 
-Defined in: [src/layouts/frozen-layout.tsx:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L12)
+Defined in: [src/layouts/frozen-layout.tsx:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L13)
 
 Frozen/pinned layout providing pinned columns and frozen top panes.
 Renders `start`/`main` bands with `top`/`body` panes and handles
-`frozenRows`/`frozenBottom` and legacy `frozenColumns` options.
+`frozenRows` and legacy `frozenColumns` options.
+Bottom-frozen rows are unsupported; when requested, `frozenRows` are left unfrozen.
 
 ## Implements
 
@@ -28,7 +29,7 @@ Renders `start`/`main` bands with `top`/`body` panes and handles
 
 > `readonly` **layoutName**: `"FrozenLayout"` = `"FrozenLayout"`
 
-Defined in: [src/layouts/frozen-layout.tsx:91](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L91)
+Defined in: [src/layouts/frozen-layout.tsx:93](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L93)
 
 Layout identifier.
 
@@ -42,7 +43,7 @@ Layout identifier.
 
 > **supportFrozenRows**: `true` = `true`
 
-Defined in: [src/layouts/frozen-layout.tsx:96](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L96)
+Defined in: [src/layouts/frozen-layout.tsx:98](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L98)
 
 Indicates this layout supports top-frozen rows.
 
@@ -56,7 +57,7 @@ Indicates this layout supports top-frozen rows.
 
 > **supportPinnedCols**: `true` = `true`
 
-Defined in: [src/layouts/frozen-layout.tsx:94](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L94)
+Defined in: [src/layouts/frozen-layout.tsx:96](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L96)
 
 Indicates this layout supports pinned columns.
 
@@ -70,9 +71,10 @@ Indicates this layout supports pinned columns.
 
 > **adjustFrozenRowsOption**(): `void`
 
-Defined in: [src/layouts/frozen-layout.tsx:78](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L78)
+Defined in: [src/layouts/frozen-layout.tsx:80](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L80)
 
-Syncs `refs.config.frozenTopRows` from `frozenRows`/`frozenBottom` grid options.
+Syncs `refs.config.frozenTopRows` from `frozenRows`, leaving rows unfrozen
+when bottom-freezing is requested because this layout has no bottom pane.
 
 #### Returns
 
@@ -88,7 +90,7 @@ Syncs `refs.config.frozenTopRows` from `frozenRows`/`frozenBottom` grid options.
 
 > **afterSetOptions**(`arg`): `void`
 
-Defined in: [src/layouts/frozen-layout.tsx:65](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L65)
+Defined in: [src/layouts/frozen-layout.tsx:66](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L66)
 
 Reacts to grid option changes (frozen rows/columns).
 
@@ -114,7 +116,7 @@ Options delta from `grid.setOptions()`.
 
 > **destroy**(): `void`
 
-Defined in: [src/layouts/frozen-layout.tsx:86](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L86)
+Defined in: [src/layouts/frozen-layout.tsx:88](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L88)
 
 Clears the host reference.
 
@@ -132,7 +134,7 @@ Clears the host reference.
 
 > **init**(`host`): `void`
 
-Defined in: [src/layouts/frozen-layout.tsx:23](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L23)
+Defined in: [src/layouts/frozen-layout.tsx:24](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L24)
 
 Builds the frozen layout DOM (headers, header rows, viewports, footer rows)
 across `start`/`main` bands and top/body panes.
@@ -159,7 +161,7 @@ Layout host.
 
 > **reorderViewColumns**(`viewCols`, `refs`): [`Column`](../interfaces/Column.md)\<`any`\>[]
 
-Defined in: [src/layouts/frozen-layout.tsx:53](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L53)
+Defined in: [src/layouts/frozen-layout.tsx:54](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/frozen-layout.tsx#L54)
 
 Reorders visible columns so that pinned (non-`"end"`) columns come first.
 Also writes `refs.config.pinnedStartCols` for later layout calculations.

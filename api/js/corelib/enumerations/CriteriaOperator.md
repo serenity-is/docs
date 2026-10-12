@@ -2,7 +2,7 @@
 
 # Enumeration: CriteriaOperator
 
-Defined in: [src/base/criteria.ts:803](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L803)
+Defined in: [src/base/criteria.ts:1009](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1009)
 
 String constants for every operator that can appear in a Serenity criteria expression.
 
@@ -17,7 +17,7 @@ Values match the wire-format tokens accepted by the server (e.g. `"="`, `"like"`
 
 > **and**: `"and"`
 
-Defined in: [src/base/criteria.ts:815](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L815)
+Defined in: [src/base/criteria.ts:1021](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1021)
 
 Logical AND (`and`).
 
@@ -27,7 +27,7 @@ Logical AND (`and`).
 
 > **eq**: `"="`
 
-Defined in: [src/base/criteria.ts:821](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L821)
+Defined in: [src/base/criteria.ts:1027](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1027)
 
 Equality (`=`).
 
@@ -37,7 +37,7 @@ Equality (`=`).
 
 > **exists**: `"exists"`
 
-Defined in: [src/base/criteria.ts:813](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L813)
+Defined in: [src/base/criteria.ts:1019](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1019)
 
 EXISTS (`exists`).
 
@@ -47,7 +47,7 @@ EXISTS (`exists`).
 
 > **ge**: `">="`
 
-Defined in: [src/base/criteria.ts:827](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L827)
+Defined in: [src/base/criteria.ts:1033](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1033)
 
 Greater than or equal (`>=`).
 
@@ -57,7 +57,7 @@ Greater than or equal (`>=`).
 
 > **gt**: `">"`
 
-Defined in: [src/base/criteria.ts:825](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L825)
+Defined in: [src/base/criteria.ts:1031](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1031)
 
 Greater than (`>`).
 
@@ -67,7 +67,7 @@ Greater than (`>`).
 
 > **in**: `"in"`
 
-Defined in: [src/base/criteria.ts:833](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L833)
+Defined in: [src/base/criteria.ts:1039](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1039)
 
 IN (`in`).
 
@@ -77,7 +77,7 @@ IN (`in`).
 
 > **isNotNull**: `"is not null"`
 
-Defined in: [src/base/criteria.ts:811](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L811)
+Defined in: [src/base/criteria.ts:1017](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1017)
 
 IS NOT NULL (`is not null`).
 
@@ -87,7 +87,7 @@ IS NOT NULL (`is not null`).
 
 > **isNull**: `"is null"`
 
-Defined in: [src/base/criteria.ts:809](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L809)
+Defined in: [src/base/criteria.ts:1015](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1015)
 
 IS NULL (`is null`).
 
@@ -97,7 +97,7 @@ IS NULL (`is null`).
 
 > **le**: `"<="`
 
-Defined in: [src/base/criteria.ts:831](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L831)
+Defined in: [src/base/criteria.ts:1037](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1037)
 
 Less than or equal (`<=`).
 
@@ -107,7 +107,7 @@ Less than or equal (`<=`).
 
 > **like**: `"like"`
 
-Defined in: [src/base/criteria.ts:837](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L837)
+Defined in: [src/base/criteria.ts:1043](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1043)
 
 LIKE (`like`).
 
@@ -117,7 +117,7 @@ LIKE (`like`).
 
 > **lt**: `"<"`
 
-Defined in: [src/base/criteria.ts:829](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L829)
+Defined in: [src/base/criteria.ts:1035](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1035)
 
 Less than (`<`).
 
@@ -127,7 +127,7 @@ Less than (`<`).
 
 > **ne**: `"!="`
 
-Defined in: [src/base/criteria.ts:823](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L823)
+Defined in: [src/base/criteria.ts:1029](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1029)
 
 Not equal (`!=`).
 
@@ -137,7 +137,7 @@ Not equal (`!=`).
 
 > **not**: `"not"`
 
-Defined in: [src/base/criteria.ts:807](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L807)
+Defined in: [src/base/criteria.ts:1013](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1013)
 
 Logical NOT (`not`).
 
@@ -147,7 +147,7 @@ Logical NOT (`not`).
 
 > **notIn**: `"not in"`
 
-Defined in: [src/base/criteria.ts:835](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L835)
+Defined in: [src/base/criteria.ts:1041](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1041)
 
 NOT IN (`not in`).
 
@@ -157,7 +157,7 @@ NOT IN (`not in`).
 
 > **notLike**: `"not like"`
 
-Defined in: [src/base/criteria.ts:839](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L839)
+Defined in: [src/base/criteria.ts:1045](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1045)
 
 NOT LIKE (`not like`).
 
@@ -167,7 +167,7 @@ NOT LIKE (`not like`).
 
 > **or**: `"or"`
 
-Defined in: [src/base/criteria.ts:817](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L817)
+Defined in: [src/base/criteria.ts:1023](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1023)
 
 Logical OR (`or`).
 
@@ -177,7 +177,7 @@ Logical OR (`or`).
 
 > **paren**: `"()"`
 
-Defined in: [src/base/criteria.ts:805](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L805)
+Defined in: [src/base/criteria.ts:1011](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1011)
 
 Parentheses grouping `()` .
 
@@ -187,6 +187,6 @@ Parentheses grouping `()` .
 
 > **xor**: `"xor"`
 
-Defined in: [src/base/criteria.ts:819](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L819)
+Defined in: [src/base/criteria.ts:1025](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1025)
 
 Logical XOR (`xor`).

@@ -2,7 +2,7 @@
 
 # Interface: ListResponse\<TEntity\>
 
-Defined in: [src/base/servicetypes.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L163)
+Defined in: [src/base/servicetypes.ts:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L220)
 
 Response DTO for `List` handlers.
 
@@ -24,7 +24,7 @@ Row / entity type of the listed records.
 
 > `optional` **Entities**: `TEntity`[]
 
-Defined in: [src/base/servicetypes.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L165)
+Defined in: [src/base/servicetypes.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L222)
 
 Page of entities matching the request.
 
@@ -44,11 +44,21 @@ Error information when the request failed; `undefined` on success.
 
 ***
 
+### More?
+
+> `optional` **More**: `boolean`
+
+Defined in: [src/base/servicetypes.ts:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L232)
+
+Whether more records are available beyond the returned page, when requested.
+
+***
+
 ### Skip?
 
 > `optional` **Skip**: `number`
 
-Defined in: [src/base/servicetypes.ts:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L171)
+Defined in: [src/base/servicetypes.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L228)
 
 Echo of `Skip` from the request.
 
@@ -58,7 +68,7 @@ Echo of `Skip` from the request.
 
 > `optional` **Take**: `number`
 
-Defined in: [src/base/servicetypes.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L173)
+Defined in: [src/base/servicetypes.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L230)
 
 Echo of `Take` from the request.
 
@@ -68,7 +78,7 @@ Echo of `Take` from the request.
 
 > `optional` **TotalCount**: `number`
 
-Defined in: [src/base/servicetypes.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L169)
+Defined in: [src/base/servicetypes.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L226)
 
 Total number of records matching the filter (before paging), unless `ExcludeTotalCount` was set.
 
@@ -78,6 +88,6 @@ Total number of records matching the filter (before paging), unless `ExcludeTota
 
 > `optional` **Values**: `any`[]
 
-Defined in: [src/base/servicetypes.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L167)
+Defined in: [src/base/servicetypes.ts:224](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L224)
 
 Alternative `Values` array used by some handlers that return raw values instead of entities.

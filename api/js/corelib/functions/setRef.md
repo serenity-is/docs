@@ -4,7 +4,7 @@
 
 > **setRef**\<`T`\>(`ref`, `current`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2605](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2605)
+Defined in: [../domwise/dist/index.d.ts:2646](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2646)
 
 Assigns a value to a ref, handling both object and callback forms.
 

@@ -4,7 +4,7 @@
 
 > **createElement**(`tag`, `attr`, ...`children`): [`JSXElement`](../type-aliases/JSXElement.md)
 
-Defined in: [../domwise/dist/index.d.ts:2434](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2434)
+Defined in: [../domwise/dist/index.d.ts:2457](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2457)
 
 Creates a JSX element using the classic (non-automatic) JSX factory signature.
 

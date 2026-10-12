@@ -4,7 +4,7 @@
 
 > **ShadowRootNode**(`options`): `any`
 
-Defined in: [../domwise/dist/index.d.ts:2785](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2785)
+Defined in: [../domwise/dist/index.d.ts:2826](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2826)
 
 Creates a virtual `ShadowRoot` descriptor recognized by the JSX factory.
 

@@ -4,7 +4,7 @@
 
 > **ColumnPickerChangeArgs** = `object`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L19)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L18)
 
 Arguments passed to the column picker change callback when columns are
 toggled, reordered, or restored to defaults.
@@ -15,7 +15,7 @@ toggled, reordered, or restored to defaults.
 
 > **reorderedColumns**: `boolean`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L23)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L22)
 
 Whether columns were reordered.
 
@@ -25,7 +25,7 @@ Whether columns were reordered.
 
 > **restoredDefaults**: `boolean`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L25)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L24)
 
 Whether the default column order/visibility was restored.
 
@@ -35,6 +35,6 @@ Whether the default column order/visibility was restored.
 
 > **toggledColumns**: `Column`[]
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L21)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L20)
 
 Columns whose visibility was toggled.

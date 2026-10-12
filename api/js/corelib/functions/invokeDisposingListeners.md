@@ -4,7 +4,7 @@
 
 > **invokeDisposingListeners**(`node`, `opt?`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2514](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2514)
+Defined in: [../domwise/dist/index.d.ts:2537](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2537)
 
 Synchronously invokes all disposing listeners registered for `node` and
 removes the internal `disposing` DOM listener from the target.
@@ -28,7 +28,7 @@ Optional behavior flags.
 
 `boolean`
 
-When `true`, also invokes listeners registered on descendant elements/text/comment nodes found via `createNodeIterator`.
+When `true`, also invokes listeners registered on descendant nodes, descending into shadow roots, `<template>` content and `DocumentFragment`s as well as elements/text/comments.
 
 #### excludeSelf?
 

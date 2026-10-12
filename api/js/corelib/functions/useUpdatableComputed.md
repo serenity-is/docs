@@ -4,7 +4,7 @@
 
 > **useUpdatableComputed**(): `object`
 
-Defined in: [../domwise/dist/index.d.ts:2987](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2987)
+Defined in: [../domwise/dist/index.d.ts:3100](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3100)
 
 Creates a factory for computed signals that can be manually invalidated in batch.
 

@@ -4,7 +4,7 @@
 
 > **Ref**\<`T`\> = [`RefCallback`](RefCallback.md)\<`T`\> \| [`RefObject`](RefObject.md)\<`T`\> \| `null`
 
-Defined in: [../domwise/dist/index.d.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L69)
+Defined in: [../domwise/dist/index.d.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L71)
 
 A reference to a DOM node or component instance: either a `RefObject`, a ref
 callback, or `null`.

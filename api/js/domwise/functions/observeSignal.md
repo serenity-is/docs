@@ -4,7 +4,7 @@
 
 > **observeSignal**\<`T`\>(`signal`, `callback`, `opt?`): [`EffectDisposer`](../type-aliases/EffectDisposer.md) \| `undefined`
 
-Defined in: [src/signal-util.ts:164](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L164)
+Defined in: [src/signal-util.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L214)
 
 Subscribes to a signal and invokes `callback` immediately and on every subsequent change.
 
@@ -40,6 +40,15 @@ Function called initially and on each change.
 ### opt?
 
 Optional lifecycle wiring.
+
+#### disposeDerivedSignal?
+
+`boolean`
+
+When `true`, the signal's `derivedDisposer` (the subscription from a
+derived signal to its source) is registered on the lifecycle node too.
+Defaults to `false` so that disposing one consumer of a shared derived
+signal does not tear it down for the others.
 
 #### lifecycleNode?
 

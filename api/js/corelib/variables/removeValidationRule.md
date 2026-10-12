@@ -4,7 +4,7 @@
 
 > `const` **removeValidationRule**: (`element`, `uniqueName`) => `void` = `Validator.removeCustomRule`
 
-Defined in: [src/base/validator.tsx:2076](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2076)
+Defined in: [src/base/validator.tsx:2132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L2132)
 
 Alias for [Validator.removeCustomRule](../classes/Validator.md#removecustomrule).
 

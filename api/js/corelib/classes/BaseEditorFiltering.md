@@ -17,6 +17,7 @@ Base filtering handler that uses an editor widget for comparison operators.
 - [`DecimalFiltering`](DecimalFiltering.md)
 - [`EditorFiltering`](EditorFiltering.md)
 - [`EnumFiltering`](EnumFiltering.md)
+- [`Int64Filtering`](Int64Filtering.md)
 - [`IntegerFiltering`](IntegerFiltering.md)
 - [`LookupFiltering`](LookupFiltering.md)
 - [`ServiceLookupFiltering`](ServiceLookupFiltering.md)

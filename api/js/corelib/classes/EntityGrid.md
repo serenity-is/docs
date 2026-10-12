@@ -1437,7 +1437,7 @@ columns for the slickgrid.
 
 > `protected` **createEntityDialog**(`itemType`, `callback?`): [`Widget`](Widget.md)\<`any`\> \| `PromiseLike`\<[`Widget`](Widget.md)\<`any`\>\>
 
-Defined in: [src/ui/datagrid/entitygrid.ts:502](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L502)
+Defined in: [src/ui/datagrid/entitygrid.ts:528](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L528)
 
 Creates a dialog widget for the specified item type, initializing and routing it.
 
@@ -1485,15 +1485,16 @@ Creates the filter bar and syncs its visibility.
 
 > `protected` **createIncludeDeletedButton**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:369](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L369)
+Defined in: [src/ui/datagrid/entitygrid.ts:458](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L458)
 
-Creates the include-deleted toggle button when the row type supports it.
+Creates the include-deleted toggle button when the row type supports it
+and the current user is allowed to undelete rows.
 
 #### Returns
 
 `void`
 
-#### Inherited from
+#### Overrides
 
 [`DataGrid`](DataGrid.md).[`createIncludeDeletedButton`](DataGrid.md#createincludedeletedbutton)
 
@@ -2350,7 +2351,7 @@ Delete permission or undefined.
 
 > `protected` **getDialogOptions**(): `any`
 
-Defined in: [src/ui/datagrid/entitygrid.ts:527](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L527)
+Defined in: [src/ui/datagrid/entitygrid.ts:553](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L553)
 
 Returns default options for the primary entity dialog.
 
@@ -2366,7 +2367,7 @@ Dialog options.
 
 > `protected` **getDialogOptionsFor**(`itemType`): `any`
 
-Defined in: [src/ui/datagrid/entitygrid.ts:536](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L536)
+Defined in: [src/ui/datagrid/entitygrid.ts:562](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L562)
 
 Returns dialog options for a specific item type.
 
@@ -2390,7 +2391,7 @@ Dialog options for that type.
 
 > `protected` **getDialogType**(): [`DialogType`](../type-aliases/DialogType.md) \| `PromiseLike`\<[`DialogType`](../type-aliases/DialogType.md)\>
 
-Defined in: [src/ui/datagrid/entitygrid.ts:563](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L563)
+Defined in: [src/ui/datagrid/entitygrid.ts:589](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L589)
 
 Resolves the dialog type for the primary entity; cached and may be loaded lazily.
 
@@ -2406,7 +2407,7 @@ Dialog constructor or a promise that resolves to it.
 
 > `protected` **getDialogTypeFor**(`itemType`): [`DialogType`](../type-aliases/DialogType.md) \| `PromiseLike`\<[`DialogType`](../type-aliases/DialogType.md)\>
 
-Defined in: [src/ui/datagrid/entitygrid.ts:548](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L548)
+Defined in: [src/ui/datagrid/entitygrid.ts:574](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L574)
 
 Resolves the dialog type for the given item type.
 
@@ -3130,6 +3131,22 @@ The title text, or null if no title is set.
 
 ***
 
+### getUndeletePermission()
+
+> `protected` **getUndeletePermission**(): `string`
+
+Defined in: [src/ui/datagrid/entitygrid.ts:441](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L441)
+
+Returns the permission key required to undelete a row.
+
+#### Returns
+
+`string`
+
+Undelete permission or undefined.
+
+***
+
 ### getUpdatePermission()
 
 > `protected` **getUpdatePermission**(): `string`
@@ -3412,7 +3429,7 @@ True when deletion is allowed.
 
 > `protected` **hasInsertPermission**(): `boolean`
 
-Defined in: [src/ui/datagrid/entitygrid.ts:441](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L441)
+Defined in: [src/ui/datagrid/entitygrid.ts:467](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L467)
 
 Checks whether the current user may insert rows.
 
@@ -3424,11 +3441,27 @@ True when insertion is allowed.
 
 ***
 
+### hasUndeletePermission()
+
+> `protected` **hasUndeletePermission**(): `boolean`
+
+Defined in: [src/ui/datagrid/entitygrid.ts:449](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L449)
+
+Checks whether the current user may undelete rows.
+
+#### Returns
+
+`boolean`
+
+True when undeletion is allowed.
+
+***
+
 ### hasUpdatePermission()
 
 > `protected` **hasUpdatePermission**(): `boolean`
 
-Defined in: [src/ui/datagrid/entitygrid.ts:450](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L450)
+Defined in: [src/ui/datagrid/entitygrid.ts:476](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L476)
 
 Checks whether the current user may update rows.
 
@@ -3464,7 +3497,7 @@ This widget instance.
 
 > `protected` **initDialog**(`dialog`): `void`
 
-Defined in: [src/ui/datagrid/entitygrid.ts:468](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L468)
+Defined in: [src/ui/datagrid/entitygrid.ts:494](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L494)
 
 Initializes a dialog bound to the primary item type.
 
@@ -3486,7 +3519,7 @@ Dialog instance to initialize.
 
 > `protected` **initEntityDialog**(`itemType`, `dialog`): `void`
 
-Defined in: [src/ui/datagrid/entitygrid.ts:482](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L482)
+Defined in: [src/ui/datagrid/entitygrid.ts:508](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L508)
 
 Initializes a dialog for the given item type, wiring data-change and routing.
 
@@ -4641,7 +4674,7 @@ The continuation invoked with the result.
 
 > `protected` **transferDialogReadOnly**(`dialog`): `void`
 
-Defined in: [src/ui/datagrid/entitygrid.ts:459](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L459)
+Defined in: [src/ui/datagrid/entitygrid.ts:485](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L485)
 
 Propagates the grid read-only state to a newly created dialog.
 

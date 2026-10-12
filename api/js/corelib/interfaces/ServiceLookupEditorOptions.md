@@ -2,7 +2,7 @@
 
 # Interface: ServiceLookupEditorOptions
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L9)
+Defined in: [src/ui/editors/servicelookupeditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L10)
 
 Options for the [ServiceLookupEditor](../classes/ServiceLookupEditor.md).
 
@@ -37,6 +37,16 @@ Whether arbitrary values are allowed.
 #### Inherited from
 
 [`ComboboxEditorOptions`](ComboboxEditorOptions.md).[`autoComplete`](ComboboxEditorOptions.md#autocomplete)
+
+***
+
+### capabilities?
+
+> `optional` **capabilities**: [`ListRequestCapabilities`](../enumerations/ListRequestCapabilities.md)
+
+Defined in: [src/ui/editors/servicelookupeditor.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L32)
+
+Supported ListRequest capabilities. When omitted, all standard properties are sent.
 
 ***
 
@@ -86,7 +96,7 @@ Value used for cascading.
 
 > `optional` **columnSelection**: [`ColumnSelection`](../enumerations/ColumnSelection.md)
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L23)
+Defined in: [src/ui/editors/servicelookupeditor.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L24)
 
 Column selection mode.
 
@@ -96,7 +106,7 @@ Column selection mode.
 
 > `optional` **containsField**: `string`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L31)
+Defined in: [src/ui/editors/servicelookupeditor.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L40)
 
 Field used for contains-text search.
 
@@ -106,7 +116,7 @@ Field used for contains-text search.
 
 > `optional` **criteria**: `any`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L35)
+Defined in: [src/ui/editors/servicelookupeditor.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L44)
 
 Criteria applied to the request.
 
@@ -144,7 +154,7 @@ Dialog type used for in-place add.
 
 > `optional` **equalityFilter**: `any`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L33)
+Defined in: [src/ui/editors/servicelookupeditor.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L42)
 
 Equality filter applied to the request.
 
@@ -154,7 +164,7 @@ Equality filter applied to the request.
 
 > `optional` **excludeColumns**: `string`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L27)
+Defined in: [src/ui/editors/servicelookupeditor.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L28)
 
 Columns to exclude.
 
@@ -192,7 +202,7 @@ Value used for filtering.
 
 > `optional` **idField**: `string`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L13)
+Defined in: [src/ui/editors/servicelookupeditor.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L14)
 
 Id field name.
 
@@ -202,7 +212,7 @@ Id field name.
 
 > `optional` **includeColumns**: `string`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L25)
+Defined in: [src/ui/editors/servicelookupeditor.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L26)
 
 Columns to include.
 
@@ -212,7 +222,7 @@ Columns to include.
 
 > `optional` **includeDeleted**: `boolean`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L29)
+Defined in: [src/ui/editors/servicelookupeditor.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L30)
 
 Whether to include deleted rows.
 
@@ -250,7 +260,7 @@ Permission required for in-place add.
 
 > `optional` **minimumResultsForSearch**: `any`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L19)
+Defined in: [src/ui/editors/servicelookupeditor.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L20)
 
 Minimum results required to show the search box.
 
@@ -278,9 +288,21 @@ Whether multiple items can be selected.
 
 > `optional` **pageSize**: `number`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L17)
+Defined in: [src/ui/editors/servicelookupeditor.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L18)
 
 Page size for paged searches.
+
+***
+
+### quickSearchFields?
+
+> `optional` **quickSearchFields**: `string`[]
+
+Defined in: [src/ui/editors/servicelookupeditor.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L38)
+
+Additional fields searched by the client-side ContainsText fallback.
+The editor's itemText output is always searched unless ContainsField is set.
+This fallback cannot reproduce server-side QuickSearch behavior exactly.
 
 ***
 
@@ -288,7 +310,7 @@ Page size for paged searches.
 
 > `optional` **service**: `string`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L11)
+Defined in: [src/ui/editors/servicelookupeditor.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L12)
 
 Service endpoint to load items from.
 
@@ -298,7 +320,7 @@ Service endpoint to load items from.
 
 > `optional` **sort**: `string`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L21)
+Defined in: [src/ui/editors/servicelookupeditor.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L22)
 
 Sort order for results.
 
@@ -308,6 +330,6 @@ Sort order for results.
 
 > `optional` **textField**: `string`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L15)
+Defined in: [src/ui/editors/servicelookupeditor.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L16)
 
 Text field name.

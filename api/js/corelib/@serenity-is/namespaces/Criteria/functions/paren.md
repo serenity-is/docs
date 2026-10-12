@@ -4,7 +4,7 @@
 
 > **paren**(`c`): `any`[]
 
-Defined in: [src/base/criteria.ts:962](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L962)
+Defined in: [src/base/criteria.ts:1168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1168)
 
 Wraps a criteria in parentheses (compatibility helper).
 

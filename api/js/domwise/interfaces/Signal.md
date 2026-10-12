@@ -2,7 +2,7 @@
 
 # Interface: Signal\<T\>
 
-Defined in: [types/basic-types.d.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L102)
+Defined in: [types/basic-types.d.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L104)
 
 A writable signal whose `value` can be set.
 
@@ -26,7 +26,7 @@ The type of the signal's value.
 
 > **set** **value**(`value`): `void`
 
-Defined in: [types/basic-types.d.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L103)
+Defined in: [types/basic-types.d.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L105)
 
 Current value; reading may track a dependency when inside an effect/computed.
 
@@ -50,7 +50,7 @@ Current value; reading may track a dependency when inside an effect/computed.
 
 > **peek**(): `T`
 
-Defined in: [types/basic-types.d.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L89)
+Defined in: [types/basic-types.d.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L91)
 
 Returns the current value without creating a dependency.
 
@@ -70,7 +70,7 @@ The current value.
 
 > **subscribe**(`fn`): [`EffectDisposer`](../type-aliases/EffectDisposer.md)
 
-Defined in: [types/basic-types.d.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L95)
+Defined in: [types/basic-types.d.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L97)
 
 Subscribes to value changes.
 

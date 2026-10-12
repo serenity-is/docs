@@ -2,7 +2,7 @@
 
 # Interface: Computed\<T\>
 
-Defined in: [../domwise/dist/index.d.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L106)
+Defined in: [../domwise/dist/index.d.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L108)
 
 A read-only (computed) signal.
 
@@ -26,7 +26,7 @@ The type of the computed value.
 
 > **get** **value**(): `T`
 
-Defined in: [../domwise/dist/index.d.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L82)
+Defined in: [../domwise/dist/index.d.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L84)
 
 Current value; reading may track a dependency when inside an effect/computed.
 
@@ -44,7 +44,7 @@ Current value; reading may track a dependency when inside an effect/computed.
 
 > **peek**(): `T`
 
-Defined in: [../domwise/dist/index.d.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L87)
+Defined in: [../domwise/dist/index.d.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L89)
 
 Returns the current value without creating a dependency.
 
@@ -64,7 +64,7 @@ The current value.
 
 > **subscribe**(`fn`): () => `void`
 
-Defined in: [../domwise/dist/index.d.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L93)
+Defined in: [../domwise/dist/index.d.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L95)
 
 Subscribes to value changes.
 

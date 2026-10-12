@@ -2,7 +2,7 @@
 
 # Interface: RetrieveResponse\<TEntity\>
 
-Defined in: [src/base/servicetypes.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L194)
+Defined in: [src/base/servicetypes.ts:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L253)
 
 Response DTO for `Retrieve` handlers.
 
@@ -24,7 +24,7 @@ Row / entity type.
 
 > `optional` **Entity**: `TEntity`
 
-Defined in: [src/base/servicetypes.ts:196](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L196)
+Defined in: [src/base/servicetypes.ts:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L255)
 
 The retrieved entity, or `undefined` if not found (depending on handler).
 
@@ -48,7 +48,7 @@ Error information when the request failed; `undefined` on success.
 
 > `optional` **Localizations**: `object`
 
-Defined in: [src/base/servicetypes.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L198)
+Defined in: [src/base/servicetypes.ts:257](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L257)
 
 Per-language values for localizable fields, keyed by language ID.
 

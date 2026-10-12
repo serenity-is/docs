@@ -4,7 +4,7 @@
 
 > **or**(`c1`, `c2`, ...`rest`): `any`[]
 
-Defined in: [src/base/criteria.ts:942](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L942)
+Defined in: [src/base/criteria.ts:1148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L1148)
 
 Combines two or more criteria with `or`, skipping empty entries.
 

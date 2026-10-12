@@ -9,7 +9,7 @@ public class DefaultHandlerActivator : IHandlerActivator
 
 | parameter | description |
 | --- | --- |
-| provider | Service provider |
+| serviceProviderAccessor | Accessor for the service provider used to resolve the services handler classes require |
 
 ## Public Members
 
@@ -22,7 +22,7 @@ public class DefaultHandlerActivator : IHandlerActivator
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | *provider* is `null`. |
+| ArgumentNullException | *serviceProviderAccessor* is `null`. |
 
 ## Remarks
 
@@ -31,4 +31,4 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IHandlerActivator](./IHandlerActivator.md)
-* **Source:** *[DefaultHandlerActivator.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Handler/DefaultHandlerActivator.cs)*
+* **Source:** *[DefaultHandlerActivator.cs](https://github.com/serenity-is/Serenity/blob/df6fb676c90d207452f30ac96d17cc9ba967a264/src/services/RequestHandlers/Handler/DefaultHandlerActivator.cs)*

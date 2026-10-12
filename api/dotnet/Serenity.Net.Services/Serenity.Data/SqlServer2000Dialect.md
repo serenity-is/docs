@@ -17,6 +17,7 @@ public class SqlServer2000Dialect : ISqlDialect
 | virtual [CanUseRowNumber](SqlServer2000Dialect/CanUseRowNumber.md) { get; } |  |
 | virtual [CanUseSkipKeyword](SqlServer2000Dialect/CanUseSkipKeyword.md) { get; } |  |
 | virtual [CloseQuote](SqlServer2000Dialect/CloseQuote.md) { get; } |  |
+| [Comparer](SqlServer2000Dialect/Comparer.md) { get; } |  |
 | virtual [ConcatOperator](SqlServer2000Dialect/ConcatOperator.md) { get; } |  |
 | virtual [DateFormat](SqlServer2000Dialect/DateFormat.md) { get; } |  |
 | virtual [DateTimeFormat](SqlServer2000Dialect/DateTimeFormat.md) { get; } |  |
@@ -45,9 +46,10 @@ public class SqlServer2000Dialect : ISqlDialect
 | virtual [QuoteIdentifier](SqlServer2000Dialect/QuoteIdentifier.md)(…) |  |
 | virtual [QuoteUnicodeString](SqlServer2000Dialect/QuoteUnicodeString.md)(…) |  |
 | [UnionKeyword](SqlServer2000Dialect/UnionKeyword.md)(…) |  |
+| [WithComparer](SqlServer2000Dialect/WithComparer.md)(…) |  |
 | static readonly [Instance](SqlServer2000Dialect/Instance.md) | The shared instance of SqlServer2000 dialect. |
 
 ## See Also
 
 * interface [ISqlDialect](./ISqlDialect.md)
-* **Source:** *[SqlServer2000Dialect.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Dialects/SqlServer2000Dialect.cs)*
+* **Source:** *[SqlServer2000Dialect.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Data/Dialects/SqlServer2000Dialect.cs)*

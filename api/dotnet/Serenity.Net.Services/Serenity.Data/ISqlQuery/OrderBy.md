@@ -3,7 +3,7 @@
 Gets order by list.
 
 ```csharp
-public IEnumerable<string> OrderBy { get; }
+public IReadOnlyList<string> OrderBy { get; }
 ```
 
 ## See Also

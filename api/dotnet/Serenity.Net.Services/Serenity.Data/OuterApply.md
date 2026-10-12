@@ -17,4 +17,4 @@ public class OuterApply : Join
 ## See Also
 
 * class [Join](./Join.md)
-* **Source:** *[OuterApply.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Join/OuterApply.cs)*
+* **Source:** *[OuterApply.cs](https://github.com/serenity-is/Serenity/blob/d543be03a8bcb778f92b444afe56e6d34886f339/src/services/Data/Join/OuterApply.cs)*

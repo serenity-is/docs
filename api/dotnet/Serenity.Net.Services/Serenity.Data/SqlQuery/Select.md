@@ -8,11 +8,17 @@ public SqlQuery Select(ISqlQuery expression)
 
 | parameter | description |
 | --- | --- |
-| expression | A subquery. |
+| expression | A subquery. Must share the same root query (usually built via this query's SubQuery() method); an unrelated query's parameters are not available here, so embedding it may produce completely invalid results. |
 
 ## Return Value
 
 The query itself.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| InvalidOperationException | expression is an independent query with auto parameters. |
 
 ## See Also
 
@@ -91,12 +97,18 @@ public SqlQuery Select(ISqlQuery expression, string columnName)
 
 | parameter | description |
 | --- | --- |
-| expression | A subquery. |
+| expression | A subquery. Must share the same root query (usually built via this query's SubQuery() method); an unrelated query's parameters are not available here, so embedding it may produce completely invalid results. |
 | columnName | A column name |
 
 ## Return Value
 
 The query itself.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| InvalidOperationException | expression is an independent query with auto parameters. |
 
 ## See Also
 

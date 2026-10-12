@@ -17,6 +17,7 @@ public class SqliteDialect : ISqlDialect
 | virtual [CanUseRowNumber](SqliteDialect/CanUseRowNumber.md) { get; } |  |
 | virtual [CanUseSkipKeyword](SqliteDialect/CanUseSkipKeyword.md) { get; } |  |
 | virtual [CloseQuote](SqliteDialect/CloseQuote.md) { get; } |  |
+| [Comparer](SqliteDialect/Comparer.md) { get; } |  |
 | virtual [ConcatOperator](SqliteDialect/ConcatOperator.md) { get; } |  |
 | virtual [DateFormat](SqliteDialect/DateFormat.md) { get; } |  |
 | virtual [DateTimeFormat](SqliteDialect/DateTimeFormat.md) { get; } |  |
@@ -44,9 +45,10 @@ public class SqliteDialect : ISqlDialect
 | virtual [QuoteIdentifier](SqliteDialect/QuoteIdentifier.md)(…) |  |
 | virtual [QuoteUnicodeString](SqliteDialect/QuoteUnicodeString.md)(…) |  |
 | [UnionKeyword](SqliteDialect/UnionKeyword.md)(…) |  |
-| static [Instance](SqliteDialect/Instance.md) | The shared instance of SqliteDialect. |
+| [WithComparer](SqliteDialect/WithComparer.md)(…) |  |
+| static readonly [Instance](SqliteDialect/Instance.md) | The shared instance of SqliteDialect. |
 
 ## See Also
 
 * interface [ISqlDialect](./ISqlDialect.md)
-* **Source:** *[SqliteDialect.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Dialects/SqliteDialect.cs)*
+* **Source:** *[SqliteDialect.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Data/Dialects/SqliteDialect.cs)*

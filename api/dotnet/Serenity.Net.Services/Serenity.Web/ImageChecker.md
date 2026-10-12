@@ -27,4 +27,4 @@ public class ImageChecker
 
 ## See Also
 
-* **Source:** *[ImageChecker.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Upload/ImageChecker.cs)*
+* **Source:** *[ImageChecker.cs](https://github.com/serenity-is/Serenity/blob/a734e8f39a87255a5bca642231709348634bd279/src/services/Upload/ImageChecker.cs)*

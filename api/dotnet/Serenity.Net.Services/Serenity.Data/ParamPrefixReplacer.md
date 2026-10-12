@@ -15,4 +15,4 @@ public static class ParamPrefixReplacer
 
 ## See Also
 
-* **Source:** *[ParamPrefixReplacer.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Join/ParamPrefixReplacer.cs)*
+* **Source:** *[ParamPrefixReplacer.cs](https://github.com/serenity-is/Serenity/blob/d543be03a8bcb778f92b444afe56e6d34886f339/src/services/Data/Join/ParamPrefixReplacer.cs)*

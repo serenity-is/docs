@@ -38,4 +38,4 @@ Initializes a new instance of the [`ListField`](./ListField-1.md) class.
 ## See Also
 
 * class [CustomClassField&lt;TValue&gt;](./CustomClassField-1.md)
-* **Source:** *[ListField.cs](https://github.com/serenity-is/Serenity/blob/2628abed3096f4ef947f5a72a8004e20a06da358/src/services/Entity/FieldTypes/ListField.cs)*
+* **Source:** *[ListField.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Entity/FieldTypes/ListField.cs)*

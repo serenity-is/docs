@@ -11,8 +11,8 @@ public static class EntityServiceCollectionExtensions
 
 | name | description |
 | --- | --- |
-| static [AddEntities](EntityServiceCollectionExtensions/AddEntities.md)(…) | Adds the annotation types, sql connections, default row type registry and row fields provider. Warning: This method sets the singleton row fields provider as the default by calling RowFieldsProvider.SetDefault on creation. |
+| static [AddEntities](EntityServiceCollectionExtensions/AddEntities.md)(…) | Adds the annotation types, sql connections, default row type registry and row fields provider. |
 
 ## See Also
 
-* **Source:** *[EntityServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Extensions/EntityServiceCollectionExtensions.cs)*
+* **Source:** *[EntityServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/db964a13b4fda069b8f062c45bd5e9303487dc45/src/services/Entity/Extensions/EntityServiceCollectionExtensions.cs)*

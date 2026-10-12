@@ -21,6 +21,10 @@ public static int ExecuteUpsert(this SqlInsert query, IDbConnection connection,
 
 The number of affected rows.
 
+## Remarks
+
+A native dialect-specific upsert is used when supported. Otherwise this method falls back to separate UPDATE and INSERT statements. That compatibility fallback is not atomic, so concurrent calls can race; there is no generic way to make this fallback atomic across dialects. Prefer a dialect with native upsert support when atomicity is required. The fallback reports one affected row for a successful logical upsert, and uses that value when checking *expectedRows*. Key matching is null-safe, so a null key value matches another null key value.
+
 ## See Also
 
 * class [SqlInsert](../SqlInsert.md)

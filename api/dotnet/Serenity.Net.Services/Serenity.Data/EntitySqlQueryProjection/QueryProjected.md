@@ -5,7 +5,7 @@ Executes the query and materializes each result row into the specified flat proj
 ```csharp
 public static IEnumerable<TResult> QueryProjected<TRow, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow, TResult>> projection, bool buffered = true, 
-    IReadOnlyDictionary<string, object?>? parameters = null)
+    IReadOnlyDictionary<string, object?>? parameters = null, bool takeOwnership = false)
     where TRow : class, IRow
 ```
 
@@ -18,6 +18,7 @@ public static IEnumerable<TResult> QueryProjected<TRow, TResult>(this SqlQuery q
 | projection | A flat projection built from direct row field accesses. |
 | buffered | Whether to buffer all results before returning. |
 | parameters | Values that override the source query's parameters for this execution. |
+| takeOwnership | Whether to prepare the source query in place instead of cloning it. The source must not be frozen. |
 
 ## Return Value
 
@@ -39,7 +40,7 @@ Executes a projection using the specified row-fields source aliases.
 public static IEnumerable<TResult> QueryProjected<TRow, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow, TResult>> projection, 
     IReadOnlyList<RowFieldsBase> sources, bool buffered = true, 
-    IReadOnlyDictionary<string, object?>? parameters = null)
+    IReadOnlyDictionary<string, object?>? parameters = null, bool takeOwnership = false)
     where TRow : class, IRow
 ```
 
@@ -59,7 +60,8 @@ Executes the query and materializes each result row into the specified flat proj
 ```csharp
 public static IEnumerable<TResult> QueryProjected<TRow1, TRow2, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow1, TRow2, TResult>> projection, 
-    bool buffered = true, IReadOnlyDictionary<string, object?>? parameters = null)
+    bool buffered = true, IReadOnlyDictionary<string, object?>? parameters = null, 
+    bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
 ```
@@ -74,6 +76,7 @@ public static IEnumerable<TResult> QueryProjected<TRow1, TRow2, TResult>(this Sq
 | projection | A flat projection built from direct row field accesses. |
 | buffered | Whether to buffer all results before returning. |
 | parameters | Values that override the source query's parameters for this execution. |
+| takeOwnership | Whether to prepare the source query in place instead of cloning it. The source must not be frozen. |
 
 ## Return Value
 
@@ -95,7 +98,7 @@ Executes a projection using the specified row-fields source aliases.
 public static IEnumerable<TResult> QueryProjected<TRow1, TRow2, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow1, TRow2, TResult>> projection, 
     IReadOnlyList<RowFieldsBase> sources, bool buffered = true, 
-    IReadOnlyDictionary<string, object?>? parameters = null)
+    IReadOnlyDictionary<string, object?>? parameters = null, bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
 ```
@@ -117,7 +120,7 @@ Executes the query and materializes each result row into the specified flat proj
 public static IEnumerable<TResult> QueryProjected<TRow1, TRow2, TRow3, TResult>(
     this SqlQuery query, IDbConnection connection, 
     Expression<Func<TRow1, TRow2, TRow3, TResult>> projection, bool buffered = true, 
-    IReadOnlyDictionary<string, object?>? parameters = null)
+    IReadOnlyDictionary<string, object?>? parameters = null, bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
     where TRow3 : class, IRow
@@ -134,6 +137,7 @@ public static IEnumerable<TResult> QueryProjected<TRow1, TRow2, TRow3, TResult>(
 | projection | A flat projection built from direct row field accesses. |
 | buffered | Whether to buffer all results before returning. |
 | parameters | Values that override the source query's parameters for this execution. |
+| takeOwnership | Whether to prepare the source query in place instead of cloning it. The source must not be frozen. |
 
 ## Return Value
 
@@ -156,7 +160,7 @@ public static IEnumerable<TResult> QueryProjected<TRow1, TRow2, TRow3, TResult>(
     this SqlQuery query, IDbConnection connection, 
     Expression<Func<TRow1, TRow2, TRow3, TResult>> projection, 
     IReadOnlyList<RowFieldsBase> sources, bool buffered = true, 
-    IReadOnlyDictionary<string, object?>? parameters = null)
+    IReadOnlyDictionary<string, object?>? parameters = null, bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
     where TRow3 : class, IRow

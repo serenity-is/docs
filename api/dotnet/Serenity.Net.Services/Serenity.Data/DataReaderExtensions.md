@@ -11,6 +11,7 @@ public static class DataReaderExtensions
 
 | name | description |
 | --- | --- |
+| static [AsBytes](DataReaderExtensions/AsBytes.md)(…) | Reads the value at the field index as a byte array. Returns `null` if the value is DBNull. When the provider does not return a byte array (or SqlBinary) directly, the value is read using the `GetBytes` method, honoring the number of bytes actually returned by each call so that partial reads are not lost. |
 | static [AsDateTime](DataReaderExtensions/AsDateTime.md)(…) | Reads the value at the field index. Returns `null` if the value is DBNull. |
 | static [AsDecimal](DataReaderExtensions/AsDecimal.md)(…) | Reads the value at the field index. Returns `null` if the value is DBNull. |
 | static [AsDouble](DataReaderExtensions/AsDouble.md)(…) | Reads the value at the field index. Returns `null` if the value is DBNull. |
@@ -28,4 +29,4 @@ public static class DataReaderExtensions
 
 ## See Also
 
-* **Source:** *[DataReaderExtensions.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Connections/DataReaderExtensions.cs)*
+* **Source:** *[DataReaderExtensions.cs](https://github.com/serenity-is/Serenity/blob/6e3d9856e875cdcea9be4e3e44edef50facbe8f3/src/services/Data/Connections/DataReaderExtensions.cs)*

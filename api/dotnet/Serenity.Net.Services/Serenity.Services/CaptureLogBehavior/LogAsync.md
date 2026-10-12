@@ -22,6 +22,10 @@ public Task LogAsync(IUnitOfWork uow, IRow? old, IRow? row, object? userId,
 | ArgumentNullException | *old* and *row* are both `null`. |
 | InvalidOperationException | Capture log row type does not implement ICaptureLogRow interface |
 
+## Remarks
+
+The currently active log row is closed before inserting the new one. As this is not atomic across concurrent transactions for the same ID, a unique index on the mapped ID and ValidUntil columns is recommended to enforce a single active row.
+
 ## See Also
 
 * interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)

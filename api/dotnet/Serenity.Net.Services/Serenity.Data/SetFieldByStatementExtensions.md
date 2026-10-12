@@ -15,4 +15,4 @@ public static class SetFieldByStatementExtensions
 
 ## See Also
 
-* **Source:** *[SetFieldByStatementExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/QueryExtensions/SetFieldByStatementExtensions.cs)*
+* **Source:** *[SetFieldByStatementExtensions.cs](https://github.com/serenity-is/Serenity/blob/028603594e120da335eefb6e5088403e8fb06a32/src/services/Data/QueryExtensions/SetFieldByStatementExtensions.cs)*

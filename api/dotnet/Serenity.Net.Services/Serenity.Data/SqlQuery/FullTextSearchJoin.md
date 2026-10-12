@@ -26,6 +26,10 @@ The SqlSelect object itself.
 | --- | --- |
 | ArgumentNullException | Any of the parameters is null or empty. |
 
+## Remarks
+
+This join uses SQL Server's `CONTAINSTABLE` syntax and is SQL Server specific. It is emitted as-is for all dialects, similar to table hints; use it only with SQL Server. Table and field arguments are SQL fragments and are not automatically quoted or validated.
+
 ## See Also
 
 * class [SqlQuery](../SqlQuery.md)

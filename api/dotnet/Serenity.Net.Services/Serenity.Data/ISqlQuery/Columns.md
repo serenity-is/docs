@@ -3,7 +3,7 @@
 Gets the columns.
 
 ```csharp
-public IEnumerable<Column> Columns { get; }
+public IReadOnlyList<Column> Columns { get; }
 ```
 
 ## Property Value

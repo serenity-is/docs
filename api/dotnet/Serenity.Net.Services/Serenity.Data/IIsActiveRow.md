@@ -15,4 +15,4 @@ public interface IIsActiveRow
 
 ## See Also
 
-* **Source:** *[IIsActiveRow.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Contracts/IIsActiveRow.cs)*
+* **Source:** *[IIsActiveRow.cs](https://github.com/serenity-is/Serenity/blob/199b7985edf2a6725f2b409095cec74fcb9cb0a8/src/services/Entity/Contracts/IIsActiveRow.cs)*

@@ -1,9 +1,9 @@
-# ServiceLookupEditorAttribute constructor (1 of 2)
+# ServiceLookupEditorAttribute constructor (1 of 3)
 
-If you use this constructor, service will tried to be determined by module and name of the row class, and idField and textField will be determined by rows id and name fields.
+Initializes a new instance of the [`ServiceLookupEditorAttribute`](../ServiceLookupEditorAttribute.md) class for use by derived editor attributes.
 
 ```csharp
-public ServiceLookupEditorAttribute(Type itemType)
+protected ServiceLookupEditorAttribute()
 ```
 
 ## See Also
@@ -12,7 +12,25 @@ public ServiceLookupEditorAttribute(Type itemType)
 
 ---
 
-# ServiceLookupEditorAttribute constructor (2 of 2)
+# ServiceLookupEditorAttribute constructor (2 of 3)
+
+Creates a new instance of the [`ServiceLookupEditorAttribute`](../ServiceLookupEditorAttribute.md) class with an item/row type. Service, ID, and text fields are inferred when possible. For non-row types, inference uses `[IdProperty]` and `[NameProperty]`, then conventional property names (Id/Key/Code/Value and Name/DisplayName/Text). A type with a single public string property uses that property for both ID and text. Otherwise, set [`IdField`](../ServiceLookupEditorBaseAttribute/IdField.md) and [`TextField`](../ServiceLookupEditorBaseAttribute/TextField.md) explicitly or annotate the corresponding item properties.
+
+```csharp
+public ServiceLookupEditorAttribute(Type itemType)
+```
+
+| parameter | description |
+| --- | --- |
+| itemType | The item/row type |
+
+## See Also
+
+* class [ServiceLookupEditorAttribute](../ServiceLookupEditorAttribute.md)
+
+---
+
+# ServiceLookupEditorAttribute constructor (3 of 3)
 
 Initializes a new instance of the [`ServiceLookupEditorAttribute`](../ServiceLookupEditorAttribute.md) class.
 

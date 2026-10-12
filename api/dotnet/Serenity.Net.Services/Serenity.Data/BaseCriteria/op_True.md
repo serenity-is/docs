@@ -1,10 +1,14 @@
 # BaseCriteria True operator
 
-Must ALSO return FALSE from this for short circuit AND (&amp;&amp;) to return a new binary criteria merging left and right operands in any case https://msdn.microsoft.com/en-us/library/aa691312
+Returns false so that `&&` evaluates its right operand and combines both criteria with [`operator &amp;`](./op_BitwiseAnd.md).
 
 ```csharp
 public static bool operator true(BaseCriteria statement)
 ```
+
+## Remarks
+
+Criteria are SQL expression builders, not Boolean values. This operator always returns false; do not use a criteria in a Boolean conditional.
 
 ## See Also
 

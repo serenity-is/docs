@@ -1,9 +1,9 @@
 # DataValidation.InvalidIdError method (1 of 2)
 
-Returns an invalid ID error.
+Returns an invalid ID error. The value is usually the raw value as received in the request, so it can be a string that could not be converted to the id field's type.
 
 ```csharp
-public static ValidationError InvalidIdError(Field field, long value, ITextLocalizer? localizer)
+public static ValidationError InvalidIdError(Field field, object? value, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

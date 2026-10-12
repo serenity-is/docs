@@ -1,10 +1,14 @@
 # BaseCriteria False operator
 
-Must return FALSE from this for short circuit OR (&#x7C;&#x7C;) to return a new binary criteria merging left and right operands in any case
+Returns false so that `||` evaluates its right operand and combines both criteria with [`operator &#x7C;`](./op_BitwiseOr.md).
 
 ```csharp
 public static bool operator false(BaseCriteria statement)
 ```
+
+## Remarks
+
+Criteria are SQL expression builders, not Boolean values. This operator always returns false; do not use a criteria in a Boolean conditional.
 
 ## See Also
 

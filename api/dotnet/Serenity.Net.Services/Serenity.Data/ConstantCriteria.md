@@ -12,8 +12,9 @@ public class ConstantCriteria : Criteria
 | name | description |
 | --- | --- |
 | [ConstantCriteria](ConstantCriteria/ConstantCriteria.md)(…) | Initializes a new instance of the [`ConstantCriteria`](./ConstantCriteria.md) class. (6 constructors) |
+| override [ToString](ConstantCriteria/ToString.md)(…) |  |
 
 ## See Also
 
 * class [Criteria](./Criteria.md)
-* **Source:** *[ConstantCriteria.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Criteria/ConstantCriteria.cs)*
+* **Source:** *[ConstantCriteria.cs](https://github.com/serenity-is/Serenity/blob/4e74ef07ee730ccce4277f699f3dcbe3d85bb083/src/services/Data/Criteria/ConstantCriteria.cs)*

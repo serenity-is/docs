@@ -20,7 +20,7 @@ The SUBSTRING() expression.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | expression is null or empty. |
+| ArgumentException | expression is null or empty. |
 
 ## See Also
 

@@ -3,7 +3,7 @@
 Sets a field value with a parameter.
 
 ```csharp
-public static T Set<T>(this T self, string field, object value)
+public static T Set<T>(this T self, string field, object? value)
     where T : ISetFieldByStatement
 ```
 

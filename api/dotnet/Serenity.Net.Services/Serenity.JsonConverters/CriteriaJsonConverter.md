@@ -18,4 +18,4 @@ public class CriteriaJsonConverter : JsonConverter<BaseCriteria>
 ## See Also
 
 * class [BaseCriteria](../Serenity.Data/BaseCriteria.md)
-* **Source:** *[CriteriaJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Data/Criteria/CriteriaJsonConverter.cs)*
+* **Source:** *[CriteriaJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/f3eca49ad489958e462afe254d2a02ea3b61aa6e/src/services/Data/Criteria/CriteriaJsonConverter.cs)*

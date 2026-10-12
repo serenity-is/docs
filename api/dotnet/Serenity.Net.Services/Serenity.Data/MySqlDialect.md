@@ -16,6 +16,7 @@ public class MySqlDialect : ISqlDialect
 | virtual [CanUseRowNumber](MySqlDialect/CanUseRowNumber.md) { get; } |  |
 | virtual [CanUseSkipKeyword](MySqlDialect/CanUseSkipKeyword.md) { get; } |  |
 | virtual [CloseQuote](MySqlDialect/CloseQuote.md) { get; } |  |
+| [Comparer](MySqlDialect/Comparer.md) { get; } |  |
 | virtual [ConcatOperator](MySqlDialect/ConcatOperator.md) { get; } |  |
 | virtual [DateFormat](MySqlDialect/DateFormat.md) { get; } |  |
 | virtual [DateTimeFormat](MySqlDialect/DateTimeFormat.md) { get; } |  |
@@ -43,9 +44,10 @@ public class MySqlDialect : ISqlDialect
 | virtual [QuoteIdentifier](MySqlDialect/QuoteIdentifier.md)(…) |  |
 | virtual [QuoteUnicodeString](MySqlDialect/QuoteUnicodeString.md)(…) |  |
 | [UnionKeyword](MySqlDialect/UnionKeyword.md)(…) |  |
+| [WithComparer](MySqlDialect/WithComparer.md)(…) |  |
 | static readonly [Instance](MySqlDialect/Instance.md) | The shared instance of MySqlDialect. |
 
 ## See Also
 
 * interface [ISqlDialect](./ISqlDialect.md)
-* **Source:** *[MySqlDialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/MySqlDialect.cs)*
+* **Source:** *[MySqlDialect.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Data/Dialects/MySqlDialect.cs)*

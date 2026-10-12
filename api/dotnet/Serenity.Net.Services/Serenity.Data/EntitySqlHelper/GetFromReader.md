@@ -23,7 +23,8 @@ public static void GetFromReader(this SqlQuery query, IDataReader reader)
 Gets field values from data reader into the set of specified into rows.
 
 ```csharp
-public static void GetFromReader(this SqlQuery query, IDataReader reader, IList<object> into)
+public static void GetFromReader(this SqlQuery query, IDataReader reader, 
+    IReadOnlyList<object> into)
 ```
 
 | parameter | description |

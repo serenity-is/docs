@@ -3,7 +3,7 @@
 Gets the into rows.
 
 ```csharp
-public IList<object> IntoRows { get; }
+public IReadOnlyList<object> IntoRows { get; }
 ```
 
 ## Property Value

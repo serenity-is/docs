@@ -26,4 +26,4 @@ Initializes a new instance of the [`ValueCriteria`](./ValueCriteria.md) class.
 ## See Also
 
 * class [BaseCriteria](./BaseCriteria.md)
-* **Source:** *[ValueCriteria.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Criteria/ValueCriteria.cs)*
+* **Source:** *[ValueCriteria.cs](https://github.com/serenity-is/Serenity/blob/028603594e120da335eefb6e5088403e8fb06a32/src/services/Data/Criteria/ValueCriteria.cs)*

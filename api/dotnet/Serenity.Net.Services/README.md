@@ -7,8 +7,6 @@
 | static class [ArgumentChecks](./Serenity/ArgumentChecks.md) | Argument check helpers for validating that non-null values obtained from members (e.g. `request.Entity`) are not null, returning the value when it is not. Prefer ArgumentNullException static `ThrowIfNull` when checking an actual method parameter, as that keeps the parameter name recognized by CA2208 and null-state flow analysis. |
 | static class [ArgumentExceptions](./Serenity/ArgumentExceptions.md) | This class contains methods for creating ArgumentException and subclasses while avoiding analyzer warnings regarding mismatched argument names. |
 | enum [CaptureOperationType](./Serenity/CaptureOperationType.md) | Contains capture logging operation types |
-| static class [ChainableExtensions](./Serenity/ChainableExtensions.md) | Contains method chaining extensions for objects like SQL queries that implement [`IChainable`](./Serenity/IChainable.md). |
-| interface [IChainable](./Serenity/IChainable.md) | Interface for chainable objects, e.g. with functions returning themselves. |
 | interface [ICriteria](./Serenity/ICriteria.md) | Shared criteria interface. |
 | interface [ICustomValidator](./Serenity/ICustomValidator.md) | Custom validator abstraction. |
 | interface [IValidationContext](./Serenity/IValidationContext.md) | Validation context abstraction. |
@@ -35,8 +33,9 @@
 | static class [BracketLocator](./Serenity.Data/BracketLocator.md) | Contains helper methods for locating / replacing brackets in an SQL expression. |
 | class [ByteArrayField](./Serenity.Data/ByteArrayField.md) | Field with a byte[] value. |
 | class [CaptureLogAttribute](./Serenity.Data/CaptureLogAttribute.md) | Enables capture logging for a row type. |
+| class [ComparerAttribute](./Serenity.Data/ComparerAttribute.md) | Specifies the comparer used to compare the values of a row's fields (for example, for change detection or dirty tracking). Can be applied to a row class to affect all of its fields, or to a single field property to override the row, connection or global setting. |
+| static class [ComparerResolver](./Serenity.Data/ComparerResolver.md) | Parses comparer specifications like "Ordinal", "OrdinalIgnoreCase", "CurrentCulture", "CurrentCultureIgnoreCase", "tr-TR" or "tr-TR:IgnoreCase" into a StringComparer. |
 | static class [ConnectionExtensions](./Serenity.Data/ConnectionExtensions.md) | Contains DB connection related extensions. |
-| class [ConnectionKeyAttribute](./Serenity.Data/ConnectionKeyAttribute.md) | Determines the connection key used for a class. |
 | class [ConnectionKeyFallbackAttribute](./Serenity.Data/ConnectionKeyFallbackAttribute.md) | Declares a fallback connection key for a logical connection key. When a connection key is not present in configuration, the fallback connection key is used. |
 | class [ConnectionStringEntry](./Serenity.Data/ConnectionStringEntry.md) | A connection string setting. |
 | class [ConnectionStringInfo](./Serenity.Data/ConnectionStringInfo.md) | Contains a connection string, its key, and provider name. |
@@ -58,7 +57,6 @@
 | class [DateTimeKindAttribute](./Serenity.Data/DateTimeKindAttribute.md) | Determines Time kind for a DateTime field. |
 | class [DateTimeOffsetField](./Serenity.Data/DateTimeOffsetField.md) | Field with a DateTimeOffset value. |
 | class [DecimalField](./Serenity.Data/DecimalField.md) | Field with a Decimal value. |
-| class [DefaultConnectionAttribute](./Serenity.Data/DefaultConnectionAttribute.md) | Specifies the "Default" connection key. |
 | class [DefaultConnectionStrings](./Serenity.Data/DefaultConnectionStrings.md) | The default connection string source. |
 | class [DefaultRowFieldsProvider](./Serenity.Data/DefaultRowFieldsProvider.md) | Default row fields instance provider, that resolves row fields instances using ActivatorUtilities.CreateInstance through a IServiceProvider. |
 | class [DefaultRowTypeRegistry](./Serenity.Data/DefaultRowTypeRegistry.md) | Default row type registry |
@@ -86,13 +84,15 @@
 | enum [FieldType](./Serenity.Data/FieldType.md) | Enumeration of field types. |
 | static class [FilterableQueryExtensions](./Serenity.Data/FilterableQueryExtensions.md) | Extensions for objects implementing [`IFilterableQuery`](./Serenity.Data/IFilterableQuery.md). |
 | class [FirebirdDialect](./Serenity.Data/FirebirdDialect.md) | SQL dialect for Firebird. |
-| abstract class [FunctionCallCriteria](./Serenity.Data/FunctionCallCriteria.md) | Criteria object that identifies a function call |
+| abstract class [FunctionCallCriteria](./Serenity.Data/FunctionCallCriteria.md) | Criteria object that identifies a function call. |
+| static class [FunctionCallCriteriaFactory](./Serenity.Data/FunctionCallCriteriaFactory.md) | Resolves function-call nodes read from criteria JSON. |
 | abstract class [GenericClassField&lt;TValue&gt;](./Serenity.Data/GenericClassField-1.md) | Base class for fields with reference type values. |
 | abstract class [GenericValueField&lt;TValue&gt;](./Serenity.Data/GenericValueField-1.md) | Base class for fields with a value type value. |
 | class [GuidField](./Serenity.Data/GuidField.md) | Field with a Guid value. |
 | interface [IAlias](./Serenity.Data/IAlias.md) | Interface for table aliases. |
 | interface [ICaptureLogHandler](./Serenity.Data/ICaptureLogHandler.md) | Capture logging handler abstraction |
 | interface [ICaptureLogRow](./Serenity.Data/ICaptureLogRow.md) | Interface for capture logging row types |
+| interface [IConcurrencyVersionRow](./Serenity.Data/IConcurrencyVersionRow.md) | Interface for rows that support optimistic concurrency via a version / rowversion field. |
 | interface [IConnectionKeyFallbacks](./Serenity.Data/IConnectionKeyFallbacks.md) | Abstraction to access connection key fallbacks. |
 | interface [IConnectionProfiler](./Serenity.Data/IConnectionProfiler.md) | An interface used to abstract profilers like Mini Profiler. |
 | interface [IConnectionString](./Serenity.Data/IConnectionString.md) | Contains a connection string, its key and provider name. |
@@ -208,7 +208,7 @@
 | static class [SqlHelper](./Serenity.Data/SqlHelper.md) | Contains static SQL related helper functions and extensions. |
 | class [SqlInsert](./Serenity.Data/SqlInsert.md) | Class to generate queries of the form `INSERT INTO tablename (field1, field2..fieldN) VALUES (value1, value2..valueN)` |
 | class [SqliteDialect](./Serenity.Data/SqliteDialect.md) | Sqlite dialect. |
-| static class [SqlMapper](./Serenity.Data/SqlMapper.md) | Provides IDbConnection extension methods that wrap the corresponding Dapper SqlMapper methods, translating Serenity SQL (dialect specific brackets and parameter prefixes) via [`Translate`](./Serenity.Data/SqlConversions/Translate.md) and ensuring the connection is open before execution. It mirrors the string based `Execute` and `Query` extension methods of Dapper's `SqlMapper`, not every Dapper overload (CommandDefinition based methods, ExecuteScalar, ExecuteReader, QueryFirst, QueryMultiple, etc.), as well as their async variants. The [`ISqlQuery`](./Serenity.Data/ISqlQuery.md) overloads are Serenity specific and have no Dapper equivalent. Note that unlike [`SqlHelper`](./Serenity.Data/SqlHelper.md) methods, these extension methods do not go through [`ISqlOperationInterceptor`](./Serenity.Data/ISqlOperationInterceptor.md). |
+| static class [SqlMapper](./Serenity.Data/SqlMapper.md) | Provides IDbConnection extension methods that wrap the corresponding Dapper SqlMapper methods, translating Serenity SQL (dialect specific brackets and parameter prefixes) via [`Translate`](./Serenity.Data/SqlConversions/Translate.md) and ensuring the connection is open before execution. It mirrors the string based `Execute` and `Query` extension methods of Dapper's `SqlMapper`, not every Dapper overload (CommandDefinition based methods, ExecuteScalar, ExecuteReader, QueryFirst, QueryMultiple, etc.), as well as their async variants. The [`ISqlQuery`](./Serenity.Data/ISqlQuery.md) overloads are Serenity specific and have no Dapper equivalent. Note that unlike [`SqlHelper`](./Serenity.Data/SqlHelper.md) methods, these extension methods do not go through [`ISqlOperationInterceptor`](./Serenity.Data/ISqlOperationInterceptor.md). Transaction handling: an explicitly passed `transaction` takes precedence; when it is null the connection's ambient transaction applies. That works because the connection (usually a [`WrappedConnection`](./Serenity.Data/WrappedConnection.md)) enlists the ambient transaction at command creation, and Dapper only overwrites it with a non-null transaction argument. An explicit Dapper `commandTimeout` takes precedence; when it is omitted, [`WrappedConnection`](./Serenity.Data/WrappedConnection.md) applies its configured timeout or [`DefaultCommandTimeout`](./Serenity.Data/SqlSettings/DefaultCommandTimeout.md) when creating the command. Serenity query parameter names retain the `@` prefix while SQL text is translated to the connection dialect. Dapper strips parameter prefixes when matching names, so query parameters such as `@Id` bind correctly to Oracle SQL using `:Id`. |
 | class [SqlQuery](./Serenity.Data/SqlQuery.md) | SQL query string builder that supports SELECT statements with paging, joins, unions, grouping, ordering, and sub queries. |
 | class [SqlServer2000Dialect](./Serenity.Data/SqlServer2000Dialect.md) | SqlServer 2000 dialect. |
 | class [SqlServer2005Dialect](./Serenity.Data/SqlServer2005Dialect.md) | Sql Server 2005 dialect. |
@@ -274,8 +274,8 @@
 | class [SqlUtcNowAttribute](./Serenity.Data.Mapping/SqlUtcNowAttribute.md) | Dialect specific SQL expression for UTC date/time. |
 | class [TableNameAttribute](./Serenity.Data.Mapping/TableNameAttribute.md) | Determines table name for the row. |
 | class [TextualFieldAttribute](./Serenity.Data.Mapping/TextualFieldAttribute.md) | Determines textual field for this field. This is placed on foreign keys and specifies which field in joined table (view fields in this row that originates from foreign table) should be used for display / filtering. |
-| class [UniqueAttribute](./Serenity.Data.Mapping/UniqueAttribute.md) | Defines a unique constraint on the field. |
-| class [UniqueConstraintAttribute](./Serenity.Data.Mapping/UniqueConstraintAttribute.md) | Adds a unique constraint check to the row. |
+| class [UniqueAttribute](./Serenity.Data.Mapping/UniqueAttribute.md) | Defines a unique constraint on the field. Sets the Unique flag and, by default, makes [`UniqueFieldSaveBehavior`](./Serenity.Services/UniqueFieldSaveBehavior.md) check the constraint before save by running an existence query, so that a user friendly validation error is returned instead of a database exception. The actual database unique index (if any) remains authoritative. |
+| class [UniqueConstraintAttribute](./Serenity.Data.Mapping/UniqueConstraintAttribute.md) | Adds a unique constraint check to the row. By default [`UniqueConstraintSaveBehavior`](./Serenity.Services/UniqueConstraintSaveBehavior.md) checks the constraint before save by running an existence query, so that a user friendly validation error is returned instead of a database exception. The actual database unique index (if any) remains authoritative. |
 | class [UpdatableExtensionAttribute](./Serenity.Data.Mapping/UpdatableExtensionAttribute.md) | Marks the JOIN as an updatable extension. |
 | class [UserIdFieldTypeAttribute](./Serenity.Data.Mapping/UserIdFieldTypeAttribute.md) | Declares that the field generated for this property should be of IDFieldType specified [`UserEntityOptions`](./Serenity.Data/UserEntityOptions.md). |
 | class [UserIdJoinKeyAttribute](./Serenity.Data.Mapping/UserIdJoinKeyAttribute.md) | Declares that the the join key (ForeignKeyAttribute) for this property should be based on [`UserEntityOptions`](./Serenity.Data/UserEntityOptions.md), e.g. use its TableName and IdColumnName properties. |
@@ -397,7 +397,7 @@
 | abstract class [BaseDeleteBehaviorAsync](./Serenity.Services/BaseDeleteBehaviorAsync.md) | Base class for types implementing [`IDeleteBehaviorAsync`](./Serenity.Services/IDeleteBehaviorAsync.md) |
 | abstract class [BaseListBehavior](./Serenity.Services/BaseListBehavior.md) | Base class for behaviors implementing [`IListBehaviorSync`](./Serenity.Services/IListBehaviorSync.md) |
 | abstract class [BaseListBehaviorAsync](./Serenity.Services/BaseListBehaviorAsync.md) | Base class for behaviors implementing [`IListBehaviorAsync`](./Serenity.Services/IListBehaviorAsync.md) |
-| class [BaseRepository](./Serenity.Services/BaseRepository.md) | A base class that can be used for repositories (obsolete, [`BaseRequestHandler`](./Serenity.Services/BaseRequestHandler.md)) that accept a [`IRequestContext`](./Serenity.Services/IRequestContext.md) instance. |
+| class [BaseRepository](./Serenity.Services/BaseRepository.md) | A base class that can be used for repositories that accept a [`IRequestContext`](./Serenity.Services/IRequestContext.md) instance. This repository pattern is not recommended. Prefer defining an individual request handler per service operation (e.g. save, list, retrieve, delete), such as [`BaseRequestHandler`](./Serenity.Services/BaseRequestHandler.md). |
 | abstract class [BaseRequestHandler](./Serenity.Services/BaseRequestHandler.md) | An abstract class that can be used as base for request handlers that accept a [`IRequestContext`](./Serenity.Services/IRequestContext.md) instance. |
 | abstract class [BaseRetrieveBehavior](./Serenity.Services/BaseRetrieveBehavior.md) | Base class for behaviors implementing [`IRetrieveBehaviorSync`](./Serenity.Services/IRetrieveBehaviorSync.md) |
 | abstract class [BaseRetrieveBehaviorAsync](./Serenity.Services/BaseRetrieveBehaviorAsync.md) | Base class for behaviors implementing [`IRetrieveBehaviorAsync`](./Serenity.Services/IRetrieveBehaviorAsync.md) |
@@ -407,6 +407,7 @@
 | abstract class [BaseSaveDeleteBehaviorAsync](./Serenity.Services/BaseSaveDeleteBehaviorAsync.md) | Base class for behaviors implementing save and delete async behavior interfaces |
 | abstract class [BaseUndeleteBehavior](./Serenity.Services/BaseUndeleteBehavior.md) | Base class for types implementing [`IUndeleteBehaviorSync`](./Serenity.Services/IUndeleteBehaviorSync.md) |
 | abstract class [BaseUndeleteBehaviorAsync](./Serenity.Services/BaseUndeleteBehaviorAsync.md) | Base class for types implementing [`IUndeleteBehaviorAsync`](./Serenity.Services/IUndeleteBehaviorAsync.md) |
+| abstract class [BaseUniqueConstraintSaveBehavior](./Serenity.Services/BaseUniqueConstraintSaveBehavior.md) | Base class for unique constraint save behaviors (e.g. [`UniqueFieldSaveBehavior`](./Serenity.Services/UniqueFieldSaveBehavior.md) and [`UniqueConstraintSaveBehavior`](./Serenity.Services/UniqueConstraintSaveBehavior.md)). Contains the shared query building and validation logic, with virtual hooks so applications can customize how the pre-check query is built, for example to apply row-level (tenant/owner) scoping so the pre-check matches the actual database unique constraint. |
 | static class [BehaviorProviderExtensions](./Serenity.Services/BehaviorProviderExtensions.md) | Extension methods for behavior provider |
 | class [CaptureLogBehavior](./Serenity.Services/CaptureLogBehavior.md) | Capture log behavior |
 | class [CaptureLogConsts](./Serenity.Services/CaptureLogConsts.md) | Contains constants related to the capture logging |
@@ -452,6 +453,7 @@
 | interface [IDeleteRequestProcessorAsync](./Serenity.Services/IDeleteRequestProcessorAsync.md) | Abstraction for delete request handlers with an async Process method. |
 | interface [IFieldBehavior](./Serenity.Services/IFieldBehavior.md) | Represents a request handler behavior that is targeted to a field. |
 | interface [IHandlerActivator](./Serenity.Services/IHandlerActivator.md) | Abstraction for request handler activator, that is used to create instances of a handler type. |
+| interface [IHasHandlerSettings](./Serenity.Services/IHasHandlerSettings.md) | Optional capability for an [`IRequestContext`](./Serenity.Services/IRequestContext.md) implementation to provide [`RequestHandlerSettings`](./Serenity.Services/RequestHandlerSettings.md). When the context does not implement this interface, [`Default`](./Serenity.Services/RequestHandlerSettings/Default.md) is used. |
 | interface [IImplicitBehavior](./Serenity.Services/IImplicitBehavior.md) | An implicit behavior is a request handler behavior (save/list/retrieve/delete etc.) which can be implicitly activated for a row type without explicitly attached to that row type. |
 | interface [IImplicitBehaviorRegistry](./Serenity.Services/IImplicitBehaviorRegistry.md) | An interface to query list of implicit behaviors registered through the dependency resolver. Implicit behaviors are automatically activated behaviors by querying via their ActivateFor method. See [`IImplicitBehavior`](./Serenity.Services/IImplicitBehavior.md) |
 | interface [IIncludeExcludeColumns](./Serenity.Services/IIncludeExcludeColumns.md) | Abstraction for service objects containing include / exclude column sets. See [`ListRequest`](./Serenity.Services/ListRequest.md) and [`RetrieveRequest`](./Serenity.Services/RetrieveRequest.md). |
@@ -525,10 +527,13 @@
 | class [ListRequestHandlerAsync&lt;TRow&gt;](./Serenity.Services/ListRequestHandlerAsync-1.md) | Base generic class for async list request handlers that use [`ListRequest`](./Serenity.Services/ListRequest.md) as the request type, and [`ListResponse`](./Serenity.Services/ListResponse-1.md) as the response type. |
 | class [ListRequestHandlerAsync&lt;TRow,TListRequest,TListResponse&gt;](./Serenity.Services/ListRequestHandlerAsync-3.md) | Generic base class for asynchronous list request handlers |
 | abstract class [ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;](./Serenity.Services/ListRequestHandlerBase-3.md) | Abstract base class for list request handlers that share state and mode neutral helper methods between synchronous and asynchronous list request handlers. |
+| class [ListRequestPagingParams](./Serenity.Services/ListRequestPagingParams.md) | Parameters that describe how a list query should be paged, including whether the total record count is required. Used by [`ApplyPagingParams`](./Serenity.Services/ServiceQueryHelper/ApplyPagingParams.md). |
+| class [ListRequestPagingState](./Serenity.Services/ListRequestPagingState.md) | Describes the paging strategy selected for a list request, as returned by [`ApplyPagingParams`](./Serenity.Services/ServiceQueryHelper/ApplyPagingParams.md). |
 | class [ListResponse&lt;T&gt;](./Serenity.Services/ListResponse-1.md) | The response model for a list service. |
 | class [LocalizationBehavior](./Serenity.Services/LocalizationBehavior.md) | Behavior for handling localizable rows / properties. |
 | class [MasterDetailRelationBehavior](./Serenity.Services/MasterDetailRelationBehavior.md) | Behavior class that handles [`MasterDetailRelationAttribute`](./Serenity.Data.Mapping/MasterDetailRelationAttribute.md). |
 | static class [RequestHandlerExtensions](./Serenity.Services/RequestHandlerExtensions.md) | Contains extension methods to create request / response types for a request handler instance |
+| class [RequestHandlerSettings](./Serenity.Services/RequestHandlerSettings.md) | Contains settings that are applied to request handlers. Bound from the `RequestHandlerSettings` section in appsettings.json when available. |
 | enum [RetrieveColumnSelection](./Serenity.Services/RetrieveColumnSelection.md) | The group of columns to retrieve |
 | class [RetrieveRequest](./Serenity.Services/RetrieveRequest.md) | The request model for a Retrieve service |
 | class [RetrieveRequestHandler&lt;TRow&gt;](./Serenity.Services/RetrieveRequestHandler-1.md) | Base generic class for retrieve request handlers that use [`RetrieveRequest`](./Serenity.Services/RetrieveRequest.md) as the request type, and [`RetrieveResponse`](./Serenity.Services/RetrieveResponse-1.md) as the response type. |
@@ -566,12 +571,26 @@
 | class [UndeleteRequestHandlerAsync&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](./Serenity.Services/UndeleteRequestHandlerAsync-3.md) | Generic base class for asynchronous undelete request handlers |
 | abstract class [UndeleteRequestHandlerBase&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](./Serenity.Services/UndeleteRequestHandlerBase-3.md) | Abstract base class for undelete request handlers that share state and mode neutral helper methods between synchronous and asynchronous undelete request handlers. |
 | class [UndeleteResponse](./Serenity.Services/UndeleteResponse.md) | The response model for an undelete service |
-| class [UniqueConstraintSaveBehavior](./Serenity.Services/UniqueConstraintSaveBehavior.md) | Behavior that handles [`UniqueConstraintAttribute`](./Serenity.Data.Mapping/UniqueConstraintAttribute.md). |
-| class [UniqueFieldSaveBehavior](./Serenity.Services/UniqueFieldSaveBehavior.md) | Interface that handles [`UniqueConstraintAttribute`](./Serenity.Data.Mapping/UniqueConstraintAttribute.md) on fields. |
+| class [UniqueConstraintSaveBehavior](./Serenity.Services/UniqueConstraintSaveBehavior.md) | Behavior that handles [`UniqueConstraintAttribute`](./Serenity.Data.Mapping/UniqueConstraintAttribute.md) on a row. It checks each unique constraint before save (unless [`CheckBeforeSave`](./Serenity.Data.Mapping/UniqueConstraintAttribute/CheckBeforeSave.md) is disabled) by running an existence query. Override [`BuildUniqueConstraintQuery`](./Serenity.Services/BaseUniqueConstraintSaveBehavior/BuildUniqueConstraintQuery.md) in a derived behavior, or add your own behavior and set [`DisableDefaultBehavior`](./Serenity.Data.Mapping/UniqueConstraintAttribute/DisableDefaultBehavior.md), to customize or replace the pre-check. |
+| class [UniqueFieldSaveBehavior](./Serenity.Services/UniqueFieldSaveBehavior.md) | Behavior that handles [`UniqueAttribute`](./Serenity.Data.Mapping/UniqueAttribute.md) on a single field. It checks the unique constraint before save (unless [`CheckBeforeSave`](./Serenity.Data.Mapping/UniqueAttribute/CheckBeforeSave.md) is disabled) by running an existence query. Override [`BuildUniqueConstraintQuery`](./Serenity.Services/BaseUniqueConstraintSaveBehavior/BuildUniqueConstraintQuery.md) in a derived behavior, or add your own behavior and set [`DisableDefaultBehavior`](./Serenity.Data.Mapping/UniqueAttribute/DisableDefaultBehavior.md) on the field, to customize or replace the pre-check. |
 | class [UpdatableExtensionBehavior](./Serenity.Services/UpdatableExtensionBehavior.md) | Behavior that handles [`UpdatableExtensionAttribute`](./Serenity.Data.Mapping/UpdatableExtensionAttribute.md). |
 | class [UpdateInsertLogBehavior](./Serenity.Services/UpdateInsertLogBehavior.md) | Behavior class that handles assignment of relevant fields for rows with [`IInsertLogRow`](./Serenity.Data/IInsertLogRow.md) and [`IUpdateLogRow`](./Serenity.Data/IUpdateLogRow.md) interfaces |
 | class [UploadedFile](./Serenity.Services/UploadedFile.md) | Uploaded file item which is used by multiple upload editors to store file information in a string field as JSON array. |
 | class [ValidateParentBehavior](./Serenity.Services/ValidateParentBehavior.md) | Validation behavior for rows that have a parent record via [`IParentIdRow`](./Serenity.Data/IParentIdRow.md) interface. |
+
+## Serenity.Services.SqlErrors namespace
+
+| public type | description |
+| --- | --- |
+| class [DefaultSqlErrorExtractor](./Serenity.Services.SqlErrors/DefaultSqlErrorExtractor.md) | Default [`ISqlErrorExtractor`](./Serenity.Services.SqlErrors/ISqlErrorExtractor.md) that recognizes primary key, unique, foreign key and not null constraint violations for common database providers without referencing any provider specific package. |
+| class [HumanizeSqlExceptionBehavior](./Serenity.Services.SqlErrors/HumanizeSqlExceptionBehavior.md) | Implicit save/delete/undelete behavior that converts recognized database constraint violations (primary key, unique, foreign key, not null) into localized ValidationErrors using [`ISqlErrorExtractor`](./Serenity.Services.SqlErrors/ISqlErrorExtractor.md) and [`ToString`](./Serenity.Services.SqlErrors/SqlErrorInfo/ToString.md) instead of letting the raw provider exception surface as a server error. |
+| interface [ISqlErrorExtractor](./Serenity.Services.SqlErrors/ISqlErrorExtractor.md) | Extracts constraint violation information from a database exception. Implementations may be registered as a singleton to customize how primary key, unique, foreign key and not null violations are recognized and described for a specific database provider. |
+| enum [SqlErrorConstraintType](./Serenity.Services.SqlErrors/SqlErrorConstraintType.md) | Type of a database constraint violation. |
+| class [SqlErrorExtractOptions](./Serenity.Services.SqlErrors/SqlErrorExtractOptions.md) | Options for [`Extract`](./Serenity.Services.SqlErrors/ISqlErrorExtractor/Extract.md). |
+| class [SqlErrorFormatOptions](./Serenity.Services.SqlErrors/SqlErrorFormatOptions.md) | Options that customize how a [`SqlErrorInfo`](./Serenity.Services.SqlErrors/SqlErrorInfo.md) is formatted as text. |
+| class [SqlErrorInfo](./Serenity.Services.SqlErrors/SqlErrorInfo.md) | Information extracted from a database constraint violation. |
+| enum [SqlErrorOperation](./Serenity.Services.SqlErrors/SqlErrorOperation.md) | Database operation that caused a constraint violation. |
+| static class [SqlErrorValidationTexts](./Serenity.Services.SqlErrors/SqlErrorValidationTexts.md) | Validation error texts for database constraint violations. |
 
 ## Serenity.Web namespace
 
@@ -584,7 +603,6 @@
 | class [CopyTemporaryFileResult](./Serenity.Web/CopyTemporaryFileResult.md) | Result of the copying of a temporary file to its target |
 | abstract class [DataScript&lt;TData&gt;](./Serenity.Web/DataScript-1.md) | Generic subclass of the [`DataScript`](./Serenity.Web/DataScript.md). |
 | class [DataScript](./Serenity.Web/DataScript.md) | Dynamic script that contains remote data. |
-| class [DefaultImageProcessor](./Serenity.Web/DefaultImageProcessor.md) | Default implementation for the [`IImageProcessor`](./Serenity.Web/IImageProcessor.md) |
 | class [DefaultUploadProcessor](./Serenity.Web/DefaultUploadProcessor.md) | Default implementation for [`IUploadProcessor`](./Serenity.Web/IUploadProcessor.md). |
 | class [DefaultUploadValidator](./Serenity.Web/DefaultUploadValidator.md) | Default implementation for [`IUploadValidator`](./Serenity.Web/IUploadValidator.md). |
 | class [DiskUploadStorage](./Serenity.Web/DiskUploadStorage.md) | A file system based upload storage implementation |
@@ -613,7 +631,7 @@
 | class [ProcessedUploadInfo](./Serenity.Web/ProcessedUploadInfo.md) | Information about a processed temporary upload |
 | abstract class [PropertyItemsScript](./Serenity.Web/PropertyItemsScript.md) | Abstract base class for [`ColumnsScript`](./Serenity.Web/ColumnsScript.md) and [`FormScript`](./Serenity.Web/FormScript.md). |
 | class [TempUploadStorage](./Serenity.Web/TempUploadStorage.md) | A subclass of [`DiskUploadStorage`](./Serenity.Web/DiskUploadStorage.md) specialized for the temporary upload folder, allowing to purge temporary files |
-| static class [ThumbnailGenerator](./Serenity.Web/ThumbnailGenerator.md) | Static class that contains thumbnail generator methods |
+| class [ThrowingImageProcessor](./Serenity.Web/ThrowingImageProcessor.md) | A placeholder implementation of [`IImageProcessor`](./Serenity.Web/IImageProcessor.md) that throws NotImplementedException for all methods. |
 | static class [UploadFormatting](./Serenity.Web/UploadFormatting.md) | Contains helper methods for upload file name formatting |
 | static class [UploadPathHelper](./Serenity.Web/UploadPathHelper.md) | Contains helper functions for upload paths |
 | class [UploadSettings](./Serenity.Web/UploadSettings.md) | Upload settings |

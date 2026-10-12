@@ -5,7 +5,7 @@ Sets a records display order to to requested value, and also renumbers other rec
 ```csharp
 public static Task<bool> ReorderValuesAsync(IDbConnection connection, IDisplayOrderRow row, 
     ICriteria? filter = null, object? recordID = null, int newDisplayOrder = 1, 
-    bool descendingKeyOrder = false, bool hasUniqueConstraint = false, 
+    bool descendingKeyOrder = false, bool hasUniqueConstraint = false, bool preserveGaps = false, 
     CancellationToken cancellationToken = default)
 ```
 
@@ -18,6 +18,7 @@ public static Task<bool> ReorderValuesAsync(IDbConnection connection, IDisplayOr
 | newDisplayOrder | New display order of the record. |
 | descendingKeyOrder | Will records with same display order values be sorted in ascending or descending ID order? |
 | hasUniqueConstraint | True if the display order field has a unique index |
+| preserveGaps | When false (default) all display order values in the group are normalized to consecutive values starting from 1, closing any gaps. When true, only the records between the old and the new position are renumbered and the existing display order values (including any gaps) are preserved where possible, so fewer rows are updated. |
 | cancellationToken | Cancellation token |
 
 ## Return Value
@@ -40,7 +41,7 @@ Asynchronously sets a records display order to to requested value, and also renu
 public static Task<bool> ReorderValuesAsync(IDbConnection connection, string tableName, 
     Field keyField, Field orderField, ICriteria? filter = null, object? recordID = null, 
     int newDisplayOrder = 1, bool descendingKeyOrder = false, bool hasUniqueConstraint = false, 
-    CancellationToken cancellationToken = default)
+    bool preserveGaps = false, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -54,6 +55,7 @@ public static Task<bool> ReorderValuesAsync(IDbConnection connection, string tab
 | newDisplayOrder | New display order of the record. |
 | descendingKeyOrder | Will records with same display order values be sorted in ascending or descending ID order? |
 | hasUniqueConstraint | True if the entity has a unique constraint on display order column. |
+| preserveGaps | When false (default) all display order values in the group are normalized to consecutive values starting from 1, closing any gaps. When true, only the records between the old and the new position are renumbered and the existing display order values (including any gaps) are preserved where possible, so fewer rows are updated. |
 | cancellationToken | Cancellation token |
 
 ## Return Value

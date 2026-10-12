@@ -18,7 +18,7 @@ The COALESCE() expression.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | fields is null or empty. |
+| ArgumentNullException | statements is null or empty. |
 
 ## See Also
 
@@ -48,6 +48,11 @@ The COALESCE() expression.
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | values is null or empty. |
+| InvalidOperationException | A value is a query with auto parameters outside *query*'s parameter storage. |
+
+## Remarks
+
+Embedded queries are rendered as text only: their parameters are not merged. Pass queries sharing this query's parameter storage (e.g. via SubQuery()), instead of standalone queries. Independent queries without parameters are safe to embed.
 
 ## See Also
 

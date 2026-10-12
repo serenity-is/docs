@@ -16,6 +16,12 @@ public static int DeterminePrefixLength<T>(IEnumerable<T> list, Func<T, string> 
 
 The length of the common prefix, or `0` if there is none.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | list or getName is null. |
+
 ## See Also
 
 * class [PrefixHelper](../PrefixHelper.md)

@@ -1,7 +1,7 @@
 # SqlMapper class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Provides IDbConnection extension methods that wrap the corresponding Dapper SqlMapper methods, translating Serenity SQL (dialect specific brackets and parameter prefixes) via [`Translate`](./SqlConversions/Translate.md) and ensuring the connection is open before execution. It mirrors the string based `Execute` and `Query` extension methods of Dapper's `SqlMapper`, not every Dapper overload (CommandDefinition based methods, ExecuteScalar, ExecuteReader, QueryFirst, QueryMultiple, etc.), as well as their async variants. The [`ISqlQuery`](./ISqlQuery.md) overloads are Serenity specific and have no Dapper equivalent. Note that unlike [`SqlHelper`](./SqlHelper.md) methods, these extension methods do not go through [`ISqlOperationInterceptor`](./ISqlOperationInterceptor.md).
+Provides IDbConnection extension methods that wrap the corresponding Dapper SqlMapper methods, translating Serenity SQL (dialect specific brackets and parameter prefixes) via [`Translate`](./SqlConversions/Translate.md) and ensuring the connection is open before execution. It mirrors the string based `Execute` and `Query` extension methods of Dapper's `SqlMapper`, not every Dapper overload (CommandDefinition based methods, ExecuteScalar, ExecuteReader, QueryFirst, QueryMultiple, etc.), as well as their async variants. The [`ISqlQuery`](./ISqlQuery.md) overloads are Serenity specific and have no Dapper equivalent. Note that unlike [`SqlHelper`](./SqlHelper.md) methods, these extension methods do not go through [`ISqlOperationInterceptor`](./ISqlOperationInterceptor.md). Transaction handling: an explicitly passed `transaction` takes precedence; when it is null the connection's ambient transaction applies. That works because the connection (usually a [`WrappedConnection`](./WrappedConnection.md)) enlists the ambient transaction at command creation, and Dapper only overwrites it with a non-null transaction argument. An explicit Dapper `commandTimeout` takes precedence; when it is omitted, [`WrappedConnection`](./WrappedConnection.md) applies its configured timeout or [`DefaultCommandTimeout`](./SqlSettings/DefaultCommandTimeout.md) when creating the command. Serenity query parameter names retain the `@` prefix while SQL text is translated to the connection dialect. Dapper strips parameter prefixes when matching names, so query parameters such as `@Id` bind correctly to Oracle SQL using `:Id`.
 
 ```csharp
 public static class SqlMapper
@@ -20,4 +20,4 @@ public static class SqlMapper
 
 ## See Also
 
-* **Source:** *[DapperCore.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/SqlHelpers/DapperCore.cs)*
+* **Source:** *[DapperCore.cs](https://github.com/serenity-is/Serenity/blob/a44cc9bada51404d7ae45640390b774709c93742/src/services/Data/SqlHelpers/DapperCore.cs)*

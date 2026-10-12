@@ -22,4 +22,4 @@ public interface ISqlQueryExtensible
 
 ## See Also
 
-* **Source:** *[ISqlQueryExtensible.cs](https://github.com/serenity-is/Serenity/blob/a33f821b7a5431477e50f129ce63ce324c984018/src/services/Data/QueryModel/ISqlQueryExtensible.cs)*
+* **Source:** *[ISqlQueryExtensible.cs](https://github.com/serenity-is/Serenity/blob/0aaa1da3453671b5b3a27163a81252705e826f6f/src/services/Data/QueryModel/ISqlQueryExtensible.cs)*

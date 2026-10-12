@@ -5,7 +5,7 @@ Sets a records display order to to requested value, and also renumbers other rec
 ```csharp
 public static bool ReorderValues(IDbConnection connection, IDisplayOrderRow row, 
     ICriteria? filter = null, object? recordID = null, int newDisplayOrder = 1, 
-    bool descendingKeyOrder = false, bool hasUniqueConstraint = false)
+    bool descendingKeyOrder = false, bool hasUniqueConstraint = false, bool preserveGaps = false)
 ```
 
 | parameter | description |
@@ -17,6 +17,7 @@ public static bool ReorderValues(IDbConnection connection, IDisplayOrderRow row,
 | newDisplayOrder | New display order of the record. |
 | descendingKeyOrder | Will records with same display order values be sorted in ascending or descending ID order? For example, if records with ID's 1, 2, 3 has display order value of "0", their actual display orders are 1, 2 and 3. If this parameter is set to true (descending), their display orders will become 3, 2, 1. This parameter controls if records that are added recently and has no display order value assigned (or 0) be shown at start or at the end. |
 | hasUniqueConstraint | True if the display order field has a unique index |
+| preserveGaps | When false (default) all display order values in the group are normalized to consecutive values starting from 1, closing any gaps. When true, only the records between the old and the new position are renumbered and the existing display order values (including any gaps) are preserved where possible, so fewer rows are updated. |
 
 ## Return Value
 
@@ -37,7 +38,7 @@ Sets a records display order to to requested value, and also renumbers other rec
 ```csharp
 public static bool ReorderValues(IDbConnection connection, string tableName, Field keyField, 
     Field orderField, ICriteria? filter = null, object? recordID = null, int newDisplayOrder = 1, 
-    bool descendingKeyOrder = false, bool hasUniqueConstraint = false)
+    bool descendingKeyOrder = false, bool hasUniqueConstraint = false, bool preserveGaps = false)
 ```
 
 | parameter | description |
@@ -51,6 +52,7 @@ public static bool ReorderValues(IDbConnection connection, string tableName, Fie
 | newDisplayOrder | New display order of the record. |
 | descendingKeyOrder | Will records with same display order values be sorted in ascending or descending ID order? For example, if records with ID's 1, 2, 3 has display order value of "0", their actual display orders are 1, 2 and 3. If this parameter is set to true (descending), their display orders will become 3, 2, 1. This parameter controls if records that are added recently and has no display order value assigned (or 0) be shown at start or at the end. |
 | hasUniqueConstraint | True if the entity has a unique constraint on display order column. |
+| preserveGaps | When false (default) all display order values in the group are normalized to consecutive values starting from 1, closing any gaps. When true, only the records between the old and the new position are renumbered and the existing display order values (including any gaps) are preserved where possible, so fewer rows are updated. |
 
 ## Return Value
 

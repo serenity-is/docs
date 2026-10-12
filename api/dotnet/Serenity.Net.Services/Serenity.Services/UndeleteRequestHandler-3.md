@@ -50,4 +50,4 @@ public class UndeleteRequestHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [UndeleteRequest](./UndeleteRequest.md)
 * class [UndeleteResponse](./UndeleteResponse.md)
-* **Source:** *[UndeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/Undelete/UndeleteRequestHandler.cs)*
+* **Source:** *[UndeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/372f07a8065a8f6b0418e39d746d4dc59a46308b/src/services/RequestHandlers/Undelete/UndeleteRequestHandler.cs)*

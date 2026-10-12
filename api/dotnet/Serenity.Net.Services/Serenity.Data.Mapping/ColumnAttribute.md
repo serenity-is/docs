@@ -4,7 +4,7 @@
 Explicitly specifies the database column name for property. Use this attribute if matching column name in database is different than the property name.
 
 ```csharp
-[AttributeUsage(AttributeTargets.All)]
+[AttributeUsage(AttributeTargets.Property)]
 public class ColumnAttribute : Attribute
 ```
 
@@ -17,4 +17,4 @@ public class ColumnAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[ColumnAttribute.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Mapping/ColumnAttribute.cs)*
+* **Source:** *[ColumnAttribute.cs](https://github.com/serenity-is/Serenity/blob/58a96041936e2723b36180dfb2dcaa910540d074/src/services/Data/Mapping/ColumnAttribute.cs)*

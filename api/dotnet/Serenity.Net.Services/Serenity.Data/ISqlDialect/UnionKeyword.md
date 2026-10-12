@@ -14,6 +14,10 @@ public string UnionKeyword(SqlUnionType unionType)
 
 The union keyword.
 
+## Remarks
+
+Throws NotImplementedException for union types the dialect doesn't support (e.g. INTERSECT / EXCEPT on MySQL and Firebird).
+
 ## See Also
 
 * enum [SqlUnionType](../SqlUnionType.md)

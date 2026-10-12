@@ -12,6 +12,7 @@ public class ConnectionStringEntry
 | name | description |
 | --- | --- |
 | [ConnectionStringEntry](ConnectionStringEntry/ConnectionStringEntry.md)() | The default constructor. |
+| [Comparer](ConnectionStringEntry/Comparer.md) { get; set; } | Gets or sets the comparer specification used to compare string field values for this connection, e.g. "Ordinal", "OrdinalIgnoreCase", "CurrentCultureIgnoreCase", "tr-TR" or "tr-TR:IgnoreCase". Defaults to null, meaning [`DefaultComparer`](./SqlSettings/DefaultComparer.md) is used. |
 | [ConnectionString](ConnectionStringEntry/ConnectionString.md) { get; set; } | Gets or sets the connection string. |
 | [Dialect](ConnectionStringEntry/Dialect.md) { get; set; } | Gets or sets the dialect name. |
 | [DialectInstance](ConnectionStringEntry/DialectInstance.md) { get; set; } | Gets or sets the dialect instance. |
@@ -21,4 +22,4 @@ public class ConnectionStringEntry
 
 ## See Also
 
-* **Source:** *[ConnectionStringEntry.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Connections/ConnectionStringEntry.cs)*
+* **Source:** *[ConnectionStringEntry.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Data/Connections/ConnectionStringEntry.cs)*

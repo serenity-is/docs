@@ -5,6 +5,7 @@
 | public type | description |
 | --- | --- |
 | static class [DataProtectorBinaryTokenExtensions](./Serenity/DataProtectorBinaryTokenExtensions.md) | Extension methods for IDataProtector to support tokens created via a BinaryWriter. |
+| class [HttpContextServiceProviderAccessor](./Serenity/HttpContextServiceProviderAccessor.md) | An IServiceProviderAccessor that uses the current HTTP request's scoped service provider when available, falling back to the root provider otherwise. |
 | class [ScriptCulture](./Serenity/ScriptCulture.md) | Culture options that are passed to the client side. |
 
 ## Serenity.ComponentModel namespace
@@ -58,6 +59,7 @@
 | class [AuthorizeDeleteAttribute](./Serenity.Services/AuthorizeDeleteAttribute.md) | Authorizes access to a service method by reading one of DeletePermissionAttribute, ModifyPermissionAttribute or ReadPermissionAttribute from the target type, which is usually a Row class. |
 | class [AuthorizeListAttribute](./Serenity.Services/AuthorizeListAttribute.md) | Authorizes access to a service method by reading ReadPermissionAttribute. It also allows lookup mode access (as an OR permission) if the source type has ServiceLookupPermissionAttribute. |
 | class [AuthorizeRetrieveAttribute](./Serenity.Services/AuthorizeRetrieveAttribute.md) | Authorizes retrieve access to a service method by reading ReadPermissionAttribute. |
+| class [AuthorizeUndeleteAttribute](./Serenity.Services/AuthorizeUndeleteAttribute.md) | Authorizes access to a service method by reading one of UndeletePermissionAttribute, DeletePermissionAttribute, ModifyPermissionAttribute or ReadPermissionAttribute from the target type, which is usually a Row class. |
 | class [AuthorizeUpdateAttribute](./Serenity.Services/AuthorizeUpdateAttribute.md) | Authorizes access to a service method by reading one of UpdatePermissionAttribute, ModifyPermissionAttribute or ReadPermissionAttribute from the target type, which is usually a Row class. |
 | static class [EndpointExtensions](./Serenity.Services/EndpointExtensions.md) | Contains some extensions for service endpoints. |
 | class [FileUploadBehavior](./Serenity.Services/FileUploadBehavior.md) | Behavior class that handles FileUploadEditorAttribute and ImageUploadEditorAttribute. |

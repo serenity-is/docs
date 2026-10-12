@@ -13,6 +13,7 @@ public interface IListRequestHandler : IRequestHandler
 | --- | --- |
 | [Connection](IListRequestHandler/Connection.md) { get; } | Gets the current connection. |
 | [Context](IListRequestHandler/Context.md) { get; } | Gets the current request context. |
+| [HandlerSettings](IListRequestHandler/HandlerSettings.md) { get; } | Gets the request handler settings, e.g. the default / maximum page size. The default implementation reads them from an [`IHasHandlerSettings`](./IHasHandlerSettings.md) capable request context, falling back to [`Default`](./RequestHandlerSettings/Default.md) (no limits). |
 | [Request](IListRequestHandler/Request.md) { get; } | Gets the list request. |
 | [Response](IListRequestHandler/Response.md) { get; } | Gets the list response. |
 | [Row](IListRequestHandler/Row.md) { get; } | Gets the row used for querying / metadata lookup. |
@@ -24,4 +25,4 @@ public interface IListRequestHandler : IRequestHandler
 ## See Also
 
 * interface [IRequestHandler](../../Serenity.Net.Core/Serenity.Services/IRequestHandler.md)
-* **Source:** *[IListRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/RequestHandlers/List/IListRequestHandler.cs)*
+* **Source:** *[IListRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/2744f4fd2c213040df07c1f5162a645eeacce25f/src/services/RequestHandlers/List/IListRequestHandler.cs)*

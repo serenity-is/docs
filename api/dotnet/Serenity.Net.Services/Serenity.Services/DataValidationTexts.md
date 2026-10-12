@@ -11,6 +11,7 @@ public static class DataValidationTexts
 | --- | --- |
 | static readonly [ArgumentIsNull](DataValidationTexts/ArgumentIsNull.md) |  |
 | static readonly [ArgumentOutOfRange](DataValidationTexts/ArgumentOutOfRange.md) |  |
+| static readonly [ConcurrencyConflict](DataValidationTexts/ConcurrencyConflict.md) |  |
 | static readonly [EntityForeignKeyViolation](DataValidationTexts/EntityForeignKeyViolation.md) |  |
 | static readonly [EntityHasDeletedParent](DataValidationTexts/EntityHasDeletedParent.md) |  |
 | static readonly [EntityIsNotActive](DataValidationTexts/EntityIsNotActive.md) |  |
@@ -27,4 +28,4 @@ public static class DataValidationTexts
 
 ## See Also
 
-* **Source:** *[DataValidationTexts.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/texts/DataValidationTexts.cs)*
+* **Source:** *[DataValidationTexts.cs](https://github.com/serenity-is/Serenity/blob/7301074ec15322646ac6e8f6eededa740961d5e7/src/services/texts/DataValidationTexts.cs)*

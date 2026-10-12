@@ -3,12 +3,12 @@
 Creates a new "the Field NOT CONTAINS mask" criteria.
 
 ```csharp
-public BaseCriteria NotContains(string mask, bool upper = false)
+public BaseCriteria NotContains(string text, bool upper = false)
 ```
 
 | parameter | description |
 | --- | --- |
-| mask | The mask. |
+| text | The literal text to search for. |
 | upper | True to use the UPPER function on both sides. |
 
 ## Return Value

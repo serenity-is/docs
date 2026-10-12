@@ -3,7 +3,7 @@
 Formats a DELETE query.
 
 ```csharp
-public static string Format(string tableName, string where, ISqlDialect? dialect = null)
+public static string Format(string tableName, string? where, ISqlDialect? dialect = null)
 ```
 
 | parameter | description |
@@ -20,7 +20,7 @@ Formatted query.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | tableName is null or empty. |
+| ArgumentException | tableName is null or empty. |
 
 ## See Also
 

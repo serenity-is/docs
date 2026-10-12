@@ -22,4 +22,4 @@ public abstract class BaseCriteriaVisitor
 
 ## See Also
 
-* **Source:** *[BaseCriteriaVisitor.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Data/Criteria/BaseCriteriaVisitor.cs)*
+* **Source:** *[BaseCriteriaVisitor.cs](https://github.com/serenity-is/Serenity/blob/489f72f785a9733fa81e465e1a3854209296a6c0/src/services/Data/Criteria/BaseCriteriaVisitor.cs)*

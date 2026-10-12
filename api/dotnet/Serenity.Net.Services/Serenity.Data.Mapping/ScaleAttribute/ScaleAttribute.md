@@ -1,6 +1,6 @@
 # ScaleAttribute constructor
 
-Determines numeric scale (decimal places) for the field.
+Initializes a new instance of the [`ScaleAttribute`](../ScaleAttribute.md) class.
 
 ```csharp
 public ScaleAttribute(int value)
@@ -10,9 +10,11 @@ public ScaleAttribute(int value)
 | --- | --- |
 | value | The value. |
 
-## Remarks
+## Exceptions
 
-Initializes a new instance of the [`ScaleAttribute`](../ScaleAttribute.md) class.
+| exception | condition |
+| --- | --- |
+| ArgumentOutOfRangeException | value is negative. |
 
 ## See Also
 

@@ -53,4 +53,4 @@ public class SaveRequestHandlerAsync<TRow, TSaveRequest, TSaveResponse> :
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [SaveRequest&lt;TEntity&gt;](./SaveRequest-1.md)
 * class [SaveResponse](./SaveResponse.md)
-* **Source:** *[SaveRequestHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/2a803ec2ea06e7ccde726327384096507a8532d0/src/services/RequestHandlers/Save/SaveRequestHandlerAsync.cs)*
+* **Source:** *[SaveRequestHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/8ebae29aba9c0164fa5c8a76801f7bca72290c39/src/services/RequestHandlers/Save/SaveRequestHandlerAsync.cs)*

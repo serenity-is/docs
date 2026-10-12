@@ -21,7 +21,7 @@ protected virtual void AddFieldContainsCriteria(Field field, string containsText
 
 | exception | condition |
 | --- | --- |
-| ArgumentOutOfRangeException | *searchType* is not a supported [`SearchType`](../../Serenity.Data.Mapping/SearchType.md). |
+| ArgumentOutOfRangeException | *searchType* is not a supported [`SearchType`](../../Serenity.Data.Mapping/SearchType.md), or *field* is not mapped. |
 
 ## See Also
 

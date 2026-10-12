@@ -1,6 +1,6 @@
 # ConnectionExtensions.NewFor&lt;TClass&gt; method
 
-Creates a new connection for the specified class, determining the connection key by checking its [`ConnectionKeyAttribute`](../ConnectionKeyAttribute.md).
+Creates a new connection for the specified class, determining the connection key by checking its ConnectionKeyAttribute.
 
 ```csharp
 public static IDbConnection NewFor<TClass>(this ISqlConnections factory)

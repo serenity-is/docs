@@ -26,4 +26,4 @@ public static class Sql
 
 ## See Also
 
-* **Source:** *[Sql.cs](https://github.com/serenity-is/Serenity/blob/0c293f68db65ac83eb383b31fa543fcb5e4ad533/src/services/Data/SqlHelpers/Sql.cs)*
+* **Source:** *[Sql.cs](https://github.com/serenity-is/Serenity/blob/6e521bfc632b686bd33cfa0fa27cc54852a56835/src/services/Data/SqlHelpers/Sql.cs)*

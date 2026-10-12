@@ -53,7 +53,7 @@ public static SqlQuery ApplySort(this SqlQuery query, string? sort, bool descend
 | parameter | description |
 | --- | --- |
 | query | Query |
-| sort | Sort field, ignored if null, empty or not a usable field (e.g. a field that is selected in the query or available in the row) |
+| sort | Sort field, ignored if null, empty or not a usable field (e.g. a field that is selected in the query or available in the row). Note that this does not do any permission checks, so they must be pre-handled separately by the caller. |
 | descending | Descending flag |
 
 ## Exceptions

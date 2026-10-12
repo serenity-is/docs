@@ -14,6 +14,7 @@ public class CriteriaFieldExpressionReplacer : SafeCriteriaValidator
 | lookupAccessMode | Use lookup access mode. In the lookup access mode only the lookup fields can be used in the filter. Default is false. |
 | dialect | Optional dialect |
 | toCriteria | Optional field to criteria converter |
+| allowFilterField | Optional field filter validator. If provided, it will be used to determine if a field can be filtered instead of the default logic using see permissions argument. |
 
 ## Public Members
 
@@ -21,6 +22,7 @@ public class CriteriaFieldExpressionReplacer : SafeCriteriaValidator
 | --- | --- |
 | [CriteriaFieldExpressionReplacer](CriteriaFieldExpressionReplacer/CriteriaFieldExpressionReplacer.md)(…) | Converts field names in a criteria to their corresponding SQL field expressions. |
 | [Process](CriteriaFieldExpressionReplacer/Process.md)(…) | Visits the criteria for conversion and returns a processed criteria containing replaced field expressions. |
+| static [IsFieldFilterAllowed](CriteriaFieldExpressionReplacer/IsFieldFilterAllowed.md)(…) | Returns whether filtering a field is allowed by its flags and permissions. |
 
 ## Protected Members
 
@@ -47,4 +49,4 @@ Initializes a new instance of the class.
 ## See Also
 
 * class [SafeCriteriaValidator](./SafeCriteriaValidator.md)
-* **Source:** *[CriteriaFieldExpressionReplacer.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/Helpers/CriteriaFieldExpressionReplacer.cs)*
+* **Source:** *[CriteriaFieldExpressionReplacer.cs](https://github.com/serenity-is/Serenity/blob/44c6f09050376b55fafbf2f1e03af470c1820b25/src/services/RequestHandlers/Helpers/CriteriaFieldExpressionReplacer.cs)*

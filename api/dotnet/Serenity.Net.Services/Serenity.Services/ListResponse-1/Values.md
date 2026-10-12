@@ -1,6 +1,6 @@
 # ListResponse&lt;T&gt;.Values property
 
-List of distinct values, if DistinctFields are passed in the list request. Each element of the list is an array of distinct values if multiple distinct fields are requested.
+List of distinct values, if DistinctFields are passed in the list request. Values for each distinct row are appended in the requested field order. When multiple fields are requested, the list is flat and values are not grouped into tuples.
 
 ```csharp
 public List<object?>? Values { get; set; }

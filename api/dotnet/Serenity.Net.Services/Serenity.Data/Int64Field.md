@@ -34,4 +34,4 @@ Initializes a new instance of the [`Int64Field`](./Int64Field.md) class.
 ## See Also
 
 * class [GenericValueField&lt;TValue&gt;](./GenericValueField-1.md)
-* **Source:** *[Int64Field.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Entity/FieldTypes/Int64Field.cs)*
+* **Source:** *[Int64Field.cs](https://github.com/serenity-is/Serenity/blob/a41029d5f581006b844705e0b0f9995c0153d9b9/src/services/Entity/FieldTypes/Int64Field.cs)*

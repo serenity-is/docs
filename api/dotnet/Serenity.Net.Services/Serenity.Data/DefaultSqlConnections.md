@@ -45,4 +45,4 @@ Creates a new instance.
 
 * interface [IConnectionKeyFallbacks](./IConnectionKeyFallbacks.md)
 * interface [ISqlConnections](./ISqlConnections.md)
-* **Source:** *[DefaultSqlConnections.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Connections/DefaultSqlConnections.cs)*
+* **Source:** *[DefaultSqlConnections.cs](https://github.com/serenity-is/Serenity/blob/0145f113923a850aa89700a80e2fe835dafd9316/src/services/Data/Connections/DefaultSqlConnections.cs)*

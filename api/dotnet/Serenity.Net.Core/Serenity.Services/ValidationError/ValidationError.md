@@ -1,4 +1,4 @@
-# ValidationError constructor (1 of 9)
+# ValidationError constructor (1 of 10)
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
 
@@ -12,7 +12,7 @@ public ValidationError()
 
 ---
 
-# ValidationError constructor (2 of 9)
+# ValidationError constructor (2 of 10)
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
 
@@ -30,7 +30,7 @@ public ValidationError(string message)
 
 ---
 
-# ValidationError constructor (3 of 9)
+# ValidationError constructor (3 of 10)
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
 
@@ -51,7 +51,7 @@ public ValidationError(ITextLocalizer localizer, LocalText message)
 
 ---
 
-# ValidationError constructor (4 of 9)
+# ValidationError constructor (4 of 10)
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
 
@@ -70,7 +70,7 @@ public ValidationError(string message, Exception innerException)
 
 ---
 
-# ValidationError constructor (5 of 9)
+# ValidationError constructor (5 of 10)
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
 
@@ -89,7 +89,7 @@ public ValidationError(string errorCode, string errorMessage)
 
 ---
 
-# ValidationError constructor (6 of 9)
+# ValidationError constructor (6 of 10)
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
 
@@ -111,7 +111,7 @@ public ValidationError(ITextLocalizer localizer, string errorCode, LocalText err
 
 ---
 
-# ValidationError constructor (7 of 9)
+# ValidationError constructor (7 of 10)
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
 
@@ -131,7 +131,7 @@ public ValidationError(string errorCode, string? arguments, string errorMessage)
 
 ---
 
-# ValidationError constructor (8 of 9)
+# ValidationError constructor (8 of 10)
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
 
@@ -155,7 +155,29 @@ public ValidationError(ITextLocalizer localizer, string errorCode, string? argum
 
 ---
 
-# ValidationError constructor (9 of 9)
+# ValidationError constructor (9 of 10)
+
+Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
+
+```csharp
+public ValidationError(string errorCode, string? arguments, string errorMessage, 
+    Exception innerException)
+```
+
+| parameter | description |
+| --- | --- |
+| errorCode | The error code. |
+| arguments | The arguments. |
+| errorMessage | The error message. |
+| innerException | The exception that is the cause of the current exception. |
+
+## See Also
+
+* class [ValidationError](../ValidationError.md)
+
+---
+
+# ValidationError constructor (10 of 10)
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
 

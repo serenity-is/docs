@@ -3,18 +3,18 @@
 Default [`IBehaviorFactory`](../IBehaviorFactory.md) implementation.
 
 ```csharp
-public DefaultBehaviorFactory(IServiceProvider provider)
+public DefaultBehaviorFactory(IServiceProviderAccessor serviceProviderAccessor)
 ```
 
 | parameter | description |
 | --- | --- |
-| provider | Service provider which will be used to resolve the services that behavior classes might require |
+| serviceProviderAccessor | Accessor for the service provider which will be used to resolve the services that behavior classes might require |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | *provider* is `null`. |
+| ArgumentNullException | *serviceProviderAccessor* is `null`. |
 
 ## Remarks
 
@@ -22,4 +22,5 @@ Initializes a new instance of the class.
 
 ## See Also
 
+* interface [IServiceProviderAccessor](../../../Serenity.Net.Core/Serenity/IServiceProviderAccessor.md)
 * class [DefaultBehaviorFactory](../DefaultBehaviorFactory.md)

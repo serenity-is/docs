@@ -19,7 +19,7 @@ The Convert() expression.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | type or field is null or empty. |
+| ArgumentException | type or field is null or empty. |
 
 ## See Also
 

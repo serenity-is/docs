@@ -18,6 +18,10 @@ public override void GetFromReader(IDataReader reader, int index, IRow row)
 | --- | --- |
 | ArgumentNullException | reader is null. |
 
+## Remarks
+
+The value returned by the data reader is assumed to already be stored in the field's [`DateTimeKind`](./DateTimeKind.md); the kind is only labeled via DateTimeKind), not converted.
+
 ## See Also
 
 * interface [IRow](../IRow.md)

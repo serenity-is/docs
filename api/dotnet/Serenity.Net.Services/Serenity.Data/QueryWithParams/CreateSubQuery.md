@@ -1,6 +1,6 @@
 # QueryWithParams.CreateSubQuery&lt;TQuery&gt; method
 
-Creates a new query that shares parameter dictionary with this query.
+Creates a new query that shares parameter storage and dialect with this query tree.
 
 ```csharp
 public TQuery CreateSubQuery<TQuery>()

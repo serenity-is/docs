@@ -65,7 +65,7 @@ The COUNT() expression.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty. |
+| ArgumentException | field is null or empty. |
 
 ## See Also
 
@@ -94,7 +94,7 @@ The COUNT() expression.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty. |
+| ArgumentException | field is null or empty. |
 
 ## See Also
 

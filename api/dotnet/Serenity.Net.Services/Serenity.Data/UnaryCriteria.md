@@ -19,4 +19,4 @@ public class UnaryCriteria : BaseCriteria
 ## See Also
 
 * class [BaseCriteria](./BaseCriteria.md)
-* **Source:** *[UnaryCriteria.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Criteria/UnaryCriteria.cs)*
+* **Source:** *[UnaryCriteria.cs](https://github.com/serenity-is/Serenity/blob/ef18ddcdaf2278c37fad235e9284bfa88e5d70ae/src/services/Data/Criteria/UnaryCriteria.cs)*

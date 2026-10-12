@@ -8,21 +8,13 @@ Determines size (max length or numeric precision for) for the field.
 public class SizeAttribute : Attribute
 ```
 
-| parameter | description |
-| --- | --- |
-| value | The value. |
-
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [SizeAttribute](SizeAttribute/SizeAttribute.md)(…) | Determines size (max length or numeric precision for) for the field. |
+| [SizeAttribute](SizeAttribute/SizeAttribute.md)(…) | Initializes a new instance of the [`SizeAttribute`](./SizeAttribute.md) class. |
 | [Value](SizeAttribute/Value.md) { get; set; } | Gets or sets the value. |
-
-## Remarks
-
-Initializes a new instance of the [`SizeAttribute`](./SizeAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[SizeAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Mapping/SizeAttribute.cs)*
+* **Source:** *[SizeAttribute.cs](https://github.com/serenity-is/Serenity/blob/58a96041936e2723b36180dfb2dcaa910540d074/src/services/Data/Mapping/SizeAttribute.cs)*

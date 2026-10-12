@@ -25,10 +25,15 @@ public class StreamField : GenericClassField<Stream>
 | static [Factory](StreamField/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
 | override [AsSqlValue](StreamField/AsSqlValue.md)(…) |  |
 | override [GetFromReader](StreamField/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [IndexCompare](StreamField/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort. |
 | override [ValueFromJson](StreamField/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
 | override [ValueToJson](StreamField/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
 | static [CopyStream](StreamField/CopyStream.md)(…) | Copies the stream. |
+
+## Protected Members
+
+| name | description |
+| --- | --- |
+| override [CompareValues](StreamField/CompareValues.md)(…) | Compares two values of this field using the specified comparer. |
 
 ## Remarks
 
@@ -37,4 +42,4 @@ Initializes a new instance of the [`StreamField`](./StreamField.md) class.
 ## See Also
 
 * class [GenericClassField&lt;TValue&gt;](./GenericClassField-1.md)
-* **Source:** *[StreamField.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Entity/FieldTypes/StreamField.cs)*
+* **Source:** *[StreamField.cs](https://github.com/serenity-is/Serenity/blob/6e3d9856e875cdcea9be4e3e44edef50facbe8f3/src/services/Entity/FieldTypes/StreamField.cs)*

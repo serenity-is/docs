@@ -12,6 +12,8 @@ public static class ServiceQueryHelper
 | name | description |
 | --- | --- |
 | static [ApplyContainsText](ServiceQueryHelper/ApplyContainsText.md)(…) | Applies contains text criteria to the query |
+| static [ApplyPagingLimits](ServiceQueryHelper/ApplyPagingLimits.md)(…) | Applies the configured paging limits ([`DefaultPageSize`](./RequestHandlerSettings/DefaultPageSize.md) and [`MaxPageSize`](./RequestHandlerSettings/MaxPageSize.md)) to [`Take`](./ListRequestPagingParams/Take.md), changing it in place. A zero take is replaced by the default page size, then clamped to the maximum page size when set. |
+| static [ApplyPagingParams](ServiceQueryHelper/ApplyPagingParams.md)(…) | Applies paging and count parameters, optionally requesting one additional row to detect whether more results are available. Whether the total count is calculated is resolved from [`ListRequestPagingParams`](./ListRequestPagingParams.md) (see [`ShouldExcludeTotalCount`](./ListRequestPagingParams/ShouldExcludeTotalCount.md)). |
 | static [ApplySkipTakeAndCount](ServiceQueryHelper/ApplySkipTakeAndCount.md)(…) | Applies skip, take and exclude total count parameters to the query. |
 | static [ApplySort](ServiceQueryHelper/ApplySort.md)(…) | Applies the sort order to the query (3 methods) |
 | static [GetContainsTextFilter](ServiceQueryHelper/GetContainsTextFilter.md)(…) | Creates a contains text criteria |
@@ -20,4 +22,4 @@ public static class ServiceQueryHelper
 
 ## See Also
 
-* **Source:** *[ServiceQueryHelper.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/Helpers/ServiceQueryHelper.cs)*
+* **Source:** *[ServiceQueryHelper.cs](https://github.com/serenity-is/Serenity/blob/672c3a9116183bcea311db48e4da2bc19688f626/src/services/RequestHandlers/Helpers/ServiceQueryHelper.cs)*

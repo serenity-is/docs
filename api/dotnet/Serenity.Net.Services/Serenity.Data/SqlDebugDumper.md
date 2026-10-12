@@ -16,4 +16,4 @@ public class SqlDebugDumper
 
 ## See Also
 
-* **Source:** *[SqlDebugDumper.cs](https://github.com/serenity-is/Serenity/blob/1547fabf1541054fe943b6a29c0d181fd84080e0/src/services/Data/SqlHelpers/SqlDebugDumper.cs)*
+* **Source:** *[SqlDebugDumper.cs](https://github.com/serenity-is/Serenity/blob/c774d7c2d9f32c2ad8ee1eb0094d9caa39d0d360/src/services/Data/SqlHelpers/SqlDebugDumper.cs)*

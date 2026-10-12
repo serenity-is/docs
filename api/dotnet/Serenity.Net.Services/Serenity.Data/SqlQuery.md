@@ -37,7 +37,7 @@ public class SqlQuery : QueryWithParams, IFilterableQuery, IGetExpressionByName,
 | [SelectMany](SqlQuery/SelectMany.md)(…) | Adds field names or SQL expressions to the SELECT statement. |
 | [Skip](SqlQuery/Skip.md)() | Gets current SKIP value. |
 | [Skip](SqlQuery/Skip.md)(…) | Sets SKIP value. Used for paging. |
-| [SubQuery](SqlQuery/SubQuery.md)() | Creates a new query that shares parameter dictionary with this query. |
+| [SubQuery](SqlQuery/SubQuery.md)() | Creates a new query that shares parameter storage and dialect with this query tree. |
 | [Take](SqlQuery/Take.md)() | Gets TAKE/TOP value. |
 | [Take](SqlQuery/Take.md)(…) | Sets TAKE/TOP value. Used for paging. |
 | override [ToString](SqlQuery/ToString.md)() | Formats SQL Query as string. If paging is used and skip requested, multiple queries might be created one after each other. |
@@ -53,4 +53,4 @@ public class SqlQuery : QueryWithParams, IFilterableQuery, IGetExpressionByName,
 * interface [IGetExpressionByName](./IGetExpressionByName.md)
 * interface [ISqlQuery](./ISqlQuery.md)
 * interface [ISqlQueryExtensible](./ISqlQueryExtensible.md)
-* **Source:** *[SqlQuery.cs](https://github.com/serenity-is/Serenity/blob/a33f821b7a5431477e50f129ce63ce324c984018/src/services/Data/FluentSql/SqlQuery.cs)*
+* **Source:** *[SqlQuery.cs](https://github.com/serenity-is/Serenity/blob/d07b67482bbb00074c10975037c021ac4de205eb/src/services/Data/FluentSql/SqlQuery.cs)*

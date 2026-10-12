@@ -41,6 +41,7 @@ public abstract class DeleteRequestHandlerBase<TRow, TDeleteRequest, TDeleteResp
 | [DeleteRequestHandlerBase](DeleteRequestHandlerBase-3/DeleteRequestHandlerBase.md)(…) | Abstract base class for delete request handlers that share state and mode neutral helper methods between synchronous and asynchronous delete request handlers. |
 | virtual [GetBehaviors](DeleteRequestHandlerBase-3/GetBehaviors.md)() | Gets the list of delete behaviors. |
 | virtual [GetDisplayOrderFilter](DeleteRequestHandlerBase-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements [`IDisplayOrderRow`](../Serenity.Data/IDisplayOrderRow.md) interface |
+| virtual [GetRequestEntityId](DeleteRequestHandlerBase-3/GetRequestEntityId.md)() | Gets the id of the entity targeted by the current request, converted to the value type of the row's id field. Used both for loading the entity and for building the error returned when it cannot be loaded, so that a caller cannot distinguish a missing record from one they are not allowed to touch. |
 | virtual [InvalidateCacheOnCommit](DeleteRequestHandlerBase-3/InvalidateCacheOnCommit.md)() | Attaches a cache invalidation call to to OnCommit callback of the current unit of work. This would clear cached items related to this row type. |
 | virtual [IsDeleted](DeleteRequestHandlerBase-3/IsDeleted.md)() | Checks if the entity is already deleted |
 | virtual [ValidatePermissions](DeleteRequestHandlerBase-3/ValidatePermissions.md)() | Validates the user permissions for delete operation |
@@ -62,4 +63,4 @@ Initializes a new instance of the class.
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [DeleteRequest](./DeleteRequest.md)
 * class [DeleteResponse](./DeleteResponse.md)
-* **Source:** *[DeleteRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/Delete/DeleteRequestHandlerBase.cs)*
+* **Source:** *[DeleteRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/f2b2ee26e07305a5f223e2791689f7125706b70b/src/services/RequestHandlers/Delete/DeleteRequestHandlerBase.cs)*

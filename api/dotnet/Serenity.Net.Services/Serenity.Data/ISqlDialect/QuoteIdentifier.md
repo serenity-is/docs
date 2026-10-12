@@ -1,6 +1,6 @@
 # ISqlDialect.QuoteIdentifier method
 
-Quotes the identifier.
+Quotes the identifier, escaping embedded occurrences of the dialect's closing quote character.
 
 ```csharp
 public string QuoteIdentifier(string s)

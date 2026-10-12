@@ -47,4 +47,4 @@ public abstract class BasePermissionService : IPermissionService, ITransientGran
 
 * interface [IPermissionService](../../Serenity.Net.Core/Serenity.Abstractions/IPermissionService.md)
 * interface [ITransientGrantor](../../Serenity.Net.Core/Serenity.Abstractions/ITransientGrantor.md)
-* **Source:** *[BasePermissionService.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/Authorization/BasePermissionService.cs)*
+* **Source:** *[BasePermissionService.cs](https://github.com/serenity-is/Serenity/blob/566b0b4392b57a4f23d4cdf6355e574804d4ea2c/common-features/src/extensions/Modules/Authorization/BasePermissionService.cs)*

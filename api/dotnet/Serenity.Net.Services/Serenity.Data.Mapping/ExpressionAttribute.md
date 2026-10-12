@@ -24,9 +24,9 @@ public class ExpressionAttribute : BaseExpressionAttribute
 
 ## Remarks
 
-Specifies SQL expression this property corresponds to.
+Specifies SQL expression this property corresponds to. Multiple attributes are allowed for dialect-specific variants. Resolution needs no declaration ordering: DialectExpressionSelector.GetBestMatch picks the most specific matching dialect, and throws AmbiguousMatchException when two attributes match the same dialect.
 
 ## See Also
 
 * class [BaseExpressionAttribute](./BaseExpressionAttribute.md)
-* **Source:** *[ExpressionAttribute.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Data/Mapping/ExpressionAttribute.cs)*
+* **Source:** *[ExpressionAttribute.cs](https://github.com/serenity-is/Serenity/blob/8a3cd8708f6a88765518ce8c4a2afe7ed0ce54f3/src/services/Data/Mapping/ExpressionAttribute.cs)*

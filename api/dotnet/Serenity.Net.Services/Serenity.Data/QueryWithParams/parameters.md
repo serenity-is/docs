@@ -3,7 +3,7 @@
 The parameters.
 
 ```csharp
-protected Dictionary<string, object?>? parameters;
+protected IDictionary<string, object?>? parameters;
 ```
 
 ## See Also

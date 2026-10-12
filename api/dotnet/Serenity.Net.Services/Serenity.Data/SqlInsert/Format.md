@@ -21,7 +21,8 @@ Formatted query.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | tableName or fieldExpressions is null. |
+| ArgumentException | tableName is null or empty. |
+| ArgumentNullException | fieldExpressions is null. |
 
 ## See Also
 

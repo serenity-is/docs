@@ -4,31 +4,22 @@
 Default implementation for the [`IImplicitBehaviorRegistry`](./IImplicitBehaviorRegistry.md)
 
 ```csharp
-public class DefaultImplicitBehaviorRegistry : IImplicitBehaviorRegistry
+public class DefaultImplicitBehaviorRegistry : IDisposable, IImplicitBehaviorRegistry
 ```
-
-| parameter | description |
-| --- | --- |
-| typeSource | The type source to extract [`IImplicitBehavior`](./IImplicitBehavior.md) types from |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultImplicitBehaviorRegistry](DefaultImplicitBehaviorRegistry/DefaultImplicitBehaviorRegistry.md)(…) | Default implementation for the [`IImplicitBehaviorRegistry`](./IImplicitBehaviorRegistry.md) |
+| [DefaultImplicitBehaviorRegistry](DefaultImplicitBehaviorRegistry/DefaultImplicitBehaviorRegistry.md)(…) | Initializes a new instance of the class. |
+| [Dispose](DefaultImplicitBehaviorRegistry/Dispose.md)() |  |
 | [GetTypes](DefaultImplicitBehaviorRegistry/GetTypes.md)() |  |
-
-## Exceptions
-
-| exception | condition |
-| --- | --- |
-| ArgumentNullException | *typeSource* is `null`. |
 
 ## Remarks
 
-Initializes a new instance of the class.
+Scans the ITypeSource lazily on first use and caches the concrete [`IImplicitBehavior`](./IImplicitBehavior.md) types. When the type source also implements IChangeTokenProvider, the cache is reset whenever its change token fires, e.g. when dynamic assemblies or feature toggles change, and rebuilt on next use. A failed scan is not cached, so a later call retries it.
 
 ## See Also
 
 * interface [IImplicitBehaviorRegistry](./IImplicitBehaviorRegistry.md)
-* **Source:** *[DefaultImplicitBehaviorRegistry.cs](https://github.com/serenity-is/Serenity/blob/0ecdd6666300147eb7b98189e3ebb71954692e8c/src/services/RequestHandlers/Behavior/DefaultImplicitBehaviorRegistry.cs)*
+* **Source:** *[DefaultImplicitBehaviorRegistry.cs](https://github.com/serenity-is/Serenity/blob/95342587aebf71b494e0c09221452e4fd9429d1b/src/services/RequestHandlers/Behavior/DefaultImplicitBehaviorRegistry.cs)*

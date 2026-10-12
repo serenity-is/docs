@@ -16,6 +16,7 @@ public class OracleDialect : ISqlDialect
 | virtual [CanUseRowNumber](OracleDialect/CanUseRowNumber.md) { get; } |  |
 | virtual [CanUseSkipKeyword](OracleDialect/CanUseSkipKeyword.md) { get; } |  |
 | virtual [CloseQuote](OracleDialect/CloseQuote.md) { get; } |  |
+| [Comparer](OracleDialect/Comparer.md) { get; } |  |
 | virtual [ConcatOperator](OracleDialect/ConcatOperator.md) { get; } |  |
 | virtual [DateFormat](OracleDialect/DateFormat.md) { get; } |  |
 | virtual [DateTimeFormat](OracleDialect/DateTimeFormat.md) { get; } |  |
@@ -43,9 +44,10 @@ public class OracleDialect : ISqlDialect
 | virtual [QuoteIdentifier](OracleDialect/QuoteIdentifier.md)(…) |  |
 | virtual [QuoteUnicodeString](OracleDialect/QuoteUnicodeString.md)(…) |  |
 | [UnionKeyword](OracleDialect/UnionKeyword.md)(…) |  |
+| [WithComparer](OracleDialect/WithComparer.md)(…) |  |
 | static readonly [Instance](OracleDialect/Instance.md) | The shared instance of OracleDialect. |
 
 ## See Also
 
 * interface [ISqlDialect](./ISqlDialect.md)
-* **Source:** *[OracleDialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/OracleDialect.cs)*
+* **Source:** *[OracleDialect.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Data/Dialects/OracleDialect.cs)*

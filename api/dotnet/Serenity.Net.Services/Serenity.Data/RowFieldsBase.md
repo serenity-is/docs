@@ -55,4 +55,4 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHasDialect, IHaveJoins
 * interface [IHaveJoins](./IHaveJoins.md)
 * class [Field](./Field.md)
 * interface [IHasDialect](./IHasDialect.md)
-* **Source:** *[RowFieldsBase.cs](https://github.com/serenity-is/Serenity/blob/a33f821b7a5431477e50f129ce63ce324c984018/src/services/Entity/Row/RowFieldsBase.cs)*
+* **Source:** *[RowFieldsBase.cs](https://github.com/serenity-is/Serenity/blob/99c79988b866a6cb030fef978071d5022c0480bb/src/services/Entity/Row/RowFieldsBase.cs)*

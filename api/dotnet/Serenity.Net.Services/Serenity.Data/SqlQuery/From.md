@@ -70,9 +70,15 @@ public SqlQuery From(ISqlQuery subQuery, IAlias alias)
 
 The query itself.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| InvalidOperationException | subQuery is an independent query with auto parameters. |
+
 ## Remarks
 
-This overload requires that alias has a table name.
+This overload requires that alias has a table name. The subquery must share the same root query (usually built via this query's SubQuery() method). An unrelated query's parameters are not available here, so embedding it may produce completely invalid results. Independent queries without parameters are safe to embed.
 
 ## See Also
 

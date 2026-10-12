@@ -24,8 +24,10 @@ public class AsyncToSyncUndeleteBehaviorWrapper : IUndeleteBehaviorSync, IWrappe
 
 A behavior instance is always cached and reused across requests, so make sure you don't store anything in private variables, and its operation is thread-safe. If you need to pass some state between events, use handler's StateBag.
 
+This is a bridging adapter that blocks on the wrapped asynchronous behavior (sync-over-async). The synchronous interface exposes no CancellationToken, so a cancellation token from an asynchronous call site cannot be observed by the wrapped behavior. Prefer invoking the asynchronous behavior directly whenever a cancellation token is available.
+
 ## See Also
 
 * interface [IUndeleteBehaviorSync](./IUndeleteBehaviorSync.md)
 * interface [IWrappedBehavior](./IWrappedBehavior.md)
-* **Source:** *[AsyncToSyncUndeleteBehaviorWrapper.cs](https://github.com/serenity-is/Serenity/blob/574b0f91eebdcc8cdd7f9af77f617c5cf3fc4aec/src/services/RequestHandlers/Undelete/AsyncToSyncUndeleteBehaviorWrapper.cs)*
+* **Source:** *[AsyncToSyncUndeleteBehaviorWrapper.cs](https://github.com/serenity-is/Serenity/blob/44900868017cc7651dfdf50e177002884d4c35e1/src/services/RequestHandlers/Undelete/AsyncToSyncUndeleteBehaviorWrapper.cs)*

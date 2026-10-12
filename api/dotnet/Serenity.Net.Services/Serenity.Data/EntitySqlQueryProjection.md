@@ -33,4 +33,4 @@ Projection selectors currently support flat anonymous types, constructor project
 
 ## See Also
 
-* **Source:** *[EntitySqlQueryProjection.cs](https://github.com/serenity-is/Serenity/blob/1547fabf1541054fe943b6a29c0d181fd84080e0/src/services/Entity/Extensions/EntitySqlQueryProjection.cs)*
+* **Source:** *[EntitySqlQueryProjection.cs](https://github.com/serenity-is/Serenity/blob/29326d0cfbee40b5f6a2638f4d59de6f56b04df5/src/services/Entity/Extensions/EntitySqlQueryProjection.cs)*

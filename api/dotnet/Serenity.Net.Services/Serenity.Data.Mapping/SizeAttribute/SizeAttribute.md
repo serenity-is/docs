@@ -1,6 +1,6 @@
 # SizeAttribute constructor
 
-Determines size (max length or numeric precision for) for the field.
+Initializes a new instance of the [`SizeAttribute`](../SizeAttribute.md) class.
 
 ```csharp
 public SizeAttribute(int value)
@@ -10,9 +10,11 @@ public SizeAttribute(int value)
 | --- | --- |
 | value | The value. |
 
-## Remarks
+## Exceptions
 
-Initializes a new instance of the [`SizeAttribute`](../SizeAttribute.md) class.
+| exception | condition |
+| --- | --- |
+| ArgumentOutOfRangeException | value is negative. |
 
 ## See Also
 

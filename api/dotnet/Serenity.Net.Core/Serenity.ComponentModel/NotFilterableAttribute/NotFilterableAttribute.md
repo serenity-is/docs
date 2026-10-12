@@ -3,12 +3,8 @@
 Indicates that the field this attribute is placed on is not filterable.
 
 ```csharp
-public NotFilterableAttribute(bool value = true)
+public NotFilterableAttribute()
 ```
-
-| parameter | description |
-| --- | --- |
-| value | if set to `true` (default) field is not filterable. |
 
 ## Remarks
 

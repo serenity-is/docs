@@ -14,6 +14,10 @@ public static BaseCriteria operator !(BaseCriteria criteria)
 
 The result of the operator.
 
+## Remarks
+
+Builds SQL NOT criteria; it does not evaluate the criteria as a Boolean value.
+
 ## See Also
 
 * class [BaseCriteria](../BaseCriteria.md)

@@ -23,6 +23,7 @@ public abstract class NavigationItemAttribute : Attribute
 | [Target](NavigationItemAttribute/Target.md) { get; set; } | Window target to open this link, e.g. _blank etc. |
 | [Title](NavigationItemAttribute/Title.md) { get; set; } | Title of the navigation item. It is the part after the last slash, e.g. C for A/B/C. |
 | [Url](NavigationItemAttribute/Url.md) { get; set; } | URL of this navigation item, should be null for a menu. |
+| static [GetUrlFromController](NavigationItemAttribute/GetUrlFromController.md)(…) | Tries to extract the URL from a controller action. |
 
 ## Protected Members
 
@@ -32,4 +33,4 @@ public abstract class NavigationItemAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[NavigationItemAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Navigation/NavigationItemAttribute.cs)*
+* **Source:** *[NavigationItemAttribute.cs](https://github.com/serenity-is/Serenity/blob/995697c9e73036dd6a495c8ac7211f8829eb67cc/src/core/ComponentModel/Navigation/NavigationItemAttribute.cs)*

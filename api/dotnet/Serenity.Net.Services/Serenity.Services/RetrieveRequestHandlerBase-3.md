@@ -42,11 +42,12 @@ public abstract class RetrieveRequestHandlerBase<TRow, TRetrieveRequest, TRetrie
 | virtual [AllowSelectField](RetrieveRequestHandlerBase-3/AllowSelectField.md)(…) | Returns true if the field should be allowed to be selected, based on its read permission and the SelectLevel.Never flag. |
 | virtual [CreateQuery](RetrieveRequestHandlerBase-3/CreateQuery.md)() | Creates a query instance with the dialect for current connection. |
 | virtual [GetBehaviors](RetrieveRequestHandlerBase-3/GetBehaviors.md)() | Gets the list of retrieve behaviors. |
+| virtual [GetUndeletePermission](RetrieveRequestHandlerBase-3/GetUndeletePermission.md)() | Gets the permission required to undelete records of the current row type, e.g. UndeletePermissionAttribute, falling back to DeletePermissionAttribute, ModifyPermissionAttribute and ReadPermissionAttribute. |
 | [IsIncluded](RetrieveRequestHandlerBase-3/IsIncluded.md)(…) | Returns true if field is included in [`IncludeColumns`](./RetrieveRequest/IncludeColumns.md) (2 methods) |
 | virtual [SelectField](RetrieveRequestHandlerBase-3/SelectField.md)(…) | Calls query.Select(field) |
 | virtual [SelectFields](RetrieveRequestHandlerBase-3/SelectFields.md)(…) | Calls query.Select(field) for all the fields without NotMapped, and if [`AllowSelectField`](./RetrieveRequestHandlerBase-3/AllowSelectField.md) and [`ShouldSelectField`](./RetrieveRequestHandlerBase-3/ShouldSelectField.md) returns true. |
 | virtual [ShouldSelectField](RetrieveRequestHandlerBase-3/ShouldSelectField.md)(…) | Returns true if the field should be selected, based on current ColumnSelection, field [`MinSelectLevelAttribute`](../Serenity.Data.Mapping/MinSelectLevelAttribute.md), the field being a not mapped ([`NotMappedAttribute`](../Serenity.Data.Mapping/NotMappedAttribute.md)) field, table field, or a view / expression field. |
-| virtual [ValidatePermissions](RetrieveRequestHandlerBase-3/ValidatePermissions.md)() | Validates if the user is allowed to query this entity type by checking ReadPermissionAttribute and ServiceLookupPermissionAttribute if the request is in lookup access mode. |
+| virtual [ValidatePermissions](RetrieveRequestHandlerBase-3/ValidatePermissions.md)() | Validates if the user is allowed to query this entity type by checking ReadPermissionAttribute |
 
 ## Exceptions
 
@@ -64,4 +65,4 @@ Initializes a new instance of the class.
 * interface [IRow](../Serenity.Data/IRow.md)
 * class [RetrieveRequest](./RetrieveRequest.md)
 * class [RetrieveResponse&lt;T&gt;](./RetrieveResponse-1.md)
-* **Source:** *[RetrieveRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/Retrieve/RetrieveRequestHandlerBase.cs)*
+* **Source:** *[RetrieveRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/052d8cfc4fd6ea05ecf04e91db7ab67733be7cc4/src/services/RequestHandlers/Retrieve/RetrieveRequestHandlerBase.cs)*

@@ -14,6 +14,10 @@ public static BaseCriteria operator ~(BaseCriteria criteria)
 
 The result of the operator.
 
+## Remarks
+
+Adds parentheses to a criteria expression; it does not perform Boolean negation.
+
 ## See Also
 
 * class [BaseCriteria](../BaseCriteria.md)

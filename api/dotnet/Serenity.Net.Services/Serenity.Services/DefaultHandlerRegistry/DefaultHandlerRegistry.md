@@ -1,6 +1,6 @@
 # DefaultHandlerRegistry constructor
 
-Default implementation for the [`IDefaultHandlerRegistry`](../IDefaultHandlerRegistry.md).
+Initializes a new instance of the class.
 
 ```csharp
 public DefaultHandlerRegistry(ITypeSource typeSource)
@@ -15,10 +15,6 @@ public DefaultHandlerRegistry(ITypeSource typeSource)
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | *typeSource* is `null`. |
-
-## Remarks
-
-Initializes a new instance of the class.
 
 ## See Also
 

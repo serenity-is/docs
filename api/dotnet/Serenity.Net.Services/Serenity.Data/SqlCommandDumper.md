@@ -16,4 +16,4 @@ public class SqlCommandDumper
 
 ## See Also
 
-* **Source:** *[SqlCommandDumper.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/SqlHelpers/SqlCommandDumper.cs)*
+* **Source:** *[SqlCommandDumper.cs](https://github.com/serenity-is/Serenity/blob/c774d7c2d9f32c2ad8ee1eb0094d9caa39d0d360/src/services/Data/SqlHelpers/SqlCommandDumper.cs)*

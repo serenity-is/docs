@@ -20,6 +20,10 @@ public class CaptureLogBehavior : BaseSaveDeleteBehaviorAsync, IDeleteBehaviorSy
 | override [OnAuditAsync](CaptureLogBehavior/OnAuditAsync.md)(…) |  (2 methods) |
 | virtual [OnAuditAsync](CaptureLogBehavior/OnAuditAsync.md)(…) |  |
 
+## Remarks
+
+Writes a new capture log row for each audited change and closes the previous active row, similar to SQL Server temporal tables. The captured columns are exactly the table fields declared on the capture log row type, so a field is excluded by simply not declaring it on that row type. ValidFrom/ValidUntil values are stored as UTC unless those fields are explicitly annotated with Local. Capture log tables grow with every change and are not pruned automatically, so a periodic cleanup is recommended.
+
 ## See Also
 
 * class [BaseSaveDeleteBehaviorAsync](./BaseSaveDeleteBehaviorAsync.md)
@@ -28,4 +32,4 @@ public class CaptureLogBehavior : BaseSaveDeleteBehaviorAsync, IDeleteBehaviorSy
 * interface [ISaveBehaviorSync](./ISaveBehaviorSync.md)
 * interface [IUndeleteBehaviorAsync](./IUndeleteBehaviorAsync.md)
 * interface [IUndeleteBehaviorSync](./IUndeleteBehaviorSync.md)
-* **Source:** *[CaptureLogBehavior.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/IntegratedFeatures/CaptureLog/CaptureLogBehavior.cs)*
+* **Source:** *[CaptureLogBehavior.cs](https://github.com/serenity-is/Serenity/blob/b0a5b5bb5553d59ed421adeb96e47c35c2e06051/src/services/RequestHandlers/IntegratedFeatures/CaptureLog/CaptureLogBehavior.cs)*

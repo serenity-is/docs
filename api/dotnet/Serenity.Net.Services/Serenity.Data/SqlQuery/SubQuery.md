@@ -1,6 +1,6 @@
 # SqlQuery.SubQuery method
 
-Creates a new query that shares parameter dictionary with this query.
+Creates a new query that shares parameter storage and dialect with this query tree.
 
 ```csharp
 public SqlQuery SubQuery()

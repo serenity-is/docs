@@ -17,4 +17,4 @@ public class DefaultSqlDialectMapper : ISqlDialectMapper
 ## See Also
 
 * interface [ISqlDialectMapper](./ISqlDialectMapper.md)
-* **Source:** *[DefaultSqlDialectMapper.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Dialects/DefaultSqlDialectMapper.cs)*
+* **Source:** *[DefaultSqlDialectMapper.cs](https://github.com/serenity-is/Serenity/blob/14083041af9d83edeb4eaac6738a5846bbaa8594/src/services/Data/Dialects/DefaultSqlDialectMapper.cs)*

@@ -17,7 +17,8 @@ public class TransactionlessUnitOfWork : IAsyncDisposable, IDisposable, IUnitOfW
 | --- | --- |
 | [TransactionlessUnitOfWork](TransactionlessUnitOfWork/TransactionlessUnitOfWork.md)(…) | A unit of work implementation without an underlying actual transaction. Use with care, only to pass an [`IUnitOfWork`](./IUnitOfWork.md) instance to some methods where you don't want to actually start a transaction. |
 | [Connection](TransactionlessUnitOfWork/Connection.md) { get; } | Gets the connection. |
-| event [OnCommit](TransactionlessUnitOfWork/OnCommit.md) | Occurs when Commit is called as there is no underlying transaction. |
+| [HasStartedTransaction](TransactionlessUnitOfWork/HasStartedTransaction.md) { get; } | Gets whether the unit of work's transaction was actually started. This implementation never starts one, so this always returns false. |
+| event [OnCommit](TransactionlessUnitOfWork/OnCommit.md) | Occurs when Commit is called as there is no underlying transaction. Like [`OnCommit`](./UnitOfWork/OnCommit.md), this signals operation success, not a database transaction commit. |
 | event [OnRollback](TransactionlessUnitOfWork/OnRollback.md) | Occurs when Dispose is called as there is no underlying transaction. |
 | [Commit](TransactionlessUnitOfWork/Commit.md)() | Does nothing other than calling onCommit events as there is no underlying transaction. |
 | [CommitAsync](TransactionlessUnitOfWork/CommitAsync.md)(…) | Does nothing other than calling onCommit events asynchronously as there is no underlying transaction. |
@@ -37,4 +38,4 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IUnitOfWork](./IUnitOfWork.md)
-* **Source:** *[TransactionlessUnitOfWork.cs](https://github.com/serenity-is/Serenity/blob/0ecdd6666300147eb7b98189e3ebb71954692e8c/src/services/Data/Connections/TransactionlessUnitOfWork.cs)*
+* **Source:** *[TransactionlessUnitOfWork.cs](https://github.com/serenity-is/Serenity/blob/2ba061e0b0144552c7ed59342da70ce1d8ca177c/src/services/Data/Connections/TransactionlessUnitOfWork.cs)*

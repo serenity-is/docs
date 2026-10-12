@@ -22,4 +22,4 @@ public class DeltaLister<TItem>
 
 ## See Also
 
-* **Source:** *[DeltaLister.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Data/Utility/DeltaLister.cs)*
+* **Source:** *[DeltaLister.cs](https://github.com/serenity-is/Serenity/blob/d748714b860f1252c29163a50bf91db03aa25ea2/src/services/Data/Utility/DeltaLister.cs)*

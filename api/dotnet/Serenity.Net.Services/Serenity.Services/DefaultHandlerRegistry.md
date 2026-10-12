@@ -4,32 +4,23 @@
 Default implementation for the [`IDefaultHandlerRegistry`](./IDefaultHandlerRegistry.md).
 
 ```csharp
-public class DefaultHandlerRegistry : IDefaultHandlerRegistry
+public class DefaultHandlerRegistry : IDefaultHandlerRegistry, IDisposable
 ```
-
-| parameter | description |
-| --- | --- |
-| typeSource | Type source containing possible handler classes. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultHandlerRegistry](DefaultHandlerRegistry/DefaultHandlerRegistry.md)(…) | Default implementation for the [`IDefaultHandlerRegistry`](./IDefaultHandlerRegistry.md). |
+| [DefaultHandlerRegistry](DefaultHandlerRegistry/DefaultHandlerRegistry.md)(…) | Initializes a new instance of the class. |
+| [Dispose](DefaultHandlerRegistry/Dispose.md)() |  |
 | virtual [GetTypes](DefaultHandlerRegistry/GetTypes.md)() |  |
 | [GetTypes](DefaultHandlerRegistry/GetTypes.md)(…) |  |
 
-## Exceptions
-
-| exception | condition |
-| --- | --- |
-| ArgumentNullException | *typeSource* is `null`. |
-
 ## Remarks
 
-Initializes a new instance of the class.
+Scans the ITypeSource lazily on first use and caches the concrete IRequestHandler types. When the type source also implements IChangeTokenProvider, the cache is reset whenever its change token fires, e.g. when dynamic assemblies or feature toggles change, and rebuilt on next use. A failed scan is not cached, so a later call retries it.
 
 ## See Also
 
 * interface [IDefaultHandlerRegistry](./IDefaultHandlerRegistry.md)
-* **Source:** *[DefaultHandlerRegistry.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Handler/DefaultHandlerRegistry.cs)*
+* **Source:** *[DefaultHandlerRegistry.cs](https://github.com/serenity-is/Serenity/blob/95342587aebf71b494e0c09221452e4fd9429d1b/src/services/RequestHandlers/Handler/DefaultHandlerRegistry.cs)*

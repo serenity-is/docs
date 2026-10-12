@@ -19,4 +19,4 @@ public static class EntityQueryExtensions
 
 ## See Also
 
-* **Source:** *[EntityQueryExtensions.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Entity/Extensions/EntityQueryExtensions.cs)*
+* **Source:** *[EntityQueryExtensions.cs](https://github.com/serenity-is/Serenity/blob/b85f8734b1a8e6217846757385b0fc6081492825/src/services/Entity/Extensions/EntityQueryExtensions.cs)*

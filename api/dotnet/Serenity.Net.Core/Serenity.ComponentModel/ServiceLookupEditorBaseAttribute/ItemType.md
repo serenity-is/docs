@@ -1,6 +1,6 @@
 # ServiceLookupEditorBaseAttribute.ItemType property
 
-Gets or sets the row type related to this service lookup editor.
+Gets or sets the item/row type passed to the constructor.
 
 ```csharp
 public Type? ItemType { get; set; }

@@ -3,12 +3,12 @@
 Gets the columns.
 
 ```csharp
-public IList<Column> Columns { get; }
+public IReadOnlyList<Column> Columns { get; }
 ```
 
 ## Property Value
 
-The columns.
+Read-only view of the columns.
 
 ## See Also
 

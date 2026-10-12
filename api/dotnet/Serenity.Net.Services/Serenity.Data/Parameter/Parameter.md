@@ -8,7 +8,14 @@ public Parameter(string name)
 
 | parameter | description |
 | --- | --- |
-| name | The name. |
+| name | The name. Must start with "@": parameter names are always "@"-prefixed, and dialect translation happens later when the command is built (see SqlHelper.AddParamWithValue). |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | name is null or empty. |
+| ArgumentOutOfRangeException | name doesn't start with "@", or has nothing but whitespace after it. |
 
 ## Remarks
 

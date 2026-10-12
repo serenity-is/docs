@@ -18,6 +18,10 @@ public interface ISqlOperationInterceptor
 | [ExecuteScalar](ISqlOperationInterceptor/ExecuteScalar.md)(…) | Intercepts the [`SqlHelper`](./SqlHelper.md)`ExecuteScalar` method. |
 | [ExecuteScalarAsync](ISqlOperationInterceptor/ExecuteScalarAsync.md)(…) | Intercepts the async [`SqlHelper`](./SqlHelper.md)`ExecuteScalar` methods. The default implementation forwards to [`ExecuteScalar`](./ISqlOperationInterceptor/ExecuteScalar.md). |
 
+## Remarks
+
+Interception happens before command creation, so operation arguments carry the pre-translation SQL text (e.g. [brackets] and @ parameters, not dialect quotes). This is intentional: it keeps test assertions dialect-independent. Only the connection itself is checked for this interface; there is no chaining.
+
 ## See Also
 
-* **Source:** *[ISqlOperationInterceptor.cs](https://github.com/serenity-is/Serenity/blob/1547fabf1541054fe943b6a29c0d181fd84080e0/src/services/Data/Interceptors/ISqlOperationInterceptor.cs)*
+* **Source:** *[ISqlOperationInterceptor.cs](https://github.com/serenity-is/Serenity/blob/02fb2df9a284f16814fdb41a40669396f827f41f/src/services/Data/Interceptors/ISqlOperationInterceptor.cs)*

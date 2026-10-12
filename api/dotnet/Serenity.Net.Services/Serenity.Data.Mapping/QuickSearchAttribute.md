@@ -4,7 +4,7 @@
 Marks the property so that it should be included in quick text searches.
 
 ```csharp
-[AttributeUsage(AttributeTargets.All)]
+[AttributeUsage(AttributeTargets.Property)]
 public class QuickSearchAttribute : Attribute
 ```
 
@@ -29,4 +29,4 @@ Initializes a new instance of the [`QuickSearchAttribute`](./QuickSearchAttribut
 
 ## See Also
 
-* **Source:** *[QuickSearchAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Mapping/QuickSearchAttribute.cs)*
+* **Source:** *[QuickSearchAttribute.cs](https://github.com/serenity-is/Serenity/blob/bedb6a70bac903698f40ad3f295572877b3c0af9/src/services/Data/Mapping/QuickSearchAttribute.cs)*

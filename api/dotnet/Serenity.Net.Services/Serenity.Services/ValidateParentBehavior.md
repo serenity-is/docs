@@ -34,4 +34,4 @@ Initializes a new instance of the class.
 
 * class [BaseSaveBehaviorAsync](./BaseSaveBehaviorAsync.md)
 * interface [ISaveBehaviorSync](./ISaveBehaviorSync.md)
-* **Source:** *[ValidateParentAttribute.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/IntegratedFeatures/Validation/ValidateParentAttribute.cs)*
+* **Source:** *[ValidateParentBehavior.cs](https://github.com/serenity-is/Serenity/blob/ff6184910771617302f78aac48321402ee254e78/src/services/RequestHandlers/IntegratedFeatures/Validation/ValidateParentBehavior.cs)*

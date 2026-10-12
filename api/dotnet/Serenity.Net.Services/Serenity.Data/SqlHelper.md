@@ -32,4 +32,4 @@ public static class SqlHelper
 
 ## See Also
 
-* **Source:** *[SqlHelper.cs](https://github.com/serenity-is/Serenity/blob/1547fabf1541054fe943b6a29c0d181fd84080e0/src/services/Data/SqlHelpers/SqlHelper.cs)*
+* **Source:** *[SqlHelper.cs](https://github.com/serenity-is/Serenity/blob/68f52f40987a49f41d5dc1af93b8aeb50da19c5b/src/services/Data/SqlHelpers/SqlHelper.cs)*

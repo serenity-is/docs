@@ -1,6 +1,6 @@
 # DefaultImplicitBehaviorRegistry constructor
 
-Default implementation for the [`IImplicitBehaviorRegistry`](../IImplicitBehaviorRegistry.md)
+Initializes a new instance of the class.
 
 ```csharp
 public DefaultImplicitBehaviorRegistry(ITypeSource typeSource)
@@ -15,10 +15,6 @@ public DefaultImplicitBehaviorRegistry(ITypeSource typeSource)
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | *typeSource* is `null`. |
-
-## Remarks
-
-Initializes a new instance of the class.
 
 ## See Also
 

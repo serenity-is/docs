@@ -8,7 +8,7 @@ public BaseCriteria Like(string mask, bool upper = false)
 
 | parameter | description |
 | --- | --- |
-| mask | The mask. |
+| mask | The raw LIKE mask. |
 | upper | True to use the UPPER function on both sides. |
 
 ## Return Value

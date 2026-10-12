@@ -28,9 +28,14 @@ public class JsonField<TValue> : GenericClassField<TValue>
 | [SerializerOptions](JsonField-1/SerializerOptions.md) { get; set; } | Gets or sets the settings. |
 | override [AsSqlValue](JsonField-1/AsSqlValue.md)(…) | Gets the value of this row as an SQL value. |
 | override [GetFromReader](JsonField-1/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [IndexCompare](JsonField-1/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort. |
 | override [ValueFromJson](JsonField-1/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
 | override [ValueToJson](JsonField-1/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
+
+## Protected Members
+
+| name | description |
+| --- | --- |
+| override [CompareValues](JsonField-1/CompareValues.md)(…) | Compares two values of this field using the specified comparer. |
 
 ## Remarks
 
@@ -39,4 +44,4 @@ Initializes a new instance of the [`JsonField`](./JsonField-1.md) class.
 ## See Also
 
 * class [GenericClassField&lt;TValue&gt;](./GenericClassField-1.md)
-* **Source:** *[JsonField.cs](https://github.com/serenity-is/Serenity/blob/1a8f0b8d86a82010fb35e1c2b9f853493e7f539f/src/services/Entity/FieldTypes/JsonField.cs)*
+* **Source:** *[JsonField.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Entity/FieldTypes/JsonField.cs)*

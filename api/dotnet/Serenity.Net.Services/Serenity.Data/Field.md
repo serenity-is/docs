@@ -14,6 +14,7 @@ public abstract class Field : IFieldWithJoinInfo
 | [AutoTextKey](Field/AutoTextKey.md) { get; } | Gets the automatic text key. |
 | [Caption](Field/Caption.md) { get; set; } | Gets or sets the caption. |
 | [ColumnAlias](Field/ColumnAlias.md) { get; } | Gets the column alias. Can be equal to the property name or the name. |
+| [Comparer](Field/Comparer.md) { get; } | Gets the comparer used by [`IndexCompare`](./Field/IndexCompare.md) when no comparer is passed explicitly. Set the protected `comparer` field during field initialization to configure it. |
 | [Criteria](Field/Criteria.md) { get; } | Gets the criteria object wrapping this field, it is cached for reuse. |
 | [CustomAttributes](Field/CustomAttributes.md) { get; set; } | Gets or sets the custom attributes. |
 | [DefaultValue](Field/DefaultValue.md) { get; set; } | Gets or sets the default value. |
@@ -56,23 +57,25 @@ public abstract class Field : IFieldWithJoinInfo
 | override [GetHashCode](Field/GetHashCode.md)() | Returns a hash code for this instance. |
 | [GetTitle](Field/GetTitle.md)(…) | Gets the title. |
 | [In&lt;T&gt;](Field/In.md)(…) | Creates a new "the Field IN (values...)" criteria. |
-| abstract [IndexCompare](Field/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort. |
+| abstract [IndexCompare](Field/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort using the specified comparer, falling back to [`Comparer`](./Field/Comparer.md) when it is null. |
 | [IsNotNull](Field/IsNotNull.md)() | Creates a new "the Field IS NOT NULL" criteria. |
 | [IsNull](Field/IsNull.md)() | Creates a new "the Field IS NULL" criteria. |
 | [IsNull](Field/IsNull.md)(…) | Determines whether the specified row is null. This method checks for assignment if TrackWithChecks is true and may throw an exception if the field is unassigned. Use IsNullNoCheck to skip that check. |
 | abstract [IsNullNoCheck](Field/IsNullNoCheck.md)(…) | Gets if the field value is null without checking for assignment. |
 | [Like](Field/Like.md)(…) | Creates a new "the Field LIKE mask" criteria. |
+| [LikeEscaped](Field/LikeEscaped.md)(…) | Creates a new "the Field LIKE mask ESCAPE 'x'" criteria. The mask must already be escaped (see [`EscapeLikeWildcards`](./Criteria/EscapeLikeWildcards.md)). |
 | [NotContains](Field/NotContains.md)(…) | Creates a new "the Field NOT CONTAINS mask" criteria. |
 | [NotIn&lt;T&gt;](Field/NotIn.md)(…) | Creates a new "the Field NOT IN (values...)" criteria. |
 | [NotLike](Field/NotLike.md)(…) | Creates a new "the Field NOT LIKE mask" criteria. |
+| [NotLikeEscaped](Field/NotLikeEscaped.md)(…) | Creates a new "the Field NOT LIKE mask ESCAPE 'x'" criteria. The mask must already be escaped (see [`EscapeLikeWildcards`](./Criteria/EscapeLikeWildcards.md)). |
 | [StartsWith](Field/StartsWith.md)(…) | Creates a new "the Field STARTS WITH mask" criteria. |
 | override [ToString](Field/ToString.md)() | Converts to string. |
 | abstract [ValueFromJson](Field/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
 | abstract [ValueToJson](Field/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
-| [operator ==](Field/op_Equality.md) | Implements the operator ==. (10 operators) |
+| [operator ==](Field/op_Equality.md) | Implements the operator ==. (11 operators) |
 | [operator &gt;](Field/op_GreaterThan.md) | Implements the operator &gt;. (10 operators) |
 | [operator &gt;=](Field/op_GreaterThanOrEqual.md) | Implements the operator &gt;=. (10 operators) |
-| [operator !=](Field/op_Inequality.md) | Implements the operator !=. (10 operators) |
+| [operator !=](Field/op_Inequality.md) | Implements the operator !=. (11 operators) |
 | [operator &lt;](Field/op_LessThan.md) | Implements the operator &lt;. (10 operators) |
 | [operator &lt;=](Field/op_LessThanOrEqual.md) | Implements the operator &lt;=. (10 operators) |
 
@@ -81,6 +84,7 @@ public abstract class Field : IFieldWithJoinInfo
 | name | description |
 | --- | --- |
 | [Field](Field/Field.md)(…) | Initializes a new instance of the [`Field`](./Field.md) class. |
+| [comparer](Field/comparer.md) | The comparer used by [`IndexCompare`](./Field/IndexCompare.md) by default. |
 | virtual [OnRowInitialization](Field/OnRowInitialization.md)() | Called when the row is initialized. |
 | static [JsonUnexpectedToken](Field/JsonUnexpectedToken.md)(…) | Throws an exception for an unexpected JSON token when deserializing a row. |
 | static [UnexpectedJsonToken](Field/UnexpectedJsonToken.md)(…) | Throws an exception for an unexpected JSON token when deserializing a row. |
@@ -88,4 +92,4 @@ public abstract class Field : IFieldWithJoinInfo
 ## See Also
 
 * interface [IFieldWithJoinInfo](./IFieldWithJoinInfo.md)
-* **Source:** *[Field.CriteriaOperators.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Entity/FieldTypes/Field.CriteriaOperators.cs)*
+* **Source:** *[Field.CriteriaOperators.cs](https://github.com/serenity-is/Serenity/blob/489f72f785a9733fa81e465e1a3854209296a6c0/src/services/Entity/FieldTypes/Field.CriteriaOperators.cs)*

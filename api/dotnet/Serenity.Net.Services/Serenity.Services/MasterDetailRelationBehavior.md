@@ -37,6 +37,8 @@ public class MasterDetailRelationBehavior : BaseSaveDeleteBehaviorAsync, IDelete
 
 Initializes a new instance of the class.
 
+Saving or deleting a master invokes the nested save/delete handler once per detail row (an N+1 pattern). This is intentional, so the full handler pipeline (behaviors, audit, concurrency version checks, unique constraints, cascades and cache invalidation) applies to every detail row. Batching these into a single statement would bypass that pipeline and change the semantics, so it is not done. Callers with very large detail sets should be aware of the resulting number of round trips.
+
 ## See Also
 
 * class [BaseSaveDeleteBehaviorAsync](./BaseSaveDeleteBehaviorAsync.md)
@@ -48,4 +50,4 @@ Initializes a new instance of the class.
 * interface [IRetrieveBehaviorAsync](./IRetrieveBehaviorAsync.md)
 * interface [IRetrieveBehaviorSync](./IRetrieveBehaviorSync.md)
 * interface [ISaveBehaviorSync](./ISaveBehaviorSync.md)
-* **Source:** *[MasterDetailRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/2a803ec2ea06e7ccde726327384096507a8532d0/src/services/RequestHandlers/IntegratedFeatures/MasterDetail/MasterDetailRelationBehavior.cs)*
+* **Source:** *[MasterDetailRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/1859de626a2ae5066e2fa12482200d2ac88e496a/src/services/RequestHandlers/IntegratedFeatures/MasterDetail/MasterDetailRelationBehavior.cs)*

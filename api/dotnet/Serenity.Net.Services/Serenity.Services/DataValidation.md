@@ -14,6 +14,7 @@ public static class DataValidation
 | static [ArgumentNull](DataValidation/ArgumentNull.md)(…) | Returns an argument null error. |
 | static [ArgumentOutOfRange](DataValidation/ArgumentOutOfRange.md)(…) | Returns an argument out of range error. |
 | static [AutoTrim](DataValidation/AutoTrim.md)(…) | Automatically trims a string field value based on its TrimToEmpty and Trim flags. |
+| static [ConcurrencyConflictError](DataValidation/ConcurrencyConflictError.md)(…) | Returns a concurrency conflict error, e.g. the record was modified by another user since the version value the client sent. |
 | static [EnsureUniversalTime](DataValidation/EnsureUniversalTime.md)(…) | Converts the field value to universal time |
 | static [EntityNotFoundError](DataValidation/EntityNotFoundError.md)(…) | Returns an entity not found error |
 | static [EntityReadAccessError](DataValidation/EntityReadAccessError.md)(…) | Returns an entity read access error |
@@ -36,4 +37,4 @@ public static class DataValidation
 
 ## See Also
 
-* **Source:** *[DataValidation.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/IntegratedFeatures/Validation/DataValidation.cs)*
+* **Source:** *[DataValidation.cs](https://github.com/serenity-is/Serenity/blob/8ebae29aba9c0164fa5c8a76801f7bca72290c39/src/services/RequestHandlers/IntegratedFeatures/Validation/DataValidation.cs)*

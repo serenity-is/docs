@@ -1,0 +1,54 @@
+# UndeletePermissionAttribute constructor (1 of 3)
+
+Initializes a new instance of the [`UndeletePermissionAttribute`](../UndeletePermissionAttribute.md) class.
+
+```csharp
+public UndeletePermissionAttribute(object permission)
+```
+
+| parameter | description |
+| --- | --- |
+| permission | The permission. |
+
+## See Also
+
+* class [UndeletePermissionAttribute](../UndeletePermissionAttribute.md)
+
+---
+
+# UndeletePermissionAttribute constructor (2 of 3)
+
+Initializes a new instance of the [`UndeletePermissionAttribute`](../UndeletePermissionAttribute.md) class. A colon is inserted between module and permission to generate permission key.
+
+```csharp
+public UndeletePermissionAttribute(object module, object permission)
+```
+
+| parameter | description |
+| --- | --- |
+| module | The module. |
+| permission | The permission. |
+
+## See Also
+
+* class [UndeletePermissionAttribute](../UndeletePermissionAttribute.md)
+
+---
+
+# UndeletePermissionAttribute constructor (3 of 3)
+
+Initializes a new instance of the [`UndeletePermissionAttribute`](../UndeletePermissionAttribute.md) class. A colon is inserted between module, submodule and permission to generate permission key.
+
+```csharp
+public UndeletePermissionAttribute(object module, object submodule, object permission)
+```
+
+| parameter | description |
+| --- | --- |
+| module | The module. |
+| submodule | The submodule. |
+| permission | The permission. |
+
+## See Also
+
+* class [UndeletePermissionAttribute](../UndeletePermissionAttribute.md)

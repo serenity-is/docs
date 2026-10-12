@@ -3,7 +3,7 @@
 Gets the aliased sources added to the FROM clause.
 
 ```csharp
-public IEnumerable<object> FromSources { get; }
+public IReadOnlyList<object> FromSources { get; }
 ```
 
 ## See Also

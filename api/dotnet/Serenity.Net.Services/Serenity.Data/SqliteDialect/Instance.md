@@ -3,7 +3,7 @@
 The shared instance of SqliteDialect.
 
 ```csharp
-public static ISqlDialect Instance;
+public static readonly ISqlDialect Instance;
 ```
 
 ## See Also

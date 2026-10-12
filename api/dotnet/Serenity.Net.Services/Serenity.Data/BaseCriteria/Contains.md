@@ -1,14 +1,14 @@
 # BaseCriteria.Contains method
 
-Creates a new binary Contains criteria (LIKE '%...%') containing this criteria as the left operand.
+Creates a new binary Contains criteria (LIKE '%...%') containing this criteria as the left operand. The text is treated as a literal value: LIKE special characters (%, _, [) in it are escaped and an ESCAPE '!' clause is appended. For intentional wildcards use [`Like`](./Like.md) instead.
 
 ```csharp
-public BaseCriteria Contains(string mask, bool upper = false)
+public BaseCriteria Contains(string text, bool upper = false)
 ```
 
 | parameter | description |
 | --- | --- |
-| mask | The contains mask. |
+| text | The literal text to search for. |
 | upper | `true` to use the UPPER function on both sides. |
 
 ## Return Value
@@ -19,7 +19,7 @@ A new binary Contains criteria.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | mask is null |
+| ArgumentNullException | text is null |
 
 ## See Also
 

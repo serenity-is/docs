@@ -22,4 +22,4 @@ public class PostgresSchemaProvider : ISchemaProvider
 ## See Also
 
 * interface [ISchemaProvider](./ISchemaProvider.md)
-* **Source:** *[PostgresSchemaProvider.cs](https://github.com/serenity-is/Serenity/blob/25d0bf6e6c1b7983e41847d16761292df1c71db5/src/services/Data/Schema/Providers/PostgresSchemaProvider.cs)*
+* **Source:** *[PostgresSchemaProvider.cs](https://github.com/serenity-is/Serenity/blob/0588821be6ac097fa92e89bd32da8c5b17d9c8f3/src/services/Data/Schema/Providers/PostgresSchemaProvider.cs)*

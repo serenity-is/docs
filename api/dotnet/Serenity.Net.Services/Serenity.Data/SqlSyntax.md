@@ -24,4 +24,4 @@ public static class SqlSyntax
 
 ## See Also
 
-* **Source:** *[SqlSyntax.cs](https://github.com/serenity-is/Serenity/blob/1a8f0b8d86a82010fb35e1c2b9f853493e7f539f/src/services/Data/SqlHelpers/SqlSyntax.cs)*
+* **Source:** *[SqlSyntax.cs](https://github.com/serenity-is/Serenity/blob/0d295646889befe2c515716952a9f910e866530e/src/services/Data/SqlHelpers/SqlSyntax.cs)*

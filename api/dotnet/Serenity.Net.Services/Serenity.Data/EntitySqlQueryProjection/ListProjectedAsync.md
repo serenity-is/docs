@@ -5,7 +5,7 @@ Asynchronously executes the query and buffers the flat projection results.
 ```csharp
 public static Task<List<TResult>> ListProjectedAsync<TRow, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow, TResult>> projection, 
-    IReadOnlyDictionary<string, object?>? parameters = null, 
+    IReadOnlyDictionary<string, object?>? parameters = null, bool takeOwnership = false, 
     CancellationToken cancellationToken = default)
     where TRow : class, IRow
 ```
@@ -18,6 +18,7 @@ public static Task<List<TResult>> ListProjectedAsync<TRow, TResult>(this SqlQuer
 | connection | The connection. |
 | projection | A flat projection built from direct row field accesses. |
 | parameters | Values that override the source query's parameters for this execution. |
+| takeOwnership | Whether to prepare the source query in place instead of cloning it. The source must not be frozen. |
 | cancellationToken | The cancellation token. |
 
 ## Return Value
@@ -40,9 +41,19 @@ Executes and buffers a projection asynchronously using the specified row-fields 
 public static Task<List<TResult>> ListProjectedAsync<TRow, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow, TResult>> projection, 
     IReadOnlyList<RowFieldsBase> sources, IReadOnlyDictionary<string, object?>? parameters = null, 
-    CancellationToken cancellationToken = default)
+    bool takeOwnership = false, CancellationToken cancellationToken = default)
     where TRow : class, IRow
 ```
+
+| parameter | description |
+| --- | --- |
+| query | The query to execute. |
+| connection | The database connection. |
+| projection | A flat projection built from row field accesses or SQL expressions. |
+| sources | The row-fields sources for the projection parameters. |
+| parameters | The query parameters. |
+| takeOwnership | Whether to prepare the source query in place. If false, a clone is prepared; a frozen source cannot be taken over. |
+| cancellationToken | The cancellation token. |
 
 ## See Also
 
@@ -60,7 +71,7 @@ Asynchronously executes the query and buffers the flat projection results.
 ```csharp
 public static Task<List<TResult>> ListProjectedAsync<TRow1, TRow2, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow1, TRow2, TResult>> projection, 
-    IReadOnlyDictionary<string, object?>? parameters = null, 
+    IReadOnlyDictionary<string, object?>? parameters = null, bool takeOwnership = false, 
     CancellationToken cancellationToken = default)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
@@ -75,6 +86,7 @@ public static Task<List<TResult>> ListProjectedAsync<TRow1, TRow2, TResult>(this
 | connection | The connection. |
 | projection | A flat projection built from direct row field accesses. |
 | parameters | Values that override the source query's parameters for this execution. |
+| takeOwnership | Whether to prepare the source query in place instead of cloning it. The source must not be frozen. |
 | cancellationToken | The cancellation token. |
 
 ## Return Value
@@ -97,10 +109,20 @@ Executes and buffers a projection asynchronously using the specified row-fields 
 public static Task<List<TResult>> ListProjectedAsync<TRow1, TRow2, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow1, TRow2, TResult>> projection, 
     IReadOnlyList<RowFieldsBase> sources, IReadOnlyDictionary<string, object?>? parameters = null, 
-    CancellationToken cancellationToken = default)
+    bool takeOwnership = false, CancellationToken cancellationToken = default)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
 ```
+
+| parameter | description |
+| --- | --- |
+| query | The query to execute. |
+| connection | The database connection. |
+| projection | A flat projection built from row field accesses or SQL expressions. |
+| sources | The row-fields sources for the projection parameters. |
+| parameters | The query parameters. |
+| takeOwnership | Whether to prepare the source query in place. If false, a clone is prepared; a frozen source cannot be taken over. |
+| cancellationToken | The cancellation token. |
 
 ## See Also
 
@@ -119,7 +141,7 @@ Asynchronously executes the query and buffers the flat projection results.
 public static Task<List<TResult>> ListProjectedAsync<TRow1, TRow2, TRow3, TResult>(
     this SqlQuery query, IDbConnection connection, 
     Expression<Func<TRow1, TRow2, TRow3, TResult>> projection, 
-    IReadOnlyDictionary<string, object?>? parameters = null, 
+    IReadOnlyDictionary<string, object?>? parameters = null, bool takeOwnership = false, 
     CancellationToken cancellationToken = default)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
@@ -136,6 +158,7 @@ public static Task<List<TResult>> ListProjectedAsync<TRow1, TRow2, TRow3, TResul
 | connection | The connection. |
 | projection | A flat projection built from direct row field accesses. |
 | parameters | Values that override the source query's parameters for this execution. |
+| takeOwnership | Whether to prepare the source query in place instead of cloning it. The source must not be frozen. |
 | cancellationToken | The cancellation token. |
 
 ## Return Value
@@ -159,11 +182,21 @@ public static Task<List<TResult>> ListProjectedAsync<TRow1, TRow2, TRow3, TResul
     this SqlQuery query, IDbConnection connection, 
     Expression<Func<TRow1, TRow2, TRow3, TResult>> projection, 
     IReadOnlyList<RowFieldsBase> sources, IReadOnlyDictionary<string, object?>? parameters = null, 
-    CancellationToken cancellationToken = default)
+    bool takeOwnership = false, CancellationToken cancellationToken = default)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
     where TRow3 : class, IRow
 ```
+
+| parameter | description |
+| --- | --- |
+| query | The query to execute. |
+| connection | The database connection. |
+| projection | A flat projection built from row field accesses or SQL expressions. |
+| sources | The row-fields sources for the projection parameters. |
+| parameters | The query parameters. |
+| takeOwnership | Whether to prepare the source query in place. If false, a clone is prepared; a frozen source cannot be taken over. |
+| cancellationToken | The cancellation token. |
 
 ## See Also
 

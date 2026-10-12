@@ -24,4 +24,4 @@ public class JsonRowConverter : JsonConverter
 
 ## See Also
 
-* **Source:** *[Newtonsoft.JsonRowConverter.cs](https://github.com/serenity-is/Serenity/blob/2c895c355fe09b3459b5091b6d2e792ced719b68/src/services/Entity/Row/Newtonsoft.JsonRowConverter.cs)*
+* **Source:** *[Newtonsoft.JsonRowConverter.cs](https://github.com/serenity-is/Serenity/blob/a41029d5f581006b844705e0b0f9995c0153d9b9/src/services/Entity/Row/Newtonsoft.JsonRowConverter.cs)*

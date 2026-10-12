@@ -1,4 +1,28 @@
-# Field Inequality operator (1 of 10)
+# Field Inequality operator (1 of 11)
+
+Implements the operator !=.
+
+```csharp
+public static BaseCriteria operator !=(BaseCriteria criteria, Field field)
+```
+
+| parameter | description |
+| --- | --- |
+| criteria | The criteria. |
+| field | The field. |
+
+## Return Value
+
+The result of the operator.
+
+## See Also
+
+* class [BaseCriteria](../BaseCriteria.md)
+* class [Field](../Field.md)
+
+---
+
+# Field Inequality operator (2 of 11)
 
 Implements the operator !=.
 
@@ -22,7 +46,7 @@ The result of the operator.
 
 ---
 
-# Field Inequality operator (2 of 10)
+# Field Inequality operator (3 of 11)
 
 Implements the operator !=.
 
@@ -46,7 +70,7 @@ The result of the operator.
 
 ---
 
-# Field Inequality operator (3 of 10)
+# Field Inequality operator (4 of 11)
 
 Implements the operator !=.
 
@@ -70,7 +94,7 @@ The result of the operator.
 
 ---
 
-# Field Inequality operator (4 of 10)
+# Field Inequality operator (5 of 11)
 
 Implements the operator !=.
 
@@ -94,7 +118,7 @@ The result of the operator.
 
 ---
 
-# Field Inequality operator (5 of 10)
+# Field Inequality operator (6 of 11)
 
 Implements the operator !=.
 
@@ -118,7 +142,7 @@ The result of the operator.
 
 ---
 
-# Field Inequality operator (6 of 10)
+# Field Inequality operator (7 of 11)
 
 Implements the operator !=.
 
@@ -142,7 +166,7 @@ The result of the operator.
 
 ---
 
-# Field Inequality operator (7 of 10)
+# Field Inequality operator (8 of 11)
 
 Implements the operator !=.
 
@@ -166,7 +190,7 @@ The result of the operator.
 
 ---
 
-# Field Inequality operator (8 of 10)
+# Field Inequality operator (9 of 11)
 
 Implements the operator !=.
 
@@ -190,7 +214,7 @@ The result of the operator.
 
 ---
 
-# Field Inequality operator (9 of 10)
+# Field Inequality operator (10 of 11)
 
 Implements the operator !=.
 
@@ -215,7 +239,7 @@ The result of the operator.
 
 ---
 
-# Field Inequality operator (10 of 10)
+# Field Inequality operator (11 of 11)
 
 Implements the operator !=.
 

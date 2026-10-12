@@ -32,4 +32,4 @@ public abstract class BaseUserRetrieveService<TRow> : BaseUserRetrieveService
 * interface [IRow](../../Serenity.Net.Services/Serenity.Data/IRow.md)
 * interface [IIdRow](../../Serenity.Net.Services/Serenity.Data/IIdRow.md)
 * interface [INameRow](../../Serenity.Net.Services/Serenity.Data/INameRow.md)
-* **Source:** *[BaseUserRetrieveServiceT.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/Authorization/BaseUserRetrieveServiceT.cs)*
+* **Source:** *[BaseUserRetrieveServiceT.cs](https://github.com/serenity-is/Serenity/blob/46e16ff054cc82845386dba0fec2b912c64230bf/common-features/src/extensions/Modules/Authorization/BaseUserRetrieveServiceT.cs)*

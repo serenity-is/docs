@@ -5,7 +5,7 @@ Executes the query and materializes each result row into the specified flat proj
 ```csharp
 public static List<TResult> ListProjected<TRow, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow, TResult>> projection, 
-    IReadOnlyDictionary<string, object?>? parameters = null)
+    IReadOnlyDictionary<string, object?>? parameters = null, bool takeOwnership = false)
     where TRow : class, IRow
 ```
 
@@ -17,6 +17,7 @@ public static List<TResult> ListProjected<TRow, TResult>(this SqlQuery query,
 | connection | The connection. |
 | projection | A flat projection built from direct row field accesses. |
 | parameters | Values that override the source query's parameters for this execution. |
+| takeOwnership | Whether to prepare the source query in place instead of cloning it. The source must not be frozen. |
 
 ## Return Value
 
@@ -37,7 +38,8 @@ Executes and buffers a projection using the specified row-fields source aliases.
 ```csharp
 public static List<TResult> ListProjected<TRow, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow, TResult>> projection, 
-    IReadOnlyList<RowFieldsBase> sources, IReadOnlyDictionary<string, object?>? parameters = null)
+    IReadOnlyList<RowFieldsBase> sources, IReadOnlyDictionary<string, object?>? parameters = null, 
+    bool takeOwnership = false)
     where TRow : class, IRow
 ```
 
@@ -57,7 +59,7 @@ Executes the query and materializes each result row into the specified flat proj
 ```csharp
 public static List<TResult> ListProjected<TRow1, TRow2, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow1, TRow2, TResult>> projection, 
-    IReadOnlyDictionary<string, object?>? parameters = null)
+    IReadOnlyDictionary<string, object?>? parameters = null, bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
 ```
@@ -71,6 +73,7 @@ public static List<TResult> ListProjected<TRow1, TRow2, TResult>(this SqlQuery q
 | connection | The connection. |
 | projection | A flat projection built from direct row field accesses. |
 | parameters | Values that override the source query's parameters for this execution. |
+| takeOwnership | Whether to prepare the source query in place instead of cloning it. The source must not be frozen. |
 
 ## Return Value
 
@@ -91,7 +94,8 @@ Executes and buffers a projection using the specified row-fields source aliases.
 ```csharp
 public static List<TResult> ListProjected<TRow1, TRow2, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow1, TRow2, TResult>> projection, 
-    IReadOnlyList<RowFieldsBase> sources, IReadOnlyDictionary<string, object?>? parameters = null)
+    IReadOnlyList<RowFieldsBase> sources, IReadOnlyDictionary<string, object?>? parameters = null, 
+    bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
 ```
@@ -112,7 +116,7 @@ Executes the query and materializes each result row into the specified flat proj
 ```csharp
 public static List<TResult> ListProjected<TRow1, TRow2, TRow3, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow1, TRow2, TRow3, TResult>> projection, 
-    IReadOnlyDictionary<string, object?>? parameters = null)
+    IReadOnlyDictionary<string, object?>? parameters = null, bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
     where TRow3 : class, IRow
@@ -128,6 +132,7 @@ public static List<TResult> ListProjected<TRow1, TRow2, TRow3, TResult>(this Sql
 | connection | The connection. |
 | projection | A flat projection built from direct row field accesses. |
 | parameters | Values that override the source query's parameters for this execution. |
+| takeOwnership | Whether to prepare the source query in place instead of cloning it. The source must not be frozen. |
 
 ## Return Value
 
@@ -148,7 +153,8 @@ Executes and buffers a projection using the specified row-fields source aliases.
 ```csharp
 public static List<TResult> ListProjected<TRow1, TRow2, TRow3, TResult>(this SqlQuery query, 
     IDbConnection connection, Expression<Func<TRow1, TRow2, TRow3, TResult>> projection, 
-    IReadOnlyList<RowFieldsBase> sources, IReadOnlyDictionary<string, object?>? parameters = null)
+    IReadOnlyList<RowFieldsBase> sources, IReadOnlyDictionary<string, object?>? parameters = null, 
+    bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
     where TRow3 : class, IRow

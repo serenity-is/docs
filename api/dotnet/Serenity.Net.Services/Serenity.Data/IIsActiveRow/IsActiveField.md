@@ -10,6 +10,10 @@ public Int16Field IsActiveField { get; }
 
 The is active field.
 
+## Remarks
+
+Note for rows that also implement [`IIsActiveDeletedRow`](../IIsActiveDeletedRow.md): deleting stores `-1` in this same column, which overwrites the previous `1` or `0`. The prior inactive state is therefore not recoverable, and undelete restores `1`.
+
 ## See Also
 
 * class [Int16Field](../Int16Field.md)

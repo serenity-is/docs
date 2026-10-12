@@ -17,6 +17,10 @@ public static int GetNextValue(IDbConnection connection, IDisplayOrderRow row,
 
 One more of maximum display order values of records in the group. If none, 1.
 
+## Remarks
+
+Not race safe: the value is computed here but inserted later, so concurrent inserts in the same group may compute the same value. A unique index on the display order column is recommended so the database rejects duplicates. See the class remarks.
+
 ## See Also
 
 * interface [IDisplayOrderRow](../IDisplayOrderRow.md)
@@ -44,6 +48,10 @@ public static int GetNextValue(IDbConnection connection, string tableName, Field
 ## Return Value
 
 One more of maximum display order values of records in the group. If none, 1.
+
+## Remarks
+
+Not race safe: the value is computed here but inserted later, so concurrent inserts in the same group may compute the same value. A unique index on the display order column is recommended so the database rejects duplicates. See the class remarks.
 
 ## See Also
 

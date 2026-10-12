@@ -19,7 +19,8 @@ The query itself.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | alias is null or alias.table is null or empty. |
+| ArgumentNullException | alias is null. |
+| ArgumentException | alias has no table name. |
 
 ## See Also
 
@@ -51,7 +52,8 @@ The query itself.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | alias is null or alias.table is null or empty |
+| ArgumentNullException | alias or toTable is null. |
+| ArgumentException | toTable is empty. |
 
 ## See Also
 

@@ -1,0 +1,21 @@
+# ConnectionKeyAttribute class
+**namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
+
+Determines the connection key used for a class.
+
+```csharp
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Method | AttributeTargets.Interface)]
+public class ConnectionKeyAttribute : Attribute
+```
+
+## Public Members
+
+| name | description |
+| --- | --- |
+| [ConnectionKeyAttribute](ConnectionKeyAttribute/ConnectionKeyAttribute.md)(…) | Initializes a new instance of the [`ConnectionKeyAttribute`](./ConnectionKeyAttribute.md) class. (2 constructors) |
+| [SourceType](ConnectionKeyAttribute/SourceType.md) { get; } | Gets the source type with connection key attribute if any. |
+| [Value](ConnectionKeyAttribute/Value.md) { get; } | Gets the connection key. |
+
+## See Also
+
+* **Source:** *[ConnectionKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/5a4f4fe11b63b33138eef44d2abe2d781823550d/src/core/ComponentModel/Connection/ConnectionKeyAttribute.cs)*

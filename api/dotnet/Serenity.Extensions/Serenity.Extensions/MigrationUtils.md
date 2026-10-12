@@ -11,12 +11,15 @@ public static class MigrationUtils
 
 | name | description |
 | --- | --- |
+| static [AddConcurrencyVersionTrigger](MigrationUtils/AddConcurrencyVersionTrigger.md)(…) | Adds a database trigger that increments this column on every update, providing optimistic concurrency support for rows implementing `Serenity.Data.IConcurrencyVersionRow`. (2 methods) |
 | static [AddOracleIdentity](MigrationUtils/AddOracleIdentity.md)(…) | Adds an Oracle sequence and trigger to generate identity values for the specified column. |
 | static [AsUserIdType](MigrationUtils/AsUserIdType.md)(…) | Sets the column type based on the UserEntityOptions.IdFieldType, which can be Int32Field, Int64Field, StringField, or GuidField. |
 | static [AutoIncrement](MigrationUtils/AutoIncrement.md)(…) | Declares column as auto increment (e.g. Identity()) if the database is something other than Oracle, defines an Oracle sequence otherwise. It also calls NotNullable() as it is not possible for auto increment / sequence columns to be nullable. This assumes the column will NOT be set as PrimaryKey(), just as an auto incrementing value. As MySql does not support AUTO_INCREMENT without primary key or an index, this first creates the column as a regular one, then creates an index and modifies it to be an AUTO_INCREMENT. |
 | static [CreateTableWithId32](MigrationUtils/CreateTableWithId32.md)(…) | Please prefer IdentityKey(this) on the fluent column builder |
 | static [CreateTableWithId64](MigrationUtils/CreateTableWithId64.md)(…) | Please prefer IdentityKey(this) on the fluent column builder |
+| static [DropConcurrencyVersionTrigger](MigrationUtils/DropConcurrencyVersionTrigger.md)(…) | Drops the concurrency version trigger created by [`AddConcurrencyVersionTrigger`](./MigrationUtils/AddConcurrencyVersionTrigger.md). |
 | static [EnsureDatabase](MigrationUtils/EnsureDatabase.md)(…) | Ensures the database for the specified connection key exists, creating it if necessary. |
+| static [GetConcurrencyVersionTriggerSql](MigrationUtils/GetConcurrencyVersionTriggerSql.md)(…) | Generates the SQL statements that create the concurrency version trigger for the given database type. |
 | static [IdentityKey](MigrationUtils/IdentityKey.md)(…) | Declares column as Identity() if the database is something other than Oracle, defines an Oracle sequence otherwise. It sets the column as PrimaryKey() and also calls NotNullable() as it is not possible for identity / sequence columns to be nullable. |
 | static [If&lt;TSyntax&gt;](MigrationUtils/If.md)(…) | Invokes the callback only when the predicate is true, otherwise returns the syntax unchanged. |
 | static [IsDatabase](MigrationUtils/IsDatabase.md)(…) | Determines whether the migration is running against a database whose type starts with the specified name. (2 methods) |
@@ -30,4 +33,4 @@ public static class MigrationUtils
 
 ## See Also
 
-* **Source:** *[MigrationUtils.cs](https://github.com/serenity-is/Serenity/blob/946b4765d8a337deec82c919259aeeb4b626bd6f/common-features/src/extensions/Modules/MigrationUtils/MigrationUtils.cs)*
+* **Source:** *[MigrationUtils.cs](https://github.com/serenity-is/Serenity/blob/d947fc2cb1fa45d4549127cb6158b7af08071c3d/common-features/src/extensions/Modules/MigrationUtils/MigrationUtils.cs)*

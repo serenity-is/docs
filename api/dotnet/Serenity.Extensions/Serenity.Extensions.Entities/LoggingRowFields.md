@@ -29,4 +29,4 @@ Initializes a new instance of the [`LoggingRowFields`](./LoggingRowFields.md) cl
 ## See Also
 
 * class [RowFieldsBase](../../Serenity.Net.Services/Serenity.Data/RowFieldsBase.md)
-* **Source:** *[LoggingRow.cs](https://github.com/serenity-is/Serenity/blob/946b4765d8a337deec82c919259aeeb4b626bd6f/common-features/src/extensions/Modules/BaseEntities/LoggingRow.cs)*
+* **Source:** *[LoggingRow.cs](https://github.com/serenity-is/Serenity/blob/eeea0b185191cf23305f1316b40f972e2119308c/common-features/src/extensions/Modules/BaseEntities/LoggingRow.cs)*

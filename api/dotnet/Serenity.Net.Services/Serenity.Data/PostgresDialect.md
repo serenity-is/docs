@@ -16,6 +16,7 @@ public class PostgresDialect : ISqlDialect
 | virtual [CanUseRowNumber](PostgresDialect/CanUseRowNumber.md) { get; } |  |
 | virtual [CanUseSkipKeyword](PostgresDialect/CanUseSkipKeyword.md) { get; } |  |
 | virtual [CloseQuote](PostgresDialect/CloseQuote.md) { get; } |  |
+| [Comparer](PostgresDialect/Comparer.md) { get; } |  |
 | virtual [ConcatOperator](PostgresDialect/ConcatOperator.md) { get; } |  |
 | virtual [DateFormat](PostgresDialect/DateFormat.md) { get; } |  |
 | virtual [DateTimeFormat](PostgresDialect/DateTimeFormat.md) { get; } |  |
@@ -43,9 +44,10 @@ public class PostgresDialect : ISqlDialect
 | virtual [QuoteIdentifier](PostgresDialect/QuoteIdentifier.md)(…) |  |
 | virtual [QuoteUnicodeString](PostgresDialect/QuoteUnicodeString.md)(…) |  |
 | [UnionKeyword](PostgresDialect/UnionKeyword.md)(…) |  |
+| [WithComparer](PostgresDialect/WithComparer.md)(…) |  |
 | static readonly [Instance](PostgresDialect/Instance.md) | The shared instance of PostgresDialect. |
 
 ## See Also
 
 * interface [ISqlDialect](./ISqlDialect.md)
-* **Source:** *[PostgresDialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/PostgresDialect.cs)*
+* **Source:** *[PostgresDialect.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Data/Dialects/PostgresDialect.cs)*

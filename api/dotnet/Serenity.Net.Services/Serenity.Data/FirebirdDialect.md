@@ -18,6 +18,7 @@ public class FirebirdDialect : ISqlDialect
 | virtual [CanUseRowNumber](FirebirdDialect/CanUseRowNumber.md) { get; } |  |
 | virtual [CanUseSkipKeyword](FirebirdDialect/CanUseSkipKeyword.md) { get; } |  |
 | virtual [CloseQuote](FirebirdDialect/CloseQuote.md) { get; } |  |
+| [Comparer](FirebirdDialect/Comparer.md) { get; } |  |
 | virtual [ConcatOperator](FirebirdDialect/ConcatOperator.md) { get; } |  |
 | virtual [DateFormat](FirebirdDialect/DateFormat.md) { get; } |  |
 | virtual [DateTimeFormat](FirebirdDialect/DateTimeFormat.md) { get; } |  |
@@ -45,8 +46,9 @@ public class FirebirdDialect : ISqlDialect
 | virtual [QuoteIdentifier](FirebirdDialect/QuoteIdentifier.md)(…) |  |
 | virtual [QuoteUnicodeString](FirebirdDialect/QuoteUnicodeString.md)(…) |  |
 | [UnionKeyword](FirebirdDialect/UnionKeyword.md)(…) |  |
+| [WithComparer](FirebirdDialect/WithComparer.md)(…) |  |
 
 ## See Also
 
 * interface [ISqlDialect](./ISqlDialect.md)
-* **Source:** *[FirebirdDialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/FirebirdDialect.cs)*
+* **Source:** *[FirebirdDialect.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Data/Dialects/FirebirdDialect.cs)*

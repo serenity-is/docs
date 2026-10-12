@@ -8,27 +8,17 @@ An abstract base attribute that all permission-related attributes derive from.
 public abstract class PermissionAttributeBase : Attribute
 ```
 
-| parameter | description |
-| --- | --- |
-| permission | The permission. |
-
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [PermissionAttributeBase](PermissionAttributeBase/PermissionAttributeBase.md)(…) | Initializes a new instance of the [`PermissionAttributeBase`](./PermissionAttributeBase.md) class. A colon is inserted between module and permission to generate permission key. (2 constructors) |
-| [Permission](PermissionAttributeBase/Permission.md) { get; } | Gets the permission. |
-
-## Protected Members
-
-| name | description |
-| --- | --- |
-| [PermissionAttributeBase](PermissionAttributeBase/PermissionAttributeBase.md)(…) | An abstract base attribute that all permission-related attributes derive from. |
+| [PermissionAttributeBase](PermissionAttributeBase/PermissionAttributeBase.md)(…) | Initializes a new instance of the [`PermissionAttributeBase`](./PermissionAttributeBase.md) class. (3 constructors) |
+| [Permission](PermissionAttributeBase/Permission.md) { get; } | Gets the permission key. Never null or empty; use [`SpecialPermissionKeys`](../Serenity/SpecialPermissionKeys.md) for the special keys. |
 
 ## Remarks
 
-Initializes a new instance of the [`PermissionAttributeBase`](./PermissionAttributeBase.md) class.
+Permissions defined by these attributes are checked per row type, not per record. Having a permission grants access to every record of that type that can be targeted by its id, so they should not be used to restrict access to individual records (e.g. records owned by the current user or a specific tenant). For record level authorization, implement a request handler behavior that adds the required filter to the query (e.g. via its `OnPrepareQuery` method), or override the relevant handler method. See the multitenancy tutorial in Serenity docs for a sample.
 
 ## See Also
 
-* **Source:** *[PermissionAttributeBase.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Permission/PermissionAttributeBase.cs)*
+* **Source:** *[PermissionAttributeBase.cs](https://github.com/serenity-is/Serenity/blob/5d57a31a12f284644fefd8952ba4744a7f5c0592/src/core/ComponentModel/Permission/PermissionAttributeBase.cs)*

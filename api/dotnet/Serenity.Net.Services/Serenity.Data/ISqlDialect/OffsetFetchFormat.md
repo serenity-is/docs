@@ -10,6 +10,10 @@ public string OffsetFetchFormat { get; }
 
 The offset fetch format.
 
+## Remarks
+
+Dialects without OFFSET support (check [`CanUseOffsetFetch`](./CanUseOffsetFetch.md) first) throw NotImplementedException.
+
 ## See Also
 
 * interface [ISqlDialect](../ISqlDialect.md)

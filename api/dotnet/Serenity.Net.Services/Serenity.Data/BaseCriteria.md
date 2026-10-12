@@ -12,8 +12,8 @@ public abstract class BaseCriteria : ICriteria
 | name | description |
 | --- | --- |
 | virtual [IsEmpty](BaseCriteria/IsEmpty.md) { get; } | Gets a value indicating whether this criteria instance is empty. |
-| [Contains](BaseCriteria/Contains.md)(…) | Creates a new binary Contains criteria (LIKE '%...%') containing this criteria as the left operand. |
-| [EndsWith](BaseCriteria/EndsWith.md)(…) | Creates a new binary Ends With (LIKE '%...') criteria containing this criteria as the left operand. |
+| [Contains](BaseCriteria/Contains.md)(…) | Creates a new binary Contains criteria (LIKE '%...%') containing this criteria as the left operand. The text is treated as a literal value: LIKE special characters (%, _, [) in it are escaped and an ESCAPE '!' clause is appended. For intentional wildcards use [`Like`](./BaseCriteria/Like.md) instead. |
+| [EndsWith](BaseCriteria/EndsWith.md)(…) | Creates a new binary Ends With (LIKE '%...') criteria containing this criteria as the left operand. The text is treated as a literal value: LIKE special characters (%, _, [) in it are escaped and an ESCAPE '!' clause is appended. For intentional wildcards use [`Like`](./BaseCriteria/Like.md) instead. |
 | override [Equals](BaseCriteria/Equals.md)(…) | Must override this or will get operator overload warning. |
 | override [GetHashCode](BaseCriteria/GetHashCode.md)() | Must override this or will get operator overload warning. |
 | [In](BaseCriteria/In.md)(…) | Creates a new binary IN criteria containing this criteria as the left operand. (2 methods) |
@@ -21,12 +21,14 @@ public abstract class BaseCriteria : ICriteria
 | [InStatement](BaseCriteria/InStatement.md)(…) | Creates a new binary IN criteria containing this criteria as the left operand. |
 | [IsNotNull](BaseCriteria/IsNotNull.md)() | Creates a new unary IsNotNull criteria containing this criteria as the operand. |
 | [IsNull](BaseCriteria/IsNull.md)() | Creates a new unary IsNull criteria containing this criteria as the operand. |
-| [Like](BaseCriteria/Like.md)(…) | Creates a new binary Like criteria containing this criteria as the left operand. |
-| [NotContains](BaseCriteria/NotContains.md)(…) | Creates a new binary Not Contains criteria (NOT LIKE '%...%') containing this criteria as the left operand. |
+| [Like](BaseCriteria/Like.md)(…) | Creates a new binary Like criteria containing this criteria as the left operand. The mask is a raw LIKE pattern: %, _ and [...] act as wildcards and are not escaped. For literal values see [`Contains`](./BaseCriteria/Contains.md), [`StartsWith`](./BaseCriteria/StartsWith.md) or [`EndsWith`](./BaseCriteria/EndsWith.md). |
+| [LikeEscaped](BaseCriteria/LikeEscaped.md)(…) | Creates a new binary Like criteria containing this criteria as the left operand, with an ESCAPE clause. The mask must already be escaped for the given escape character (see [`EscapeLikeWildcards`](./Criteria/EscapeLikeWildcards.md)); it is used as is. For literal values prefer [`Contains`](./BaseCriteria/Contains.md), [`StartsWith`](./BaseCriteria/StartsWith.md) or [`EndsWith`](./BaseCriteria/EndsWith.md); for raw patterns without ESCAPE see [`Like`](./BaseCriteria/Like.md). |
+| [NotContains](BaseCriteria/NotContains.md)(…) | Creates a new binary Not Contains criteria (NOT LIKE '%...%') containing this criteria as the left operand. The text is treated as a literal value: LIKE special characters (%, _, [) in it are escaped and an ESCAPE '!' clause is appended. For intentional wildcards use [`NotLike`](./BaseCriteria/NotLike.md) instead. |
 | [NotIn](BaseCriteria/NotIn.md)(…) | Creates a new binary NOT IN criteria containing this criteria as the left operand. (2 methods) |
 | [NotIn&lt;T&gt;](BaseCriteria/NotIn.md)(…) | Creates a new binary NOT IN criteria containing this criteria as the left operand. |
-| [NotLike](BaseCriteria/NotLike.md)(…) | Creates a new binary Not Like criteria containing this criteria as the left operand. |
-| [StartsWith](BaseCriteria/StartsWith.md)(…) | Creates a new binary Starts With (LIKE '...%') criteria containing this criteria as the left operand. |
+| [NotLike](BaseCriteria/NotLike.md)(…) | Creates a new binary Not Like criteria containing this criteria as the left operand. The mask is a raw LIKE pattern: %, _ and [...] act as wildcards and are not escaped. For literal values see [`NotContains`](./BaseCriteria/NotContains.md). |
+| [NotLikeEscaped](BaseCriteria/NotLikeEscaped.md)(…) | Creates a new binary Not Like criteria containing this criteria as the left operand, with an ESCAPE clause. The mask must already be escaped for the given escape character (see [`EscapeLikeWildcards`](./Criteria/EscapeLikeWildcards.md)); it is used as is. For literal values prefer [`NotContains`](./BaseCriteria/NotContains.md); for raw patterns without ESCAPE see [`NotLike`](./BaseCriteria/NotLike.md). |
+| [StartsWith](BaseCriteria/StartsWith.md)(…) | Creates a new binary Starts With (LIKE '...%') criteria containing this criteria as the left operand. The text is treated as a literal value: LIKE special characters (%, _, [) in it are escaped and an ESCAPE '!' clause is appended. For intentional wildcards use [`Like`](./BaseCriteria/Like.md) instead. |
 | override [ToString](BaseCriteria/ToString.md)() | Converts the criteria to string. Raises an exception if criteria contains parameters. |
 | [ToString](BaseCriteria/ToString.md)(…) | Converts the criteria to string representation while adding params to the target query. |
 | virtual [ToString](BaseCriteria/ToString.md)(…) | Converts the criteria to string representation into a string builder, while adding its params to the target query. |
@@ -35,7 +37,7 @@ public abstract class BaseCriteria : ICriteria
 | [operator &#x7C;](BaseCriteria/op_BitwiseOr.md) | Implements the operator &#x7C;. |
 | [operator ==](BaseCriteria/op_Equality.md) | Implements the operator ==. (10 operators) |
 | [operator ^](BaseCriteria/op_ExclusiveOr.md) | Implements the operator ^. |
-| [operator false](BaseCriteria/op_False.md) | Must return FALSE from this for short circuit OR (&#x7C;&#x7C;) to return a new binary criteria merging left and right operands in any case |
+| [operator false](BaseCriteria/op_False.md) | Returns false so that `||` evaluates its right operand and combines both criteria with [`operator &#x7C;`](./BaseCriteria/op_BitwiseOr.md). |
 | [operator &gt;](BaseCriteria/op_GreaterThan.md) | Implements the operator &gt;. (10 operators) |
 | [operator &gt;=](BaseCriteria/op_GreaterThanOrEqual.md) | Implements the operator &gt;=. (10 operators) |
 | [operator !=](BaseCriteria/op_Inequality.md) | Implements the operator !=. (10 operators) |
@@ -43,7 +45,7 @@ public abstract class BaseCriteria : ICriteria
 | [operator &lt;=](BaseCriteria/op_LessThanOrEqual.md) | Implements the operator &lt;=. (10 operators) |
 | [operator !](BaseCriteria/op_LogicalNot.md) | Implements the operator !. |
 | [operator ~](BaseCriteria/op_OnesComplement.md) | Implements the operator ~. |
-| [operator true](BaseCriteria/op_True.md) | Must ALSO return FALSE from this for short circuit AND (&amp;&amp;) to return a new binary criteria merging left and right operands in any case https://msdn.microsoft.com/en-us/library/aa691312 |
+| [operator true](BaseCriteria/op_True.md) | Returns false so that `&&` evaluates its right operand and combines both criteria with [`operator &amp;`](./BaseCriteria/op_BitwiseAnd.md). |
 
 ## Protected Members
 
@@ -54,4 +56,4 @@ public abstract class BaseCriteria : ICriteria
 ## See Also
 
 * interface [ICriteria](../Serenity/ICriteria.md)
-* **Source:** *[BaseCriteria.cs](https://github.com/serenity-is/Serenity/blob/1a8f0b8d86a82010fb35e1c2b9f853493e7f539f/src/services/Data/Criteria/BaseCriteria.cs)*
+* **Source:** *[BaseCriteria.cs](https://github.com/serenity-is/Serenity/blob/6f50497be6b2dd18ec3f93659d3d9b0ae6d3c062/src/services/Data/Criteria/BaseCriteria.cs)*

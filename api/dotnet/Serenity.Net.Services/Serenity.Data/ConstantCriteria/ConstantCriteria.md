@@ -39,12 +39,12 @@ public ConstantCriteria(IEnumerable<long> values)
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 
 ```csharp
-public ConstantCriteria(int value)
+public ConstantCriteria(IEnumerable<string> values)
 ```
 
 | parameter | description |
 | --- | --- |
-| value | The value. |
+| values | The values. |
 
 ## See Also
 
@@ -57,7 +57,7 @@ public ConstantCriteria(int value)
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 
 ```csharp
-public ConstantCriteria(long value)
+public ConstantCriteria(int value)
 ```
 
 | parameter | description |
@@ -75,17 +75,15 @@ public ConstantCriteria(long value)
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 
 ```csharp
-public ConstantCriteria(IEnumerable<string> values, ISqlDialect? dialect = null)
+public ConstantCriteria(long value)
 ```
 
 | parameter | description |
 | --- | --- |
-| values | The values. |
-| dialect | The dialect. |
+| value | The value. |
 
 ## See Also
 
-* interface [ISqlDialect](../ISqlDialect.md)
 * class [ConstantCriteria](../ConstantCriteria.md)
 
 ---
@@ -95,15 +93,13 @@ public ConstantCriteria(IEnumerable<string> values, ISqlDialect? dialect = null)
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 
 ```csharp
-public ConstantCriteria(string value, ISqlDialect? dialect = null)
+public ConstantCriteria(string value)
 ```
 
 | parameter | description |
 | --- | --- |
 | value | The value. |
-| dialect | The dialect. |
 
 ## See Also
 
-* interface [ISqlDialect](../ISqlDialect.md)
 * class [ConstantCriteria](../ConstantCriteria.md)

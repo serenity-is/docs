@@ -3,7 +3,7 @@
 Gets the parameters.
 
 ```csharp
-public IDictionary<string, object?>? Params { get; }
+public IReadOnlyDictionary<string, object?>? Params { get; }
 ```
 
 ## Property Value

@@ -12,11 +12,12 @@ public interface ISqlDialect
 | name | description |
 | --- | --- |
 | [AutoQuotedIdentifiers](ISqlDialect/AutoQuotedIdentifiers.md) { get; } | Gets a value indicating whether to automatically quote identifiers. Default is null, e.g. SqlSettings.AutoQuotedIdentifiers is used, which itself is false by default, but usually set to true in applications. |
-| [CanUseConcat](ISqlDialect/CanUseConcat.md) { get; } | Gets a value indicating whether the server supports CONCAT. |
+| [CanUseConcat](ISqlDialect/CanUseConcat.md) { get; } | Gets a value indicating whether the server supports the CONCAT() function (used by `ConcatAttribute` to decide between `CONCAT(...)` and an infix operator). This does not imply [`ConcatOperator`](./ISqlDialect/ConcatOperator.md) is available: e.g. MySQL supports `CONCAT()` but has no infix concatenation operator (`||` is logical OR there unless PIPES_AS_CONCAT mode is on). |
 | [CanUseOffsetFetch](ISqlDialect/CanUseOffsetFetch.md) { get; } | Gets a value indicating whether the server supports OFFSET FETCH. |
 | [CanUseRowNumber](ISqlDialect/CanUseRowNumber.md) { get; } | Gets a value indicating whether the server supports ROWNUMBER. |
 | [CanUseSkipKeyword](ISqlDialect/CanUseSkipKeyword.md) { get; } | Gets a value indicating whether the server supports SKIP keyword (or a variation of it). |
 | [CloseQuote](ISqlDialect/CloseQuote.md) { get; } | Gets the close quote character for quoting identifiers. |
+| [Comparer](ISqlDialect/Comparer.md) { get; } | Gets the comparer used to compare string field values for this connection, or null to fall back to [`DefaultComparer`](./SqlSettings/DefaultComparer.md). Dialects that support a per-connection comparer override this and [`WithComparer`](./ISqlDialect/WithComparer.md). |
 | [ConcatOperator](ISqlDialect/ConcatOperator.md) { get; } | Gets the CONCAT operator keyword. |
 | [DateFormat](ISqlDialect/DateFormat.md) { get; } | Gets the date format. |
 | [DateTimeFormat](ISqlDialect/DateTimeFormat.md) { get; } | Gets the date time format. |
@@ -41,10 +42,11 @@ public interface ISqlDialect
 | [UseTakeAtEnd](ISqlDialect/UseTakeAtEnd.md) { get; } | Gets a value indicating whether to use TAKE at the end. |
 | [IsReservedKeyword](ISqlDialect/IsReservedKeyword.md)(…) | Returns true if the specified identifier is a SQL keyword. |
 | [QuoteColumnAlias](ISqlDialect/QuoteColumnAlias.md)(…) | Quotes the column alias. This usually calls QuoteIdentifier except for Oracle. |
-| [QuoteIdentifier](ISqlDialect/QuoteIdentifier.md)(…) | Quotes the identifier. |
+| [QuoteIdentifier](ISqlDialect/QuoteIdentifier.md)(…) | Quotes the identifier, escaping embedded occurrences of the dialect's closing quote character. |
 | [QuoteUnicodeString](ISqlDialect/QuoteUnicodeString.md)(…) | Quotes the unicode string. |
 | [UnionKeyword](ISqlDialect/UnionKeyword.md)(…) | Gets the union keyword for the specified union type. |
+| [WithComparer](ISqlDialect/WithComparer.md)(…) | Returns a copy of this dialect with the specified comparer set. Dialects that support a per-connection comparer override this method; the default throws. |
 
 ## See Also
 
-* **Source:** *[ISqlDialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/ISqlDialect.cs)*
+* **Source:** *[ISqlDialect.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Data/Dialects/ISqlDialect.cs)*

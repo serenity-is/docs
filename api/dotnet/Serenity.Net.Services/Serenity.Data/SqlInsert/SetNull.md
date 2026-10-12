@@ -18,7 +18,7 @@ SqlInsert object itself.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty. |
+| ArgumentException | field is null or empty, or was already set. |
 
 ## See Also
 

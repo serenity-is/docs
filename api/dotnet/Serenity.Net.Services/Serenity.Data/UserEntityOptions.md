@@ -26,4 +26,4 @@ Configure the identifier type before running the initial database migrations. Ch
 
 ## See Also
 
-* **Source:** *[UserEntityOptions.cs](https://github.com/serenity-is/Serenity/blob/946b4765d8a337deec82c919259aeeb4b626bd6f/src/services/Data/Mapping/UserEntityOptions.cs)*
+* **Source:** *[UserEntityOptions.cs](https://github.com/serenity-is/Serenity/blob/a1d703eec4f9d16383370c8cf8406b49fbc43e28/src/services/Data/Mapping/UserEntityOptions.cs)*

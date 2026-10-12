@@ -15,6 +15,10 @@ public static string? ReplaceBrackets(string? expression, ISqlDialect dialect)
 
 The expression with brackets replaced.
 
+## Remarks
+
+Quoted regions and comments are skipped via SqlRegionScanner, so a "[" inside them never pairs forward into real SQL. A lone '/' (division) falls through untouched.
+
 ## See Also
 
 * interface [ISqlDialect](../ISqlDialect.md)

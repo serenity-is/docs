@@ -15,6 +15,10 @@ public static string AutoBracket(string s, ISqlDialect? dialect = null)
 
 The bracketed string.
 
+## Remarks
+
+Brackets are always square here by design: they are the canonical pre-translation form, replaced with dialect quotes at execution time (see BracketLocator). Do not use dialect.QuoteIdentifier instead, as it is conditional on some dialects (e.g. Oracle, Firebird) and would silently drop the quoting intent for plain identifiers.
+
 ## See Also
 
 * interface [ISqlDialect](../ISqlDialect.md)

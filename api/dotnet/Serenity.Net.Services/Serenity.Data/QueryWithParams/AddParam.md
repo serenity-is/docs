@@ -8,7 +8,7 @@ public void AddParam(string name, object? value)
 
 | parameter | description |
 | --- | --- |
-| name | The name. |
+| name | The name. Must start with "@". |
 | value | The value. |
 
 ## See Also

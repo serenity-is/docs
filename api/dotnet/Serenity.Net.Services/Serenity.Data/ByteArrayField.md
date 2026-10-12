@@ -42,4 +42,4 @@ Initializes a new instance of the [`ByteArrayField`](./ByteArrayField.md) class.
 ## See Also
 
 * class [CustomClassField&lt;TValue&gt;](./CustomClassField-1.md)
-* **Source:** *[ByteArrayField.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Entity/FieldTypes/ByteArrayField.cs)*
+* **Source:** *[ByteArrayField.cs](https://github.com/serenity-is/Serenity/blob/6e3d9856e875cdcea9be4e3e44edef50facbe8f3/src/services/Entity/FieldTypes/ByteArrayField.cs)*

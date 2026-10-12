@@ -34,6 +34,11 @@ public Criteria(ISqlQuery query)
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | query is null |
+| InvalidOperationException | query is an independent query with auto parameters. |
+
+## Remarks
+
+The query must share the same root query that this criteria will be used in (usually built via that query's SubQuery() method). An unrelated query's parameters are not available to the outer query, so embedding it may produce completely invalid results. Independent queries without parameters are safe to embed.
 
 ## See Also
 
@@ -52,7 +57,7 @@ public Criteria(string expression)
 
 | parameter | description |
 | --- | --- |
-| expression | A field name or criteria condition (can be `null`). |
+| expression | A field name or criteria condition (cannot be `null`). |
 
 ## Remarks
 

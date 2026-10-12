@@ -5,19 +5,14 @@ Indicates that the field this attribute is placed on is not filterable.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
-public class NotFilterableAttribute : Attribute
+public class NotFilterableAttribute : FilterableAttribute
 ```
-
-| parameter | description |
-| --- | --- |
-| value | if set to `true` (default) field is not filterable. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [NotFilterableAttribute](NotFilterableAttribute/NotFilterableAttribute.md)(…) | Indicates that the field this attribute is placed on is not filterable. |
-| [Value](NotFilterableAttribute/Value.md) { get; } | Gets a value indicating whether this [`NotFilterableAttribute`](./NotFilterableAttribute.md) is enabled. |
+| [NotFilterableAttribute](NotFilterableAttribute/NotFilterableAttribute.md)() | Indicates that the field this attribute is placed on is not filterable. |
 
 ## Remarks
 
@@ -25,4 +20,5 @@ Initializes a new instance of the [`NotFilterableAttribute`](./NotFilterableAttr
 
 ## See Also
 
-* **Source:** *[NotFilterableAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Columns/Filtering/NotFilterableAttribute.cs)*
+* class [FilterableAttribute](./FilterableAttribute.md)
+* **Source:** *[NotFilterableAttribute.cs](https://github.com/serenity-is/Serenity/blob/d25d8234d5d47750c7fc36779de766d0541b2868/src/core/ComponentModel/Columns/Filtering/NotFilterableAttribute.cs)*

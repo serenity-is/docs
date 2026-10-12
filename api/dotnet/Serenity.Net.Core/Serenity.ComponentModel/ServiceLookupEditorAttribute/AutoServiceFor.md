@@ -1,18 +1,25 @@
 # ServiceLookupEditorAttribute.AutoServiceFor method
 
-When service is null, this method tries to determine the service by looking at the type this attribute is placed on. This is a combination of module identifier and type name. If the type has a [Module] attribute, it is used, otherwise the module identifier is determined from the namespace, by removing ".Entities", ".Scripts", ".Lookups" common suffixes and the root namespace (e.g. the first part of the namespace before the first dot). Type name is determined from the class type name, with common suffixes like "Row" or "Lookup" removed.
+When service is null, this method first tries to determine the service URL from a matching endpoint for row types, then falls back to the module identifier and type name convention.
 
 ```csharp
-public static string AutoServiceFor(Type type)
+public static string AutoServiceFor(Type itemType, string? actionName = null)
 ```
 
 | parameter | description |
 | --- | --- |
-| type | Type to generate a service for. |
+| itemType | Type to generate a service for. |
+| actionName | Optional action name. |
 
 ## Return Value
 
 Auto generated service.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | Thrown when *itemType* is null. |
 
 ## See Also
 

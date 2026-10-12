@@ -18,4 +18,4 @@ public class OriginAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[OriginAttribute.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Data/Mapping/OriginAttribute.cs)*
+* **Source:** *[OriginAttribute.cs](https://github.com/serenity-is/Serenity/blob/9bdd88fd415201195fde6c80a27910d26410d8c6/src/services/Data/Mapping/OriginAttribute.cs)*

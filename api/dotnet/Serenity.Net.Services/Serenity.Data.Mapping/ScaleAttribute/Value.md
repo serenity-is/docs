@@ -10,6 +10,12 @@ public int Value { get; set; }
 
 The value.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentOutOfRangeException | value is negative. |
+
 ## See Also
 
 * class [ScaleAttribute](../ScaleAttribute.md)

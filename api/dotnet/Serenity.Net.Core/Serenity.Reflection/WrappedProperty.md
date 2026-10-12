@@ -28,4 +28,4 @@ Initializes a new instance of the [`WrappedProperty`](./WrappedProperty.md) clas
 ## See Also
 
 * interface [IPropertyInfo](./IPropertyInfo.md)
-* **Source:** *[WrappedProperty.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Reflection/WrappedProperty.cs)*
+* **Source:** *[WrappedProperty.cs](https://github.com/serenity-is/Serenity/blob/af6455dc18348a2cdf0c31a262347ee13ea922cf/src/core/Reflection/WrappedProperty.cs)*

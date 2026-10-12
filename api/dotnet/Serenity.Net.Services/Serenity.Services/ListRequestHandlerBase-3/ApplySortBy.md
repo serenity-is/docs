@@ -1,6 +1,6 @@
 # ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;.ApplySortBy method
 
-Applies a sort order to the query
+Applies a sort order to the query Fields with read permissions the user does not have are ignored.
 
 ```csharp
 protected virtual void ApplySortBy(SqlQuery query, SortBy sortBy)

@@ -4,7 +4,7 @@ Prepares a reusable flat projection. The source query must be a root query witho
 
 ```csharp
 public static IProjectedQuery<TResult> AsReusableProjected<TRow, TResult>(this SqlQuery query, 
-    Expression<Func<TRow, TResult>> projection)
+    Expression<Func<TRow, TResult>> projection, bool takeOwnership = false)
     where TRow : class, IRow
 ```
 
@@ -14,6 +14,7 @@ public static IProjectedQuery<TResult> AsReusableProjected<TRow, TResult>(this S
 | TResult | The flat projection result type. |
 | query | The query to prepare. |
 | projection | A flat projection built from row field accesses or SQL expressions. |
+| takeOwnership | Whether to prepare the source query in place. If false, a clone is prepared; an already-frozen source cannot be taken over. |
 
 ## Return Value
 
@@ -34,9 +35,21 @@ Prepares a reusable projection using the specified row-fields source aliases.
 
 ```csharp
 public static IProjectedQuery<TResult> AsReusableProjected<TRow, TResult>(this SqlQuery query, 
-    Expression<Func<TRow, TResult>> projection, IReadOnlyList<RowFieldsBase> sources)
+    Expression<Func<TRow, TResult>> projection, IReadOnlyList<RowFieldsBase> sources, 
+    bool takeOwnership = false)
     where TRow : class, IRow
 ```
+
+| parameter | description |
+| --- | --- |
+| query | The query to prepare. |
+| projection | A flat projection built from row field accesses or SQL expressions. |
+| sources | The row-fields sources for the projection parameters. |
+| takeOwnership | Whether to prepare the source query in place. If false, a clone is prepared; a frozen source cannot be taken over. |
+
+## Return Value
+
+A reusable projection that can be executed with different parameter values.
 
 ## See Also
 
@@ -54,7 +67,8 @@ Prepares a reusable flat projection. The source query must be a root query witho
 
 ```csharp
 public static IProjectedQuery<TResult> AsReusableProjected<TRow1, TRow2, TResult>(
-    this SqlQuery query, Expression<Func<TRow1, TRow2, TResult>> projection)
+    this SqlQuery query, Expression<Func<TRow1, TRow2, TResult>> projection, 
+    bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
 ```
@@ -66,6 +80,7 @@ public static IProjectedQuery<TResult> AsReusableProjected<TRow1, TRow2, TResult
 | TResult | The flat projection result type. |
 | query | The query to prepare. |
 | projection | A flat projection built from row field accesses or SQL expressions. |
+| takeOwnership | Whether to prepare the source query in place. If false, a clone is prepared; an already-frozen source cannot be taken over. |
 
 ## Return Value
 
@@ -87,10 +102,21 @@ Prepares a reusable projection using the specified row-fields source aliases.
 ```csharp
 public static IProjectedQuery<TResult> AsReusableProjected<TRow1, TRow2, TResult>(
     this SqlQuery query, Expression<Func<TRow1, TRow2, TResult>> projection, 
-    IReadOnlyList<RowFieldsBase> sources)
+    IReadOnlyList<RowFieldsBase> sources, bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
 ```
+
+| parameter | description |
+| --- | --- |
+| query | The query to prepare. |
+| projection | A flat projection built from row field accesses or SQL expressions. |
+| sources | The row-fields sources for the projection parameters. |
+| takeOwnership | Whether to prepare the source query in place. If false, a clone is prepared; a frozen source cannot be taken over. |
+
+## Return Value
+
+A reusable projection that can be executed with different parameter values.
 
 ## See Also
 
@@ -108,7 +134,8 @@ Prepares a reusable flat projection. The source query must be a root query witho
 
 ```csharp
 public static IProjectedQuery<TResult> AsReusableProjected<TRow1, TRow2, TRow3, TResult>(
-    this SqlQuery query, Expression<Func<TRow1, TRow2, TRow3, TResult>> projection)
+    this SqlQuery query, Expression<Func<TRow1, TRow2, TRow3, TResult>> projection, 
+    bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
     where TRow3 : class, IRow
@@ -122,6 +149,7 @@ public static IProjectedQuery<TResult> AsReusableProjected<TRow1, TRow2, TRow3, 
 | TResult | The flat projection result type. |
 | query | The query to prepare. |
 | projection | A flat projection built from row field accesses or SQL expressions. |
+| takeOwnership | Whether to prepare the source query in place. If false, a clone is prepared; an already-frozen source cannot be taken over. |
 
 ## Return Value
 
@@ -143,11 +171,22 @@ Prepares a reusable projection using the specified row-fields source aliases.
 ```csharp
 public static IProjectedQuery<TResult> AsReusableProjected<TRow1, TRow2, TRow3, TResult>(
     this SqlQuery query, Expression<Func<TRow1, TRow2, TRow3, TResult>> projection, 
-    IReadOnlyList<RowFieldsBase> sources)
+    IReadOnlyList<RowFieldsBase> sources, bool takeOwnership = false)
     where TRow1 : class, IRow
     where TRow2 : class, IRow
     where TRow3 : class, IRow
 ```
+
+| parameter | description |
+| --- | --- |
+| query | The query to prepare. |
+| projection | A flat projection built from row field accesses or SQL expressions. |
+| sources | The row-fields sources for the projection parameters. |
+| takeOwnership | Whether to prepare the source query in place. If false, a clone is prepared; a frozen source cannot be taken over. |
+
+## Return Value
+
+A reusable projection that can be executed with different parameter values.
 
 ## See Also
 

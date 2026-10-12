@@ -8,21 +8,13 @@ Determines numeric scale (decimal places) for the field.
 public class ScaleAttribute : Attribute
 ```
 
-| parameter | description |
-| --- | --- |
-| value | The value. |
-
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [ScaleAttribute](ScaleAttribute/ScaleAttribute.md)(…) | Determines numeric scale (decimal places) for the field. |
+| [ScaleAttribute](ScaleAttribute/ScaleAttribute.md)(…) | Initializes a new instance of the [`ScaleAttribute`](./ScaleAttribute.md) class. |
 | [Value](ScaleAttribute/Value.md) { get; set; } | Gets or sets the value. |
-
-## Remarks
-
-Initializes a new instance of the [`ScaleAttribute`](./ScaleAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[ScaleAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Mapping/ScaleAttribute.cs)*
+* **Source:** *[ScaleAttribute.cs](https://github.com/serenity-is/Serenity/blob/58a96041936e2723b36180dfb2dcaa910540d074/src/services/Data/Mapping/ScaleAttribute.cs)*

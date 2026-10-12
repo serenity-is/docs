@@ -12,10 +12,11 @@ public interface IListResponse
 | name | description |
 | --- | --- |
 | [Entities](IListResponse/Entities.md) { get; } | List of entities |
+| [More](IListResponse/More.md) { get; } | Whether more records are available beyond the returned page, when requested. |
 | [Skip](IListResponse/Skip.md) { get; } | Number of records skipped, passed from the ListRequest |
 | [Take](IListResponse/Take.md) { get; } | Number of records taken, passed from the ListRequest |
 | [TotalCount](IListResponse/TotalCount.md) { get; } | Total count of the records. This may be different than the number of returned records when paging is active, e.g. when Skip/Take parameters are assigned. |
 
 ## See Also
 
-* **Source:** *[IListResponse.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/Models/IListResponse.cs)*
+* **Source:** *[IListResponse.cs](https://github.com/serenity-is/Serenity/blob/7942b778cba1362623aa070554117a88735f249a/src/services/Models/IListResponse.cs)*

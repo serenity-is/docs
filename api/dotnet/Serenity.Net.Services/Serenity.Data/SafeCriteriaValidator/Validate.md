@@ -3,7 +3,7 @@
 Validates the specified criteria.
 
 ```csharp
-public void Validate(BaseCriteria criteria)
+public void Validate(BaseCriteria? criteria)
 ```
 
 | parameter | description |

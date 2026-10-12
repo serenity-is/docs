@@ -43,7 +43,7 @@ SqlUpdate object itself.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field or expression is null or empty. |
+| ArgumentException | field or expression is null or empty, or field was already set. |
 
 ## See Also
 

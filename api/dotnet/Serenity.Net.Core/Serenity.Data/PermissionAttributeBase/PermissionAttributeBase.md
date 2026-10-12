@@ -1,18 +1,20 @@
 # PermissionAttributeBase constructor (1 of 3)
 
-An abstract base attribute that all permission-related attributes derive from.
+Initializes a new instance of the [`PermissionAttributeBase`](../PermissionAttributeBase.md) class.
 
 ```csharp
-protected PermissionAttributeBase(object? permission)
+public PermissionAttributeBase(object? permission)
 ```
 
 | parameter | description |
 | --- | --- |
-| permission | The permission. |
+| permission | The permission key. |
 
-## Remarks
+## Exceptions
 
-Initializes a new instance of the [`PermissionAttributeBase`](../PermissionAttributeBase.md) class.
+| exception | condition |
+| --- | --- |
+| ArgumentException | *permission* is null, empty or whitespace. |
 
 ## See Also
 

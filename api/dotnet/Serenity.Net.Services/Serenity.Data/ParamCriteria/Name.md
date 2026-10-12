@@ -1,6 +1,6 @@
 # ParamCriteria.Name property
 
-Gets the parameter name.
+Gets the parameter name including the @ symbol.
 
 ```csharp
 public string Name { get; }

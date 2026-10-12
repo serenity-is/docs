@@ -13,6 +13,10 @@ public interface ISqlQueryToString
 | --- | --- |
 | [ToString](ISqlQueryToString/ToString.md)(…) | Converts the query to string. |
 
+## Remarks
+
+Implementations are responsible for validating that the query is renderable, including rejecting queries without selected columns when their SQL format requires them.
+
 ## See Also
 
-* **Source:** *[ISqlQueryToString.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/QueryModel/ISqlQueryToString.cs)*
+* **Source:** *[ISqlQueryToString.cs](https://github.com/serenity-is/Serenity/blob/f40ba07f1d350319f6406dd649f20896e314937d/src/services/Data/QueryModel/ISqlQueryToString.cs)*

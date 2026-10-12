@@ -20,4 +20,4 @@ public class JsonCriteriaConverter : JsonConverter
 
 ## See Also
 
-* **Source:** *[JsonCriteriaConverter.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Criteria/JsonCriteriaConverter.cs)*
+* **Source:** *[JsonCriteriaConverter.cs](https://github.com/serenity-is/Serenity/blob/14083041af9d83edeb4eaac6738a5846bbaa8594/src/services/Data/Criteria/JsonCriteriaConverter.cs)*

@@ -22,4 +22,4 @@ public class MySqlSchemaProvider : ISchemaProvider
 ## See Also
 
 * interface [ISchemaProvider](./ISchemaProvider.md)
-* **Source:** *[MySqlSchemaProvider.cs](https://github.com/serenity-is/Serenity/blob/1a8f0b8d86a82010fb35e1c2b9f853493e7f539f/src/services/Data/Schema/Providers/MySqlSchemaProvider.cs)*
+* **Source:** *[MySqlSchemaProvider.cs](https://github.com/serenity-is/Serenity/blob/2158f84e294560545373c7cc29e3aa278c88393b/src/services/Data/Schema/Providers/MySqlSchemaProvider.cs)*

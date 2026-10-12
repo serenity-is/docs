@@ -10,6 +10,10 @@ public string ScopeIdentityExpression { get; }
 
 The SCOPE IDENTITY expression.
 
+## Remarks
+
+Dialects that don't use SCOPE IDENTITY (check [`UseScopeIdentity`](./UseScopeIdentity.md) first, e.g. dialects using RETURNING) throw NotImplementedException.
+
 ## See Also
 
 * interface [ISqlDialect](../ISqlDialect.md)

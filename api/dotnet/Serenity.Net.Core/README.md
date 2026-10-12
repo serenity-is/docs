@@ -12,6 +12,7 @@
 | enum [DateElementOrder](./Serenity/DateElementOrder.md) | Date element orders |
 | static class [DateHelper](./Serenity/DateHelper.md) | Static class with common date utilities and constants. |
 | class [DefaultSectionKeyAttribute](./Serenity/DefaultSectionKeyAttribute.md) | Attribute to access the default section key for an option class. |
+| class [DefaultServiceProviderAccessor](./Serenity/DefaultServiceProviderAccessor.md) | Default [`IServiceProviderAccessor`](./Serenity/IServiceProviderAccessor.md) that always returns the same service provider. |
 | static class [DistributedCacheExtensions](./Serenity/DistributedCacheExtensions.md) | Contains extensions methods to work with IDistributedCache provider. |
 | static class [EnumMapper](./Serenity/EnumMapper.md) | Contains Enum mapping and other helper functions. |
 | static class [ExceptionExtensions](./Serenity/ExceptionExtensions.md) | Exception data extensions. |
@@ -21,6 +22,7 @@
 | class [InformationalException](./Serenity/InformationalException.md) | An exception that is created purely for informational purposes, e.g. for logging something to exception log |
 | interface [INotLoggedException](./Serenity/INotLoggedException.md) | An exception that should not be logged. |
 | static class [Invariants](./Serenity/Invariants.md) | Invariant culture related constants and formats. |
+| interface [IServiceProviderAccessor](./Serenity/IServiceProviderAccessor.md) | Provides access to the service provider that should be used to resolve or activate services on demand, such as request handlers and behaviors. |
 | interface [IServiceResolver&lt;TService&gt;](./Serenity/IServiceResolver-1.md) | A generic version of IServiceProvider which resolves a service on demand. |
 | interface [ITemporaryFileSystem](./Serenity/ITemporaryFileSystem.md) | A file system abstraction used by [`TemporaryFileHelper`](./Serenity.IO/TemporaryFileHelper.md) that additionally exposes temporary file information. |
 | interface [ITextLocalizer](./Serenity/ITextLocalizer.md) | Text localizer for the current context language and pending approval state. |
@@ -91,6 +93,7 @@
 | class [AsyncLookupEditorAttribute](./Serenity.ComponentModel/AsyncLookupEditorAttribute.md) | Indicates that the target property should use a "Lookup" editor with "async" set to true. |
 | class [BasedOnRowAttribute](./Serenity.ComponentModel/BasedOnRowAttribute.md) | An attribute that indicates this type is based on another row type. Used with form, columns etc. types to map their properties to the corresponding property in a row, so that they inherit attributes. |
 | abstract class [BaseUploadEditorAttribute](./Serenity.ComponentModel/BaseUploadEditorAttribute.md) | Sets editor type as "ImageUpload", which only allows image files. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in the row, otherwise your files will stay in the temporary directory. |
+| class [BigIntFormatterAttribute](./Serenity.ComponentModel/BigIntFormatterAttribute.md) | Sets formatting type to "BigInt" |
 | class [BooleanEditorAttribute](./Serenity.ComponentModel/BooleanEditorAttribute.md) | Indicates that the target property should use a "Boolean" editor. |
 | class [BooleanFilteringAttribute](./Serenity.ComponentModel/BooleanFilteringAttribute.md) | Sets filtering type to "Boolean" |
 | class [BooleanFormatterAttribute](./Serenity.ComponentModel/BooleanFormatterAttribute.md) | Sets formatting type to "Boolean" |
@@ -131,6 +134,7 @@
 | class [FeatureKeySetAttribute](./Serenity.ComponentModel/FeatureKeySetAttribute.md) | Marks an enum as a set of feature toggles. |
 | class [FileDownloadFormatterAttribute](./Serenity.ComponentModel/FileDownloadFormatterAttribute.md) | Sets formatting type to "FileDownload". |
 | class [FileUploadEditorAttribute](./Serenity.ComponentModel/FileUploadEditorAttribute.md) | Sets editor type as "ImageUpload" (single), while allowing non-image files. |
+| class [FilterableAttribute](./Serenity.ComponentModel/FilterableAttribute.md) | Indicates if the field this attribute is placed on is filterable. |
 | class [FilteringIdFieldAttribute](./Serenity.ComponentModel/FilteringIdFieldAttribute.md) | Specifies the ID field to filter on a field. For example, if this attribute is placed on the EmployeeName field, EmployeeId can be the filtering field, so that values are filtered on the ID rather than the text value. |
 | class [FilteringOptionAttribute](./Serenity.ComponentModel/FilteringOptionAttribute.md) | Declares a new filtering option |
 | class [FilteringTypeAttribute](./Serenity.ComponentModel/FilteringTypeAttribute.md) | Sets filtering type for the field |
@@ -163,6 +167,8 @@
 | class [ImageUploadEditorAttribute](./Serenity.ComponentModel/ImageUploadEditorAttribute.md) | Sets editor type as "ImageUpload", which only allows image files. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in the row, otherwise your files will stay in the temporary directory. |
 | class [ImplicitPermissionAttribute](./Serenity.ComponentModel/ImplicitPermissionAttribute.md) | Placed on permission keys to define implicitly assigned permissions when a user / role has the permission. Currently only implemented in the premium app. |
 | class [InsertableAttribute](./Serenity.ComponentModel/InsertableAttribute.md) | Controls if this field is editable in new record mode. When used with fields, turns on or off the insertable flag. |
+| class [Int64EditorAttribute](./Serenity.ComponentModel/Int64EditorAttribute.md) | Indicates that the target property should use a "Int64" editor. |
+| class [Int64FilteringAttribute](./Serenity.ComponentModel/Int64FilteringAttribute.md) | Indicates that the property should use Int64 (64-bit integer) type of filtering. |
 | class [IntegerEditorAttribute](./Serenity.ComponentModel/IntegerEditorAttribute.md) | Indicates that the target property should use a "Integer" editor. |
 | class [IntegerFilteringAttribute](./Serenity.ComponentModel/IntegerFilteringAttribute.md) | Indicates that the property should use integer type of filtering. |
 | interface [IUploadEditor](./Serenity.ComponentModel/IUploadEditor.md) | Runs the FileUploadBehavior or MultipleFileUploadBehavior behaviors. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in the row, otherwise your files will stay in the temporary directory. |
@@ -253,6 +259,8 @@
 | --- | --- |
 | class [Base32](./Serenity.Data/Base32.md) | This class is based on the Base32 class from DC# 0.31. All credits to Jonathan Bindel. |
 | static class [BinarySerialization](./Serenity.Data/BinarySerialization.md) | Contains helper functions for serialization and deserialization of data items (e.g. cached items). |
+| class [ConnectionKeyAttribute](./Serenity.Data/ConnectionKeyAttribute.md) | Determines the connection key used for a class. |
+| class [DefaultConnectionAttribute](./Serenity.Data/DefaultConnectionAttribute.md) | Specifies the "Default" connection key. |
 | class [DeletePermissionAttribute](./Serenity.Data/DeletePermissionAttribute.md) | Sets delete permission for the row. |
 | class [FieldInsertPermissionAttribute](./Serenity.Data/FieldInsertPermissionAttribute.md) | Sets the default insert permission for fields of a row that don't have an InsertPermission themselves. |
 | class [FieldModifyPermissionAttribute](./Serenity.Data/FieldModifyPermissionAttribute.md) | Sets the default modify permission for fields of a row that don't have a ModifyPermission themselves. |
@@ -267,6 +275,7 @@
 | abstract class [PermissionAttributeBase](./Serenity.Data/PermissionAttributeBase.md) | An abstract base attribute that all permission-related attributes derive from. |
 | class [ReadPermissionAttribute](./Serenity.Data/ReadPermissionAttribute.md) | Sets read permission for the row. |
 | class [ServiceLookupPermissionAttribute](./Serenity.Data/ServiceLookupPermissionAttribute.md) | Sets a permission to read only lookup fields in a row via the List service. Lookup field means ID, Name, and [LookupInclude] properties in a row. You must use [AuthorizeList(typeof(XRow))] instead of ServiceAuthorize in the service endpoint. |
+| class [UndeletePermissionAttribute](./Serenity.Data/UndeletePermissionAttribute.md) | Sets undelete permission for the row. |
 | class [UpdatePermissionAttribute](./Serenity.Data/UpdatePermissionAttribute.md) | Sets update permission for the row. |
 
 ## Serenity.Extensions.DependencyInjection namespace
@@ -363,6 +372,8 @@
 | interface [IIsSensitiveMessage](./Serenity.Services/IIsSensitiveMessage.md) | An interface to determine if the message of an exception might contain sensitive information that should not be shown to the end user. Currently only [`ValidationError`](./Serenity.Services/ValidationError.md) implements this and returns false by default unless set explicitly. |
 | interface [IRequestHandler](./Serenity.Services/IRequestHandler.md) | Marker interface for standard and custom request handlers |
 | class [JsonStringHashSetConverter](./Serenity.Services/JsonStringHashSetConverter.md) | Serializes and deserializes a HashSet of strings as a JSON array. |
+| [Flags] enum [ListRequestCapabilities](./Serenity.Services/ListRequestCapabilities.md) | Specifies the capabilities of a list request handler. |
+| class [ListRequestCapabilitiesAttribute](./Serenity.Services/ListRequestCapabilitiesAttribute.md) | Specifies the ListRequest capabilities supported by a list endpoint action. |
 | static class [PermissionExpressionParser](./Serenity.Services/PermissionExpressionParser.md) | Parses and evaluates logical permission expressions containing `!`, `&`, `|`, and parentheses. |
 | class [ValidationError](./Serenity.Services/ValidationError.md) | Generic validation error mostly used by services. |
 

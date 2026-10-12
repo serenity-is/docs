@@ -19,6 +19,7 @@ public static class FormValidationTexts
 | static readonly [EmailMultiple](FormValidationTexts/EmailMultiple.md) |  |
 | static readonly [HourAndMin](FormValidationTexts/HourAndMin.md) |  |
 | static readonly [IncorrectPassword](FormValidationTexts/IncorrectPassword.md) |  |
+| static readonly [Int64](FormValidationTexts/Int64.md) |  |
 | static readonly [Integer](FormValidationTexts/Integer.md) |  |
 | static readonly [InvalidFormMessage](FormValidationTexts/InvalidFormMessage.md) |  |
 | static readonly [MaxDate](FormValidationTexts/MaxDate.md) |  |
@@ -36,4 +37,4 @@ public static class FormValidationTexts
 
 ## See Also
 
-* **Source:** *[FormValidationTexts.cs](https://github.com/serenity-is/Serenity/blob/4e69594410bda5abf3f500766d995a0d7373e6ce/src/web/texts/FormValidationTexts.cs)*
+* **Source:** *[FormValidationTexts.cs](https://github.com/serenity-is/Serenity/blob/3d68185adc9ca553692b97b9f6c6c7321881b983/src/web/texts/FormValidationTexts.cs)*

@@ -51,4 +51,4 @@ public class WrappedConnection : DbConnection, IHasActualConnection, IHasCommand
 * interface [IHasDialect](./IHasDialect.md)
 * interface [IHasLogger](./IHasLogger.md)
 * interface [IHasOpenedOnce](./IHasOpenedOnce.md)
-* **Source:** *[WrappedConnection.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Connections/WrappedConnection.cs)*
+* **Source:** *[WrappedConnection.cs](https://github.com/serenity-is/Serenity/blob/117ea2135bf21cc9fd7c8ff1ca580787e1fddf9b/src/services/Data/Connections/WrappedConnection.cs)*

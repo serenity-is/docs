@@ -1,15 +1,15 @@
-# QueryWithParamsExtensions.AddParam&lt;T&gt; method
+# QueryWithParamsExtensions.AddParam&lt;TQuery&gt; method
 
 Adds the parameter.
 
 ```csharp
-public static Parameter AddParam<T>(this T self, object? value)
-    where T : IQueryWithParams
+public static Parameter AddParam<TQuery>(this TQuery self, object? value)
+    where TQuery : IQueryWithParams
 ```
 
 | parameter | description |
 | --- | --- |
-| T | The query type. |
+| TQuery | The query type. |
 | self | The query. |
 | value | The value. |
 

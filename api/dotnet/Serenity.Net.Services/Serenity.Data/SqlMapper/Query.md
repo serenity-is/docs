@@ -13,13 +13,17 @@ public static IEnumerable<object> Query(this IDbConnection cnn, ISqlQuery sql,
 | cnn | The connection. |
 | sql | The SQL query. |
 | transaction | The transaction. |
-| buffered | If set to `true`, results are buffered. |
+| buffered | If set to `true` (the default), results are buffered. |
 | commandTimeout | The command timeout. |
 | commandType | Type of the command. |
 
 ## Return Value
 
 List of dynamic objects.
+
+## Remarks
+
+With `buffered: false` execution is deferred: the connection must stay open until enumeration completes, otherwise enumeration throws.
 
 ## See Also
 
@@ -44,13 +48,17 @@ public static IEnumerable<object> Query(this IDbConnection cnn, string sql, obje
 | sql | The SQL query. |
 | param | The parameters. |
 | transaction | The transaction. |
-| buffered | If set to `true`, results are buffered. |
+| buffered | If set to `true` (the default), results are buffered. |
 | commandTimeout | The command timeout. |
 | commandType | Type of the command. |
 
 ## Return Value
 
 List of dynamic objects.
+
+## Remarks
+
+With `buffered: false` execution is deferred: the connection must stay open until enumeration completes, otherwise enumeration throws.
 
 ## See Also
 
@@ -74,13 +82,17 @@ public static IEnumerable<T> Query<T>(this IDbConnection cnn, ISqlQuery sql,
 | cnn | The connection. |
 | sql | The SQL query. |
 | transaction | The transaction. |
-| buffered | If set to `true`, results are buffered. |
+| buffered | If set to `true` (the default), results are buffered. |
 | commandTimeout | The command timeout. |
 | commandType | Type of the command. |
 
 ## Return Value
 
 List of values.
+
+## Remarks
+
+With `buffered: false` execution is deferred: the connection must stay open until enumeration completes, otherwise enumeration throws.
 
 ## See Also
 
@@ -106,13 +118,17 @@ public static IEnumerable<T> Query<T>(this IDbConnection cnn, string sql, object
 | sql | The SQL query. |
 | param | The parameters. |
 | transaction | The transaction. |
-| buffered | If set to `true`, results are buffered. |
+| buffered | If set to `true` (the default), results are buffered. |
 | commandTimeout | The command timeout. |
 | commandType | Type of the command. |
 
 ## Return Value
 
 List of objects.
+
+## Remarks
+
+With `buffered: false` execution is deferred: the connection must stay open until enumeration completes, otherwise enumeration throws.
 
 ## See Also
 

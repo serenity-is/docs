@@ -1,6 +1,6 @@
 # ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;.ApplyIncludeDeletedFilter method
 
-Applies include deleted filter to the query if Request.IncludeDeleted is true
+Applies the not deleted filter to the query unless [`IncludeDeleted`](../ListRequest/IncludeDeleted.md) is true and the current user has the undelete permission for the row. Rows that do not use soft delete are always included.
 
 ```csharp
 protected virtual void ApplyIncludeDeletedFilter(SqlQuery query)

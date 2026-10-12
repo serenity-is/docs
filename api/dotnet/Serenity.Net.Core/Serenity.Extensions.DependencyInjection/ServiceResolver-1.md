@@ -10,7 +10,7 @@ public class ServiceResolver<TService> : IServiceResolver<TService>
 | parameter | description |
 | --- | --- |
 | TService | The type of the service to resolve. |
-| serviceProvider | The service provider. |
+| serviceProviderAccessor | Accessor for the service provider to resolve the service on demand. |
 
 ## Public Members
 
@@ -23,7 +23,7 @@ public class ServiceResolver<TService> : IServiceResolver<TService>
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Throws when the service provider is null. |
+| ArgumentNullException | Throws when the service provider accessor is null. |
 
 ## Remarks
 
@@ -32,4 +32,4 @@ Initializes a new instance.
 ## See Also
 
 * interface [IServiceResolver&lt;TService&gt;](../Serenity/IServiceResolver-1.md)
-* **Source:** *[ServiceResolver.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Helpers/ServiceResolver.cs)*
+* **Source:** *[ServiceResolver.cs](https://github.com/serenity-is/Serenity/blob/df6fb676c90d207452f30ac96d17cc9ba967a264/src/core/Helpers/ServiceResolver.cs)*

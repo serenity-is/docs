@@ -19,7 +19,8 @@ The query itself.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | alias is null or alias.table is null |
+| ArgumentNullException | alias is null. |
+| ArgumentException | alias has no table name. |
 
 ## See Also
 

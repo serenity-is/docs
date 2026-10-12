@@ -4,7 +4,7 @@
 SqlQuery interface.
 
 ```csharp
-public interface ISqlQuery : IChainable, IQueryWithParams
+public interface ISqlQuery : IQueryWithParams
 ```
 
 ## Members
@@ -21,7 +21,6 @@ public interface ISqlQuery : IChainable, IQueryWithParams
 | [Having](ISqlQuery/Having.md) { get; } | Gets access to HAVING part if any. |
 | [OmitParens](ISqlQuery/OmitParens.md) { get; } | Where to omit params while converting to string. |
 | [OrderBy](ISqlQuery/OrderBy.md) { get; } | Gets order by list. |
-| [Parent](ISqlQuery/Parent.md) { get; } | Gets access to parent query if any. |
 | [Skip](ISqlQuery/Skip.md) { get; } | Gets skip number. |
 | [Take](ISqlQuery/Take.md) { get; } | Gets take number. |
 | [UnionQuery](ISqlQuery/UnionQuery.md) { get; } | Gets access to internal union query if any. |
@@ -31,5 +30,4 @@ public interface ISqlQuery : IChainable, IQueryWithParams
 ## See Also
 
 * interface [IQueryWithParams](./IQueryWithParams.md)
-* interface [IChainable](../Serenity/IChainable.md)
-* **Source:** *[ISqlQuery.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/QueryModel/ISqlQuery.cs)*
+* **Source:** *[ISqlQuery.cs](https://github.com/serenity-is/Serenity/blob/6e521bfc632b686bd33cfa0fa27cc54852a56835/src/services/Data/QueryModel/ISqlQuery.cs)*

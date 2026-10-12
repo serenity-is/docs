@@ -19,6 +19,14 @@ public static string FormatUpsert(string tableName,
 
 Formatted UPSERT query.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | tableName is null or empty. |
+| ArgumentNullException | fieldExpressions or keyFields is null. |
+| ArgumentOutOfRangeException | keyFields is empty. |
+
 ## See Also
 
 * struct [FieldExpressionPair](../FieldExpressionPair.md)

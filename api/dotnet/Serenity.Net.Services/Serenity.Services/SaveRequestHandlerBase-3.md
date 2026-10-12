@@ -42,11 +42,14 @@ public abstract class SaveRequestHandlerBase<TRow, TSaveRequest, TSaveResponse> 
 | name | description |
 | --- | --- |
 | [SaveRequestHandlerBase](SaveRequestHandlerBase-3/SaveRequestHandlerBase.md)(…) | Abstract base class for save request handlers that share state and mode neutral helper methods between synchronous and asynchronous save request handlers. |
+| [concurrencyVersion](SaveRequestHandlerBase-3/concurrencyVersion.md) | Gets the concurrency version used for the update operation, when the row implements [`IConcurrencyVersionRow`](../Serenity.Data/IConcurrencyVersionRow.md). It is the value sent by the client when present, otherwise the value loaded from the database. |
+| virtual [CaptureConcurrencyVersion](SaveRequestHandlerBase-3/CaptureConcurrencyVersion.md)() | Captures the concurrency version used for the update, if the row implements [`IConcurrencyVersionRow`](../Serenity.Data/IConcurrencyVersionRow.md), before editable field validation clears non editable assignments. The value sent by the client is used when present, otherwise the value loaded from the database. The captured value is later used to append the version to the update's WHERE clause. |
 | virtual [ClearNonTableAssignments](SaveRequestHandlerBase-3/ClearNonTableAssignments.md)() | Clears assignment for fields that are marked as non table field, e.g. fields that are not mapped, view, expression etc. |
 | virtual [CustomValidate](SaveRequestHandlerBase-3/CustomValidate.md)(…) | Calls custom validator. |
 | virtual [GetBehaviors](SaveRequestHandlerBase-3/GetBehaviors.md)() | Gets the list of save behaviors. |
 | virtual [GetDisplayOrderFilter](SaveRequestHandlerBase-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements [`IDisplayOrderRow`](../Serenity.Data/IDisplayOrderRow.md) interface |
 | virtual [GetEditableFields](SaveRequestHandlerBase-3/GetEditableFields.md)(…) | Gets the list of editable fields. These are fields that have Insertable (if Create), or Updatable (if Update) flags, and have the insert or update permission based on the type of the current operation. |
+| virtual [GetRequestEntityId](SaveRequestHandlerBase-3/GetRequestEntityId.md)() | Gets the id of the entity targeted by the current request, converted to the value type of the row's id field. Falls back to the row's own id when the request does not carry one. Used both for loading the previous entity and for building the error returned when it cannot be loaded, so that a caller cannot distinguish a missing record from one they are not allowed to touch. |
 | virtual [GetRequiredFields](SaveRequestHandlerBase-3/GetRequiredFields.md)(…) | Gets the list of required fields based on editable list, and NotNull |
 | virtual [HandleNonEditable](SaveRequestHandlerBase-3/HandleNonEditable.md)(…) | Handles assignment to a non-editable field. If the field did not change in an update operation, it will be ignored by clearing the assignment. For non-table fields it will also be ignored. |
 | virtual [InvalidateCacheOnCommit](SaveRequestHandlerBase-3/InvalidateCacheOnCommit.md)() | Attaches an handler to unit of work's OnCommit event to invalidate the cache items related to this row's cache group |
@@ -78,4 +81,4 @@ Initializes a new instance of the class.
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [SaveRequest&lt;TEntity&gt;](./SaveRequest-1.md)
 * class [SaveResponse](./SaveResponse.md)
-* **Source:** *[SaveRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/2628abed3096f4ef947f5a72a8004e20a06da358/src/services/RequestHandlers/Save/SaveRequestHandlerBase.cs)*
+* **Source:** *[SaveRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/8ebae29aba9c0164fa5c8a76801f7bca72290c39/src/services/RequestHandlers/Save/SaveRequestHandlerBase.cs)*

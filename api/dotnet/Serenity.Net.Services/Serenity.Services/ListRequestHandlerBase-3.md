@@ -26,6 +26,7 @@ public abstract class ListRequestHandlerBase<TRow, TListRequest, TListResponse> 
 | [Connection](ListRequestHandlerBase-3/Connection.md) { get; protected set; } | Gets the current connection. |
 | [Context](ListRequestHandlerBase-3/Context.md) { get; } | Gets the request context. |
 | [DistinctFields](ListRequestHandlerBase-3/DistinctFields.md) { get; protected set; } | Gets the list of distinct fields. |
+| [HandlerSettings](ListRequestHandlerBase-3/HandlerSettings.md) { get; } | Gets the request handler settings (default / maximum page size), as returned by [`GetHandlerSettings`](./ListRequestHandlerBase-3/GetHandlerSettings.md). |
 | [Localizer](ListRequestHandlerBase-3/Localizer.md) { get; } | Gets the localizer from the request context. |
 | [Permissions](ListRequestHandlerBase-3/Permissions.md) { get; } | Gets the permission service from the request context. |
 | [Query](ListRequestHandlerBase-3/Query.md) { get; protected set; } | Gets the select query. |
@@ -44,21 +45,27 @@ public abstract class ListRequestHandlerBase<TRow, TListRequest, TListResponse> 
 | [ListRequestHandlerBase](ListRequestHandlerBase-3/ListRequestHandlerBase.md)(…) | Abstract base class for list request handlers that share state and mode neutral helper methods between synchronous and asynchronous list request handlers. |
 | [ignoredEqualityFilters](ListRequestHandlerBase-3/ignoredEqualityFilters.md) | Set of ignored equality filter entries. |
 | [lookupAccessMode](ListRequestHandlerBase-3/lookupAccessMode.md) | True if the list handler is in lookup access mode, e.g. it only allows access to lookup fields. |
+| [rowsRead](ListRequestHandlerBase-3/rowsRead.md) | Number of rows returned by the executed query before any post-processing (e.g. [`ProcessEntity`](./ListRequestHandlerBase-3/ProcessEntity.md) dropping rows). Used to compute the [`More`](./ListResponse-1/More.md) indicator based on the sentinel row rather than the filtered entity count. |
 | virtual [AddFieldContainsCriteria](ListRequestHandlerBase-3/AddFieldContainsCriteria.md)(…) | Applies a contains criteria based on containsText, id (if the contains text can be parsed to an integer ID), searchType and numericOnly parameters. |
+| virtual [AllowFilterField](ListRequestHandlerBase-3/AllowFilterField.md)(…) | Returns true if the field can be used in a filter, based on its flags, minimum select level, read permission, and lookup access mode. |
 | virtual [AllowSelectField](ListRequestHandlerBase-3/AllowSelectField.md)(…) | Returns true if the field should be allowed to be selected, based on is read permission, selectlevel.never flag, and lookup access mode |
+| virtual [AllowSortField](ListRequestHandlerBase-3/AllowSortField.md)(…) | Returns true if the field should be allowed to affect sort order. |
 | virtual [ApplyContainsText](ListRequestHandlerBase-3/ApplyContainsText.md)(…) | Applies contains text filter to the query |
 | virtual [ApplyCriteria](ListRequestHandlerBase-3/ApplyCriteria.md)(…) | Applies the Request.Criteria to the query if it is not null or empty, and replaced field references with their corresponding expressions by calling [`ReplaceFieldExpressions`](./ListRequestHandlerBase-3/ReplaceFieldExpressions.md) |
 | virtual [ApplyEqualityFilter](ListRequestHandlerBase-3/ApplyEqualityFilter.md)(…) | Applies the Request.Equality filter to the query |
 | virtual [ApplyFieldContainsText](ListRequestHandlerBase-3/ApplyFieldContainsText.md)(…) | Applies a field contains criteria to the query by calling [`AddFieldContainsCriteria`](./ListRequestHandlerBase-3/AddFieldContainsCriteria.md) |
-| virtual [ApplyFieldEqualityFilter](ListRequestHandlerBase-3/ApplyFieldEqualityFilter.md)(…) | Applies a field equality filter, e.g. one that is passed via Request.EqualityFilter to the query. It validates field flags like DenyFiltering and NotMapped and Never to check if the field is allowed to be filtered. |
-| virtual [ApplyIncludeDeletedFilter](ListRequestHandlerBase-3/ApplyIncludeDeletedFilter.md)(…) | Applies include deleted filter to the query if Request.IncludeDeleted is true |
+| virtual [ApplyFieldEqualityFilter](ListRequestHandlerBase-3/ApplyFieldEqualityFilter.md)(…) | Applies a field equality filter, e.g. one that is passed via Request.EqualityFilter to the query. It validates field flags like DenyFiltering and NotMapped, Never, and field read permissions to check if the field is allowed to be filtered. |
+| virtual [ApplyIncludeDeletedFilter](ListRequestHandlerBase-3/ApplyIncludeDeletedFilter.md)(…) | Applies the not deleted filter to the query unless [`IncludeDeleted`](./ListRequest/IncludeDeleted.md) is true and the current user has the undelete permission for the row. Rows that do not use soft delete are always included. |
 | virtual [ApplyKeyOrder](ListRequestHandlerBase-3/ApplyKeyOrder.md)(…) | Applies the key order which is ID field ([`IIdRow`](../Serenity.Data/IIdRow.md)) |
 | virtual [ApplySort](ListRequestHandlerBase-3/ApplySort.md)(…) | Applies the Request.Sort order to the query. Sorts by [`GetNativeSort`](./ListRequestHandlerBase-3/GetNativeSort.md) if no sort columns are passed, or the list is empty. |
-| virtual [ApplySortBy](ListRequestHandlerBase-3/ApplySortBy.md)(…) | Applies a sort order to the query |
+| virtual [ApplySortBy](ListRequestHandlerBase-3/ApplySortBy.md)(…) | Applies a sort order to the query Fields with read permissions the user does not have are ignored. |
 | virtual [CreateQuery](ListRequestHandlerBase-3/CreateQuery.md)() | Creates a query instance with the dialect for current connection. |
 | virtual [GetBehaviors](ListRequestHandlerBase-3/GetBehaviors.md)() | Gets the list of list behaviors. |
+| virtual [GetHandlerSettings](ListRequestHandlerBase-3/GetHandlerSettings.md)() | Gets the request handler settings (default / maximum page size). The default implementation reads them from an [`IHasHandlerSettings`](./IHasHandlerSettings.md) capable request context, falling back to [`Default`](./RequestHandlerSettings/Default.md) (no limits). Override to return different settings per request / entity, e.g. a limited page size for public access and unlimited for administrators (see [`With`](./RequestHandlerSettings/With.md)). |
 | virtual [GetNativeSort](ListRequestHandlerBase-3/GetNativeSort.md)() | Gets the native sort order, which includes name field by default, unless the row has [SortOrder] attributes. |
+| virtual [GetPagingParams](ListRequestHandlerBase-3/GetPagingParams.md)() | Validates the request paging values and builds the effective [`ListRequestPagingParams`](./ListRequestPagingParams.md) for the current request. Negative skip / take values are rejected as a validation error, while larger values are clamped to [`MaxPageSize`](./RequestHandlerSettings/MaxPageSize.md) so that the response can report the applied take. Paging limits are skipped when the request suppresses them (see [`SuppressPagingLimits`](./RequestHandlerExtensions/SuppressPagingLimits.md)). The returned params also carry [`ExcludeTotalCount`](./ListRequest/ExcludeTotalCount.md), [`IncludeMore`](./ListRequest/IncludeMore.md) and [`ExcludeTotalCountByDefault`](./RequestHandlerSettings/ExcludeTotalCountByDefault.md), forcing [`ExcludeTotalCount`](./ListRequest/ExcludeTotalCount.md) when the query has distinct fields. |
 | virtual [GetQuickSearchFields](ListRequestHandlerBase-3/GetQuickSearchFields.md)(…) | Gets the list of quick search fields ([`QuickSearchAttribute`](../Serenity.Data.Mapping/QuickSearchAttribute.md)) based on the containsField argument. |
+| virtual [GetUndeletePermission](ListRequestHandlerBase-3/GetUndeletePermission.md)() | Gets the permission required to undelete records of the current row type, e.g. UndeletePermissionAttribute, falling back to DeletePermissionAttribute, ModifyPermissionAttribute and ReadPermissionAttribute. |
 | [IsEmptyEqualityFilterValue](ListRequestHandlerBase-3/IsEmptyEqualityFilterValue.md)(…) | Checks if the equality filter value is empty. It returns true for null, empty string, or empty IEnumerable. |
 | [IsIncluded](ListRequestHandlerBase-3/IsIncluded.md)(…) | Returns true if field is included in [`IncludeColumns`](./ListRequest/IncludeColumns.md) (2 methods) |
 | abstract [MapFieldExpression](ListRequestHandlerBase-3/MapFieldExpression.md)(…) | Maps a field using IListFieldMappingBehavior's if any |
@@ -86,4 +93,4 @@ Initializes a new instance of the class.
 * interface [IRow](../Serenity.Data/IRow.md)
 * class [ListRequest](./ListRequest.md)
 * class [ListResponse&lt;T&gt;](./ListResponse-1.md)
-* **Source:** *[ListRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/7d4534fc93adbd2968e8fbf317070a0cb6f67b1e/src/services/RequestHandlers/List/ListRequestHandlerBase.cs)*
+* **Source:** *[ListRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/10f59e1fb4e1f1dd1b5ab59e660597423229d5ae/src/services/RequestHandlers/List/ListRequestHandlerBase.cs)*

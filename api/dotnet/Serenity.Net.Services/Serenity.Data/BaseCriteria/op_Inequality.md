@@ -101,11 +101,15 @@ public static BaseCriteria operator !=(BaseCriteria criteria1, Enum value)
 | parameter | description |
 | --- | --- |
 | criteria1 | The criteria1. |
-| value | The value. |
+| value | The value. Can be null (as Enum is a reference type). |
 
 ## Return Value
 
 The result of the operator.
+
+## Remarks
+
+A null value is intentionally not mapped to IS NOT NULL: it renders as a NULL parameter ("&lt;&gt; NULL", i.e. SQL UNKNOWN). Use IsNotNull() for null checks.
 
 ## See Also
 
@@ -222,6 +226,10 @@ public static BaseCriteria operator !=(BaseCriteria criteria1, string value)
 ## Return Value
 
 The result of the operator.
+
+## Remarks
+
+A null value is intentionally not mapped to IS NOT NULL: it renders as a NULL parameter ("&lt;&gt; NULL", i.e. SQL UNKNOWN). Use IsNotNull() for null checks.
 
 ## See Also
 

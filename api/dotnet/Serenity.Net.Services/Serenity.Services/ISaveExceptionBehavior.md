@@ -13,6 +13,10 @@ public interface ISaveExceptionBehavior
 | --- | --- |
 | [OnException](ISaveExceptionBehavior/OnException.md)(…) | Called when an exception occurs during save |
 
+## Remarks
+
+All behaviors implementing this interface are called in order when a save fails. A behavior may translate the original exception by throwing a new one; dispatch then stops and that new exception is what propagates, so the first behavior that throws wins and later behaviors never see the original exception. If no behavior throws, the original exception is rethrown unchanged.
+
 ## See Also
 
-* **Source:** *[ISaveExceptionBehavior.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/Save/ISaveExceptionBehavior.cs)*
+* **Source:** *[ISaveExceptionBehavior.cs](https://github.com/serenity-is/Serenity/blob/82aa994c6b620f5437843f746972a159894edd63/src/services/RequestHandlers/Save/ISaveExceptionBehavior.cs)*

@@ -51,10 +51,11 @@ A new binary NOT IN criteria.
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | statement is null |
+| InvalidOperationException | statement is an independent query with auto parameters. |
 
 ## Remarks
 
-Subqueries created via [`SubQuery`](../SqlQuery/SubQuery.md) already enclose themselves in parenthesis while rendering, so the statement is only wrapped in parenthesis when the query would render without them.
+Subqueries created via [`SubQuery`](../SqlQuery/SubQuery.md) already enclose themselves in parenthesis while rendering, so the statement is only wrapped in parenthesis when the query would render without them. The statement must share the same root query that this criteria will be used in (usually built via that query's SubQuery() method). An unrelated query's parameters are not available to the outer query, so embedding it may produce completely invalid results. Independent queries without parameters are safe to embed.
 
 ## See Also
 

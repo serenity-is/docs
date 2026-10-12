@@ -23,4 +23,4 @@ public static class EntitySqlHelper
 
 ## See Also
 
-* **Source:** *[EntitySqlHelper.cs](https://github.com/serenity-is/Serenity/blob/1547fabf1541054fe943b6a29c0d181fd84080e0/src/services/Entity/Extensions/EntitySqlHelper.cs)*
+* **Source:** *[EntitySqlHelper.cs](https://github.com/serenity-is/Serenity/blob/db964a13b4fda069b8f062c45bd5e9303487dc45/src/services/Entity/Extensions/EntitySqlHelper.cs)*

@@ -147,6 +147,8 @@ Choose What to Generate (R:Row, S:Repo+Svc, U=UI, C=Custom)
 RSUC
 ```
 
+> Module and identifier names are validated. Module names must be valid namespace names (letters, digits, `_` and dots), and dots are treated as namespace separators: they are converted to `/` for URL and file path generation (e.g. a module named `Northwind.Samples` generates files under `Modules/Northwind/Samples` with the route `Northwind/Samples`).
+
 Generated files are listed below:
 
 ```

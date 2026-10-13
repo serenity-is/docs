@@ -40,6 +40,8 @@ Rows implementing these are not physically deleted — the delete handler sets t
 
 The `UpdateInsertLogBehavior` fills these fields automatically on save. See [Built-in Service Behaviors](../../services/built-in-behaviors.md).
 
+> The user ID fields (`InsertUserIdField` / `UpdateUserIdField`) are plain `Field` objects and their properties are `object`-typed, so the user ID type follows the configured [UserEntityOptions](mapping.md#configurable-user-id-mapping) (int, long, Guid or string). Generated client typings show `InsertUserId?: any`. `InsertDate` / `UpdateDate` on the shared `LoggingRow` are stored in UTC.
+
 ## Ordering & Hierarchy
 
 - [IDisplayOrderRow](../api/dotnet/Serenity.Net.Services/Serenity.Data/IDisplayOrderRow.md) — has a `DisplayOrderField` (`Int32Field`); the row is kept in order automatically.
@@ -48,7 +50,8 @@ The `UpdateInsertLogBehavior` fills these fields automatically on save. See [Bui
 ## Other Contracts
 
 - [IEmailRow](../api/dotnet/Serenity.Net.Services/Serenity.Data/IEmailRow.md) — exposes an `EmailField` (used by membership/account features).
-- [IPasswordRow](../api/dotnet/Serenity.Net.Services/Serenity.Data/IPasswordRow.md) — exposes `PasswordHashField` and `PasswordSaltField` (used by authentication).
+- [IPasswordRow](../api/dotnet/Serenity.Net.Services/Serenity.Data/IPasswordRow.md) — exposes `PasswordHashField` and `PasswordSaltField` (used by authentication). Password hash/salt fields are automatically protected (see [Sensitive Field Protection](row-fields.md#sensitive-field-protection)).
+- [IConcurrencyVersionRow](../api/dotnet/Serenity.Net.Services/Serenity.Data/IConcurrencyVersionRow.md) — exposes a `ConcurrencyVersionField` (rowversion / version) used for optimistic concurrency on save. See [Optimistic Concurrency](../../services/save_request_handler.md#optimistic-concurrency).
 - [IFieldWithJoinInfo](../api/dotnet/Serenity.Net.Services/Serenity.Data/IFieldWithJoinInfo.md) — a field that exposes its referenced aliases and the row's joins (used by query building).
 
 ## How Contracts Are Used

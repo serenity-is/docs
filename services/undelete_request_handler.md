@@ -36,7 +36,7 @@ The endpoint exposes a single Undelete action:
 [ConnectionKey(typeof(MyRow)), ServiceAuthorize(typeof(MyRow))]
 public class UserEndpoint : ServiceEndpoint
 {
-    [HttpPost, AuthorizeDelete(typeof(MyRow))]
+    [HttpPost, AuthorizeUndelete(typeof(MyRow))]
     public Task<UndeleteResponse> Undelete(IUnitOfWork uow, UndeleteRequest request,
         [FromServices] IUserUndeleteHandler handler, CancellationToken cancellationToken = default)
     {
@@ -44,6 +44,50 @@ public class UserEndpoint : ServiceEndpoint
     }
 }
 ```
+
+`[AuthorizeUndelete(typeof(MyRow))]` validates the undelete permission declared on the row.
+
+## Undelete Permission
+
+Undeletion can be authorized separately from deletion. The handler (and `[AuthorizeUndelete]`) reads the permission from the row type, using the first one it finds:
+
+1. [UndeletePermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/UndeletePermissionAttribute.md)
+2. [DeletePermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/DeletePermissionAttribute.md)
+3. [ModifyPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/ModifyPermissionAttribute.md)
+4. [ReadPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/ReadPermissionAttribute.md)
+
+```cs
+[DeletePermission("Administration:Security")]
+[UndeletePermission("Administration:Security:Undelete")]
+public sealed class UserRow : Row<UserRow.RowFields>, IIdRow, IIsActiveDeletedRow
+{
+    // ...
+}
+```
+
+When a row does not declare an explicit undelete permission, the fallback chain above applies, so most applications are unaffected. A user who is denied receives an `EntityNotFound` error, so a caller cannot distinguish a missing record from a forbidden one. The row metadata sent to the client also carries an `undeletePermission`, which the `EntityGrid` and `EntityDialog` use for their include-deleted toggle and Undelete button — see [EntityGrid CRUD](../grids/entitygrid-crud.md).
+
+## Undelete Permission
+
+Undeletion can be authorized separately from deletion. The handler determines the required permission via `GetUndeletePermission()`, which uses the first of the following that the row type declares:
+
+1. [UndeletePermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/UndeletePermissionAttribute.md)
+2. [DeletePermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/DeletePermissionAttribute.md)
+3. [ModifyPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/ModifyPermissionAttribute.md)
+4. [ReadPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/ReadPermissionAttribute.md)
+
+```cs
+[DeletePermission("Administration:Security")]
+[UndeletePermission("Administration:Security:Undelete")]
+public sealed class UserRow : Row<UserRow.RowFields>, IIdRow, IIsActiveDeletedRow
+{
+    // ...
+}
+```
+
+If the row declares no permission attribute at all, the undelete operation is **denied** (the fail-closed default — see [Permission Checks Fail Closed](../framework/authorization.md#permission-checks-fail-closed)).
+
+A user who is denied access receives an `EntityNotFound` validation error (rather than `AccessDenied`), so a caller cannot distinguish a missing record from a forbidden one. The row metadata sent to the client carries the `undeletePermission`, which `EntityGrid` and `EntityDialog` use for their include-deleted toggle and Undelete button — see [EntityGrid CRUD](../grids/entitygrid-crud.md).
 
 ## The Request and Response
 

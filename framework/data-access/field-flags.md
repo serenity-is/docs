@@ -205,6 +205,8 @@ This should only be used in rare cases for such unmapped fields.
 
 If set, it denies filtering operations on a sensitive field. This can be useful for secret fields like PasswordHash that shouldn't be allowed to be selected or filtered on the client side.
 
+Since there is a [`[Filterable]` attribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/FilterableAttribute.md) that sets (`[Filterable(false)]`, or the parameterless `[NotFilterable]`) or clears (`[Filterable(true)]`) this flag, filtering can be controlled separately from selection. Fields whose names look sensitive get `DenyFiltering` automatically (unless set explicitly), and sorting, equality filtering, quick search and criteria operands enforce the same rule — see [Sensitive Field Protection](row-fields.md#sensitive-field-protection).
+
 ## Unique Flag and Unique Attribute
 
 When a field has this flag, its value is checked against existing values in the database to be unique.

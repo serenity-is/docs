@@ -26,12 +26,25 @@ Criteria("Name").contains("ser"); // [["Name"], "like", "%ser%"]
 | `le(value)` | `[field, "<=", value]` |
 | `in(values)` | `[field, "in", [values]]` |
 | `notIn(values)` | `[field, "not in", [values]]` |
-| `contains(value)` | `[field, "like", "%value%"]` |
-| `startsWith(value)` | `[field, "like", "value%"]` |
-| `endsWith(value)` | `[field, "like", "%value"]` |
+| `contains(value)` | `[field, "like", "%value%"]` — value escaped, see below |
+| `startsWith(value)` | `[field, "like", "value%"]` — value escaped, see below |
+| `endsWith(value)` | `[field, "like", "%value"]` — value escaped, see below |
+| `likeEscaped(mask)` | `[field, "like", mask, "!"]` — pre-escaped mask; the escape character is only emitted when the mask contains it |
+| `notLikeEscaped(mask)` | `[field, "not like", mask, "!"]` — pre-escaped mask, same rule |
 | `bw(from, to)` | `[[field, ">=", from], "and", [field, "<=", to]]` (between) |
 | `isNull()` | `["is null", field]` |
 | `isNotNull()` | `["is not null", field]` |
+
+### LIKE Escaping
+
+`contains`, `startsWith` and `endsWith` treat the value as **literal text**: LIKE special characters (`%`, `_`, `[`) are escaped with `!`, and a fourth array member with the escape character is added only when escaping was necessary (otherwise a plain three-element array is produced):
+
+```ts
+Criteria("Name").contains("50%");   // [["Name"], "like", "%50!%%", "!"]
+Criteria("Name").contains("ser");   // [["Name"], "like", "%ser%"]
+```
+
+`escapeLikeWildcards(value)` is exported for escaping a value yourself, and `likeEscaped` / `notLikeEscaped` create `like` / `not like` criteria from a pre-escaped mask. Use `contains` etc. for literal values, and provide raw masks only when you intentionally want wildcard behavior.
 
 ## Combining Criteria
 
@@ -84,6 +97,13 @@ if (Criteria.isEmpty(criteria)) {
 import { parseCriteria } from "@serenity-is/corelib";
 
 const c = parseCriteria("Age >= 18 and Status = 'Active'");
+```
+
+It supports the `ESCAPE` clause in `LIKE` expressions as well, producing a four-element criteria array that carries the escape character:
+
+```ts
+const c = parseCriteria("Name like '%50!%%' escape '!'");
+// [["Name"], "like", "%50!%%", "!"]
 ```
 
 ## Using Criteria in Requests

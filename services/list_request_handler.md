@@ -34,19 +34,23 @@ First we should have a look at what members a ListRequest object have:
   {
       public int Skip { get; set; }
       public int Take { get; set; }
+      public bool IncludeMore { get; set; }
       public SortBy[]? Sort { get; set; }
       public string? ContainsText { get; set; }
       public string? ContainsField { get; set; }
-      public Dictionary<string, object?>? EqualityFilter { get; set; }
       [JsonConverter(typeof(JsonSafeCriteriaConverter))]
       public BaseCriteria? Criteria { get; set; }
       public bool IncludeDeleted { get; set; }
-      public bool ExcludeTotalCount { get; set; }
+      public bool? ExcludeTotalCount { get; set; }
+      public Dictionary<string, object?>? EqualityFilter { get; set; }
       public ColumnSelection ColumnSelection { get; set; }
       [JsonConverter(typeof(JsonStringHashSetConverter))]
       public HashSet<string>? IncludeColumns { get; set; }
       [JsonConverter(typeof(JsonStringHashSetConverter))]
       public HashSet<string>? ExcludeColumns { get; set; }
+      public SortBy[]? DistinctFields { get; set; }
+      public List<string>? ExportColumns { get; set; }
+      // ...
   }
 ```
 
@@ -58,6 +62,8 @@ These options are used for paging and similar to Skip and Page extensions in LIN
 There is one little difference about Take. If you Take(0), LINQ will return you zero records, while Serenity will return ALL records. There is no point in calling a LIST service and requesting 0 records.
 
 So, SKIP and TAKE has default values of 0, and they are simply ignored when 0 / undefined.
+
+> When server side page size limits (`RequestHandlerSettings.DefaultPageSize` / `MaxPageSize`) are configured, a zero take may be replaced by the default page size instead of returning all records — see [Server-Side Page Size Limits](#server-side-page-size-limits).
 
 ```cs
 // returns all customers as Skip and Take are 0 by default 
@@ -260,6 +266,8 @@ This parameter is only useful with rows that implements IIsActiveDeletedRow inte
 
 If this parameter is True, list handler will return all rows without looking at IsActive column.
 
+> The value is ignored unless the current user has the undelete permission (from the row's `[UndeletePermission]`, falling back to the delete, modify, and read permissions), so users who may not undelete cannot see deleted records.
+
 > Some grids for such rows have a little eraser icon on top right to toggle this flag, thus show deleted records or hide them (default).
 
 
@@ -400,6 +408,97 @@ By default, table fields have a select level of *SelectLevel.List* while view fi
 *SelectLevel.Explicit* means such a field shouldn't be selected in any mode, unless it is explicitly included with IncludeColumns parameter. Use this for fields that are not meaningful for grids or edit dialogs.
 
 *SelectLevel.Never* means never load this field! Use it for fields that shouldn't be sent to client side, like a password hash.
+
+## List Request Capabilities
+
+Not every list endpoint (or handler) supports every `ListRequest` option. A [ListRequestCapabilities](../api/dotnet/Serenity.Net.Core/Serenity.Services/ListRequestCapabilities.md) flags enum lets an endpoint declare which options it actually applies:
+
+| Capability | Meaning |
+| --- | --- |
+| `ContainsText` / `ContainsField` | Applies quick search text / field |
+| `EqualityFilter`, `Criteria` | Applies equality filters / criteria |
+| `Sort` | Applies sorting |
+| `Skip`, `Take`, `ExcludeTotalCount`, `IncludeMore` | Paging related options |
+| `IncludeDeleted` | Applies soft-delete inclusion |
+| `ColumnSelection`, `IncludeColumns`, `ExcludeColumns` | Column options |
+| `DistinctFields`, `ExportColumns`, `Localize` | Other options |
+| `FilteringOptions`, `PagingOptions`, `ColumnOptions` | Combined sets |
+| `Baseline` | The fixed standard set (will not grow in future releases) |
+| `All` | Currently same as `Baseline` (may grow in the future) |
+| `SourceAdapter` | What the in-memory source adapter supports by default |
+
+Endpoint actions can declare their supported capabilities with the [ListRequestCapabilitiesAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Services/ListRequestCapabilitiesAttribute.md), optionally excluding specific options:
+
+```cs
+public class MyEndpoint : ServiceEndpoint
+{
+    [ListRequestCapabilities(ListRequestCapabilities.Baseline,
+        Exclude = ListRequestCapabilities.ExportColumns)]
+    public Task<ListResponse<MyRow>> List(IDbConnection connection, ListRequest request,
+        [FromServices] IMyListHandler handler, CancellationToken cancellationToken = default)
+    {
+        return handler.ListAsync(connection, request, cancellationToken);
+    }
+}
+```
+
+[ServiceLookupEditor](../editors/lookup-editors.md) uses these capabilities to know which operations (contains text, filtering, sorting, paging) it must apply locally when the target endpoint does not support them.
+
+## More Without Counting (IncludeMore)
+
+Paged lists usually run a `COUNT(*)` just to fill `TotalCount`. Setting `IncludeMore` on a list request makes the handler read one extra sentinel row and report `ListResponse.More` instead, without needing the total count:
+
+```json
+// request
+{ "skip": 0, "take": 50, "includeMore": true, "excludeTotalCount": true }
+```
+
+```json
+// response
+{ "entities": [ /* ... */ ], "more": true }
+```
+
+`More` is computed from the rows actually read (before entity post-processing), so it stays correct even when a processed entity is dropped.
+
+## Server-Side Page Size Limits
+
+[RequestHandlerSettings](../api/dotnet/Serenity.Net.Services/Serenity.Services/RequestHandlerSettings.md) (bound from the `RequestHandlerSettings` configuration section) applies default and maximum page sizes to every list request:
+
+```json
+{
+  "RequestHandlerSettings": {
+    "DefaultPageSize": 100,
+    "MaxPageSize": 1000,
+    "ExcludeTotalCountByDefault": false
+  }
+}
+```
+
+- `DefaultPageSize` applies when a request does not specify a take (take is zero). Zero (the default) means no default, so no behavior change unless you opt in.
+- `MaxPageSize` clamps larger requests. Zero (the default) means no limit.
+- Negative `Skip` / `Take` values are rejected as validation errors (and negative settings values are ignored / treated as zero).
+- The response reports the applied take in `ListResponse.Take`, and the client `RemoteView` tracks the applied take in `actualRowsPerPage` so paging stays correct when the server clamps the page size (`rowsPerPage` keeps reporting the requested value).
+
+Server side callers that need all rows (exports, reports, background jobs, nested relation loads) should opt out explicitly, otherwise enabling the limits may silently truncate their results:
+
+```csharp
+var request = new ListRequest
+{
+    Skip = 0,
+    Take = 0
+}.SuppressPagingLimits(); // ignore DefaultPageSize / MaxPageSize for this request
+```
+
+The suppression flag is internal and is never bound from JSON (clients cannot bypass the limits). Some built-in server side list operations (e.g. master/detail and linking set relation loads) call this automatically.
+
+> **Warning:** Do not enable `DefaultPageSize` / `MaxPageSize` without auditing existing list usages, and avoid low values — grids without a pager will be truncated with no way to reach the remaining rows.
+
+### Excluding the Total Count by Default
+
+`RequestHandlerSettings.ExcludeTotalCountByDefault` lets you skip the `COUNT(*)` for paged requests that do not explicitly ask for a total. `ListRequest.ExcludeTotalCount` is a nullable boolean so an unspecified value (`null`) is distinct from an explicit `false`:
+
+- Callers that send `ExcludeTotalCount = false` (like the standard grids, which need `TotalCount` for the pager) are unaffected.
+- A take that the limits turned from zero into an actual page size still returns the total unless `IncludeMore` was requested, since the caller did not ask to page.
 
 ## Handler Type Hierarchy
 

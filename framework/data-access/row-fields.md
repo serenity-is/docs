@@ -61,6 +61,62 @@ public interface IRowFieldsProvider
 
 [FallbackRowFieldsProvider](../api/dotnet/Serenity.Net.Services/Serenity.Data/FallbackRowFieldsProvider.md) is a fallback that creates fields instances without DI (used in contexts where the service provider isn't available, e.g. in the code generator).
 
+## Sensitive Field Protection
+
+A forgotten `[MinSelectLevel(SelectLevel.Never)]`, `[Insertable(false)]` or `[Updatable(false)]` annotation could leak secrets (password hashes, tokens, API keys) in retrieve/list responses, or allow clients to mass assign them. To prevent this, `RowFieldsBase` detects fields whose property or column names look sensitive (password hash/salt, secrets, API keys, tokens, 2FA data, connection strings, etc.) and synthesizes the following attributes automatically, **only when the matching attribute was not set explicitly**, so you can still override them:
+
+- `MinSelectLevel(SelectLevel.Never)` — the field is never selected
+- `Sortable(false)`
+- `Filterable(false)`
+- For mapped (table) columns only: `Insertable(false)` and `Updatable(false)`
+
+The synthesized attributes are appended to the field's `CustomAttributes`, so the behavior is visible in metadata. `NotMapped` sensitive fields (e.g. password input properties) stay insertable and updatable, as they never reach the database.
+
+Fields implementing `IPasswordRow` (hash/salt) are denied by interface too, regardless of their names, unless a `MinSelectLevel` annotation opts them back in. List, retrieve, filter and save handlers all honor this.
+
+[FilterableAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/FilterableAttribute.md) / `NotFilterableAttribute` give control over filtering separately from selection (they set or clear the field's `DenyFiltering` flag — see [Field Flags](field-flags.md#denyfiltering-flag)):
+
+```cs
+public sealed class MyUserRow : Row<MyUserRow.RowFields>, IPasswordRow
+{
+    // arbitrary name — still protected via IPasswordRow, unless opted back in
+    [DisplayName("Password hash"), Size(100)]
+    public string? Password { get => fields.Password[this]; set => fields.Password[this] = value; }
+
+    // sensitive by name — MinSelectLevel(Never), Sortable(false), Filterable(false),
+    // Insertable(false), Updatable(false) synthesized automatically
+    [DisplayName("API key"), Size(100)]
+    public string? ApiKey { get => fields.ApiKey[this]; set => fields.ApiKey[this] = value; }
+
+    // opt back in explicitly if it is not actually sensitive
+    [DisplayName("Access token"), Size(100), Filterable(true), MinSelectLevel(SelectLevel.Details)]
+    public string? AccessToken { get => fields.AccessToken[this]; set => fields.AccessToken[this] = value; }
+}
+```
+
+`[Filterable(true)]` clears the deny-filtering flag, `[Filterable(false)]` sets it. If a field with a sensitive-looking name is intentionally selectable, sortable, filterable or writable, opt it back in with the corresponding explicit attribute.
+
+## Per-Field Comparers
+
+String values are compared with a per-field comparer so that change detection, unique checks and local (in-memory) operations can honor a database's collation (e.g. case-insensitive or Turkish culture):
+
+- [ComparerAttribute](../api/dotnet/Serenity.Net.Services/Serenity.Data/ComparerAttribute.md) can be applied to a row class (affecting all of its fields) or to a single field property to override the row, connection or global setting. [ComparerResolver](../api/dotnet/Serenity.Net.Services/Serenity.Data/ComparerResolver.md) parses specifications like `"OrdinalIgnoreCase"`, `"tr-TR"` or `"tr-TR:IgnoreCase"` into a `StringComparer`:
+
+```cs
+[Comparer("OrdinalIgnoreCase")] // applies to all string fields of this row
+public sealed class CodeRow : Row<CodeRow.RowFields>, IIdRow
+{
+    // per-field override
+    [Comparer("tr-TR:IgnoreCase")]
+    public string? TurkishKey { get => fields.TurkishKey[this]; set => fields.TurkishKey[this] = value; }
+}
+```
+
+- `ISqlDialect.WithComparer` lets a dialect carry a per-connection comparer, and `ConnectionStringEntry.Comparer` sets it per connection string in `appsettings.json` (see [SQL Connections](sql-connections.md)).
+- The effective comparer is resolved per field in this order: field attribute → row attribute → dialect comparer → `SqlSettings.DefaultComparer`, and baked into each field.
+- `SqlSettings.SetLocalComparer` provides an `AsyncLocal` override for tests and background work.
+- `ByteArrayField`, `ListField`, `JsonField`, `VariantField` and the generic field types fall back to the field comparer instead of the type default.
+
 ## `IRowTypeRegistry`
 
 [IRowTypeRegistry](../api/dotnet/Serenity.Net.Services/Serenity.Data/IRowTypeRegistry.md) provides a registry of all row types in the application:

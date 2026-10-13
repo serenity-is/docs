@@ -39,7 +39,7 @@ The concrete field types derive from a few generic bases:
 | [StringField](../api/dotnet/Serenity.Net.Services/Serenity.Data/StringField.md) | `string` | Text columns |
 | [Int16Field](../api/dotnet/Serenity.Net.Services/Serenity.Data/Int16Field.md) | `short?` | |
 | [Int32Field](../api/dotnet/Serenity.Net.Services/Serenity.Data/Int32Field.md) | `int?` | Most common numeric field |
-| [Int64Field](../api/dotnet/Serenity.Net.Services/Serenity.Data/Int64Field.md) | `long?` | |
+| [Int64Field](../api/dotnet/Serenity.Net.Services/Serenity.Data/Int64Field.md) | `long?` | Values outside the JS safe integer range (2^53) serialize as JSON strings so large IDs keep full precision; pair with `[Int64Editor, Int64Filtering]` on the client |
 | [SingleField](../api/dotnet/Serenity.Net.Services/Serenity.Data/SingleField.md) | `float?` | |
 | [DoubleField](../api/dotnet/Serenity.Net.Services/Serenity.Data/DoubleField.md) | `double?` | |
 | [DecimalField](../api/dotnet/Serenity.Net.Services/Serenity.Data/DecimalField.md) | `decimal?` | Money/amounts; use `[Scale]` for precision |

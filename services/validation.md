@@ -177,6 +177,32 @@ is a built-in save behavior that runs for rows implementing
 soft-deleted, saving the child throws a `ParentRecordDeleted` validation error.
 It is registered automatically with the other built-in behaviors.
 
+## Localized SQL Constraint Violations
+
+Database constraint violations (unique, foreign key, not null, primary key) are
+converted to localized validation errors instead of leaking provider exceptions
+as server errors, for SQL Server, PostgreSQL, MySQL, Oracle, Firebird and
+SQLite:
+
+- [ISqlErrorExtractor](../api/dotnet/Serenity.Net.Services/Serenity.Services.SqlErrors/ISqlErrorExtractor.md) /
+  [DefaultSqlErrorExtractor](../api/dotnet/Serenity.Net.Services/Serenity.Services.SqlErrors/DefaultSqlErrorExtractor.md)
+  recognize the violations from error numbers, SQL states and messages — without
+  taking a direct dependency on any provider package.
+- [HumanizeSqlExceptionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services.SqlErrors/HumanizeSqlExceptionBehavior.md)
+  is an implicit save/delete/undelete behavior that converts recognized
+  violations into `ValidationError`s, using the messages in
+  [SqlErrorValidationTexts](../api/dotnet/Serenity.Net.Services/Serenity.Services.SqlErrors/SqlErrorValidationTexts.md)
+  (under the `services.texts.*` local text prefixes, plus generic messages when
+  table/column names are unknown).
+
+The unique pre-check logic shared by [`[Unique]` and `[UniqueConstraint]`](built-in-behaviors.md#unique-constraints)
+lives in [BaseUniqueConstraintSaveBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseUniqueConstraintSaveBehavior.md)
+with virtual query building (`BuildUniqueConstraintQuery`), so applications can
+scope or replace it — for example to apply row-level (tenant/owner) scoping so
+the pre-check matches the actual database constraint. `[Unique]` and
+`[UniqueConstraint]` accept a `DisableDefaultBehavior` option to opt out of
+the default behavior entirely (e.g. when you replace it with your own).
+
 ## Where to put custom validation
 
 | Approach | When to use |

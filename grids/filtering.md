@@ -62,6 +62,7 @@ Each field uses a filtering type that determines which operators and editor are 
 | --- | --- |
 | `StringFiltering` | Text fields |
 | `IntegerFiltering` | Integer fields |
+| `Int64Filtering` | 64-bit integer fields (pairs with `Int64Editor`) |
 | `DecimalFiltering` | Decimal fields |
 | `DateFiltering` | Date fields |
 | `DateTimeFiltering` | Date-time fields |

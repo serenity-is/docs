@@ -73,12 +73,24 @@ public static IServiceCollection AddUploadStorage(this IServiceCollection collec
     collection.TryAddSingleton<IFilenameFormatSanitizer, DefaultFilenameFormatSanitizer>();
     collection.TryAddSingleton<IUploadStorage, DefaultUploadStorage>();
     collection.TryAddSingleton<IUploadValidator, DefaultUploadValidator>();
-    collection.TryAddSingleton<IImageProcessor, DefaultImageProcessor>();
+    collection.TryAddSingleton<IImageProcessor, ThrowingImageProcessor>();
     collection.TryAddSingleton<IUploadProcessor, DefaultUploadProcessor>();
     collection.TryAddSingleton<IUploadFileResponder, DefaultUploadFileResponder>();
     return collection;
 }
 ```
+
+### Registering an IImageProcessor
+
+`AddUploadStorage()` registers a [ThrowingImageProcessor](../api/dotnet/Serenity.Net.Services/Serenity.Web/ThrowingImageProcessor.md) as a placeholder — any upload path that checks or resizes images (e.g. `[ImageUploadEditor]`, `[MultipleImageUploadEditor]`) throws a descriptive error unless you register a real [IImageProcessor](../api/dotnet/Serenity.Net.Services/Serenity.Web/IImageProcessor.md) **before** calling `AddUploadStorage()`:
+
+```cs
+// Startup.cs (StartSharp / Serene sample)
+services.AddSingleton<IImageProcessor, SkiaSharpImageProcessor>();
+services.AddUploadStorage(...);
+```
+
+> Serenity itself does not bundle an image processing library: the `SixLabors.ImageSharp` dependency was removed (the 2.1.13 package was marked vulnerable and no longer maintained, and newer versions have licensing issues), as were the legacy `ThumbnailGenerator` / `UploadProcessor` classes. StartSharp and Serene ship a `SkiaSharpImageProcessor` backed by SkiaSharp — you can copy it into your application. It covers image size detection, loading with format/extension detection, all scaling modes (stretch, preserve ratio with and without fill, crop) and encoding to JPEG, PNG, GIF and WebP. In-place scaling is optional in the `IImageProcessor` contract and is not supported by the SkiaSharp implementation.
 
 ## Processing and Validation
 
@@ -97,7 +109,7 @@ If anything fails, the partially written temporary file is cleaned up and the ex
 
 ### Image processing
 
-`DefaultImageProcessor` uses `ImageChecker` to validate image content and `ThumbnailGenerator` to create thumbnails. `ImageChecker` returns an [`ImageCheckResult`](../api/dotnet/Serenity.Net.Services/Serenity.Web/ImageCheckResult.md) code describing why an image was rejected (e.g. `InvalidImage`, `WidthTooHigh`, `SizeMismatch`), and [`ImageEncoderParams`](../api/dotnet/Serenity.Net.Services/Serenity.Web/ImageEncoderParams.md) carries the JPEG quality used when encoding. The scaling options (`ScaleWidth`, `ScaleHeight`, `ThumbWidth`, etc.) on the editor attribute control what happens.
+`ImageChecker` validates image content through the registered [IImageProcessor](../api/dotnet/Serenity.Net.Services/Serenity.Web/IImageProcessor.md) and returns an [`ImageCheckResult`](../api/dotnet/Serenity.Net.Services/Serenity.Web/ImageCheckResult.md) code describing why an image was rejected (e.g. `InvalidImage`, `WidthTooHigh`, `SizeMismatch`). Scaling and thumbnail generation also go through the same `IImageProcessor` (see [Registering an IImageProcessor](#registering-an-iimageprocessor) above), and [`ImageEncoderParams`](../api/dotnet/Serenity.Net.Services/Serenity.Web/ImageEncoderParams.md) carries the JPEG quality used when encoding. The scaling options (`ScaleWidth`, `ScaleHeight`, `ThumbWidth`, etc.) on the editor attribute control what happens.
 
 ## Configuration
 

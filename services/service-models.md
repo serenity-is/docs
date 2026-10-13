@@ -46,10 +46,12 @@ public class ServiceResponse
 | Response | Base | Members | Detailed in |
 | --- | --- | --- | --- |
 | [`SaveResponse`](../api/dotnet/Serenity.Net.Services/Serenity.Services/SaveResponse.md) | `ServiceResponse` | `EntityId` | [Save Request Handler](save_request_handler.md) |
-| [`ListResponse<T>`](../api/dotnet/Serenity.Net.Services/Serenity.Services/ListResponse-1.md) | `ServiceResponse`, `IListResponse` | `Entities`, `Values`, `TotalCount`, `Skip`, `Take` | [List Request Handler](list_request_handler.md) |
+| [`ListResponse<T>`](../api/dotnet/Serenity.Net.Services/Serenity.Services/ListResponse-1.md) | `ServiceResponse`, `IListResponse` | `Entities`, `Values`, `TotalCount`, `Skip`, `Take`, `More` | [List Request Handler](list_request_handler.md) |
 | [`RetrieveResponse<T>`](../api/dotnet/Serenity.Net.Services/Serenity.Services/RetrieveResponse-1.md) | `ServiceResponse`, `IRetrieveResponse` | `Entity`, `Localizations` | [Retrieve Request Handler](retrieve_request_handler.md) |
 | [`DeleteResponse`](../api/dotnet/Serenity.Net.Services/Serenity.Services/DeleteResponse.md) | `ServiceResponse` | `WasAlreadyDeleted` | [Delete Request Handler](delete_request_handler.md) |
 | [`UndeleteResponse`](../api/dotnet/Serenity.Net.Services/Serenity.Services/UndeleteResponse.md) | `ServiceResponse` | `WasNotDeleted` | [Undelete Request Handler](undelete_request_handler.md) |
+
+> `ListResponse.More` is a nullable boolean set when the request asked for it via `ListRequest.IncludeMore`; it tells the client whether more records exist beyond the returned page, without requiring a `COUNT(*)`. `ListResponse.Take` reports the take actually applied by the server (which may differ from the requested `Take` when paging limits are configured).
 
 ## Non-Generic Access Interfaces
 
@@ -58,7 +60,7 @@ The generic models (`SaveRequest<TEntity>`, `ListResponse<T>`, `RetrieveResponse
 | Interface | Gives access to | Used by |
 | --- | --- | --- |
 | [`ISaveRequest`](../api/dotnet/Serenity.Net.Services/Serenity.Services/ISaveRequest.md) | `EntityId`, `Entity`, `Localizations` (as `object`/`IDictionary`) | `ISaveRequestProcessor`, behaviors |
-| [`IListResponse`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListResponse.md) | `Entities` (as `IList`), `TotalCount`, `Skip`, `Take` | `IListRequestHandler`, behaviors |
+| [`IListResponse`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListResponse.md) | `Entities` (as `IList`), `TotalCount`, `Skip`, `Take`, `More` | `IListRequestHandler`, behaviors |
 | [`IRetrieveResponse`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IRetrieveResponse.md) | `Entity` (as `object`), `Localizations` | `IRetrieveRequestHandler`, behaviors |
 
 For example, `IListRequestHandler.Response` is typed as `IListResponse`, so a list behavior can read `TotalCount` or enumerate `Entities` without knowing the row type.
@@ -71,6 +73,23 @@ For example, `IListRequestHandler.Response` is typed as `IListResponse`, so a li
 
 - [`ServiceError`](../api/dotnet/Serenity.Net.Services/Serenity.Services/ServiceError.md) — the error object returned in `ServiceResponse.Error` (`Code`, `Arguments`, `Message`, `Details`, `ErrorId`). See [Validation](validation.md).
 - [`SortBy`](../api/dotnet/Serenity.Net.Services/Serenity.Services/SortBy.md) — a sort descriptor (`Field`, `Descending`) used by `ListRequest.Sort`. See [List Request Handler](list_request_handler.md).
+- [`ListRequestCapabilities`](../api/dotnet/Serenity.Net.Core/Serenity.Services/ListRequestCapabilities.md) — a flags enum describing which `ListRequest` options a list endpoint or handler supports, declared with [`[ListRequestCapabilities]`](../api/dotnet/Serenity.Net.Core/Serenity.Services/ListRequestCapabilitiesAttribute.md). See [List Request Capabilities](list_request_handler.md#list-request-capabilities).
+
+## `RequestHandlerSettings`
+
+[`RequestHandlerSettings`](../api/dotnet/Serenity.Net.Services/Serenity.Services/RequestHandlerSettings.md) is bound from the `RequestHandlerSettings` configuration section and controls server-side list behavior:
+
+```json
+{
+  "RequestHandlerSettings": {
+    "DefaultPageSize": 100,
+    "MaxPageSize": 1000,
+    "ExcludeTotalCountByDefault": false
+  }
+}
+```
+
+See [Server-Side Page Size Limits](list_request_handler.md#server-side-page-size-limits) for the details and warnings.
 
 ## Client-Side Typings
 

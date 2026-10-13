@@ -45,6 +45,8 @@ public class LanguageEndpoint : ServiceEndpoint
 
 `[AuthorizeDelete(typeof(MyRow))]` validates the delete permission declared on the row. The endpoint returns `Task<DeleteResponse>` and forwards the `CancellationToken` to the handler.
 
+> A user who is denied access receives an `EntityNotFound` validation error instead of `AccessDenied`, so a caller cannot distinguish a missing record from a forbidden one. Rows without any permission attribute are denied entirely (fail-closed) — see [Permission Checks Fail Closed](../framework/authorization.md#permission-checks-fail-closed).
+
 ## The Request and Response
 
 The request is a [DeleteRequest](../api/dotnet/Serenity.Net.Services/Serenity.Services/DeleteRequest.md):

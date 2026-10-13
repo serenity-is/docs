@@ -13,6 +13,7 @@ Serenity ships a set of built-in features that are implemented as service behavi
 | **Updatable Extension** | `[UpdatableExtension("alias", typeof(ExtensionRow))]` on the row | Persists fields from a joined detail table |
 | **Display Order** | Implement `IDisplayOrderRow` | Maintains an ordered list and renumbers on save/delete/undelete |
 | **Parent Validation** | `IParentIdRow` on the row | Validates that a referenced parent record is not deleted |
+| **SQL Exception Humanization** | Automatic (implicit behavior) | Converts database constraint violations into localized validation errors |
 
 ## Insert/Update Log
 
@@ -40,6 +41,8 @@ public sealed class MyRow : LoggingRow<MyRowFields>, IIdRow
 ```
 
 The `LoggingRow` base class exposes the four audit fields (`InsertUserId`, `InsertDate`, `UpdateUserId`, `UpdateDate`) and implements `ILoggingRow` for you. You can also implement the interfaces yourself if your field names differ.
+
+> `LoggingRow`'s `InsertDate` / `UpdateDate` fields are annotated with `[DateTimeKind(DateTimeKind.Utc)]` and stored in UTC. The `InsertUserId` / `UpdateUserId` fields are `object`-typed, so the user ID type can follow the configured `UserEntityOptions` (int, long, Guid or string) — see [Configurable User ID Mapping](../framework/data-access/mapping.md#configurable-user-id-mapping).
 
 See the [Save Request Handler](save_request_handler.md) for how these fields are set in the `SetInternalFieldsAsync` phase.
 
@@ -146,7 +149,7 @@ Serenity has two ways to declare a unique constraint, both checked before save:
 public string? ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
 ```
 
-Options include `CheckBeforeSave`, `IgnoreDeleted`, `IgnoreNulls`, and `ErrorMessage`.
+Options include `CheckBeforeSave`, `IgnoreDeleted`, `IgnoreNulls`, `ErrorMessage` and `DisableDefaultBehavior`.
 
 ### Row-level `[UniqueConstraint]`
 
@@ -160,7 +163,9 @@ public sealed class MyRow : Row<MyRow.RowFields>, IIdRow
 }
 ```
 
-These are enforced by `UniqueFieldSaveBehavior` (field-level) and `UniqueConstraintSaveBehavior` (row-level) before the record is saved.
+These are enforced by `UniqueFieldSaveBehavior` (field-level) and `UniqueConstraintSaveBehavior` (row-level) before the record is saved. Both derive from [BaseUniqueConstraintSaveBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseUniqueConstraintSaveBehavior.md), which contains the shared query building and validation logic with virtual hooks — override [BuildUniqueConstraintQuery](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseUniqueConstraintSaveBehavior/BuildUniqueConstraintQuery.md) in a derived behavior to customize how the pre-check query is built, for example to apply row-level (tenant/owner) scoping so the pre-check matches the actual database unique constraint. To replace the default behavior entirely, set `DisableDefaultBehavior = true` on `[Unique]` / `[UniqueConstraint]` and register your own behavior.
+
+> Unique constraint violations that reach the database are also converted to localized validation errors by the implicit `HumanizeSqlExceptionBehavior` — see [Localized SQL Constraint Violations](validation.md#localized-sql-constraint-violations).
 
 ## Updatable Extension
 
@@ -198,6 +203,13 @@ public interface IDisplayOrderRow : IRow
 
 `DisplayOrderHelper.GetNextValue` returns the next order value for a table or group, and `ReorderValues` renumbers a group (optionally scoped by a filter). [DisplayOrderFilterHelper](../api/dotnet/Serenity.Net.Services/Serenity.Services/DisplayOrderFilterHelper.md) builds a filter that groups records by a parent ID and active state, so order values are maintained per group.
 
+`ReorderValues` (and its async overloads) normalizes values instead of leaving gaps:
+
+- By default the whole group is renumbered to consecutive values starting from `1`, closing gaps left by removed records.
+- With `preserveGaps: true`, only the records between the old and new positions are shifted and existing values (including gaps) are reused, updating fewer rows.
+- When no record matches the given id (`changingIndex < 0`, e.g. the sentinel passed after a delete), the group is renumbered so the gap left by the removed row is closed instead of ignored.
+- Reorders of fields with a unique display order constraint use per-record updates so the renumbering cannot violate the unique constraint mid-update.
+
 ## Parent Validation
 
 The `ValidateParentBehavior` runs as part of the save lifecycle for rows implementing [IParentIdRow](../api/dotnet/Serenity.Net.Services/Serenity.Data/IParentIdRow.md). It checks that a referenced parent record is not marked as deleted before the child is saved.
@@ -210,6 +222,10 @@ public sealed class MyRow : Row<MyRow.RowFields>, IIdRow, IParentIdRow
     // ...
 }
 ```
+
+## SQL Exception Humanization
+
+[HumanizeSqlExceptionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services.SqlErrors/HumanizeSqlExceptionBehavior.md) is an implicit save/delete/undelete behavior (registered automatically with the other built-in behaviors) that converts recognized database constraint violations — unique, foreign key, not null, primary key — into localized validation errors instead of leaking provider exceptions as server errors. It works for SQL Server, PostgreSQL, MySQL, Oracle, Firebird and SQLite through [ISqlErrorExtractor](../api/dotnet/Serenity.Net.Services/Serenity.Services.SqlErrors/ISqlErrorExtractor.md) / `DefaultSqlErrorExtractor`, without taking a direct dependency on any provider package. See [Localized SQL Constraint Violations](validation.md#localized-sql-constraint-violations) for details.
 
 ## See Also
 

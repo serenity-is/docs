@@ -96,6 +96,36 @@ else
 
 `Row` holds the entity being saved. For updates, `Old` holds the previously stored entity.
 
+## Optimistic Concurrency
+
+Serenity supports **optimistic concurrency** via a version / rowversion field, modeled after the tracked concurrency tokens in frameworks like EF Core and NHibernate. A row implements [IConcurrencyVersionRow](../api/dotnet/Serenity.Net.Services/Serenity.Data/IConcurrencyVersionRow.md) and exposes its version field:
+
+```cs
+public sealed class ProductRow : Row<ProductRow.RowFields>, IIdRow, IConcurrencyVersionRow
+{
+    // returned to the client, but not editable (no form field)
+    [DisplayName("Row Version"), Insertable(false), Updatable(false)]
+    public int? RowVersion { get => fields.RowVersion[this]; set => fields.RowVersion[this] = value; }
+
+    Field IConcurrencyVersionRow.ConcurrencyVersionField => fields.RowVersion;
+}
+```
+
+On save, the handler appends the version to the update's `WHERE` clause and raises a localized `ConcurrencyConflict` validation error when no row is affected. This detects both a stale read (the value sent by the client is used when present) and a concurrent write between the load and the update. When the client does not send a version, the value loaded from the database (`Old`) is used, so a concurrent write in the load → update window is still detected.
+
+Databases that maintain the version themselves (e.g. SQL Server `rowversion`) need no extra work; for application managed numeric versions, the `AddConcurrencyVersionTrigger` / `DropConcurrencyVersionTrigger` migration helpers generate the trigger SQL for SQL Server, PostgreSQL, MySQL, Oracle, Firebird and SQLite:
+
+```cs
+// migration
+Alter.Table("Products")
+    .AddColumn("RowVersion").AsInt32().NotNullable().WithDefaultValue(0)
+    .AddConcurrencyVersionTrigger(this, idField: "ProductID");
+```
+
+An `IgnoreConcurrencyVersion` flag on `SaveRequest` lets internal services (localization, master/detail and updatable extension behaviors) update rows regardless of their version. It is a server side only flag — client JSON cannot set it.
+
+Client-side, the server typings emit a `concurrencyVersionProperty` on the generated row class, and `EntityDialog` sends the loaded value back on save even though the read-only version field has no form field. See [EntityDialog and CRUD Workflows](../dialogs/entitydialog.md). The Northwind demo's `ProductRow` uses this feature as a reference.
+
 ## Handler Type Hierarchy
 
 The generated handler derives from `SaveRequestHandlerAsync<TRow>`, which itself derives from the fully generic [SaveRequestHandlerAsync&lt;TRow, TSaveRequest, TSaveResponse&gt;](../api/dotnet/Serenity.Net.Services/Serenity.Services/SaveRequestHandlerAsync-3.md):

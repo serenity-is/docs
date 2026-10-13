@@ -54,9 +54,11 @@ The request is sent to `view.url` (the service base URL) via `serviceCall`.
 
 ### Paging
 
-- `getPagingInfo()` — returns `{ rowsPerPage, page, totalCount, loading, error, dataView }`.
+- `getPagingInfo()` — returns `{ rowsPerPage, actualRowsPerPage, page, totalCount, loading, error, dataView }`.
 - `getTotalCount()` — the total number of records on the server.
 - `seekToPage` — the page to seek to when loading.
+
+`rowsPerPage` reports the page size *requested* by the grid, while `actualRowsPerPage` tracks the page size *applied* by the server (from the response's `Take`). When server-side paging limits (`RequestHandlerSettings.DefaultPageSize` / `MaxPageSize`) clamp the requested size, paging calculations use `actualRowsPerPage` so the grid stays correct — see [Server-Side Page Size Limits](../services/list_request_handler.md#server-side-page-size-limits).
 
 ### Sorting
 

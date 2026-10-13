@@ -49,6 +49,8 @@ On the server side:
 public string SomeID { get; set; }
 ```
 
+The editor can work with services that are not standard Serenity list handlers: it can infer the lookup endpoint and the service URL from the row's metadata / endpoint type (so `service` or `endpointType` often don't need to be specified), infers ID and text fields for both row and non-row (POCO) item types, and supports primitive services returning `List<string>` and other array responses.
+
 ### ServiceLookupEditor Options
 
 | Option | Description |
@@ -63,6 +65,22 @@ public string SomeID { get; set; }
 | `containsField` | Field used for contains-text search. |
 | `equalityFilter` | Equality filter applied to the request. |
 | `criteria` | Criteria applied to the request. |
+| `capabilities` | [`ListRequestCapabilities`](../api/js/corelib/enumerations/ListRequestCapabilities.md) flags describing which list request options the endpoint applies. |
+| `quickSearchFields` | Fields used when contains-text search is run locally. |
+
+### Capabilities and Local Processing
+
+The `capabilities` option takes a [`ListRequestCapabilities`](../api/js/corelib/enumerations/ListRequestCapabilities.md) flags value describing which `ListRequest` options the target endpoint actually applies:
+
+```ts
+const editor = new ServiceLookupEditor({
+    service: "Northwind/Product",
+    // run ContainsText locally if the endpoint does not support it
+    capabilities: ListRequestCapabilities.Baseline & ~ListRequestCapabilities.ContainsText
+});
+```
+
+When omitted, all standard properties are sent. When set, the editor infers capabilities from the endpoint actions when possible, and falls back to client-side processing for unsupported operations. Local processing covers contains text (with optional `quickSearchFields`), equality filtering, criteria, sorting and paging, and is used automatically when the endpoint lacks the matching capability. Endpoints can declare what they support with `[ListRequestCapabilities]` — see [List Request Capabilities](../services/list_request_handler.md#list-request-capabilities).
 
 ## Cascaded Editors
 

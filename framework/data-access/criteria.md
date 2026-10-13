@@ -305,23 +305,56 @@ new Criteria("Field") == new Criteria("NULL")
 
 The `Criteria` object has methods `Like`, `NotLike`, `StartsWith`, `EndsWith`, `Contains`, and `NotContains` to help with `LIKE` operations.
 
+`StartsWith`, `EndsWith`, `Contains`, and `NotContains` **escape their arguments by default** using `!` as the escape character, so wildcards in user input (`%`, `_`) don't change the meaning of the condition. `Like` / `NotLike` accept raw patterns instead:
+
 ```cs
-new Criteria("a").Like("__C%") &
-new Criteria("b").NotLike("D%") &
-new Criteria("c").StartsWith("S") &
+new Criteria("a").Like("__C%") &         // raw pattern, used as is
+new Criteria("b").NotLike("D%") &        // raw pattern, used as is
+new Criteria("c").StartsWith("S") &      // "S" treated as literal text
 new Criteria("d").EndsWith("X") &
 new Criteria("e").Contains("This") &
 new Criteria("f").NotContains("That")
 ```
 
 ```sql
-a LIKE @p1 AND -- @p1 = N'__C%'
-b NOT LIKE @p2 AND -- @p2 = N'D%'
-c LIKE @p3 AND -- @p3 = 'S%'
+a LIKE @p1 AND -- @p1 = N'__C%' (raw mask)
+b NOT LIKE @p2 AND -- @p2 = N'D%' (raw mask)
+c LIKE @p3 AND -- @p3 = N'S%'
 d LIKE @p4 AND -- @p4 = N'%X'
 e LIKE @p5 AND -- @p5 = N'%This%'
 f NOT LIKE @p6 -- @p6 = N'%That%'
 ```
+
+If the text contains LIKE specials, they are escaped with `!` and an `ESCAPE '!'` clause is appended (only when escaping was actually necessary, so ordinary criteria stay a simple `LIKE`):
+
+```cs
+new Criteria("Name").Contains("50%"); // "50%" does not match "500" anymore
+new Criteria("Code").StartsWith("a_b");
+```
+
+```sql
+Name LIKE @p1 ESCAPE '!' AND -- @p1 = N'%50!%%'
+Code LIKE @p2 ESCAPE '!' -- @p2 = N'a!_b%'
+```
+
+Use [LikeEscaped](../api/dotnet/Serenity.Net.Services/Serenity.Data/BaseCriteria/LikeEscaped.md) / [NotLikeEscaped](../api/dotnet/Serenity.Net.Services/Serenity.Data/BaseCriteria/NotLikeEscaped.md) with a pre-escaped mask when you need an explicit escape character (defaults to `!`):
+
+```cs
+q.Where(fld.Name.LikeEscaped(pattern, escape: '\\'));
+```
+
+[Criteria.EscapeLikeWildcards](../api/dotnet/Serenity.Net.Services/Serenity.Data/Criteria/EscapeLikeWildcards.md) escapes a literal value for a given escape character (escaping the escape character itself first, then `%`, `_` and `[`), returning the value unchanged when there is nothing to escape.
+
+### UPPER() Function Criteria
+
+For case-insensitive `LIKE` queries, all the `LIKE` methods accept an `upper` parameter that wraps both sides in an `UPPER(...)` function call — the resulting [FunctionCallCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/FunctionCallCriteria.md) / [UpperFunctionCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/UpperFunctionCriteria.md) is rendered by the server and can also be produced by the client's `Criteria` helpers:
+
+```cs
+q.Where(fld.Name.StartsWith("admin", upper: true));
+// WHERE UPPER(T0.[Name]) LIKE UPPER(@p1)
+```
+
+Function arguments are validated and copied when the criteria is created, so they cannot be modified by the caller afterwards.
 
 ## IN and NOT IN Operators
 
@@ -463,7 +496,7 @@ WHERE
 The criteria system is built from a small set of classes that derive from `BaseCriteria`:
 
 - [Criteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/Criteria.md) — a field name or SQL expression (the most common).
-- [ValueCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/ValueCriteria.md) — wraps a value; used internally when you compare a field to an inline value (e.g. `field == 5`).
+- [ValueCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/ValueCriteria.md) — wraps a value; used internally when you compare a field to an inline value (e.g. `field == 5`). It snapshots the passed values in its constructor, so a criteria can no longer be changed after creation.
 - [ParamCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/ParamCriteria.md) — an explicitly named parameter (`@myparam`).
 - [ConstantCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/ConstantCriteria.md) — a constant value that isn't parameterized.
 - `BinaryCriteria` — combines two criteria with an operator (e.g. `a & b`).
@@ -481,6 +514,8 @@ Criteria objects can be serialized to and from JSON. This is used when a client 
 
 - [JsonCriteriaConverter](../api/dotnet/Serenity.Net.Services/Serenity.Data/JsonCriteriaConverter.md) — serializes/deserializes a `BaseCriteria` to/from a JSON array structure (e.g. `["Field", ">", 5]`).
 - [JsonSafeCriteriaConverter](../api/dotnet/Serenity.Net.Services/Serenity.Data/JsonSafeCriteriaConverter.md) — like the above, but validates the criteria on deserialization for safety.
+
+For `LIKE` criteria with an escape character, the serialized array contains a fourth member with the escape character (e.g. `["Name", "like", "%50!%%", "!"]`). Binary criteria without an escape character serialize as a three-element array. The client-side `Criteria.parse` supports the `ESCAPE` syntax as well — see [Criteria (Client-Side)](../ui/criteria.md).
 
 ## Validating User-Provided Criteria
 

@@ -61,6 +61,9 @@ The grid checks permissions from the row definition to enable/disable actions:
 | `hasInsertPermission()` | `getInsertPermission()` (row's `insertPermission`) |
 | `hasUpdatePermission()` | `getUpdatePermission()` (row's `updatePermission`) |
 | `hasDeletePermission()` | `getDeletePermission()` (row's `deletePermission`) |
+| `hasUndeletePermission()` | `getUndeletePermission()` (row's `undeletePermission`) |
+
+`undeletePermission` is emitted for rows with an active or deleted (soft-delete) property, using the row's `[UndeletePermission]`, falling back to its delete, modify, then read permission — so the grid checks the undelete permission separately from the delete permission. `hasUndeletePermission()` returns `true` when no permission is defined (nothing to restrict).
 
 For example, the add button is disabled when the user lacks insert permission:
 
@@ -85,7 +88,7 @@ buttons.push({
 - **Column Picker** — lets users choose visible columns.
 - **Filter** — opens the advanced filter dialog.
 
-`createToolbarExtensions()` adds the include-deleted toggle (when the row has an is-active/is-deleted property) and the quick search input.
+`createToolbarExtensions()` adds the include-deleted toggle (when the row has an is-active/is-deleted property) and the quick search input. `EntityGrid` overrides `createIncludeDeletedButton()` so the toggle is only created when `hasUndeletePermission()` is `true`, and so the list request may only include deleted rows for users who may restore them.
 
 ## Refreshing After a Dialog Saves
 

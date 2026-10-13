@@ -211,10 +211,12 @@ In the screen above we see the textual representations of the permission keys we
 Serenity has several permission attributes which declaratively determine the required permission key to perform particular actions:
 
 - [DeletePermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/DeletePermissionAttribute.md)
+- [InsertPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/InsertPermissionAttribute.md)
 - [ModifyPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/ModifyPermissionAttribute.md)
 - [NavigationPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/NavigationPermissionAttribute.md)
 - [ReadPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/ReadPermissionAttribute.md)
 - [ServiceLookupPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/ServiceLookupPermissionAttribute.md)
+- [UndeletePermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/UndeletePermissionAttribute.md)
 - [UpdatePermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/UpdatePermissionAttribute.md)
 
 These permission attributes are assigned to various resource types like entities:
@@ -317,9 +319,65 @@ public static class PermissionKeys
 | --- | --- | --- |
 | `Public` | `"*"` | Grants access to everyone, including anonymous users |
 | `LoggedIn` | `"?"` | Grants access to any logged-in user |
-| `Deny` | `"DENY"` | Denies access to everyone, even super admins |
+| `Deny` | `"DENY"` | Denies access to everyone; it is never granted, not even to super admins |
 
 These are used in permission attributes and checks, e.g. `[ReadPermission("?")]` for any logged-in user.
+
+### Permission Checks Fail Closed
+
+Permission checks **fail closed**:
+
+- [PermissionAttributeBase](../api/dotnet/Serenity.Net.Core/Serenity.Data/PermissionAttributeBase.md) and its subclasses (`ReadPermissionAttribute`, `ModifyPermissionAttribute`, `PageAuthorizeAttribute`, etc.) reject null, empty, or whitespace permission keys with an `ArgumentException`. A permission key is always required and is exposed as a non-nullable `Permission` string.
+- Request handlers (list, retrieve, save, delete, undelete) deny access when the row declares no permission attribute for the operation, so a row without any permission is no longer implicitly public. Use `SpecialPermissionKeys.Public` (`"*"`) or `SpecialPermissionKeys.LoggedIn` (`"?"`) when access is intended. `RowFieldsBase`, `ReportRegistry`, and lookup/dynamic scripts apply the declared permission key as-is — there is no implicit `"?"` (logged in) fallback for an empty or missing key.
+- `MockPermissions` (used in tests) denies empty and `DENY` keys as well.
+- For delete, undelete, and update (save) requests, users whose access is denied receive an `EntityNotFound` validation error instead of `AccessDenied`, so a caller cannot distinguish a missing record from a forbidden one. Create requests keep `AccessDenied`, since a create cannot leak the existence of a record.
+
+A row that should be readable by everyone needs an explicit declaration:
+
+```cs
+[ReadPermission(SpecialPermissionKeys.Public)]
+[ModifyPermission(SpecialPermissionKeys.Public)]
+public sealed class SomeRow : Row<SomeRow.RowFields>, IIdRow, INameRow
+{
+}
+```
+
+Use `SpecialPermissionKeys.LoggedIn` (`"?"`) when anonymous access should not be allowed, and `SpecialPermissionKeys.Deny` to make an entity inaccessible to everyone (e.g. a base row type that should never be exposed directly).
+
+#### Building Module Path Permission Keys
+
+The permission attributes have constructors that accept module and submodule segments and join them with `:` into a module path permission key:
+
+```cs
+// module + permission -> "Administration:Security"
+[ReadPermission("Administration", "Security")]
+public sealed class UserRow : Row<UserRow.RowFields>, IIdRow
+{
+    // ...
+}
+
+// module + submodule + permission -> "Administration:Security:Roles"
+[ReadPermission("Administration", "Security", "Roles")]
+public sealed class RoleRow : Row<RoleRow.RowFields>, IIdRow
+{
+    // ...
+}
+```
+
+#### Undelete Permission
+
+Undeletion can be authorized separately from deletion via [UndeletePermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/UndeletePermissionAttribute.md):
+
+```cs
+[DeletePermission("Administration:Security")]
+[UndeletePermission("Administration:Security:Undelete")]
+public sealed class UserRow : Row<UserRow.RowFields>, IIdRow, IIsActiveDeletedRow
+{
+    // ...
+}
+```
+
+When a row does not declare an explicit undelete permission, the delete permission is used, falling back to the modify, then read permission (see the [Undelete Request Handler](../services/undelete_request_handler.md)). The row metadata sent to the client includes an `undeletePermission`, which the `EntityGrid` and `EntityDialog` use for their include-deleted toggle and Undelete button — see [EntityGrid CRUD](../grids/entitygrid-crud.md).
 
 ## Permission Key Definitions
 
@@ -360,6 +418,7 @@ There are also specialized versions of the `ServiceAuthorize` attribute that rea
 - [AuthorizeDeleteAttribute](../api/dotnet/Serenity.Net.Web/Serenity.Services/AuthorizeDeleteAttribute.md): `Delete`, `Modify`, or `Read` permission attributes.
 - [AuthorizeListAttribute](../api/dotnet/Serenity.Net.Web/Serenity.Services/AuthorizeListAttribute.md): `Read` or `ServiceLookup` permission attributes. 
 - [AuthorizeUpdateAttribute](../api/dotnet/Serenity.Net.Web/Serenity.Services/AuthorizeUpdateAttribute.md): `Update`, `Modify`, or `Read` permission attributes.
+- [AuthorizeUndeleteAttribute](../api/dotnet/Serenity.Net.Web/Serenity.Services/AuthorizeUndeleteAttribute.md): `Undelete`, `Delete`, `Modify`, or `Read` permission attributes.
 
 ## Permission Expressions
 

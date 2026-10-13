@@ -42,7 +42,14 @@ var query = new SqlQuery()
     .WhereEqual(fld.PersonId, 5);
 ```
 
-It is equivalent to `.Where(fld.PersonId == 5)`, and the value is always added as a parameter.
+It is equivalent to `.Where(fld.PersonId == 5)`, and the value is always added as a parameter. For nullable values, pass `emitIsNull: true` to emit `field IS NULL` when the value is null, instead of an equality comparison against NULL that never matches:
+
+```csharp
+var query = new SqlQuery()
+    .From(fld)
+    .Select(fld.Firstname)
+    .WhereEqual(fld.ParentId, parentId, emitIsNull: true);
+```
 
 `IFilterableQuery` also exposes `GetWhereCriteria()` and `GetWhereClause()`. The former returns a read-only list of criteria passed to `Where`; the latter returns the combined conditions joined with `AND`, without the `WHERE` keyword. Its parameters are added when `Where` is called, so reading the clause repeatedly does not add duplicate parameters.
 

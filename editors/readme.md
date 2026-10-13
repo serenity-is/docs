@@ -54,6 +54,7 @@ The `PropertyGrid` uses these interfaces to load entity values into editors and 
 | Editor | Description |
 | --- | --- |
 | [IntegerEditor](../api/js/corelib/classes/IntegerEditor.md) | Integer input. |
+| [Int64Editor](../api/js/corelib/classes/Int64Editor.md) | Int64/long input, preserving values beyond `Number.MAX_SAFE_INTEGER` as `bigint` or strings. |
 | [DecimalEditor](../api/js/corelib/classes/DecimalEditor.md) | Decimal input. |
 | [AutoNumeric](../api/js/corelib/classes/AutoNumeric.md) | Numeric input with formatting. |
 

@@ -220,7 +220,7 @@ new SqlDelete("People")
     .Execute(connection, ExpectedRows.One);
 ```
 
-Like `SqlUpdate`, `.Where()` accepts a string or a criteria object, and `.Where(params string[])` accepts multiple conditions joined with `AND`:
+Like `SqlUpdate`, `.Where()` accepts a string (as a raw criteria expression) or a criteria object, and successive calls are joined with `AND`:
 
 ```csharp
 new SqlDelete(Fld.TableName)
@@ -229,6 +229,8 @@ new SqlDelete(Fld.TableName)
         new Criteria(Fld.RoleId) == k)
     .Execute(connection);
 ```
+
+> `Where(ICriteria?)` is the interface method on `IFilterableQuery`; `Where(string)` is an extension method for raw filters — see [Query Extensions](query-extensions.md#filterablequeryextensions).
 
 > `SqlDelete` / `SqlUpdate` default to `ExpectedRows.One`. This is a deliberate
 > safety net: if you forget a `WHERE`, the call throws rather than updating or

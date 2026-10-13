@@ -51,6 +51,7 @@ The editor for a field is set with an editor attribute. Serenity ships a large s
 | TextArea | `[TextAreaEditor]` | Multi-line text |
 | Boolean | `[BooleanEditor]` | Checkbox |
 | Integer / Decimal | `[IntegerEditor]` / `[DecimalEditor]` | Numeric input |
+| Int64 | `[Int64Editor]` | 64-bit integer input (preserves values beyond `Number.MAX_SAFE_INTEGER`) |
 | Date / DateTime | `[DateEditor]` / `[DateTimeEditor]` | Date/time pickers |
 | Enum | `[EnumEditor]` | Dropdown from an enum |
 | Lookup | [LookupEditorAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/LookupEditorAttribute.md) | Dropdown from a lookup script |

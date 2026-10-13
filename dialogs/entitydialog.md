@@ -107,6 +107,13 @@ The dialog checks permissions from the row definition:
 | --- | --- |
 | `hasSavePermission()` | Row's `insertPermission`/`updatePermission`. |
 | `hasDeletePermission()` | Row's `deletePermission`. |
+| `hasUndeletePermission()` | Row's `undeletePermission`. |
+
+The **Undelete** button checks `hasUndeletePermission()` — the row metadata's `undeletePermission` (from `[UndeletePermission]`, falling back to the delete, modify, then read permission) — instead of the delete permission, so restoring a record can be authorized separately from deleting it.
+
+## Optimistic Concurrency
+
+If the row definition has a `concurrencyVersionProperty` (emitted for rows implementing `IConcurrencyVersionRow`), the dialog copies the version value from the loaded entity into the save request, even though the read-only version field has no form field. This lets the server detect a record that was modified or deleted by someone else since it was loaded, and raise a `ConcurrencyConflict` validation error — see [Optimistic Concurrency](../services/save_request_handler.md#optimistic-concurrency).
 
 ## Modes
 

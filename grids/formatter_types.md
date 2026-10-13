@@ -53,6 +53,7 @@ These formatters are registered in `@serenity-is/corelib` and are typically appl
 | [DateTimeFormatter](../api/js/corelib/classes/DateTimeFormatter.md) | Formats a date-time value. |
 | [EnumFormatter](../api/js/corelib/classes/EnumFormatter.md) | Renders an enum value as its localized text. |
 | [NumberFormatter](../api/js/corelib/classes/NumberFormatter.md) | Formats a number with a display format. |
+| [BigIntFormatter](../api/js/corelib/classes/BigIntFormatter.md) | Formats big integer values, including values outside the JavaScript safe integer range, without losing precision. |
 | [BooleanFormatter](../api/js/corelib/classes/BooleanFormatter.md) | Renders a boolean as localized true/false text. |
 | [CheckboxFormatter](../api/js/corelib/classes/CheckboxFormatter.md) | Renders a boolean as a checkbox. |
 | [FileDownloadFormatter](../api/js/corelib/classes/FileDownloadFormatter.md) | Renders a file download link. |

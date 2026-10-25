@@ -30,4 +30,4 @@ public static class EntitySqlQueryExtensions
 
 ## See Also
 
-* **Source:** *[EntitySqlQueryExtensions.cs](https://github.com/serenity-is/Serenity/blob/29326d0cfbee40b5f6a2638f4d59de6f56b04df5/src/services/Entity/Extensions/EntitySqlQueryExtensions.cs)*
+* **Source:** *[EntitySqlQueryExtensions.cs](https://github.com/serenity-is/Serenity/blob/e229a31867e6332a8e9332cdb032ca8f6c24f2a2/src/services/Entity/Extensions/EntitySqlQueryExtensions.cs)*

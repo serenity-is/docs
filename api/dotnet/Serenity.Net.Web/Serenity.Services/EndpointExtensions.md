@@ -20,4 +20,4 @@ public static class EndpointExtensions
 
 ## See Also
 
-* **Source:** *[EndpointExtensions.cs](https://github.com/serenity-is/Serenity/blob/401a8738b9bbcc8a73ab6d1df38c8572bbe252c4/src/web/Mvc/EndpointExtensions.cs)*
+* **Source:** *[EndpointExtensions.cs](https://github.com/serenity-is/Serenity/blob/b25593854f2e2d2560030f357d1bb7a1cbd85e65/src/web/Mvc/ServiceEndpoints/EndpointExtensions.cs)*

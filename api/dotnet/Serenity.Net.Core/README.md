@@ -61,6 +61,7 @@
 | interface [IHasPassword](./Serenity.Abstractions/IHasPassword.md) | Indicates whether a user account has a password set. |
 | interface [IHttpContextItemsAccessor](./Serenity.Abstractions/IHttpContextItemsAccessor.md) | Provides access to the per-request item dictionary, typically backed by `HttpContext.Items` for web requests. |
 | interface [IImpersonator](./Serenity.Abstractions/IImpersonator.md) | Defines a service that supports temporary user impersonation. |
+| interface [IImplicitLocalTextRegistrar](./Serenity.Abstractions/IImplicitLocalTextRegistrar.md) | An interface implemented by type attributes that register implicit local text keys, and their default translations, generally during application startup. |
 | interface [ILanguageFallbacks](./Serenity.Abstractions/ILanguageFallbacks.md) | Abstraction for a local text registry that can return language fallbacks. |
 | interface [ILocalTextInitializer](./Serenity.Abstractions/ILocalTextInitializer.md) | Abstraction for a local text registry initializer, which initializes a local text registry with translations. |
 | interface [ILocalTextRegistry](./Serenity.Abstractions/ILocalTextRegistry.md) | Abstraction for a local text registry which stores translations for local text keys. |
@@ -97,6 +98,7 @@
 | class [BooleanEditorAttribute](./Serenity.ComponentModel/BooleanEditorAttribute.md) | Indicates that the target property should use a "Boolean" editor. |
 | class [BooleanFilteringAttribute](./Serenity.ComponentModel/BooleanFilteringAttribute.md) | Sets filtering type to "Boolean" |
 | class [BooleanFormatterAttribute](./Serenity.ComponentModel/BooleanFormatterAttribute.md) | Sets formatting type to "Boolean" |
+| class [CategoryNameAttribute](./Serenity.ComponentModel/CategoryNameAttribute.md) | Specifies the category name for a property or class. Unlike CategoryAttribute, it can specify a local text key. |
 | class [CheckboxFormatterAttribute](./Serenity.ComponentModel/CheckboxFormatterAttribute.md) | Sets formatting type to "Checkbox" |
 | class [CheckLookupEditorAttribute](./Serenity.ComponentModel/CheckLookupEditorAttribute.md) | Indicates that the target property should use a "CheckLookup" editor. |
 | class [CollapsibleAttribute](./Serenity.ComponentModel/CollapsibleAttribute.md) | Used to specify a target is collapsible. Commonly used with form categories to make them collapsible. |
@@ -116,7 +118,9 @@
 | class [DecimalEditorAttribute](./Serenity.ComponentModel/DecimalEditorAttribute.md) | Indicates that the target property should use a "Decimal" editor. |
 | class [DecimalFilteringAttribute](./Serenity.ComponentModel/DecimalFilteringAttribute.md) | Indicates that this field should have decimal type of filtering |
 | class [DefaultFilenameFormatSanitizer](./Serenity.ComponentModel/DefaultFilenameFormatSanitizer.md) | Default implementation for [`IFilenameFormatSanitizer`](./Serenity.ComponentModel/IFilenameFormatSanitizer.md). |
+| class [DescriptionTextAttribute](./Serenity.ComponentModel/DescriptionTextAttribute.md) | Specifies the Description text for a property or class. Unlike DescriptionAttribute, it can specify a local text key. |
 | class [DisplayFormatAttribute](./Serenity.ComponentModel/DisplayFormatAttribute.md) | Sets the display format for a column. This has no effect on editors! It is only for Display, "NOT Editing". For editing, you have to change UI culture. |
+| class [DisplayTextAttribute](./Serenity.ComponentModel/DisplayTextAttribute.md) | Specifies the display text for a property or class. Unlike DisplayNameAttribute, it can specify a local text key. |
 | class [DistinctValuesEditorAttribute](./Serenity.ComponentModel/DistinctValuesEditorAttribute.md) | Indicates that the target property should use a "DistinctValues" editor and also defines an automatic lookup script for row fields. |
 | abstract class [DynamicScriptAttribute](./Serenity.ComponentModel/DynamicScriptAttribute.md) | Base class for dynamic script attributes. Dynamic scripts contain dynamic data, but they are not parameterized. |
 | class [EditLinkAttribute](./Serenity.ComponentModel/EditLinkAttribute.md) | Indicates that the property this attribute is placed on should have an edit link. |
@@ -312,6 +316,7 @@
 | static class [EnumLocalTextRegistration](./Serenity.Localization/EnumLocalTextRegistration.md) | Contains initialization methods for adding local text translations defined by DescriptionAttribute attributes in enumeration classes. |
 | class [FallbackLocalTextSource](./Serenity.Localization/FallbackLocalTextSource.md) | Adds key fallback behavior to any [`ILocalTextRegistry`](./Serenity.Abstractions/ILocalTextRegistry.md) implementation. |
 | interface [ILocalText](./Serenity.Localization/ILocalText.md) | An interface implemented by the [`LocalText`](./Serenity/LocalText.md) class to access the initial translation value. Some classes like [`NestedLocalTextRegistration`](./Serenity.Localization/NestedLocalTextRegistration.md) use this type to avoid re-registering an already initialized local text object when their initialization method is called more than once. |
+| static class [ImplicitLocalTextRegistration](./Serenity.Localization/ImplicitLocalTextRegistration.md) | Contains initialization methods for adding implicit local text keys defined by attributes implementing [`IImplicitLocalTextRegistrar`](./Serenity.Abstractions/IImplicitLocalTextRegistrar.md). |
 | static class [JsonLocalTextRegistration](./Serenity.Localization/JsonLocalTextRegistration.md) | Contains helper methods for registration of local texts in hierarchical or dictionary formatted JSON files. |
 | struct [LanguageIdKeyPair](./Serenity.Localization/LanguageIdKeyPair.md) | A pair of a language ID and a text key. |
 | class [LocalTextRegistry](./Serenity.Localization/LocalTextRegistry.md) | The default [`ILocalTextRegistry`](./Serenity.Abstractions/ILocalTextRegistry.md) implementation. |
@@ -319,6 +324,7 @@
 | static class [NestedLocalTextRegistration](./Serenity.Localization/NestedLocalTextRegistration.md) | Contains helper methods for registration of local texts in nested static classes. Nested static classes contain [`LocalText`](./Serenity/LocalText.md) objects with actual translations as keys. This class locates them (with [`NestedLocalTextsAttribute`](./Serenity.ComponentModel/NestedLocalTextsAttribute.md) at the outermost class), determines keys by the path from the outermost to the nested class name, replaces the existing [`LocalText`](./Serenity/LocalText.md) instance with an initialized instance containing this generated key and initial translation, and registers this translation in the [`ILocalTextRegistry`](./Serenity.Abstractions/ILocalTextRegistry.md) provider. |
 | static class [NestedPermissionKeyRegistration](./Serenity.Localization/NestedPermissionKeyRegistration.md) | Contains helper methods for registration of permission keys in nested static classes. These classes contain string constants containing permission keys. The display name for permission keys can be set by a DisplayNameAttribute. The display name for groups can be set by a DescriptionAttribute on the classes themselves. For the group display name to work, all constants in a class must start with the same group prefix. |
 | static class [PropertyItemsLocalTextRegistration](./Serenity.Localization/PropertyItemsLocalTextRegistration.md) | Contains initialization methods for adding local text keys implicitly defined by DisplayNameAttribute, [`TabAttribute`](./Serenity.ComponentModel/TabAttribute.md), [`PlaceholderAttribute`](./Serenity.ComponentModel/PlaceholderAttribute.md), [`HintAttribute`](./Serenity.ComponentModel/HintAttribute.md), etc. attributes used in Form definitions. |
+| record [ResolveLocalTextResult](./Serenity.Localization/ResolveLocalTextResult.md) | Contains the local text key, invariant text, and fallback behavior resolved from an attribute. |
 
 ## Serenity.Navigation namespace
 
@@ -369,6 +375,7 @@
 | enum [ColumnSelection](./Serenity.Services/ColumnSelection.md) | Column selection types for List services |
 | class [DefaultUserClaimCreator](./Serenity.Services/DefaultUserClaimCreator.md) | Default implementation of [`IUserClaimCreator`](./Serenity.Abstractions/IUserClaimCreator.md) that builds a ClaimsPrincipal from a user definition retrieved via [`IUserRetrieveService`](./Serenity.Abstractions/IUserRetrieveService.md). |
 | class [DefaultUserProvider](./Serenity.Services/DefaultUserProvider.md) | Default implementation of [`IUserProvider`](./Serenity.Abstractions/IUserProvider.md) that delegates to an [`IUserAccessor`](./Serenity.Abstractions/IUserAccessor.md), [`IUserClaimCreator`](./Serenity.Abstractions/IUserClaimCreator.md), and [`IUserRetrieveService`](./Serenity.Abstractions/IUserRetrieveService.md). |
+| interface [IHasTextKey](./Serenity.Services/IHasTextKey.md) | An interface to provide a text key for localization purposes. |
 | interface [IIsSensitiveMessage](./Serenity.Services/IIsSensitiveMessage.md) | An interface to determine if the message of an exception might contain sensitive information that should not be shown to the end user. Currently only [`ValidationError`](./Serenity.Services/ValidationError.md) implements this and returns false by default unless set explicitly. |
 | interface [IRequestHandler](./Serenity.Services/IRequestHandler.md) | Marker interface for standard and custom request handlers |
 | class [JsonStringHashSetConverter](./Serenity.Services/JsonStringHashSetConverter.md) | Serializes and deserializes a HashSet of strings as a JSON array. |

@@ -2,7 +2,7 @@
 
 # Interface: CustomDomAttributes\<T\>
 
-Defined in: [../domwise/dist/index.d.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L148)
+Defined in: [../domwise/dist/index.d.ts:144](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L144)
 
 Custom DOM attributes supported by DomWise on all elements.
 Includes `children`, `ref`, `dangerouslySetInnerHTML`, and jsx-dom/react-compatible
@@ -26,7 +26,7 @@ The type of the DOM element.
 
 > `optional` **children**: [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-Defined in: [../domwise/dist/index.d.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L150)
+Defined in: [../domwise/dist/index.d.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L146)
 
 Child nodes / JSX children for the element.
 
@@ -36,7 +36,7 @@ Child nodes / JSX children for the element.
 
 > `optional` **dangerouslySetInnerHTML**: `object`
 
-Defined in: [../domwise/dist/index.d.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L152)
+Defined in: [../domwise/dist/index.d.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L148)
 
 Raw HTML to assign via `innerHTML`. Use with caution — content is not escaped.
 
@@ -50,7 +50,7 @@ Raw HTML to assign via `innerHTML`. Use with caution — content is not escaped.
 
 > `optional` **on**: `Record`\<`string`, `Function`\>
 
-Defined in: [../domwise/dist/index.d.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L158)
+Defined in: [../domwise/dist/index.d.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L153)
 
 Compatibility event map for `on*` handlers (jsx-dom / React style).
 
@@ -60,7 +60,7 @@ Compatibility event map for `on*` handlers (jsx-dom / React style).
 
 > `optional` **onCapture**: `Record`\<`string`, `Function`\>
 
-Defined in: [../domwise/dist/index.d.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L160)
+Defined in: [../domwise/dist/index.d.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L155)
 
 Compatibility event map for capture-phase handlers.
 
@@ -70,6 +70,6 @@ Compatibility event map for capture-phase handlers.
 
 > `optional` **ref**: [`Ref`](../type-aliases/Ref.md)\<`T`\>
 
-Defined in: [../domwise/dist/index.d.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L156)
+Defined in: [../domwise/dist/index.d.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L150)
 
 Ref object or callback that receives the created DOM node.

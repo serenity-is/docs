@@ -4,7 +4,7 @@
 
 > **inSVGNamespace**(`fn`): [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-Defined in: [../domwise/dist/index.d.ts:2745](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2745)
+Defined in: [../domwise/dist/index.d.ts:3047](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3047)
 
 Executes a children factory within the SVG namespace (`http://www.w3.org/2000/svg`).
 Sugar over [inNamespaceURI](inNamespaceURI.md) with [SVGNamespace](../variables/SVGNamespace.md).

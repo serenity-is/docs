@@ -16,6 +16,16 @@ Type of the lookup items.
 
 ## Properties
 
+### iconField?
+
+> `optional` **iconField**: `string`
+
+Defined in: [src/base/lookup.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L13)
+
+Name of the field that holds the icon for an item.
+
+***
+
 ### idField?
 
 > `optional` **idField**: `string`

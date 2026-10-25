@@ -31,4 +31,4 @@ public class RowLookupScript<TRow> : LookupScript
 
 * class [LookupScript](./LookupScript.md)
 * interface [IRow](../../Serenity.Net.Services/Serenity.Data/IRow.md)
-* **Source:** *[RowLookupScript.cs](https://github.com/serenity-is/Serenity/blob/566b0b4392b57a4f23d4cdf6355e574804d4ea2c/src/web/DynamicScript/DynamicScriptTypes/RowLookupScript.cs)*
+* **Source:** *[RowLookupScript.cs](https://github.com/serenity-is/Serenity/blob/842eeed9c1017bb2110e654fdf17bd169a31f7a0/src/web/DynamicScript/DynamicScriptTypes/RowLookupScript.cs)*

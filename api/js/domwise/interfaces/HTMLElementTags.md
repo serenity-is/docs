@@ -2,7 +2,7 @@
 
 # Interface: HTMLElementTags
 
-Defined in: [types/jsx-elements.d.ts:2182](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2182)
+Defined in: [types/jsx-elements.d.ts:2180](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2180)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [types/jsx-elements.d.ts:2182](https://github.com/serenity-is/sereni
 
 > **a**: `AnchorHTMLAttributes`\<`HTMLAnchorElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2183](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2183)
+Defined in: [types/jsx-elements.d.ts:2181](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2181)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [types/jsx-elements.d.ts:2183](https://github.com/serenity-is/sereni
 
 > **abbr**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2184](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2184)
+Defined in: [types/jsx-elements.d.ts:2182](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2182)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [types/jsx-elements.d.ts:2184](https://github.com/serenity-is/sereni
 
 > **address**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2185](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2185)
+Defined in: [types/jsx-elements.d.ts:2183](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2183)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [types/jsx-elements.d.ts:2185](https://github.com/serenity-is/sereni
 
 > **area**: `AreaHTMLAttributes`\<`HTMLAreaElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2186](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2186)
+Defined in: [types/jsx-elements.d.ts:2184](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2184)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [types/jsx-elements.d.ts:2186](https://github.com/serenity-is/sereni
 
 > **article**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2187](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2187)
+Defined in: [types/jsx-elements.d.ts:2185](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2185)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [types/jsx-elements.d.ts:2187](https://github.com/serenity-is/sereni
 
 > **aside**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2188](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2188)
+Defined in: [types/jsx-elements.d.ts:2186](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2186)
 
 ***
 
@@ -58,7 +58,7 @@ Defined in: [types/jsx-elements.d.ts:2188](https://github.com/serenity-is/sereni
 
 > **audio**: `AudioHTMLAttributes`\<`HTMLAudioElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2189](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2189)
+Defined in: [types/jsx-elements.d.ts:2187](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2187)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [types/jsx-elements.d.ts:2189](https://github.com/serenity-is/sereni
 
 > **b**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2190](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2190)
+Defined in: [types/jsx-elements.d.ts:2188](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2188)
 
 ***
 
@@ -74,7 +74,7 @@ Defined in: [types/jsx-elements.d.ts:2190](https://github.com/serenity-is/sereni
 
 > **base**: `BaseHTMLAttributes`\<`HTMLBaseElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2191](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2191)
+Defined in: [types/jsx-elements.d.ts:2189](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2189)
 
 ***
 
@@ -82,7 +82,7 @@ Defined in: [types/jsx-elements.d.ts:2191](https://github.com/serenity-is/sereni
 
 > **bdi**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2192](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2192)
+Defined in: [types/jsx-elements.d.ts:2190](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2190)
 
 ***
 
@@ -90,7 +90,7 @@ Defined in: [types/jsx-elements.d.ts:2192](https://github.com/serenity-is/sereni
 
 > **bdo**: `BdoHTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2193](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2193)
+Defined in: [types/jsx-elements.d.ts:2191](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2191)
 
 ***
 
@@ -98,7 +98,7 @@ Defined in: [types/jsx-elements.d.ts:2193](https://github.com/serenity-is/sereni
 
 > **blockquote**: `BlockquoteHTMLAttributes`\<`HTMLQuoteElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2194](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2194)
+Defined in: [types/jsx-elements.d.ts:2192](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2192)
 
 ***
 
@@ -106,7 +106,7 @@ Defined in: [types/jsx-elements.d.ts:2194](https://github.com/serenity-is/sereni
 
 > **body**: `BodyHTMLAttributes`\<`HTMLBodyElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2195](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2195)
+Defined in: [types/jsx-elements.d.ts:2193](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2193)
 
 ***
 
@@ -114,7 +114,7 @@ Defined in: [types/jsx-elements.d.ts:2195](https://github.com/serenity-is/sereni
 
 > **br**: `HTMLAttributes`\<`HTMLBRElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2196](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2196)
+Defined in: [types/jsx-elements.d.ts:2194](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2194)
 
 ***
 
@@ -122,7 +122,7 @@ Defined in: [types/jsx-elements.d.ts:2196](https://github.com/serenity-is/sereni
 
 > **button**: `ButtonHTMLAttributes`\<`HTMLButtonElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2197](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2197)
+Defined in: [types/jsx-elements.d.ts:2195](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2195)
 
 ***
 
@@ -130,7 +130,7 @@ Defined in: [types/jsx-elements.d.ts:2197](https://github.com/serenity-is/sereni
 
 > **canvas**: `CanvasHTMLAttributes`\<`HTMLCanvasElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2198](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2198)
+Defined in: [types/jsx-elements.d.ts:2196](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2196)
 
 ***
 
@@ -138,7 +138,7 @@ Defined in: [types/jsx-elements.d.ts:2198](https://github.com/serenity-is/sereni
 
 > **caption**: `CaptionHTMLAttributes`\<`HTMLTableCaptionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2199](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2199)
+Defined in: [types/jsx-elements.d.ts:2197](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2197)
 
 ***
 
@@ -146,7 +146,7 @@ Defined in: [types/jsx-elements.d.ts:2199](https://github.com/serenity-is/sereni
 
 > **cite**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2200](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2200)
+Defined in: [types/jsx-elements.d.ts:2198](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2198)
 
 ***
 
@@ -154,7 +154,7 @@ Defined in: [types/jsx-elements.d.ts:2200](https://github.com/serenity-is/sereni
 
 > **code**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2201](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2201)
+Defined in: [types/jsx-elements.d.ts:2199](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2199)
 
 ***
 
@@ -162,7 +162,7 @@ Defined in: [types/jsx-elements.d.ts:2201](https://github.com/serenity-is/sereni
 
 > **col**: `ColHTMLAttributes`\<`HTMLTableColElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2202](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2202)
+Defined in: [types/jsx-elements.d.ts:2200](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2200)
 
 ***
 
@@ -170,7 +170,7 @@ Defined in: [types/jsx-elements.d.ts:2202](https://github.com/serenity-is/sereni
 
 > **colgroup**: `ColgroupHTMLAttributes`\<`HTMLTableColElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2203](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2203)
+Defined in: [types/jsx-elements.d.ts:2201](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2201)
 
 ***
 
@@ -178,7 +178,7 @@ Defined in: [types/jsx-elements.d.ts:2203](https://github.com/serenity-is/sereni
 
 > **data**: `DataHTMLAttributes`\<`HTMLDataElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2204](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2204)
+Defined in: [types/jsx-elements.d.ts:2202](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2202)
 
 ***
 
@@ -186,7 +186,7 @@ Defined in: [types/jsx-elements.d.ts:2204](https://github.com/serenity-is/sereni
 
 > **datalist**: `HTMLAttributes`\<`HTMLDataListElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2205](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2205)
+Defined in: [types/jsx-elements.d.ts:2203](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2203)
 
 ***
 
@@ -194,7 +194,7 @@ Defined in: [types/jsx-elements.d.ts:2205](https://github.com/serenity-is/sereni
 
 > **dd**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2206](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2206)
+Defined in: [types/jsx-elements.d.ts:2204](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2204)
 
 ***
 
@@ -202,7 +202,7 @@ Defined in: [types/jsx-elements.d.ts:2206](https://github.com/serenity-is/sereni
 
 > **del**: `ModHTMLAttributes`\<`HTMLModElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2207](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2207)
+Defined in: [types/jsx-elements.d.ts:2205](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2205)
 
 ***
 
@@ -210,7 +210,7 @@ Defined in: [types/jsx-elements.d.ts:2207](https://github.com/serenity-is/sereni
 
 > **details**: `DetailsHtmlAttributes`\<`HTMLDetailsElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2208](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2208)
+Defined in: [types/jsx-elements.d.ts:2206](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2206)
 
 ***
 
@@ -218,7 +218,7 @@ Defined in: [types/jsx-elements.d.ts:2208](https://github.com/serenity-is/sereni
 
 > **dfn**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2209](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2209)
+Defined in: [types/jsx-elements.d.ts:2207](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2207)
 
 ***
 
@@ -226,7 +226,7 @@ Defined in: [types/jsx-elements.d.ts:2209](https://github.com/serenity-is/sereni
 
 > **dialog**: `DialogHtmlAttributes`\<`HTMLDialogElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2210](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2210)
+Defined in: [types/jsx-elements.d.ts:2208](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2208)
 
 ***
 
@@ -234,7 +234,7 @@ Defined in: [types/jsx-elements.d.ts:2210](https://github.com/serenity-is/sereni
 
 > **div**: `HTMLAttributes`\<`HTMLDivElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2211](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2211)
+Defined in: [types/jsx-elements.d.ts:2209](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2209)
 
 ***
 
@@ -242,7 +242,7 @@ Defined in: [types/jsx-elements.d.ts:2211](https://github.com/serenity-is/sereni
 
 > **dl**: `HTMLAttributes`\<`HTMLDListElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2212](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2212)
+Defined in: [types/jsx-elements.d.ts:2210](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2210)
 
 ***
 
@@ -250,7 +250,7 @@ Defined in: [types/jsx-elements.d.ts:2212](https://github.com/serenity-is/sereni
 
 > **dt**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2213](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2213)
+Defined in: [types/jsx-elements.d.ts:2211](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2211)
 
 ***
 
@@ -258,7 +258,7 @@ Defined in: [types/jsx-elements.d.ts:2213](https://github.com/serenity-is/sereni
 
 > **em**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2214](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2214)
+Defined in: [types/jsx-elements.d.ts:2212](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2212)
 
 ***
 
@@ -266,7 +266,7 @@ Defined in: [types/jsx-elements.d.ts:2214](https://github.com/serenity-is/sereni
 
 > **embed**: `EmbedHTMLAttributes`\<`HTMLEmbedElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2215](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2215)
+Defined in: [types/jsx-elements.d.ts:2213](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2213)
 
 ***
 
@@ -274,7 +274,7 @@ Defined in: [types/jsx-elements.d.ts:2215](https://github.com/serenity-is/sereni
 
 > **fieldset**: `FieldsetHTMLAttributes`\<`HTMLFieldSetElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2216](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2216)
+Defined in: [types/jsx-elements.d.ts:2214](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2214)
 
 ***
 
@@ -282,7 +282,7 @@ Defined in: [types/jsx-elements.d.ts:2216](https://github.com/serenity-is/sereni
 
 > **figcaption**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2217](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2217)
+Defined in: [types/jsx-elements.d.ts:2215](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2215)
 
 ***
 
@@ -290,7 +290,7 @@ Defined in: [types/jsx-elements.d.ts:2217](https://github.com/serenity-is/sereni
 
 > **figure**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2218](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2218)
+Defined in: [types/jsx-elements.d.ts:2216](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2216)
 
 ***
 
@@ -298,7 +298,7 @@ Defined in: [types/jsx-elements.d.ts:2218](https://github.com/serenity-is/sereni
 
 > **footer**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2219](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2219)
+Defined in: [types/jsx-elements.d.ts:2217](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2217)
 
 ***
 
@@ -306,7 +306,7 @@ Defined in: [types/jsx-elements.d.ts:2219](https://github.com/serenity-is/sereni
 
 > **form**: `FormHTMLAttributes`\<`HTMLFormElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2220](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2220)
+Defined in: [types/jsx-elements.d.ts:2218](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2218)
 
 ***
 
@@ -314,7 +314,7 @@ Defined in: [types/jsx-elements.d.ts:2220](https://github.com/serenity-is/sereni
 
 > **h1**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2221](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2221)
+Defined in: [types/jsx-elements.d.ts:2219](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2219)
 
 ***
 
@@ -322,7 +322,7 @@ Defined in: [types/jsx-elements.d.ts:2221](https://github.com/serenity-is/sereni
 
 > **h2**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2222](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2222)
+Defined in: [types/jsx-elements.d.ts:2220](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2220)
 
 ***
 
@@ -330,7 +330,7 @@ Defined in: [types/jsx-elements.d.ts:2222](https://github.com/serenity-is/sereni
 
 > **h3**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2223](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2223)
+Defined in: [types/jsx-elements.d.ts:2221](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2221)
 
 ***
 
@@ -338,7 +338,7 @@ Defined in: [types/jsx-elements.d.ts:2223](https://github.com/serenity-is/sereni
 
 > **h4**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2224](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2224)
+Defined in: [types/jsx-elements.d.ts:2222](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2222)
 
 ***
 
@@ -346,7 +346,7 @@ Defined in: [types/jsx-elements.d.ts:2224](https://github.com/serenity-is/sereni
 
 > **h5**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2225](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2225)
+Defined in: [types/jsx-elements.d.ts:2223](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2223)
 
 ***
 
@@ -354,7 +354,7 @@ Defined in: [types/jsx-elements.d.ts:2225](https://github.com/serenity-is/sereni
 
 > **h6**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2226](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2226)
+Defined in: [types/jsx-elements.d.ts:2224](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2224)
 
 ***
 
@@ -362,7 +362,7 @@ Defined in: [types/jsx-elements.d.ts:2226](https://github.com/serenity-is/sereni
 
 > **head**: `HTMLAttributes`\<`HTMLHeadElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2227](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2227)
+Defined in: [types/jsx-elements.d.ts:2225](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2225)
 
 ***
 
@@ -370,7 +370,7 @@ Defined in: [types/jsx-elements.d.ts:2227](https://github.com/serenity-is/sereni
 
 > **header**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2228](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2228)
+Defined in: [types/jsx-elements.d.ts:2226](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2226)
 
 ***
 
@@ -378,7 +378,7 @@ Defined in: [types/jsx-elements.d.ts:2228](https://github.com/serenity-is/sereni
 
 > **hgroup**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2229](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2229)
+Defined in: [types/jsx-elements.d.ts:2227](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2227)
 
 ***
 
@@ -386,7 +386,7 @@ Defined in: [types/jsx-elements.d.ts:2229](https://github.com/serenity-is/sereni
 
 > **hr**: `HTMLAttributes`\<`HTMLHRElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2230](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2230)
+Defined in: [types/jsx-elements.d.ts:2228](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2228)
 
 ***
 
@@ -394,7 +394,7 @@ Defined in: [types/jsx-elements.d.ts:2230](https://github.com/serenity-is/sereni
 
 > **html**: `HTMLAttributes`\<`HTMLHtmlElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2231](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2231)
+Defined in: [types/jsx-elements.d.ts:2229](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2229)
 
 ***
 
@@ -402,7 +402,7 @@ Defined in: [types/jsx-elements.d.ts:2231](https://github.com/serenity-is/sereni
 
 > **i**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2232](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2232)
+Defined in: [types/jsx-elements.d.ts:2230](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2230)
 
 ***
 
@@ -410,7 +410,7 @@ Defined in: [types/jsx-elements.d.ts:2232](https://github.com/serenity-is/sereni
 
 > **iframe**: `IframeHTMLAttributes`\<`HTMLIFrameElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2233](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2233)
+Defined in: [types/jsx-elements.d.ts:2231](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2231)
 
 ***
 
@@ -418,7 +418,7 @@ Defined in: [types/jsx-elements.d.ts:2233](https://github.com/serenity-is/sereni
 
 > **img**: `ImgHTMLAttributes`\<`HTMLImageElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2234](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2234)
+Defined in: [types/jsx-elements.d.ts:2232](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2232)
 
 ***
 
@@ -426,7 +426,7 @@ Defined in: [types/jsx-elements.d.ts:2234](https://github.com/serenity-is/sereni
 
 > **input**: `InputHTMLAttributes`\<`HTMLInputElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2235](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2235)
+Defined in: [types/jsx-elements.d.ts:2233](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2233)
 
 ***
 
@@ -434,7 +434,7 @@ Defined in: [types/jsx-elements.d.ts:2235](https://github.com/serenity-is/sereni
 
 > **ins**: `ModHTMLAttributes`\<`HTMLModElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2236](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2236)
+Defined in: [types/jsx-elements.d.ts:2234](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2234)
 
 ***
 
@@ -442,7 +442,7 @@ Defined in: [types/jsx-elements.d.ts:2236](https://github.com/serenity-is/sereni
 
 > **kbd**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2237](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2237)
+Defined in: [types/jsx-elements.d.ts:2235](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2235)
 
 ***
 
@@ -450,7 +450,7 @@ Defined in: [types/jsx-elements.d.ts:2237](https://github.com/serenity-is/sereni
 
 > **label**: `LabelHTMLAttributes`\<`HTMLLabelElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2238](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2238)
+Defined in: [types/jsx-elements.d.ts:2236](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2236)
 
 ***
 
@@ -458,7 +458,7 @@ Defined in: [types/jsx-elements.d.ts:2238](https://github.com/serenity-is/sereni
 
 > **legend**: `HTMLAttributes`\<`HTMLLegendElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2239](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2239)
+Defined in: [types/jsx-elements.d.ts:2237](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2237)
 
 ***
 
@@ -466,7 +466,7 @@ Defined in: [types/jsx-elements.d.ts:2239](https://github.com/serenity-is/sereni
 
 > **li**: `LiHTMLAttributes`\<`HTMLLIElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2240](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2240)
+Defined in: [types/jsx-elements.d.ts:2238](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2238)
 
 ***
 
@@ -474,7 +474,7 @@ Defined in: [types/jsx-elements.d.ts:2240](https://github.com/serenity-is/sereni
 
 > **link**: `LinkHTMLAttributes`\<`HTMLLinkElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2241](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2241)
+Defined in: [types/jsx-elements.d.ts:2239](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2239)
 
 ***
 
@@ -482,7 +482,7 @@ Defined in: [types/jsx-elements.d.ts:2241](https://github.com/serenity-is/sereni
 
 > **main**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2242](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2242)
+Defined in: [types/jsx-elements.d.ts:2240](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2240)
 
 ***
 
@@ -490,7 +490,7 @@ Defined in: [types/jsx-elements.d.ts:2242](https://github.com/serenity-is/sereni
 
 > **map**: `MapHTMLAttributes`\<`HTMLMapElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2243](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2243)
+Defined in: [types/jsx-elements.d.ts:2241](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2241)
 
 ***
 
@@ -498,7 +498,7 @@ Defined in: [types/jsx-elements.d.ts:2243](https://github.com/serenity-is/sereni
 
 > **mark**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2244](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2244)
+Defined in: [types/jsx-elements.d.ts:2242](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2242)
 
 ***
 
@@ -506,7 +506,7 @@ Defined in: [types/jsx-elements.d.ts:2244](https://github.com/serenity-is/sereni
 
 > **menu**: `MenuHTMLAttributes`\<`HTMLMenuElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2245](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2245)
+Defined in: [types/jsx-elements.d.ts:2243](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2243)
 
 ***
 
@@ -514,7 +514,7 @@ Defined in: [types/jsx-elements.d.ts:2245](https://github.com/serenity-is/sereni
 
 > **meta**: `MetaHTMLAttributes`\<`HTMLMetaElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2246](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2246)
+Defined in: [types/jsx-elements.d.ts:2244](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2244)
 
 ***
 
@@ -522,7 +522,7 @@ Defined in: [types/jsx-elements.d.ts:2246](https://github.com/serenity-is/sereni
 
 > **meter**: `MeterHTMLAttributes`\<`HTMLMeterElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2247](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2247)
+Defined in: [types/jsx-elements.d.ts:2245](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2245)
 
 ***
 
@@ -530,7 +530,7 @@ Defined in: [types/jsx-elements.d.ts:2247](https://github.com/serenity-is/sereni
 
 > **nav**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2248](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2248)
+Defined in: [types/jsx-elements.d.ts:2246](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2246)
 
 ***
 
@@ -538,7 +538,7 @@ Defined in: [types/jsx-elements.d.ts:2248](https://github.com/serenity-is/sereni
 
 > **noscript**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2249](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2249)
+Defined in: [types/jsx-elements.d.ts:2247](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2247)
 
 ***
 
@@ -546,7 +546,7 @@ Defined in: [types/jsx-elements.d.ts:2249](https://github.com/serenity-is/sereni
 
 > **object**: `ObjectHTMLAttributes`\<`HTMLObjectElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2250](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2250)
+Defined in: [types/jsx-elements.d.ts:2248](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2248)
 
 ***
 
@@ -554,7 +554,7 @@ Defined in: [types/jsx-elements.d.ts:2250](https://github.com/serenity-is/sereni
 
 > **ol**: `OlHTMLAttributes`\<`HTMLOListElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2251](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2251)
+Defined in: [types/jsx-elements.d.ts:2249](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2249)
 
 ***
 
@@ -562,7 +562,7 @@ Defined in: [types/jsx-elements.d.ts:2251](https://github.com/serenity-is/sereni
 
 > **optgroup**: `OptgroupHTMLAttributes`\<`HTMLOptGroupElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2252](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2252)
+Defined in: [types/jsx-elements.d.ts:2250](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2250)
 
 ***
 
@@ -570,7 +570,7 @@ Defined in: [types/jsx-elements.d.ts:2252](https://github.com/serenity-is/sereni
 
 > **option**: `OptionHTMLAttributes`\<`HTMLOptionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2253](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2253)
+Defined in: [types/jsx-elements.d.ts:2251](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2251)
 
 ***
 
@@ -578,7 +578,7 @@ Defined in: [types/jsx-elements.d.ts:2253](https://github.com/serenity-is/sereni
 
 > **output**: `OutputHTMLAttributes`\<`HTMLOutputElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2254](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2254)
+Defined in: [types/jsx-elements.d.ts:2252](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2252)
 
 ***
 
@@ -586,7 +586,7 @@ Defined in: [types/jsx-elements.d.ts:2254](https://github.com/serenity-is/sereni
 
 > **p**: `HTMLAttributes`\<`HTMLParagraphElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2255](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2255)
+Defined in: [types/jsx-elements.d.ts:2253](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2253)
 
 ***
 
@@ -594,7 +594,7 @@ Defined in: [types/jsx-elements.d.ts:2255](https://github.com/serenity-is/sereni
 
 > **picture**: `HTMLAttributes`\<`HTMLPictureElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2256](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2256)
+Defined in: [types/jsx-elements.d.ts:2254](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2254)
 
 ***
 
@@ -602,7 +602,7 @@ Defined in: [types/jsx-elements.d.ts:2256](https://github.com/serenity-is/sereni
 
 > **pre**: `HTMLAttributes`\<`HTMLPreElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2257](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2257)
+Defined in: [types/jsx-elements.d.ts:2255](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2255)
 
 ***
 
@@ -610,7 +610,7 @@ Defined in: [types/jsx-elements.d.ts:2257](https://github.com/serenity-is/sereni
 
 > **progress**: `ProgressHTMLAttributes`\<`HTMLProgressElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2258](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2258)
+Defined in: [types/jsx-elements.d.ts:2256](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2256)
 
 ***
 
@@ -618,7 +618,7 @@ Defined in: [types/jsx-elements.d.ts:2258](https://github.com/serenity-is/sereni
 
 > **q**: `QuoteHTMLAttributes`\<`HTMLQuoteElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2259](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2259)
+Defined in: [types/jsx-elements.d.ts:2257](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2257)
 
 ***
 
@@ -626,7 +626,7 @@ Defined in: [types/jsx-elements.d.ts:2259](https://github.com/serenity-is/sereni
 
 > **rp**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2260](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2260)
+Defined in: [types/jsx-elements.d.ts:2258](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2258)
 
 ***
 
@@ -634,7 +634,7 @@ Defined in: [types/jsx-elements.d.ts:2260](https://github.com/serenity-is/sereni
 
 > **rt**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2261](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2261)
+Defined in: [types/jsx-elements.d.ts:2259](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2259)
 
 ***
 
@@ -642,7 +642,7 @@ Defined in: [types/jsx-elements.d.ts:2261](https://github.com/serenity-is/sereni
 
 > **ruby**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2262](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2262)
+Defined in: [types/jsx-elements.d.ts:2260](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2260)
 
 ***
 
@@ -650,7 +650,7 @@ Defined in: [types/jsx-elements.d.ts:2262](https://github.com/serenity-is/sereni
 
 > **s**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2263](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2263)
+Defined in: [types/jsx-elements.d.ts:2261](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2261)
 
 ***
 
@@ -658,7 +658,7 @@ Defined in: [types/jsx-elements.d.ts:2263](https://github.com/serenity-is/sereni
 
 > **samp**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2264](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2264)
+Defined in: [types/jsx-elements.d.ts:2262](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2262)
 
 ***
 
@@ -666,7 +666,7 @@ Defined in: [types/jsx-elements.d.ts:2264](https://github.com/serenity-is/sereni
 
 > **script**: `ScriptHTMLAttributes`\<`HTMLScriptElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2265](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2265)
+Defined in: [types/jsx-elements.d.ts:2263](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2263)
 
 ***
 
@@ -674,7 +674,7 @@ Defined in: [types/jsx-elements.d.ts:2265](https://github.com/serenity-is/sereni
 
 > **search**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2266](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2266)
+Defined in: [types/jsx-elements.d.ts:2264](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2264)
 
 ***
 
@@ -682,7 +682,7 @@ Defined in: [types/jsx-elements.d.ts:2266](https://github.com/serenity-is/sereni
 
 > **section**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2267](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2267)
+Defined in: [types/jsx-elements.d.ts:2265](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2265)
 
 ***
 
@@ -690,7 +690,7 @@ Defined in: [types/jsx-elements.d.ts:2267](https://github.com/serenity-is/sereni
 
 > **select**: `SelectHTMLAttributes`\<`HTMLSelectElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2268](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2268)
+Defined in: [types/jsx-elements.d.ts:2266](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2266)
 
 ***
 
@@ -698,7 +698,7 @@ Defined in: [types/jsx-elements.d.ts:2268](https://github.com/serenity-is/sereni
 
 > **slot**: `HTMLSlotElementAttributes`\<`HTMLSlotElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2269](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2269)
+Defined in: [types/jsx-elements.d.ts:2267](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2267)
 
 ***
 
@@ -706,7 +706,7 @@ Defined in: [types/jsx-elements.d.ts:2269](https://github.com/serenity-is/sereni
 
 > **small**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2270](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2270)
+Defined in: [types/jsx-elements.d.ts:2268](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2268)
 
 ***
 
@@ -714,7 +714,7 @@ Defined in: [types/jsx-elements.d.ts:2270](https://github.com/serenity-is/sereni
 
 > **source**: `SourceHTMLAttributes`\<`HTMLSourceElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2271](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2271)
+Defined in: [types/jsx-elements.d.ts:2269](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2269)
 
 ***
 
@@ -722,7 +722,7 @@ Defined in: [types/jsx-elements.d.ts:2271](https://github.com/serenity-is/sereni
 
 > **span**: `HTMLAttributes`\<`HTMLSpanElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2272](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2272)
+Defined in: [types/jsx-elements.d.ts:2270](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2270)
 
 ***
 
@@ -730,7 +730,7 @@ Defined in: [types/jsx-elements.d.ts:2272](https://github.com/serenity-is/sereni
 
 > **strong**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2273](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2273)
+Defined in: [types/jsx-elements.d.ts:2271](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2271)
 
 ***
 
@@ -738,7 +738,7 @@ Defined in: [types/jsx-elements.d.ts:2273](https://github.com/serenity-is/sereni
 
 > **style**: `StyleHTMLAttributes`\<`HTMLStyleElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2274](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2274)
+Defined in: [types/jsx-elements.d.ts:2272](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2272)
 
 ***
 
@@ -746,7 +746,7 @@ Defined in: [types/jsx-elements.d.ts:2274](https://github.com/serenity-is/sereni
 
 > **sub**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2275](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2275)
+Defined in: [types/jsx-elements.d.ts:2273](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2273)
 
 ***
 
@@ -754,7 +754,7 @@ Defined in: [types/jsx-elements.d.ts:2275](https://github.com/serenity-is/sereni
 
 > **summary**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2276](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2276)
+Defined in: [types/jsx-elements.d.ts:2274](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2274)
 
 ***
 
@@ -762,7 +762,7 @@ Defined in: [types/jsx-elements.d.ts:2276](https://github.com/serenity-is/sereni
 
 > **sup**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2277](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2277)
+Defined in: [types/jsx-elements.d.ts:2275](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2275)
 
 ***
 
@@ -770,7 +770,7 @@ Defined in: [types/jsx-elements.d.ts:2277](https://github.com/serenity-is/sereni
 
 > **table**: `HTMLAttributes`\<`HTMLTableElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2278](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2278)
+Defined in: [types/jsx-elements.d.ts:2276](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2276)
 
 ***
 
@@ -778,7 +778,7 @@ Defined in: [types/jsx-elements.d.ts:2278](https://github.com/serenity-is/sereni
 
 > **tbody**: `HTMLAttributes`\<`HTMLTableSectionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2279](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2279)
+Defined in: [types/jsx-elements.d.ts:2277](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2277)
 
 ***
 
@@ -786,7 +786,7 @@ Defined in: [types/jsx-elements.d.ts:2279](https://github.com/serenity-is/sereni
 
 > **td**: `TdHTMLAttributes`\<`HTMLTableCellElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2280](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2280)
+Defined in: [types/jsx-elements.d.ts:2278](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2278)
 
 ***
 
@@ -794,7 +794,7 @@ Defined in: [types/jsx-elements.d.ts:2280](https://github.com/serenity-is/sereni
 
 > **template**: `TemplateHTMLAttributes`\<`HTMLTemplateElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2281](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2281)
+Defined in: [types/jsx-elements.d.ts:2279](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2279)
 
 ***
 
@@ -802,7 +802,7 @@ Defined in: [types/jsx-elements.d.ts:2281](https://github.com/serenity-is/sereni
 
 > **textarea**: `TextareaHTMLAttributes`\<`HTMLTextAreaElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2282](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2282)
+Defined in: [types/jsx-elements.d.ts:2280](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2280)
 
 ***
 
@@ -810,7 +810,7 @@ Defined in: [types/jsx-elements.d.ts:2282](https://github.com/serenity-is/sereni
 
 > **tfoot**: `HTMLAttributes`\<`HTMLTableSectionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2283](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2283)
+Defined in: [types/jsx-elements.d.ts:2281](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2281)
 
 ***
 
@@ -818,7 +818,7 @@ Defined in: [types/jsx-elements.d.ts:2283](https://github.com/serenity-is/sereni
 
 > **th**: `ThHTMLAttributes`\<`HTMLTableCellElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2284](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2284)
+Defined in: [types/jsx-elements.d.ts:2282](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2282)
 
 ***
 
@@ -826,7 +826,7 @@ Defined in: [types/jsx-elements.d.ts:2284](https://github.com/serenity-is/sereni
 
 > **thead**: `HTMLAttributes`\<`HTMLTableSectionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2285](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2285)
+Defined in: [types/jsx-elements.d.ts:2283](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2283)
 
 ***
 
@@ -834,7 +834,7 @@ Defined in: [types/jsx-elements.d.ts:2285](https://github.com/serenity-is/sereni
 
 > **time**: `TimeHTMLAttributes`\<`HTMLTimeElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2286](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2286)
+Defined in: [types/jsx-elements.d.ts:2284](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2284)
 
 ***
 
@@ -842,7 +842,7 @@ Defined in: [types/jsx-elements.d.ts:2286](https://github.com/serenity-is/sereni
 
 > **title**: `HTMLAttributes`\<`HTMLTitleElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2287](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2287)
+Defined in: [types/jsx-elements.d.ts:2285](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2285)
 
 ***
 
@@ -850,7 +850,7 @@ Defined in: [types/jsx-elements.d.ts:2287](https://github.com/serenity-is/sereni
 
 > **tr**: `HTMLAttributes`\<`HTMLTableRowElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2288](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2288)
+Defined in: [types/jsx-elements.d.ts:2286](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2286)
 
 ***
 
@@ -858,7 +858,7 @@ Defined in: [types/jsx-elements.d.ts:2288](https://github.com/serenity-is/sereni
 
 > **track**: `TrackHTMLAttributes`\<`HTMLTrackElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2289](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2289)
+Defined in: [types/jsx-elements.d.ts:2287](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2287)
 
 ***
 
@@ -866,7 +866,7 @@ Defined in: [types/jsx-elements.d.ts:2289](https://github.com/serenity-is/sereni
 
 > **u**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2290](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2290)
+Defined in: [types/jsx-elements.d.ts:2288](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2288)
 
 ***
 
@@ -874,7 +874,7 @@ Defined in: [types/jsx-elements.d.ts:2290](https://github.com/serenity-is/sereni
 
 > **ul**: `HTMLAttributes`\<`HTMLUListElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2291](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2291)
+Defined in: [types/jsx-elements.d.ts:2289](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2289)
 
 ***
 
@@ -882,7 +882,7 @@ Defined in: [types/jsx-elements.d.ts:2291](https://github.com/serenity-is/sereni
 
 > **var**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2292](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2292)
+Defined in: [types/jsx-elements.d.ts:2290](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2290)
 
 ***
 
@@ -890,7 +890,7 @@ Defined in: [types/jsx-elements.d.ts:2292](https://github.com/serenity-is/sereni
 
 > **video**: `VideoHTMLAttributes`\<`HTMLVideoElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2293](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2293)
+Defined in: [types/jsx-elements.d.ts:2291](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2291)
 
 ***
 
@@ -898,7 +898,7 @@ Defined in: [types/jsx-elements.d.ts:2293](https://github.com/serenity-is/sereni
 
 > **wbr**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2294](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2294)
+Defined in: [types/jsx-elements.d.ts:2292](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2292)
 
 ***
 
@@ -906,7 +906,7 @@ Defined in: [types/jsx-elements.d.ts:2294](https://github.com/serenity-is/sereni
 
 > **webview**: `WebViewHTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2296](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2296)
+Defined in: [types/jsx-elements.d.ts:2294](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2294)
 
 #### Url
 

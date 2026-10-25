@@ -38,7 +38,7 @@ Criteria("Status").in([1, 2, 3]); // [["Status"], "in", [[1, 2, 3]]]
 
 > **new CriteriaBuilder**(`arrayLength?`): `CriteriaBuilder`
 
-Defined in: C:/Users/volka/AppData/Roaming/npm/node\_modules/typedoc/node\_modules/typescript/lib/lib.es5.d.ts:1514
+Defined in: C:/Users/volka/AppData/Local/pnpm/global/v11/5ab8-18e1d5b23fbaa060-0/node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1514
 
 #### Parameters
 

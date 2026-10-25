@@ -10,7 +10,7 @@ Options passed to a Select2 query callback.
 
 ### callback()?
 
-> `optional` **callback**: (`p1`) => `void`
+> `optional` **callback**: (`data`) => `void`
 
 Defined in: [src/ui/editors/select2.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L26)
 
@@ -18,7 +18,7 @@ Callback invoked with the results.
 
 #### Parameters
 
-##### p1
+##### data
 
 [`Select2Result`](Select2Result.md)
 
@@ -50,7 +50,7 @@ The element the query is for.
 
 ### matcher()?
 
-> `optional` **matcher**: (`p1`, `p2`, `p3?`) => `boolean`
+> `optional` **matcher**: (`term`, `text`, `data?`) => `boolean`
 
 Defined in: [src/ui/editors/select2.tsx:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L28)
 
@@ -58,15 +58,15 @@ Custom matcher function.
 
 #### Parameters
 
-##### p1
+##### term
 
-`any`
+`string`
 
-##### p2
+##### text
 
-`any`
+`string`
 
-##### p3?
+##### data?
 
 `any`
 

@@ -4,18 +4,17 @@ Initializes a new instance of the [`CssBundleManager`](../CssBundleManager.md) c
 
 ```csharp
 public CssBundleManager(IOptions<CssBundlingOptions> options, IDynamicScriptManager scriptManager, 
-    ICssMinifier cssMinifier, IWebHostEnvironment hostEnvironment, 
-    IHttpContextAccessor? contextAccessor = null, ILogger<CssBundleManager>? logger = null)
+    ICssBundleBuilder bundleBuilder, IWebHostEnvironment hostEnvironment, 
+    IHttpContextAccessor? contextAccessor = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | options | The options. |
 | scriptManager | The dynamic script manager. |
-| cssMinifier | The CSS minifier. |
+| bundleBuilder | The CSS bundle builder. |
 | hostEnvironment | The web host environment. |
 | contextAccessor | The HTTP context accessor. |
-| logger | The exception logger. |
 
 ## Exceptions
 
@@ -27,5 +26,5 @@ public CssBundleManager(IOptions<CssBundlingOptions> options, IDynamicScriptMana
 
 * class [CssBundlingOptions](../CssBundlingOptions.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)
-* interface [ICssMinifier](../ICssMinifier.md)
+* interface [ICssBundleBuilder](../ICssBundleBuilder.md)
 * class [CssBundleManager](../CssBundleManager.md)

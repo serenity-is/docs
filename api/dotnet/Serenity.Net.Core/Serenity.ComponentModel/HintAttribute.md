@@ -5,7 +5,7 @@ Sets a hint for a form field. The hint is shown when the field label is hovered.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
-public class HintAttribute : Attribute
+public class HintAttribute : Attribute, IHasTextKey
 ```
 
 | parameter | description |
@@ -16,8 +16,10 @@ public class HintAttribute : Attribute
 
 | name | description |
 | --- | --- |
+| [HintAttribute](HintAttribute/HintAttribute.md)() | Creates a new instance of the [`HintAttribute`](./HintAttribute.md) class. Use this overload for creating a hint with a local text key, and no default hint. |
 | [HintAttribute](HintAttribute/HintAttribute.md)(…) | Sets a hint for a form field. The hint is shown when the field label is hovered. This has no effect on columns. |
 | [Hint](HintAttribute/Hint.md) { get; } | Gets the hint. |
+| [TextKey](HintAttribute/TextKey.md) { get; set; } | Gets or sets the local text key for the category. |
 
 ## Remarks
 
@@ -25,4 +27,5 @@ Initializes a new instance of the [`HintAttribute`](./HintAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[HintAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/HintAttribute.cs)*
+* interface [IHasTextKey](../Serenity.Services/IHasTextKey.md)
+* **Source:** *[HintAttribute.cs](https://github.com/serenity-is/Serenity/blob/0c34357a17d56458ca5b7a3be25f42666b9eb050/src/core/ComponentModel/PropertyGrid/HintAttribute.cs)*

@@ -11,6 +11,7 @@ public abstract class LookupScript : DynamicScript, IGetScriptData, INamedDynami
 
 | name | description |
 | --- | --- |
+| [IconField](LookupScript/IconField.md) { get; set; } | Gets or sets the lookup icon field. |
 | [IdField](LookupScript/IdField.md) { get; set; } | Gets or sets the lookup ID field. |
 | [LookupKey](LookupScript/LookupKey.md) { get; set; } | Gets or sets the lookup key. |
 | [LookupParams](LookupScript/LookupParams.md) { get; } | Gets the lookup parameters dictionary. |
@@ -34,4 +35,4 @@ public abstract class LookupScript : DynamicScript, IGetScriptData, INamedDynami
 * class [DynamicScript](../../Serenity.Net.Services/Serenity.Web/DynamicScript.md)
 * interface [IGetScriptData](../../Serenity.Net.Core/Serenity.Web/IGetScriptData.md)
 * interface [INamedDynamicScript](../../Serenity.Net.Core/Serenity.Web/INamedDynamicScript.md)
-* **Source:** *[LookupScript.cs](https://github.com/serenity-is/Serenity/blob/eef6be1d7741640aed4ce405c3b44984620b84be/src/web/DynamicScript/DynamicScriptTypes/LookupScript.cs)*
+* **Source:** *[LookupScript.cs](https://github.com/serenity-is/Serenity/blob/b7f2b207458f6ea9d7a46806c5ad7bf38d6c9e28/src/web/DynamicScript/DynamicScriptTypes/LookupScript.cs)*

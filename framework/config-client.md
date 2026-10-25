@@ -27,9 +27,11 @@ Config.rootNamespaces.push("MyApp");
 Other examples:
 
 ```ts
+import { Config, getWindowLocation } from "@serenity-is/corelib";
+
 Config.emailAllowOnlyAscii = false;
 Config.defaultReturnUrl = (purpose) => purpose === "logout" ? "/Goodbye" : Config.applicationPath;
-Config.notLoggedInHandler = () => window.location.href = "/Account/Login";
+Config.notLoggedInHandler = () => getWindowLocation({ top: true }).href = "/Account/Login";
 ```
 
 ## applicationPath
@@ -62,6 +64,25 @@ resetApplicationPath();
 ```ts
 Config.lazyTypeLoader = async (typeKey) => await import(`./editors/${typeKey}`);
 ```
+
+## getWindowLocation
+
+`getWindowLocation()` returns the location object the framework should navigate. Use it instead of touching `window.location` directly:
+
+```ts
+import { getWindowLocation } from "@serenity-is/corelib";
+
+getWindowLocation().href = "/Home";        // current window
+await getWindowLocation().reload();        // current window
+getWindowLocation({ top: true }).href = "/Account/Login"; // break out of an iframe
+```
+
+Why it exists:
+
+- Tests (jsdom) do not implement navigation, so directly assigning `window.location` logs "Not implemented" warnings. `getWindowLocation()` gives tests a single seam to replace the returned object.
+- When the application runs in an iframe, a redirect may need to replace the top window rather than the frame. Pass `{ top: true }` for that, as the service call 403 redirect does.
+
+The built-in pages (login, sign-up, password actions, idle timeout, two-factor, external logins) all use it.
 
 ## See Also
 

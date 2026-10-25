@@ -49,7 +49,7 @@ Space-separated string of all tokens (mirrors `DOMTokenList.value`).
 
 > **\[initPropHookSymbol\]**(`node`, `propName`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2800](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2800)
+Defined in: [../domwise/dist/index.d.ts:3102](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3102)
 
 #### Parameters
 

@@ -2,7 +2,7 @@
 
 # Class: Lookup\<TItem\>
 
-Defined in: [src/base/lookup.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L19)
+Defined in: [src/base/lookup.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L21)
 
 Concrete implementation of the Lookup interface for client-side use.
 Maintains `items` and a `itemById` index synchronized via [Lookup.update](#update).
@@ -28,7 +28,7 @@ Type of the lookup items.
 
 > **new Lookup**\<`TItem`\>(`options`, `items?`): `Lookup`\<`TItem`\>
 
-Defined in: [src/base/lookup.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L59)
+Defined in: [src/base/lookup.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L65)
 
 Creates a new lookup instance.
 
@@ -52,11 +52,21 @@ Optional initial item array. If provided, [update](#update) is called immediatel
 
 ## Properties
 
+### iconField
+
+> **iconField**: `string`
+
+Defined in: [src/base/lookup.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L33)
+
+Name of the icon field (copied from [LookupOptions.iconField](../interfaces/LookupOptions.md#iconfield)).
+
+***
+
 ### idField
 
 > **idField**: `string`
 
-Defined in: [src/base/lookup.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L25)
+Defined in: [src/base/lookup.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L27)
 
 Name of the ID field (copied from [LookupOptions.idField](../interfaces/LookupOptions.md#idfield)).
 
@@ -66,7 +76,7 @@ Name of the ID field (copied from [LookupOptions.idField](../interfaces/LookupOp
 
 > **itemById**: `object`
 
-Defined in: [src/base/lookup.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L23)
+Defined in: [src/base/lookup.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L25)
 
 Dictionary mapping stringified [LookupOptions.idField](../interfaces/LookupOptions.md#idfield) values to their corresponding items.
 
@@ -80,7 +90,7 @@ Dictionary mapping stringified [LookupOptions.idField](../interfaces/LookupOptio
 
 > **items**: `TItem`[]
 
-Defined in: [src/base/lookup.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L21)
+Defined in: [src/base/lookup.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L23)
 
 Flat array of all lookup items.
 
@@ -90,7 +100,7 @@ Flat array of all lookup items.
 
 > **parentIdField**: `string`
 
-Defined in: [src/base/lookup.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L27)
+Defined in: [src/base/lookup.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L29)
 
 Name of the parent-ID field for hierarchical lookups (copied from [LookupOptions.parentIdField](../interfaces/LookupOptions.md#parentidfield)).
 
@@ -100,7 +110,7 @@ Name of the parent-ID field for hierarchical lookups (copied from [LookupOptions
 
 > **textField**: `string`
 
-Defined in: [src/base/lookup.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L29)
+Defined in: [src/base/lookup.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L31)
 
 Name of the display-text field (copied from [LookupOptions.textField](../interfaces/LookupOptions.md#textfield)).
 
@@ -110,7 +120,7 @@ Name of the display-text field (copied from [LookupOptions.textField](../interfa
 
 > `optional` **update**(`value`): `void`
 
-Defined in: [src/base/lookup.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L76)
+Defined in: [src/base/lookup.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L83)
 
 Replaces the lookup contents and rebuilds the `itemById` index.
 

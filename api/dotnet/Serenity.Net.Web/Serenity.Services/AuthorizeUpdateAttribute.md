@@ -25,4 +25,4 @@ Initializes a new instance of the [`AuthorizeUpdateAttribute`](./AuthorizeUpdate
 ## See Also
 
 * class [ServiceAuthorizeAttribute](./ServiceAuthorizeAttribute.md)
-* **Source:** *[AuthorizeUpdateAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/AuthorizeUpdateAttribute.cs)*
+* **Source:** *[AuthorizeUpdateAttribute.cs](https://github.com/serenity-is/Serenity/blob/b25593854f2e2d2560030f357d1bb7a1cbd85e65/src/web/Mvc/Authorization/AuthorizeUpdateAttribute.cs)*

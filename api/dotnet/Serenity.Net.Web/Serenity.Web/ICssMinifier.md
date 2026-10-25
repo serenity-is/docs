@@ -15,4 +15,4 @@ public interface ICssMinifier
 
 ## See Also
 
-* **Source:** *[ICssMinifier.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/ICssMinifier.cs)*
+* **Source:** *[ICssMinifier.cs](https://github.com/serenity-is/Serenity/blob/b25593854f2e2d2560030f357d1bb7a1cbd85e65/src/web/Mvc/Bundling/Minification/ICssMinifier.cs)*

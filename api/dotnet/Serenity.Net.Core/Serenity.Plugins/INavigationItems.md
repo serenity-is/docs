@@ -13,6 +13,10 @@ public interface INavigationItems
 | --- | --- |
 | [GetNavigationEntries](INavigationItems/GetNavigationEntries.md)() | Gets the navigation entries. |
 
+## Remarks
+
+This type is part of a legacy plugin system design and is no longer used by the framework. Use the `NavigationLink` / `NavigationMenu` assembly attributes instead to declare navigation items.
+
 ## See Also
 
-* **Source:** *[INavigationItems.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Plugins/INavigationItems.cs)*
+* **Source:** *[INavigationItems.cs](https://github.com/serenity-is/Serenity/blob/42921a2cabf9c9256331037e2f6cd60672b97071/src/core/Plugins/INavigationItems.cs)*

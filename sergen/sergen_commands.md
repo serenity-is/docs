@@ -163,3 +163,33 @@ Generated files are listed below:
 /projects/Serene/Serene.Core/Modules/Northwind/RegionSample/RegionSampleRepository.cs
 /projects/Serene/Serene.Core/Modules/Northwind/RegionSample/RegionSampleRow.cs
 ```
+### Non-Interactive Generate (CI)
+---
+
+`sergen generate` can also run without any prompts, so it can be used in CI or in scripts. Add `--no-interactive` (aliases `--ni`, `--noninteractive`):
+
+- Values with a default fall back to it.
+- Values without one become required: `--table`, and `--connection-key` when the project defines several connections. A missing switch fails with a message naming it, instead of waiting for input.
+
+```sh
+$ dotnet sergen generate --no-interactive --table dbo.Region --module Northwind --identifier RegionSample --what RSUC
+```
+
+Existing files whose content would change are handled by the `--overwrite[:mode]` switch:
+
+| Mode | Behavior |
+| --- | --- |
+| `yes` (default for a bare switch) | Replace the file, keeping a `*.bak` copy |
+| `no` | Fail with exit code `13` (`OverwriteRefused`) |
+| `skip` | Leave the file as it is and continue |
+| `force` | Replace the file, without a backup |
+
+Aliases: `y` / `yes` / `true` / `backup` for `yes`, `n` / `no` / `false` for `no`, `s` / `skip` for `skip`, `f` / `force` / `overwrite` for `force`.
+
+Without the switch `sergen` stays interactive. In non-interactive mode it defaults to failing rather than silently discarding hand edits:
+
+```sh
+$ dotnet sergen generate --ni --table dbo.Region --overwrite:skip
+```
+
+A refused overwrite returns exit code `13`, so a script can tell it apart from other failures. `--help` can be combined with a command, and `dotnet sergen generate --help` documents all the switches for the generator.

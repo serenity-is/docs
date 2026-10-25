@@ -4,7 +4,7 @@
 
 > **dispatchDisposingEvent**(`target`, `opt?`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2521](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2521)
+Defined in: [../domwise/dist/index.d.ts:2826](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2826)
 
 Dispatches a `disposing` event on the target element, causing any
 listeners registered via [addDisposingListener](addDisposingListener.md) to be invoked.

@@ -34,11 +34,11 @@ To include TV series and mini-series in your movie database, you'll need to add 
     [EnumKey("MovieDB.MovieKind")]
     public enum MovieKind
     {
-        [Description("Film")]
+        [DescriptionText("Film")]
         Film = 1,
-        [Description("TV Series")]
+        [DescriptionText("TV Series")]
         TvSeries = 2,
-        [Description("Mini Series")]
+        [DescriptionText("Mini Series")]
         MiniSeries = 3
     }
     ```
@@ -46,10 +46,10 @@ To include TV series and mini-series in your movie database, you'll need to add 
 3. Add the `Kind` field to the `MovieRow` entity class. Manually add the `Kind` property to your `MovieRow.cs` after the `Runtime` property:
 
    ```csharp
-   [DisplayName("Runtime (mins)")]
+   [DisplayText("Runtime (mins)")]
    public int? Runtime { get => fields.Runtime[this]; set => fields.Runtime[this] = value; }
 
-   [DisplayName("Kind"), NotNull]
+   [DisplayText("Kind"), NotNull]
    public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }
    ```
 
@@ -95,7 +95,7 @@ To include TV series and mini-series in your movie database, you'll need to add 
 8. Since "Kind" is a required field, you need to provide a default value in the "Add Movie" dialog to avoid validation errors. Most movies will likely be feature films, so let's set "Film" as the default value for the "Kind" property. To add a default value for the "Kind" property, modify the `MovieRow.cs` file by adding a `DefaultValue` attribute like this:
 
    ```csharp
-   [DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
+   [DisplayText("Kind"), NotNull, DefaultValue(MovieKind.Film)]
    public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }
    ```
 

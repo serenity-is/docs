@@ -81,4 +81,4 @@ Initializes a new instance of the class.
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [SaveRequest&lt;TEntity&gt;](./SaveRequest-1.md)
 * class [SaveResponse](./SaveResponse.md)
-* **Source:** *[SaveRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/8ebae29aba9c0164fa5c8a76801f7bca72290c39/src/services/RequestHandlers/Save/SaveRequestHandlerBase.cs)*
+* **Source:** *[SaveRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/842eeed9c1017bb2110e654fdf17bd169a31f7a0/src/services/RequestHandlers/Save/SaveRequestHandlerBase.cs)*

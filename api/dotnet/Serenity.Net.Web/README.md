@@ -88,6 +88,7 @@
 | static class [ColumnPickerDialogTexts](./Serenity.Web/ColumnPickerDialogTexts.md) |  |
 | class [ColumnsScriptRegistration](./Serenity.Web/ColumnsScriptRegistration.md) | Contains registration methods for ColumnsScript types. |
 | class [ContentHashCache](./Serenity.Web/ContentHashCache.md) | Default [`IContentHashCache`](./Serenity.Web/IContentHashCache.md) implementation. |
+| class [CssBundleBuilder](./Serenity.Web/CssBundleBuilder.md) | Default implementation of [`ICssBundleBuilder`](./Serenity.Web/ICssBundleBuilder.md). |
 | class [CssBundleManager](./Serenity.Web/CssBundleManager.md) | Default implementation of [`ICssBundleManager`](./Serenity.Web/ICssBundleManager.md). |
 | class [CssBundlingOptions](./Serenity.Web/CssBundlingOptions.md) | Options for CSS bundling. |
 | class [CssMinifyOptions](./Serenity.Web/CssMinifyOptions.md) | Set of options for CSS minifying. |
@@ -114,22 +115,36 @@
 | static class [HtmlContentEditorTexts](./Serenity.Web/HtmlContentEditorTexts.md) |  |
 | static class [HtmlCspExtensions](./Serenity.Web/HtmlCspExtensions.md) | Contains CSP related extension methods for HTML helpers and HTTP contexts. |
 | static class [HtmlImportMapExtensions](./Serenity.Web/HtmlImportMapExtensions.md) | Contains import map related extension methods for HTML helpers and HTTP contexts. |
+| static class [HtmlLayoutFilesExtensions](./Serenity.Web/HtmlLayoutFilesExtensions.md) | Contains extensions for including layout CSS and JS files declared with [`LayoutCssFileAttribute`](./Serenity.Web/LayoutCssFileAttribute.md) / [`LayoutScriptFileAttribute`](./Serenity.Web/LayoutScriptFileAttribute.md). |
 | static class [HtmlScriptExtensions](./Serenity.Web/HtmlScriptExtensions.md) | Contains Serenity related helper methods that can be used in Razor CSHTML files. |
 | class [HttpContextItemsAccessor](./Serenity.Web/HttpContextItemsAccessor.md) | Default implementation of IHttpContextItemsAccessor that reads the HttpContext items. |
 | class [HttpContextUserAccessor](./Serenity.Web/HttpContextUserAccessor.md) | Default implementation of IUserAccessor that reads the current user from the HTTP context. |
 | static class [HttpRequestExtensions](./Serenity.Web/HttpRequestExtensions.md) | Contains HTTP request related extensions. |
 | interface [ICacheSuffix](./Serenity.Web/ICacheSuffix.md) | Abstraction to get the cache suffix used while generating the key for a cached dynamic script. |
 | interface [IContentHashCache](./Serenity.Web/IContentHashCache.md) | An abstraction for a content hash cache, which contains hashes of web servable files. |
+| interface [ICssBundleBuilder](./Serenity.Web/ICssBundleBuilder.md) | Abstraction for building a CSS bundle from a list of source files. |
 | interface [ICssBundleManager](./Serenity.Web/ICssBundleManager.md) | Abstraction for a CSS bundling manager. |
 | interface [ICssMinifier](./Serenity.Web/ICssMinifier.md) | Abstraction for a CSS minifier. |
 | interface [IDynamicScriptManager](./Serenity.Web/IDynamicScriptManager.md) | Dynamic script manager abstraction. |
 | interface [IFileWatcher](./Serenity.Web/IFileWatcher.md) | Abstraction for a file system watcher. |
 | interface [IFileWatcherFactory](./Serenity.Web/IFileWatcherFactory.md) | An abstract factory for creating file system watchers. |
+| interface [ILayoutCssFileProvider](./Serenity.Web/ILayoutCssFileProvider.md) | Abstraction for a provider of layout CSS files declared with [`LayoutCssFileAttribute`](./Serenity.Web/LayoutCssFileAttribute.md). |
+| interface [ILayoutScriptFileProvider](./Serenity.Web/ILayoutScriptFileProvider.md) | Abstraction for a provider of layout script files declared with [`LayoutScriptFileAttribute`](./Serenity.Web/LayoutScriptFileAttribute.md). |
+| interface [IScriptBundleBuilder](./Serenity.Web/IScriptBundleBuilder.md) | Abstraction for building a script bundle from a list of source files. |
 | interface [IScriptBundleManager](./Serenity.Web/IScriptBundleManager.md) | Abstraction for a script bundling manager. |
 | interface [IScriptMinifier](./Serenity.Web/IScriptMinifier.md) | Abstraction for a script minifier. |
 | interface [IStartedProcess](./Serenity.Web/IStartedProcess.md) | Abstraction for a started system process, so it can be replaced in tests. |
 | interface [IUploadFileResponder](./Serenity.Web/IUploadFileResponder.md) | Abstraction for reading a file via `/upload/path`, e.g. the Read action in the FilePage. |
+| interface [IWebRootFileWatcher](./Serenity.Web/IWebRootFileWatcher.md) | Provides change tokens for web files (under `wwwroot` or static web assets), usually only in development, by reusing physical file providers. |
 | static class [KnownMimeTypes](./Serenity.Web/KnownMimeTypes.md) | Contains a set of known popular mime types. |
+| class [LayoutCssBundleScript](./Serenity.Web/LayoutCssBundleScript.md) | A predefined dynamic CSS bundle that concatenates the layout CSS files declared with [`LayoutCssFileAttribute`](./Serenity.Web/LayoutCssFileAttribute.md). It is registered under [`ScriptName`](./Serenity.Web/LayoutCssBundleScript/ScriptName.md) at startup, so it can be referenced from a bundle definition (e.g. `dynamic://CssBundle.LayoutCssFiles`) or rendered with `@Html.Stylesheet("dynamic://CssBundle.LayoutCssFiles")`. |
+| class [LayoutCssFileAttribute](./Serenity.Web/LayoutCssFileAttribute.md) | Declares a CSS file that should be included in the layout on every page, usually rendered with `@Html.LayoutCssFiles()`. This is intended for dynamically loaded libraries that need their navigation or layout styles to be available on all pages, without depending on a page specific entry point. The declared files are also exposed as a predefined dynamic bundle named [`ScriptName`](./Serenity.Web/LayoutCssBundleScript/ScriptName.md), which can be referenced from a bundle definition (e.g. `dynamic://CssBundle.LayoutCssFiles`). Note that the predefined bundle is generated once and cached, so it does not follow feature toggles dynamically; use `@Html.LayoutCssFiles()` for that. |
+| class [LayoutCssFileOptions](./Serenity.Web/LayoutCssFileOptions.md) | Options for layout CSS files declared with [`LayoutCssFileAttribute`](./Serenity.Web/LayoutCssFileAttribute.md). |
+| class [LayoutCssFileProvider](./Serenity.Web/LayoutCssFileProvider.md) | Default implementation of [`ILayoutCssFileProvider`](./Serenity.Web/ILayoutCssFileProvider.md), which discovers [`LayoutCssFileAttribute`](./Serenity.Web/LayoutCssFileAttribute.md)s from the type source, filters them by the registered IFeatureToggles and an optional filter, and returns them ordered with duplicates removed. |
+| class [LayoutScriptBundleScript](./Serenity.Web/LayoutScriptBundleScript.md) | A predefined dynamic script bundle that concatenates the layout JS files declared with [`LayoutScriptFileAttribute`](./Serenity.Web/LayoutScriptFileAttribute.md). It is registered under [`ScriptName`](./Serenity.Web/LayoutScriptBundleScript/ScriptName.md) at startup, so it can be referenced from a bundle definition (e.g. `dynamic://Bundle.LayoutScriptFiles`) or rendered with `@Html.Script("dynamic://Bundle.LayoutScriptFiles")`. |
+| class [LayoutScriptFileAttribute](./Serenity.Web/LayoutScriptFileAttribute.md) | Declares a JS file that should be included in the layout on every page, usually rendered with `@Html.LayoutScriptFiles()`. This is intended for dynamically loaded libraries that need their scripts to be available on all pages, without depending on a page specific entry point. The declared files are also exposed as a predefined dynamic bundle named [`ScriptName`](./Serenity.Web/LayoutScriptBundleScript/ScriptName.md), which can be referenced from a bundle definition (e.g. `dynamic://Bundle.LayoutScriptFiles`). Note that the predefined bundle is generated once and cached, so it does not follow feature toggles dynamically; use `@Html.LayoutScriptFiles()` for that. |
+| class [LayoutScriptFileOptions](./Serenity.Web/LayoutScriptFileOptions.md) | Options for layout script files declared with [`LayoutScriptFileAttribute`](./Serenity.Web/LayoutScriptFileAttribute.md). |
+| class [LayoutScriptFileProvider](./Serenity.Web/LayoutScriptFileProvider.md) | Default implementation of [`ILayoutScriptFileProvider`](./Serenity.Web/ILayoutScriptFileProvider.md), which discovers [`LayoutScriptFileAttribute`](./Serenity.Web/LayoutScriptFileAttribute.md)s from the type source, filters them by the registered IFeatureToggles and an optional filter, and returns them ordered with duplicates removed. |
 | class [LocalTextDataScript](./Serenity.Web/LocalTextDataScript.md) | Local text data script to access local texts from an external app like mobile. |
 | class [LocalTextScript](./Serenity.Web/LocalTextScript.md) | Local text dynamic script. |
 | abstract class [LookupScript](./Serenity.Web/LookupScript.md) | Dynamic script type for lookup scripts. |
@@ -144,6 +159,7 @@
 | static class [RecaptchaValidation](./Serenity.Web/RecaptchaValidation.md) | Recaptcha validation extensions. This was written for a very old version of Google Recaptcha and might not work properly. |
 | class [RegisteredScripts](./Serenity.Web/RegisteredScripts.md) | A dynamic script type for registered scripts. |
 | class [RowLookupScript&lt;TRow&gt;](./Serenity.Web/RowLookupScript-1.md) | Generic lookup script type for rows. |
+| class [ScriptBundleBuilder](./Serenity.Web/ScriptBundleBuilder.md) | Default implementation of [`IScriptBundleBuilder`](./Serenity.Web/IScriptBundleBuilder.md). |
 | class [ScriptBundleManager](./Serenity.Web/ScriptBundleManager.md) | Default implementation of [`IScriptBundleManager`](./Serenity.Web/IScriptBundleManager.md). |
 | class [ScriptBundlingOptions](./Serenity.Web/ScriptBundlingOptions.md) | Options for script bundling. |
 | class [ScriptContent](./Serenity.Web/ScriptContent.md) | Default implementation of IScriptContent. |
@@ -152,6 +168,7 @@
 | static class [SelectEditorTexts](./Serenity.Web/SelectEditorTexts.md) |  |
 | static class [TemplateHelper](./Serenity.Web/TemplateHelper.md) | Helper methods for CSHTML templating. |
 | static class [VirtualPathUtility](./Serenity.Web/VirtualPathUtility.md) | Extension methods providing partial compatibility with the legacy `VirtualPathUtility`. |
+| class [WebRootFileWatcher](./Serenity.Web/WebRootFileWatcher.md) | Default implementation of [`IWebRootFileWatcher`](./Serenity.Web/IWebRootFileWatcher.md). It reuses physical file providers rooted at `wwwroot` / `staticwebassets` so that watching multiple files in the same directory does not create a new provider each time. Watching is only done in development. |
 | static class [WebTexts](./Serenity.Web/WebTexts.md) |  |
 | class [WebTypeSource](./Serenity.Web/WebTypeSource.md) | Base type source for apps using the Serenity.Web assembly and its reference chain. |
 

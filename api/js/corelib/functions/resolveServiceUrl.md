@@ -4,7 +4,7 @@
 
 > **resolveServiceUrl**(`url`): `string`
 
-Defined in: [src/base/services.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L26)
+Defined in: [src/base/services.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L39)
 
 Resolves a Serenity service endpoint to a full URL.
 Bare service keys like `"Administration/User/List"` are prefixed with `~/Services/`;

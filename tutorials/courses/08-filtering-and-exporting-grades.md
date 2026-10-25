@@ -12,7 +12,7 @@ namespace CourseTutorial.CourseDB.Columns;
 [BasedOnRow(typeof(GradesRow), CheckNames = true)]
 public class GradesColumns
 {
-    [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+    [EditLink, DisplayText(TextKey = "Db.Shared.RecordId"), AlignRight]
     public int? Id { get; set; }
 
     [QuickFilter]

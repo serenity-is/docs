@@ -15,11 +15,11 @@ Next, define a lookup script in the `TenantRow` class and set the `DisplayName` 
 namespace MovieTutorial.Administration;
 
 [ConnectionKey("Default"), Module("Administration"), TableName("Tenants")]
-[DisplayName("Tenant"), InstanceName("Tenant")]
+[DisplayText("Tenant"), InstanceName("Tenant")]
 [LookupScript("Administration.Tenant")]
 public sealed class TenantRow : Row<TenantRow.RowFields>, IIdRow, INameRow
 {
-    [DisplayName("Tenant Id"), Identity, IdProperty]
+    [DisplayText("Tenant Id"), Identity, IdProperty]
     public int? TenantId { get => fields.TenantId[this]; set => fields.TenantId[this] = value; }
     //...
 ```
@@ -30,16 +30,16 @@ Define an `Administration:Tenants` permission that only the _admin_ user will ha
 namespace MovieTutorial.Administration;
 
 [NestedPermissionKeys]
-[DisplayName("Administration")]
+[DisplayText("Administration")]
 public class PermissionKeys
 {
-    [Description("User, Role Management and Permissions")]
+    [DescriptionText("User, Role Management and Permissions")]
     public const string Security = "Administration:Security";
 
-    [Description("Languages and Translations")]
+    [DescriptionText("Languages and Translations")]
     public const string Translation = "Administration:Translation";
 
-    [Description("Tenant Management")]
+    [DescriptionText("Tenant Management")]
     public const string Tenants = "Administration:Tenants";
 }
 ```
@@ -50,7 +50,7 @@ Apply this permission to `TenantRow`:
 namespace MovieTutorial.Administration;
 
 [ConnectionKey("Default"), Module("Administration"), TableName("Tenants")]
-[DisplayName("Tenant"), InstanceName("Tenant")]
+[DisplayText("Tenant"), InstanceName("Tenant")]
 [ReadPermission(PermissionKeys.Tenants)]
 [ModifyPermission(PermissionKeys.Tenants)]
 [ServiceLookupPermission(PermissionKeys.Tenants)]

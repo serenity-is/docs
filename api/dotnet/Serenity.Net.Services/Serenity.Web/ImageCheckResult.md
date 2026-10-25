@@ -26,4 +26,4 @@ public enum ImageCheckResult
 
 ## See Also
 
-* **Source:** *[ImageCheckResult.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Upload/ImageCheckResult.cs)*
+* **Source:** *[ImageCheckResult.cs](https://github.com/serenity-is/Serenity/blob/0c34357a17d56458ca5b7a3be25f42666b9eb050/src/services/Upload/ImageCheckResult.cs)*

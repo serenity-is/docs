@@ -28,4 +28,4 @@ public class ApplicationPartsTypeSource : BaseAssemblyTypeSource
 ## See Also
 
 * class [BaseAssemblyTypeSource](../../Serenity.Net.Core/Serenity.Abstractions/BaseAssemblyTypeSource.md)
-* **Source:** *[ApplicationPartsTypeSource.cs](https://github.com/serenity-is/Serenity/blob/6246a6a0dcfa77021b805dede26464e4de2cb2f6/src/web/Mvc/ApplicationPartsTypeSource.cs)*
+* **Source:** *[ApplicationPartsTypeSource.cs](https://github.com/serenity-is/Serenity/blob/b25593854f2e2d2560030f357d1bb7a1cbd85e65/src/web/Mvc/TypeSources/ApplicationPartsTypeSource.cs)*

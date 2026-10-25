@@ -4,7 +4,7 @@
 
 > **useClassList**(`initialValue?`): [`BasicClassList`](../interfaces/BasicClassList.md)
 
-Defined in: [../domwise/dist/index.d.ts:2667](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2667)
+Defined in: [../domwise/dist/index.d.ts:2972](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2972)
 
 Creates a `classList`-like manager that can be used as a JSX prop hook for the `class` attribute.
 

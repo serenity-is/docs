@@ -4,7 +4,7 @@
 
 > **Show**\<`TWhen`\>(`props`): [`JSXElement`](../type-aliases/JSXElement.md)
 
-Defined in: [../domwise/dist/index.d.ts:2874](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2874)
+Defined in: [../domwise/dist/index.d.ts:3176](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3176)
 
 Conditional rendering helper similar to Solid's `<Show>`.
 

@@ -4,7 +4,7 @@
 
 > **useImperativeHandle**\<`T`\>(`ref`, `init`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2468](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2468)
+Defined in: [../domwise/dist/index.d.ts:2773](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2773)
 
 Compatibility helper similar to React's `useImperativeHandle`.
 

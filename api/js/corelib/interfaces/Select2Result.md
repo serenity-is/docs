@@ -2,7 +2,7 @@
 
 # Interface: Select2Result
 
-Defined in: [src/ui/editors/select2.tsx:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L52)
+Defined in: [src/ui/editors/select2.tsx:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L56)
 
 Result of a Select2 query.
 
@@ -12,7 +12,7 @@ Result of a Select2 query.
 
 > `optional` **context**: `any`
 
-Defined in: [src/ui/editors/select2.tsx:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L62)
+Defined in: [src/ui/editors/select2.tsx:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L66)
 
 Additional context.
 
@@ -22,7 +22,7 @@ Additional context.
 
 > `optional` **errorInfo**: `any`
 
-Defined in: [src/ui/editors/select2.tsx:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L56)
+Defined in: [src/ui/editors/select2.tsx:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L60)
 
 Error information.
 
@@ -32,7 +32,7 @@ Error information.
 
 > `optional` **hasError**: `boolean`
 
-Defined in: [src/ui/editors/select2.tsx:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L54)
+Defined in: [src/ui/editors/select2.tsx:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L58)
 
 Whether the query failed.
 
@@ -42,7 +42,7 @@ Whether the query failed.
 
 > `optional` **more**: `boolean`
 
-Defined in: [src/ui/editors/select2.tsx:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L60)
+Defined in: [src/ui/editors/select2.tsx:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L64)
 
 Whether there are more results.
 
@@ -52,6 +52,6 @@ Whether there are more results.
 
 > **results**: [`Select2Item`](Select2Item.md)[]
 
-Defined in: [src/ui/editors/select2.tsx:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L58)
+Defined in: [src/ui/editors/select2.tsx:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L62)
 
 The result items.

@@ -2,7 +2,7 @@
 
 # Interface: SignalOptions\<T\>
 
-Defined in: [../domwise/dist/index.d.ts:3000](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3000)
+Defined in: [../domwise/dist/index.d.ts:3316](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3316)
 
 Options for creating a signal via [signal](../variables/signal.md) / [computed](../variables/computed.md).
 Re-exported from `@preact/signals-core`.
@@ -21,7 +21,7 @@ Type of the signal's value.
 
 > `optional` **name**: `string`
 
-Defined in: [../domwise/dist/index.d.ts:3006](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3006)
+Defined in: [../domwise/dist/index.d.ts:3322](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3322)
 
 Optional debug name for the signal.
 
@@ -31,7 +31,7 @@ Optional debug name for the signal.
 
 > `optional` **unwatched**: (`this`) => `void`
 
-Defined in: [../domwise/dist/index.d.ts:3004](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3004)
+Defined in: [../domwise/dist/index.d.ts:3320](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3320)
 
 Called when the signal loses its last subscriber.
 
@@ -51,7 +51,7 @@ Called when the signal loses its last subscriber.
 
 > `optional` **watched**: (`this`) => `void`
 
-Defined in: [../domwise/dist/index.d.ts:3002](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3002)
+Defined in: [../domwise/dist/index.d.ts:3318](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3318)
 
 Called when the signal gains its first subscriber.
 

@@ -25,4 +25,4 @@ Initializes a new instance of the [`AuthorizeUndeleteAttribute`](./AuthorizeUnde
 ## See Also
 
 * class [ServiceAuthorizeAttribute](./ServiceAuthorizeAttribute.md)
-* **Source:** *[AuthorizeUndeleteAttribute.cs](https://github.com/serenity-is/Serenity/blob/de1002603cfc02d59089fb21bce26554dfc55916/src/web/Mvc/AuthorizeUndeleteAttribute.cs)*
+* **Source:** *[AuthorizeUndeleteAttribute.cs](https://github.com/serenity-is/Serenity/blob/b25593854f2e2d2560030f357d1bb7a1cbd85e65/src/web/Mvc/Authorization/AuthorizeUndeleteAttribute.cs)*

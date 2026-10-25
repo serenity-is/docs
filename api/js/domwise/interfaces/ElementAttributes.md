@@ -2,7 +2,7 @@
 
 # Interface: ElementAttributes\<T\>
 
-Defined in: [types/jsx-elements.d.ts:555](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L555)
+Defined in: [types/jsx-elements.d.ts:553](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L553)
 
 Global `Element` + `Node` interface keys, shared by all tags regardless of their namespace:
 
@@ -927,7 +927,7 @@ Defines the human readable text alternative of aria-valuenow for a range widget.
 
 > `optional` **autofocus**: [`PropValue`](../type-aliases/PropValue.md)\<`boolean` \| `""` \| `undefined`\>
 
-Defined in: [types/jsx-elements.d.ts:569](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L569)
+Defined in: [types/jsx-elements.d.ts:567](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L567)
 
 ***
 
@@ -949,7 +949,7 @@ Child nodes / JSX children for the element.
 
 > `optional` **class**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false` \| `DOMTokenList` \| [`SignalLike`](SignalLike.md)\<`string` \| `boolean` \| `null` \| `undefined`\> \| \{\[`key`: `string`\]: `boolean` \| [`SignalLike`](SignalLike.md)\<`string` \| `boolean` \| `null` \| `undefined`\>; \} \| [`ClassName`](../type-aliases/ClassName.md)[] \| `Iterable`\<[`ClassName`](../type-aliases/ClassName.md), `any`, `any`\> \| `null` \| `undefined`\> \| \{\[`key`: `string`\]: [`PropValue`](../type-aliases/PropValue.md)\<true \| RemoveAttribute\>; \}
 
-Defined in: [types/jsx-elements.d.ts:570](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L570)
+Defined in: [types/jsx-elements.d.ts:568](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L568)
 
 ***
 
@@ -983,7 +983,7 @@ Raw HTML to assign via `innerHTML`. Use with caution — content is not escaped.
 
 > `optional` **elementtiming**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `RemoveAttribute`\>
 
-Defined in: [types/jsx-elements.d.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L571)
+Defined in: [types/jsx-elements.d.ts:569](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L569)
 
 ***
 
@@ -991,7 +991,7 @@ Defined in: [types/jsx-elements.d.ts:571](https://github.com/serenity-is/serenit
 
 > `optional` **id**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `RemoveAttribute`\>
 
-Defined in: [types/jsx-elements.d.ts:572](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L572)
+Defined in: [types/jsx-elements.d.ts:570](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L570)
 
 ***
 
@@ -1007,7 +1007,7 @@ Defined in: [types/custom-attributes.d.ts:33](https://github.com/serenity-is/ser
 
 > `optional` **nonce**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `RemoveAttribute`\>
 
-Defined in: [types/jsx-elements.d.ts:573](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L573)
+Defined in: [types/jsx-elements.d.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L571)
 
 ***
 
@@ -1495,7 +1495,7 @@ Defined in: [types/jsx-elements.d.ts:438](https://github.com/serenity-is/serenit
 
 > `optional` **onContextLost**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:441](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L441)
+Defined in: [types/jsx-elements.d.ts:439](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L439)
 
 #### Inherited from
 
@@ -1513,7 +1513,7 @@ Defined in: [types/jsx-elements.d.ts:441](https://github.com/serenity-is/serenit
 
 > `optional` **onContextMenu**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:442](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L442)
+Defined in: [types/jsx-elements.d.ts:440](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L440)
 
 #### Inherited from
 
@@ -1531,7 +1531,7 @@ Defined in: [types/jsx-elements.d.ts:442](https://github.com/serenity-is/serenit
 
 > `optional` **onContextRestored**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:443](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L443)
+Defined in: [types/jsx-elements.d.ts:441](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L441)
 
 #### Inherited from
 
@@ -1549,7 +1549,7 @@ Defined in: [types/jsx-elements.d.ts:443](https://github.com/serenity-is/serenit
 
 > `optional` **onCopy**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:444](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L444)
+Defined in: [types/jsx-elements.d.ts:442](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L442)
 
 #### Inherited from
 
@@ -1567,7 +1567,7 @@ Defined in: [types/jsx-elements.d.ts:444](https://github.com/serenity-is/serenit
 
 > `optional` **onCueChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:445](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L445)
+Defined in: [types/jsx-elements.d.ts:443](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L443)
 
 #### Inherited from
 
@@ -1585,7 +1585,7 @@ Defined in: [types/jsx-elements.d.ts:445](https://github.com/serenity-is/serenit
 
 > `optional` **onCut**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:446](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L446)
+Defined in: [types/jsx-elements.d.ts:444](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L444)
 
 #### Inherited from
 
@@ -1603,7 +1603,7 @@ Defined in: [types/jsx-elements.d.ts:446](https://github.com/serenity-is/serenit
 
 > `optional` **onDblClick**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:447](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L447)
+Defined in: [types/jsx-elements.d.ts:445](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L445)
 
 #### Inherited from
 
@@ -1639,7 +1639,7 @@ Defined in: [types/custom-attributes.d.ts:37](https://github.com/serenity-is/ser
 
 > `optional` **onDrag**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:448](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L448)
+Defined in: [types/jsx-elements.d.ts:446](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L446)
 
 #### Inherited from
 
@@ -1657,7 +1657,7 @@ Defined in: [types/jsx-elements.d.ts:448](https://github.com/serenity-is/serenit
 
 > `optional` **onDragEnd**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:449](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L449)
+Defined in: [types/jsx-elements.d.ts:447](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L447)
 
 #### Inherited from
 
@@ -1675,7 +1675,7 @@ Defined in: [types/jsx-elements.d.ts:449](https://github.com/serenity-is/serenit
 
 > `optional` **onDragEnter**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:450](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L450)
+Defined in: [types/jsx-elements.d.ts:448](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L448)
 
 #### Inherited from
 
@@ -1693,7 +1693,7 @@ Defined in: [types/jsx-elements.d.ts:450](https://github.com/serenity-is/serenit
 
 > `optional` **onDragExit**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:451](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L451)
+Defined in: [types/jsx-elements.d.ts:449](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L449)
 
 #### Inherited from
 
@@ -1711,7 +1711,7 @@ Defined in: [types/jsx-elements.d.ts:451](https://github.com/serenity-is/serenit
 
 > `optional` **onDragLeave**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:452](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L452)
+Defined in: [types/jsx-elements.d.ts:450](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L450)
 
 #### Inherited from
 
@@ -1729,7 +1729,7 @@ Defined in: [types/jsx-elements.d.ts:452](https://github.com/serenity-is/serenit
 
 > `optional` **onDragOver**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:453](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L453)
+Defined in: [types/jsx-elements.d.ts:451](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L451)
 
 #### Inherited from
 
@@ -1747,7 +1747,7 @@ Defined in: [types/jsx-elements.d.ts:453](https://github.com/serenity-is/serenit
 
 > `optional` **onDragStart**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:454](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L454)
+Defined in: [types/jsx-elements.d.ts:452](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L452)
 
 #### Inherited from
 
@@ -1765,7 +1765,7 @@ Defined in: [types/jsx-elements.d.ts:454](https://github.com/serenity-is/serenit
 
 > `optional` **onDrop**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:455](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L455)
+Defined in: [types/jsx-elements.d.ts:453](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L453)
 
 #### Inherited from
 
@@ -1783,7 +1783,7 @@ Defined in: [types/jsx-elements.d.ts:455](https://github.com/serenity-is/serenit
 
 > `optional` **onDurationChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:456](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L456)
+Defined in: [types/jsx-elements.d.ts:454](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L454)
 
 #### Inherited from
 
@@ -1801,7 +1801,7 @@ Defined in: [types/jsx-elements.d.ts:456](https://github.com/serenity-is/serenit
 
 > `optional` **onEmptied**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:457](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L457)
+Defined in: [types/jsx-elements.d.ts:455](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L455)
 
 #### Inherited from
 
@@ -1819,7 +1819,7 @@ Defined in: [types/jsx-elements.d.ts:457](https://github.com/serenity-is/serenit
 
 > `optional` **onEnded**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:458](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L458)
+Defined in: [types/jsx-elements.d.ts:456](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L456)
 
 #### Inherited from
 
@@ -1837,7 +1837,7 @@ Defined in: [types/jsx-elements.d.ts:458](https://github.com/serenity-is/serenit
 
 > `optional` **onError**: `EventHandler`\<`T`, `ErrorEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:459](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L459)
+Defined in: [types/jsx-elements.d.ts:457](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L457)
 
 #### Inherited from
 
@@ -1855,7 +1855,7 @@ Defined in: [types/jsx-elements.d.ts:459](https://github.com/serenity-is/serenit
 
 > `optional` **onFocus**: `FocusEventHandler`\<`T`, `FocusEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:460](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L460)
+Defined in: [types/jsx-elements.d.ts:458](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L458)
 
 #### Inherited from
 
@@ -1873,7 +1873,7 @@ Defined in: [types/jsx-elements.d.ts:460](https://github.com/serenity-is/serenit
 
 > `optional` **onFocusIn**: `FocusEventHandler`\<`T`, `FocusEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:461](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L461)
+Defined in: [types/jsx-elements.d.ts:459](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L459)
 
 #### Inherited from
 
@@ -1891,7 +1891,7 @@ Defined in: [types/jsx-elements.d.ts:461](https://github.com/serenity-is/serenit
 
 > `optional` **onFocusOut**: `FocusEventHandler`\<`T`, `FocusEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:462](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L462)
+Defined in: [types/jsx-elements.d.ts:460](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L460)
 
 #### Inherited from
 
@@ -1909,7 +1909,7 @@ Defined in: [types/jsx-elements.d.ts:462](https://github.com/serenity-is/serenit
 
 > `optional` **onFormData**: `EventHandler`\<`T`, `FormDataEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:463](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L463)
+Defined in: [types/jsx-elements.d.ts:461](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L461)
 
 #### Inherited from
 
@@ -1927,7 +1927,7 @@ Defined in: [types/jsx-elements.d.ts:463](https://github.com/serenity-is/serenit
 
 > `optional` **onFullscreenChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:464](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L464)
+Defined in: [types/jsx-elements.d.ts:462](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L462)
 
 #### Inherited from
 
@@ -1945,7 +1945,7 @@ Defined in: [types/jsx-elements.d.ts:464](https://github.com/serenity-is/serenit
 
 > `optional` **onFullscreenError**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:465](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L465)
+Defined in: [types/jsx-elements.d.ts:463](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L463)
 
 #### Inherited from
 
@@ -1963,7 +1963,7 @@ Defined in: [types/jsx-elements.d.ts:465](https://github.com/serenity-is/serenit
 
 > `optional` **onGotPointerCapture**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:466](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L466)
+Defined in: [types/jsx-elements.d.ts:464](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L464)
 
 #### Inherited from
 
@@ -1981,7 +1981,7 @@ Defined in: [types/jsx-elements.d.ts:466](https://github.com/serenity-is/serenit
 
 > `optional` **onInput**: `InputEventHandler`\<`T`, `InputEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:467](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L467)
+Defined in: [types/jsx-elements.d.ts:465](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L465)
 
 #### Inherited from
 
@@ -1999,7 +1999,7 @@ Defined in: [types/jsx-elements.d.ts:467](https://github.com/serenity-is/serenit
 
 > `optional` **onInvalid**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:468](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L468)
+Defined in: [types/jsx-elements.d.ts:466](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L466)
 
 #### Inherited from
 
@@ -2017,7 +2017,7 @@ Defined in: [types/jsx-elements.d.ts:468](https://github.com/serenity-is/serenit
 
 > `optional` **onKeyDown**: `EventHandler`\<`T`, `KeyboardEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:469](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L469)
+Defined in: [types/jsx-elements.d.ts:467](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L467)
 
 #### Inherited from
 
@@ -2035,7 +2035,7 @@ Defined in: [types/jsx-elements.d.ts:469](https://github.com/serenity-is/serenit
 
 > `optional` **onKeyPress**: `EventHandler`\<`T`, `KeyboardEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:470](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L470)
+Defined in: [types/jsx-elements.d.ts:468](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L468)
 
 #### Inherited from
 
@@ -2053,7 +2053,7 @@ Defined in: [types/jsx-elements.d.ts:470](https://github.com/serenity-is/serenit
 
 > `optional` **onKeyUp**: `EventHandler`\<`T`, `KeyboardEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:471](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L471)
+Defined in: [types/jsx-elements.d.ts:469](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L469)
 
 #### Inherited from
 
@@ -2071,7 +2071,7 @@ Defined in: [types/jsx-elements.d.ts:471](https://github.com/serenity-is/serenit
 
 > `optional` **onLoad**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:472](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L472)
+Defined in: [types/jsx-elements.d.ts:470](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L470)
 
 #### Inherited from
 
@@ -2089,7 +2089,7 @@ Defined in: [types/jsx-elements.d.ts:472](https://github.com/serenity-is/serenit
 
 > `optional` **onLoadedData**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:473](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L473)
+Defined in: [types/jsx-elements.d.ts:471](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L471)
 
 #### Inherited from
 
@@ -2107,7 +2107,7 @@ Defined in: [types/jsx-elements.d.ts:473](https://github.com/serenity-is/serenit
 
 > `optional` **onLoadedMetadata**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:474](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L474)
+Defined in: [types/jsx-elements.d.ts:472](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L472)
 
 #### Inherited from
 
@@ -2125,7 +2125,7 @@ Defined in: [types/jsx-elements.d.ts:474](https://github.com/serenity-is/serenit
 
 > `optional` **onLoadStart**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:475](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L475)
+Defined in: [types/jsx-elements.d.ts:473](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L473)
 
 #### Inherited from
 
@@ -2143,7 +2143,7 @@ Defined in: [types/jsx-elements.d.ts:475](https://github.com/serenity-is/serenit
 
 > `optional` **onLostPointerCapture**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:476](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L476)
+Defined in: [types/jsx-elements.d.ts:474](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L474)
 
 #### Inherited from
 
@@ -2161,7 +2161,7 @@ Defined in: [types/jsx-elements.d.ts:476](https://github.com/serenity-is/serenit
 
 > `optional` **onMouseDown**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:477](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L477)
+Defined in: [types/jsx-elements.d.ts:475](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L475)
 
 #### Inherited from
 
@@ -2179,7 +2179,7 @@ Defined in: [types/jsx-elements.d.ts:477](https://github.com/serenity-is/serenit
 
 > `optional` **onMouseEnter**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:478](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L478)
+Defined in: [types/jsx-elements.d.ts:476](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L476)
 
 #### Inherited from
 
@@ -2197,7 +2197,7 @@ Defined in: [types/jsx-elements.d.ts:478](https://github.com/serenity-is/serenit
 
 > `optional` **onMouseLeave**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:479](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L479)
+Defined in: [types/jsx-elements.d.ts:477](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L477)
 
 #### Inherited from
 
@@ -2215,7 +2215,7 @@ Defined in: [types/jsx-elements.d.ts:479](https://github.com/serenity-is/serenit
 
 > `optional` **onMouseMove**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:480](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L480)
+Defined in: [types/jsx-elements.d.ts:478](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L478)
 
 #### Inherited from
 
@@ -2233,7 +2233,7 @@ Defined in: [types/jsx-elements.d.ts:480](https://github.com/serenity-is/serenit
 
 > `optional` **onMouseOut**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:481](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L481)
+Defined in: [types/jsx-elements.d.ts:479](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L479)
 
 #### Inherited from
 
@@ -2251,7 +2251,7 @@ Defined in: [types/jsx-elements.d.ts:481](https://github.com/serenity-is/serenit
 
 > `optional` **onMouseOver**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:482](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L482)
+Defined in: [types/jsx-elements.d.ts:480](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L480)
 
 #### Inherited from
 
@@ -2269,7 +2269,7 @@ Defined in: [types/jsx-elements.d.ts:482](https://github.com/serenity-is/serenit
 
 > `optional` **onMouseUp**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:483](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L483)
+Defined in: [types/jsx-elements.d.ts:481](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L481)
 
 #### Inherited from
 
@@ -2287,7 +2287,7 @@ Defined in: [types/jsx-elements.d.ts:483](https://github.com/serenity-is/serenit
 
 > `optional` **onPaste**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:484](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L484)
+Defined in: [types/jsx-elements.d.ts:482](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L482)
 
 #### Inherited from
 
@@ -2305,7 +2305,7 @@ Defined in: [types/jsx-elements.d.ts:484](https://github.com/serenity-is/serenit
 
 > `optional` **onPause**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:485](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L485)
+Defined in: [types/jsx-elements.d.ts:483](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L483)
 
 #### Inherited from
 
@@ -2323,7 +2323,7 @@ Defined in: [types/jsx-elements.d.ts:485](https://github.com/serenity-is/serenit
 
 > `optional` **onPlay**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:486](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L486)
+Defined in: [types/jsx-elements.d.ts:484](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L484)
 
 #### Inherited from
 
@@ -2341,7 +2341,7 @@ Defined in: [types/jsx-elements.d.ts:486](https://github.com/serenity-is/serenit
 
 > `optional` **onPlaying**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:487](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L487)
+Defined in: [types/jsx-elements.d.ts:485](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L485)
 
 #### Inherited from
 
@@ -2359,7 +2359,7 @@ Defined in: [types/jsx-elements.d.ts:487](https://github.com/serenity-is/serenit
 
 > `optional` **onPointerCancel**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:488](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L488)
+Defined in: [types/jsx-elements.d.ts:486](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L486)
 
 #### Inherited from
 
@@ -2377,7 +2377,7 @@ Defined in: [types/jsx-elements.d.ts:488](https://github.com/serenity-is/serenit
 
 > `optional` **onPointerDown**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:489](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L489)
+Defined in: [types/jsx-elements.d.ts:487](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L487)
 
 #### Inherited from
 
@@ -2395,7 +2395,7 @@ Defined in: [types/jsx-elements.d.ts:489](https://github.com/serenity-is/serenit
 
 > `optional` **onPointerEnter**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:490](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L490)
+Defined in: [types/jsx-elements.d.ts:488](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L488)
 
 #### Inherited from
 
@@ -2413,7 +2413,7 @@ Defined in: [types/jsx-elements.d.ts:490](https://github.com/serenity-is/serenit
 
 > `optional` **onPointerLeave**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:491](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L491)
+Defined in: [types/jsx-elements.d.ts:489](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L489)
 
 #### Inherited from
 
@@ -2431,7 +2431,7 @@ Defined in: [types/jsx-elements.d.ts:491](https://github.com/serenity-is/serenit
 
 > `optional` **onPointerMove**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:492](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L492)
+Defined in: [types/jsx-elements.d.ts:490](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L490)
 
 #### Inherited from
 
@@ -2449,7 +2449,7 @@ Defined in: [types/jsx-elements.d.ts:492](https://github.com/serenity-is/serenit
 
 > `optional` **onPointerOut**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:493](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L493)
+Defined in: [types/jsx-elements.d.ts:491](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L491)
 
 #### Inherited from
 
@@ -2467,7 +2467,7 @@ Defined in: [types/jsx-elements.d.ts:493](https://github.com/serenity-is/serenit
 
 > `optional` **onPointerOver**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:494](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L494)
+Defined in: [types/jsx-elements.d.ts:492](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L492)
 
 #### Inherited from
 
@@ -2485,7 +2485,7 @@ Defined in: [types/jsx-elements.d.ts:494](https://github.com/serenity-is/serenit
 
 > `optional` **onPointerRawUpdate**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:495](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L495)
+Defined in: [types/jsx-elements.d.ts:493](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L493)
 
 #### Inherited from
 
@@ -2503,7 +2503,7 @@ Defined in: [types/jsx-elements.d.ts:495](https://github.com/serenity-is/serenit
 
 > `optional` **onPointerUp**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:496](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L496)
+Defined in: [types/jsx-elements.d.ts:494](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L494)
 
 #### Inherited from
 
@@ -2521,7 +2521,7 @@ Defined in: [types/jsx-elements.d.ts:496](https://github.com/serenity-is/serenit
 
 > `optional` **onProgress**: `EventHandler`\<`T`, `ProgressEvent`\<`EventTarget`\>\>
 
-Defined in: [types/jsx-elements.d.ts:497](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L497)
+Defined in: [types/jsx-elements.d.ts:495](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L495)
 
 #### Inherited from
 
@@ -2539,7 +2539,7 @@ Defined in: [types/jsx-elements.d.ts:497](https://github.com/serenity-is/serenit
 
 > `optional` **onRateChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:498](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L498)
+Defined in: [types/jsx-elements.d.ts:496](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L496)
 
 #### Inherited from
 
@@ -2557,7 +2557,7 @@ Defined in: [types/jsx-elements.d.ts:498](https://github.com/serenity-is/serenit
 
 > `optional` **onReset**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:499](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L499)
+Defined in: [types/jsx-elements.d.ts:497](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L497)
 
 #### Inherited from
 
@@ -2575,7 +2575,7 @@ Defined in: [types/jsx-elements.d.ts:499](https://github.com/serenity-is/serenit
 
 > `optional` **onResize**: `EventHandler`\<`T`, `UIEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:500](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L500)
+Defined in: [types/jsx-elements.d.ts:498](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L498)
 
 #### Inherited from
 
@@ -2593,7 +2593,7 @@ Defined in: [types/jsx-elements.d.ts:500](https://github.com/serenity-is/serenit
 
 > `optional` **onScroll**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:501](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L501)
+Defined in: [types/jsx-elements.d.ts:499](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L499)
 
 #### Inherited from
 
@@ -2611,7 +2611,7 @@ Defined in: [types/jsx-elements.d.ts:501](https://github.com/serenity-is/serenit
 
 > `optional` **onScrollEnd**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:502](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L502)
+Defined in: [types/jsx-elements.d.ts:500](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L500)
 
 #### Inherited from
 
@@ -2629,7 +2629,7 @@ Defined in: [types/jsx-elements.d.ts:502](https://github.com/serenity-is/serenit
 
 > `optional` **onScrollSnapChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:503](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L503)
+Defined in: [types/jsx-elements.d.ts:501](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L501)
 
 #### Inherited from
 
@@ -2647,7 +2647,7 @@ Defined in: [types/jsx-elements.d.ts:503](https://github.com/serenity-is/serenit
 
 > `optional` **onScrollSnapChanging**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:504](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L504)
+Defined in: [types/jsx-elements.d.ts:502](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L502)
 
 #### Inherited from
 
@@ -2665,7 +2665,7 @@ Defined in: [types/jsx-elements.d.ts:504](https://github.com/serenity-is/serenit
 
 > `optional` **onSecurityPolicyViolation**: `EventHandler`\<`T`, `SecurityPolicyViolationEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:505](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L505)
+Defined in: [types/jsx-elements.d.ts:503](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L503)
 
 #### Inherited from
 
@@ -2683,7 +2683,7 @@ Defined in: [types/jsx-elements.d.ts:505](https://github.com/serenity-is/serenit
 
 > `optional` **onSeeked**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:506](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L506)
+Defined in: [types/jsx-elements.d.ts:504](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L504)
 
 #### Inherited from
 
@@ -2701,7 +2701,7 @@ Defined in: [types/jsx-elements.d.ts:506](https://github.com/serenity-is/serenit
 
 > `optional` **onSeeking**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:507](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L507)
+Defined in: [types/jsx-elements.d.ts:505](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L505)
 
 #### Inherited from
 
@@ -2719,7 +2719,7 @@ Defined in: [types/jsx-elements.d.ts:507](https://github.com/serenity-is/serenit
 
 > `optional` **onSelect**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:508](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L508)
+Defined in: [types/jsx-elements.d.ts:506](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L506)
 
 #### Inherited from
 
@@ -2737,7 +2737,7 @@ Defined in: [types/jsx-elements.d.ts:508](https://github.com/serenity-is/serenit
 
 > `optional` **onSelectionChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:509](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L509)
+Defined in: [types/jsx-elements.d.ts:507](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L507)
 
 #### Inherited from
 
@@ -2755,7 +2755,7 @@ Defined in: [types/jsx-elements.d.ts:509](https://github.com/serenity-is/serenit
 
 > `optional` **onSelectStart**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:510](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L510)
+Defined in: [types/jsx-elements.d.ts:508](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L508)
 
 #### Inherited from
 
@@ -2773,7 +2773,7 @@ Defined in: [types/jsx-elements.d.ts:510](https://github.com/serenity-is/serenit
 
 > `optional` **onSlotChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:511](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L511)
+Defined in: [types/jsx-elements.d.ts:509](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L509)
 
 #### Inherited from
 
@@ -2791,7 +2791,7 @@ Defined in: [types/jsx-elements.d.ts:511](https://github.com/serenity-is/serenit
 
 > `optional` **onStalled**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L512)
+Defined in: [types/jsx-elements.d.ts:510](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L510)
 
 #### Inherited from
 
@@ -2809,7 +2809,7 @@ Defined in: [types/jsx-elements.d.ts:512](https://github.com/serenity-is/serenit
 
 > `optional` **onSubmit**: `EventHandler`\<`T`, `SubmitEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:513](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L513)
+Defined in: [types/jsx-elements.d.ts:511](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L511)
 
 #### Inherited from
 
@@ -2827,7 +2827,7 @@ Defined in: [types/jsx-elements.d.ts:513](https://github.com/serenity-is/serenit
 
 > `optional` **onSuspend**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:514](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L514)
+Defined in: [types/jsx-elements.d.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L512)
 
 #### Inherited from
 
@@ -2845,7 +2845,7 @@ Defined in: [types/jsx-elements.d.ts:514](https://github.com/serenity-is/serenit
 
 > `optional` **onTimeUpdate**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:515](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L515)
+Defined in: [types/jsx-elements.d.ts:513](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L513)
 
 #### Inherited from
 
@@ -2863,7 +2863,7 @@ Defined in: [types/jsx-elements.d.ts:515](https://github.com/serenity-is/serenit
 
 > `optional` **onToggle**: `EventHandler`\<`T`, `ToggleEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:516](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L516)
+Defined in: [types/jsx-elements.d.ts:514](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L514)
 
 #### Inherited from
 
@@ -2881,7 +2881,7 @@ Defined in: [types/jsx-elements.d.ts:516](https://github.com/serenity-is/serenit
 
 > `optional` **onTouchCancel**: `EventHandler`\<`T`, `TouchEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:517](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L517)
+Defined in: [types/jsx-elements.d.ts:515](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L515)
 
 #### Inherited from
 
@@ -2899,7 +2899,7 @@ Defined in: [types/jsx-elements.d.ts:517](https://github.com/serenity-is/serenit
 
 > `optional` **onTouchEnd**: `EventHandler`\<`T`, `TouchEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:518](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L518)
+Defined in: [types/jsx-elements.d.ts:516](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L516)
 
 #### Inherited from
 
@@ -2917,7 +2917,7 @@ Defined in: [types/jsx-elements.d.ts:518](https://github.com/serenity-is/serenit
 
 > `optional` **onTouchMove**: `EventHandler`\<`T`, `TouchEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L519)
+Defined in: [types/jsx-elements.d.ts:517](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L517)
 
 #### Inherited from
 
@@ -2935,7 +2935,7 @@ Defined in: [types/jsx-elements.d.ts:519](https://github.com/serenity-is/serenit
 
 > `optional` **onTouchStart**: `EventHandler`\<`T`, `TouchEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:520](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L520)
+Defined in: [types/jsx-elements.d.ts:518](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L518)
 
 #### Inherited from
 
@@ -2953,7 +2953,7 @@ Defined in: [types/jsx-elements.d.ts:520](https://github.com/serenity-is/serenit
 
 > `optional` **onTransitionCancel**: `EventHandler`\<`T`, `TransitionEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:521](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L521)
+Defined in: [types/jsx-elements.d.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L519)
 
 #### Inherited from
 
@@ -2971,7 +2971,7 @@ Defined in: [types/jsx-elements.d.ts:521](https://github.com/serenity-is/serenit
 
 > `optional` **onTransitionEnd**: `EventHandler`\<`T`, `TransitionEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:522](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L522)
+Defined in: [types/jsx-elements.d.ts:520](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L520)
 
 #### Inherited from
 
@@ -2989,7 +2989,7 @@ Defined in: [types/jsx-elements.d.ts:522](https://github.com/serenity-is/serenit
 
 > `optional` **onTransitionRun**: `EventHandler`\<`T`, `TransitionEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:523](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L523)
+Defined in: [types/jsx-elements.d.ts:521](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L521)
 
 #### Inherited from
 
@@ -3007,7 +3007,7 @@ Defined in: [types/jsx-elements.d.ts:523](https://github.com/serenity-is/serenit
 
 > `optional` **onTransitionStart**: `EventHandler`\<`T`, `TransitionEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:524](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L524)
+Defined in: [types/jsx-elements.d.ts:522](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L522)
 
 #### Inherited from
 
@@ -3025,7 +3025,7 @@ Defined in: [types/jsx-elements.d.ts:524](https://github.com/serenity-is/serenit
 
 > `optional` **onVolumeChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:525](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L525)
+Defined in: [types/jsx-elements.d.ts:523](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L523)
 
 #### Inherited from
 
@@ -3043,7 +3043,7 @@ Defined in: [types/jsx-elements.d.ts:525](https://github.com/serenity-is/serenit
 
 > `optional` **onWaiting**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [types/jsx-elements.d.ts:526](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L526)
+Defined in: [types/jsx-elements.d.ts:524](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L524)
 
 #### Inherited from
 
@@ -3061,7 +3061,7 @@ Defined in: [types/jsx-elements.d.ts:526](https://github.com/serenity-is/serenit
 
 > `optional` **onWheel**: `EventHandler`\<`T`, `WheelEvent`\>
 
-Defined in: [types/jsx-elements.d.ts:527](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L527)
+Defined in: [types/jsx-elements.d.ts:525](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L525)
 
 #### Inherited from
 
@@ -3079,7 +3079,7 @@ Defined in: [types/jsx-elements.d.ts:527](https://github.com/serenity-is/serenit
 
 > `optional` **part**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `RemoveAttribute`\>
 
-Defined in: [types/jsx-elements.d.ts:574](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L574)
+Defined in: [types/jsx-elements.d.ts:572](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L572)
 
 ***
 
@@ -3113,7 +3113,7 @@ Defined in: [types/jsx-elements.d.ts:368](https://github.com/serenity-is/serenit
 
 > `optional` **slot**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `RemoveAttribute`\>
 
-Defined in: [types/jsx-elements.d.ts:575](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L575)
+Defined in: [types/jsx-elements.d.ts:573](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L573)
 
 ***
 
@@ -3121,7 +3121,7 @@ Defined in: [types/jsx-elements.d.ts:575](https://github.com/serenity-is/serenit
 
 > `optional` **style**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `RemoveAttribute` \| [`StyleProperties`](../type-aliases/StyleProperties.md) \| [`StyleProperties`](../type-aliases/StyleProperties.md)[]\>
 
-Defined in: [types/jsx-elements.d.ts:576](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L576)
+Defined in: [types/jsx-elements.d.ts:574](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L574)
 
 ***
 
@@ -3129,7 +3129,7 @@ Defined in: [types/jsx-elements.d.ts:576](https://github.com/serenity-is/serenit
 
 > `optional` **tabindex**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `RemoveAttribute`\>
 
-Defined in: [types/jsx-elements.d.ts:577](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L577)
+Defined in: [types/jsx-elements.d.ts:575](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L575)
 
 ***
 
@@ -3145,4 +3145,4 @@ Defined in: [types/custom-attributes.d.ts:32](https://github.com/serenity-is/ser
 
 > `optional` **textContent**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number`\>
 
-Defined in: [types/jsx-elements.d.ts:566](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L566)
+Defined in: [types/jsx-elements.d.ts:564](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L564)

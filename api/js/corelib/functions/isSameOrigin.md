@@ -4,7 +4,7 @@
 
 > **isSameOrigin**(`url`): `boolean`
 
-Defined in: [src/base/services.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L56)
+Defined in: [src/base/services.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L69)
 
 Checks whether a URL is same-origin with the current page.
 Used to decide whether to attach the `X-CSRF-TOKEN` header.

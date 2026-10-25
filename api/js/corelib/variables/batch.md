@@ -4,7 +4,7 @@
 
 > `const` **batch**: \<`T`\>(`fn`) => `T`
 
-Defined in: [../domwise/dist/index.d.ts:3059](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3059)
+Defined in: [../domwise/dist/index.d.ts:3375](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3375)
 
 Batches multiple signal updates into a single notification.
 Re-exported from `@preact/signals-core`.

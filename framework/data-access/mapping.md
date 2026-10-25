@@ -393,7 +393,7 @@ LEFT JOIN CustomerDetails cd ON (cd.[CustomerId] = T0.[Id])
 Sometimes it might not be possible to use a common expression. For example, Sqlite has no CONCAT operator. For this, the `Expression`, `Tablename`, `LeftJoin` attribute and some other attributes accept a `Dialect` option.
 
 ```cs
-[DisplayName("FullName"), QuickSearch]
+[DisplayText("FullName"), QuickSearch]
 [Expression("CONCAT(T0.[FirstName], CONCAT(' ', T0.[LastName]))")]
 [Expression("(T0.FirstName || ' ' || T0.LastName)", Dialect = nameof(ServerType.Sqlite))]
 public String FullName
@@ -416,7 +416,7 @@ Expression for a field is determined (fixed) while a `RowFields` instance is fir
 It is also possible to specify multiple dialects:
 
 ```cs
-[DisplayName("FullName"), QuickSearch]
+[DisplayText("FullName"), QuickSearch]
 [Expression("CONCAT(T0.[FirstName], CONCAT(' ', T0.[LastName]))")]
 [Expression("T0.[FirstName] + ' ' + T0.[LastName]", 
      Dialect = "SqlServer2000,SqlServer2005")]
@@ -486,7 +486,7 @@ The connection key is used to create connections for the row's handlers and quer
 The [NotMapped](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/NotMappedAttribute.md) attribute marks a property as **not mapped** to a database column. Such fields are not selected by default and are ignored by the save handlers:
 
 ```cs
-[DisplayName("Cast List"), NotMapped]
+[DisplayText("Cast List"), NotMapped]
 public List<MovieCastRow>? CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
 ```
 
@@ -497,7 +497,7 @@ This is used for in-memory fields like master-detail lists, linking sets, and ot
 The [Origin](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/OriginAttribute.md) attribute specifies that a view field originates from a joined table:
 
 ```cs
-[Origin("sup"), DisplayName("Supplier")]
+[Origin("sup"), DisplayText("Supplier")]
 public string? SupplierCompanyName { get => fields.SupplierCompanyName[this]; set => fields.SupplierCompanyName[this] = value; }
 ```
 
@@ -512,10 +512,10 @@ Here `"sup"` is the join alias. The field's expression is derived from the join 
 - [InstanceName](../../api/dotnet/Serenity.Net.Services/Serenity.Data/InstanceNameAttribute.md) — sets the non-plural name for an entity (used for dialog titles).
 
 ```cs
-[DisplayName("Person Id"), Identity, IdProperty]
+[DisplayText("Person Id"), Identity, IdProperty]
 public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }
 
-[DisplayName("Full Name"), NameProperty]
+[DisplayText("Full Name"), NameProperty]
 public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
 ```
 
@@ -541,10 +541,10 @@ Migrations should use the same options: `.AsUserIdType(userEntityOptions)` selec
 - [NotNull](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/NotNullAttribute.md) — marks the field as not-null (sets the `NotNull` field flag).
 
 ```cs
-[DisplayName("First Name"), Size(50), NotNull]
+[DisplayText("First Name"), Size(50), NotNull]
 public string? FirstName { get => fields.FirstName[this]; set => fields.FirstName[this] = value; }
 
-[DisplayName("Unit Price"), Scale(4)]
+[DisplayText("Unit Price"), Scale(4)]
 public decimal? UnitPrice { get => fields.UnitPrice[this]; set => fields.UnitPrice[this] = value; }
 ```
 
@@ -553,7 +553,7 @@ public decimal? UnitPrice { get => fields.UnitPrice[this]; set => fields.UnitPri
 The [QuickSearch](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/QuickSearchAttribute.md) attribute marks a property so it's included in quick text searches (the search box in grids):
 
 ```cs
-[DisplayName("Product Name"), Size(40), NotNull, QuickSearch]
+[DisplayText("Product Name"), Size(40), NotNull, QuickSearch]
 public string? ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
 ```
 
@@ -572,10 +572,10 @@ The [SearchType](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/Se
 The [TextualField](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/TextualFieldAttribute.md) attribute is placed on a foreign key and specifies which field in the joined table should be used for display/filtering:
 
 ```cs
-[DisplayName("Supplier"), ForeignKey(typeof(SupplierRow)), LeftJoin("sup"), TextualField(nameof(SupplierCompanyName))]
+[DisplayText("Supplier"), ForeignKey(typeof(SupplierRow)), LeftJoin("sup"), TextualField(nameof(SupplierCompanyName))]
 public int? SupplierID { get => fields.SupplierID[this]; set => fields.SupplierID[this] = value; }
 
-[Origin("sup"), DisplayName("Supplier")]
+[Origin("sup"), DisplayText("Supplier")]
 public string? SupplierCompanyName { get => fields.SupplierCompanyName[this]; set => fields.SupplierCompanyName[this] = value; }
 ```
 
@@ -599,7 +599,7 @@ public class CustomerRow : Row<CustomerRow.RowFields>, IIdRow
 The [LookupInclude](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/LookupIncludeAttribute.md) attribute marks a property so it's included in the row's lookup script by default. When a row has `[LookupScript]`, only the ID and name fields are transferred to the client by default; add `[LookupInclude]` to properties you need on the client:
 
 ```cs
-[DisplayName("Product Name"), Size(40), NotNull, QuickSearch, LookupInclude]
+[DisplayText("Product Name"), Size(40), NotNull, QuickSearch, LookupInclude]
 public string? ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
 ```
 
@@ -628,7 +628,7 @@ Beyond `[Expression]`, Serenity provides convenience attributes for common compu
 - `DateTimeKindAttribute` — sets the `DateTimeKind` for a date field.
 
 ```cs
-[DisplayName("Full Name"), Concat("t0.FirstName", "' '", "t0.LastName"), QuickSearch, NameProperty]
+[DisplayText("Full Name"), Concat("t0.FirstName", "' '", "t0.LastName"), QuickSearch, NameProperty]
 public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
 ```
 

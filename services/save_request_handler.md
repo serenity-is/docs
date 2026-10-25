@@ -104,7 +104,7 @@ Serenity supports **optimistic concurrency** via a version / rowversion field, m
 public sealed class ProductRow : Row<ProductRow.RowFields>, IIdRow, IConcurrencyVersionRow
 {
     // returned to the client, but not editable (no form field)
-    [DisplayName("Row Version"), Insertable(false), Updatable(false)]
+    [DisplayText("Row Version"), Insertable(false), Updatable(false)]
     public int? RowVersion { get => fields.RowVersion[this]; set => fields.RowVersion[this] = value; }
 
     Field IConcurrencyVersionRow.ConcurrencyVersionField => fields.RowVersion;

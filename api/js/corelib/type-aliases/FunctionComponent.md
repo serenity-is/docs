@@ -4,7 +4,7 @@
 
 > **FunctionComponent**\<`P`, `T`\> = (`props`) => `T` \| `null`
 
-Defined in: [../domwise/dist/index.d.ts:2362](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2362)
+Defined in: [../domwise/dist/index.d.ts:2669](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2669)
 
 A function-based JSX component that receives props (including `children`)
 and returns a `JSXElement` or `null`.

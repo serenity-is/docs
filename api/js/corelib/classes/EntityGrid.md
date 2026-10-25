@@ -2605,7 +2605,7 @@ Map to populate with column field names.
 
 ### getInitialTitle()
 
-> `protected` **getInitialTitle**(): `string`
+> `protected` **getInitialTitle**(): [`RenderableContent`](../type-aliases/RenderableContent.md)
 
 Defined in: [src/ui/datagrid/entitygrid.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L118)
 
@@ -2613,7 +2613,7 @@ Returns the initial title for the grid panel.
 
 #### Returns
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 Localized plural display name.
 
@@ -4575,7 +4575,7 @@ Sets the grid title text, creating or removing the title element as needed.
 
 ##### value
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 The title text, or null to remove the title.
 

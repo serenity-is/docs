@@ -26,4 +26,4 @@ public abstract class DynamicScript : IDynamicScript
 ## See Also
 
 * interface [IDynamicScript](../../Serenity.Net.Core/Serenity.Web/IDynamicScript.md)
-* **Source:** *[DynamicScript.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/DynamicScript/DynamicScript.cs)*
+* **Source:** *[DynamicScript.cs](https://github.com/serenity-is/Serenity/blob/996e620854dd44715465a4898d52f11f4fdf110b/src/services/DynamicScript/DynamicScript.cs)*

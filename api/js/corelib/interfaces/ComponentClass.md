@@ -2,7 +2,7 @@
 
 # Interface: ComponentClass\<P, T\>
 
-Defined in: [../domwise/dist/index.d.ts:2345](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2345)
+Defined in: [../domwise/dist/index.d.ts:2652](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2652)
 
 A class-based JSX component. Extend `Component` or implement this interface
 and override `render` to return a `JSXElement`.
@@ -27,7 +27,7 @@ The type of the DOM node the component renders.
 
 > **new ComponentClass**(`props`): [`ComponentInstance`](ComponentInstance.md)\<`P`, `T`\>
 
-Defined in: [../domwise/dist/index.d.ts:2350](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2350)
+Defined in: [../domwise/dist/index.d.ts:2657](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2657)
 
 Constructs the component with the given props.
 
@@ -49,7 +49,7 @@ Props including optional `children`.
 
 > `optional` **defaultProps**: `Partial`\<`P`\>
 
-Defined in: [../domwise/dist/index.d.ts:2352](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2352)
+Defined in: [../domwise/dist/index.d.ts:2659](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2659)
 
 Optional default prop values merged in by the JSX factory before construction.
 
@@ -59,6 +59,6 @@ Optional default prop values merged in by the JSX factory before construction.
 
 > `optional` **displayName**: `string`
 
-Defined in: [../domwise/dist/index.d.ts:2354](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2354)
+Defined in: [../domwise/dist/index.d.ts:2661](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2661)
 
 Optional display name used in devtools / error messages.

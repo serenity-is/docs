@@ -4,7 +4,7 @@
 
 > `const` **computed**: \<`T`\>(`fn`, `options?`) => [`Computed`](../interfaces/Computed.md)\<`T`\>
 
-Defined in: [../domwise/dist/index.d.ts:3043](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3043)
+Defined in: [../domwise/dist/index.d.ts:3359](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3359)
 
 Creates a computed (derived) signal that re-computes when its dependencies change.
 Re-exported from `@preact/signals-core`.

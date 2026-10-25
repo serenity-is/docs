@@ -56,6 +56,8 @@
 | static class [GetNextNumberHelper](./Serenity.Extensions/GetNextNumberHelper.md) | Helper for generating the next number in a sequence with a prefix. |
 | class [GetNextNumberRequest](./Serenity.Extensions/GetNextNumberRequest.md) | The request model for a get next number service. |
 | class [GetNextNumberResponse](./Serenity.Extensions/GetNextNumberResponse.md) | The response model for a get next number service. |
+| static class [HostMigrationExtensions](./Serenity.Extensions/HostMigrationExtensions.md) | Helper methods for app host migration commands, e.g. "migrate" to run database migrations before starting the app. |
+| interface [IDataMigrations](./Serenity.Extensions/IDataMigrations.md) | Applies the migrations of the application. Implemented by the project template (`AppServices.DataMigrations`) and resolved by [`RunMigrationsIf`](./Serenity.Extensions/HostMigrationExtensions/RunMigrationsIf.md) for the `migrate` command, and by `Startup` on every normal start. |
 | interface [IEmailQueue](./Serenity.Extensions/IEmailQueue.md) | Abstraction for an email queue that stores messages to be sent later. |
 | interface [IEmailSender](./Serenity.Extensions/IEmailSender.md) | Abstraction for sending email messages. |
 | interface [ITranslateTextHandler](./Serenity.Extensions/ITranslateTextHandler.md) | Interface for handlers that translate texts. |

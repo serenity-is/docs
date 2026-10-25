@@ -29,7 +29,7 @@ public class LoginForm
     public String Username { get; set; }
     [PasswordEditor, Placeholder("default password for admin user is 'serenity'"), Required(true)]
     public String Password { get; set; }
-    [DisplayName(""), Recaptcha]
+    [DisplayText(""), Recaptcha]
     public string Recaptcha { get; set; }
 }
 ```

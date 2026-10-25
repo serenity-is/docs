@@ -65,13 +65,13 @@ The field type must match the property type exactly. For example:
 ```cs
 public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
 {
-    [DisplayName("Person Id"), Identity, IdProperty]
+    [DisplayText("Person Id"), Identity, IdProperty]
     public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }
 
-    [DisplayName("First Name"), Size(50), NotNull]
+    [DisplayText("First Name"), Size(50), NotNull]
     public string? FirstName { get => fields.FirstName[this]; set => fields.FirstName[this] = value; }
 
-    [DisplayName("Gender")]
+    [DisplayText("Gender")]
     public Gender? Gender { get => fields.Gender[this]; set => fields.Gender[this] = value; }
 
     public class RowFields : RowFieldsBase

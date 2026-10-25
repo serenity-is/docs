@@ -4,6 +4,6 @@
 
 > **ComboboxFormatResult** = `string` \| `Element` \| `DocumentFragment`
 
-Defined in: [src/ui/editors/combobox.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L7)
+Defined in: [src/ui/editors/combobox.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L8)
 
 Result of a combobox formatter.

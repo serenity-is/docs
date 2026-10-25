@@ -13,6 +13,7 @@ public class DefaultReportRenderer : IReportRenderer
 | htmlReportPdfRenderer | The HTML report PDF renderer. |
 | serviceProvider | The service provider. |
 | httpContextAccessor | The HTTP context accessor. |
+| localizer | The text localizer. |
 
 ## Public Members
 
@@ -44,4 +45,4 @@ Initializes a new instance of the [`DefaultReportRenderer`](./DefaultReportRende
 ## See Also
 
 * interface [IReportRenderer](../../Serenity.Net.Services/Serenity.Reporting/IReportRenderer.md)
-* **Source:** *[DefaultReportRenderer.cs](https://github.com/serenity-is/Serenity/blob/eef6be1d7741640aed4ce405c3b44984620b84be/src/web/Reporting/DefaultReportRenderer.cs)*
+* **Source:** *[DefaultReportRenderer.cs](https://github.com/serenity-is/Serenity/blob/0c34357a17d56458ca5b7a3be25f42666b9eb050/src/web/Reporting/DefaultReportRenderer.cs)*

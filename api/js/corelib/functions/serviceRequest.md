@@ -4,7 +4,7 @@
 
 > **serviceRequest**\<`TResponse`\>(`service`, `request?`, `onSuccess?`, `options?`): `PromiseLike`\<`TResponse`\>
 
-Defined in: [src/base/services.ts:319](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L319)
+Defined in: [src/base/services.ts:332](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L332)
 
 Convenience wrapper around [serviceCall](serviceCall.md) that takes a service key as the first argument.
 

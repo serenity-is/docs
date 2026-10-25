@@ -2,7 +2,7 @@
 
 # Interface: ElementChildrenAttribute
 
-Defined in: [../domwise/dist/index.d.ts:2306](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2306)
+Defined in: [../domwise/dist/index.d.ts:2611](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2611)
 
 ## Properties
 
@@ -10,4 +10,4 @@ Defined in: [../domwise/dist/index.d.ts:2306](https://github.com/serenity-is/ser
 
 > **children**: `object`
 
-Defined in: [../domwise/dist/index.d.ts:2307](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2307)
+Defined in: [../domwise/dist/index.d.ts:2612](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2612)

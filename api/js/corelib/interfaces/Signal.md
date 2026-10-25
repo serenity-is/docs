@@ -2,7 +2,7 @@
 
 # Interface: Signal\<T\>
 
-Defined in: [../domwise/dist/index.d.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L101)
+Defined in: [../domwise/dist/index.d.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L97)
 
 A writable signal whose `value` can be set.
 
@@ -26,7 +26,7 @@ The type of the signal's value.
 
 > **set** **value**(`value`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L102)
+Defined in: [../domwise/dist/index.d.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L98)
 
 Current value; reading may track a dependency when inside an effect/computed.
 
@@ -50,7 +50,7 @@ Current value; reading may track a dependency when inside an effect/computed.
 
 > **peek**(): `T`
 
-Defined in: [../domwise/dist/index.d.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L89)
+Defined in: [../domwise/dist/index.d.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L85)
 
 Returns the current value without creating a dependency.
 
@@ -70,7 +70,7 @@ The current value.
 
 > **subscribe**(`fn`): () => `void`
 
-Defined in: [../domwise/dist/index.d.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L95)
+Defined in: [../domwise/dist/index.d.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L91)
 
 Subscribes to value changes.
 

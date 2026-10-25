@@ -3,19 +3,18 @@
 Initializes a new instance of the [`ScriptBundleManager`](../ScriptBundleManager.md) class.
 
 ```csharp
-public ScriptBundleManager(IOptions<ScriptBundlingOptions> options, IScriptMinifier scriptMinifier, 
-    IDynamicScriptManager scriptManager, IWebHostEnvironment hostEnvironment, 
-    IHttpContextAccessor? contextAccessor = null, ILogger<ScriptBundleManager>? logger = null)
+public ScriptBundleManager(IOptions<ScriptBundlingOptions> options, 
+    IScriptBundleBuilder bundleBuilder, IDynamicScriptManager scriptManager, 
+    IWebHostEnvironment hostEnvironment, IHttpContextAccessor? contextAccessor = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | options | The options. |
+| bundleBuilder | The script bundle builder. |
 | scriptManager | The dynamic script manager. |
-| scriptMinifier | The script minifier. |
 | hostEnvironment | The web host environment. |
 | contextAccessor | The HTTP context accessor. |
-| logger | The logger. |
 
 ## Exceptions
 
@@ -26,6 +25,6 @@ public ScriptBundleManager(IOptions<ScriptBundlingOptions> options, IScriptMinif
 ## See Also
 
 * class [ScriptBundlingOptions](../ScriptBundlingOptions.md)
-* interface [IScriptMinifier](../IScriptMinifier.md)
+* interface [IScriptBundleBuilder](../IScriptBundleBuilder.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)
 * class [ScriptBundleManager](../ScriptBundleManager.md)

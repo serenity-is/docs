@@ -2,7 +2,7 @@
 
 # Interface: MathMLElementTags
 
-Defined in: [../domwise/dist/index.d.ts:2228](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2228)
+Defined in: [../domwise/dist/index.d.ts:2515](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2515)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [../domwise/dist/index.d.ts:2228](https://github.com/serenity-is/ser
 
 > **annotation**: `MathMLAnnotationElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2229](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2229)
+Defined in: [../domwise/dist/index.d.ts:2516](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2516)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [../domwise/dist/index.d.ts:2229](https://github.com/serenity-is/ser
 
 > **annotation-xml**: `MathMLAnnotationXmlElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2230](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2230)
+Defined in: [../domwise/dist/index.d.ts:2517](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2517)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [../domwise/dist/index.d.ts:2230](https://github.com/serenity-is/ser
 
 > **maction**: `MathMLMactionElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2261](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2261)
+Defined in: [../domwise/dist/index.d.ts:2548](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2548)
 
 #### Deprecated
 
@@ -36,7 +36,7 @@ Defined in: [../domwise/dist/index.d.ts:2261](https://github.com/serenity-is/ser
 
 > **math**: `MathMLMathElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2231](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2231)
+Defined in: [../domwise/dist/index.d.ts:2518](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2518)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [../domwise/dist/index.d.ts:2231](https://github.com/serenity-is/ser
 
 > **menclose**: `MathMLMencloseElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2259](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2259)
+Defined in: [../domwise/dist/index.d.ts:2546](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2546)
 
 #### Non-standard
 
@@ -54,7 +54,7 @@ Defined in: [../domwise/dist/index.d.ts:2259](https://github.com/serenity-is/ser
 
 > **merror**: `MathMLMerrorElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2232](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2232)
+Defined in: [../domwise/dist/index.d.ts:2519](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2519)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [../domwise/dist/index.d.ts:2232](https://github.com/serenity-is/ser
 
 > **mfenced**: `MathMLMfencedElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2263](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2263)
+Defined in: [../domwise/dist/index.d.ts:2550](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2550)
 
 #### Deprecated
 
@@ -74,7 +74,7 @@ Defined in: [../domwise/dist/index.d.ts:2263](https://github.com/serenity-is/ser
 
 > **mfrac**: `MathMLMfracElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2233](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2233)
+Defined in: [../domwise/dist/index.d.ts:2520](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2520)
 
 ***
 
@@ -82,7 +82,7 @@ Defined in: [../domwise/dist/index.d.ts:2233](https://github.com/serenity-is/ser
 
 > **mi**: `MathMLMiElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2234](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2234)
+Defined in: [../domwise/dist/index.d.ts:2521](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2521)
 
 ***
 
@@ -90,7 +90,7 @@ Defined in: [../domwise/dist/index.d.ts:2234](https://github.com/serenity-is/ser
 
 > **mmultiscripts**: `MathMLMmultiscriptsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2235](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2235)
+Defined in: [../domwise/dist/index.d.ts:2522](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2522)
 
 ***
 
@@ -98,7 +98,7 @@ Defined in: [../domwise/dist/index.d.ts:2235](https://github.com/serenity-is/ser
 
 > **mn**: `MathMLMnElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2236](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2236)
+Defined in: [../domwise/dist/index.d.ts:2523](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2523)
 
 ***
 
@@ -106,7 +106,7 @@ Defined in: [../domwise/dist/index.d.ts:2236](https://github.com/serenity-is/ser
 
 > **mo**: `MathMLMoElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2237](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2237)
+Defined in: [../domwise/dist/index.d.ts:2524](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2524)
 
 ***
 
@@ -114,7 +114,7 @@ Defined in: [../domwise/dist/index.d.ts:2237](https://github.com/serenity-is/ser
 
 > **mover**: `MathMLMoverElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2238](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2238)
+Defined in: [../domwise/dist/index.d.ts:2525](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2525)
 
 ***
 
@@ -122,7 +122,7 @@ Defined in: [../domwise/dist/index.d.ts:2238](https://github.com/serenity-is/ser
 
 > **mpadded**: `MathMLMpaddedElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2239](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2239)
+Defined in: [../domwise/dist/index.d.ts:2526](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2526)
 
 ***
 
@@ -130,7 +130,7 @@ Defined in: [../domwise/dist/index.d.ts:2239](https://github.com/serenity-is/ser
 
 > **mphantom**: `MathMLMphantomElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2240](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2240)
+Defined in: [../domwise/dist/index.d.ts:2527](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2527)
 
 ***
 
@@ -138,7 +138,7 @@ Defined in: [../domwise/dist/index.d.ts:2240](https://github.com/serenity-is/ser
 
 > **mprescripts**: `MathMLMprescriptsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2241](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2241)
+Defined in: [../domwise/dist/index.d.ts:2528](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2528)
 
 ***
 
@@ -146,7 +146,7 @@ Defined in: [../domwise/dist/index.d.ts:2241](https://github.com/serenity-is/ser
 
 > **mroot**: `MathMLMrootElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2242](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2242)
+Defined in: [../domwise/dist/index.d.ts:2529](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2529)
 
 ***
 
@@ -154,7 +154,7 @@ Defined in: [../domwise/dist/index.d.ts:2242](https://github.com/serenity-is/ser
 
 > **mrow**: `MathMLMrowElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2243](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2243)
+Defined in: [../domwise/dist/index.d.ts:2530](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2530)
 
 ***
 
@@ -162,7 +162,7 @@ Defined in: [../domwise/dist/index.d.ts:2243](https://github.com/serenity-is/ser
 
 > **ms**: `MathMLMsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2244](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2244)
+Defined in: [../domwise/dist/index.d.ts:2531](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2531)
 
 ***
 
@@ -170,7 +170,7 @@ Defined in: [../domwise/dist/index.d.ts:2244](https://github.com/serenity-is/ser
 
 > **mspace**: `MathMLMspaceElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2245](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2245)
+Defined in: [../domwise/dist/index.d.ts:2532](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2532)
 
 ***
 
@@ -178,7 +178,7 @@ Defined in: [../domwise/dist/index.d.ts:2245](https://github.com/serenity-is/ser
 
 > **msqrt**: `MathMLMsqrtElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2246](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2246)
+Defined in: [../domwise/dist/index.d.ts:2533](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2533)
 
 ***
 
@@ -186,7 +186,7 @@ Defined in: [../domwise/dist/index.d.ts:2246](https://github.com/serenity-is/ser
 
 > **mstyle**: `MathMLMstyleElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2247](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2247)
+Defined in: [../domwise/dist/index.d.ts:2534](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2534)
 
 ***
 
@@ -194,7 +194,7 @@ Defined in: [../domwise/dist/index.d.ts:2247](https://github.com/serenity-is/ser
 
 > **msub**: `MathMLMsubElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2248](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2248)
+Defined in: [../domwise/dist/index.d.ts:2535](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2535)
 
 ***
 
@@ -202,7 +202,7 @@ Defined in: [../domwise/dist/index.d.ts:2248](https://github.com/serenity-is/ser
 
 > **msubsup**: `MathMLMsubsupElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2249](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2249)
+Defined in: [../domwise/dist/index.d.ts:2536](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2536)
 
 ***
 
@@ -210,7 +210,7 @@ Defined in: [../domwise/dist/index.d.ts:2249](https://github.com/serenity-is/ser
 
 > **msup**: `MathMLMsupElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2250](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2250)
+Defined in: [../domwise/dist/index.d.ts:2537](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2537)
 
 ***
 
@@ -218,7 +218,7 @@ Defined in: [../domwise/dist/index.d.ts:2250](https://github.com/serenity-is/ser
 
 > **mtable**: `MathMLMtableElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2251](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2251)
+Defined in: [../domwise/dist/index.d.ts:2538](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2538)
 
 ***
 
@@ -226,7 +226,7 @@ Defined in: [../domwise/dist/index.d.ts:2251](https://github.com/serenity-is/ser
 
 > **mtd**: `MathMLMtdElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2252](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2252)
+Defined in: [../domwise/dist/index.d.ts:2539](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2539)
 
 ***
 
@@ -234,7 +234,7 @@ Defined in: [../domwise/dist/index.d.ts:2252](https://github.com/serenity-is/ser
 
 > **mtext**: `MathMLMtextElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2253](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2253)
+Defined in: [../domwise/dist/index.d.ts:2540](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2540)
 
 ***
 
@@ -242,7 +242,7 @@ Defined in: [../domwise/dist/index.d.ts:2253](https://github.com/serenity-is/ser
 
 > **mtr**: `MathMLMtrElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2254](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2254)
+Defined in: [../domwise/dist/index.d.ts:2541](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2541)
 
 ***
 
@@ -250,7 +250,7 @@ Defined in: [../domwise/dist/index.d.ts:2254](https://github.com/serenity-is/ser
 
 > **munder**: `MathMLMunderElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2255](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2255)
+Defined in: [../domwise/dist/index.d.ts:2542](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2542)
 
 ***
 
@@ -258,7 +258,7 @@ Defined in: [../domwise/dist/index.d.ts:2255](https://github.com/serenity-is/ser
 
 > **munderover**: `MathMLMunderoverElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2256](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2256)
+Defined in: [../domwise/dist/index.d.ts:2543](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2543)
 
 ***
 
@@ -266,4 +266,4 @@ Defined in: [../domwise/dist/index.d.ts:2256](https://github.com/serenity-is/ser
 
 > **semantics**: `MathMLSemanticsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2257](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2257)
+Defined in: [../domwise/dist/index.d.ts:2544](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2544)

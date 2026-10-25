@@ -2,7 +2,7 @@
 
 # Interface: Select2AjaxOptions
 
-Defined in: [src/ui/editors/select2.tsx:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L68)
+Defined in: [src/ui/editors/select2.tsx:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L72)
 
 Options for ajax-based Select2 queries.
 
@@ -14,23 +14,23 @@ Options for ajax-based Select2 queries.
 
 ### data()?
 
-> `optional` **data**: (`p1`, `p2`, `p3`) => `any`
+> `optional` **data**: (`term`, `page`, `context`) => `any`
 
-Defined in: [src/ui/editors/select2.tsx:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L76)
+Defined in: [src/ui/editors/select2.tsx:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L80)
 
 Callback that builds the request data.
 
 #### Parameters
 
-##### p1
+##### term
 
 `string`
 
-##### p2
+##### page
 
 `number`
 
-##### p3
+##### context
 
 `any`
 
@@ -44,7 +44,7 @@ Callback that builds the request data.
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [src/ui/editors/select2.tsx:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L70)
+Defined in: [src/ui/editors/select2.tsx:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L74)
 
 Request headers.
 
@@ -58,7 +58,7 @@ Request headers.
 
 > `optional` **params**: `any`
 
-Defined in: [src/ui/editors/select2.tsx:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L80)
+Defined in: [src/ui/editors/select2.tsx:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L84)
 
 Additional request parameters.
 
@@ -68,7 +68,7 @@ Additional request parameters.
 
 > `optional` **quietMillis**: `number`
 
-Defined in: [src/ui/editors/select2.tsx:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L74)
+Defined in: [src/ui/editors/select2.tsx:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L78)
 
 Delay in milliseconds before the ajax request.
 
@@ -76,29 +76,29 @@ Delay in milliseconds before the ajax request.
 
 ### results()?
 
-> `optional` **results**: (`p1`, `p2`, `p3`) => `any`
+> `optional` **results**: (`response`, `page`, `query`) => [`Select2Result`](Select2Result.md)
 
-Defined in: [src/ui/editors/select2.tsx:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L78)
+Defined in: [src/ui/editors/select2.tsx:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L82)
 
 Callback that processes the response.
 
 #### Parameters
 
-##### p1
+##### response
 
 `any`
 
-##### p2
+##### page
 
 `number`
 
-##### p3
+##### query
 
-`any`
+[`Select2QueryOptions`](Select2QueryOptions.md)
 
 #### Returns
 
-`any`
+[`Select2Result`](Select2Result.md)
 
 ***
 
@@ -106,7 +106,7 @@ Callback that processes the response.
 
 > `optional` **url**: `string` \| (`term`, `page`, `context`) => `string`
 
-Defined in: [src/ui/editors/select2.tsx:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L72)
+Defined in: [src/ui/editors/select2.tsx:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L76)
 
 The URL or a function returning it.
 
@@ -116,7 +116,7 @@ The URL or a function returning it.
 
 > `optional` **onError**(`response`, `info?`): `boolean` \| `void`
 
-Defined in: [src/ui/editors/select2.tsx:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L84)
+Defined in: [src/ui/editors/select2.tsx:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L88)
 
 Callback invoked when the ajax request fails.
 
@@ -144,7 +144,7 @@ Additional error info.
 
 > `optional` **onSuccess**(`response`): `void`
 
-Defined in: [src/ui/editors/select2.tsx:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L87)
+Defined in: [src/ui/editors/select2.tsx:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L91)
 
 Callback invoked when the ajax request succeeds.
 

@@ -88,10 +88,10 @@ public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
 
     // ...
 
-    [DisplayName("Genre"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]
+    [DisplayText("Genre"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]
     public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }
 
-    [DisplayName("Genre"), Expression($"{jGenre}.Name")]
+    [DisplayText("Genre"), Expression($"{jGenre}.Name")]
     public string? GenreName { get => fields.GenreName[this]; set => fields.GenreName[this] = value; }
 
     public class RowFields : RowFieldsBase
@@ -120,7 +120,7 @@ In the provided code:
 - We've added a new field, `GenreName`, which is not present in the Movie table but is derived from the Genre table. By using the `Expression` attribute and specifying `$"{jGenre}.Name"`, we indicate that this field represents an SQL expression originating from the `jGenre` join. Alternatively, you could use the `Origin` attribute instead of the `Expression` attribute like this, which is functionally equivalent but recommended to avoid typos:
 
    ```csharp
-    [DisplayName("Genre"), Origin(jGenre, nameof(GenreRow.Name))]
+    [DisplayText("Genre"), Origin(jGenre, nameof(GenreRow.Name))]
     public string? GenreName { get => fields.GenreName[this]; set => fields.GenreName[this] = value; }
    ```
 
@@ -214,7 +214,7 @@ Keep in mind that the information defined on a form is specific to that form and
 Open the `MovieRow.cs` file and add the `[LookupEditor]` attribute to the `GenreId` property as shown below:
 
 ```csharp
-[DisplayName("Genre"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]
+[DisplayText("Genre"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]
 [LookupEditor(typeof(GenreRow))]
 public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }
 ```

@@ -46,10 +46,10 @@ Features are usually defined as an enum marked with the [FeatureKeySet](../api/d
 [FeatureKeySet]
 public enum FeatureKeys
 {
-    [Description("Data Audit Log")]
+    [DescriptionText("Data Audit Log")]
     DataAuditLog,
 
-    [Description("Email Queue")]
+    [DescriptionText("Email Queue")]
     EmailQueue,
 
     [DefaultValue(false)]

@@ -2960,7 +2960,7 @@ True when collapsed.
 
 ### getInitialTitle()
 
-> `protected` **getInitialTitle**(): `string`
+> `protected` **getInitialTitle**(): [`RenderableContent`](../type-aliases/RenderableContent.md)
 
 Defined in: [src/ui/datagrid/datagrid.tsx:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L267)
 
@@ -2968,7 +2968,7 @@ Returns the initial title shown above the grid.
 
 #### Returns
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 The title text, or null for no title.
 
@@ -4974,7 +4974,7 @@ Sets the grid title text, creating or removing the title element as needed.
 
 ##### value
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 The title text, or null to remove the title.
 

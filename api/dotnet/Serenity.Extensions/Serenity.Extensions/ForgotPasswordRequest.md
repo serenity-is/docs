@@ -17,4 +17,4 @@ public class ForgotPasswordRequest : ServiceRequest
 ## See Also
 
 * class [ServiceRequest](../../Serenity.Net.Services/Serenity.Services/ServiceRequest.md)
-* **Source:** *[ForgotPasswordRequest.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/Membership/PasswordActions/ForgotPasswordRequest.cs)*
+* **Source:** *[ForgotPasswordRequest.cs](https://github.com/serenity-is/Serenity/blob/0c34357a17d56458ca5b7a3be25f42666b9eb050/common-features/src/extensions/Modules/Membership/PasswordActions/ForgotPasswordRequest.cs)*

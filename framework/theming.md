@@ -66,6 +66,64 @@ You can create a custom theme by defining or overriding these variables:
 
 See [Premium Themes](../startsharp/features/premium-themes.md) for details.
 
+## Icons
+
+Serenity 10.6.1 replaced the Font Awesome glyphs used by the framework's own components with **SVG mask icons**, and added helper classes so application code can use the same approach. Icons are plain CSS: a class sets a `--sv` custom property to an SVG (usually a `data:` URL), and the helper class renders it.
+
+The [icon browser](https://serenity.is/icons) searches about 175,000 icons from the bundled Iconify collections and copies either the CSS rule or the raw `<svg>` markup. It is the easiest way to find a matching icon and its class name.
+
+Four modes are available, each with a reserved class prefix:
+
+| Class | Mode | Behavior |
+| --- | --- | --- |
+| `sv-<name>` | Mask | Monotone icon that follows `color` / `currentColor` |
+| `svbg-<name>` | Background | Keeps the SVG's own colors (palette / two-color icons) |
+| `svcontent-<name>` | Content | Keeps the SVG's own colors, rendered at the SVG's intrinsic size |
+| `svaccent-<name>` | Accent | Two layers: the main layer follows text color, the accent layer keeps its own color |
+
+```css
+.sv-dashboard { --sv: url("data:image/svg+xml,..."); }
+.svbg-logo { --sv: url("/icons/logo.svg"); }
+
+.svaccent-bell {
+    --sv: url("...bell shape...");
+    --svaccent: url("...dot shape...");
+    --svaccent-color: #e5484d;
+}
+```
+
+```html
+<i class="sv-dashboard"></i>
+<i class="svbg-logo"></i>
+<i class="svaccent-bell"></i>
+```
+
+The unprefixed `sv`, `svbg`, `svcontent` and `svaccent` classes let you combine a mode with your own class that only sets `--sv` (e.g. `<i class="svbg my-icon"></i>`). Only the mask mode follows `color` / `currentColor`; the content mode cannot be resized through CSS, as it uses the SVG's intrinsic size. Use one mode per element.
+
+Theme-specific variants are up to you, e.g. `:root.dark .sv-dashboard { --sv: url("..."); }`.
+
+### Overriding Component Icons
+
+The framework's component icons (grid buttons, pager, dialogs, etc.) are defined through a `--s-ico` variable and a per-component fallback chain:
+
+```css
+.some-component::before {
+    --s-ico: var(--s-icon-drag-helper, var(--s-icon-check-circle));
+}
+```
+
+To replace an icon globally, set the matching `--s-icon-*` variable; to replace it for one component, set `--s-ico` on that component:
+
+```css
+:root {
+    --s-icon-check-circle: var(--sv-my-check-icon);
+}
+```
+
+Stylesheets that override icons through the old font glyphs (`content: "\f..."` together with `font-family` / `font-weight`) no longer work; use `--s-ico` or the matching `--s-icon-*` variable instead.
+
+The templates still bundle the Line Awesome stylesheet, which keeps the Font Awesome–compatible `fa-*` classes working for navigation and custom markup, but the framework itself no longer depends on an icon font.
+
 ## Grid Styling
 
 SleekGrid provides CSS classes for grid elements (headers, rows, cells, etc.). The grid's `s-` class (e.g. `s-OrderGrid`) can be used to scope grid-specific styles:

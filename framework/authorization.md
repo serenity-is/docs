@@ -329,6 +329,7 @@ Permission checks **fail closed**:
 
 - [PermissionAttributeBase](../api/dotnet/Serenity.Net.Core/Serenity.Data/PermissionAttributeBase.md) and its subclasses (`ReadPermissionAttribute`, `ModifyPermissionAttribute`, `PageAuthorizeAttribute`, etc.) reject null, empty, or whitespace permission keys with an `ArgumentException`. A permission key is always required and is exposed as a non-nullable `Permission` string.
 - Request handlers (list, retrieve, save, delete, undelete) deny access when the row declares no permission attribute for the operation, so a row without any permission is no longer implicitly public. Use `SpecialPermissionKeys.Public` (`"*"`) or `SpecialPermissionKeys.LoggedIn` (`"?"`) when access is intended. `RowFieldsBase`, `ReportRegistry`, and lookup/dynamic scripts apply the declared permission key as-is — there is no implicit `"?"` (logged in) fallback for an empty or missing key.
+- Dynamic scripts, pages and endpoints also fail closed: a dynamic script without a `Permission` is denied; `PageAuthorizeAttribute` and `ServiceAuthorizeAttribute` default to `SpecialPermissionKeys.LoggedIn`; and an explicitly empty permission is treated as `SpecialPermissionKeys.Deny`. Built-in bundles and scripts are marked `SpecialPermissionKeys.Public`.
 - `MockPermissions` (used in tests) denies empty and `DENY` keys as well.
 - For delete, undelete, and update (save) requests, users whose access is denied receive an `EntityNotFound` validation error instead of `AccessDenied`, so a caller cannot distinguish a missing record from a forbidden one. Create requests keep `AccessDenied`, since a create cannot leak the existence of a record.
 
@@ -387,13 +388,13 @@ Permission keys themselves are usually defined in a static class:
 namespace Serene.Administration
 {
     [NestedPermissionKeys]
-    [DisplayName("Administration")]
+    [DisplayText("Administration")]
     public class PermissionKeys
     {
-        [Description("User, Role Management and Permissions")]
+        [DescriptionText("User, Role Management and Permissions")]
         public const string Security = "Administration:Security";
 
-        [Description("Languages and Translations")]
+        [DescriptionText("Languages and Translations")]
         public const string Translation = "Administration:Translation";
     }
 }

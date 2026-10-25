@@ -78,7 +78,7 @@ public class OrderColumns
 }
 ```
 
-- Properties whose names match row fields inherit the row field's attributes (e.g. `[DisplayName]`, `[FormatterType]`, `[Filtering]`).
+- Properties whose names match row fields inherit the row field's attributes (e.g. `[DisplayText]`, `[FormatterType]`, `[Filtering]`).
 - `CheckNames = true` validates that every property matches a row field (add `[SkipNameCheck]` to properties that shouldn't be checked).
 - When `BasedOnRow` is set, the provider also generates `AdditionalItems` for any `FilteringIdField` referenced by the columns but not explicitly declared.
 

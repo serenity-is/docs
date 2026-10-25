@@ -61,6 +61,8 @@ Both option classes share the same shape:
 | `NoMinimize` | `string[]` | Relative paths to exclude from minification. |
 | `UseMinJS` / `UseMinCSS` | `bool?` | Whether an existing `.min.js` / `.min.css` file on disk is used instead of minifying in memory. Defaults to `true`. |
 | `Replacements` | `Dictionary<string, object>` | Placeholder replacements in bundle entries, e.g. `{Development}`. |
+| `ProcessImports` | `bool?` | CSS only. Inline plain relative `@import` statements at the start of a bundle file, with cycle detection and `url(...)` rewriting. Defaults to `true`; external, absolute and conditional imports are left as is. |
+| `DedupImports` | `bool?` | CSS only. When `true`, a file imported multiple times is embedded only at its first import position. Defaults to `false` (browser behavior: embed at each position). |
 
 ### Bundle entries
 
@@ -146,6 +148,40 @@ This is what makes the browser fetch the new file after you deploy a change: the
 
 `ContentHashCache` also reads a `CDNSettings` options class (section key `CDN`). When enabled, it rewrites matching content URLs to a CDN root (`Url` for HTTP, `HttpsUrl` for HTTPS), with `Include` / `Exclude` glob patterns controlling which files go to the CDN.
 
+## Layout CSS and Script Files
+
+Some styles and scripts must be present on **every page**, before any page-specific module runs — for example a stylesheet that provides classes used by the navigation menu. Page entry points are too late for that: a page's CSS is only applied when its ESM module is imported, so an icon class declared there is not available to the sidebar or menu on other pages.
+
+[LayoutCssFileAttribute](../api/dotnet/Serenity.Net.Web/Serenity.Web/LayoutCssFileAttribute.md) and [LayoutScriptFileAttribute](../api/dotnet/Serenity.Net.Web/Serenity.Web/LayoutScriptFileAttribute.md) declare such files at assembly level. They are discovered automatically, so a feature project can ship its own layout assets without the application referencing them explicitly:
+
+```cs
+[assembly: LayoutCssFile("~/MyFeature/navigation.css")]
+[assembly: LayoutScriptFile("~/MyFeature/window-manager.js")]
+```
+
+Both attributes take an app-relative (`~/`) path and support:
+
+- `Order` — lower values are included first.
+- `RequireFeatures` / `RequireAnyFeature` — include the file only when all (or any) of the listed feature toggles are enabled.
+
+The files are discovered through [ILayoutCssFileProvider](../api/dotnet/Serenity.Net.Web/Serenity.Web/ILayoutCssFileProvider.md) / [ILayoutScriptFileProvider](../api/dotnet/Serenity.Net.Web/Serenity.Web/ILayoutScriptFileProvider.md) (filtering by feature, ordering and deduplication), and rendered with [Html.LayoutCssFiles()](../api/dotnet/Serenity.Net.Web/Serenity.Web/HtmlLayoutFilesExtensions/LayoutCssFiles.md) / [Html.LayoutScriptFiles()](../api/dotnet/Serenity.Net.Web/Serenity.Web/HtmlLayoutFilesExtensions/LayoutScriptFiles.md):
+
+```cshtml
+@Html.StyleBundle("Base" + rtl)
+@Html.LayoutCssFiles()
+@* ... *@
+@Html.ScriptBundle("Base")
+@Html.LayoutScriptFiles()
+```
+
+When bundling is disabled, the helpers emit content-hashed individual tags; when it is enabled, they emit a single dynamic bundle per feature set. The whole set is also exposed as the predefined `dynamic://CssBundle.LayoutCssFiles` and `dynamic://Bundle.LayoutScriptFiles` bundles. Note that those predefined bundles are generated once and cached, so they do not follow feature toggles dynamically — use the HTML helpers where that matters.
+
+Bundling and minification reuse the same `ICssBundleBuilder` / `IScriptBundleBuilder` implementations as regular bundles, and a new `IWebRootFileWatcher` provides the shared file watching used by the content hash cache and the layout bundles.
+
+For CSS, `CssBundlingOptions.ProcessImports` and `DedupImports` inline relative `@import` statements into bundles, with cycle detection, `url(...)` rewriting and per-file minification.
+
+> The legacy plugin attributes for CSS / script files, navigation, service and background jobs, and `PrecompiledViews` are now obsolete in documentation; use `LayoutCssFile` / `LayoutScriptFile`, `NavigationLink` / `NavigationMenu`, and dependency injection instead.
+
 ## HTML Helpers for Layouts
 
 The Razor helpers live in [`HtmlScriptExtensions`](../api/dotnet/Serenity.Net.Web/Serenity.Web/HtmlScriptExtensions.md). They are used in `_LayoutHead.cshtml` and similar views:
@@ -157,6 +193,7 @@ The Razor helpers live in [`HtmlScriptExtensions`](../api/dotnet/Serenity.Net.We
 
 - `Script(url)` / `Stylesheet(url)` — render a single `<script>` / `<link>` for a file. If the file is part of a bundle, the bundle URL is used instead; if the bundle (or file) was already rendered in this request, an empty string is returned to avoid duplicates.
 - `ScriptBundle(key)` / `StyleBundle(key)` — render a single tag for the whole bundle when bundling is enabled, or one tag per include when it is disabled.
+- `LayoutCssFiles()` / `LayoutScriptFiles()` — render the files registered with `LayoutCssFileAttribute` / `LayoutScriptFileAttribute` (see [Layout CSS and Script Files](#layout-css-and-script-files)).
 - `ResolveWithHash(url)` — returns the URL with its content hash appended.
 - `LocalTextScript(package)` — renders the local text script for a package (see [Localization](localization.md)).
 - `ModulePageInit(module, options)` — renders a `<script type="module">` that imports a module's default export (usually `pageInit`) and calls it with the given options, including the module's CSS if present.
@@ -172,9 +209,11 @@ The real `_LayoutHead.cshtml` in the templates shows the full picture:
 <partial name="@MVC.Views.Shared._ImportMap" />
 <partial name="@MVC.Views.Shared._ContentSecurityPolicy" />
 @Html.StyleBundle("Base" + rtl)
+@Html.LayoutCssFiles()
 <script type="application/json" id="ScriptCulture">@Html.Raw(JSON.Stringify(new ScriptCulture()))</script>
 @Html.LocalTextScript("Site")
 @Html.ScriptBundle("Base")
+@Html.LayoutScriptFiles()
 <script type="module" src=@Html.ResolveWithHash(ESM.ScriptInit) nonce="@nonce"></script>
 ```
 

@@ -48,11 +48,11 @@ After executing the migration, you'll need to eliminate references to the `Genre
 Remove the `GenreId` and `GenreName` properties along with their related field objects from `MovieRow.cs`:
 
 ```csharp
-[DisplayName("Genre"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]
+[DisplayText("Genre"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]
 [LookupEditor(typeof(GenreRow), InplaceAdd = true)]
 public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }
 
-[DisplayName("Genre"), Expression($"{jGenre}.Name")]
+[DisplayText("Genre"), Expression($"{jGenre}.Name")]
 public string? GenreName { get => fields.GenreName[this]; set => fields.GenreName[this]; }
 
 Int32Field GenreId = null!;
@@ -91,7 +91,7 @@ Now that a movie can have multiple genres, the way genre information is stored n
 
 ```csharp
 //...
-[DisplayName("Genres"), LookupEditor(typeof(GenreRow), Multiple = true), NotMapped]
+[DisplayText("Genres"), LookupEditor(typeof(GenreRow), Multiple = true), NotMapped]
 [LinkingSetRelation(typeof(MovieGenresRow), nameof(MovieGenresRow.MovieId), nameof(MovieGenresRow.GenreId))]
 public List<int>? GenreList { get => fields.GenreList[this]; set => fields.GenreList[this] = value; }
 

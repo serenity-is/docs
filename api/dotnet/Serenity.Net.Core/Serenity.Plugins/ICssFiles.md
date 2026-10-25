@@ -13,6 +13,10 @@ public interface ICssFiles
 | --- | --- |
 | [GetCssFiles](ICssFiles/GetCssFiles.md)() | Gets the list of CSS files. |
 
+## Remarks
+
+This type is part of a legacy plugin system design and is no longer used by the framework. Use the `LayoutCssFile` assembly attribute instead to declare CSS files that should be included in the layout.
+
 ## See Also
 
-* **Source:** *[ICssFiles.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Plugins/ICssFiles.cs)*
+* **Source:** *[ICssFiles.cs](https://github.com/serenity-is/Serenity/blob/42921a2cabf9c9256331037e2f6cd60672b97071/src/core/Plugins/ICssFiles.cs)*

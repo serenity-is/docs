@@ -4,7 +4,7 @@
 
 > **currentLifecycleRoot**(...`args`): `Element`
 
-Defined in: [../domwise/dist/index.d.ts:2592](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2592)
+Defined in: [../domwise/dist/index.d.ts:2897](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2897)
 
 Gets or sets the current lifecycle root element used to scope signal subscriptions.
 

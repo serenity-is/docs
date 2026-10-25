@@ -4,17 +4,17 @@ Serenity has a server-side reporting system for generating HTML, PDF, Excel, and
 
 ## Defining a Report
 
-A report is any class implementing [`IReport`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/IReport.md), which has a single `GetData()` method. Mark it with [`[Report]`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/ReportAttribute.md) so the registry discovers it, and optionally `[Category]`, `[DisplayName]`, and `[RequiredPermission]`:
+A report is any class implementing [`IReport`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/IReport.md), which has a single `GetData()` method. Mark it with [`[Report]`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/ReportAttribute.md) so the registry discovers it, and optionally `[CategoryName]`, `[DisplayText]`, and `[RequiredPermission]`:
 
 ```cs
 [Report, RequiredPermission(PermissionKeys.General)]
-[Category("Northwind/Orders"), DisplayName("Customer Gross Sales")]
+[CategoryName("Northwind/Orders"), DisplayText("Customer Gross Sales")]
 public class CustomerGrossSalesReport(ISqlConnections sqlConnections, ITextLocalizer localizer, IServiceProvider serviceProvider) : IReport, IDataOnlyReport
 {
-    [DisplayName("Start Date")]
+    [DisplayText("Start Date")]
     public DateTime? StartDate { get; set; }
 
-    [DisplayName("End Date")]
+    [DisplayText("End Date")]
     public DateTime? EndDate { get; set; }
 
     public object GetData()

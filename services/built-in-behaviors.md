@@ -108,7 +108,7 @@ The [MasterDetailRelationAttribute](../api/dotnet/Serenity.Net.Services/Serenity
 The pro-features `MeetingRow` uses it for its attendee list:
 
 ```cs
-[DisplayName("Attendee List")]
+[DisplayText("Attendee List")]
 [MasterDetailRelation(nameof(MeetingAttendeeRow.MeetingId),
     ColumnsType = typeof(Columns.MeetingAttendeeColumns)), MeetingAttendeeEditor]
 public List<MeetingAttendeeRow>? AttendeeList { get => fields.AttendeeList[this]; set => fields.AttendeeList[this] = value; }
@@ -125,7 +125,7 @@ The [LinkingSetRelationAttribute](../api/dotnet/Serenity.Net.Services/Serenity.D
 The Northwind `CustomerRow` uses it for its representatives:
 
 ```cs
-[DisplayName("Representatives"), AsyncLookupEditor(typeof(EmployeeRow), Multiple = true), NotMapped]
+[DisplayText("Representatives"), AsyncLookupEditor(typeof(EmployeeRow), Multiple = true), NotMapped]
 [LinkingSetRelation(typeof(CustomerRepresentativesRow), "CustomerId", "EmployeeId")]
 [MinSelectLevel(SelectLevel.Details), QuickFilter(CssClass = "hidden-xs")]
 public List<int>? Representatives { get => fields.Representatives[this]; set => fields.Representatives[this] = value; }
@@ -145,7 +145,7 @@ Serenity has two ways to declare a unique constraint, both checked before save:
 [UniqueAttribute](../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/UniqueAttribute.md) marks a single field as unique:
 
 ```cs
-[DisplayName("Product Name"), Size(40), NotNull, Unique]
+[DisplayText("Product Name"), Size(40), NotNull, Unique]
 public string? ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
 ```
 

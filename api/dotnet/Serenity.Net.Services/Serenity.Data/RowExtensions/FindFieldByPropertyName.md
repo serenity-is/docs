@@ -1,6 +1,6 @@
 # RowExtensions.FindFieldByPropertyName method
 
-Finds the field by its property name.
+Finds a field by its C# property name.
 
 ```csharp
 public static Field? FindFieldByPropertyName(this IRow row, string? name)
@@ -9,11 +9,15 @@ public static Field? FindFieldByPropertyName(this IRow row, string? name)
 | parameter | description |
 | --- | --- |
 | row | The row. |
-| name | The name. |
+| name | The C# property name. |
 
 ## Return Value
 
-The field with the specified property name.
+The matching field, or `null` if no field has that property.
+
+## Remarks
+
+This lookup does not fall back to a column or field name. Use [`FindFieldByPropertyOrFieldName`](./FindFieldByPropertyOrFieldName.md) to try the property name first and then fall back to any column or field name, or [`FindFieldByPublicName`](./FindFieldByPublicName.md) to restrict that fallback to fields without a corresponding property.
 
 ## See Also
 

@@ -13,14 +13,14 @@ namespace MovieTutorial.Administration;
 public sealed class UserRow : Serenity.Extensions.Entities.LoggingRow<UserRow.RowFields>, IIdRow, INameRow, IIsActiveRow, IDisplayNameRow, IEmailRow, IPasswordRow
 {
     //...
-    [DisplayName("Last Directory Update"), Insertable(false), Updatable(false)]
+    [DisplayText("Last Directory Update"), Insertable(false), Updatable(false)]
     public DateTime? LastDirectoryUpdate { get => fields.LastDirectoryUpdate[this]; set => fields.LastDirectoryUpdate[this] = value; }
 
-    [DisplayName("Tenant"), ForeignKey("Tenants", "TenantId"), LeftJoin("tnt")]
+    [DisplayText("Tenant"), ForeignKey("Tenants", "TenantId"), LeftJoin("tnt")]
     [LookupEditor(typeof(TenantRow))]
     public int? TenantId { get => Fields.TenantId[this]; set => Fields.TenantId[this] = value; }
 
-    [DisplayName("Tenant"), Expression("tnt.TenantName")]
+    [DisplayText("Tenant"), Expression("tnt.TenantName")]
     public string? TenantName { get => Fields.TenantName[this]; set => Fields.TenantName[this] = value; }
 
     //...

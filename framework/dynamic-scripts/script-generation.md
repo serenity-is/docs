@@ -64,14 +64,16 @@ See [Lookups](dynamic-scripts/lookups.md) for details.
 [DataScriptAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/DataScriptAttribute.md) marks a type as a **remote data script**, accessible from the client with `Serenity.getRemoteData("Key")`.
 
 ```cs
-[DataScript("MyData", Permission = "?")]
+[DataScript("MyData", Permission = SpecialPermissionKeys.LoggedIn)]
 public class MyDataScript : DataScript<MyData>
 {
     // ...
 }
 ```
 
-Options include `Permission` (`"?"` for logged-in users, `"*"` for everyone), `CacheDuration` (seconds), and `CacheGroupKey`.
+Options include `Permission` (`SpecialPermissionKeys.LoggedIn` for logged-in users, `SpecialPermissionKeys.Public` for everyone), `CacheDuration` (seconds), and `CacheGroupKey`.
+
+> Without a permission, a data script is denied by default in 10.6.1; see [`DynamicScript`](readme.md#dynamicscript-base-class).
 
 ### `[DynamicScript]`
 

@@ -60,7 +60,7 @@ Now build the project.
 
 To show the editor in the Student dialog, add this property to `StudentsForm.cs`:
 ```csharp
-[DisplayName("Courses"), StudentCoursesEditor, SkipNameCheck]
+[DisplayText("Courses"), StudentCoursesEditor, SkipNameCheck]
 public List<StudentCoursesRow>? CourseList { get; set; }
 ```
 The `StudentCoursesEditor` attribute tells Serenity which grid editor to use for this field, and `SkipNameCheck` stops Serenity from looking for a physical column for it in the `StudentsRow` table — this field represents the detail side of the relationship.
@@ -98,7 +98,7 @@ namespace CourseTutorial.CourseDB.Columns;
 [BasedOnRow(typeof(StudentCoursesRow), CheckNames = true)]
 public class StudentCoursesColumns
 {
-    [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+    [EditLink, DisplayText(TextKey = "Db.Shared.RecordId"), AlignRight]
     public int? Id { get; set; }
     public string? CourseName { get; set; }
     public string? TermName { get; set; }
@@ -164,7 +164,7 @@ Clicking **Add** opens the `StudentCoursesEditDialog`, where you can create and 
 The server side of the relationship is declared with the `MasterDetailRelation` attribute on `StudentsRow.cs`. Add a list field that holds the student's StudentCourses records:
 ```csharp
 [MasterDetailRelation(foreignKey: nameof(StudentCoursesRow.StudentId), ColumnsType = typeof(Columns.StudentCoursesColumns))]
-[DisplayName("Course List"), NotMapped]
+[DisplayText("Course List"), NotMapped]
 public List<StudentCoursesRow>? CourseList { get => fields.CourseList[this]; set => fields.CourseList[this] = value; }
 
 public class RowFields : RowFieldsBase

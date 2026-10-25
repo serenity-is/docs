@@ -2,7 +2,7 @@
 
 # Class: Component\<T\>
 
-Defined in: [../domwise/dist/index.d.ts:2486](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2486)
+Defined in: [../domwise/dist/index.d.ts:2791](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2791)
 
 Base class for class-based JSX components.
 
@@ -34,7 +34,7 @@ The type of the component's props (excluding `children` and `ref` which are adde
 
 > **new Component**\<`T`\>(`props`): `Component`\<`T`\>
 
-Defined in: [../domwise/dist/index.d.ts:2496](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2496)
+Defined in: [../domwise/dist/index.d.ts:2801](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2801)
 
 Creates a component instance.
 
@@ -56,7 +56,7 @@ Props passed to the component, including optional `children` and `ref`.
 
 > `readonly` **props**: `T` & `object`
 
-Defined in: [../domwise/dist/index.d.ts:2501](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2501)
+Defined in: [../domwise/dist/index.d.ts:2806](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2806)
 
 Props passed to this component instance, including optional `children` and `ref`.
 
@@ -76,7 +76,7 @@ Props passed to this component instance, including optional `children` and `ref`
 
 > `static` **isComponent**: `boolean`
 
-Defined in: [../domwise/dist/index.d.ts:2491](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2491)
+Defined in: [../domwise/dist/index.d.ts:2796](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2796)
 
 Marker used by the JSX factory to distinguish class components from function components.
 Do not modify.
@@ -87,7 +87,7 @@ Do not modify.
 
 > **render**(): [`JSXElement`](../type-aliases/JSXElement.md)
 
-Defined in: [../domwise/dist/index.d.ts:2510](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2510)
+Defined in: [../domwise/dist/index.d.ts:2815](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2815)
 
 Renders the component's output.
 Override in subclasses to return a DOM node, fragment, or `null`.

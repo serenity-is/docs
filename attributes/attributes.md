@@ -110,46 +110,80 @@ public class SomeForm
 }
 ```
 
-## DisplayName Attribute
+## DisplayText Attribute
 
-> **namespace**: *System.ComponentModel*, **assembly**: *System*
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
 
 Determines default title for grid columns or form fields.
 
 ```cs
 public class SomeForm
 {
-    [DisplayName("Title for Some Field")]
+    [DisplayText("Title for Some Field")]
     public string? SomeField { get; set; }
 }
 ```
 
-* DisplayName attribute cannot be used on Enum members, so you have to use
-Description attribute
+* DisplayText attribute cannot be used on Enum members, so you have to use
+DescriptionText attribute
 
 * Titles set with this attribute is considered to be in *invariant* language.
 
-> This is not a Serenity attribute, it resides in .NET System assembly.
+* Unlike `DisplayName`, the string passed to `DisplayText` is **never** interpreted as a local text key. A key-looking value such as `[DisplayText("Db.Shared.RecordId")]` is still literal invariant text. Use `TextKey` when you want a key:
 
-## Description Attribute
+```cs
+[DisplayText("Movie Name", TextKey = "Movie.MovieName")] // key plus invariant fallback text
+[DisplayText(TextKey = "Db.Shared.RecordId")]            // key only, no literal text
+```
 
-> **namespace**: *System.ComponentModel*, **assembly**: *System*
+* This is what sergen emits for generated columns (e.g. `[DisplayText(TextKey = "Db.Shared.RecordId")]` for the ID column).
+
+> This is a subclass of `System.ComponentModel.DisplayNameAttribute`
+
+## DescriptionText Attribute
+
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
 
 Determines default title for enum members.
 
 ```cs
 public class SomeEnum
 {
-    [Description("Title for Value 1")]
+    [DescriptionText("Title for Value 1")]
     Value1 = 1,
-    [Description("Value 2")]
+    [DescriptionText("Value 2")]
     Value2 = 2
 }
 ```
 
 * Titles set with this attribute is considered to be in *invariant* language.
 
-> This is not a Serenity attribute, it resides in .NET System assembly.
+* Like `DisplayText`, it supports an explicit `TextKey`; the value itself is never inferred as a key:
+
+```cs
+[DescriptionText("Access denied", TextKey = "Site.AccessDenied")]
+```
+
+> This is a subclass of `System.ComponentModel.DescriptionAttribute`
+
+## CategoryName Attribute
+
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
+
+Sets the category (form tab or grid grouping category) for a property or class, with explicit local text key support:
+
+```cs
+[CategoryName("General", TextKey = "Movie.GeneralCategory")]
+public class MovieForm
+{
+}
+```
+
+* `CategoryName` is the explicit-key counterpart of `System.ComponentModel.CategoryAttribute`. The value is treated as literal invariant text unless `TextKey` is set.
+
+* It can also be used key-only, e.g. `[CategoryName(TextKey = "Movie.GeneralCategory")]`.
+
+> This is a subclass of `System.ComponentModel.CategoryAttribute`
 
 
 ## DisplayFormat Attribute
@@ -218,6 +252,13 @@ public class SomeForm
 }
 ```
 
+* The string is always literal text. To localize the placeholder, set `TextKey`:
+
+```cs
+[Placeholder(TextKey = "Movie.Title.Placeholder")]
+public string? Title { get; set; }
+```
+
 ## Hint Attribute
 
 > **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
@@ -235,6 +276,8 @@ public class SomeForm
     public string? FieldWithHint { get; set; }
 }
 ```
+
+* As with `Placeholder`, the value is literal text; use `TextKey` to localize it (e.g. `[Hint(TextKey = "Movie.Title.Hint")]`). The same applies to `Tab` and `InstanceName`.
 
 ## CssClass Attribute
 

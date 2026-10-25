@@ -2,7 +2,7 @@
 
 # Interface: ElementAttributes\<T\>
 
-Defined in: [../domwise/dist/index.d.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L165)
+Defined in: [../domwise/dist/index.d.ts:161](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L161)
 
 Global `Element` + `Node` interface keys, shared by all tags regardless of their namespace:
 
@@ -25,7 +25,7 @@ Global `Element` + `Node` interface keys, shared by all tags regardless of their
 
 > `optional` **aria-activedescendant**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:309](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L309)
+Defined in: [../domwise/dist/index.d.ts:301](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L301)
 
 Identifies the currently active element when DOM focus is on a composite widget, textbox,
 group, or application.
@@ -36,7 +36,7 @@ group, or application.
 
 > `optional` **aria-atomic**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:314](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L314)
+Defined in: [../domwise/dist/index.d.ts:306](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L306)
 
 Indicates whether assistive technologies will present all, or only parts of, the changed
 region based on the change notifications defined by the aria-relevant attribute.
@@ -47,7 +47,7 @@ region based on the change notifications defined by the aria-relevant attribute.
 
 > `optional` **aria-autocomplete**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `"none"` \| `"list"` \| `"inline"` \| `"both"`\>
 
-Defined in: [../domwise/dist/index.d.ts:341](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L341)
+Defined in: [../domwise/dist/index.d.ts:333](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L333)
 
 Indicates whether inputting text could trigger display of one or more predictions of the
 user's intended value for an input and specifies how predictions would be presented if they
@@ -59,7 +59,7 @@ are made.
 
 > `optional` **aria-braillelabel**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L321)
+Defined in: [../domwise/dist/index.d.ts:313](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L313)
 
 Similar to the global aria-label. Defines a string value that labels the current element,
 which is intended to be converted into Braille.
@@ -74,7 +74,7 @@ aria-label.
 
 > `optional` **aria-brailleroledescription**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:335](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L335)
+Defined in: [../domwise/dist/index.d.ts:327](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L327)
 
 Defines a human-readable, author-localized abbreviated description for the role of an element
 intended to be converted into Braille. Braille is not a one-to-one transliteration of letters
@@ -96,7 +96,7 @@ aria-roledescription.
 
 > `optional` **aria-busy**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:346](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L346)
+Defined in: [../domwise/dist/index.d.ts:338](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L338)
 
 Indicates an element is being modified and that assistive technologies MAY want to wait until
 the modifications are complete before exposing them to the user.
@@ -107,7 +107,7 @@ the modifications are complete before exposing them to the user.
 
 > `optional` **aria-checked**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean` \| `"mixed"`\>
 
-Defined in: [../domwise/dist/index.d.ts:352](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L352)
+Defined in: [../domwise/dist/index.d.ts:344](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L344)
 
 Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.
 
@@ -122,7 +122,7 @@ Indicates the current "checked" state of checkboxes, radio buttons, and other wi
 
 > `optional` **aria-colcount**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:358](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L358)
+Defined in: [../domwise/dist/index.d.ts:350](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L350)
 
 Defines the total number of columns in a table, grid, or treegrid.
 
@@ -136,7 +136,7 @@ aria-colindex.
 
 > `optional` **aria-colindex**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:365](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L365)
+Defined in: [../domwise/dist/index.d.ts:357](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L357)
 
 Defines an element's column index or position with respect to the total number of columns
 within a table, grid, or treegrid.
@@ -152,7 +152,7 @@ within a table, grid, or treegrid.
 
 > `optional` **aria-colindextext**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:367](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L367)
+Defined in: [../domwise/dist/index.d.ts:359](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L359)
 
 Defines a human-readable text alternative of the numeric aria-colindex.
 
@@ -162,7 +162,7 @@ Defines a human-readable text alternative of the numeric aria-colindex.
 
 > `optional` **aria-colspan**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:374](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L374)
+Defined in: [../domwise/dist/index.d.ts:366](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L366)
 
 Defines the number of columns spanned by a cell or gridcell within a table, grid, or
 treegrid.
@@ -178,7 +178,7 @@ treegrid.
 
 > `optional` **aria-controls**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:381](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L381)
+Defined in: [../domwise/dist/index.d.ts:373](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L373)
 
 Identifies the element (or elements) whose contents or presence are controlled by the current
 element.
@@ -193,7 +193,7 @@ aria-owns.
 
 > `optional` **aria-current**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `"time"` \| `EnumeratedPseudoBoolean` \| `"page"` \| `"step"` \| `"date"` \| `"location"`\>
 
-Defined in: [../domwise/dist/index.d.ts:386](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L386)
+Defined in: [../domwise/dist/index.d.ts:378](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L378)
 
 Indicates the element that represents the current item within a container or set of related
 elements.
@@ -204,7 +204,7 @@ elements.
 
 > `optional` **aria-describedby**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:392](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L392)
+Defined in: [../domwise/dist/index.d.ts:384](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L384)
 
 Identifies the element (or elements) that describes the object.
 
@@ -218,7 +218,7 @@ aria-labelledby
 
 > `optional` **aria-description**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:398](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L398)
+Defined in: [../domwise/dist/index.d.ts:390](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L390)
 
 Defines a string value that describes or annotates the current element.
 
@@ -232,7 +232,7 @@ aria-describedby
 
 > `optional` **aria-details**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:404](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L404)
+Defined in: [../domwise/dist/index.d.ts:396](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L396)
 
 Identifies the element that provides a detailed, extended description for the object.
 
@@ -246,7 +246,7 @@ aria-describedby.
 
 > `optional` **aria-disabled**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:411](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L411)
+Defined in: [../domwise/dist/index.d.ts:403](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L403)
 
 Indicates that the element is perceivable but disabled, so it is not editable or otherwise
 operable.
@@ -262,7 +262,7 @@ operable.
 
 > `optional` **aria-dropeffect**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `"link"` \| `"copy"` \| `"none"` \| `"move"` \| `"execute"` \| `"popup"`\>
 
-Defined in: [../domwise/dist/index.d.ts:418](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L418)
+Defined in: [../domwise/dist/index.d.ts:410](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L410)
 
 Indicates what functions can be performed when a dragged object is released on the drop
 target.
@@ -277,7 +277,7 @@ In ARIA 1.1
 
 > `optional` **aria-errormessage**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:424](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L424)
+Defined in: [../domwise/dist/index.d.ts:416](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L416)
 
 Identifies the element that provides an error message for the object.
 
@@ -292,7 +292,7 @@ Identifies the element that provides an error message for the object.
 
 > `optional` **aria-expanded**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:429](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L429)
+Defined in: [../domwise/dist/index.d.ts:421](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L421)
 
 Indicates whether the element, or another grouping element it controls, is currently expanded
 or collapsed.
@@ -303,7 +303,7 @@ or collapsed.
 
 > `optional` **aria-flowto**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:435](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L435)
+Defined in: [../domwise/dist/index.d.ts:427](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L427)
 
 Identifies the next element (or elements) in an alternate reading order of content which, at
 the user's discretion, allows assistive technology to override the general default of reading
@@ -315,7 +315,7 @@ in document source order.
 
 > `optional` **aria-grabbed**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:441](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L441)
+Defined in: [../domwise/dist/index.d.ts:433](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L433)
 
 Indicates an element's "grabbed" state in a drag-and-drop operation.
 
@@ -329,7 +329,7 @@ In ARIA 1.1
 
 > `optional` **aria-haspopup**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `"dialog"` \| `"menu"` \| `"tree"` \| `EnumeratedPseudoBoolean` \| `"grid"` \| `"listbox"`\>
 
-Defined in: [../domwise/dist/index.d.ts:446](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L446)
+Defined in: [../domwise/dist/index.d.ts:438](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L438)
 
 Indicates the availability and type of interactive popup element, such as menu or dialog,
 that can be triggered by an element.
@@ -340,7 +340,7 @@ that can be triggered by an element.
 
 > `optional` **aria-hidden**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:452](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L452)
+Defined in: [../domwise/dist/index.d.ts:444](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L444)
 
 Indicates whether the element is exposed to an accessibility API.
 
@@ -354,7 +354,7 @@ aria-disabled.
 
 > `optional` **aria-invalid**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean` \| `"grammar"` \| `"spelling"`\>
 
-Defined in: [../domwise/dist/index.d.ts:458](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L458)
+Defined in: [../domwise/dist/index.d.ts:450](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L450)
 
 Indicates the entered value does not conform to the format expected by the application.
 
@@ -368,7 +368,7 @@ aria-errormessage.
 
 > `optional` **aria-keyshortcuts**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:463](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L463)
+Defined in: [../domwise/dist/index.d.ts:455](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L455)
 
 Indicates keyboard shortcuts that an author has implemented to activate or give focus to an
 element.
@@ -379,7 +379,7 @@ element.
 
 > `optional` **aria-label**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:469](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L469)
+Defined in: [../domwise/dist/index.d.ts:461](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L461)
 
 Defines a string value that labels the current element.
 
@@ -393,7 +393,7 @@ aria-labelledby.
 
 > `optional` **aria-labelledby**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:475](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L475)
+Defined in: [../domwise/dist/index.d.ts:467](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L467)
 
 Identifies the element (or elements) that labels the current element.
 
@@ -407,7 +407,7 @@ aria-describedby.
 
 > `optional` **aria-level**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:477](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L477)
+Defined in: [../domwise/dist/index.d.ts:469](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L469)
 
 Defines the hierarchical level of an element within a structure.
 
@@ -417,7 +417,7 @@ Defines the hierarchical level of an element within a structure.
 
 > `optional` **aria-live**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `"polite"` \| `"assertive"` \| `"off"`\>
 
-Defined in: [../domwise/dist/index.d.ts:482](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L482)
+Defined in: [../domwise/dist/index.d.ts:474](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L474)
 
 Indicates that an element will be updated, and describes the types of updates the user
 agents, assistive technologies, and user can expect from the live region.
@@ -428,7 +428,7 @@ agents, assistive technologies, and user can expect from the live region.
 
 > `optional` **aria-modal**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:484](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L484)
+Defined in: [../domwise/dist/index.d.ts:476](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L476)
 
 Indicates whether an element is modal when displayed.
 
@@ -438,7 +438,7 @@ Indicates whether an element is modal when displayed.
 
 > `optional` **aria-multiline**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:486](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L486)
+Defined in: [../domwise/dist/index.d.ts:478](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L478)
 
 Indicates whether a text box accepts multiple lines of input or only a single line.
 
@@ -448,7 +448,7 @@ Indicates whether a text box accepts multiple lines of input or only a single li
 
 > `optional` **aria-multiselectable**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:491](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L491)
+Defined in: [../domwise/dist/index.d.ts:483](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L483)
 
 Indicates that the user may select more than one item from the current selectable
 descendants.
@@ -459,7 +459,7 @@ descendants.
 
 > `optional` **aria-orientation**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `"horizontal"` \| `"vertical"`\>
 
-Defined in: [../domwise/dist/index.d.ts:493](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L493)
+Defined in: [../domwise/dist/index.d.ts:485](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L485)
 
 Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 
@@ -469,7 +469,7 @@ Indicates whether the element's orientation is horizontal, vertical, or unknown/
 
 > `optional` **aria-owns**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:501](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L501)
+Defined in: [../domwise/dist/index.d.ts:493](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L493)
 
 Identifies an element (or elements) in order to define a visual, functional, or contextual
 parent/child relationship between DOM elements where the DOM hierarchy cannot be used to
@@ -485,7 +485,7 @@ aria-controls.
 
 > `optional` **aria-placeholder**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:507](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L507)
+Defined in: [../domwise/dist/index.d.ts:499](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L499)
 
 Defines a short hint (a word or short phrase) intended to aid the user with data entry when
 the control has no value. A hint could be a sample value or a brief description of the
@@ -497,7 +497,7 @@ expected format.
 
 > `optional` **aria-posinset**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:514](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L514)
+Defined in: [../domwise/dist/index.d.ts:506](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L506)
 
 Defines an element's number or position in the current set of listitems or treeitems. Not
 required if all elements in the set are present in the DOM.
@@ -512,7 +512,7 @@ aria-setsize.
 
 > `optional` **aria-pressed**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean` \| `"mixed"`\>
 
-Defined in: [../domwise/dist/index.d.ts:520](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L520)
+Defined in: [../domwise/dist/index.d.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L512)
 
 Indicates the current "pressed" state of toggle buttons.
 
@@ -527,7 +527,7 @@ Indicates the current "pressed" state of toggle buttons.
 
 > `optional` **aria-readonly**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:526](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L526)
+Defined in: [../domwise/dist/index.d.ts:518](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L518)
 
 Indicates that the element is not editable, but is otherwise operable.
 
@@ -541,7 +541,7 @@ aria-disabled.
 
 > `optional` **aria-relevant**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `"text"` \| `"all"` \| `"additions"` \| `"additions removals"` \| `"additions text"` \| `"removals"` \| `"removals additions"` \| `"removals text"` \| `"text additions"` \| `"text removals"`\>
 
-Defined in: [../domwise/dist/index.d.ts:533](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L533)
+Defined in: [../domwise/dist/index.d.ts:525](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L525)
 
 Indicates what notifications the user agent will trigger when the accessibility tree within a
 live region is modified.
@@ -556,7 +556,7 @@ aria-atomic.
 
 > `optional` **aria-required**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:535](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L535)
+Defined in: [../domwise/dist/index.d.ts:527](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L527)
 
 Indicates that user input is required on the element before a form may be submitted.
 
@@ -566,7 +566,7 @@ Indicates that user input is required on the element before a form may be submit
 
 > `optional` **aria-roledescription**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:537](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L537)
+Defined in: [../domwise/dist/index.d.ts:529](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L529)
 
 Defines a human-readable, author-localized description for the role of an element.
 
@@ -576,7 +576,7 @@ Defines a human-readable, author-localized description for the role of an elemen
 
 > `optional` **aria-rowcount**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:543](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L543)
+Defined in: [../domwise/dist/index.d.ts:535](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L535)
 
 Defines the total number of rows in a table, grid, or treegrid.
 
@@ -590,7 +590,7 @@ aria-rowindex.
 
 > `optional` **aria-rowindex**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:550](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L550)
+Defined in: [../domwise/dist/index.d.ts:542](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L542)
 
 Defines an element's row index or position with respect to the total number of rows within a
 table, grid, or treegrid.
@@ -606,7 +606,7 @@ table, grid, or treegrid.
 
 > `optional` **aria-rowindextext**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:552](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L552)
+Defined in: [../domwise/dist/index.d.ts:544](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L544)
 
 Defines a human-readable text alternative of aria-rowindex.
 
@@ -616,7 +616,7 @@ Defines a human-readable text alternative of aria-rowindex.
 
 > `optional` **aria-rowspan**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:558](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L558)
+Defined in: [../domwise/dist/index.d.ts:550](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L550)
 
 Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
 
@@ -631,7 +631,7 @@ Defines the number of rows spanned by a cell or gridcell within a table, grid, o
 
 > `optional` **aria-selected**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `EnumeratedPseudoBoolean`\>
 
-Defined in: [../domwise/dist/index.d.ts:564](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L564)
+Defined in: [../domwise/dist/index.d.ts:556](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L556)
 
 Indicates the current "selected" state of various widgets.
 
@@ -646,7 +646,7 @@ Indicates the current "selected" state of various widgets.
 
 > `optional` **aria-setsize**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L571)
+Defined in: [../domwise/dist/index.d.ts:563](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L563)
 
 Defines the number of items in the current set of listitems or treeitems. Not required if all
 elements in the set are present in the DOM.
@@ -661,7 +661,7 @@ aria-posinset.
 
 > `optional` **aria-sort**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `"none"` \| `"descending"` \| `"ascending"` \| `"other"`\>
 
-Defined in: [../domwise/dist/index.d.ts:573](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L573)
+Defined in: [../domwise/dist/index.d.ts:565](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L565)
 
 Indicates if items in a table or grid are sorted in ascending or descending order.
 
@@ -671,7 +671,7 @@ Indicates if items in a table or grid are sorted in ascending or descending orde
 
 > `optional` **aria-valuemax**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:575](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L575)
+Defined in: [../domwise/dist/index.d.ts:567](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L567)
 
 Defines the maximum allowed value for a range widget.
 
@@ -681,7 +681,7 @@ Defines the maximum allowed value for a range widget.
 
 > `optional` **aria-valuemin**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:577](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L577)
+Defined in: [../domwise/dist/index.d.ts:569](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L569)
 
 Defines the minimum allowed value for a range widget.
 
@@ -691,7 +691,7 @@ Defines the minimum allowed value for a range widget.
 
 > `optional` **aria-valuenow**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:583](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L583)
+Defined in: [../domwise/dist/index.d.ts:575](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L575)
 
 Defines the current value for a range widget.
 
@@ -705,7 +705,7 @@ aria-valuetext.
 
 > `optional` **aria-valuetext**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:585](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L585)
+Defined in: [../domwise/dist/index.d.ts:577](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L577)
 
 Defines the human readable text alternative of aria-valuenow for a range widget.
 
@@ -715,7 +715,7 @@ Defines the human readable text alternative of aria-valuenow for a range widget.
 
 > `optional` **autofocus**: [`PropValue`](../type-aliases/PropValue.md)\<`BooleanAttribute`\>
 
-Defined in: [../domwise/dist/index.d.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L739)
+Defined in: [../domwise/dist/index.d.ts:757](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L757)
 
 ***
 
@@ -723,7 +723,7 @@ Defined in: [../domwise/dist/index.d.ts:739](https://github.com/serenity-is/sere
 
 > `optional` **children**: [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-Defined in: [../domwise/dist/index.d.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L150)
+Defined in: [../domwise/dist/index.d.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L146)
 
 Child nodes / JSX children for the element.
 
@@ -737,7 +737,7 @@ Child nodes / JSX children for the element.
 
 > `optional` **class**: [`PropValue`](../type-aliases/PropValue.md)\<[`ClassNames`](../type-aliases/ClassNames.md)\> \| \{\[`key`: `string`\]: [`PropValue`](../type-aliases/PropValue.md)\<`boolean`\>; \}
 
-Defined in: [../domwise/dist/index.d.ts:740](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L740)
+Defined in: [../domwise/dist/index.d.ts:758](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L758)
 
 ***
 
@@ -745,7 +745,7 @@ Defined in: [../domwise/dist/index.d.ts:740](https://github.com/serenity-is/sere
 
 > `optional` **className**: [`PropValue`](../type-aliases/PropValue.md)\<[`ClassNames`](../type-aliases/ClassNames.md)\> \| \{\[`key`: `string`\]: [`PropValue`](../type-aliases/PropValue.md)\<`boolean`\>; \}
 
-Defined in: [../domwise/dist/index.d.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L166)
+Defined in: [../domwise/dist/index.d.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L162)
 
 ***
 
@@ -753,7 +753,7 @@ Defined in: [../domwise/dist/index.d.ts:166](https://github.com/serenity-is/sere
 
 > `optional` **dangerouslySetInnerHTML**: `object`
 
-Defined in: [../domwise/dist/index.d.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L152)
+Defined in: [../domwise/dist/index.d.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L148)
 
 Raw HTML to assign via `innerHTML`. Use with caution — content is not escaped.
 
@@ -771,7 +771,7 @@ Raw HTML to assign via `innerHTML`. Use with caution — content is not escaped.
 
 > `optional` **elementtiming**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:743](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L743)
+Defined in: [../domwise/dist/index.d.ts:759](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L759)
 
 ***
 
@@ -779,7 +779,7 @@ Defined in: [../domwise/dist/index.d.ts:743](https://github.com/serenity-is/sere
 
 > `optional` **id**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:744](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L744)
+Defined in: [../domwise/dist/index.d.ts:760](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L760)
 
 ***
 
@@ -787,7 +787,7 @@ Defined in: [../domwise/dist/index.d.ts:744](https://github.com/serenity-is/sere
 
 > `optional` **namespaceURI**: `string`
 
-Defined in: [../domwise/dist/index.d.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L168)
+Defined in: [../domwise/dist/index.d.ts:164](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L164)
 
 ***
 
@@ -795,7 +795,7 @@ Defined in: [../domwise/dist/index.d.ts:168](https://github.com/serenity-is/sere
 
 > `optional` **nonce**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:745](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L745)
+Defined in: [../domwise/dist/index.d.ts:761](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L761)
 
 ***
 
@@ -803,7 +803,7 @@ Defined in: [../domwise/dist/index.d.ts:745](https://github.com/serenity-is/sere
 
 > `optional` **on**: `Record`\<`string`, `Function`\>
 
-Defined in: [../domwise/dist/index.d.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L158)
+Defined in: [../domwise/dist/index.d.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L153)
 
 Compatibility event map for `on*` handlers (jsx-dom / React style).
 
@@ -817,7 +817,7 @@ Compatibility event map for `on*` handlers (jsx-dom / React style).
 
 > `optional` **onAbort**: `EventHandler`\<`T`, `UIEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:613](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L613)
+Defined in: [../domwise/dist/index.d.ts:621](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L621)
 
 ***
 
@@ -835,7 +835,7 @@ Defined in: [../domwise/dist/index.d.ts:613](https://github.com/serenity-is/sere
 
 > `optional` **onAnimationCancel**: `EventHandler`\<`T`, `AnimationEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:614](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L614)
+Defined in: [../domwise/dist/index.d.ts:622](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L622)
 
 ***
 
@@ -853,7 +853,7 @@ Defined in: [../domwise/dist/index.d.ts:614](https://github.com/serenity-is/sere
 
 > `optional` **onAnimationEnd**: `EventHandler`\<`T`, `AnimationEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:615](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L615)
+Defined in: [../domwise/dist/index.d.ts:623](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L623)
 
 ***
 
@@ -871,7 +871,7 @@ Defined in: [../domwise/dist/index.d.ts:615](https://github.com/serenity-is/sere
 
 > `optional` **onAnimationIteration**: `EventHandler`\<`T`, `AnimationEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:616](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L616)
+Defined in: [../domwise/dist/index.d.ts:624](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L624)
 
 ***
 
@@ -889,7 +889,7 @@ Defined in: [../domwise/dist/index.d.ts:616](https://github.com/serenity-is/sere
 
 > `optional` **onAnimationStart**: `EventHandler`\<`T`, `AnimationEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:617](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L617)
+Defined in: [../domwise/dist/index.d.ts:625](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L625)
 
 ***
 
@@ -907,7 +907,7 @@ Defined in: [../domwise/dist/index.d.ts:617](https://github.com/serenity-is/sere
 
 > `optional` **onAuxClick**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:618](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L618)
+Defined in: [../domwise/dist/index.d.ts:626](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L626)
 
 ***
 
@@ -925,7 +925,7 @@ Defined in: [../domwise/dist/index.d.ts:618](https://github.com/serenity-is/sere
 
 > `optional` **onBeforeCopy**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:619](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L619)
+Defined in: [../domwise/dist/index.d.ts:627](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L627)
 
 ***
 
@@ -943,7 +943,7 @@ Defined in: [../domwise/dist/index.d.ts:619](https://github.com/serenity-is/sere
 
 > `optional` **onBeforeCut**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:620](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L620)
+Defined in: [../domwise/dist/index.d.ts:628](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L628)
 
 ***
 
@@ -961,7 +961,7 @@ Defined in: [../domwise/dist/index.d.ts:620](https://github.com/serenity-is/sere
 
 > `optional` **onBeforeInput**: `InputEventHandler`\<`T`, `InputEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:621](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L621)
+Defined in: [../domwise/dist/index.d.ts:629](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L629)
 
 ***
 
@@ -979,7 +979,7 @@ Defined in: [../domwise/dist/index.d.ts:621](https://github.com/serenity-is/sere
 
 > `optional` **onBeforeMatch**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:622](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L622)
+Defined in: [../domwise/dist/index.d.ts:630](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L630)
 
 ***
 
@@ -997,7 +997,7 @@ Defined in: [../domwise/dist/index.d.ts:622](https://github.com/serenity-is/sere
 
 > `optional` **onBeforePaste**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:623](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L623)
+Defined in: [../domwise/dist/index.d.ts:631](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L631)
 
 ***
 
@@ -1015,7 +1015,7 @@ Defined in: [../domwise/dist/index.d.ts:623](https://github.com/serenity-is/sere
 
 > `optional` **onBeforeToggle**: `EventHandler`\<`T`, `ToggleEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:624](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L624)
+Defined in: [../domwise/dist/index.d.ts:632](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L632)
 
 ***
 
@@ -1033,7 +1033,7 @@ Defined in: [../domwise/dist/index.d.ts:624](https://github.com/serenity-is/sere
 
 > `optional` **onBeforeXRSelect**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:625](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L625)
+Defined in: [../domwise/dist/index.d.ts:633](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L633)
 
 ***
 
@@ -1051,7 +1051,7 @@ Defined in: [../domwise/dist/index.d.ts:625](https://github.com/serenity-is/sere
 
 > `optional` **onBlur**: `FocusEventHandler`\<`T`, `FocusEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:626](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L626)
+Defined in: [../domwise/dist/index.d.ts:634](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L634)
 
 ***
 
@@ -1069,7 +1069,7 @@ Defined in: [../domwise/dist/index.d.ts:626](https://github.com/serenity-is/sere
 
 > `optional` **onCancel**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:627](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L627)
+Defined in: [../domwise/dist/index.d.ts:635](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L635)
 
 ***
 
@@ -1087,7 +1087,7 @@ Defined in: [../domwise/dist/index.d.ts:627](https://github.com/serenity-is/sere
 
 > `optional` **onCanPlay**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:628](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L628)
+Defined in: [../domwise/dist/index.d.ts:636](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L636)
 
 ***
 
@@ -1105,7 +1105,7 @@ Defined in: [../domwise/dist/index.d.ts:628](https://github.com/serenity-is/sere
 
 > `optional` **onCanPlayThrough**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:629](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L629)
+Defined in: [../domwise/dist/index.d.ts:637](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L637)
 
 ***
 
@@ -1123,7 +1123,7 @@ Defined in: [../domwise/dist/index.d.ts:629](https://github.com/serenity-is/sere
 
 > `optional` **onCapture**: `Record`\<`string`, `Function`\>
 
-Defined in: [../domwise/dist/index.d.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L160)
+Defined in: [../domwise/dist/index.d.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L155)
 
 Compatibility event map for capture-phase handlers.
 
@@ -1137,7 +1137,7 @@ Compatibility event map for capture-phase handlers.
 
 > `optional` **onChange**: `ChangeEventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:630](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L630)
+Defined in: [../domwise/dist/index.d.ts:638](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L638)
 
 ***
 
@@ -1155,7 +1155,7 @@ Defined in: [../domwise/dist/index.d.ts:630](https://github.com/serenity-is/sere
 
 > `optional` **onClick**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:631](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L631)
+Defined in: [../domwise/dist/index.d.ts:639](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L639)
 
 ***
 
@@ -1163,7 +1163,7 @@ Defined in: [../domwise/dist/index.d.ts:631](https://github.com/serenity-is/sere
 
 > `optional` **onClickCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L169)
+Defined in: [../domwise/dist/index.d.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L165)
 
 #### Overrides
 
@@ -1175,7 +1175,7 @@ Defined in: [../domwise/dist/index.d.ts:169](https://github.com/serenity-is/sere
 
 > `optional` **onClose**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:632](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L632)
+Defined in: [../domwise/dist/index.d.ts:640](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L640)
 
 ***
 
@@ -1193,7 +1193,7 @@ Defined in: [../domwise/dist/index.d.ts:632](https://github.com/serenity-is/sere
 
 > `optional` **onCommand**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:634](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L634)
+Defined in: [../domwise/dist/index.d.ts:642](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L642)
 
 ***
 
@@ -1211,7 +1211,7 @@ Defined in: [../domwise/dist/index.d.ts:634](https://github.com/serenity-is/sere
 
 > `optional` **onCompositionEnd**: `EventHandler`\<`T`, `CompositionEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:635](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L635)
+Defined in: [../domwise/dist/index.d.ts:643](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L643)
 
 ***
 
@@ -1229,7 +1229,7 @@ Defined in: [../domwise/dist/index.d.ts:635](https://github.com/serenity-is/sere
 
 > `optional` **onCompositionStart**: `EventHandler`\<`T`, `CompositionEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:636](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L636)
+Defined in: [../domwise/dist/index.d.ts:644](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L644)
 
 ***
 
@@ -1247,7 +1247,7 @@ Defined in: [../domwise/dist/index.d.ts:636](https://github.com/serenity-is/sere
 
 > `optional` **onCompositionUpdate**: `EventHandler`\<`T`, `CompositionEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:637](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L637)
+Defined in: [../domwise/dist/index.d.ts:645](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L645)
 
 ***
 
@@ -1265,7 +1265,7 @@ Defined in: [../domwise/dist/index.d.ts:637](https://github.com/serenity-is/sere
 
 > `optional` **onContentVisibilityAutoStateChange**: `EventHandler`\<`T`, `ContentVisibilityAutoStateChangeEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:638](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L638)
+Defined in: [../domwise/dist/index.d.ts:646](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L646)
 
 ***
 
@@ -1283,7 +1283,7 @@ Defined in: [../domwise/dist/index.d.ts:638](https://github.com/serenity-is/sere
 
 > `optional` **onContextLost**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:639](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L639)
+Defined in: [../domwise/dist/index.d.ts:647](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L647)
 
 ***
 
@@ -1301,7 +1301,7 @@ Defined in: [../domwise/dist/index.d.ts:639](https://github.com/serenity-is/sere
 
 > `optional` **onContextMenu**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:640](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L640)
+Defined in: [../domwise/dist/index.d.ts:648](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L648)
 
 ***
 
@@ -1319,7 +1319,7 @@ Defined in: [../domwise/dist/index.d.ts:640](https://github.com/serenity-is/sere
 
 > `optional` **onContextRestored**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:641](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L641)
+Defined in: [../domwise/dist/index.d.ts:649](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L649)
 
 ***
 
@@ -1337,7 +1337,7 @@ Defined in: [../domwise/dist/index.d.ts:641](https://github.com/serenity-is/sere
 
 > `optional` **onCopy**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:642](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L642)
+Defined in: [../domwise/dist/index.d.ts:650](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L650)
 
 ***
 
@@ -1355,7 +1355,7 @@ Defined in: [../domwise/dist/index.d.ts:642](https://github.com/serenity-is/sere
 
 > `optional` **onCueChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:643](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L643)
+Defined in: [../domwise/dist/index.d.ts:651](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L651)
 
 ***
 
@@ -1373,7 +1373,7 @@ Defined in: [../domwise/dist/index.d.ts:643](https://github.com/serenity-is/sere
 
 > `optional` **onCut**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:644](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L644)
+Defined in: [../domwise/dist/index.d.ts:652](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L652)
 
 ***
 
@@ -1391,7 +1391,7 @@ Defined in: [../domwise/dist/index.d.ts:644](https://github.com/serenity-is/sere
 
 > `optional` **onDblClick**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:645](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L645)
+Defined in: [../domwise/dist/index.d.ts:653](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L653)
 
 ***
 
@@ -1399,7 +1399,7 @@ Defined in: [../domwise/dist/index.d.ts:645](https://github.com/serenity-is/sere
 
 > `optional` **onDblClickCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:170](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L170)
+Defined in: [../domwise/dist/index.d.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L166)
 
 #### Overrides
 
@@ -1411,7 +1411,7 @@ Defined in: [../domwise/dist/index.d.ts:170](https://github.com/serenity-is/sere
 
 > `optional` **onDoubleClick**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:171](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L171)
+Defined in: [../domwise/dist/index.d.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L167)
 
 ***
 
@@ -1419,7 +1419,7 @@ Defined in: [../domwise/dist/index.d.ts:171](https://github.com/serenity-is/sere
 
 > `optional` **onDoubleClickCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L172)
+Defined in: [../domwise/dist/index.d.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L168)
 
 ***
 
@@ -1427,7 +1427,7 @@ Defined in: [../domwise/dist/index.d.ts:172](https://github.com/serenity-is/sere
 
 > `optional` **onDrag**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:646](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L646)
+Defined in: [../domwise/dist/index.d.ts:654](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L654)
 
 ***
 
@@ -1445,7 +1445,7 @@ Defined in: [../domwise/dist/index.d.ts:646](https://github.com/serenity-is/sere
 
 > `optional` **onDragEnd**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:647](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L647)
+Defined in: [../domwise/dist/index.d.ts:655](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L655)
 
 ***
 
@@ -1463,7 +1463,7 @@ Defined in: [../domwise/dist/index.d.ts:647](https://github.com/serenity-is/sere
 
 > `optional` **onDragEnter**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:648](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L648)
+Defined in: [../domwise/dist/index.d.ts:656](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L656)
 
 ***
 
@@ -1481,7 +1481,7 @@ Defined in: [../domwise/dist/index.d.ts:648](https://github.com/serenity-is/sere
 
 > `optional` **onDragExit**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:649](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L649)
+Defined in: [../domwise/dist/index.d.ts:657](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L657)
 
 ***
 
@@ -1499,7 +1499,7 @@ Defined in: [../domwise/dist/index.d.ts:649](https://github.com/serenity-is/sere
 
 > `optional` **onDragLeave**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:650](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L650)
+Defined in: [../domwise/dist/index.d.ts:658](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L658)
 
 ***
 
@@ -1517,7 +1517,7 @@ Defined in: [../domwise/dist/index.d.ts:650](https://github.com/serenity-is/sere
 
 > `optional` **onDragOver**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:651](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L651)
+Defined in: [../domwise/dist/index.d.ts:659](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L659)
 
 ***
 
@@ -1535,7 +1535,7 @@ Defined in: [../domwise/dist/index.d.ts:651](https://github.com/serenity-is/sere
 
 > `optional` **onDragStart**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:652](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L652)
+Defined in: [../domwise/dist/index.d.ts:660](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L660)
 
 ***
 
@@ -1553,7 +1553,7 @@ Defined in: [../domwise/dist/index.d.ts:652](https://github.com/serenity-is/sere
 
 > `optional` **onDrop**: `EventHandler`\<`T`, `DragEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:653](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L653)
+Defined in: [../domwise/dist/index.d.ts:661](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L661)
 
 ***
 
@@ -1571,7 +1571,7 @@ Defined in: [../domwise/dist/index.d.ts:653](https://github.com/serenity-is/sere
 
 > `optional` **onDurationChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:654](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L654)
+Defined in: [../domwise/dist/index.d.ts:662](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L662)
 
 ***
 
@@ -1589,7 +1589,7 @@ Defined in: [../domwise/dist/index.d.ts:654](https://github.com/serenity-is/sere
 
 > `optional` **onEmptied**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:655](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L655)
+Defined in: [../domwise/dist/index.d.ts:663](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L663)
 
 ***
 
@@ -1607,7 +1607,7 @@ Defined in: [../domwise/dist/index.d.ts:655](https://github.com/serenity-is/sere
 
 > `optional` **onEnded**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:656](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L656)
+Defined in: [../domwise/dist/index.d.ts:664](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L664)
 
 ***
 
@@ -1625,7 +1625,7 @@ Defined in: [../domwise/dist/index.d.ts:656](https://github.com/serenity-is/sere
 
 > `optional` **onError**: `EventHandler`\<`T`, `ErrorEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:657](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L657)
+Defined in: [../domwise/dist/index.d.ts:665](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L665)
 
 ***
 
@@ -1643,7 +1643,7 @@ Defined in: [../domwise/dist/index.d.ts:657](https://github.com/serenity-is/sere
 
 > `optional` **onFocus**: `FocusEventHandler`\<`T`, `FocusEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:658](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L658)
+Defined in: [../domwise/dist/index.d.ts:666](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L666)
 
 ***
 
@@ -1661,7 +1661,7 @@ Defined in: [../domwise/dist/index.d.ts:658](https://github.com/serenity-is/sere
 
 > `optional` **onFocusIn**: `FocusEventHandler`\<`T`, `FocusEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:659](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L659)
+Defined in: [../domwise/dist/index.d.ts:667](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L667)
 
 ***
 
@@ -1679,7 +1679,7 @@ Defined in: [../domwise/dist/index.d.ts:659](https://github.com/serenity-is/sere
 
 > `optional` **onFocusOut**: `FocusEventHandler`\<`T`, `FocusEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:660](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L660)
+Defined in: [../domwise/dist/index.d.ts:668](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L668)
 
 ***
 
@@ -1697,7 +1697,7 @@ Defined in: [../domwise/dist/index.d.ts:660](https://github.com/serenity-is/sere
 
 > `optional` **onFormData**: `EventHandler`\<`T`, `FormDataEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:661](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L661)
+Defined in: [../domwise/dist/index.d.ts:669](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L669)
 
 ***
 
@@ -1715,7 +1715,7 @@ Defined in: [../domwise/dist/index.d.ts:661](https://github.com/serenity-is/sere
 
 > `optional` **onFullscreenChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:662](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L662)
+Defined in: [../domwise/dist/index.d.ts:670](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L670)
 
 ***
 
@@ -1733,7 +1733,7 @@ Defined in: [../domwise/dist/index.d.ts:662](https://github.com/serenity-is/sere
 
 > `optional` **onFullscreenError**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:663](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L663)
+Defined in: [../domwise/dist/index.d.ts:671](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L671)
 
 ***
 
@@ -1751,7 +1751,7 @@ Defined in: [../domwise/dist/index.d.ts:663](https://github.com/serenity-is/sere
 
 > `optional` **onGotPointerCapture**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:664](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L664)
+Defined in: [../domwise/dist/index.d.ts:672](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L672)
 
 ***
 
@@ -1769,7 +1769,7 @@ Defined in: [../domwise/dist/index.d.ts:664](https://github.com/serenity-is/sere
 
 > `optional` **onInput**: `InputEventHandler`\<`T`, `InputEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:665](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L665)
+Defined in: [../domwise/dist/index.d.ts:673](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L673)
 
 ***
 
@@ -1787,7 +1787,7 @@ Defined in: [../domwise/dist/index.d.ts:665](https://github.com/serenity-is/sere
 
 > `optional` **onInvalid**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:666](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L666)
+Defined in: [../domwise/dist/index.d.ts:674](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L674)
 
 ***
 
@@ -1805,7 +1805,7 @@ Defined in: [../domwise/dist/index.d.ts:666](https://github.com/serenity-is/sere
 
 > `optional` **onKeyDown**: `EventHandler`\<`T`, `KeyboardEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:667](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L667)
+Defined in: [../domwise/dist/index.d.ts:675](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L675)
 
 ***
 
@@ -1823,7 +1823,7 @@ Defined in: [../domwise/dist/index.d.ts:667](https://github.com/serenity-is/sere
 
 > `optional` **onKeyPress**: `EventHandler`\<`T`, `KeyboardEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:668](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L668)
+Defined in: [../domwise/dist/index.d.ts:676](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L676)
 
 ***
 
@@ -1841,7 +1841,7 @@ Defined in: [../domwise/dist/index.d.ts:668](https://github.com/serenity-is/sere
 
 > `optional` **onKeyUp**: `EventHandler`\<`T`, `KeyboardEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:669](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L669)
+Defined in: [../domwise/dist/index.d.ts:677](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L677)
 
 ***
 
@@ -1859,7 +1859,7 @@ Defined in: [../domwise/dist/index.d.ts:669](https://github.com/serenity-is/sere
 
 > `optional` **onLoad**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:670](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L670)
+Defined in: [../domwise/dist/index.d.ts:678](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L678)
 
 ***
 
@@ -1877,7 +1877,7 @@ Defined in: [../domwise/dist/index.d.ts:670](https://github.com/serenity-is/sere
 
 > `optional` **onLoadedData**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:671](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L671)
+Defined in: [../domwise/dist/index.d.ts:679](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L679)
 
 ***
 
@@ -1895,7 +1895,7 @@ Defined in: [../domwise/dist/index.d.ts:671](https://github.com/serenity-is/sere
 
 > `optional` **onLoadedMetadata**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:672](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L672)
+Defined in: [../domwise/dist/index.d.ts:680](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L680)
 
 ***
 
@@ -1913,7 +1913,7 @@ Defined in: [../domwise/dist/index.d.ts:672](https://github.com/serenity-is/sere
 
 > `optional` **onLoadStart**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:673](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L673)
+Defined in: [../domwise/dist/index.d.ts:681](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L681)
 
 ***
 
@@ -1931,7 +1931,7 @@ Defined in: [../domwise/dist/index.d.ts:673](https://github.com/serenity-is/sere
 
 > `optional` **onLostPointerCapture**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:674](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L674)
+Defined in: [../domwise/dist/index.d.ts:682](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L682)
 
 ***
 
@@ -1949,7 +1949,7 @@ Defined in: [../domwise/dist/index.d.ts:674](https://github.com/serenity-is/sere
 
 > `optional` **onMouseDown**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:675](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L675)
+Defined in: [../domwise/dist/index.d.ts:683](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L683)
 
 ***
 
@@ -1967,7 +1967,7 @@ Defined in: [../domwise/dist/index.d.ts:675](https://github.com/serenity-is/sere
 
 > `optional` **onMouseEnter**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:676](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L676)
+Defined in: [../domwise/dist/index.d.ts:684](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L684)
 
 ***
 
@@ -1985,7 +1985,7 @@ Defined in: [../domwise/dist/index.d.ts:676](https://github.com/serenity-is/sere
 
 > `optional` **onMouseLeave**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:677](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L677)
+Defined in: [../domwise/dist/index.d.ts:685](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L685)
 
 ***
 
@@ -2003,7 +2003,7 @@ Defined in: [../domwise/dist/index.d.ts:677](https://github.com/serenity-is/sere
 
 > `optional` **onMouseMove**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:678](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L678)
+Defined in: [../domwise/dist/index.d.ts:686](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L686)
 
 ***
 
@@ -2021,7 +2021,7 @@ Defined in: [../domwise/dist/index.d.ts:678](https://github.com/serenity-is/sere
 
 > `optional` **onMouseOut**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:679](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L679)
+Defined in: [../domwise/dist/index.d.ts:687](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L687)
 
 ***
 
@@ -2039,7 +2039,7 @@ Defined in: [../domwise/dist/index.d.ts:679](https://github.com/serenity-is/sere
 
 > `optional` **onMouseOver**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:680](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L680)
+Defined in: [../domwise/dist/index.d.ts:688](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L688)
 
 ***
 
@@ -2057,7 +2057,7 @@ Defined in: [../domwise/dist/index.d.ts:680](https://github.com/serenity-is/sere
 
 > `optional` **onMouseUp**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:681](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L681)
+Defined in: [../domwise/dist/index.d.ts:689](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L689)
 
 ***
 
@@ -2075,7 +2075,7 @@ Defined in: [../domwise/dist/index.d.ts:681](https://github.com/serenity-is/sere
 
 > `optional` **onPaste**: `EventHandler`\<`T`, `ClipboardEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:682](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L682)
+Defined in: [../domwise/dist/index.d.ts:690](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L690)
 
 ***
 
@@ -2093,7 +2093,7 @@ Defined in: [../domwise/dist/index.d.ts:682](https://github.com/serenity-is/sere
 
 > `optional` **onPause**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:683](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L683)
+Defined in: [../domwise/dist/index.d.ts:691](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L691)
 
 ***
 
@@ -2111,7 +2111,7 @@ Defined in: [../domwise/dist/index.d.ts:683](https://github.com/serenity-is/sere
 
 > `optional` **onPlay**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:684](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L684)
+Defined in: [../domwise/dist/index.d.ts:692](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L692)
 
 ***
 
@@ -2129,7 +2129,7 @@ Defined in: [../domwise/dist/index.d.ts:684](https://github.com/serenity-is/sere
 
 > `optional` **onPlaying**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:685](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L685)
+Defined in: [../domwise/dist/index.d.ts:693](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L693)
 
 ***
 
@@ -2147,7 +2147,7 @@ Defined in: [../domwise/dist/index.d.ts:685](https://github.com/serenity-is/sere
 
 > `optional` **onPointerCancel**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:686](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L686)
+Defined in: [../domwise/dist/index.d.ts:694](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L694)
 
 ***
 
@@ -2165,7 +2165,7 @@ Defined in: [../domwise/dist/index.d.ts:686](https://github.com/serenity-is/sere
 
 > `optional` **onPointerDown**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:687](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L687)
+Defined in: [../domwise/dist/index.d.ts:695](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L695)
 
 ***
 
@@ -2183,7 +2183,7 @@ Defined in: [../domwise/dist/index.d.ts:687](https://github.com/serenity-is/sere
 
 > `optional` **onPointerEnter**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:688](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L688)
+Defined in: [../domwise/dist/index.d.ts:696](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L696)
 
 ***
 
@@ -2201,7 +2201,7 @@ Defined in: [../domwise/dist/index.d.ts:688](https://github.com/serenity-is/sere
 
 > `optional` **onPointerLeave**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:689](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L689)
+Defined in: [../domwise/dist/index.d.ts:697](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L697)
 
 ***
 
@@ -2219,7 +2219,7 @@ Defined in: [../domwise/dist/index.d.ts:689](https://github.com/serenity-is/sere
 
 > `optional` **onPointerMove**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:690](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L690)
+Defined in: [../domwise/dist/index.d.ts:698](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L698)
 
 ***
 
@@ -2237,7 +2237,7 @@ Defined in: [../domwise/dist/index.d.ts:690](https://github.com/serenity-is/sere
 
 > `optional` **onPointerOut**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:691](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L691)
+Defined in: [../domwise/dist/index.d.ts:699](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L699)
 
 ***
 
@@ -2255,7 +2255,7 @@ Defined in: [../domwise/dist/index.d.ts:691](https://github.com/serenity-is/sere
 
 > `optional` **onPointerOver**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:692](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L692)
+Defined in: [../domwise/dist/index.d.ts:700](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L700)
 
 ***
 
@@ -2273,7 +2273,7 @@ Defined in: [../domwise/dist/index.d.ts:692](https://github.com/serenity-is/sere
 
 > `optional` **onPointerRawUpdate**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:693](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L693)
+Defined in: [../domwise/dist/index.d.ts:701](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L701)
 
 ***
 
@@ -2291,7 +2291,7 @@ Defined in: [../domwise/dist/index.d.ts:693](https://github.com/serenity-is/sere
 
 > `optional` **onPointerUp**: `EventHandler`\<`T`, `PointerEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:694](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L694)
+Defined in: [../domwise/dist/index.d.ts:702](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L702)
 
 ***
 
@@ -2309,7 +2309,7 @@ Defined in: [../domwise/dist/index.d.ts:694](https://github.com/serenity-is/sere
 
 > `optional` **onProgress**: `EventHandler`\<`T`, `ProgressEvent`\<`EventTarget`\>\>
 
-Defined in: [../domwise/dist/index.d.ts:695](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L695)
+Defined in: [../domwise/dist/index.d.ts:703](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L703)
 
 ***
 
@@ -2327,7 +2327,7 @@ Defined in: [../domwise/dist/index.d.ts:695](https://github.com/serenity-is/sere
 
 > `optional` **onRateChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:696](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L696)
+Defined in: [../domwise/dist/index.d.ts:704](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L704)
 
 ***
 
@@ -2345,7 +2345,7 @@ Defined in: [../domwise/dist/index.d.ts:696](https://github.com/serenity-is/sere
 
 > `optional` **onReset**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:697](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L697)
+Defined in: [../domwise/dist/index.d.ts:705](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L705)
 
 ***
 
@@ -2363,7 +2363,7 @@ Defined in: [../domwise/dist/index.d.ts:697](https://github.com/serenity-is/sere
 
 > `optional` **onResize**: `EventHandler`\<`T`, `UIEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:698](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L698)
+Defined in: [../domwise/dist/index.d.ts:706](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L706)
 
 ***
 
@@ -2381,7 +2381,7 @@ Defined in: [../domwise/dist/index.d.ts:698](https://github.com/serenity-is/sere
 
 > `optional` **onScroll**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:699](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L699)
+Defined in: [../domwise/dist/index.d.ts:707](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L707)
 
 ***
 
@@ -2399,7 +2399,7 @@ Defined in: [../domwise/dist/index.d.ts:699](https://github.com/serenity-is/sere
 
 > `optional` **onScrollEnd**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:700](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L700)
+Defined in: [../domwise/dist/index.d.ts:708](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L708)
 
 ***
 
@@ -2417,7 +2417,7 @@ Defined in: [../domwise/dist/index.d.ts:700](https://github.com/serenity-is/sere
 
 > `optional` **onScrollSnapChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:701](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L701)
+Defined in: [../domwise/dist/index.d.ts:709](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L709)
 
 ***
 
@@ -2435,7 +2435,7 @@ Defined in: [../domwise/dist/index.d.ts:701](https://github.com/serenity-is/sere
 
 > `optional` **onScrollSnapChanging**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:702](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L702)
+Defined in: [../domwise/dist/index.d.ts:710](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L710)
 
 ***
 
@@ -2453,7 +2453,7 @@ Defined in: [../domwise/dist/index.d.ts:702](https://github.com/serenity-is/sere
 
 > `optional` **onSecurityPolicyViolation**: `EventHandler`\<`T`, `SecurityPolicyViolationEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:703](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L703)
+Defined in: [../domwise/dist/index.d.ts:711](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L711)
 
 ***
 
@@ -2471,7 +2471,7 @@ Defined in: [../domwise/dist/index.d.ts:703](https://github.com/serenity-is/sere
 
 > `optional` **onSeeked**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:704](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L704)
+Defined in: [../domwise/dist/index.d.ts:712](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L712)
 
 ***
 
@@ -2489,7 +2489,7 @@ Defined in: [../domwise/dist/index.d.ts:704](https://github.com/serenity-is/sere
 
 > `optional` **onSeeking**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:705](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L705)
+Defined in: [../domwise/dist/index.d.ts:713](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L713)
 
 ***
 
@@ -2507,7 +2507,7 @@ Defined in: [../domwise/dist/index.d.ts:705](https://github.com/serenity-is/sere
 
 > `optional` **onSelect**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:706](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L706)
+Defined in: [../domwise/dist/index.d.ts:714](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L714)
 
 ***
 
@@ -2525,7 +2525,7 @@ Defined in: [../domwise/dist/index.d.ts:706](https://github.com/serenity-is/sere
 
 > `optional` **onSelectionChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:707](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L707)
+Defined in: [../domwise/dist/index.d.ts:715](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L715)
 
 ***
 
@@ -2543,7 +2543,7 @@ Defined in: [../domwise/dist/index.d.ts:707](https://github.com/serenity-is/sere
 
 > `optional` **onSelectStart**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:708](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L708)
+Defined in: [../domwise/dist/index.d.ts:716](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L716)
 
 ***
 
@@ -2561,7 +2561,7 @@ Defined in: [../domwise/dist/index.d.ts:708](https://github.com/serenity-is/sere
 
 > `optional` **onSlotChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:709](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L709)
+Defined in: [../domwise/dist/index.d.ts:717](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L717)
 
 ***
 
@@ -2579,7 +2579,7 @@ Defined in: [../domwise/dist/index.d.ts:709](https://github.com/serenity-is/sere
 
 > `optional` **onStalled**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:710](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L710)
+Defined in: [../domwise/dist/index.d.ts:718](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L718)
 
 ***
 
@@ -2597,7 +2597,7 @@ Defined in: [../domwise/dist/index.d.ts:710](https://github.com/serenity-is/sere
 
 > `optional` **onSubmit**: `EventHandler`\<`T`, `SubmitEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:711](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L711)
+Defined in: [../domwise/dist/index.d.ts:719](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L719)
 
 ***
 
@@ -2615,7 +2615,7 @@ Defined in: [../domwise/dist/index.d.ts:711](https://github.com/serenity-is/sere
 
 > `optional` **onSuspend**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:712](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L712)
+Defined in: [../domwise/dist/index.d.ts:720](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L720)
 
 ***
 
@@ -2633,7 +2633,7 @@ Defined in: [../domwise/dist/index.d.ts:712](https://github.com/serenity-is/sere
 
 > `optional` **onTimeUpdate**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:713](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L713)
+Defined in: [../domwise/dist/index.d.ts:721](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L721)
 
 ***
 
@@ -2651,7 +2651,7 @@ Defined in: [../domwise/dist/index.d.ts:713](https://github.com/serenity-is/sere
 
 > `optional` **onToggle**: `EventHandler`\<`T`, `ToggleEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:714](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L714)
+Defined in: [../domwise/dist/index.d.ts:722](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L722)
 
 ***
 
@@ -2669,7 +2669,7 @@ Defined in: [../domwise/dist/index.d.ts:714](https://github.com/serenity-is/sere
 
 > `optional` **onTouchCancel**: `EventHandler`\<`T`, `TouchEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:715](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L715)
+Defined in: [../domwise/dist/index.d.ts:723](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L723)
 
 ***
 
@@ -2687,7 +2687,7 @@ Defined in: [../domwise/dist/index.d.ts:715](https://github.com/serenity-is/sere
 
 > `optional` **onTouchEnd**: `EventHandler`\<`T`, `TouchEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:716](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L716)
+Defined in: [../domwise/dist/index.d.ts:724](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L724)
 
 ***
 
@@ -2705,7 +2705,7 @@ Defined in: [../domwise/dist/index.d.ts:716](https://github.com/serenity-is/sere
 
 > `optional` **onTouchMove**: `EventHandler`\<`T`, `TouchEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:717](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L717)
+Defined in: [../domwise/dist/index.d.ts:725](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L725)
 
 ***
 
@@ -2723,7 +2723,7 @@ Defined in: [../domwise/dist/index.d.ts:717](https://github.com/serenity-is/sere
 
 > `optional` **onTouchStart**: `EventHandler`\<`T`, `TouchEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:718](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L718)
+Defined in: [../domwise/dist/index.d.ts:726](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L726)
 
 ***
 
@@ -2741,7 +2741,7 @@ Defined in: [../domwise/dist/index.d.ts:718](https://github.com/serenity-is/sere
 
 > `optional` **onTransitionCancel**: `EventHandler`\<`T`, `TransitionEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:719](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L719)
+Defined in: [../domwise/dist/index.d.ts:727](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L727)
 
 ***
 
@@ -2759,7 +2759,7 @@ Defined in: [../domwise/dist/index.d.ts:719](https://github.com/serenity-is/sere
 
 > `optional` **onTransitionEnd**: `EventHandler`\<`T`, `TransitionEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:720](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L720)
+Defined in: [../domwise/dist/index.d.ts:728](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L728)
 
 ***
 
@@ -2777,7 +2777,7 @@ Defined in: [../domwise/dist/index.d.ts:720](https://github.com/serenity-is/sere
 
 > `optional` **onTransitionRun**: `EventHandler`\<`T`, `TransitionEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:721](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L721)
+Defined in: [../domwise/dist/index.d.ts:729](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L729)
 
 ***
 
@@ -2795,7 +2795,7 @@ Defined in: [../domwise/dist/index.d.ts:721](https://github.com/serenity-is/sere
 
 > `optional` **onTransitionStart**: `EventHandler`\<`T`, `TransitionEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:722](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L722)
+Defined in: [../domwise/dist/index.d.ts:730](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L730)
 
 ***
 
@@ -2813,7 +2813,7 @@ Defined in: [../domwise/dist/index.d.ts:722](https://github.com/serenity-is/sere
 
 > `optional` **onVolumeChange**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:723](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L723)
+Defined in: [../domwise/dist/index.d.ts:731](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L731)
 
 ***
 
@@ -2831,7 +2831,7 @@ Defined in: [../domwise/dist/index.d.ts:723](https://github.com/serenity-is/sere
 
 > `optional` **onWaiting**: `EventHandler`\<`T`, `Event`\>
 
-Defined in: [../domwise/dist/index.d.ts:724](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L724)
+Defined in: [../domwise/dist/index.d.ts:732](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L732)
 
 ***
 
@@ -2849,7 +2849,7 @@ Defined in: [../domwise/dist/index.d.ts:724](https://github.com/serenity-is/sere
 
 > `optional` **onWheel**: `EventHandler`\<`T`, `WheelEvent`\>
 
-Defined in: [../domwise/dist/index.d.ts:725](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L725)
+Defined in: [../domwise/dist/index.d.ts:733](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L733)
 
 ***
 
@@ -2867,7 +2867,7 @@ Defined in: [../domwise/dist/index.d.ts:725](https://github.com/serenity-is/sere
 
 > `optional` **part**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:746](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L746)
+Defined in: [../domwise/dist/index.d.ts:762](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L762)
 
 ***
 
@@ -2875,7 +2875,7 @@ Defined in: [../domwise/dist/index.d.ts:746](https://github.com/serenity-is/sere
 
 > `optional` **ref**: [`Ref`](../type-aliases/Ref.md)\<`T`\>
 
-Defined in: [../domwise/dist/index.d.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L156)
+Defined in: [../domwise/dist/index.d.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L150)
 
 Ref object or callback that receives the created DOM node.
 
@@ -2889,7 +2889,7 @@ Ref object or callback that receives the created DOM node.
 
 > `optional` **role**: [`PropValue`](../type-aliases/PropValue.md)\<`false` \| `"dialog"` \| `"article"` \| `"button"` \| `"figure"` \| `"form"` \| `"img"` \| `"link"` \| `"main"` \| `"menu"` \| `"meter"` \| `"option"` \| `"search"` \| `"table"` \| `"switch"` \| `"math"` \| `"marquee"` \| `"menuitem"` \| `"radio"` \| `"checkbox"` \| `"none"` \| `"heading"` \| `"list"` \| `"tree"` \| `"alert"` \| `"grid"` \| `"presentation"` \| `"alertdialog"` \| `"application"` \| `"banner"` \| `"cell"` \| `"columnheader"` \| `"combobox"` \| `"complementary"` \| `"contentinfo"` \| `"definition"` \| `"directory"` \| `"document"` \| `"feed"` \| `"gridcell"` \| `"group"` \| `"listbox"` \| `"listitem"` \| `"log"` \| `"menubar"` \| `"menuitemcheckbox"` \| `"menuitemradio"` \| `"navigation"` \| `"note"` \| `"progressbar"` \| `"radiogroup"` \| `"region"` \| `"row"` \| `"rowgroup"` \| `"rowheader"` \| `"scrollbar"` \| `"searchbox"` \| `"separator"` \| `"slider"` \| `"spinbutton"` \| `"status"` \| `"tab"` \| `"tablist"` \| `"tabpanel"` \| `"term"` \| `"textbox"` \| `"timer"` \| `"toolbar"` \| `"tooltip"` \| `"treegrid"` \| `"treeitem"`\>
 
-Defined in: [../domwise/dist/index.d.ts:586](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L586)
+Defined in: [../domwise/dist/index.d.ts:578](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L578)
 
 ***
 
@@ -2897,7 +2897,7 @@ Defined in: [../domwise/dist/index.d.ts:586](https://github.com/serenity-is/sere
 
 > `optional` **slot**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:747](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L747)
+Defined in: [../domwise/dist/index.d.ts:763](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L763)
 
 ***
 
@@ -2905,7 +2905,7 @@ Defined in: [../domwise/dist/index.d.ts:747](https://github.com/serenity-is/sere
 
 > `optional` **style**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false` \| [`StyleProperties`](../type-aliases/StyleProperties.md) \| [`StyleProperties`](../type-aliases/StyleProperties.md)[]\>
 
-Defined in: [../domwise/dist/index.d.ts:748](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L748)
+Defined in: [../domwise/dist/index.d.ts:764](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L764)
 
 ***
 
@@ -2913,7 +2913,7 @@ Defined in: [../domwise/dist/index.d.ts:748](https://github.com/serenity-is/sere
 
 > `optional` **tabindex**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:749](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L749)
+Defined in: [../domwise/dist/index.d.ts:765](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L765)
 
 ***
 
@@ -2921,7 +2921,7 @@ Defined in: [../domwise/dist/index.d.ts:749](https://github.com/serenity-is/sere
 
 > `optional` **tabIndex**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `false`\>
 
-Defined in: [../domwise/dist/index.d.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L167)
+Defined in: [../domwise/dist/index.d.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L163)
 
 ***
 
@@ -2929,4 +2929,4 @@ Defined in: [../domwise/dist/index.d.ts:167](https://github.com/serenity-is/sere
 
 > `optional` **textContent**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number`\>
 
-Defined in: [../domwise/dist/index.d.ts:737](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L737)
+Defined in: [../domwise/dist/index.d.ts:754](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L754)

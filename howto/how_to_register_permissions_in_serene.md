@@ -34,20 +34,20 @@ There are PermissionKeys classes for every module in Serene in files like Admini
 
 ```cs
 [NestedPermissionKeys]
-[DisplayName("Northwind")]
+[DisplayText("Northwind")]
 public class PermissionKeys
 {
-    [DisplayName("Customers")]
+    [DisplayText("Customers")]
     public class Customer
     {
         [ImplicitPermission(General), ImplicitPermission(View)]
         public const string Delete = "Northwind:Customer:Delete";
-        [Description("Create/Update"), ImplicitPermission(General), ImplicitPermission(View)]
+        [DescriptionText("Create/Update"), ImplicitPermission(General), ImplicitPermission(View)]
         public const string Modify = "Northwind:Customer:Modify";
         public const string View = "Northwind:Customer:View";
     }
 
-    [Description("[General]")]
+    [DescriptionText("[General]")]
     public const string General = "Northwind:General";
 }
 ```

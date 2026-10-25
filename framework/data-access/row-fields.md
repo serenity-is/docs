@@ -61,6 +61,26 @@ public interface IRowFieldsProvider
 
 [FallbackRowFieldsProvider](../api/dotnet/Serenity.Net.Services/Serenity.Data/FallbackRowFieldsProvider.md) is a fallback that creates fields instances without DI (used in contexts where the service provider isn't available, e.g. in the code generator).
 
+## Public Names
+
+A field can have a `PropertyName` that differs from its `Name` (for example a view field mapped to a differently named column). The `PropertyName ?? Name` fallback used to be repeated at each call site; it now lives in [Field.PublicName](../../api/dotnet/Serenity.Net.Services/Serenity.Data/Field/PublicName.md):
+
+```cs
+string publicName = row.Fields.SomeField.PublicName; // PropertyName if set, otherwise Name
+```
+
+The reverse lookup has two helpers, available both on `RowFieldsBase` / `IRow`:
+
+- [FindFieldByPublicName](../../api/dotnet/Serenity.Net.Services/Serenity.Data/RowExtensions/FindFieldByPublicName.md)(name) — finds a field by its `PublicName`. Column / field names are only matched for fields that do not have a corresponding C# property.
+- [FindFieldByPropertyOrFieldName](../../api/dotnet/Serenity.Net.Services/Serenity.Data/RowExtensions/FindFieldByPropertyOrFieldName.md)(name) — tries the C# property name first, then falls back to the column or field name.
+
+```cs
+var field = row.FindFieldByPublicName("SomeColumn");
+var field2 = row.FindFieldByPropertyOrFieldName("SomeProperty");
+```
+
+Row serialization, SQL generation, request handlers, lookup / upload, projections, validation and dynamic script call sites all go through these helpers, so a field can no longer be found by one part of the framework and missed by another.
+
 ## Sensitive Field Protection
 
 A forgotten `[MinSelectLevel(SelectLevel.Never)]`, `[Insertable(false)]` or `[Updatable(false)]` annotation could leak secrets (password hashes, tokens, API keys) in retrieve/list responses, or allow clients to mass assign them. To prevent this, `RowFieldsBase` detects fields whose property or column names look sensitive (password hash/salt, secrets, API keys, tokens, 2FA data, connection strings, etc.) and synthesizes the following attributes automatically, **only when the matching attribute was not set explicitly**, so you can still override them:
@@ -80,16 +100,16 @@ Fields implementing `IPasswordRow` (hash/salt) are denied by interface too, rega
 public sealed class MyUserRow : Row<MyUserRow.RowFields>, IPasswordRow
 {
     // arbitrary name — still protected via IPasswordRow, unless opted back in
-    [DisplayName("Password hash"), Size(100)]
+    [DisplayText("Password hash"), Size(100)]
     public string? Password { get => fields.Password[this]; set => fields.Password[this] = value; }
 
     // sensitive by name — MinSelectLevel(Never), Sortable(false), Filterable(false),
     // Insertable(false), Updatable(false) synthesized automatically
-    [DisplayName("API key"), Size(100)]
+    [DisplayText("API key"), Size(100)]
     public string? ApiKey { get => fields.ApiKey[this]; set => fields.ApiKey[this] = value; }
 
     // opt back in explicitly if it is not actually sensitive
-    [DisplayName("Access token"), Size(100), Filterable(true), MinSelectLevel(SelectLevel.Details)]
+    [DisplayText("Access token"), Size(100), Filterable(true), MinSelectLevel(SelectLevel.Details)]
     public string? AccessToken { get => fields.AccessToken[this]; set => fields.AccessToken[this] = value; }
 }
 ```

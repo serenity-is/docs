@@ -2,7 +2,7 @@
 
 # Interface: ComboboxOptions\<TSource\>
 
-Defined in: [src/ui/editors/combobox.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L59)
+Defined in: [src/ui/editors/combobox.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L62)
 
 Options for the [Combobox](../classes/Combobox.md).
 
@@ -20,7 +20,7 @@ The source item type.
 
 > `optional` **allowClear**: `boolean`
 
-Defined in: [src/ui/editors/combobox.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L61)
+Defined in: [src/ui/editors/combobox.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L64)
 
 Whether the selection can be cleared.
 
@@ -30,7 +30,7 @@ Whether the selection can be cleared.
 
 > `optional` **arbitraryValues**: `boolean`
 
-Defined in: [src/ui/editors/combobox.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L67)
+Defined in: [src/ui/editors/combobox.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L70)
 
 Allow arbitrary values for items.
 
@@ -40,7 +40,7 @@ Allow arbitrary values for items.
 
 > `optional` **createSearchChoice**: (`s`) => [`ComboboxItem`](ComboboxItem.md)\<`TSource`\>
 
-Defined in: [src/ui/editors/combobox.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L63)
+Defined in: [src/ui/editors/combobox.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L66)
 
 Callback that creates a search choice for arbitrary values.
 
@@ -60,7 +60,7 @@ Callback that creates a search choice for arbitrary values.
 
 > `optional` **element**: `HTMLInputElement` \| `HTMLSelectElement` \| `Element`[]
 
-Defined in: [src/ui/editors/combobox.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L65)
+Defined in: [src/ui/editors/combobox.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L68)
 
 The element to attach the combobox to.
 
@@ -70,7 +70,7 @@ The element to attach the combobox to.
 
 > `optional` **formatResult**: (`p1`) => [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
 
-Defined in: [src/ui/editors/combobox.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L71)
+Defined in: [src/ui/editors/combobox.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L74)
 
 Formatter for result items.
 
@@ -90,7 +90,7 @@ Formatter for result items.
 
 > `optional` **formatSelection**: (`p1`) => [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
 
-Defined in: [src/ui/editors/combobox.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L69)
+Defined in: [src/ui/editors/combobox.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L72)
 
 Formatter for the selected item.
 
@@ -110,7 +110,7 @@ Formatter for the selected item.
 
 > `optional` **minimumResultsForSearch**: `number`
 
-Defined in: [src/ui/editors/combobox.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L73)
+Defined in: [src/ui/editors/combobox.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L76)
 
 Minimum results required to show the search box.
 
@@ -120,7 +120,7 @@ Minimum results required to show the search box.
 
 > `optional` **multiple**: `boolean`
 
-Defined in: [src/ui/editors/combobox.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L75)
+Defined in: [src/ui/editors/combobox.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L78)
 
 Whether multiple items can be selected.
 
@@ -130,7 +130,7 @@ Whether multiple items can be selected.
 
 > `optional` **pageSize**: `number`
 
-Defined in: [src/ui/editors/combobox.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L77)
+Defined in: [src/ui/editors/combobox.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L80)
 
 Page size to use while loading or displaying results.
 
@@ -140,7 +140,7 @@ Page size to use while loading or displaying results.
 
 > `optional` **placeholder**: `string`
 
-Defined in: [src/ui/editors/combobox.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L79)
+Defined in: [src/ui/editors/combobox.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L82)
 
 Placeholder text.
 
@@ -150,7 +150,7 @@ Placeholder text.
 
 > `optional` **providerOptions**: (`type`, `opt`) => `any`
 
-Defined in: [src/ui/editors/combobox.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L81)
+Defined in: [src/ui/editors/combobox.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L84)
 
 Callback to get options specific to the combobox provider type.
 
@@ -174,7 +174,7 @@ Callback to get options specific to the combobox provider type.
 
 > `optional` **search**: (`query`) => [`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\> \| `PromiseLike`\<[`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\>\>
 
-Defined in: [src/ui/editors/combobox.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L83)
+Defined in: [src/ui/editors/combobox.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L86)
 
 Callback that performs the search.
 
@@ -194,6 +194,6 @@ Callback that performs the search.
 
 > `optional` **typeDelay**: `number`
 
-Defined in: [src/ui/editors/combobox.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L85)
+Defined in: [src/ui/editors/combobox.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L88)
 
 Type delay for searching, default is 200.

@@ -2,7 +2,7 @@
 
 # Interface: MathMLElementTags
 
-Defined in: [types/jsx-elements.d.ts:2372](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2372)
+Defined in: [types/jsx-elements.d.ts:2370](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2370)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [types/jsx-elements.d.ts:2372](https://github.com/serenity-is/sereni
 
 > **annotation**: `MathMLAnnotationElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2373](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2373)
+Defined in: [types/jsx-elements.d.ts:2371](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2371)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [types/jsx-elements.d.ts:2373](https://github.com/serenity-is/sereni
 
 > **annotation-xml**: `MathMLAnnotationXmlElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2374](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2374)
+Defined in: [types/jsx-elements.d.ts:2372](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2372)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [types/jsx-elements.d.ts:2374](https://github.com/serenity-is/sereni
 
 > **maction**: `MathMLMactionElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2405](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2405)
+Defined in: [types/jsx-elements.d.ts:2403](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2403)
 
 #### Deprecated
 
@@ -36,7 +36,7 @@ Defined in: [types/jsx-elements.d.ts:2405](https://github.com/serenity-is/sereni
 
 > **math**: `MathMLMathElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2375](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2375)
+Defined in: [types/jsx-elements.d.ts:2373](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2373)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [types/jsx-elements.d.ts:2375](https://github.com/serenity-is/sereni
 
 > **menclose**: `MathMLMencloseElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2403](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2403)
+Defined in: [types/jsx-elements.d.ts:2401](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2401)
 
 #### Non-standard
 
@@ -54,7 +54,7 @@ Defined in: [types/jsx-elements.d.ts:2403](https://github.com/serenity-is/sereni
 
 > **merror**: `MathMLMerrorElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2376](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2376)
+Defined in: [types/jsx-elements.d.ts:2374](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2374)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [types/jsx-elements.d.ts:2376](https://github.com/serenity-is/sereni
 
 > **mfenced**: `MathMLMfencedElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2407](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2407)
+Defined in: [types/jsx-elements.d.ts:2405](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2405)
 
 #### Deprecated
 
@@ -74,7 +74,7 @@ Defined in: [types/jsx-elements.d.ts:2407](https://github.com/serenity-is/sereni
 
 > **mfrac**: `MathMLMfracElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2377](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2377)
+Defined in: [types/jsx-elements.d.ts:2375](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2375)
 
 ***
 
@@ -82,7 +82,7 @@ Defined in: [types/jsx-elements.d.ts:2377](https://github.com/serenity-is/sereni
 
 > **mi**: `MathMLMiElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2378](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2378)
+Defined in: [types/jsx-elements.d.ts:2376](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2376)
 
 ***
 
@@ -90,7 +90,7 @@ Defined in: [types/jsx-elements.d.ts:2378](https://github.com/serenity-is/sereni
 
 > **mmultiscripts**: `MathMLMmultiscriptsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2379](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2379)
+Defined in: [types/jsx-elements.d.ts:2377](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2377)
 
 ***
 
@@ -98,7 +98,7 @@ Defined in: [types/jsx-elements.d.ts:2379](https://github.com/serenity-is/sereni
 
 > **mn**: `MathMLMnElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2380](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2380)
+Defined in: [types/jsx-elements.d.ts:2378](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2378)
 
 ***
 
@@ -106,7 +106,7 @@ Defined in: [types/jsx-elements.d.ts:2380](https://github.com/serenity-is/sereni
 
 > **mo**: `MathMLMoElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2381](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2381)
+Defined in: [types/jsx-elements.d.ts:2379](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2379)
 
 ***
 
@@ -114,7 +114,7 @@ Defined in: [types/jsx-elements.d.ts:2381](https://github.com/serenity-is/sereni
 
 > **mover**: `MathMLMoverElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2382](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2382)
+Defined in: [types/jsx-elements.d.ts:2380](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2380)
 
 ***
 
@@ -122,7 +122,7 @@ Defined in: [types/jsx-elements.d.ts:2382](https://github.com/serenity-is/sereni
 
 > **mpadded**: `MathMLMpaddedElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2383](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2383)
+Defined in: [types/jsx-elements.d.ts:2381](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2381)
 
 ***
 
@@ -130,7 +130,7 @@ Defined in: [types/jsx-elements.d.ts:2383](https://github.com/serenity-is/sereni
 
 > **mphantom**: `MathMLMphantomElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2384](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2384)
+Defined in: [types/jsx-elements.d.ts:2382](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2382)
 
 ***
 
@@ -138,7 +138,7 @@ Defined in: [types/jsx-elements.d.ts:2384](https://github.com/serenity-is/sereni
 
 > **mprescripts**: `MathMLMprescriptsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2385](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2385)
+Defined in: [types/jsx-elements.d.ts:2383](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2383)
 
 ***
 
@@ -146,7 +146,7 @@ Defined in: [types/jsx-elements.d.ts:2385](https://github.com/serenity-is/sereni
 
 > **mroot**: `MathMLMrootElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2386](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2386)
+Defined in: [types/jsx-elements.d.ts:2384](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2384)
 
 ***
 
@@ -154,7 +154,7 @@ Defined in: [types/jsx-elements.d.ts:2386](https://github.com/serenity-is/sereni
 
 > **mrow**: `MathMLMrowElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2387](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2387)
+Defined in: [types/jsx-elements.d.ts:2385](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2385)
 
 ***
 
@@ -162,7 +162,7 @@ Defined in: [types/jsx-elements.d.ts:2387](https://github.com/serenity-is/sereni
 
 > **ms**: `MathMLMsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2388](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2388)
+Defined in: [types/jsx-elements.d.ts:2386](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2386)
 
 ***
 
@@ -170,7 +170,7 @@ Defined in: [types/jsx-elements.d.ts:2388](https://github.com/serenity-is/sereni
 
 > **mspace**: `MathMLMspaceElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2389](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2389)
+Defined in: [types/jsx-elements.d.ts:2387](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2387)
 
 ***
 
@@ -178,7 +178,7 @@ Defined in: [types/jsx-elements.d.ts:2389](https://github.com/serenity-is/sereni
 
 > **msqrt**: `MathMLMsqrtElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2390](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2390)
+Defined in: [types/jsx-elements.d.ts:2388](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2388)
 
 ***
 
@@ -186,7 +186,7 @@ Defined in: [types/jsx-elements.d.ts:2390](https://github.com/serenity-is/sereni
 
 > **mstyle**: `MathMLMstyleElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2391](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2391)
+Defined in: [types/jsx-elements.d.ts:2389](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2389)
 
 ***
 
@@ -194,7 +194,7 @@ Defined in: [types/jsx-elements.d.ts:2391](https://github.com/serenity-is/sereni
 
 > **msub**: `MathMLMsubElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2392](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2392)
+Defined in: [types/jsx-elements.d.ts:2390](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2390)
 
 ***
 
@@ -202,7 +202,7 @@ Defined in: [types/jsx-elements.d.ts:2392](https://github.com/serenity-is/sereni
 
 > **msubsup**: `MathMLMsubsupElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2393](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2393)
+Defined in: [types/jsx-elements.d.ts:2391](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2391)
 
 ***
 
@@ -210,7 +210,7 @@ Defined in: [types/jsx-elements.d.ts:2393](https://github.com/serenity-is/sereni
 
 > **msup**: `MathMLMsupElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2394](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2394)
+Defined in: [types/jsx-elements.d.ts:2392](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2392)
 
 ***
 
@@ -218,7 +218,7 @@ Defined in: [types/jsx-elements.d.ts:2394](https://github.com/serenity-is/sereni
 
 > **mtable**: `MathMLMtableElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2395](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2395)
+Defined in: [types/jsx-elements.d.ts:2393](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2393)
 
 ***
 
@@ -226,7 +226,7 @@ Defined in: [types/jsx-elements.d.ts:2395](https://github.com/serenity-is/sereni
 
 > **mtd**: `MathMLMtdElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2396](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2396)
+Defined in: [types/jsx-elements.d.ts:2394](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2394)
 
 ***
 
@@ -234,7 +234,7 @@ Defined in: [types/jsx-elements.d.ts:2396](https://github.com/serenity-is/sereni
 
 > **mtext**: `MathMLMtextElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2397](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2397)
+Defined in: [types/jsx-elements.d.ts:2395](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2395)
 
 ***
 
@@ -242,7 +242,7 @@ Defined in: [types/jsx-elements.d.ts:2397](https://github.com/serenity-is/sereni
 
 > **mtr**: `MathMLMtrElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2398](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2398)
+Defined in: [types/jsx-elements.d.ts:2396](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2396)
 
 ***
 
@@ -250,7 +250,7 @@ Defined in: [types/jsx-elements.d.ts:2398](https://github.com/serenity-is/sereni
 
 > **munder**: `MathMLMunderElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2399](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2399)
+Defined in: [types/jsx-elements.d.ts:2397](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2397)
 
 ***
 
@@ -258,7 +258,7 @@ Defined in: [types/jsx-elements.d.ts:2399](https://github.com/serenity-is/sereni
 
 > **munderover**: `MathMLMunderoverElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2400](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2400)
+Defined in: [types/jsx-elements.d.ts:2398](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2398)
 
 ***
 
@@ -266,4 +266,4 @@ Defined in: [types/jsx-elements.d.ts:2400](https://github.com/serenity-is/sereni
 
 > **semantics**: `MathMLSemanticsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2401](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2401)
+Defined in: [types/jsx-elements.d.ts:2399](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2399)

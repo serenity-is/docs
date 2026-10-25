@@ -4,7 +4,7 @@
 
 > **observeSignal**\<`T`\>(`signal`, `callback`, `opt?`): () => `void`
 
-Defined in: [../domwise/dist/index.d.ts:2954](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2954)
+Defined in: [../domwise/dist/index.d.ts:3265](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3265)
 
 Subscribes to a signal and invokes `callback` immediately and on every subsequent change.
 

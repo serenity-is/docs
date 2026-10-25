@@ -16,7 +16,7 @@ Augment to declare custom HTML element tag/type mappings.
 
 > **a**: `AnchorHTMLAttributes`\<`HTMLAnchorElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2183](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2183)
+Defined in: [types/jsx-elements.d.ts:2181](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2181)
 
 #### Inherited from
 
@@ -28,7 +28,7 @@ Defined in: [types/jsx-elements.d.ts:2183](https://github.com/serenity-is/sereni
 
 > **abbr**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2184](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2184)
+Defined in: [types/jsx-elements.d.ts:2182](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2182)
 
 #### Inherited from
 
@@ -40,7 +40,7 @@ Defined in: [types/jsx-elements.d.ts:2184](https://github.com/serenity-is/sereni
 
 > **address**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2185](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2185)
+Defined in: [types/jsx-elements.d.ts:2183](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2183)
 
 #### Inherited from
 
@@ -52,7 +52,7 @@ Defined in: [types/jsx-elements.d.ts:2185](https://github.com/serenity-is/sereni
 
 > **animate**: `AnimateSVGAttributes`\<`SVGAnimateElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2311](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2311)
+Defined in: [types/jsx-elements.d.ts:2309](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2309)
 
 #### Inherited from
 
@@ -64,7 +64,7 @@ Defined in: [types/jsx-elements.d.ts:2311](https://github.com/serenity-is/sereni
 
 > **animateMotion**: `AnimateMotionSVGAttributes`\<`SVGAnimateMotionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2312](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2312)
+Defined in: [types/jsx-elements.d.ts:2310](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2310)
 
 #### Inherited from
 
@@ -76,7 +76,7 @@ Defined in: [types/jsx-elements.d.ts:2312](https://github.com/serenity-is/sereni
 
 > **animateTransform**: `AnimateTransformSVGAttributes`\<`SVGAnimateTransformElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2313](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2313)
+Defined in: [types/jsx-elements.d.ts:2311](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2311)
 
 #### Inherited from
 
@@ -88,7 +88,7 @@ Defined in: [types/jsx-elements.d.ts:2313](https://github.com/serenity-is/sereni
 
 > **annotation**: `MathMLAnnotationElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2373](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2373)
+Defined in: [types/jsx-elements.d.ts:2371](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2371)
 
 #### Inherited from
 
@@ -100,7 +100,7 @@ Defined in: [types/jsx-elements.d.ts:2373](https://github.com/serenity-is/sereni
 
 > **annotation-xml**: `MathMLAnnotationXmlElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2374](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2374)
+Defined in: [types/jsx-elements.d.ts:2372](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2372)
 
 #### Inherited from
 
@@ -112,7 +112,7 @@ Defined in: [types/jsx-elements.d.ts:2374](https://github.com/serenity-is/sereni
 
 > **area**: `AreaHTMLAttributes`\<`HTMLAreaElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2186](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2186)
+Defined in: [types/jsx-elements.d.ts:2184](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2184)
 
 #### Inherited from
 
@@ -124,7 +124,7 @@ Defined in: [types/jsx-elements.d.ts:2186](https://github.com/serenity-is/sereni
 
 > **article**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2187](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2187)
+Defined in: [types/jsx-elements.d.ts:2185](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2185)
 
 #### Inherited from
 
@@ -136,7 +136,7 @@ Defined in: [types/jsx-elements.d.ts:2187](https://github.com/serenity-is/sereni
 
 > **aside**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2188](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2188)
+Defined in: [types/jsx-elements.d.ts:2186](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2186)
 
 #### Inherited from
 
@@ -148,7 +148,7 @@ Defined in: [types/jsx-elements.d.ts:2188](https://github.com/serenity-is/sereni
 
 > **audio**: `AudioHTMLAttributes`\<`HTMLAudioElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2189](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2189)
+Defined in: [types/jsx-elements.d.ts:2187](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2187)
 
 #### Inherited from
 
@@ -160,7 +160,7 @@ Defined in: [types/jsx-elements.d.ts:2189](https://github.com/serenity-is/sereni
 
 > **b**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2190](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2190)
+Defined in: [types/jsx-elements.d.ts:2188](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2188)
 
 #### Inherited from
 
@@ -172,7 +172,7 @@ Defined in: [types/jsx-elements.d.ts:2190](https://github.com/serenity-is/sereni
 
 > **base**: `BaseHTMLAttributes`\<`HTMLBaseElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2191](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2191)
+Defined in: [types/jsx-elements.d.ts:2189](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2189)
 
 #### Inherited from
 
@@ -184,7 +184,7 @@ Defined in: [types/jsx-elements.d.ts:2191](https://github.com/serenity-is/sereni
 
 > **bdi**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2192](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2192)
+Defined in: [types/jsx-elements.d.ts:2190](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2190)
 
 #### Inherited from
 
@@ -196,7 +196,7 @@ Defined in: [types/jsx-elements.d.ts:2192](https://github.com/serenity-is/sereni
 
 > **bdo**: `BdoHTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2193](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2193)
+Defined in: [types/jsx-elements.d.ts:2191](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2191)
 
 #### Inherited from
 
@@ -208,7 +208,7 @@ Defined in: [types/jsx-elements.d.ts:2193](https://github.com/serenity-is/sereni
 
 > **blockquote**: `BlockquoteHTMLAttributes`\<`HTMLQuoteElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2194](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2194)
+Defined in: [types/jsx-elements.d.ts:2192](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2192)
 
 #### Inherited from
 
@@ -220,7 +220,7 @@ Defined in: [types/jsx-elements.d.ts:2194](https://github.com/serenity-is/sereni
 
 > **body**: `BodyHTMLAttributes`\<`HTMLBodyElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2195](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2195)
+Defined in: [types/jsx-elements.d.ts:2193](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2193)
 
 #### Inherited from
 
@@ -232,7 +232,7 @@ Defined in: [types/jsx-elements.d.ts:2195](https://github.com/serenity-is/sereni
 
 > **br**: `HTMLAttributes`\<`HTMLBRElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2196](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2196)
+Defined in: [types/jsx-elements.d.ts:2194](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2194)
 
 #### Inherited from
 
@@ -244,7 +244,7 @@ Defined in: [types/jsx-elements.d.ts:2196](https://github.com/serenity-is/sereni
 
 > **button**: `ButtonHTMLAttributes`\<`HTMLButtonElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2197](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2197)
+Defined in: [types/jsx-elements.d.ts:2195](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2195)
 
 #### Inherited from
 
@@ -256,7 +256,7 @@ Defined in: [types/jsx-elements.d.ts:2197](https://github.com/serenity-is/sereni
 
 > **canvas**: `CanvasHTMLAttributes`\<`HTMLCanvasElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2198](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2198)
+Defined in: [types/jsx-elements.d.ts:2196](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2196)
 
 #### Inherited from
 
@@ -268,7 +268,7 @@ Defined in: [types/jsx-elements.d.ts:2198](https://github.com/serenity-is/sereni
 
 > **caption**: `CaptionHTMLAttributes`\<`HTMLTableCaptionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2199](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2199)
+Defined in: [types/jsx-elements.d.ts:2197](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2197)
 
 #### Inherited from
 
@@ -280,7 +280,7 @@ Defined in: [types/jsx-elements.d.ts:2199](https://github.com/serenity-is/sereni
 
 > **circle**: `CircleSVGAttributes`\<`SVGCircleElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2314](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2314)
+Defined in: [types/jsx-elements.d.ts:2312](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2312)
 
 #### Inherited from
 
@@ -292,7 +292,7 @@ Defined in: [types/jsx-elements.d.ts:2314](https://github.com/serenity-is/sereni
 
 > **cite**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2200](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2200)
+Defined in: [types/jsx-elements.d.ts:2198](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2198)
 
 #### Inherited from
 
@@ -304,7 +304,7 @@ Defined in: [types/jsx-elements.d.ts:2200](https://github.com/serenity-is/sereni
 
 > **clipPath**: `ClipPathSVGAttributes`\<`SVGClipPathElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2315](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2315)
+Defined in: [types/jsx-elements.d.ts:2313](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2313)
 
 #### Inherited from
 
@@ -316,7 +316,7 @@ Defined in: [types/jsx-elements.d.ts:2315](https://github.com/serenity-is/sereni
 
 > **code**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2201](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2201)
+Defined in: [types/jsx-elements.d.ts:2199](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2199)
 
 #### Inherited from
 
@@ -328,7 +328,7 @@ Defined in: [types/jsx-elements.d.ts:2201](https://github.com/serenity-is/sereni
 
 > **col**: `ColHTMLAttributes`\<`HTMLTableColElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2202](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2202)
+Defined in: [types/jsx-elements.d.ts:2200](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2200)
 
 #### Inherited from
 
@@ -340,7 +340,7 @@ Defined in: [types/jsx-elements.d.ts:2202](https://github.com/serenity-is/sereni
 
 > **colgroup**: `ColgroupHTMLAttributes`\<`HTMLTableColElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2203](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2203)
+Defined in: [types/jsx-elements.d.ts:2201](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2201)
 
 #### Inherited from
 
@@ -352,7 +352,7 @@ Defined in: [types/jsx-elements.d.ts:2203](https://github.com/serenity-is/sereni
 
 > **data**: `DataHTMLAttributes`\<`HTMLDataElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2204](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2204)
+Defined in: [types/jsx-elements.d.ts:2202](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2202)
 
 #### Inherited from
 
@@ -364,7 +364,7 @@ Defined in: [types/jsx-elements.d.ts:2204](https://github.com/serenity-is/sereni
 
 > **datalist**: `HTMLAttributes`\<`HTMLDataListElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2205](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2205)
+Defined in: [types/jsx-elements.d.ts:2203](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2203)
 
 #### Inherited from
 
@@ -376,7 +376,7 @@ Defined in: [types/jsx-elements.d.ts:2205](https://github.com/serenity-is/sereni
 
 > **dd**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2206](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2206)
+Defined in: [types/jsx-elements.d.ts:2204](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2204)
 
 #### Inherited from
 
@@ -388,7 +388,7 @@ Defined in: [types/jsx-elements.d.ts:2206](https://github.com/serenity-is/sereni
 
 > **defs**: `DefsSVGAttributes`\<`SVGDefsElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2316](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2316)
+Defined in: [types/jsx-elements.d.ts:2314](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2314)
 
 #### Inherited from
 
@@ -400,7 +400,7 @@ Defined in: [types/jsx-elements.d.ts:2316](https://github.com/serenity-is/sereni
 
 > **del**: `ModHTMLAttributes`\<`HTMLModElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2207](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2207)
+Defined in: [types/jsx-elements.d.ts:2205](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2205)
 
 #### Inherited from
 
@@ -412,7 +412,7 @@ Defined in: [types/jsx-elements.d.ts:2207](https://github.com/serenity-is/sereni
 
 > **desc**: `DescSVGAttributes`\<`SVGDescElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2317](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2317)
+Defined in: [types/jsx-elements.d.ts:2315](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2315)
 
 #### Inherited from
 
@@ -424,7 +424,7 @@ Defined in: [types/jsx-elements.d.ts:2317](https://github.com/serenity-is/sereni
 
 > **details**: `DetailsHtmlAttributes`\<`HTMLDetailsElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2208](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2208)
+Defined in: [types/jsx-elements.d.ts:2206](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2206)
 
 #### Inherited from
 
@@ -436,7 +436,7 @@ Defined in: [types/jsx-elements.d.ts:2208](https://github.com/serenity-is/sereni
 
 > **dfn**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2209](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2209)
+Defined in: [types/jsx-elements.d.ts:2207](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2207)
 
 #### Inherited from
 
@@ -448,7 +448,7 @@ Defined in: [types/jsx-elements.d.ts:2209](https://github.com/serenity-is/sereni
 
 > **dialog**: `DialogHtmlAttributes`\<`HTMLDialogElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2210](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2210)
+Defined in: [types/jsx-elements.d.ts:2208](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2208)
 
 #### Inherited from
 
@@ -460,7 +460,7 @@ Defined in: [types/jsx-elements.d.ts:2210](https://github.com/serenity-is/sereni
 
 > **div**: `HTMLAttributes`\<`HTMLDivElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2211](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2211)
+Defined in: [types/jsx-elements.d.ts:2209](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2209)
 
 #### Inherited from
 
@@ -472,7 +472,7 @@ Defined in: [types/jsx-elements.d.ts:2211](https://github.com/serenity-is/sereni
 
 > **dl**: `HTMLAttributes`\<`HTMLDListElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2212](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2212)
+Defined in: [types/jsx-elements.d.ts:2210](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2210)
 
 #### Inherited from
 
@@ -484,7 +484,7 @@ Defined in: [types/jsx-elements.d.ts:2212](https://github.com/serenity-is/sereni
 
 > **dt**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2213](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2213)
+Defined in: [types/jsx-elements.d.ts:2211](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2211)
 
 #### Inherited from
 
@@ -496,7 +496,7 @@ Defined in: [types/jsx-elements.d.ts:2213](https://github.com/serenity-is/sereni
 
 > **ellipse**: `EllipseSVGAttributes`\<`SVGEllipseElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2318](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2318)
+Defined in: [types/jsx-elements.d.ts:2316](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2316)
 
 #### Inherited from
 
@@ -508,7 +508,7 @@ Defined in: [types/jsx-elements.d.ts:2318](https://github.com/serenity-is/sereni
 
 > **em**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2214](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2214)
+Defined in: [types/jsx-elements.d.ts:2212](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2212)
 
 #### Inherited from
 
@@ -520,7 +520,7 @@ Defined in: [types/jsx-elements.d.ts:2214](https://github.com/serenity-is/sereni
 
 > **embed**: `EmbedHTMLAttributes`\<`HTMLEmbedElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2215](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2215)
+Defined in: [types/jsx-elements.d.ts:2213](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2213)
 
 #### Inherited from
 
@@ -532,7 +532,7 @@ Defined in: [types/jsx-elements.d.ts:2215](https://github.com/serenity-is/sereni
 
 > **feBlend**: `FeBlendSVGAttributes`\<`SVGFEBlendElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2319](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2319)
+Defined in: [types/jsx-elements.d.ts:2317](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2317)
 
 #### Inherited from
 
@@ -544,7 +544,7 @@ Defined in: [types/jsx-elements.d.ts:2319](https://github.com/serenity-is/sereni
 
 > **feColorMatrix**: `FeColorMatrixSVGAttributes`\<`SVGFEColorMatrixElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2320](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2320)
+Defined in: [types/jsx-elements.d.ts:2318](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2318)
 
 #### Inherited from
 
@@ -556,7 +556,7 @@ Defined in: [types/jsx-elements.d.ts:2320](https://github.com/serenity-is/sereni
 
 > **feComponentTransfer**: `FeComponentTransferSVGAttributes`\<`SVGFEComponentTransferElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2321](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2321)
+Defined in: [types/jsx-elements.d.ts:2319](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2319)
 
 #### Inherited from
 
@@ -568,7 +568,7 @@ Defined in: [types/jsx-elements.d.ts:2321](https://github.com/serenity-is/sereni
 
 > **feComposite**: `FeCompositeSVGAttributes`\<`SVGFECompositeElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2322](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2322)
+Defined in: [types/jsx-elements.d.ts:2320](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2320)
 
 #### Inherited from
 
@@ -580,7 +580,7 @@ Defined in: [types/jsx-elements.d.ts:2322](https://github.com/serenity-is/sereni
 
 > **feConvolveMatrix**: `FeConvolveMatrixSVGAttributes`\<`SVGFEConvolveMatrixElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2323](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2323)
+Defined in: [types/jsx-elements.d.ts:2321](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2321)
 
 #### Inherited from
 
@@ -592,7 +592,7 @@ Defined in: [types/jsx-elements.d.ts:2323](https://github.com/serenity-is/sereni
 
 > **feDiffuseLighting**: `FeDiffuseLightingSVGAttributes`\<`SVGFEDiffuseLightingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2324](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2324)
+Defined in: [types/jsx-elements.d.ts:2322](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2322)
 
 #### Inherited from
 
@@ -604,7 +604,7 @@ Defined in: [types/jsx-elements.d.ts:2324](https://github.com/serenity-is/sereni
 
 > **feDisplacementMap**: `FeDisplacementMapSVGAttributes`\<`SVGFEDisplacementMapElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2325](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2325)
+Defined in: [types/jsx-elements.d.ts:2323](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2323)
 
 #### Inherited from
 
@@ -616,7 +616,7 @@ Defined in: [types/jsx-elements.d.ts:2325](https://github.com/serenity-is/sereni
 
 > **feDistantLight**: `FeDistantLightSVGAttributes`\<`SVGFEDistantLightElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2326](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2326)
+Defined in: [types/jsx-elements.d.ts:2324](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2324)
 
 #### Inherited from
 
@@ -628,7 +628,7 @@ Defined in: [types/jsx-elements.d.ts:2326](https://github.com/serenity-is/sereni
 
 > **feDropShadow**: `FeDropShadowSVGAttributes`\<`SVGFEDropShadowElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2327](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2327)
+Defined in: [types/jsx-elements.d.ts:2325](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2325)
 
 #### Inherited from
 
@@ -640,7 +640,7 @@ Defined in: [types/jsx-elements.d.ts:2327](https://github.com/serenity-is/sereni
 
 > **feFlood**: `FeFloodSVGAttributes`\<`SVGFEFloodElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2328](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2328)
+Defined in: [types/jsx-elements.d.ts:2326](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2326)
 
 #### Inherited from
 
@@ -652,7 +652,7 @@ Defined in: [types/jsx-elements.d.ts:2328](https://github.com/serenity-is/sereni
 
 > **feFuncA**: `FeFuncSVGAttributes`\<`SVGFEFuncAElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2329](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2329)
+Defined in: [types/jsx-elements.d.ts:2327](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2327)
 
 #### Inherited from
 
@@ -664,7 +664,7 @@ Defined in: [types/jsx-elements.d.ts:2329](https://github.com/serenity-is/sereni
 
 > **feFuncB**: `FeFuncSVGAttributes`\<`SVGFEFuncBElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2330](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2330)
+Defined in: [types/jsx-elements.d.ts:2328](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2328)
 
 #### Inherited from
 
@@ -676,7 +676,7 @@ Defined in: [types/jsx-elements.d.ts:2330](https://github.com/serenity-is/sereni
 
 > **feFuncG**: `FeFuncSVGAttributes`\<`SVGFEFuncGElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2331](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2331)
+Defined in: [types/jsx-elements.d.ts:2329](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2329)
 
 #### Inherited from
 
@@ -688,7 +688,7 @@ Defined in: [types/jsx-elements.d.ts:2331](https://github.com/serenity-is/sereni
 
 > **feFuncR**: `FeFuncSVGAttributes`\<`SVGFEFuncRElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2332](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2332)
+Defined in: [types/jsx-elements.d.ts:2330](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2330)
 
 #### Inherited from
 
@@ -700,7 +700,7 @@ Defined in: [types/jsx-elements.d.ts:2332](https://github.com/serenity-is/sereni
 
 > **feGaussianBlur**: `FeGaussianBlurSVGAttributes`\<`SVGFEGaussianBlurElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2333](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2333)
+Defined in: [types/jsx-elements.d.ts:2331](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2331)
 
 #### Inherited from
 
@@ -712,7 +712,7 @@ Defined in: [types/jsx-elements.d.ts:2333](https://github.com/serenity-is/sereni
 
 > **feImage**: `FeImageSVGAttributes`\<`SVGFEImageElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2334](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2334)
+Defined in: [types/jsx-elements.d.ts:2332](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2332)
 
 #### Inherited from
 
@@ -724,7 +724,7 @@ Defined in: [types/jsx-elements.d.ts:2334](https://github.com/serenity-is/sereni
 
 > **feMerge**: `FeMergeSVGAttributes`\<`SVGFEMergeElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2335](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2335)
+Defined in: [types/jsx-elements.d.ts:2333](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2333)
 
 #### Inherited from
 
@@ -736,7 +736,7 @@ Defined in: [types/jsx-elements.d.ts:2335](https://github.com/serenity-is/sereni
 
 > **feMergeNode**: `FeMergeNodeSVGAttributes`\<`SVGFEMergeNodeElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2336](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2336)
+Defined in: [types/jsx-elements.d.ts:2334](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2334)
 
 #### Inherited from
 
@@ -748,7 +748,7 @@ Defined in: [types/jsx-elements.d.ts:2336](https://github.com/serenity-is/sereni
 
 > **feMorphology**: `FeMorphologySVGAttributes`\<`SVGFEMorphologyElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2337](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2337)
+Defined in: [types/jsx-elements.d.ts:2335](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2335)
 
 #### Inherited from
 
@@ -760,7 +760,7 @@ Defined in: [types/jsx-elements.d.ts:2337](https://github.com/serenity-is/sereni
 
 > **feOffset**: `FeOffsetSVGAttributes`\<`SVGFEOffsetElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2338](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2338)
+Defined in: [types/jsx-elements.d.ts:2336](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2336)
 
 #### Inherited from
 
@@ -772,7 +772,7 @@ Defined in: [types/jsx-elements.d.ts:2338](https://github.com/serenity-is/sereni
 
 > **fePointLight**: `FePointLightSVGAttributes`\<`SVGFEPointLightElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2339](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2339)
+Defined in: [types/jsx-elements.d.ts:2337](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2337)
 
 #### Inherited from
 
@@ -784,7 +784,7 @@ Defined in: [types/jsx-elements.d.ts:2339](https://github.com/serenity-is/sereni
 
 > **feSpecularLighting**: `FeSpecularLightingSVGAttributes`\<`SVGFESpecularLightingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2340](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2340)
+Defined in: [types/jsx-elements.d.ts:2338](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2338)
 
 #### Inherited from
 
@@ -796,7 +796,7 @@ Defined in: [types/jsx-elements.d.ts:2340](https://github.com/serenity-is/sereni
 
 > **feSpotLight**: `FeSpotLightSVGAttributes`\<`SVGFESpotLightElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2341](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2341)
+Defined in: [types/jsx-elements.d.ts:2339](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2339)
 
 #### Inherited from
 
@@ -808,7 +808,7 @@ Defined in: [types/jsx-elements.d.ts:2341](https://github.com/serenity-is/sereni
 
 > **feTile**: `FeTileSVGAttributes`\<`SVGFETileElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2342](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2342)
+Defined in: [types/jsx-elements.d.ts:2340](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2340)
 
 #### Inherited from
 
@@ -820,7 +820,7 @@ Defined in: [types/jsx-elements.d.ts:2342](https://github.com/serenity-is/sereni
 
 > **feTurbulence**: `FeTurbulanceSVGAttributes`\<`SVGFETurbulenceElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2343](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2343)
+Defined in: [types/jsx-elements.d.ts:2341](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2341)
 
 #### Inherited from
 
@@ -832,7 +832,7 @@ Defined in: [types/jsx-elements.d.ts:2343](https://github.com/serenity-is/sereni
 
 > **fieldset**: `FieldsetHTMLAttributes`\<`HTMLFieldSetElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2216](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2216)
+Defined in: [types/jsx-elements.d.ts:2214](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2214)
 
 #### Inherited from
 
@@ -844,7 +844,7 @@ Defined in: [types/jsx-elements.d.ts:2216](https://github.com/serenity-is/sereni
 
 > **figcaption**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2217](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2217)
+Defined in: [types/jsx-elements.d.ts:2215](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2215)
 
 #### Inherited from
 
@@ -856,7 +856,7 @@ Defined in: [types/jsx-elements.d.ts:2217](https://github.com/serenity-is/sereni
 
 > **figure**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2218](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2218)
+Defined in: [types/jsx-elements.d.ts:2216](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2216)
 
 #### Inherited from
 
@@ -868,7 +868,7 @@ Defined in: [types/jsx-elements.d.ts:2218](https://github.com/serenity-is/sereni
 
 > **filter**: `FilterSVGAttributes`\<`SVGFilterElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2344](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2344)
+Defined in: [types/jsx-elements.d.ts:2342](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2342)
 
 #### Inherited from
 
@@ -880,7 +880,7 @@ Defined in: [types/jsx-elements.d.ts:2344](https://github.com/serenity-is/sereni
 
 > **footer**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2219](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2219)
+Defined in: [types/jsx-elements.d.ts:2217](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2217)
 
 #### Inherited from
 
@@ -892,7 +892,7 @@ Defined in: [types/jsx-elements.d.ts:2219](https://github.com/serenity-is/sereni
 
 > **foreignObject**: `ForeignObjectSVGAttributes`\<`SVGForeignObjectElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2345](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2345)
+Defined in: [types/jsx-elements.d.ts:2343](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2343)
 
 #### Inherited from
 
@@ -904,7 +904,7 @@ Defined in: [types/jsx-elements.d.ts:2345](https://github.com/serenity-is/sereni
 
 > **form**: `FormHTMLAttributes`\<`HTMLFormElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2220](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2220)
+Defined in: [types/jsx-elements.d.ts:2218](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2218)
 
 #### Inherited from
 
@@ -916,7 +916,7 @@ Defined in: [types/jsx-elements.d.ts:2220](https://github.com/serenity-is/sereni
 
 > **g**: `GSVGAttributes`\<`SVGGElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2346](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2346)
+Defined in: [types/jsx-elements.d.ts:2344](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2344)
 
 #### Inherited from
 
@@ -928,7 +928,7 @@ Defined in: [types/jsx-elements.d.ts:2346](https://github.com/serenity-is/sereni
 
 > **h1**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2221](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2221)
+Defined in: [types/jsx-elements.d.ts:2219](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2219)
 
 #### Inherited from
 
@@ -940,7 +940,7 @@ Defined in: [types/jsx-elements.d.ts:2221](https://github.com/serenity-is/sereni
 
 > **h2**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2222](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2222)
+Defined in: [types/jsx-elements.d.ts:2220](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2220)
 
 #### Inherited from
 
@@ -952,7 +952,7 @@ Defined in: [types/jsx-elements.d.ts:2222](https://github.com/serenity-is/sereni
 
 > **h3**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2223](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2223)
+Defined in: [types/jsx-elements.d.ts:2221](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2221)
 
 #### Inherited from
 
@@ -964,7 +964,7 @@ Defined in: [types/jsx-elements.d.ts:2223](https://github.com/serenity-is/sereni
 
 > **h4**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2224](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2224)
+Defined in: [types/jsx-elements.d.ts:2222](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2222)
 
 #### Inherited from
 
@@ -976,7 +976,7 @@ Defined in: [types/jsx-elements.d.ts:2224](https://github.com/serenity-is/sereni
 
 > **h5**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2225](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2225)
+Defined in: [types/jsx-elements.d.ts:2223](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2223)
 
 #### Inherited from
 
@@ -988,7 +988,7 @@ Defined in: [types/jsx-elements.d.ts:2225](https://github.com/serenity-is/sereni
 
 > **h6**: `HTMLAttributes`\<`HTMLHeadingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2226](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2226)
+Defined in: [types/jsx-elements.d.ts:2224](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2224)
 
 #### Inherited from
 
@@ -1000,7 +1000,7 @@ Defined in: [types/jsx-elements.d.ts:2226](https://github.com/serenity-is/sereni
 
 > **head**: `HTMLAttributes`\<`HTMLHeadElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2227](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2227)
+Defined in: [types/jsx-elements.d.ts:2225](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2225)
 
 #### Inherited from
 
@@ -1012,7 +1012,7 @@ Defined in: [types/jsx-elements.d.ts:2227](https://github.com/serenity-is/sereni
 
 > **header**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2228](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2228)
+Defined in: [types/jsx-elements.d.ts:2226](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2226)
 
 #### Inherited from
 
@@ -1024,7 +1024,7 @@ Defined in: [types/jsx-elements.d.ts:2228](https://github.com/serenity-is/sereni
 
 > **hgroup**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2229](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2229)
+Defined in: [types/jsx-elements.d.ts:2227](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2227)
 
 #### Inherited from
 
@@ -1036,7 +1036,7 @@ Defined in: [types/jsx-elements.d.ts:2229](https://github.com/serenity-is/sereni
 
 > **hr**: `HTMLAttributes`\<`HTMLHRElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2230](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2230)
+Defined in: [types/jsx-elements.d.ts:2228](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2228)
 
 #### Inherited from
 
@@ -1048,7 +1048,7 @@ Defined in: [types/jsx-elements.d.ts:2230](https://github.com/serenity-is/sereni
 
 > **html**: `HTMLAttributes`\<`HTMLHtmlElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2231](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2231)
+Defined in: [types/jsx-elements.d.ts:2229](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2229)
 
 #### Inherited from
 
@@ -1060,7 +1060,7 @@ Defined in: [types/jsx-elements.d.ts:2231](https://github.com/serenity-is/sereni
 
 > **i**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2232](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2232)
+Defined in: [types/jsx-elements.d.ts:2230](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2230)
 
 #### Inherited from
 
@@ -1072,7 +1072,7 @@ Defined in: [types/jsx-elements.d.ts:2232](https://github.com/serenity-is/sereni
 
 > **iframe**: `IframeHTMLAttributes`\<`HTMLIFrameElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2233](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2233)
+Defined in: [types/jsx-elements.d.ts:2231](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2231)
 
 #### Inherited from
 
@@ -1084,7 +1084,7 @@ Defined in: [types/jsx-elements.d.ts:2233](https://github.com/serenity-is/sereni
 
 > **image**: `ImageSVGAttributes`\<`SVGImageElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2347](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2347)
+Defined in: [types/jsx-elements.d.ts:2345](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2345)
 
 #### Inherited from
 
@@ -1096,7 +1096,7 @@ Defined in: [types/jsx-elements.d.ts:2347](https://github.com/serenity-is/sereni
 
 > **img**: `ImgHTMLAttributes`\<`HTMLImageElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2234](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2234)
+Defined in: [types/jsx-elements.d.ts:2232](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2232)
 
 #### Inherited from
 
@@ -1108,7 +1108,7 @@ Defined in: [types/jsx-elements.d.ts:2234](https://github.com/serenity-is/sereni
 
 > **input**: `InputHTMLAttributes`\<`HTMLInputElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2235](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2235)
+Defined in: [types/jsx-elements.d.ts:2233](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2233)
 
 #### Inherited from
 
@@ -1120,7 +1120,7 @@ Defined in: [types/jsx-elements.d.ts:2235](https://github.com/serenity-is/sereni
 
 > **ins**: `ModHTMLAttributes`\<`HTMLModElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2236](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2236)
+Defined in: [types/jsx-elements.d.ts:2234](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2234)
 
 #### Inherited from
 
@@ -1132,7 +1132,7 @@ Defined in: [types/jsx-elements.d.ts:2236](https://github.com/serenity-is/sereni
 
 > **kbd**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2237](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2237)
+Defined in: [types/jsx-elements.d.ts:2235](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2235)
 
 #### Inherited from
 
@@ -1144,7 +1144,7 @@ Defined in: [types/jsx-elements.d.ts:2237](https://github.com/serenity-is/sereni
 
 > **label**: `LabelHTMLAttributes`\<`HTMLLabelElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2238](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2238)
+Defined in: [types/jsx-elements.d.ts:2236](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2236)
 
 #### Inherited from
 
@@ -1156,7 +1156,7 @@ Defined in: [types/jsx-elements.d.ts:2238](https://github.com/serenity-is/sereni
 
 > **legend**: `HTMLAttributes`\<`HTMLLegendElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2239](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2239)
+Defined in: [types/jsx-elements.d.ts:2237](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2237)
 
 #### Inherited from
 
@@ -1168,7 +1168,7 @@ Defined in: [types/jsx-elements.d.ts:2239](https://github.com/serenity-is/sereni
 
 > **li**: `LiHTMLAttributes`\<`HTMLLIElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2240](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2240)
+Defined in: [types/jsx-elements.d.ts:2238](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2238)
 
 #### Inherited from
 
@@ -1180,7 +1180,7 @@ Defined in: [types/jsx-elements.d.ts:2240](https://github.com/serenity-is/sereni
 
 > **line**: `LineSVGAttributes`\<`SVGLineElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2348](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2348)
+Defined in: [types/jsx-elements.d.ts:2346](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2346)
 
 #### Inherited from
 
@@ -1192,7 +1192,7 @@ Defined in: [types/jsx-elements.d.ts:2348](https://github.com/serenity-is/sereni
 
 > **linearGradient**: `LinearGradientSVGAttributes`\<`SVGLinearGradientElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2349](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2349)
+Defined in: [types/jsx-elements.d.ts:2347](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2347)
 
 #### Inherited from
 
@@ -1204,7 +1204,7 @@ Defined in: [types/jsx-elements.d.ts:2349](https://github.com/serenity-is/sereni
 
 > **link**: `LinkHTMLAttributes`\<`HTMLLinkElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2241](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2241)
+Defined in: [types/jsx-elements.d.ts:2239](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2239)
 
 #### Inherited from
 
@@ -1216,7 +1216,7 @@ Defined in: [types/jsx-elements.d.ts:2241](https://github.com/serenity-is/sereni
 
 > **maction**: `MathMLMactionElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2405](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2405)
+Defined in: [types/jsx-elements.d.ts:2403](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2403)
 
 #### Deprecated
 
@@ -1230,7 +1230,7 @@ Defined in: [types/jsx-elements.d.ts:2405](https://github.com/serenity-is/sereni
 
 > **main**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2242](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2242)
+Defined in: [types/jsx-elements.d.ts:2240](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2240)
 
 #### Inherited from
 
@@ -1242,7 +1242,7 @@ Defined in: [types/jsx-elements.d.ts:2242](https://github.com/serenity-is/sereni
 
 > **map**: `MapHTMLAttributes`\<`HTMLMapElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2243](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2243)
+Defined in: [types/jsx-elements.d.ts:2241](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2241)
 
 #### Inherited from
 
@@ -1254,7 +1254,7 @@ Defined in: [types/jsx-elements.d.ts:2243](https://github.com/serenity-is/sereni
 
 > **mark**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2244](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2244)
+Defined in: [types/jsx-elements.d.ts:2242](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2242)
 
 #### Inherited from
 
@@ -1266,7 +1266,7 @@ Defined in: [types/jsx-elements.d.ts:2244](https://github.com/serenity-is/sereni
 
 > **marker**: `MarkerSVGAttributes`\<`SVGMarkerElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2350](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2350)
+Defined in: [types/jsx-elements.d.ts:2348](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2348)
 
 #### Inherited from
 
@@ -1278,7 +1278,7 @@ Defined in: [types/jsx-elements.d.ts:2350](https://github.com/serenity-is/sereni
 
 > **mask**: `MaskSVGAttributes`\<`SVGMaskElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2351](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2351)
+Defined in: [types/jsx-elements.d.ts:2349](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2349)
 
 #### Inherited from
 
@@ -1290,7 +1290,7 @@ Defined in: [types/jsx-elements.d.ts:2351](https://github.com/serenity-is/sereni
 
 > **math**: `MathMLMathElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2375](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2375)
+Defined in: [types/jsx-elements.d.ts:2373](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2373)
 
 #### Inherited from
 
@@ -1302,7 +1302,7 @@ Defined in: [types/jsx-elements.d.ts:2375](https://github.com/serenity-is/sereni
 
 > **menclose**: `MathMLMencloseElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2403](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2403)
+Defined in: [types/jsx-elements.d.ts:2401](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2401)
 
 #### Non-standard
 
@@ -1316,7 +1316,7 @@ Defined in: [types/jsx-elements.d.ts:2403](https://github.com/serenity-is/sereni
 
 > **menu**: `MenuHTMLAttributes`\<`HTMLMenuElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2245](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2245)
+Defined in: [types/jsx-elements.d.ts:2243](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2243)
 
 #### Inherited from
 
@@ -1328,7 +1328,7 @@ Defined in: [types/jsx-elements.d.ts:2245](https://github.com/serenity-is/sereni
 
 > **merror**: `MathMLMerrorElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2376](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2376)
+Defined in: [types/jsx-elements.d.ts:2374](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2374)
 
 #### Inherited from
 
@@ -1340,7 +1340,7 @@ Defined in: [types/jsx-elements.d.ts:2376](https://github.com/serenity-is/sereni
 
 > **meta**: `MetaHTMLAttributes`\<`HTMLMetaElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2246](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2246)
+Defined in: [types/jsx-elements.d.ts:2244](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2244)
 
 #### Inherited from
 
@@ -1352,7 +1352,7 @@ Defined in: [types/jsx-elements.d.ts:2246](https://github.com/serenity-is/sereni
 
 > **metadata**: `MetadataSVGAttributes`\<`SVGMetadataElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2352](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2352)
+Defined in: [types/jsx-elements.d.ts:2350](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2350)
 
 #### Inherited from
 
@@ -1364,7 +1364,7 @@ Defined in: [types/jsx-elements.d.ts:2352](https://github.com/serenity-is/sereni
 
 > **meter**: `MeterHTMLAttributes`\<`HTMLMeterElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2247](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2247)
+Defined in: [types/jsx-elements.d.ts:2245](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2245)
 
 #### Inherited from
 
@@ -1376,7 +1376,7 @@ Defined in: [types/jsx-elements.d.ts:2247](https://github.com/serenity-is/sereni
 
 > **mfenced**: `MathMLMfencedElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2407](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2407)
+Defined in: [types/jsx-elements.d.ts:2405](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2405)
 
 #### Deprecated
 
@@ -1392,7 +1392,7 @@ Defined in: [types/jsx-elements.d.ts:2407](https://github.com/serenity-is/sereni
 
 > **mfrac**: `MathMLMfracElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2377](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2377)
+Defined in: [types/jsx-elements.d.ts:2375](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2375)
 
 #### Inherited from
 
@@ -1404,7 +1404,7 @@ Defined in: [types/jsx-elements.d.ts:2377](https://github.com/serenity-is/sereni
 
 > **mi**: `MathMLMiElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2378](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2378)
+Defined in: [types/jsx-elements.d.ts:2376](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2376)
 
 #### Inherited from
 
@@ -1416,7 +1416,7 @@ Defined in: [types/jsx-elements.d.ts:2378](https://github.com/serenity-is/sereni
 
 > **mmultiscripts**: `MathMLMmultiscriptsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2379](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2379)
+Defined in: [types/jsx-elements.d.ts:2377](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2377)
 
 #### Inherited from
 
@@ -1428,7 +1428,7 @@ Defined in: [types/jsx-elements.d.ts:2379](https://github.com/serenity-is/sereni
 
 > **mn**: `MathMLMnElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2380](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2380)
+Defined in: [types/jsx-elements.d.ts:2378](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2378)
 
 #### Inherited from
 
@@ -1440,7 +1440,7 @@ Defined in: [types/jsx-elements.d.ts:2380](https://github.com/serenity-is/sereni
 
 > **mo**: `MathMLMoElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2381](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2381)
+Defined in: [types/jsx-elements.d.ts:2379](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2379)
 
 #### Inherited from
 
@@ -1452,7 +1452,7 @@ Defined in: [types/jsx-elements.d.ts:2381](https://github.com/serenity-is/sereni
 
 > **mover**: `MathMLMoverElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2382](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2382)
+Defined in: [types/jsx-elements.d.ts:2380](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2380)
 
 #### Inherited from
 
@@ -1464,7 +1464,7 @@ Defined in: [types/jsx-elements.d.ts:2382](https://github.com/serenity-is/sereni
 
 > **mpadded**: `MathMLMpaddedElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2383](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2383)
+Defined in: [types/jsx-elements.d.ts:2381](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2381)
 
 #### Inherited from
 
@@ -1476,7 +1476,7 @@ Defined in: [types/jsx-elements.d.ts:2383](https://github.com/serenity-is/sereni
 
 > **mpath**: `MPathSVGAttributes`\<`SVGMPathElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2353](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2353)
+Defined in: [types/jsx-elements.d.ts:2351](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2351)
 
 #### Inherited from
 
@@ -1488,7 +1488,7 @@ Defined in: [types/jsx-elements.d.ts:2353](https://github.com/serenity-is/sereni
 
 > **mphantom**: `MathMLMphantomElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2384](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2384)
+Defined in: [types/jsx-elements.d.ts:2382](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2382)
 
 #### Inherited from
 
@@ -1500,7 +1500,7 @@ Defined in: [types/jsx-elements.d.ts:2384](https://github.com/serenity-is/sereni
 
 > **mprescripts**: `MathMLMprescriptsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2385](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2385)
+Defined in: [types/jsx-elements.d.ts:2383](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2383)
 
 #### Inherited from
 
@@ -1512,7 +1512,7 @@ Defined in: [types/jsx-elements.d.ts:2385](https://github.com/serenity-is/sereni
 
 > **mroot**: `MathMLMrootElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2386](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2386)
+Defined in: [types/jsx-elements.d.ts:2384](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2384)
 
 #### Inherited from
 
@@ -1524,7 +1524,7 @@ Defined in: [types/jsx-elements.d.ts:2386](https://github.com/serenity-is/sereni
 
 > **mrow**: `MathMLMrowElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2387](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2387)
+Defined in: [types/jsx-elements.d.ts:2385](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2385)
 
 #### Inherited from
 
@@ -1536,7 +1536,7 @@ Defined in: [types/jsx-elements.d.ts:2387](https://github.com/serenity-is/sereni
 
 > **ms**: `MathMLMsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2388](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2388)
+Defined in: [types/jsx-elements.d.ts:2386](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2386)
 
 #### Inherited from
 
@@ -1548,7 +1548,7 @@ Defined in: [types/jsx-elements.d.ts:2388](https://github.com/serenity-is/sereni
 
 > **mspace**: `MathMLMspaceElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2389](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2389)
+Defined in: [types/jsx-elements.d.ts:2387](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2387)
 
 #### Inherited from
 
@@ -1560,7 +1560,7 @@ Defined in: [types/jsx-elements.d.ts:2389](https://github.com/serenity-is/sereni
 
 > **msqrt**: `MathMLMsqrtElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2390](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2390)
+Defined in: [types/jsx-elements.d.ts:2388](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2388)
 
 #### Inherited from
 
@@ -1572,7 +1572,7 @@ Defined in: [types/jsx-elements.d.ts:2390](https://github.com/serenity-is/sereni
 
 > **mstyle**: `MathMLMstyleElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2391](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2391)
+Defined in: [types/jsx-elements.d.ts:2389](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2389)
 
 #### Inherited from
 
@@ -1584,7 +1584,7 @@ Defined in: [types/jsx-elements.d.ts:2391](https://github.com/serenity-is/sereni
 
 > **msub**: `MathMLMsubElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2392](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2392)
+Defined in: [types/jsx-elements.d.ts:2390](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2390)
 
 #### Inherited from
 
@@ -1596,7 +1596,7 @@ Defined in: [types/jsx-elements.d.ts:2392](https://github.com/serenity-is/sereni
 
 > **msubsup**: `MathMLMsubsupElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2393](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2393)
+Defined in: [types/jsx-elements.d.ts:2391](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2391)
 
 #### Inherited from
 
@@ -1608,7 +1608,7 @@ Defined in: [types/jsx-elements.d.ts:2393](https://github.com/serenity-is/sereni
 
 > **msup**: `MathMLMsupElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2394](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2394)
+Defined in: [types/jsx-elements.d.ts:2392](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2392)
 
 #### Inherited from
 
@@ -1620,7 +1620,7 @@ Defined in: [types/jsx-elements.d.ts:2394](https://github.com/serenity-is/sereni
 
 > **mtable**: `MathMLMtableElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2395](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2395)
+Defined in: [types/jsx-elements.d.ts:2393](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2393)
 
 #### Inherited from
 
@@ -1632,7 +1632,7 @@ Defined in: [types/jsx-elements.d.ts:2395](https://github.com/serenity-is/sereni
 
 > **mtd**: `MathMLMtdElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2396](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2396)
+Defined in: [types/jsx-elements.d.ts:2394](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2394)
 
 #### Inherited from
 
@@ -1644,7 +1644,7 @@ Defined in: [types/jsx-elements.d.ts:2396](https://github.com/serenity-is/sereni
 
 > **mtext**: `MathMLMtextElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2397](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2397)
+Defined in: [types/jsx-elements.d.ts:2395](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2395)
 
 #### Inherited from
 
@@ -1656,7 +1656,7 @@ Defined in: [types/jsx-elements.d.ts:2397](https://github.com/serenity-is/sereni
 
 > **mtr**: `MathMLMtrElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2398](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2398)
+Defined in: [types/jsx-elements.d.ts:2396](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2396)
 
 #### Inherited from
 
@@ -1668,7 +1668,7 @@ Defined in: [types/jsx-elements.d.ts:2398](https://github.com/serenity-is/sereni
 
 > **munder**: `MathMLMunderElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2399](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2399)
+Defined in: [types/jsx-elements.d.ts:2397](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2397)
 
 #### Inherited from
 
@@ -1680,7 +1680,7 @@ Defined in: [types/jsx-elements.d.ts:2399](https://github.com/serenity-is/sereni
 
 > **munderover**: `MathMLMunderoverElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2400](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2400)
+Defined in: [types/jsx-elements.d.ts:2398](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2398)
 
 #### Inherited from
 
@@ -1692,7 +1692,7 @@ Defined in: [types/jsx-elements.d.ts:2400](https://github.com/serenity-is/sereni
 
 > **nav**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2248](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2248)
+Defined in: [types/jsx-elements.d.ts:2246](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2246)
 
 #### Inherited from
 
@@ -1704,7 +1704,7 @@ Defined in: [types/jsx-elements.d.ts:2248](https://github.com/serenity-is/sereni
 
 > **noscript**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2249](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2249)
+Defined in: [types/jsx-elements.d.ts:2247](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2247)
 
 #### Inherited from
 
@@ -1716,7 +1716,7 @@ Defined in: [types/jsx-elements.d.ts:2249](https://github.com/serenity-is/sereni
 
 > **object**: `ObjectHTMLAttributes`\<`HTMLObjectElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2250](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2250)
+Defined in: [types/jsx-elements.d.ts:2248](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2248)
 
 #### Inherited from
 
@@ -1728,7 +1728,7 @@ Defined in: [types/jsx-elements.d.ts:2250](https://github.com/serenity-is/sereni
 
 > **ol**: `OlHTMLAttributes`\<`HTMLOListElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2251](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2251)
+Defined in: [types/jsx-elements.d.ts:2249](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2249)
 
 #### Inherited from
 
@@ -1740,7 +1740,7 @@ Defined in: [types/jsx-elements.d.ts:2251](https://github.com/serenity-is/sereni
 
 > **optgroup**: `OptgroupHTMLAttributes`\<`HTMLOptGroupElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2252](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2252)
+Defined in: [types/jsx-elements.d.ts:2250](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2250)
 
 #### Inherited from
 
@@ -1752,7 +1752,7 @@ Defined in: [types/jsx-elements.d.ts:2252](https://github.com/serenity-is/sereni
 
 > **option**: `OptionHTMLAttributes`\<`HTMLOptionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2253](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2253)
+Defined in: [types/jsx-elements.d.ts:2251](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2251)
 
 #### Inherited from
 
@@ -1764,7 +1764,7 @@ Defined in: [types/jsx-elements.d.ts:2253](https://github.com/serenity-is/sereni
 
 > **output**: `OutputHTMLAttributes`\<`HTMLOutputElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2254](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2254)
+Defined in: [types/jsx-elements.d.ts:2252](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2252)
 
 #### Inherited from
 
@@ -1776,7 +1776,7 @@ Defined in: [types/jsx-elements.d.ts:2254](https://github.com/serenity-is/sereni
 
 > **p**: `HTMLAttributes`\<`HTMLParagraphElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2255](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2255)
+Defined in: [types/jsx-elements.d.ts:2253](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2253)
 
 #### Inherited from
 
@@ -1788,7 +1788,7 @@ Defined in: [types/jsx-elements.d.ts:2255](https://github.com/serenity-is/sereni
 
 > **path**: `PathSVGAttributes`\<`SVGPathElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2354](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2354)
+Defined in: [types/jsx-elements.d.ts:2352](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2352)
 
 #### Inherited from
 
@@ -1800,7 +1800,7 @@ Defined in: [types/jsx-elements.d.ts:2354](https://github.com/serenity-is/sereni
 
 > **pattern**: `PatternSVGAttributes`\<`SVGPatternElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2355](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2355)
+Defined in: [types/jsx-elements.d.ts:2353](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2353)
 
 #### Inherited from
 
@@ -1812,7 +1812,7 @@ Defined in: [types/jsx-elements.d.ts:2355](https://github.com/serenity-is/sereni
 
 > **picture**: `HTMLAttributes`\<`HTMLPictureElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2256](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2256)
+Defined in: [types/jsx-elements.d.ts:2254](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2254)
 
 #### Inherited from
 
@@ -1824,7 +1824,7 @@ Defined in: [types/jsx-elements.d.ts:2256](https://github.com/serenity-is/sereni
 
 > **polygon**: `PolygonSVGAttributes`\<`SVGPolygonElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2356](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2356)
+Defined in: [types/jsx-elements.d.ts:2354](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2354)
 
 #### Inherited from
 
@@ -1836,7 +1836,7 @@ Defined in: [types/jsx-elements.d.ts:2356](https://github.com/serenity-is/sereni
 
 > **polyline**: `PolylineSVGAttributes`\<`SVGPolylineElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2357](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2357)
+Defined in: [types/jsx-elements.d.ts:2355](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2355)
 
 #### Inherited from
 
@@ -1848,7 +1848,7 @@ Defined in: [types/jsx-elements.d.ts:2357](https://github.com/serenity-is/sereni
 
 > **pre**: `HTMLAttributes`\<`HTMLPreElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2257](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2257)
+Defined in: [types/jsx-elements.d.ts:2255](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2255)
 
 #### Inherited from
 
@@ -1860,7 +1860,7 @@ Defined in: [types/jsx-elements.d.ts:2257](https://github.com/serenity-is/sereni
 
 > **progress**: `ProgressHTMLAttributes`\<`HTMLProgressElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2258](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2258)
+Defined in: [types/jsx-elements.d.ts:2256](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2256)
 
 #### Inherited from
 
@@ -1872,7 +1872,7 @@ Defined in: [types/jsx-elements.d.ts:2258](https://github.com/serenity-is/sereni
 
 > **q**: `QuoteHTMLAttributes`\<`HTMLQuoteElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2259](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2259)
+Defined in: [types/jsx-elements.d.ts:2257](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2257)
 
 #### Inherited from
 
@@ -1884,7 +1884,7 @@ Defined in: [types/jsx-elements.d.ts:2259](https://github.com/serenity-is/sereni
 
 > **radialGradient**: `RadialGradientSVGAttributes`\<`SVGRadialGradientElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2358](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2358)
+Defined in: [types/jsx-elements.d.ts:2356](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2356)
 
 #### Inherited from
 
@@ -1896,7 +1896,7 @@ Defined in: [types/jsx-elements.d.ts:2358](https://github.com/serenity-is/sereni
 
 > **rect**: `RectSVGAttributes`\<`SVGRectElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2359](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2359)
+Defined in: [types/jsx-elements.d.ts:2357](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2357)
 
 #### Inherited from
 
@@ -1908,7 +1908,7 @@ Defined in: [types/jsx-elements.d.ts:2359](https://github.com/serenity-is/sereni
 
 > **rp**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2260](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2260)
+Defined in: [types/jsx-elements.d.ts:2258](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2258)
 
 #### Inherited from
 
@@ -1920,7 +1920,7 @@ Defined in: [types/jsx-elements.d.ts:2260](https://github.com/serenity-is/sereni
 
 > **rt**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2261](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2261)
+Defined in: [types/jsx-elements.d.ts:2259](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2259)
 
 #### Inherited from
 
@@ -1932,7 +1932,7 @@ Defined in: [types/jsx-elements.d.ts:2261](https://github.com/serenity-is/sereni
 
 > **ruby**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2262](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2262)
+Defined in: [types/jsx-elements.d.ts:2260](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2260)
 
 #### Inherited from
 
@@ -1944,7 +1944,7 @@ Defined in: [types/jsx-elements.d.ts:2262](https://github.com/serenity-is/sereni
 
 > **s**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2263](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2263)
+Defined in: [types/jsx-elements.d.ts:2261](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2261)
 
 #### Inherited from
 
@@ -1956,7 +1956,7 @@ Defined in: [types/jsx-elements.d.ts:2263](https://github.com/serenity-is/sereni
 
 > **samp**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2264](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2264)
+Defined in: [types/jsx-elements.d.ts:2262](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2262)
 
 #### Inherited from
 
@@ -1968,7 +1968,7 @@ Defined in: [types/jsx-elements.d.ts:2264](https://github.com/serenity-is/sereni
 
 > **script**: `ScriptHTMLAttributes`\<`HTMLScriptElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2265](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2265)
+Defined in: [types/jsx-elements.d.ts:2263](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2263)
 
 #### Inherited from
 
@@ -1980,7 +1980,7 @@ Defined in: [types/jsx-elements.d.ts:2265](https://github.com/serenity-is/sereni
 
 > **search**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2266](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2266)
+Defined in: [types/jsx-elements.d.ts:2264](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2264)
 
 #### Inherited from
 
@@ -1992,7 +1992,7 @@ Defined in: [types/jsx-elements.d.ts:2266](https://github.com/serenity-is/sereni
 
 > **section**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2267](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2267)
+Defined in: [types/jsx-elements.d.ts:2265](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2265)
 
 #### Inherited from
 
@@ -2004,7 +2004,7 @@ Defined in: [types/jsx-elements.d.ts:2267](https://github.com/serenity-is/sereni
 
 > **select**: `SelectHTMLAttributes`\<`HTMLSelectElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2268](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2268)
+Defined in: [types/jsx-elements.d.ts:2266](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2266)
 
 #### Inherited from
 
@@ -2016,7 +2016,7 @@ Defined in: [types/jsx-elements.d.ts:2268](https://github.com/serenity-is/sereni
 
 > **semantics**: `MathMLSemanticsElementAttributes`\<`MathMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2401](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2401)
+Defined in: [types/jsx-elements.d.ts:2399](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2399)
 
 #### Inherited from
 
@@ -2028,7 +2028,7 @@ Defined in: [types/jsx-elements.d.ts:2401](https://github.com/serenity-is/sereni
 
 > **set**: `SetSVGAttributes`\<`SVGSetElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2360](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2360)
+Defined in: [types/jsx-elements.d.ts:2358](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2358)
 
 #### Inherited from
 
@@ -2040,7 +2040,7 @@ Defined in: [types/jsx-elements.d.ts:2360](https://github.com/serenity-is/sereni
 
 > **slot**: `HTMLSlotElementAttributes`\<`HTMLSlotElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2269](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2269)
+Defined in: [types/jsx-elements.d.ts:2267](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2267)
 
 #### Inherited from
 
@@ -2052,7 +2052,7 @@ Defined in: [types/jsx-elements.d.ts:2269](https://github.com/serenity-is/sereni
 
 > **small**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2270](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2270)
+Defined in: [types/jsx-elements.d.ts:2268](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2268)
 
 #### Inherited from
 
@@ -2064,7 +2064,7 @@ Defined in: [types/jsx-elements.d.ts:2270](https://github.com/serenity-is/sereni
 
 > **source**: `SourceHTMLAttributes`\<`HTMLSourceElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2271](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2271)
+Defined in: [types/jsx-elements.d.ts:2269](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2269)
 
 #### Inherited from
 
@@ -2076,7 +2076,7 @@ Defined in: [types/jsx-elements.d.ts:2271](https://github.com/serenity-is/sereni
 
 > **span**: `HTMLAttributes`\<`HTMLSpanElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2272](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2272)
+Defined in: [types/jsx-elements.d.ts:2270](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2270)
 
 #### Inherited from
 
@@ -2088,7 +2088,7 @@ Defined in: [types/jsx-elements.d.ts:2272](https://github.com/serenity-is/sereni
 
 > **stop**: `StopSVGAttributes`\<`SVGStopElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2361](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2361)
+Defined in: [types/jsx-elements.d.ts:2359](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2359)
 
 #### Inherited from
 
@@ -2100,7 +2100,7 @@ Defined in: [types/jsx-elements.d.ts:2361](https://github.com/serenity-is/sereni
 
 > **strong**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2273](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2273)
+Defined in: [types/jsx-elements.d.ts:2271](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2271)
 
 #### Inherited from
 
@@ -2112,7 +2112,7 @@ Defined in: [types/jsx-elements.d.ts:2273](https://github.com/serenity-is/sereni
 
 > **style**: `StyleHTMLAttributes`\<`HTMLStyleElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2274](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2274)
+Defined in: [types/jsx-elements.d.ts:2272](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2272)
 
 #### Inherited from
 
@@ -2124,7 +2124,7 @@ Defined in: [types/jsx-elements.d.ts:2274](https://github.com/serenity-is/sereni
 
 > **sub**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2275](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2275)
+Defined in: [types/jsx-elements.d.ts:2273](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2273)
 
 #### Inherited from
 
@@ -2136,7 +2136,7 @@ Defined in: [types/jsx-elements.d.ts:2275](https://github.com/serenity-is/sereni
 
 > **summary**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2276](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2276)
+Defined in: [types/jsx-elements.d.ts:2274](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2274)
 
 #### Inherited from
 
@@ -2148,7 +2148,7 @@ Defined in: [types/jsx-elements.d.ts:2276](https://github.com/serenity-is/sereni
 
 > **sup**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2277](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2277)
+Defined in: [types/jsx-elements.d.ts:2275](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2275)
 
 #### Inherited from
 
@@ -2160,7 +2160,7 @@ Defined in: [types/jsx-elements.d.ts:2277](https://github.com/serenity-is/sereni
 
 > **svg**: `SvgSVGAttributes`\<`SVGSVGElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2362](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2362)
+Defined in: [types/jsx-elements.d.ts:2360](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2360)
 
 #### Inherited from
 
@@ -2172,7 +2172,7 @@ Defined in: [types/jsx-elements.d.ts:2362](https://github.com/serenity-is/sereni
 
 > **switch**: `SwitchSVGAttributes`\<`SVGSwitchElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2363](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2363)
+Defined in: [types/jsx-elements.d.ts:2361](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2361)
 
 #### Inherited from
 
@@ -2184,7 +2184,7 @@ Defined in: [types/jsx-elements.d.ts:2363](https://github.com/serenity-is/sereni
 
 > **symbol**: `SymbolSVGAttributes`\<`SVGSymbolElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2364](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2364)
+Defined in: [types/jsx-elements.d.ts:2362](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2362)
 
 #### Inherited from
 
@@ -2196,7 +2196,7 @@ Defined in: [types/jsx-elements.d.ts:2364](https://github.com/serenity-is/sereni
 
 > **table**: `HTMLAttributes`\<`HTMLTableElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2278](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2278)
+Defined in: [types/jsx-elements.d.ts:2276](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2276)
 
 #### Inherited from
 
@@ -2208,7 +2208,7 @@ Defined in: [types/jsx-elements.d.ts:2278](https://github.com/serenity-is/sereni
 
 > **tbody**: `HTMLAttributes`\<`HTMLTableSectionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2279](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2279)
+Defined in: [types/jsx-elements.d.ts:2277](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2277)
 
 #### Inherited from
 
@@ -2220,7 +2220,7 @@ Defined in: [types/jsx-elements.d.ts:2279](https://github.com/serenity-is/sereni
 
 > **td**: `TdHTMLAttributes`\<`HTMLTableCellElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2280](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2280)
+Defined in: [types/jsx-elements.d.ts:2278](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2278)
 
 #### Inherited from
 
@@ -2232,7 +2232,7 @@ Defined in: [types/jsx-elements.d.ts:2280](https://github.com/serenity-is/sereni
 
 > **template**: `TemplateHTMLAttributes`\<`HTMLTemplateElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2281](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2281)
+Defined in: [types/jsx-elements.d.ts:2279](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2279)
 
 #### Inherited from
 
@@ -2244,7 +2244,7 @@ Defined in: [types/jsx-elements.d.ts:2281](https://github.com/serenity-is/sereni
 
 > **text**: `TextSVGAttributes`\<`SVGTextElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2365](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2365)
+Defined in: [types/jsx-elements.d.ts:2363](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2363)
 
 #### Inherited from
 
@@ -2256,7 +2256,7 @@ Defined in: [types/jsx-elements.d.ts:2365](https://github.com/serenity-is/sereni
 
 > **textarea**: `TextareaHTMLAttributes`\<`HTMLTextAreaElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2282](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2282)
+Defined in: [types/jsx-elements.d.ts:2280](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2280)
 
 #### Inherited from
 
@@ -2268,7 +2268,7 @@ Defined in: [types/jsx-elements.d.ts:2282](https://github.com/serenity-is/sereni
 
 > **textPath**: `TextPathSVGAttributes`\<`SVGTextPathElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2366](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2366)
+Defined in: [types/jsx-elements.d.ts:2364](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2364)
 
 #### Inherited from
 
@@ -2280,7 +2280,7 @@ Defined in: [types/jsx-elements.d.ts:2366](https://github.com/serenity-is/sereni
 
 > **tfoot**: `HTMLAttributes`\<`HTMLTableSectionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2283](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2283)
+Defined in: [types/jsx-elements.d.ts:2281](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2281)
 
 #### Inherited from
 
@@ -2292,7 +2292,7 @@ Defined in: [types/jsx-elements.d.ts:2283](https://github.com/serenity-is/sereni
 
 > **th**: `ThHTMLAttributes`\<`HTMLTableCellElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2284](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2284)
+Defined in: [types/jsx-elements.d.ts:2282](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2282)
 
 #### Inherited from
 
@@ -2304,7 +2304,7 @@ Defined in: [types/jsx-elements.d.ts:2284](https://github.com/serenity-is/sereni
 
 > **thead**: `HTMLAttributes`\<`HTMLTableSectionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2285](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2285)
+Defined in: [types/jsx-elements.d.ts:2283](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2283)
 
 #### Inherited from
 
@@ -2316,7 +2316,7 @@ Defined in: [types/jsx-elements.d.ts:2285](https://github.com/serenity-is/sereni
 
 > **time**: `TimeHTMLAttributes`\<`HTMLTimeElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2286](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2286)
+Defined in: [types/jsx-elements.d.ts:2284](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2284)
 
 #### Inherited from
 
@@ -2328,7 +2328,7 @@ Defined in: [types/jsx-elements.d.ts:2286](https://github.com/serenity-is/sereni
 
 > **title**: `HTMLAttributes`\<`HTMLTitleElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2287](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2287)
+Defined in: [types/jsx-elements.d.ts:2285](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2285)
 
 #### Inherited from
 
@@ -2340,7 +2340,7 @@ Defined in: [types/jsx-elements.d.ts:2287](https://github.com/serenity-is/sereni
 
 > **tr**: `HTMLAttributes`\<`HTMLTableRowElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2288](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2288)
+Defined in: [types/jsx-elements.d.ts:2286](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2286)
 
 #### Inherited from
 
@@ -2352,7 +2352,7 @@ Defined in: [types/jsx-elements.d.ts:2288](https://github.com/serenity-is/sereni
 
 > **track**: `TrackHTMLAttributes`\<`HTMLTrackElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2289](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2289)
+Defined in: [types/jsx-elements.d.ts:2287](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2287)
 
 #### Inherited from
 
@@ -2364,7 +2364,7 @@ Defined in: [types/jsx-elements.d.ts:2289](https://github.com/serenity-is/sereni
 
 > **tspan**: `TSpanSVGAttributes`\<`SVGTSpanElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2367](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2367)
+Defined in: [types/jsx-elements.d.ts:2365](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2365)
 
 #### Inherited from
 
@@ -2376,7 +2376,7 @@ Defined in: [types/jsx-elements.d.ts:2367](https://github.com/serenity-is/sereni
 
 > **u**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2290](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2290)
+Defined in: [types/jsx-elements.d.ts:2288](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2288)
 
 #### Inherited from
 
@@ -2388,7 +2388,7 @@ Defined in: [types/jsx-elements.d.ts:2290](https://github.com/serenity-is/sereni
 
 > **ul**: `HTMLAttributes`\<`HTMLUListElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2291](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2291)
+Defined in: [types/jsx-elements.d.ts:2289](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2289)
 
 #### Inherited from
 
@@ -2400,7 +2400,7 @@ Defined in: [types/jsx-elements.d.ts:2291](https://github.com/serenity-is/sereni
 
 > **use**: `UseSVGAttributes`\<`SVGUseElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2368](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2368)
+Defined in: [types/jsx-elements.d.ts:2366](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2366)
 
 #### Inherited from
 
@@ -2412,7 +2412,7 @@ Defined in: [types/jsx-elements.d.ts:2368](https://github.com/serenity-is/sereni
 
 > **var**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2292](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2292)
+Defined in: [types/jsx-elements.d.ts:2290](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2290)
 
 #### Inherited from
 
@@ -2424,7 +2424,7 @@ Defined in: [types/jsx-elements.d.ts:2292](https://github.com/serenity-is/sereni
 
 > **video**: `VideoHTMLAttributes`\<`HTMLVideoElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2293](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2293)
+Defined in: [types/jsx-elements.d.ts:2291](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2291)
 
 #### Inherited from
 
@@ -2436,7 +2436,7 @@ Defined in: [types/jsx-elements.d.ts:2293](https://github.com/serenity-is/sereni
 
 > **view**: `ViewSVGAttributes`\<`SVGViewElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2369](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2369)
+Defined in: [types/jsx-elements.d.ts:2367](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2367)
 
 #### Inherited from
 
@@ -2448,7 +2448,7 @@ Defined in: [types/jsx-elements.d.ts:2369](https://github.com/serenity-is/sereni
 
 > **wbr**: `HTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2294](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2294)
+Defined in: [types/jsx-elements.d.ts:2292](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2292)
 
 #### Inherited from
 
@@ -2460,7 +2460,7 @@ Defined in: [types/jsx-elements.d.ts:2294](https://github.com/serenity-is/sereni
 
 > **webview**: `WebViewHTMLAttributes`\<`HTMLElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2296](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2296)
+Defined in: [types/jsx-elements.d.ts:2294](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2294)
 
 #### Url
 

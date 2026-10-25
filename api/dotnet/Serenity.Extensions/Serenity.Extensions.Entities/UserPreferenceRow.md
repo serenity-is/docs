@@ -25,4 +25,4 @@ public sealed class UserPreferenceRow : Row<RowFields>, IIdRow, INameRow
 * class [RowFields](./UserPreferenceRow.RowFields.md)
 * interface [IIdRow](../../Serenity.Net.Services/Serenity.Data/IIdRow.md)
 * interface [INameRow](../../Serenity.Net.Services/Serenity.Data/INameRow.md)
-* **Source:** *[UserPreferenceRow.cs](https://github.com/serenity-is/Serenity/blob/566b0b4392b57a4f23d4cdf6355e574804d4ea2c/common-features/src/extensions/Modules/UserPreference/UserPreferenceRow.cs)*
+* **Source:** *[UserPreferenceRow.cs](https://github.com/serenity-is/Serenity/blob/0c34357a17d56458ca5b7a3be25f42666b9eb050/common-features/src/extensions/Modules/UserPreference/UserPreferenceRow.cs)*

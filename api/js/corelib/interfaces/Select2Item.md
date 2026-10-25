@@ -12,9 +12,19 @@ A single Select2 item.
 
 > `optional` **children**: `Select2Item`[]
 
-Defined in: [src/ui/editors/select2.tsx:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L42)
+Defined in: [src/ui/editors/select2.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L46)
 
 Child items.
+
+***
+
+### css?
+
+> `optional` **css**: `string`
+
+Defined in: [src/ui/editors/select2.tsx:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L44)
+
+CSS class(es) of the item.
 
 ***
 
@@ -22,9 +32,19 @@ Child items.
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [src/ui/editors/select2.tsx:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L44)
+Defined in: [src/ui/editors/select2.tsx:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L48)
 
 Whether the item is disabled.
+
+***
+
+### icon?
+
+> `optional` **icon**: [`IconClassName`](../type-aliases/IconClassName.md)
+
+Defined in: [src/ui/editors/select2.tsx:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L42)
+
+Icon class for the item.
 
 ***
 
@@ -42,7 +62,7 @@ Unique identifier of the select item.
 
 > `optional` **locked**: `boolean`
 
-Defined in: [src/ui/editors/select2.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L46)
+Defined in: [src/ui/editors/select2.tsx:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L50)
 
 Whether the item is locked.
 

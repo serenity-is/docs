@@ -112,6 +112,11 @@ You can now exit the command prompt and return to Visual Studio to continue your
 
 ## After Generating Code
 
+<video alt="Running the application and managing movies" controls preload="metadata"
+  poster="img/02b-running-the-application-poster.png">
+  <source src="img/02b-running-the-application.mp4" type="video/mp4">
+</video>
+
 1. **REBUILD the Solution** to ensure all changes are applied correctly.
 
 2. Press **F5** to launch the application.

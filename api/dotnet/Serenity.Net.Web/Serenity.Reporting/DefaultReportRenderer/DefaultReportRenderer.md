@@ -5,7 +5,7 @@ Default implementation of IReportRenderer.
 ```csharp
 public DefaultReportRenderer(IDataReportExcelRenderer excelRenderer, 
     IHtmlReportPdfRenderer htmlReportPdfRenderer, IServiceProvider serviceProvider, 
-    IHttpContextAccessor? httpContextAccessor = null)
+    IHttpContextAccessor? httpContextAccessor = null, ITextLocalizer? localizer = null)
 ```
 
 | parameter | description |
@@ -14,6 +14,7 @@ public DefaultReportRenderer(IDataReportExcelRenderer excelRenderer,
 | htmlReportPdfRenderer | The HTML report PDF renderer. |
 | serviceProvider | The service provider. |
 | httpContextAccessor | The HTTP context accessor. |
+| localizer | The text localizer. |
 
 ## Remarks
 
@@ -23,4 +24,5 @@ Initializes a new instance of the [`DefaultReportRenderer`](../DefaultReportRend
 
 * interface [IDataReportExcelRenderer](../../../Serenity.Net.Services/Serenity.Reporting/IDataReportExcelRenderer.md)
 * interface [IHtmlReportPdfRenderer](../../../Serenity.Net.Services/Serenity.Reporting/IHtmlReportPdfRenderer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [DefaultReportRenderer](../DefaultReportRenderer.md)

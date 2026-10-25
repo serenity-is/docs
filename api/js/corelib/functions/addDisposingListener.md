@@ -4,7 +4,7 @@
 
 > **addDisposingListener**\<`T`\>(`target`, `handler`, `regKey?`): `T`
 
-Defined in: [../domwise/dist/index.d.ts:2558](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2558)
+Defined in: [../domwise/dist/index.d.ts:2863](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2863)
 
 Registers a disposing listener for an element.
 

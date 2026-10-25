@@ -4,7 +4,7 @@
 
 > **className**(`value`): `string`
 
-Defined in: [../domwise/dist/index.d.ts:2440](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2440)
+Defined in: [../domwise/dist/index.d.ts:2745](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2745)
 
 Converts a heterogeneous class value to a normalized space-separated class string.
 

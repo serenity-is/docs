@@ -64,6 +64,7 @@ If you have a version number for this package in package.json, it should be equa
 
 ## Classes
 
+- [AbstractSelect2](classes/AbstractSelect2.md)
 - [AdvancedFilteringAttribute](classes/AdvancedFilteringAttribute.md)
 - [AutoNumeric](classes/AutoNumeric.md)
 - [BaseDialog](classes/BaseDialog.md)
@@ -153,6 +154,7 @@ If you have a version number for this package in package.json, it should be equa
 - [MinuteFormatter](classes/MinuteFormatter.md)
 - [MultipleFileUploadEditor](classes/MultipleFileUploadEditor.md)
 - [MultipleImageUploadEditor](classes/MultipleImageUploadEditor.md)
+- [MultiSelect2](classes/MultiSelect2.md)
 - [NumberFormatter](classes/NumberFormatter.md)
 - [OptionAttribute](classes/OptionAttribute.md)
 - [PanelAttribute](classes/PanelAttribute.md)
@@ -172,6 +174,7 @@ If you have a version number for this package in package.json, it should be equa
 - [ServiceLookupEditor](classes/ServiceLookupEditor.md)
 - [ServiceLookupEditorBase](classes/ServiceLookupEditorBase.md)
 - [ServiceLookupFiltering](classes/ServiceLookupFiltering.md)
+- [SingleSelect2](classes/SingleSelect2.md)
 - [SlickPager](classes/SlickPager.md)
 - [StaticPanelAttribute](classes/StaticPanelAttribute.md)
 - [StringEditor](classes/StringEditor.md)
@@ -599,6 +602,7 @@ If you have a version number for this package in package.json, it should be equa
 - [getTypeShortName](functions/getTypeShortName.md)
 - [getWidgetFrom](functions/getWidgetFrom.md)
 - [getWidgetName](functions/getWidgetName.md)
+- [getWindowLocation](functions/getWindowLocation.md)
 - [gridPageInit](functions/gridPageInit.md)
 - [~~GridPageInit~~](functions/GridPageInit-1.md)
 - [groupBy](functions/groupBy.md)

@@ -4,7 +4,7 @@
 
 > **withLifecycleRoot**\<`T`\>(`root`, `fn`): `T`
 
-Defined in: [../domwise/dist/index.d.ts:2605](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2605)
+Defined in: [../domwise/dist/index.d.ts:2910](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2910)
 
 Runs `fn` with the lifecycle root temporarily set to `root`, restoring the
 previous root afterwards even if `fn` throws.

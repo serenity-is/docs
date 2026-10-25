@@ -4,7 +4,7 @@
 
 > **removeDisposingListener**\<`T`\>(`target`, `handler`, `regKey?`): `T`
 
-Defined in: [../domwise/dist/index.d.ts:2575](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2575)
+Defined in: [../domwise/dist/index.d.ts:2880](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2880)
 
 Removes a previously registered disposing listener from an element.
 

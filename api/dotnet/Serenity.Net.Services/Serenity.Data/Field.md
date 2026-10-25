@@ -34,6 +34,7 @@ public abstract class Field : IFieldWithJoinInfo
 | [NaturalOrder](Field/NaturalOrder.md) { get; set; } | Gets or sets the natural order. |
 | [Origin](Field/Origin.md) { get; } | Gets the origin. |
 | [PropertyName](Field/PropertyName.md) { get; set; } | Gets or sets the name of the property. |
+| [PublicName](Field/PublicName.md) { get; } | Gets the public name which is property name or name of the field. |
 | [ReadPermission](Field/ReadPermission.md) { get; set; } | Gets or sets the read permission. |
 | [ReferencedAliases](Field/ReferencedAliases.md) { get; set; } | Gets or sets the referenced aliases. |
 | [Scale](Field/Scale.md) { get; set; } | Gets or sets the scale. |

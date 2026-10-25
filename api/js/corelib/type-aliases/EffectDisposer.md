@@ -4,6 +4,6 @@
 
 > **EffectDisposer** = () => `void` \| `null`
 
-Defined in: [../domwise/dist/index.d.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L75)
+Defined in: [../domwise/dist/index.d.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L71)
 
 A function that disposes an effect or subscription.

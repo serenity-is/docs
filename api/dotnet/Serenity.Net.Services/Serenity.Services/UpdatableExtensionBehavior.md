@@ -41,4 +41,4 @@ Initializes a new instance of the class.
 * interface [IDeleteBehaviorSync](./IDeleteBehaviorSync.md)
 * interface [IImplicitBehavior](./IImplicitBehavior.md)
 * interface [ISaveBehaviorSync](./ISaveBehaviorSync.md)
-* **Source:** *[UpdatableExtensionBehavior.cs](https://github.com/serenity-is/Serenity/blob/d947fc2cb1fa45d4549127cb6158b7af08071c3d/src/services/RequestHandlers/IntegratedFeatures/UpdatableExtension/UpdatableExtensionBehavior.cs)*
+* **Source:** *[UpdatableExtensionBehavior.cs](https://github.com/serenity-is/Serenity/blob/842eeed9c1017bb2110e654fdf17bd169a31f7a0/src/services/RequestHandlers/IntegratedFeatures/UpdatableExtension/UpdatableExtensionBehavior.cs)*

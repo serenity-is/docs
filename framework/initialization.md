@@ -276,6 +276,7 @@ Serenity uses file watchers to detect changes to files that affect cached output
 - [IFileWatcherFactory](../api/dotnet/Serenity.Net.Web/Serenity.Web/IFileWatcherFactory.md) — creates watchers via `Create(path, filter)` and keeps them alive with `KeepAlive(watcher)` so they aren't garbage-collected. `Watchers` lists the stored watchers.
 - [DefaultFileWatcherFactory](../api/dotnet/Serenity.Net.Web/Serenity.Web/DefaultFileWatcherFactory.md) — the default factory; it creates `FileWatcher` instances and retains them for the lifetime of the factory.
 - [FileWatcher](../api/dotnet/Serenity.Net.Web/Serenity.Web/FileWatcher.md) — the default `IFileWatcher` implementation, wrapping a `FileSystemWatcher` that watches a directory (recursively) for a filter and raises `Changed` on create/change/delete/rename.
+- [IWebRootFileWatcher](../api/dotnet/Serenity.Net.Web/Serenity.Web/IWebRootFileWatcher.md) — a higher-level watcher for web-servable files. `GetChangeToken(webRelativePath)` returns a change token for a web-relative file (or `null` when watching isn't available, e.g. outside development), and `RegisterCallback(key, appRelativePaths, callback)` registers a single callback per key for a set of files, so callers can call it on every request without accumulating subscriptions. It is used by the content hash cache and the layout CSS / script bundles.
 
 You rarely interact with these directly — they are used internally by the bundling and dynamic-script infrastructure to invalidate caches. If you build a custom bundle or dynamic script that depends on files, you can use `IFileWatcherFactory` to watch them the same way.
 
@@ -288,6 +289,45 @@ ArgumentExceptions.OutOfRange(someArgument);
 ```
 
 It is an internal convenience used throughout the framework; you don't need it in application code, but you may see it in Serenity source.
+
+## Running Migrations from the Command Line
+
+An application can run its database migrations and exit without starting the web host:
+
+```sh
+dotnet run -- migrate
+```
+
+This is handled by [HostMigrationExtensions.RunMigrationsIf](../api/dotnet/Serenity.Extensions/Serenity.Extensions/HostMigrationExtensions/RunMigrationsIf.md) (from `Serenity.Extensions`), which returns `int?`:
+
+- `null` — the arguments are not the `migrate` command, so the application should start normally.
+- `0` — migrations ran successfully.
+- `1` — migrations threw (the error message is written to stderr).
+- `2` — extra arguments were passed (usage is printed instead of starting the host, which would otherwise look like a hang to a script).
+
+Because the helper returns the exit code instead of terminating the process, `Main` can stay a dispatcher and `using var host` still disposes:
+
+```cs
+public static int Main(string[] args)
+{
+    if (new AppServices.DynamicDataGenerator().RunIf(args) is int dynamicDataExit)
+        return dynamicDataExit;
+
+    using var host = CreateHostBuilder(args).Build();
+
+    if (host.RunMigrationsIf(args) is int migrateExit)
+        return migrateExit;
+
+    host.Run();
+    return 0;
+}
+```
+
+The generic overload `RunMigrationsIf<TService>` lets you resolve a custom service and pass a runner callback. `BaseDynamicDataGenerator.RunIf` follows the same contract for the `dynamic-data` command; the old `RunAndExitIf` method is kept as an obsolete wrapper.
+
+[IDataMigrations](../api/dotnet/Serenity.Extensions/Serenity.Extensions/IDataMigrations.md) now lives in `Serenity.Extensions`, so Serene and StartSharp share a single definition.
+
+> **Breaking change:** projects that copied `IDataMigrations.cs` into their own project must delete that copy, or dependency injection fails at runtime.
 
 ## See Also
 

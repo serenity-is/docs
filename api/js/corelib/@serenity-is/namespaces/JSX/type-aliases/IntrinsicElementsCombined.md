@@ -4,4 +4,4 @@
 
 > **IntrinsicElementsCombined** = [`HTMLElementTags`](../../../../interfaces/HTMLElementTags.md) & [`ConfigureElement`](../interfaces/ConfigureElement.md)\[`"svg"`\] *extends* `false` ? `void` : [`SVGElementTags`](../../../../interfaces/SVGElementTags.md) & [`ConfigureElement`](../interfaces/ConfigureElement.md)\[`"mathml"`\] *extends* `false` ? `void` : [`MathMLElementTags`](../../../../interfaces/MathMLElementTags.md)
 
-Defined in: [../domwise/dist/index.d.ts:2312](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2312)
+Defined in: [../domwise/dist/index.d.ts:2619](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2619)

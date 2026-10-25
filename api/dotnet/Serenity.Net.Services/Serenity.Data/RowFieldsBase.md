@@ -28,8 +28,10 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHasDialect, IHaveJoins
 | [SortOrders](RowFieldsBase/SortOrders.md) { get; } | Gets the sort orders. |
 | [TableName](RowFieldsBase/TableName.md) { get; } | Gets the name of the table. |
 | [TableOnly](RowFieldsBase/TableOnly.md) { get; } | Gets the table only. |
-| [FindField](RowFieldsBase/FindField.md)(…) | Finds the field. |
-| [FindFieldByPropertyName](RowFieldsBase/FindFieldByPropertyName.md)(…) | Finds the name of the field by property. |
+| [FindField](RowFieldsBase/FindField.md)(…) | Finds a field by its column or field name. |
+| [FindFieldByPropertyName](RowFieldsBase/FindFieldByPropertyName.md)(…) | Finds a field by its C# property name. |
+| [FindFieldByPropertyOrFieldName](RowFieldsBase/FindFieldByPropertyOrFieldName.md)(…) | Finds a field by its C# property name, falling back to its column or field name. |
+| [FindFieldByPublicName](RowFieldsBase/FindFieldByPublicName.md)(…) | Finds a field by its public name: its C# property name, or its field name when it has no corresponding property. |
 | [GetFieldsByAttribute](RowFieldsBase/GetFieldsByAttribute.md)(…) | Gets the fields that have an attribute of the specified type. |
 | [GetFieldsByAttribute&lt;TAttr&gt;](RowFieldsBase/GetFieldsByAttribute.md)() | Gets the fields that have an attribute of the specified type. |
 | [Initialize](RowFieldsBase/Initialize.md)(…) | Initializes the specified annotations. |
@@ -55,4 +57,4 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHasDialect, IHaveJoins
 * interface [IHaveJoins](./IHaveJoins.md)
 * class [Field](./Field.md)
 * interface [IHasDialect](./IHasDialect.md)
-* **Source:** *[RowFieldsBase.cs](https://github.com/serenity-is/Serenity/blob/99c79988b866a6cb030fef978071d5022c0480bb/src/services/Entity/Row/RowFieldsBase.cs)*
+* **Source:** *[RowFieldsBase.cs](https://github.com/serenity-is/Serenity/blob/7edd645ba75e793ae1b5dde3b3d9bdd92c42b8b6/src/services/Entity/Row/RowFieldsBase.cs)*

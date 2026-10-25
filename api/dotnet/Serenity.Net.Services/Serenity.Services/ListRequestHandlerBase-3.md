@@ -93,4 +93,4 @@ Initializes a new instance of the class.
 * interface [IRow](../Serenity.Data/IRow.md)
 * class [ListRequest](./ListRequest.md)
 * class [ListResponse&lt;T&gt;](./ListResponse-1.md)
-* **Source:** *[ListRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/10f59e1fb4e1f1dd1b5ab59e660597423229d5ae/src/services/RequestHandlers/List/ListRequestHandlerBase.cs)*
+* **Source:** *[ListRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/842eeed9c1017bb2110e654fdf17bd169a31f7a0/src/services/RequestHandlers/List/ListRequestHandlerBase.cs)*

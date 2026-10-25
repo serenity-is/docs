@@ -150,7 +150,7 @@ The framework ships several ready-made dynamic script classes you can use or der
 
 ### `DynamicScript` (base class)
 
-[`DynamicScript`](../../api/dotnet/Serenity.Net.Services/Serenity.Web/DynamicScript.md) is the abstract base implementation of `IDynamicScript`. Besides `GetScript()`, it provides settable `GroupKey`, `Expiration`, and `Permission` properties, and its `CheckRights` validates `Permission` if set:
+[`DynamicScript`](../../api/dotnet/Serenity.Net.Services/Serenity.Web/DynamicScript.md) is the abstract base implementation of `IDynamicScript`. Besides `GetScript()`, it provides settable `GroupKey`, `Expiration`, and `Permission` properties. Its `CheckRights` fails closed: a missing or empty `Permission` denies access instead of skipping the check.
 
 ```cs
 public abstract class DynamicScript : IDynamicScript
@@ -158,14 +158,17 @@ public abstract class DynamicScript : IDynamicScript
     public abstract string GetScript();
     public virtual void CheckRights(IPermissionService permissions, ITextLocalizer localizer)
     {
-        if (Permission != null)
-            permissions.ValidatePermission(Permission, localizer);
+        var permission = string.IsNullOrEmpty(Permission) ?
+            SpecialPermissionKeys.Deny : Permission;
+        permissions.ValidatePermission(permission, localizer);
     }
     public string? GroupKey { get; set; }
     public TimeSpan Expiration { get; set; }
     public string? Permission { get; set; }
 }
 ```
+
+> **Breaking change:** scripts without an explicit `Permission` are denied. Built-in bundles and scripts are marked `SpecialPermissionKeys.Public`; mark your own scripts with `SpecialPermissionKeys.Public` (`"*"`) or `SpecialPermissionKeys.LoggedIn` (`"?"`) when they should stay accessible.
 
 ### `DataScript` and `DataScript<TData>`
 

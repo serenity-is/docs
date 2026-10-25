@@ -39,4 +39,4 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IReportRegistry](./IReportRegistry.md)
-* **Source:** *[ReportRegistry.cs](https://github.com/serenity-is/Serenity/blob/566b0b4392b57a4f23d4cdf6355e574804d4ea2c/src/services/Reporting/Registry/ReportRegistry.cs)*
+* **Source:** *[ReportRegistry.cs](https://github.com/serenity-is/Serenity/blob/0c34357a17d56458ca5b7a3be25f42666b9eb050/src/services/Reporting/Registry/ReportRegistry.cs)*

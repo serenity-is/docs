@@ -4,7 +4,7 @@
 
 > **isWritableSignal**\<`T`\>(`obj`): `obj is Signal<T>`
 
-Defined in: [../domwise/dist/index.d.ts:2893](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2893)
+Defined in: [../domwise/dist/index.d.ts:3195](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3195)
 
 A type guard that checks if an object is a writable signal, meaning it passes the `isSignalLike` check
 and the `value` property has a setter or is writable.

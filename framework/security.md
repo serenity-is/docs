@@ -31,7 +31,7 @@ public class SignUpForm
 {
     // ...
     // make sure you have configured Recaptcha:SiteKey and Recaptcha:SecretKey in appsettings.json
-    [DisplayName(""), Recaptcha]
+    [DisplayText(""), Recaptcha]
     public string? Recaptcha { get; set; }
 }
 ```

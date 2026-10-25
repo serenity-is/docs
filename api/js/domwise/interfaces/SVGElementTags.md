@@ -2,7 +2,7 @@
 
 # Interface: SVGElementTags
 
-Defined in: [types/jsx-elements.d.ts:2310](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2310)
+Defined in: [types/jsx-elements.d.ts:2308](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2308)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [types/jsx-elements.d.ts:2310](https://github.com/serenity-is/sereni
 
 > **animate**: `AnimateSVGAttributes`\<`SVGAnimateElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2311](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2311)
+Defined in: [types/jsx-elements.d.ts:2309](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2309)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [types/jsx-elements.d.ts:2311](https://github.com/serenity-is/sereni
 
 > **animateMotion**: `AnimateMotionSVGAttributes`\<`SVGAnimateMotionElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2312](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2312)
+Defined in: [types/jsx-elements.d.ts:2310](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2310)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [types/jsx-elements.d.ts:2312](https://github.com/serenity-is/sereni
 
 > **animateTransform**: `AnimateTransformSVGAttributes`\<`SVGAnimateTransformElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2313](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2313)
+Defined in: [types/jsx-elements.d.ts:2311](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2311)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [types/jsx-elements.d.ts:2313](https://github.com/serenity-is/sereni
 
 > **circle**: `CircleSVGAttributes`\<`SVGCircleElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2314](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2314)
+Defined in: [types/jsx-elements.d.ts:2312](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2312)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [types/jsx-elements.d.ts:2314](https://github.com/serenity-is/sereni
 
 > **clipPath**: `ClipPathSVGAttributes`\<`SVGClipPathElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2315](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2315)
+Defined in: [types/jsx-elements.d.ts:2313](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2313)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [types/jsx-elements.d.ts:2315](https://github.com/serenity-is/sereni
 
 > **defs**: `DefsSVGAttributes`\<`SVGDefsElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2316](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2316)
+Defined in: [types/jsx-elements.d.ts:2314](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2314)
 
 ***
 
@@ -58,7 +58,7 @@ Defined in: [types/jsx-elements.d.ts:2316](https://github.com/serenity-is/sereni
 
 > **desc**: `DescSVGAttributes`\<`SVGDescElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2317](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2317)
+Defined in: [types/jsx-elements.d.ts:2315](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2315)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [types/jsx-elements.d.ts:2317](https://github.com/serenity-is/sereni
 
 > **ellipse**: `EllipseSVGAttributes`\<`SVGEllipseElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2318](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2318)
+Defined in: [types/jsx-elements.d.ts:2316](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2316)
 
 ***
 
@@ -74,7 +74,7 @@ Defined in: [types/jsx-elements.d.ts:2318](https://github.com/serenity-is/sereni
 
 > **feBlend**: `FeBlendSVGAttributes`\<`SVGFEBlendElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2319](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2319)
+Defined in: [types/jsx-elements.d.ts:2317](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2317)
 
 ***
 
@@ -82,7 +82,7 @@ Defined in: [types/jsx-elements.d.ts:2319](https://github.com/serenity-is/sereni
 
 > **feColorMatrix**: `FeColorMatrixSVGAttributes`\<`SVGFEColorMatrixElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2320](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2320)
+Defined in: [types/jsx-elements.d.ts:2318](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2318)
 
 ***
 
@@ -90,7 +90,7 @@ Defined in: [types/jsx-elements.d.ts:2320](https://github.com/serenity-is/sereni
 
 > **feComponentTransfer**: `FeComponentTransferSVGAttributes`\<`SVGFEComponentTransferElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2321](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2321)
+Defined in: [types/jsx-elements.d.ts:2319](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2319)
 
 ***
 
@@ -98,7 +98,7 @@ Defined in: [types/jsx-elements.d.ts:2321](https://github.com/serenity-is/sereni
 
 > **feComposite**: `FeCompositeSVGAttributes`\<`SVGFECompositeElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2322](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2322)
+Defined in: [types/jsx-elements.d.ts:2320](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2320)
 
 ***
 
@@ -106,7 +106,7 @@ Defined in: [types/jsx-elements.d.ts:2322](https://github.com/serenity-is/sereni
 
 > **feConvolveMatrix**: `FeConvolveMatrixSVGAttributes`\<`SVGFEConvolveMatrixElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2323](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2323)
+Defined in: [types/jsx-elements.d.ts:2321](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2321)
 
 ***
 
@@ -114,7 +114,7 @@ Defined in: [types/jsx-elements.d.ts:2323](https://github.com/serenity-is/sereni
 
 > **feDiffuseLighting**: `FeDiffuseLightingSVGAttributes`\<`SVGFEDiffuseLightingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2324](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2324)
+Defined in: [types/jsx-elements.d.ts:2322](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2322)
 
 ***
 
@@ -122,7 +122,7 @@ Defined in: [types/jsx-elements.d.ts:2324](https://github.com/serenity-is/sereni
 
 > **feDisplacementMap**: `FeDisplacementMapSVGAttributes`\<`SVGFEDisplacementMapElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2325](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2325)
+Defined in: [types/jsx-elements.d.ts:2323](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2323)
 
 ***
 
@@ -130,7 +130,7 @@ Defined in: [types/jsx-elements.d.ts:2325](https://github.com/serenity-is/sereni
 
 > **feDistantLight**: `FeDistantLightSVGAttributes`\<`SVGFEDistantLightElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2326](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2326)
+Defined in: [types/jsx-elements.d.ts:2324](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2324)
 
 ***
 
@@ -138,7 +138,7 @@ Defined in: [types/jsx-elements.d.ts:2326](https://github.com/serenity-is/sereni
 
 > **feDropShadow**: `FeDropShadowSVGAttributes`\<`SVGFEDropShadowElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2327](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2327)
+Defined in: [types/jsx-elements.d.ts:2325](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2325)
 
 ***
 
@@ -146,7 +146,7 @@ Defined in: [types/jsx-elements.d.ts:2327](https://github.com/serenity-is/sereni
 
 > **feFlood**: `FeFloodSVGAttributes`\<`SVGFEFloodElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2328](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2328)
+Defined in: [types/jsx-elements.d.ts:2326](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2326)
 
 ***
 
@@ -154,7 +154,7 @@ Defined in: [types/jsx-elements.d.ts:2328](https://github.com/serenity-is/sereni
 
 > **feFuncA**: `FeFuncSVGAttributes`\<`SVGFEFuncAElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2329](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2329)
+Defined in: [types/jsx-elements.d.ts:2327](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2327)
 
 ***
 
@@ -162,7 +162,7 @@ Defined in: [types/jsx-elements.d.ts:2329](https://github.com/serenity-is/sereni
 
 > **feFuncB**: `FeFuncSVGAttributes`\<`SVGFEFuncBElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2330](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2330)
+Defined in: [types/jsx-elements.d.ts:2328](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2328)
 
 ***
 
@@ -170,7 +170,7 @@ Defined in: [types/jsx-elements.d.ts:2330](https://github.com/serenity-is/sereni
 
 > **feFuncG**: `FeFuncSVGAttributes`\<`SVGFEFuncGElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2331](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2331)
+Defined in: [types/jsx-elements.d.ts:2329](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2329)
 
 ***
 
@@ -178,7 +178,7 @@ Defined in: [types/jsx-elements.d.ts:2331](https://github.com/serenity-is/sereni
 
 > **feFuncR**: `FeFuncSVGAttributes`\<`SVGFEFuncRElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2332](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2332)
+Defined in: [types/jsx-elements.d.ts:2330](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2330)
 
 ***
 
@@ -186,7 +186,7 @@ Defined in: [types/jsx-elements.d.ts:2332](https://github.com/serenity-is/sereni
 
 > **feGaussianBlur**: `FeGaussianBlurSVGAttributes`\<`SVGFEGaussianBlurElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2333](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2333)
+Defined in: [types/jsx-elements.d.ts:2331](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2331)
 
 ***
 
@@ -194,7 +194,7 @@ Defined in: [types/jsx-elements.d.ts:2333](https://github.com/serenity-is/sereni
 
 > **feImage**: `FeImageSVGAttributes`\<`SVGFEImageElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2334](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2334)
+Defined in: [types/jsx-elements.d.ts:2332](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2332)
 
 ***
 
@@ -202,7 +202,7 @@ Defined in: [types/jsx-elements.d.ts:2334](https://github.com/serenity-is/sereni
 
 > **feMerge**: `FeMergeSVGAttributes`\<`SVGFEMergeElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2335](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2335)
+Defined in: [types/jsx-elements.d.ts:2333](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2333)
 
 ***
 
@@ -210,7 +210,7 @@ Defined in: [types/jsx-elements.d.ts:2335](https://github.com/serenity-is/sereni
 
 > **feMergeNode**: `FeMergeNodeSVGAttributes`\<`SVGFEMergeNodeElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2336](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2336)
+Defined in: [types/jsx-elements.d.ts:2334](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2334)
 
 ***
 
@@ -218,7 +218,7 @@ Defined in: [types/jsx-elements.d.ts:2336](https://github.com/serenity-is/sereni
 
 > **feMorphology**: `FeMorphologySVGAttributes`\<`SVGFEMorphologyElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2337](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2337)
+Defined in: [types/jsx-elements.d.ts:2335](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2335)
 
 ***
 
@@ -226,7 +226,7 @@ Defined in: [types/jsx-elements.d.ts:2337](https://github.com/serenity-is/sereni
 
 > **feOffset**: `FeOffsetSVGAttributes`\<`SVGFEOffsetElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2338](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2338)
+Defined in: [types/jsx-elements.d.ts:2336](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2336)
 
 ***
 
@@ -234,7 +234,7 @@ Defined in: [types/jsx-elements.d.ts:2338](https://github.com/serenity-is/sereni
 
 > **fePointLight**: `FePointLightSVGAttributes`\<`SVGFEPointLightElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2339](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2339)
+Defined in: [types/jsx-elements.d.ts:2337](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2337)
 
 ***
 
@@ -242,7 +242,7 @@ Defined in: [types/jsx-elements.d.ts:2339](https://github.com/serenity-is/sereni
 
 > **feSpecularLighting**: `FeSpecularLightingSVGAttributes`\<`SVGFESpecularLightingElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2340](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2340)
+Defined in: [types/jsx-elements.d.ts:2338](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2338)
 
 ***
 
@@ -250,7 +250,7 @@ Defined in: [types/jsx-elements.d.ts:2340](https://github.com/serenity-is/sereni
 
 > **feSpotLight**: `FeSpotLightSVGAttributes`\<`SVGFESpotLightElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2341](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2341)
+Defined in: [types/jsx-elements.d.ts:2339](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2339)
 
 ***
 
@@ -258,7 +258,7 @@ Defined in: [types/jsx-elements.d.ts:2341](https://github.com/serenity-is/sereni
 
 > **feTile**: `FeTileSVGAttributes`\<`SVGFETileElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2342](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2342)
+Defined in: [types/jsx-elements.d.ts:2340](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2340)
 
 ***
 
@@ -266,7 +266,7 @@ Defined in: [types/jsx-elements.d.ts:2342](https://github.com/serenity-is/sereni
 
 > **feTurbulence**: `FeTurbulanceSVGAttributes`\<`SVGFETurbulenceElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2343](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2343)
+Defined in: [types/jsx-elements.d.ts:2341](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2341)
 
 ***
 
@@ -274,7 +274,7 @@ Defined in: [types/jsx-elements.d.ts:2343](https://github.com/serenity-is/sereni
 
 > **filter**: `FilterSVGAttributes`\<`SVGFilterElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2344](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2344)
+Defined in: [types/jsx-elements.d.ts:2342](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2342)
 
 ***
 
@@ -282,7 +282,7 @@ Defined in: [types/jsx-elements.d.ts:2344](https://github.com/serenity-is/sereni
 
 > **foreignObject**: `ForeignObjectSVGAttributes`\<`SVGForeignObjectElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2345](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2345)
+Defined in: [types/jsx-elements.d.ts:2343](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2343)
 
 ***
 
@@ -290,7 +290,7 @@ Defined in: [types/jsx-elements.d.ts:2345](https://github.com/serenity-is/sereni
 
 > **g**: `GSVGAttributes`\<`SVGGElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2346](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2346)
+Defined in: [types/jsx-elements.d.ts:2344](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2344)
 
 ***
 
@@ -298,7 +298,7 @@ Defined in: [types/jsx-elements.d.ts:2346](https://github.com/serenity-is/sereni
 
 > **image**: `ImageSVGAttributes`\<`SVGImageElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2347](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2347)
+Defined in: [types/jsx-elements.d.ts:2345](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2345)
 
 ***
 
@@ -306,7 +306,7 @@ Defined in: [types/jsx-elements.d.ts:2347](https://github.com/serenity-is/sereni
 
 > **line**: `LineSVGAttributes`\<`SVGLineElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2348](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2348)
+Defined in: [types/jsx-elements.d.ts:2346](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2346)
 
 ***
 
@@ -314,7 +314,7 @@ Defined in: [types/jsx-elements.d.ts:2348](https://github.com/serenity-is/sereni
 
 > **linearGradient**: `LinearGradientSVGAttributes`\<`SVGLinearGradientElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2349](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2349)
+Defined in: [types/jsx-elements.d.ts:2347](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2347)
 
 ***
 
@@ -322,7 +322,7 @@ Defined in: [types/jsx-elements.d.ts:2349](https://github.com/serenity-is/sereni
 
 > **marker**: `MarkerSVGAttributes`\<`SVGMarkerElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2350](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2350)
+Defined in: [types/jsx-elements.d.ts:2348](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2348)
 
 ***
 
@@ -330,7 +330,7 @@ Defined in: [types/jsx-elements.d.ts:2350](https://github.com/serenity-is/sereni
 
 > **mask**: `MaskSVGAttributes`\<`SVGMaskElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2351](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2351)
+Defined in: [types/jsx-elements.d.ts:2349](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2349)
 
 ***
 
@@ -338,7 +338,7 @@ Defined in: [types/jsx-elements.d.ts:2351](https://github.com/serenity-is/sereni
 
 > **metadata**: `MetadataSVGAttributes`\<`SVGMetadataElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2352](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2352)
+Defined in: [types/jsx-elements.d.ts:2350](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2350)
 
 ***
 
@@ -346,7 +346,7 @@ Defined in: [types/jsx-elements.d.ts:2352](https://github.com/serenity-is/sereni
 
 > **mpath**: `MPathSVGAttributes`\<`SVGMPathElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2353](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2353)
+Defined in: [types/jsx-elements.d.ts:2351](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2351)
 
 ***
 
@@ -354,7 +354,7 @@ Defined in: [types/jsx-elements.d.ts:2353](https://github.com/serenity-is/sereni
 
 > **path**: `PathSVGAttributes`\<`SVGPathElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2354](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2354)
+Defined in: [types/jsx-elements.d.ts:2352](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2352)
 
 ***
 
@@ -362,7 +362,7 @@ Defined in: [types/jsx-elements.d.ts:2354](https://github.com/serenity-is/sereni
 
 > **pattern**: `PatternSVGAttributes`\<`SVGPatternElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2355](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2355)
+Defined in: [types/jsx-elements.d.ts:2353](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2353)
 
 ***
 
@@ -370,7 +370,7 @@ Defined in: [types/jsx-elements.d.ts:2355](https://github.com/serenity-is/sereni
 
 > **polygon**: `PolygonSVGAttributes`\<`SVGPolygonElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2356](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2356)
+Defined in: [types/jsx-elements.d.ts:2354](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2354)
 
 ***
 
@@ -378,7 +378,7 @@ Defined in: [types/jsx-elements.d.ts:2356](https://github.com/serenity-is/sereni
 
 > **polyline**: `PolylineSVGAttributes`\<`SVGPolylineElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2357](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2357)
+Defined in: [types/jsx-elements.d.ts:2355](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2355)
 
 ***
 
@@ -386,7 +386,7 @@ Defined in: [types/jsx-elements.d.ts:2357](https://github.com/serenity-is/sereni
 
 > **radialGradient**: `RadialGradientSVGAttributes`\<`SVGRadialGradientElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2358](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2358)
+Defined in: [types/jsx-elements.d.ts:2356](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2356)
 
 ***
 
@@ -394,7 +394,7 @@ Defined in: [types/jsx-elements.d.ts:2358](https://github.com/serenity-is/sereni
 
 > **rect**: `RectSVGAttributes`\<`SVGRectElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2359](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2359)
+Defined in: [types/jsx-elements.d.ts:2357](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2357)
 
 ***
 
@@ -402,7 +402,7 @@ Defined in: [types/jsx-elements.d.ts:2359](https://github.com/serenity-is/sereni
 
 > **set**: `SetSVGAttributes`\<`SVGSetElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2360](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2360)
+Defined in: [types/jsx-elements.d.ts:2358](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2358)
 
 ***
 
@@ -410,7 +410,7 @@ Defined in: [types/jsx-elements.d.ts:2360](https://github.com/serenity-is/sereni
 
 > **stop**: `StopSVGAttributes`\<`SVGStopElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2361](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2361)
+Defined in: [types/jsx-elements.d.ts:2359](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2359)
 
 ***
 
@@ -418,7 +418,7 @@ Defined in: [types/jsx-elements.d.ts:2361](https://github.com/serenity-is/sereni
 
 > **svg**: `SvgSVGAttributes`\<`SVGSVGElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2362](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2362)
+Defined in: [types/jsx-elements.d.ts:2360](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2360)
 
 ***
 
@@ -426,7 +426,7 @@ Defined in: [types/jsx-elements.d.ts:2362](https://github.com/serenity-is/sereni
 
 > **switch**: `SwitchSVGAttributes`\<`SVGSwitchElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2363](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2363)
+Defined in: [types/jsx-elements.d.ts:2361](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2361)
 
 ***
 
@@ -434,7 +434,7 @@ Defined in: [types/jsx-elements.d.ts:2363](https://github.com/serenity-is/sereni
 
 > **symbol**: `SymbolSVGAttributes`\<`SVGSymbolElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2364](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2364)
+Defined in: [types/jsx-elements.d.ts:2362](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2362)
 
 ***
 
@@ -442,7 +442,7 @@ Defined in: [types/jsx-elements.d.ts:2364](https://github.com/serenity-is/sereni
 
 > **text**: `TextSVGAttributes`\<`SVGTextElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2365](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2365)
+Defined in: [types/jsx-elements.d.ts:2363](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2363)
 
 ***
 
@@ -450,7 +450,7 @@ Defined in: [types/jsx-elements.d.ts:2365](https://github.com/serenity-is/sereni
 
 > **textPath**: `TextPathSVGAttributes`\<`SVGTextPathElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2366](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2366)
+Defined in: [types/jsx-elements.d.ts:2364](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2364)
 
 ***
 
@@ -458,7 +458,7 @@ Defined in: [types/jsx-elements.d.ts:2366](https://github.com/serenity-is/sereni
 
 > **tspan**: `TSpanSVGAttributes`\<`SVGTSpanElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2367](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2367)
+Defined in: [types/jsx-elements.d.ts:2365](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2365)
 
 ***
 
@@ -466,7 +466,7 @@ Defined in: [types/jsx-elements.d.ts:2367](https://github.com/serenity-is/sereni
 
 > **use**: `UseSVGAttributes`\<`SVGUseElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2368](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2368)
+Defined in: [types/jsx-elements.d.ts:2366](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2366)
 
 ***
 
@@ -474,4 +474,4 @@ Defined in: [types/jsx-elements.d.ts:2368](https://github.com/serenity-is/sereni
 
 > **view**: `ViewSVGAttributes`\<`SVGViewElement`\>
 
-Defined in: [types/jsx-elements.d.ts:2369](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2369)
+Defined in: [types/jsx-elements.d.ts:2367](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2367)

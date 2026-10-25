@@ -4,7 +4,7 @@
 
 > **useText**(`initialValue?`): readonly \[`Text`, (`value`) => `void`\]
 
-Defined in: [../domwise/dist/index.d.ts:2704](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2704)
+Defined in: [../domwise/dist/index.d.ts:3009](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3009)
 
 Creates a `Text` node and a setter to update its content.
 

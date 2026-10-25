@@ -2,7 +2,7 @@
 
 # Interface: ComboboxSearchResult\<TItem\>
 
-Defined in: [src/ui/editors/combobox.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L48)
+Defined in: [src/ui/editors/combobox.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L51)
 
 Result of a combobox search.
 
@@ -20,7 +20,7 @@ The item type.
 
 > **items**: `TItem`[]
 
-Defined in: [src/ui/editors/combobox.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L50)
+Defined in: [src/ui/editors/combobox.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L53)
 
 The matching items.
 
@@ -30,6 +30,6 @@ The matching items.
 
 > **more**: `boolean`
 
-Defined in: [src/ui/editors/combobox.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L52)
+Defined in: [src/ui/editors/combobox.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L55)
 
 Whether there are more results.

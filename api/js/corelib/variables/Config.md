@@ -137,7 +137,7 @@ the framework falls back to its built-in handling.
 #### Example
 
 ```ts
-Config.notLoggedInHandler = () => window.location.href = "/Account/Login";
+Config.notLoggedInHandler = () => { getWindowLocation().href = "/Account/Login"; };
 ```
 
 ### rootNamespaces

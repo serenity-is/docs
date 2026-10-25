@@ -4,7 +4,7 @@
 
 > **invokeDisposingListeners**(`node`, `opt?`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2537](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2537)
+Defined in: [../domwise/dist/index.d.ts:2842](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2842)
 
 Synchronously invokes all disposing listeners registered for `node` and
 removes the internal `disposing` DOM listener from the target.

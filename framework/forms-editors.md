@@ -10,7 +10,7 @@ A form class is a plain class with public properties. Each property becomes a fo
 [FormScript]
 public class OrderForm
 {
-    [DisplayName("Customer"), LookupEditor(typeof(CustomerRow))]
+    [DisplayText("Customer"), LookupEditor(typeof(CustomerRow))]
     public string? CustomerID { get; set; }
 
     [TextAreaEditor(Rows = 3)]

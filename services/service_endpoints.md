@@ -150,7 +150,7 @@ ServiceAuthorize(typeof(MyRow))
 
 This attribute resembles ASP.NET Core's [Authorize] attribute, but `Authorize` only verifies if the user is logged in and throws an exception otherwise.
 
-When used with no parameters (e.g., `[ServiceAuthorize()]`), this attribute also checks that the user is logged in.
+When used with no parameters (e.g., `[ServiceAuthorize()]`), this attribute also checks that the user is logged in (`SpecialPermissionKeys.LoggedIn` is the default).
 
 When provided with a permission key string, it verifies that the user is logged in and possesses that permission.
 
@@ -159,6 +159,8 @@ ServiceAuthorize("SomePermission")
 ```
 
 If the user is not granted "SomePermission", they will be prevented from executing any endpoint method.
+
+> Permission checks fail closed: an explicitly empty permission is treated as `SpecialPermissionKeys.Deny`. Use `SpecialPermissionKeys.Public` (`"*"`) for anonymous access, and `SpecialPermissionKeys.LoggedIn` (`"?"`) for any authenticated user. See [Permission Checks Fail Closed](../framework/authorization.md#permission-checks-fail-closed).
 
 In our example, we indirectly obtain the permission key from the `ReadPermission` attribute of the `UserRow` class.
 

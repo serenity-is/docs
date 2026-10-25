@@ -219,7 +219,7 @@ services.AddServiceHandlers(); // this internally calls AddTextRegistry
 
 Loading the actual translations is handled by the `ILocalTextInitializer` abstraction. The default implementation, `DefaultLocalTextInitializer`, registers:
 
-- **Base texts** — nested local texts, row texts (from `DisplayName` attributes), enumeration texts, permission texts, property item texts, and navigation item texts, discovered through the type source.
+- **Base texts** — nested local texts, row texts (from `DisplayText` attributes), enumeration texts, permission texts, property item texts, and navigation item texts, discovered through the type source.
 - **Embedded resource texts** — the JSON translation files under each assembly's `texts/resources` folder, which are compiled into the assemblies as embedded resources (via `AddJsonResourceTexts`).
 - **User texts** — the JSON files under `App_Data/texts`, where the translations made through the *Administration / Translations* page are saved.
 
@@ -410,22 +410,22 @@ NestedLocalTexts are automatically registered during application startup, via th
 
 ## Row Texts
 
-Any `DisplayName` attribute defined for a property of an entity class (`Row`) automatically registers a local text key and its translation:
+Any `DisplayText` attribute defined for a property of an entity class (`Row`) automatically registers a local text key and its translation:
 
 ```cs
 namespace Serene.Administration
 {
     [Module("Administration")]
-    [DisplayName("Users"), InstanceName("User")]
+    [DisplayText("Users"), InstanceName("User")]
     public sealed class UserRow
     {
-        [DisplayName("User Id"), Identity, IdProperty]
+        [DisplayText("User Id"), Identity, IdProperty]
         public int? UserId { ... }
 
-        [DisplayName("Username"), Size(100), NotNull, QuickSearch, LookupInclude, NameProperty]
+        [DisplayText("Username"), Size(100), NotNull, QuickSearch, LookupInclude, NameProperty]
         public string? Username { ... }
 
-        [DisplayName("Source"), Size(4), NotNull, Insertable(false), Updatable(false), DefaultValue("site")]
+        [DisplayText("Source"), Size(4), NotNull, Insertable(false), Updatable(false), DefaultValue("site")]
         public string? Source
         {
             get => fields.Source[this];
@@ -447,9 +447,9 @@ Db.Administration.EntityPlural   |          |Users
 Db.Administration.EntitySingular |          |User
 
 
-The text is read from the `DisplayName` attribute and the key is derived from the `local text prefix` for the entity (which is `"Db.Administration."` in this sample) and the property name.
+The text is read from the `DisplayText` attribute and the key is derived from the `local text prefix` for the entity (which is `"Db.Administration."` in this sample) and the property name.
 
-`EntityPlural` and `EntitySingular` are special keys that correspond to the title (e.g. Users) and instance name for the entity class. Their values are read from `DisplayName` and `InstanceName` attributes on the row class.
+`EntityPlural` and `EntitySingular` are special keys that correspond to the title (e.g. Users) and instance name for the entity class. Their values are read from `DisplayText` and `InstanceName` attributes on the row class.
 
 Every entity has a local text prefix which is calculated from its module name which is `"Administration"` in this sample, that is set via the `Module` attribute. If no `Module` attribute is present, the module name is calculated from the namespace.
 
@@ -459,24 +459,56 @@ Another way is to set the `LocalTextPrefix` property in the `RowFields` class co
 
 Row texts are also automatically registered during application startup, via the `AddBaseTexts` call made by `DefaultLocalTextInitializer` (see `app.InitializeLocalTexts()`).
 
+## Explicit Text Keys
+
+Serenity has always inferred local text keys from attribute strings such as `DisplayName`, `Description`, `Tab` and `Hint`. That inference is implicit: a literal caption that looks like a dotted key is treated as a key, and what gets registered depends on the attribute and the shape of the string.
+
+The `DisplayText`, `DescriptionText` and `CategoryName` attributes make this explicit. They are the counterparts of `DisplayName`, `Description` and `Category`, and the string they receive is **always literal invariant text**, never a key:
+
+```cs
+[DisplayText("Movie Name")]                              // literal text, no key
+[DisplayText("Movie Name", TextKey = "Movie.MovieName")]  // key + invariant fallback text
+[DisplayText(TextKey = "Db.Shared.RecordId")]             // key only, no literal text
+[DisplayText("Db.Shared.RecordId")]                       // STILL literal text, unlike DisplayName
+```
+
+`Hint`, `Placeholder`, `Tab` and `InstanceName` also gained a `TextKey` property, so captions that do not have a dedicated `*Text` attribute can be localized the same way:
+
+```cs
+[Hint(TextKey = "Movie.Title.Hint")]
+[Placeholder(TextKey = "Movie.Title.Placeholder")]
+[Tab(TextKey = "Movie.DetailsTab")]
+public string? Title { get; set; }
+```
+
+How the registration works:
+
+- When `TextKey` is set, that key is used, and the string value (if any) becomes its invariant fallback text.
+- When `TextKey` is not set, the string value is registered as literal invariant text.
+- `LocalText.ResolveFromAttribute` contains the shared resolution logic, so attributes (including your own) resolve keys the same way.
+- [IImplicitLocalTextRegistrar](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IImplicitLocalTextRegistrar.md) / [AddImplicitTexts](../api/dotnet/Serenity.Net.Core/Serenity.Localization/ImplicitLocalTextRegistration/AddImplicitTexts.md) let attributes register implicit text keys and defaults themselves, for cases where the text is generated rather than written explicitly.
+- The code generator emits `DisplayText` instead of `DisplayName` (e.g. `[DisplayText(TextKey = "Db.Shared.RecordId")]` for ID columns).
+
+**Breaking change:** `Tab`, `Hint`, `Placeholder` and `InstanceName` no longer treat key-looking strings as local text keys; they now only use `TextKey`. Legacy `DisplayName` / `Description` / `Category` attributes keep the old inference, so existing code that uses them is unaffected. If you have a literal value that was previously (accidentally) treated as a key, either move it to `TextKey` or switch the attribute to its `*Text` variant.
+
 ## Enumeration Texts
 
-Display text for enumeration values can be specified with the `DescriptionAttribute`.
+Display text for enumeration values can be specified with the `DescriptionTextAttribute`.
 
 ```cs
 namespace MyApplication
 {
     public enum Sample
     {
-        [Description("First Value")]
+        [DescriptionText("First Value")]
         Value1 = 1,
-        [Description("Second Value")]
+        [DescriptionText("Second Value")]
         Value2 = 2
     }
 }
 ```
 
-This enumeration and its Description attributes define the following local text keys and translations:
+This enumeration and its DescriptionText attributes define the following local text keys and translations:
 
 Key                              |LanguageID|Text (Translation)
 ---------------------------------|----------|-------------------------------
@@ -505,9 +537,9 @@ namespace MyApplication
     [EnumKey("Something")]
     public enum Sample
     {
-        [Description("First Value")]
+        [DescriptionText("First Value")]
         Value1 = 1,
-        [Description("Second Value")]
+        [DescriptionText("Second Value")]
         Value2 = 2
     }
 }

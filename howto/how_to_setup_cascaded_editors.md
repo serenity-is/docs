@@ -19,14 +19,14 @@ First make sure you generate code for all three tables using Sergen, and you hav
 [LookupScript("MyModule.Country")]
 public sealed class CountryRow : Row...
 {
-    [DisplayName("Country Id"), Identity]
+    [DisplayText("Country Id"), Identity]
     public Int32? CountryId
     {
         get { return Fields.CountryId[this]; }
         set { Fields.CountryId[this] = value; }
     }
 
-    [DisplayName("Country Name"), Size(50), NotNull, QuickSearch]
+    [DisplayText("Country Name"), Size(50), NotNull, QuickSearch]
     public String CountryName
     {
         get { return Fields.CountryName[this]; }
@@ -40,21 +40,21 @@ public sealed class CountryRow : Row...
 [LookupScript("MyModule.City")]
 public sealed class CityRow : Row...
 {
-    [DisplayName("City Id"), Identity]
+    [DisplayText("City Id"), Identity]
     public Int32? CityId
     {
         get { return Fields.CityId[this]; }
         set { Fields.CityId[this] = value; }
     }
 
-    [DisplayName("City Name"), Size(50), NotNull, QuickSearch]
+    [DisplayText("City Name"), Size(50), NotNull, QuickSearch]
     public String CityName
     {
         get { return Fields.CityName[this]; }
         set { Fields.CityName[this] = value; }
     }
     
-    [DisplayName("Country"), ForeignKey("Country", "CountryId"), LookupInclude]
+    [DisplayText("Country"), ForeignKey("Country", "CountryId"), LookupInclude]
     public Int32? CountryId
     {
         get { return Fields.CountryId[this]; }
@@ -68,21 +68,21 @@ public sealed class CityRow : Row...
 [LookupScript("MyModule.District")]
 public sealed class DistrictRow : Row...
 {
-    [DisplayName("District Id"), Identity]
+    [DisplayText("District Id"), Identity]
     public Int32? DistrictId
     {
         get { return Fields.DistrictId[this]; }
         set { Fields.DistrictId[this] = value; }
     }
 
-    [DisplayName("District Name"), Size(50), NotNull, QuickSearch]
+    [DisplayText("District Name"), Size(50), NotNull, QuickSearch]
     public String DistrictName
     {
         get { return Fields.DistrictName[this]; }
         set { Fields.DistrictName[this] = value; }
     }
     
-    [DisplayName("City"), ForeignKey("City", "CityId"), LookupInclude]
+    [DisplayText("City"), ForeignKey("City", "CityId"), LookupInclude]
     public Int32? CityId
     {
         get { return Fields.CityId[this]; }

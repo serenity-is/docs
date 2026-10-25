@@ -28,17 +28,17 @@ public class OrderWizardForm
         "<p>Please select..."]
     public string WelcomeMessage { get; set; }
 
-    [DisplayName("Customer Type"), DefaultValue(OrderWizardCustomerType.New)]
+    [DisplayText("Customer Type"), DefaultValue(OrderWizardCustomerType.New)]
     [RadioButtonEditor(typeof(OrderWizardCustomerType))]
     public OrderWizardCustomerType CustomerType { get; set; }
-    [DisplayName("Customer"), ReadOnly(true), CustomerEditor]
+    [DisplayText("Customer"), ReadOnly(true), CustomerEditor]
     public String ExistingCustomerID { get; set; }
 
     [Tab("Customer Details")]
-    [Category("Basic Info")]
-    [DisplayName("Customer ID"), StringEditor, MaxLength(5), Required, OneThirdWidth]
+    [CategoryName("Basic Info")]
+    [DisplayText("Customer ID"), StringEditor, MaxLength(5), Required, OneThirdWidth]
     public String CustomerID { get; set; }
-    [DisplayName("Company Name"), MaxLength(40), Required, TwoThirdWidth]
+    [DisplayText("Company Name"), MaxLength(40), Required, TwoThirdWidth]
     public String CompanyName { get; set; }
 ```
 

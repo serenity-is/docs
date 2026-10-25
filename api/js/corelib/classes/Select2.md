@@ -2,7 +2,7 @@
 
 # Class: Select2
 
-Defined in: [src/ui/editors/select2.tsx:568](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L568)
+Defined in: [src/ui/editors/select2.tsx:583](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L583)
 
 A searchable select widget ported from Select2.
 
@@ -12,7 +12,7 @@ A searchable select widget ported from Select2.
 
 > **new Select2**(`opts?`): `Select2`
 
-Defined in: [src/ui/editors/select2.tsx:576](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L576)
+Defined in: [src/ui/editors/select2.tsx:591](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L591)
 
 Creates a Select2 widget.
 
@@ -34,7 +34,7 @@ Select2 options.
 
 > `readonly` `static` **ajaxDefaults**: [`Select2AjaxOptions`](../interfaces/Select2AjaxOptions.md)
 
-Defined in: [src/ui/editors/select2.tsx:756](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L756)
+Defined in: [src/ui/editors/select2.tsx:771](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L771)
 
 Default ajax options.
 
@@ -44,7 +44,7 @@ Default ajax options.
 
 > `readonly` `static` **defaults**: [`Select2Options`](../interfaces/Select2Options.md)
 
-Defined in: [src/ui/editors/select2.tsx:765](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L765)
+Defined in: [src/ui/editors/select2.tsx:780](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L780)
 
 Default options for the Select2 widget.
 
@@ -56,7 +56,7 @@ Default options for the Select2 widget.
 
 > **get** **container**(): `HTMLElement`
 
-Defined in: [src/ui/editors/select2.tsx:620](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L620)
+Defined in: [src/ui/editors/select2.tsx:635](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L635)
 
 Returns the container element.
 
@@ -74,7 +74,7 @@ The container element.
 
 > **get** **data**(): [`Select2Item`](../interfaces/Select2Item.md) \| [`Select2Item`](../interfaces/Select2Item.md)[]
 
-Defined in: [src/ui/editors/select2.tsx:643](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L643)
+Defined in: [src/ui/editors/select2.tsx:658](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L658)
 
 Returns the current data.
 
@@ -88,7 +88,7 @@ The selected item(s).
 
 > **set** **data**(`value`): `void`
 
-Defined in: [src/ui/editors/select2.tsx:649](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L649)
+Defined in: [src/ui/editors/select2.tsx:664](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L664)
 
 Sets the current data.
 
@@ -112,7 +112,7 @@ The data to set.
 
 > **get** **dropdown**(): `HTMLElement`
 
-Defined in: [src/ui/editors/select2.tsx:628](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L628)
+Defined in: [src/ui/editors/select2.tsx:643](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L643)
 
 Returns the dropdown element.
 
@@ -130,7 +130,7 @@ The dropdown element.
 
 > **get** **isFocused**(): `boolean`
 
-Defined in: [src/ui/editors/select2.tsx:679](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L679)
+Defined in: [src/ui/editors/select2.tsx:694](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L694)
 
 Whether the widget is focused.
 
@@ -148,7 +148,7 @@ True when focused.
 
 > **get** **isMultiple**(): `boolean`
 
-Defined in: [src/ui/editors/select2.tsx:687](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L687)
+Defined in: [src/ui/editors/select2.tsx:702](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L702)
 
 Whether the widget allows multiple selection.
 
@@ -166,7 +166,7 @@ True when multiple.
 
 > **get** **opened**(): `boolean`
 
-Defined in: [src/ui/editors/select2.tsx:695](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L695)
+Defined in: [src/ui/editors/select2.tsx:710](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L710)
 
 Whether the dropdown is open.
 
@@ -184,7 +184,7 @@ True when open.
 
 > **get** **search**(): `HTMLInputElement`
 
-Defined in: [src/ui/editors/select2.tsx:726](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L726)
+Defined in: [src/ui/editors/select2.tsx:741](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L741)
 
 Returns the search input element.
 
@@ -202,7 +202,7 @@ The search input.
 
 > **get** **val**(): `string` \| `string`[]
 
-Defined in: [src/ui/editors/select2.tsx:734](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L734)
+Defined in: [src/ui/editors/select2.tsx:749](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L749)
 
 Returns the current value.
 
@@ -216,7 +216,7 @@ The value.
 
 > **set** **val**(`value`): `void`
 
-Defined in: [src/ui/editors/select2.tsx:740](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L740)
+Defined in: [src/ui/editors/select2.tsx:755](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L755)
 
 Sets the current value.
 
@@ -238,7 +238,7 @@ The value to set.
 
 > **close**(): `void`
 
-Defined in: [src/ui/editors/select2.tsx:612](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L612)
+Defined in: [src/ui/editors/select2.tsx:627](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L627)
 
 Closes the dropdown.
 
@@ -252,7 +252,7 @@ Closes the dropdown.
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/editors/select2.tsx:635](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L635)
+Defined in: [src/ui/editors/select2.tsx:650](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L650)
 
 Destroys the Select2 instance.
 
@@ -266,7 +266,7 @@ Destroys the Select2 instance.
 
 > **disable**(): `void`
 
-Defined in: [src/ui/editors/select2.tsx:656](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L656)
+Defined in: [src/ui/editors/select2.tsx:671](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L671)
 
 Disables the Select2 widget.
 
@@ -280,7 +280,7 @@ Disables the Select2 widget.
 
 > **enable**(`enabled?`): `void`
 
-Defined in: [src/ui/editors/select2.tsx:664](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L664)
+Defined in: [src/ui/editors/select2.tsx:679](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L679)
 
 Enables or disables the Select2 widget.
 
@@ -302,7 +302,7 @@ Whether to enable.
 
 > **focus**(): `void`
 
-Defined in: [src/ui/editors/select2.tsx:671](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L671)
+Defined in: [src/ui/editors/select2.tsx:686](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L686)
 
 Focuses the search input.
 
@@ -316,7 +316,7 @@ Focuses the search input.
 
 > **open**(): `boolean`
 
-Defined in: [src/ui/editors/select2.tsx:703](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L703)
+Defined in: [src/ui/editors/select2.tsx:718](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L718)
 
 Opens the dropdown.
 
@@ -332,7 +332,7 @@ True when opened.
 
 > **positionDropdown**(): `void`
 
-Defined in: [src/ui/editors/select2.tsx:710](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L710)
+Defined in: [src/ui/editors/select2.tsx:725](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L725)
 
 Repositions the dropdown.
 
@@ -346,7 +346,7 @@ Repositions the dropdown.
 
 > **readonly**(`value?`): `void`
 
-Defined in: [src/ui/editors/select2.tsx:718](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L718)
+Defined in: [src/ui/editors/select2.tsx:733](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L733)
 
 Sets the read-only state.
 
@@ -368,7 +368,7 @@ Whether to enable read-only mode.
 
 > `static` **getInstance**(`el`): `Select2`
 
-Defined in: [src/ui/editors/select2.tsx:749](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L749)
+Defined in: [src/ui/editors/select2.tsx:764](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L764)
 
 Returns the Select2 instance attached to an element, or null.
 
@@ -392,7 +392,7 @@ The Select2 instance, or null.
 
 > `static` **highlightMatch**(`text`, `term`): [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.tsx:831](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L831)
+Defined in: [src/ui/editors/select2.tsx:845](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L845)
 
 Highlights the matching portion of text for a search term.
 
@@ -422,7 +422,7 @@ The highlighted result.
 
 > `static` **stripDiacritics**(`str`): `string`
 
-Defined in: [src/ui/editors/select2.tsx:849](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L849)
+Defined in: [src/ui/editors/select2.tsx:863](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L863)
 
 Strips diacritics from a string for accent-insensitive matching.
 

@@ -4,8 +4,8 @@
 Determines non-plural name for an entity.
 
 ```csharp
-[AttributeUsage(AttributeTargets.All)]
-public class InstanceNameAttribute : Attribute
+[AttributeUsage(AttributeTargets.Class)]
+public class InstanceNameAttribute : Attribute, IHasTextKey
 ```
 
 | parameter | description |
@@ -18,6 +18,7 @@ public class InstanceNameAttribute : Attribute
 | --- | --- |
 | [InstanceNameAttribute](InstanceNameAttribute/InstanceNameAttribute.md)(…) | Determines non-plural name for an entity. |
 | [InstanceName](InstanceNameAttribute/InstanceName.md) { get; } | Gets the name of the instance. |
+| [TextKey](InstanceNameAttribute/TextKey.md) { get; set; } | Gets or sets the local text key for the instance name. |
 
 ## Remarks
 
@@ -25,4 +26,5 @@ Initializes a new instance of the [`InstanceNameAttribute`](./InstanceNameAttrib
 
 ## See Also
 
-* **Source:** *[InstanceNameAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Mapping/InstanceNameAttribute.cs)*
+* interface [IHasTextKey](../../Serenity.Net.Core/Serenity.Services/IHasTextKey.md)
+* **Source:** *[InstanceNameAttribute.cs](https://github.com/serenity-is/Serenity/blob/0c34357a17d56458ca5b7a3be25f42666b9eb050/src/services/Data/Mapping/InstanceNameAttribute.cs)*

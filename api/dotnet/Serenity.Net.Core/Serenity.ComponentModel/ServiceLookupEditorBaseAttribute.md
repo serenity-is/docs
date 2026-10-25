@@ -30,6 +30,7 @@ public abstract class ServiceLookupEditorBaseAttribute : CustomEditorAttribute
 | [ExcludeColumns](ServiceLookupEditorBaseAttribute/ExcludeColumns.md) { get; set; } | Exclude columns list. |
 | [FilterField](ServiceLookupEditorBaseAttribute/FilterField.md) { get; set; } | Optional filtering field (items will be filtered on this key, e.g. GroupID) |
 | [FilterValue](ServiceLookupEditorBaseAttribute/FilterValue.md) { get; set; } | Optional filtering value, e.g. the integer value of GroupID. If null or empty string no filtering occurs. |
+| [IconField](ServiceLookupEditorBaseAttribute/IconField.md) { get; set; } | Name of the icon field. |
 | [IdField](ServiceLookupEditorBaseAttribute/IdField.md) { get; set; } | Name of the ID field. |
 | [IncludeColumns](ServiceLookupEditorBaseAttribute/IncludeColumns.md) { get; set; } | Include columns list, defaults to ID, text, and [LookupInclude] columns. |
 | [IncludeDeleted](ServiceLookupEditorBaseAttribute/IncludeDeleted.md) { get; set; } | Include deleted, defaults to false. Only effective when the current user has the undelete permission for the target entity. |
@@ -57,4 +58,4 @@ Initializes a new instance of the [`ServiceLookupEditorBaseAttribute`](./Service
 ## See Also
 
 * class [CustomEditorAttribute](./CustomEditorAttribute.md)
-* **Source:** *[ServiceLookupEditorBaseAttribute.cs](https://github.com/serenity-is/Serenity/blob/de1002603cfc02d59089fb21bce26554dfc55916/src/core/ComponentModel/PropertyGrid/EditorTypes/ServiceLookupEditorBaseAttribute.cs)*
+* **Source:** *[ServiceLookupEditorBaseAttribute.cs](https://github.com/serenity-is/Serenity/blob/b7f2b207458f6ea9d7a46806c5ad7bf38d6c9e28/src/core/ComponentModel/PropertyGrid/EditorTypes/ServiceLookupEditorBaseAttribute.cs)*

@@ -67,6 +67,7 @@ The editor can work with services that are not standard Serenity list handlers: 
 | `criteria` | Criteria applied to the request. |
 | `capabilities` | [`ListRequestCapabilities`](../api/js/corelib/enumerations/ListRequestCapabilities.md) flags describing which list request options the endpoint applies. |
 | `quickSearchFields` | Fields used when contains-text search is run locally. |
+| `iconField` | Field whose value is rendered as an icon in results and selections. Can also be inferred from `IconClass` / `Icon`; on the server side, set it with `[ServiceLookupEditor(IconField = nameof(MyRow.Fields.Icon))]`. |
 
 ### Capabilities and Local Processing
 
@@ -81,6 +82,28 @@ const editor = new ServiceLookupEditor({
 ```
 
 When omitted, all standard properties are sent. When set, the editor infers capabilities from the endpoint actions when possible, and falls back to client-side processing for unsupported operations. Local processing covers contains text (with optional `quickSearchFields`), equality filtering, criteria, sorting and paging, and is used automatically when the endpoint lacks the matching capability. Endpoints can declare what they support with `[ListRequestCapabilities]` — see [List Request Capabilities](../services/list_request_handler.md#list-request-capabilities).
+
+### Loading State and Selected Items
+
+`LookupEditor` and `ServiceLookupEditor` are built on the combobox, which gained an explicit API for the asynchronous selection load:
+
+- `selectionLoadState` — `"idle"`, `"loading"` or `"error"`.
+- `ensureSelectionLoaded(): Promise<void>` — waits for the pending initial selection load instead of racing it. Waiters are rejected with an `AbortError` when the load is aborted or superseded by a newer one, and the last failure is replayed to later callers.
+- `getSelectedItemAsync()` / `getSelectedItemsAsync()` — return the selected item(s) once the load completes, so you don't have to subscribe to events and re-run the load yourself.
+
+```ts
+const editor = new ServiceLookupEditor({ service: "Northwind/Product" });
+
+await editor.ensureSelectionLoaded();
+const product = await editor.getSelectedItemAsync();
+```
+
+The `change` event raised by `setValue` is marked with a dataset flag, so listeners can tell a programmatic value change apart from a user edit (useful for avoiding reload loops in cascaded editors).
+
+### Request Optimizations
+
+- When the editor is given a single id, it sends an equality criteria instead of an `IN` list.
+- When `idList` is empty, it returns early without a service round trip.
 
 ## Cascaded Editors
 

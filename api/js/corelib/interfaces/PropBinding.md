@@ -2,7 +2,7 @@
 
 # Interface: PropBinding()\<T, TElement\>
 
-Defined in: [../domwise/dist/index.d.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L123)
+Defined in: [../domwise/dist/index.d.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L119)
 
 A two-way prop binding hook created by `usePropBinding`. It acts as a
 getter when called with no arguments and a setter when called with a value;
@@ -31,7 +31,7 @@ The type of the element the binding is attached to.
 
 > **PropBinding**(): `T`
 
-Defined in: [../domwise/dist/index.d.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L128)
+Defined in: [../domwise/dist/index.d.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L124)
 
 Gets the current bound value.
 
@@ -45,7 +45,7 @@ The current value.
 
 > **PropBinding**(`value`): `T`
 
-Defined in: [../domwise/dist/index.d.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L134)
+Defined in: [../domwise/dist/index.d.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L130)
 
 Sets the bound value and synchronizes it to the attached element (if any).
 
@@ -69,7 +69,7 @@ The value that was set.
 
 > **\[initPropHookSymbol\]**(`node`, `propName`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2800](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2800)
+Defined in: [../domwise/dist/index.d.ts:3102](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3102)
 
 #### Parameters
 

@@ -4,7 +4,7 @@
 
 > **usePropBinding**\<`T`\>(`initialValue?`): [`PropBinding`](../interfaces/PropBinding.md)\<`T`\>
 
-Defined in: [../domwise/dist/index.d.ts:2688](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2688)
+Defined in: [../domwise/dist/index.d.ts:2993](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2993)
 
 Creates a two-way prop binding hook that synchronizes a value to a single element attribute.
 

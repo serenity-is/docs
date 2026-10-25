@@ -4,7 +4,7 @@
 
 > **SignalOrValue**\<`T`\> = `T` \| [`SignalLike`](../interfaces/SignalLike.md)\<`T`\>
 
-Defined in: [../domwise/dist/index.d.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L114)
+Defined in: [../domwise/dist/index.d.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L110)
 
 A value or a signal-like value that can be used interchangeably.
 

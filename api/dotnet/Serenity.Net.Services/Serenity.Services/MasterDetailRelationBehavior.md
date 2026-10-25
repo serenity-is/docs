@@ -50,4 +50,4 @@ Saving or deleting a master invokes the nested save/delete handler once per deta
 * interface [IRetrieveBehaviorAsync](./IRetrieveBehaviorAsync.md)
 * interface [IRetrieveBehaviorSync](./IRetrieveBehaviorSync.md)
 * interface [ISaveBehaviorSync](./ISaveBehaviorSync.md)
-* **Source:** *[MasterDetailRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/1859de626a2ae5066e2fa12482200d2ac88e496a/src/services/RequestHandlers/IntegratedFeatures/MasterDetail/MasterDetailRelationBehavior.cs)*
+* **Source:** *[MasterDetailRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/842eeed9c1017bb2110e654fdf17bd169a31f7a0/src/services/RequestHandlers/IntegratedFeatures/MasterDetail/MasterDetailRelationBehavior.cs)*

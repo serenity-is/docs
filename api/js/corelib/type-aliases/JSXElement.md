@@ -4,7 +4,7 @@
 
 > **JSXElement** = `HTMLElement` \| [`ConfigureElement`](../@serenity-is/namespaces/JSX/interfaces/ConfigureElement.md)\[`"svg"`\] *extends* `false` ? `never` : `SVGElement` \| [`ConfigureElement`](../@serenity-is/namespaces/JSX/interfaces/ConfigureElement.md)\[`"mathml"`\] *extends* `false` ? `never` : `MathMLElement`
 
-Defined in: [../domwise/dist/index.d.ts:2273](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2273)
+Defined in: [../domwise/dist/index.d.ts:2560](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2560)
 
 The DOM node type returned by JSX expressions.
 

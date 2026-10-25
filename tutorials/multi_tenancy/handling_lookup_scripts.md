@@ -12,14 +12,14 @@ The lookup script that generates this dropdown is defined in `PersonRow.cs`:
 namespace MovieTutorial.MovieDB;
 
 [ConnectionKey("Default"), Module("MovieDB"), TableName("Person")]
-[DisplayName("Person"), InstanceName("Person")]
+[DisplayText("Person"), InstanceName("Person")]
 [ReadPermission("Administration:General")]
 [ModifyPermission("Administration:General")]
 [ServiceLookupPermission("Administration:General")]
 [LookupScript] // <-- This is the definition
 public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
 {
-    [DisplayName("Person Id"), Identity, IdProperty]
+    [DisplayText("Person Id"), Identity, IdProperty]
     public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }
     //...
 ```
@@ -123,7 +123,7 @@ To resolve this, update the person lookup by replacing the `[LookupScript]` attr
 
 ```csharp
 [ConnectionKey("Default"), Module("MovieDB"), TableName("Person")]
-[DisplayName("Person"), InstanceName("Person")]
+[DisplayText("Person"), InstanceName("Person")]
 [ReadPermission("Administration:General")]
 [ModifyPermission("Administration:General")]
 [ServiceLookupPermission("Administration:General")]

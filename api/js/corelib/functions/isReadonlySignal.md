@@ -4,7 +4,7 @@
 
 > **isReadonlySignal**\<`T`\>(`obj`): `obj is Computed<T>`
 
-Defined in: [../domwise/dist/index.d.ts:2900](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2900)
+Defined in: [../domwise/dist/index.d.ts:3202](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3202)
 
 A type guard that checks if an object is a readonly (computed) signal, meaning it passes the `isSignalLike` check
 but the `value` property is not writable.

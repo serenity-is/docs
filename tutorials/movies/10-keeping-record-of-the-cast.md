@@ -117,9 +117,9 @@ namespace MovieTutorial.MovieDB;
 
 public enum Gender
 {
-    [Description("Male")]
+    [DescriptionText("Male")]
     Male = 1,
-    [Description("Female")]
+    [DescriptionText("Female")]
     Female = 2
 }
 ```
@@ -129,7 +129,7 @@ public enum Gender
 Update the declaration of the `Gender` property in `PersonRow.cs` and its field definition as shown below:
 
 ```csharp
-[DisplayName("Gender")]
+[DisplayText("Gender")]
 public Gender? Gender { get => fields.Gender[this]; set => fields.Gender[this] = value; }
 
 //...
@@ -182,12 +182,12 @@ To display the full name in the title of the edit dialog and enable searching by
 public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
 {
     //... Remove QuickSearch and NameProperty from FirstName
-    [DisplayName("First Name"), Size(50), NotNull]
+    [DisplayText("First Name"), Size(50), NotNull]
     public string? FirstName { get => fields.FirstName[this]; set => fields.FirstName[this] = value; }
     
     //...
 
-    [DisplayName("Full Name"), Concat("t0.FirstName", "' '", "t0.LastName"), QuickSearch, NameProperty]
+    [DisplayText("Full Name"), Concat("t0.FirstName", "' '", "t0.LastName"), QuickSearch, NameProperty]
     public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
 
     public class RowFields : RowFieldsBase
@@ -321,7 +321,7 @@ public class MovieForm
     [TextAreaEditor(Rows = 3)]
     public string? Description { get; set; }
 
-    [DisplayName("Cast"), MovieCastEditor, SkipNameCheck]
+    [DisplayText("Cast"), MovieCastEditor, SkipNameCheck]
     public List<MovieCastRow>? CastList { get; set; }
 
     [TextAreaEditor(Rows = 8)]
@@ -421,12 +421,12 @@ Next, modify the `PersonId` and `PersonFullName` properties in `MovieCastRow.cs`
 
 ```csharp
 //...
-[DisplayName("Actor/Actress"), NotNull, ForeignKey(typeof(PersonRow)), LeftJoin(jPerson), TextualField(nameof(PersonFullName))]
+[DisplayText("Actor/Actress"), NotNull, ForeignKey(typeof(PersonRow)), LeftJoin(jPerson), TextualField(nameof(PersonFullName))]
 [AsyncLookupEditor(typeof(PersonRow))]
 public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }
 
 //...
-[DisplayName("Actor/Actress"), Origin(jPerson, nameof(PersonRow.FullName))]
+[DisplayText("Actor/Actress"), Origin(jPerson, nameof(PersonRow.FullName))]
 public string? PersonFullName { get => fields.PersonFullName[this]; set => fields.PersonFullName[this] = value; }
 ```
 
@@ -592,7 +592,7 @@ In this payload, the CastList property can't be deserialized on the server side.
 public sealed class MovieRow : Row, IIdRow, INameRow
 {
     //
-    [DisplayName("Cast List"), NotMapped]
+    [DisplayText("Cast List"), NotMapped]
     public List<MovieCastRow>? CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
 
     public class RowFields : RowFieldsBase
@@ -778,7 +778,7 @@ Open `MovieRow.cs` and modify the `CastList` property as follows:
 
 ```csharp
 [MasterDetailRelation(foreignKey: nameof(MovieCastRow.MovieId), ColumnsType = typeof(Columns.MovieCastColumns))]
-[DisplayName("Cast List"), NotMapped]
+[DisplayText("Cast List"), NotMapped]
 public List<MovieCastRow>? CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
 ```
 

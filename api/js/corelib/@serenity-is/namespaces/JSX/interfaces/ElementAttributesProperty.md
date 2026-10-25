@@ -2,7 +2,7 @@
 
 # Interface: ElementAttributesProperty
 
-Defined in: [../domwise/dist/index.d.ts:2303](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2303)
+Defined in: [../domwise/dist/index.d.ts:2607](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2607)
 
 ## Properties
 
@@ -10,4 +10,4 @@ Defined in: [../domwise/dist/index.d.ts:2303](https://github.com/serenity-is/ser
 
 > **props**: `unknown`
 
-Defined in: [../domwise/dist/index.d.ts:2304](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2304)
+Defined in: [../domwise/dist/index.d.ts:2608](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2608)

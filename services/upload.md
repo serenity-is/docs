@@ -16,7 +16,7 @@ Files are served back through [IUploadFileResponder](../api/dotnet/Serenity.Net.
 Decorating a `String` field on your **row** (not the form) with an upload editor attribute is enough to enable uploads. The attribute provides the editor type for the client and the options used by `FileUploadBehavior`.
 
 ```cs
-[DisplayName("User Image"), Size(100)]
+[DisplayText("User Image"), Size(100)]
 [ImageUploadEditor(FilenameFormat = "UserImage/~", CopyToHistory = true)]
 public string? UserImage { get => fields.UserImage[this]; set => fields.UserImage[this] = value; }
 ```
@@ -24,7 +24,7 @@ public string? UserImage { get => fields.UserImage[this]; set => fields.UserImag
 The Northwind sample uses the same pattern:
 
 ```cs
-[DisplayName("Product Image"), Size(100)]
+[DisplayText("Product Image"), Size(100)]
 [ImageUploadEditor(FilenameFormat = "ProductImage/~", CopyToHistory = true)]
 public string? ProductImage { get => fields.ProductImage[this]; set => fields.ProductImage[this] = value; }
 ```

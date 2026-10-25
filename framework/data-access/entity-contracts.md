@@ -11,10 +11,10 @@ Serenity uses **marker interfaces** (contracts) to give a row special capabiliti
 ```cs
 public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
 {
-    [DisplayName("Person Id"), Identity, IdProperty]
+    [DisplayText("Person Id"), Identity, IdProperty]
     public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }
 
-    [DisplayName("Full Name"), NameProperty]
+    [DisplayText("Full Name"), NameProperty]
     public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
 }
 ```

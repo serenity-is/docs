@@ -86,6 +86,24 @@ The declared attributes are turned into a navigation tree at runtime:
 
 A `NavigationItem` has `Title`, `FullPath`, `IconClass`, `ItemClass`, `Url`, `Target`, `Parent`, `Children`, `IsSection`, and `Order`.
 
+## Icons
+
+The `icon:` argument of the navigation attributes is a plain CSS class (or a space-separated list of classes) rendered on an `<i>` element; it ends up in `NavigationItem.IconClass`.
+
+Until 10.6.0 the templates used Font Awesome glyph classes (`fa-users`, `fa-tools`, ...), which are still available through the Line Awesome FA-compatible stylesheet bundled with the templates. Since 10.6.1 the framework's own component icons are SVG masks instead, and you can use the same helpers for navigation icons — no icon font is needed, and the mask follows the text color (including hover and active states):
+
+```css
+/* define the icon once, e.g. from https://serenity.is/icons */
+.sv-my-dashboard { --sv: url("data:image/svg+xml,..."); }
+```
+
+```cs
+[assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "",
+    icon: "sv sv-my-dashboard")]
+```
+
+Use the icon browser at [https://serenity.is/icons](https://serenity.is/icons) to search the bundled Iconify collections and copy either the ready-made class or the raw SVG. The `sv-`, `svbg-`, `svcontent-` and `svaccent-` helpers are described in [Theming and CSS Customization](theming.md#icons).
+
 ## Custom Navigation Item Sources
 
 If you need to add navigation items dynamically (e.g. from a database), implement [INavigationItemSource](../api/dotnet/Serenity.Net.Core/Serenity.Navigation/INavigationItemSource.md) and return the attributes from `GetItems()`. Serenity discovers `INavigationItemSource` implementations through the type source and merges their items with the assembly-level attributes.

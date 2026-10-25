@@ -2,7 +2,7 @@
 
 # Interface: ComboboxItem\<TSource\>
 
-Defined in: [src/ui/editors/combobox.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L13)
+Defined in: [src/ui/editors/combobox.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L14)
 
 A single item in a combobox.
 
@@ -20,9 +20,19 @@ The source item type.
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [src/ui/editors/combobox.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L21)
+Defined in: [src/ui/editors/combobox.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L24)
 
 Whether the item is disabled.
+
+***
+
+### icon?
+
+> `optional` **icon**: [`IconClassName`](../type-aliases/IconClassName.md)
+
+Defined in: [src/ui/editors/combobox.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L20)
+
+Icon class for the item.
 
 ***
 
@@ -30,7 +40,7 @@ Whether the item is disabled.
 
 > `optional` **id**: `string`
 
-Defined in: [src/ui/editors/combobox.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L15)
+Defined in: [src/ui/editors/combobox.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L16)
 
 Unique identifier of the combobox item.
 
@@ -40,7 +50,7 @@ Unique identifier of the combobox item.
 
 > `optional` **source**: `TSource`
 
-Defined in: [src/ui/editors/combobox.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L19)
+Defined in: [src/ui/editors/combobox.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L22)
 
 The source item.
 
@@ -50,6 +60,6 @@ The source item.
 
 > `optional` **text**: `string`
 
-Defined in: [src/ui/editors/combobox.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L17)
+Defined in: [src/ui/editors/combobox.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L18)
 
 Display text.

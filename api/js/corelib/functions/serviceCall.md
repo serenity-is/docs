@@ -4,7 +4,7 @@
 
 > **serviceCall**\<`TResponse`\>(`options`): `PromiseLike`\<`TResponse`\>
 
-Defined in: [src/base/services.ts:241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L241)
+Defined in: [src/base/services.ts:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L254)
 
 Executes a Serenity service call.
 Prefers `fetch` (async) when `options.async` is `true` (default); falls back to synchronous `XMLHttpRequest` when `async` is `false` (blocks the UI — avoid in new code).

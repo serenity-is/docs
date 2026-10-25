@@ -4,7 +4,7 @@
 
 > **getServiceOptions**\<`TResponse`\>(`options`): [`ServiceOptions`](../interfaces/ServiceOptions.md)\<`TResponse`\>
 
-Defined in: [src/base/services.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L76)
+Defined in: [src/base/services.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L89)
 
 Normalizes and enriches a [ServiceOptions](../interfaces/ServiceOptions.md) object with defaults and derived values.
 Applies default `method` (`POST`), `allowRedirect`/`async`/`blockUI` flags, resolves `service`/`url`,

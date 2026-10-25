@@ -139,14 +139,14 @@ This is how a `Lookup.Administration.Role` dynamic script is defined on `RoleRow
 [LookupScript]
 public sealed class RoleRow : Row<RoleRow.RowFields>, IIdRow, INameRow
 {
-    [DisplayName("Role Id"), IdProperty]
+    [DisplayText("Role Id"), IdProperty]
     public int? RoleId
     {
         get => fields.RoleId[this];
         set => fields.RoleId[this] = value;
     }
 
-    [DisplayName("Role Name"), NameProperty]
+    [DisplayText("Role Name"), NameProperty]
     public string? RoleName
     {
         get => fields.RoleName[this];
@@ -192,9 +192,9 @@ public string? RoleKey
 
 ## Lookup Permission
 
-By default, the lookup script `can be accessed by anyone`, including `anonymous users`.
+A lookup script is **denied by default** unless it gets a permission from somewhere:
 
-But, if the attribute is placed on type with a `ReadPermission` attribute, like in the RoleRow sample above, it automatically gets its `ReadPermission` value while registering the lookup script:
+- If the attribute is placed on a type with a `ReadPermission` attribute, like in the RoleRow sample above, the lookup script automatically gets that `ReadPermission` value while registering:
 
 ```cs
 [ReadPermission(PermissionKeys.Security)]
@@ -204,15 +204,21 @@ public sealed class RoleRow
 
 So for the lookup script above, any user who tries to access that lookup script is required to have the "`Administration:Security`" permission.
 
-If you wanted to specify the permission manually, you could do it like below:
+- You can also specify the permission manually on the attribute (this overrides the row's `ReadPermission`):
 
 ```cs
 [LookupScript(Permission = "SomePermission")]
 ```
 
-In this case, the `ReadPermission` attribute will be ignored, and `"SomePermission"` will be checked instead.
+- For a lookup that anyone may access, including anonymous users, use `SpecialPermissionKeys.Public`:
 
-To allow anyone including to access a lookup script specify "`*`" as the permission, to only allow authenticated users, you may specify it as "`?`".
+```cs
+[LookupScript(Permission = SpecialPermissionKeys.Public)]
+```
+
+- To allow only authenticated users, use `SpecialPermissionKeys.LoggedIn` (`"?"`). `SpecialPermissionKeys.Deny` makes the lookup inaccessible to everyone.
+
+> **Breaking change:** a lookup script with neither a `[ReadPermission]` on its row nor an explicit `LookupScript(Permission = ...)` is now denied instead of being public. Built-in scripts (columns, forms, bundles, local texts, language and user data) are marked `SpecialPermissionKeys.Public`, so they keep working.
 
 > WARNING!
 >
@@ -234,7 +240,7 @@ public sealed class LanguageLookup : RowLookupScript<LanguageRow>
         : base(sqlConnections)
     {
         IdField = LanguageRow.Fields.LanguageId.PropertyName;
-        Permission = "*";
+        Permission = SpecialPermissionKeys.Public;
     }
 
     protected override void PrepareQuery(SqlQuery query)
@@ -253,13 +259,13 @@ In the class constructor, we manually set the IdField to the `LanguageId` proper
 ```cs
 public sealed class LanguageRow
 {
-    [DisplayName("Id"), Identity, IdProperty]
+    [DisplayText("Id"), Identity, IdProperty]
     public Int32? Id
 
-    [DisplayName("Language Id")]
+    [DisplayText("Language Id")]
     public String LanguageId
 
-    [DisplayName("Language Name"), NameProperty]
+    [DisplayText("Language Name"), NameProperty]
     public String LanguageName
 ```
 
@@ -269,7 +275,7 @@ Also, in the `PrepareQuery` method, we manually include the `LanguageId` propert
 
 Otherwise, the base `PrepareQuery` method would only select `Id` and `LanguageName` properties.
 
-We set the permission to `*` in the constructor to allow anonymous users to access this lookup script, as the language selection should be available without logging in.
+We set the permission to `SpecialPermissionKeys.Public` in the constructor to allow anonymous users to access this lookup script, as the language selection should be available without logging in.
 
 ## Lookup Loading Process
 

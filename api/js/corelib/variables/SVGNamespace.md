@@ -4,6 +4,6 @@
 
 > `const` **SVGNamespace**: `"http://www.w3.org/2000/svg"` = `"http://www.w3.org/2000/svg"`
 
-Defined in: [../domwise/dist/index.d.ts:3105](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3105)
+Defined in: [../domwise/dist/index.d.ts:3421](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3421)
 
 The SVG namespace URI (`http://www.w3.org/2000/svg`).

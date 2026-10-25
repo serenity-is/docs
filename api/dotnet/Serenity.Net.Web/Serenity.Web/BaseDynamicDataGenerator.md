@@ -12,7 +12,7 @@ public abstract class BaseDynamicDataGenerator
 | name | description |
 | --- | --- |
 | virtual [Run](BaseDynamicDataGenerator/Run.md)() | Generates `.json` files under the `dynamic-data` folder for script testing purposes. |
-| virtual [RunAndExitIf](BaseDynamicDataGenerator/RunAndExitIf.md)(…) | Checks the arguments; if they contain `dynamic-data`, runs the generator and exits the process. |
+| virtual [RunIf](BaseDynamicDataGenerator/RunIf.md)(…) | Runs the generator when the first argument is `dynamic-data`. |
 
 ## Protected Members
 
@@ -28,4 +28,4 @@ public abstract class BaseDynamicDataGenerator
 
 ## See Also
 
-* **Source:** *[BaseDynamicDataGenerator.cs](https://github.com/serenity-is/Serenity/blob/3c40ec0e1c969c83edaf179f09bdc79568e69553/src/web/DynamicScript/DynamicDataGenerator/BaseDynamicDataGenerator.cs)*
+* **Source:** *[BaseDynamicDataGenerator.cs](https://github.com/serenity-is/Serenity/blob/88446beca303039b3d0ead2e38f6c3b940c9df86/src/web/DynamicScript/DynamicDataGenerator/BaseDynamicDataGenerator.cs)*

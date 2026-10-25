@@ -52,4 +52,4 @@ Saving or deleting the linking set invokes the nested save/delete handler once p
 * interface [IRetrieveBehaviorAsync](./IRetrieveBehaviorAsync.md)
 * interface [IRetrieveBehaviorSync](./IRetrieveBehaviorSync.md)
 * interface [ISaveBehaviorSync](./ISaveBehaviorSync.md)
-* **Source:** *[LinkingSetRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/26481a1ea7b1e1cec0db6f483849d0a41b3b15e4/src/services/RequestHandlers/IntegratedFeatures/LinkingSetRelation/LinkingSetRelationBehavior.cs)*
+* **Source:** *[LinkingSetRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/842eeed9c1017bb2110e654fdf17bd169a31f7a0/src/services/RequestHandlers/IntegratedFeatures/LinkingSetRelation/LinkingSetRelationBehavior.cs)*

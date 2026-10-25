@@ -49,13 +49,13 @@ If you want Serenity to search in additional fields, like "Description" and "Sto
 public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
 {
     //...
-    [DisplayName("Title"), Size(200), NotNull, NameProperty, QuickSearch]
+    [DisplayText("Title"), Size(200), NotNull, NameProperty, QuickSearch]
     public string? Title { get => fields.Title[this]; set => fields.Title[this] = value; }
 
-    [DisplayName("Description"), Size(1000), QuickSearch]
+    [DisplayText("Description"), Size(1000), QuickSearch]
     public string? Description { get => fields.Description[this]; set => fields.Description[this] = value; }
 
-    [DisplayName("Storyline"), QuickSearch]
+    [DisplayText("Storyline"), QuickSearch]
     public string? Storyline { get => fields.Storyline[this]; set => fields.Storyline[this] = value; }
     //...
 }
@@ -68,7 +68,7 @@ By adding the `QuickSearch` attribute to the "Description" and "Storyline" field
 The `QuickSearch` attribute, by default, performs a search using a "contains" filter. However, you can adjust its behavior by using different search types. For example, if you want to show rows that start with the typed text, you can modify the attribute like this:
 
 ```cs
-[DisplayName("Title"), Size(200), NotNull, NameProperty, QuickSearch(SearchType.StartsWith)]
+[DisplayText("Title"), Size(200), NotNull, NameProperty, QuickSearch(SearchType.StartsWith)]
 public string? Title
 ```
 
@@ -77,7 +77,7 @@ In this example, the `SearchType.StartsWith` option is used, which filters for v
 If you want to search in the "Year" column but only for exact integer values (e.g., "1999" matches, but not "19"), you can configure it like this:
 
 ```cs
-[DisplayName("Year"), QuickSearch(SearchType.Equals, numericOnly: 1)]
+[DisplayText("Year"), QuickSearch(SearchType.Equals, numericOnly: 1)]
 public int? Year
 ```
 

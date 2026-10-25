@@ -52,7 +52,7 @@ The Grades screen currently shows only the student's first name (Sergen generate
 
 Remove `StudentFirstName` and add a `FullName` field:
 ```csharp
-[DisplayName("Full Name"), Origin(jStudent, nameof(StudentsRow.FullName))]
+[DisplayText("Full Name"), Origin(jStudent, nameof(StudentsRow.FullName))]
 public string? FullName 
 { 
     get => fields.FullName[this]; 
@@ -75,13 +75,13 @@ public string? FullName { get; set; }
 
 Point `StudentId` at `FullName` so the student column shows the full name:
 ```csharp
-[DisplayName("Student"), NotNull, ForeignKey(typeof(StudentsRow)), LeftJoin(jStudent), TextualField(nameof(FullName))]
+[DisplayText("Student"), NotNull, ForeignKey(typeof(StudentsRow)), LeftJoin(jStudent), TextualField(nameof(FullName))]
 [ServiceLookupEditor(typeof(StudentsRow), Service = "CourseDB/Students/List")]
 public int? StudentId { get => fields.StudentId[this]; set => fields.StudentId[this] = value; }
 ```
 And move the `NameProperty`/`QuickSearch` in `StudentsRow` to the `FullName` field:
 ```csharp
-[DisplayName("Full Name"), Size(201), NotNull, NameProperty, QuickSearch]
+[DisplayText("Full Name"), Size(201), NotNull, NameProperty, QuickSearch]
 public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
 ```
 The Student column in the Grades screen now shows the full name.

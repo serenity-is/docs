@@ -1,0 +1,193 @@
+# Storyboard for tutorials/movies/01-creating-movie-table.md
+#
+# Preview interactively:   pnpm media --id 01-creating-movie-table --preview
+# Render + publish:        pnpm media --id 01-creating-movie-table --publish
+
+id: 01-creating-movie-table
+title: Creating the Movie table with a migration
+
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+
+files:
+  - DefaultDB_20141103_1400_Initial.cs
+  - DefaultDB_20221114_1505_MovieTable.cs
+
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+  posterAt: 12
+
+output:
+  mp4: ../img/01-creating-movie-table.mp4
+  webp: null
+  poster: ../img/01-creating-movie-table-poster.png
+
+budgets:
+  maxDuration: 38
+  maxBytes: 2500000
+
+# the project right after chapter 0: DefaultDB already holds the migrations
+# that come with the Serene template, but no Movie table yet
+treeBefore:
+  "Solution 'MovieTutorial' (1 of 1 project)":
+    MovieTutorial.Web:
+      - .config/
+      - App_Data/
+      - Imports/:
+          - ClientTypes/
+          - MVC/
+      - Initialization/
+      - Migrations/:
+          - DefaultDB/:
+              - DefaultDB_20141103_1400_Initial.cs
+              - DefaultDB_20141111_1130_Permissions.cs
+              - DefaultDB_20160515_0726_UserPreferences.cs
+              - DefaultDB_20161029_1300_ExceptionLog.cs
+      - Modules/:
+          - Administration/
+          - Common/
+          - Membership/
+          - ServerTypes/
+      - texts/:
+          - resources/
+      - Views/:
+          - Errors/
+          - Shared/
+      - wwwroot/:
+          - Content/
+      - .editorconfig
+      - appsettings.json
+      - MovieTutorial.Web.csproj
+      - MovieTutorial.Web.slnx
+      - package.json
+      - sergen.json
+      - tsconfig.json
+
+# the same tree once the new migration exists
+treeAfter:
+  from: "@treeBefore"
+  add:
+    MovieTutorial.Web/Migrations/DefaultDB/:
+      - DefaultDB_20221114_1505_MovieTable.cs
+
+steps:
+  - tree: "@treeBefore"
+    treeScroll: top
+    open: DefaultDB_20141103_1400_Initial.cs
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Migrations live in Migrations/DefaultDB"
+    hold: 2.0
+
+  - highlight: ["5-8"]
+    spotlight: "line:5"
+    caption: "A migration is a C# class that changes the schema"
+    hold: 1.8
+
+  # right click the folder, pick Add: the click happens before the menu opens
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "Right-click the folder to add a new item"
+    hold: 1.6
+
+  # Add is a submenu: hover it, then pick New Item...
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Add opens a submenu of item types"
+    hold: 1.4
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "New Item... asks for a file name"
+    hold: 1.4
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "Name it after the table and the date"
+    hold: 1.0
+
+  # the default name is replaced, so the box starts empty
+  - addItem: { name: "" }
+    type: DefaultDB_20221114_1505_MovieTable.cs
+    typeSpeed: 22
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "DefaultDB_yyyyMMdd_HHmm_Description"
+    hold: 0.8
+
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfter"
+    open: DefaultDB_20221114_1505_MovieTable.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:DefaultDB_20221114_1505_MovieTable.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "A new migration appears in the folder"
+    hold: 1.0
+
+  # nothing is dimmed while the code types itself in, so it stays readable
+  - code: 18
+    codeMs: 1800
+    spotlight: null
+    caption: null
+    hold: 1.0
+
+  - spotlight: "line:10"
+    caption: "Up() creates the Movie table"
+    hold: 2.0
+
+  - highlight: ["11-17"]
+    spotlight: "line:12"
+    caption: "WithColumn adds a column to the table"
+    hold: 2.0
+
+  - highlight: ["5-5"]
+    spotlight: "line:5"
+    caption: "The migration key must sort after the previous ones"
+    hold: 2.0
+
+  # F5 runs the app: the Start button turns into Stop and the debug toolbar
+  # appears. Serenity runs the migrations on startup, so the Output pane below
+  # is the application's own console.
+  - click: "#tb-start"
+    debug: running
+    spotlight: "#tb-start"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "Press F5 (or Start) to build and run the app"
+    hold: 1.6
+
+  - bottomTab: Output
+    output:
+      - "Build succeeded."
+      - "    0 Warning(s)"
+      - "    0 Error(s)"
+      - ""
+      - "Now listening on: https://localhost:50263"
+      - "Application started. Press Ctrl+C to shut down."
+      - "Serenity.Data.SqlConnections: Debug: SQL - BEGIN TRANSACTION"
+      - "Serenity.Data.SqlConnections: Debug: SQL - CREATE TABLE [dbo].[Movie]..."
+      - "Serenity.Data.SqlConnections: Debug: SQL - COMMIT"
+    status: "Web server is listening on port 50263"
+    caption: "Serenity runs the migrations when the application starts"
+    hold: 2.2
+
+  - sqlExplorer: true
+    treeScroll: top
+    spotlight: "node:dbo.Movie"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "The migration created dbo.Movie in the default database"
+    hold: 2.6

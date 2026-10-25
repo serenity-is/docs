@@ -1,0 +1,215 @@
+# Storyboard for tutorials/movies/02-generating-code-for-movie-table.md
+#
+# Preview interactively:   pnpm media --id 02-generate-code --preview
+# Render + publish:        pnpm media --id 02-generate-code --publish
+#
+# Sergen 10.x walks through: connection -> tables -> module/class/permission
+# prompts -> what to generate. The terminal lines below follow that flow.
+
+id: 02-generate-code
+title: Generating code for the Movie table
+
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+
+files:
+  - DefaultDB_20221114_1505_MovieTable.cs
+  - MovieRow.cs
+
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+  posterAt: 19
+
+output:
+  mp4: ../img/02-generating-code-for-movie-table.mp4
+  webp: null
+  poster: ../img/02-generating-code-for-movie-table-poster.png
+
+budgets:
+  maxDuration: 32
+  maxBytes: 2500000
+
+# nothing generated yet: the migration exists, the Movie module does not.
+# Other scenes in this folder can reuse it as "@02-generate-code/treeProject".
+treeProject:
+  from: "@01-creating-movie-table/treeAfter"
+
+# sergen 10 adds endpoints, .tsx pages and request handlers as well, and the
+# server typings of the module; that is a patch on top of the project tree.
+treeAfter:
+  from: "@treeProject"
+  add:
+    MovieTutorial.Web/Modules/MovieDB/:
+      - Movie/:
+          - RequestHandlers/:
+              - MovieDeleteHandler.cs
+              - MovieListHandler.cs
+              - MovieRetrieveHandler.cs
+              - MovieSaveHandler.cs
+          - MovieColumns.cs
+          - MovieDialog.tsx
+          - MovieEndpoint.cs
+          - MovieForm.cs
+          - MovieGrid.tsx
+          - MoviePage.cs
+          - MoviePage.tsx
+          - MovieRow.cs
+      - MovieDBNavigation.cs
+    MovieTutorial.Web/Modules/ServerTypes/:
+      - MovieDB/:
+          - MovieColumns.ts
+          - MovieForm.ts
+          - MovieRow.ts
+          - MovieService.ts
+      - MovieDB.ts
+
+steps:
+  - tree: "@treeProject"
+    treeScroll: top
+    open: DefaultDB_20221114_1505_MovieTable.cs
+    highlight: ["10-17"]
+    spotlight: "line:10"
+    caption: "The Movie table comes from a migration"
+    hold: 2.2
+
+  - contextMenu: { target: "node:MovieTutorial.Web" }
+    spotlight: "node:MovieTutorial.Web"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "Right-click the web project"
+    hold: 1.6
+
+  # hovering the item only: the click that picks it belongs to the next step,
+  # so the menu closes *after* the click, not before it
+  - contextMenu: { target: "node:MovieTutorial.Web", focus: "Open in Terminal" }
+    spotlight: "menuItem:Open in Terminal"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Pick Open in Terminal"
+    hold: 1.4
+
+  - contextMenu: null
+    click: "menuItem:Open in Terminal"
+    pointerAt: { x: 0.42, y: 0.5 }
+    terminal: { open: true }
+    bottomHeight: 430
+    spotlight: terminal
+    caption: "A PowerShell starts in the project folder"
+    hold: 1.6
+
+  - type: dotnet sergen g
+    typeSpeed: 55
+    spotlight: terminal
+    pointerAt: { x: 0.34, y: 0.29 }   # the I-beam sits after the prompt
+    caption: "Run sergen from the project folder"
+    hold: 0.6
+
+  # 1. connection
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Available Connections", kind: section }
+        - { text: "> Default", kind: picked }
+        - { text: "  Northwind", kind: row }
+    spotlight: terminal
+    caption: "Pick the Default connection"
+    hold: 1.8
+
+  # 2. tables to generate for
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Select tables for code generation (single/multiple)", kind: section }
+        - { text: "" }
+        - { text: "> [ ] dbo.Exceptions", kind: row }
+        - { text: "  [ ] dbo.Languages", kind: row }
+        - { text: "  [ ] dbo.Movie", kind: row }
+        - { text: "  [ ] dbo.RolePermissions", kind: row }
+        - { text: "  [ ] dbo.Roles", kind: row }
+        - { text: "  [ ] dbo.UserPermissions", kind: row }
+        - { text: "  [ ] dbo.UserPreferences", kind: row }
+        - { text: "  [ ] dbo.UserRoles", kind: row }
+        - { text: "  [ ] dbo.Users", kind: row }
+        - { text: "  [ ] dbo.VersionInfo", kind: row }
+        - { text: "" }
+        - { text: "(Press <space> to select/unselect, <enter> to accept)", kind: dim }
+    caption: "Space selects the table you want"
+    hold: 2.0
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Select tables for code generation (single/multiple)", kind: section }
+        - { text: "" }
+        - { text: "  [ ] dbo.Exceptions", kind: row }
+        - { text: "  [ ] dbo.Languages", kind: row }
+        - { text: "> [X] dbo.Movie", kind: picked }
+        - { text: "  [ ] dbo.RolePermissions", kind: row }
+        - { text: "  [ ] dbo.Roles", kind: row }
+        - { text: "  [ ] dbo.UserPermissions", kind: row }
+        - { text: "  [ ] dbo.UserPreferences", kind: row }
+        - { text: "  [ ] dbo.UserRoles", kind: row }
+        - { text: "  [ ] dbo.Users", kind: row }
+        - { text: "  [ ] dbo.VersionInfo", kind: row }
+        - { text: "" }
+        - { text: "(Press <space> to select/unselect, <enter> to accept)", kind: dim }
+    caption: "dbo.Movie is selected"
+    hold: 1.2
+
+  # 3. module, class and permission
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Enter a Module name for table **dbo.Movie** (**Default**): ", kind: row }
+    caption: "Name the module MovieDB"
+    hold: 0.4
+    typeTail: MovieDB
+    tailSpeed: 70
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Enter a Module name for table **dbo.Movie** (**Default**): MovieDB", kind: row }
+        - { text: "" }
+        - { text: "Enter a class Identifier for table **dbo.Movie** (**Movie**): Movie", kind: row }
+        - { text: "Enter a Permission Key for table **dbo.Movie** (**Administration:General**): ", kind: row }
+    caption: "The class and permission key follow the defaults"
+    hold: 0.4
+    typeTail: Administration:General
+    tailSpeed: 45
+
+  # 4. what to generate: everything is selected by default
+  - terminal:
+      lines:
+        - { text: "" }
+        - { text: "Choose What to Generate", kind: section }
+        - { text: "> [X] All", kind: picked }
+        - { text: "  [X] Row", kind: row }
+        - { text: "  [X] Services", kind: row }
+        - { text: "  [X] User Interface", kind: row }
+        - { text: "  [X] Custom", kind: row }
+        - { text: "" }
+        - { text: "(Press <space> to select/unselect, up and down to navigate, <enter> to accept)", kind: dim }
+    caption: "Everything is selected by default"
+    hold: 2.2
+
+  - tree: "@treeAfter"
+    open: MovieRow.cs
+    highlight: ["13-14"]
+    spotlight: "line:13"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "Attributes describe the field for every layer"
+    hold: 3.0

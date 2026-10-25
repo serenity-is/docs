@@ -1,0 +1,133 @@
+# Storyboard for tutorials/movies/03-customizing-movie-ui.md
+#
+# Render + publish:  pnpm media app-fixture --edits 03   (once)
+#                    pnpm media --id 03-customizing-movie-ui --publish
+#
+# This is the first mixed clip: the editor steps come from the wireframe stage,
+# the last steps are the real application (screen: app), recorded after the same
+# edits were applied to the fixture. One take, two screens.
+
+id: 03-customizing-movie-ui
+title: Customizing field captions, columns, editors and CSS
+edits: "03"          # the fixture must be built with this profile
+chrome: browser      # the app steps show a browser window
+login: false         # already shown in 02b: sign in before the first frame
+
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+
+# the files come from the generated application itself, so the editor shows
+# exactly the code that is running -- including this chapter's edits
+files:
+  MovieRow.cs: { fixture: "Modules/MovieDB/Movie/MovieRow.cs" }
+  MovieColumns.cs: { fixture: "Modules/MovieDB/Movie/MovieColumns.cs" }
+  MovieForm.cs: { fixture: "Modules/MovieDB/Movie/MovieForm.cs" }
+  MovieDialog.tsx: { fixture: "Modules/MovieDB/Movie/MovieDialog.tsx" }
+  MovieDialog.css: { fixture: "Modules/MovieDB/Movie/MovieDialog.css" }
+
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+  posterAt: 30
+
+output:
+  mp4: ../img/03-customizing-movie-ui.mp4
+  webp: null
+  poster: ../img/03-customizing-movie-ui-poster.png
+
+budgets:
+  maxDuration: 56
+  maxBytes: 3_500_000
+
+steps:
+  # 1. the entity decides the caption everywhere
+  - open: MovieRow.cs
+    spotlight: "node:MovieRow.cs"
+    caption: "MovieRow is the entity sergen generated"
+    hold: 1.6
+
+  - highlight: ["28-29"]
+    spotlight: "line:28"
+    caption: "DisplayName on the property titles the field everywhere"
+    hold: 2.2
+
+  - highlight: ["4-4"]
+    spotlight: "line:4"
+    caption: "The row's own DisplayName names the page"
+    hold: 2.0
+
+  # 2. the grid column can override it
+  - open: MovieColumns.cs
+    highlight: ["15-16"]
+    spotlight: "line:15"
+    caption: "MovieColumns overrides just the grid column"
+    hold: 2.2
+
+  # 3. the form chooses the editor
+  - open: MovieForm.cs
+    highlight: ["8-11"]
+    spotlight: "line:8"
+    caption: "MovieForm picks TextAreaEditor for long text"
+    hold: 2.2
+
+  # 4. a dialog-scoped stylesheet
+  - open: MovieDialog.css
+    highlight: ["2-4"]
+    spotlight: "line:3"
+    caption: "A stylesheet next to the dialog widens the labels"
+    hold: 2.0
+
+  - open: MovieDialog.tsx
+    highlight: ["2-2"]
+    spotlight: "line:2"
+    caption: "…and the dialog imports it"
+    hold: 1.8
+
+  # 5. the result: rebuild, run, everything is in place
+  - screen: app
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    spotlight: null
+    caption: "Rebuild and run the app: the page is Movies now"
+    hold: 2.4
+
+  - screen: app
+    waitFor: "#GridDiv"
+    spotlight: ".s-GridContainer, #GridDiv"
+    caption: "The Runtime column is wider, right aligned, and renamed"
+    hold: 2.0
+
+  - screen: app
+    click: ".add-button"
+    waitFor: ".s-MovieDialog"
+    spotlight: null
+    caption: "New Movie shows the same caption, with textareas"
+    hold: 2.2
+
+  - screen: app
+    type: The Matrix
+    into: "[name=Title]"
+    typeSpeed: 55
+    spotlight: '[name=Title]'
+    caption: "Labels are 150px wide, so the fields line up"
+    hold: 1.0
+
+  - screen: app
+    type: "A computer hacker learns the true nature of his reality."
+    into: "[name=Description]"
+    typeSpeed: 12
+    spotlight: '[name=Description]'
+    caption: "Description grew to three rows"
+    hold: 1.6
+
+  - screen: app
+    type: "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth."
+    into: "[name=Storyline]"
+    typeSpeed: 6
+    spotlight: '[name=Storyline]'
+    caption: "Storyline to eight"
+    hold: 2.0

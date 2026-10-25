@@ -4,7 +4,8 @@
 
 After confirming the existence of the `Movie` table in the database, you can use the Serenity Code Generator (`dotnet sergen`) to create the initial editing interface.
 
-<video alt="Generating Code for Movie Table Animation" controls>
+<video alt="Generating Code for Movie Table Animation" controls preload="metadata"
+  poster="img/02-generating-code-for-movie-table-poster.png">
   <source src="img/02-generating-code-for-movie-table.mp4" type="video/mp4">
 </video>
 
@@ -16,23 +17,48 @@ Since ASP.NET Core offers cross-platform support, the .NET version of Sergen can
 
 3. Enter `dotnet sergen g` to launch the Sergen code generation user interface.
 
-![Dotnet Sergen G](img/dotnet-sergen-g.png)
-
 > If you encounter an error, type `dotnet restore` and `dotnet tool restore` before running Sergen, and ensure you are inside the `MovieTutorial.Web` directory.
 
-Sergen will list the connections found in the `appsettings.json` file.
+Sergen will list the connections found in the `appsettings.json` file:
+
+```text
+Table Code Generation
+
+Available Connections
+> Default
+  Northwind
+```
 
 You can navigate through the connections using the up and down arrow keys. Select the `Default` connection and press Enter.
 
 After pressing Enter, you'll see a list of tables in that database:
 
-![Sergen Movie Selected](img/dotnet-sergen-movie.png)
+```text
+Table Code Generation
+
+Select tables for code generation (single/multiple)
+
+  [ ] dbo.Exceptions
+  [ ] dbo.Languages
+> [X] dbo.Movie
+  [ ] dbo.RolePermissions
+  [ ] dbo.Roles
+  [ ] dbo.UserPermissions
+  [ ] dbo.UserPreferences
+  [ ] dbo.UserRoles
+  [ ] dbo.Users
+  [ ] dbo.VersionInfo
+
+(Press <space> to select/unselect, <enter> to accept)
+```
 
 Navigate through the list and select the `dbo.Movie` table by pressing Space. Then, press Enter to confirm your selection.
 
-Next, Sergen will prompt you to enter a module name. Please type in `MovieDB`.
+Next, Sergen will prompt you to enter a module name. Please type in `MovieDB`:
 
-![Sergen Module](img/dotnet-sergen-module.png)
+```text
+Enter a Module name for table dbo.Movie (Default): MovieDB
+```
 
 > In Serenity terms, a module is a logical group of pages that share a common purpose. For instance, in the Serene template, all pages related to the *Northwind* sample are part of the *Northwind* module. Pages related to the general management of the site, such as users and roles, belong to the *Administration* module. Typically, a module corresponds to a database schema or a single database, but you can use multiple modules within a single database/schema or have multiple databases in one module.
 >
@@ -44,9 +70,12 @@ Next, Sergen will prompt you to enter a module name. Please type in `MovieDB`.
 >
 > Module names should be in Pascal case, starting with a capital letter. Invalid module names include `myModule`, `mycoolmodule`, and `aModule`. A valid module name is `MyCoolModule`.
 
-When prompted, please enter `Movie` as the class identifier.
+When prompted, please enter `Movie` as the class identifier, and keep the permission key:
 
-![Sergen Movie Identifier](img/sergen-movie-identifier.png)
+```text
+Enter a class Identifier for table dbo.Movie (Movie): Movie
+Enter a Permission Key for table dbo.Movie (Administration:General): Administration:General
+```
 
 The class identifier typically corresponds to the table name. However, in some cases, table names might contain underscores or other invalid characters. In such situations, you have the flexibility to choose an appropriate name for your entity in the generated code, as long as it's a valid C# identifier.
 
@@ -64,9 +93,18 @@ In Serenity, access control to resources (pages, services, etc.) is managed usin
 
 Our Movie page will be used exclusively by administrative users (or perhaps content moderators in the future). Therefore, let's set the permission to `Administration:General` for now. In the Serene template, by default, only the `admin` user has this permission.
 
-![Sergen what to generate](img/dotnet-sergen-whattogenerate.png)
+Next, Sergen will ask you which files to generate:
 
-Next, Sergen will ask you which files to generate. By default, the **All** option is preselected, which includes Row, Repository & Service, User Interface, and Custom. Press ENTER one last time.
+```text
+Choose What to Generate
+> [X] All
+  [X] Row
+  [X] Services
+  [X] User Interface
+  [X] Custom
+```
+
+By default, the **All** option is preselected, which includes Row, Repository & Service, User Interface, and Custom. Press ENTER one last time.
 
 > If you don't need a UI for a particular entity, you can choose **Row** and **Services** only. If you only want an entity class and not request handlers or service access, select only **Row**.
 

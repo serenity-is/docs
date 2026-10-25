@@ -1,0 +1,20 @@
+# Keep authoring tooling and storyboards out of `git archive` snapshots.
+#
+# Archived doc versions are produced with:
+#   git archive --prefix=10.5.0/ 10.5.0 | tar -x -C
+#
+# `git archive` honors `export-ignore`, so anything listed here is stripped from
+# those snapshots while staying in the repository for normal checkouts.
+# Patterns without a slash apply at any depth.
+
+# Storyboards + snippets used to render the tutorial clips.
+_scenes export-ignore
+
+# Local tooling leftovers, if anything ever lands inside the docs tree.
+_media export-ignore
+
+# Editor / OS noise.
+.vscode export-ignore
+.idea export-ignore
+.DS_Store export-ignore
+Thumbs.db export-ignore

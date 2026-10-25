@@ -1,0 +1,150 @@
+# Storyboard for tutorials/movies/00-introduction.md
+#
+# Preview interactively:   pnpm media --id 00-introduction --preview
+# Render + publish:        pnpm media --id 00-introduction --publish
+#
+# This scene covers the start window and the "Create a new project" wizard.
+# The tree at the end matches what `dotnet new serene -n MovieTutorial`
+# actually produces, so the video does not promise files that no longer exist.
+
+id: 00-introduction
+title: Creating a new project named MovieTutorial
+
+stage:
+  theme: vs-dark
+  title: Microsoft Visual Studio
+  solution: StartSharp.Web
+
+files:
+  - tsconfig.json
+
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+  posterAt: 3
+
+output:
+  mp4: ../img/00-introduction.mp4
+  webp: null
+  poster: ../img/00-introduction-poster.png
+
+budgets:
+  maxDuration: 26
+  maxBytes: 2500000
+
+# MovieTutorial.Web as `dotnet new serene` leaves it: no demo data, no Movie
+# module yet. The solution node comes first, its child is the project.
+treeCreated:
+  "Solution 'MovieTutorial' (1 of 1 project)":
+    MovieTutorial.Web:
+      - Dependencies/
+      - Properties/
+      - .config/
+      - App_Data/
+      - Imports/:
+          - ClientTypes/
+          - MVC/
+      - Initialization/
+      - Migrations/:
+          - DefaultDB/
+      - Modules/:
+          - Administration/
+          - Common/
+          - Membership/
+          - ServerTypes/
+      - texts/:
+          - resources/
+      - Views/:
+          - Errors/
+          - Shared/
+      - wwwroot/:
+          - Content/
+      - .editorconfig
+      - .npmrc
+      - appsettings.Development.json
+      - appsettings.bundles.json
+      - appsettings.json
+      - MovieTutorial.Web.csproj
+      - MovieTutorial.Web.slnx
+      - package.json
+      - sergen.json
+      - tsbuild.js
+      - tsconfig.json
+      - tslint.json
+      - web.config
+
+steps:
+  - startWindow: true
+    spotlight: "#start-create"
+    caption: "Visual Studio opens on the welcome screen"
+    hold: 2.6
+
+  - startWindow: false
+    click: "#start-create"
+    wizard: { step: templates }
+    spotlight: "#wiz-search"
+    caption: "Search for the Serene template"
+    hold: 0.9
+
+  - type: Serene
+    typeSpeed: 90
+    into: wizard.search
+    spotlight: "#wiz-search"
+    caption: "Type the template name"
+    hold: 1.2
+
+  - click: "#template-serene"
+    wizard: { template: "Serene (serenity.is)" }
+    spotlight: "#template-serene"
+    caption: "Serene (serenity.is) scaffolds the whole application"
+    hold: 1.8
+
+  - click: "#wiz-next"
+    wizard: { step: configure }
+    spotlight: "#wiz-name"
+    caption: "Name the project MovieTutorial"
+    hold: 1.4
+
+  # typing replaces the default name, so the field starts empty
+  - wizard: { projectName: "" }
+    type: MovieTutorial
+    typeSpeed: 95
+    into: wizard.projectName
+    spotlight: "#wiz-name"
+    caption: "The solution and project are created in the same folder"
+    hold: 1.8
+
+  - click: "#wiz-next"
+    wizard: { step: additional }
+    spotlight: "#wiz-modules"
+    caption: "Keep the demo modules for now"
+    hold: 2.0
+
+  - click: "#wiz-create"
+    wizard: { step: creating, progress: 0 }
+    progress: 1600
+    spotlight: "#wiz-create"
+    caption: "Visual Studio creates the project"
+    hold: 0.6
+
+  - startWindow: false
+    wizard: null
+    solution: MovieTutorial.Web
+    tree: "@treeCreated"
+    treeScroll: top
+    open: tsconfig.json
+    bottomTab: Output
+    output:
+      - "Build succeeded."
+      - "    0 Warning(s)"
+      - "    0 Error(s)"
+      - ""
+      - "Time Elapsed 00:00:01.57"
+      - "added 17 packages, and audited 18 packages in 3s"
+      - "found 0 vulnerabilities"
+    spotlight: "node:MovieTutorial.Web"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "MovieTutorial.Web is a TypeScript and .NET web application"
+    hold: 3.0

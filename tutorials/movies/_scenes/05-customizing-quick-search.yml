@@ -1,0 +1,302 @@
+# Storyboard for tutorials/movies/05-customizing-quick-search.md
+#
+# Render + publish:  pnpm media app-fixture --edits 05   (once)
+#                    pnpm media --id 05-customizing-quick-search --publish
+#
+# The chapter adds sample data with a new migration, then broadens quick search
+# on the server and adds a field selector on the client.
+
+id: 05-customizing-quick-search
+title: Customizing quick search
+edits: "05"          # the fixture must be built with this profile
+chrome: browser      # the app steps show a browser window
+login: false         # already shown in 02b: sign in before the first frame
+
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+
+# start with the Solution Explorer and add the sample-data migration through
+# the same Add New Item dialog used in chapter 01
+open: null
+files:
+  DefaultDB_20221114_1703_MovieData.cs: { snippet: "DefaultDB_20221114_1703_MovieData.cs" }
+  MovieRow.cs: { snippet: "MovieRow_05.cs" }
+  MovieGrid.tsx: { snippet: "MovieGrid_05.tsx" }
+
+treeBefore:
+  from: "@02-generate-code/treeAfter"
+  replace:
+    MovieTutorial.Web/Imports: {}
+    MovieTutorial.Web/Modules/Administration: {}
+    MovieTutorial.Web/Modules/Common: {}
+    MovieTutorial.Web/Modules/Membership: {}
+    MovieTutorial.Web/Modules/MovieDB/Movie: {}
+    MovieTutorial.Web/Modules/ServerTypes: {}
+    MovieTutorial.Web/texts: {}
+    MovieTutorial.Web/Views: {}
+    MovieTutorial.Web/wwwroot: {}
+
+treeAfter:
+  from: "@treeBefore"
+  add:
+    MovieTutorial.Web/Migrations/DefaultDB/:
+      - DefaultDB_20221114_1703_MovieData.cs
+
+tree: "@treeBefore"
+
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+  posterAt: 38
+
+output:
+  mp4: ../img/05-customizing-quick-search.mp4
+  webp: null
+  poster: ../img/05-customizing-quick-search-poster.png
+
+budgets:
+  maxDuration: 75
+  maxBytes: 4_000_000
+
+steps:
+  # 1. add the sample data migration
+  - treeScroll: top
+    spotlight: "node:DefaultDB"
+    caption: "The DefaultDB migrations run before the Movie table is used"
+    hold: 1.6
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "Right-click DefaultDB to add a migration"
+    hold: 1.4
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Add opens the item types"
+    hold: 1.2
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "New Item... asks for a file name"
+    hold: 1.2
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "Name it after the migration date and purpose"
+    hold: 0.9
+
+  - addItem: { name: "" }
+    type: DefaultDB_20221114_1703_MovieData.cs
+    typeSpeed: 18
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "DefaultDB_yyyyMMdd_HHmm_Description"
+    hold: 0.7
+
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfter"
+    open: DefaultDB_20221114_1703_MovieData.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:DefaultDB_20221114_1703_MovieData.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "The migration appears in Migrations/DefaultDB"
+    hold: 1.0
+
+  # reveal the pasted sample rows; the chapter does not ask the viewer to retype
+  - code: 34
+    codeMs: 1600
+    spotlight: null
+    caption: null
+    hold: 0.8
+
+  - highlight: ["10-28"]
+    spotlight: "line:10"
+    caption: "The sample rows are inserted when the migration runs"
+    hold: 2.2
+
+  # 2. run the app once so the migration inserts the movies
+  - click: "#tb-start"
+    debug: running
+    bottomTab: Output
+    output:
+      - "Build succeeded."
+      - "    0 Warning(s)"
+      - "    0 Error(s)"
+      - ""
+      - "Now listening on: https://localhost:50263"
+      - "Application started. Press Ctrl+C to shut down."
+      - "Serenity.Data.SqlConnections: Debug: SQL - INSERT INTO [Movie] ..."
+    status: "Web server is listening on port 50263"
+    spotlight: "#tb-start"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "Press F5: the migration inserts the sample data"
+    hold: 2.0
+
+  - screen: app
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    spotlight: ".s-GridContainer, #GridDiv"
+    caption: "Seven sample movies are now in the grid"
+    hold: 2.4
+
+  # 3. enable quick search on Description and Storyline, and exact search on Year
+  - open: MovieRow.cs
+    highlight: ["16-16"]
+    spotlight: "line:16"
+    caption: "QuickSearch on Title only uses the name field"
+    hold: 1.6
+
+  - edit:
+      file: MovieRow.cs
+      find: '[DisplayName("Description")]'
+      replace: '[DisplayName("Description"), Size(1000), QuickSearch]'
+    editMs: 900
+    highlight: ["16-16"]
+    spotlight: "line:16"
+    caption: "Add QuickSearch to Description"
+    hold: 0.8
+
+  - edit:
+      file: MovieRow.cs
+      find: '[DisplayName("Storyline")]'
+      replace: '[DisplayName("Storyline"), QuickSearch]'
+    editMs: 600
+    highlight: ["19-19"]
+    spotlight: "line:19"
+    caption: "…and to Storyline"
+    hold: 0.8
+
+  - edit:
+      file: MovieRow.cs
+      find: '[DisplayName("Year")]'
+      replace: '[DisplayName("Year"), QuickSearch(SearchType.Equals, numericOnly: 1)]'
+    editMs: 900
+    highlight: ["22-22"]
+    spotlight: "line:22"
+    caption: "Year gets an exact numeric search"
+    hold: 1.2
+
+  - screen: app
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    type: Gandalf
+    into: ".s-QuickSearchInput"
+    typeSpeed: 55
+    spotlight: ".s-GridContainer, #GridDiv"
+    caption: "Gandalf now finds The Lord of the Rings"
+    hold: 2.2
+
+  # 4. let the user choose which field to search
+  - open: MovieGrid.tsx
+    highlight: ["5-13"]
+    spotlight: "line:5"
+    caption: "The grid controls its own quick search fields"
+    hold: 1.4
+
+  - edit:
+      file: MovieGrid.tsx
+      find: "import { EntityGrid } from '@serenity-is/corelib';"
+      replace: "import { EntityGrid, QuickSearchField } from '@serenity-is/corelib';"
+    editMs: 700
+    highlight: ["1-1"]
+    spotlight: "line:1"
+    caption: "Import QuickSearchField"
+    hold: 0.6
+
+  - edit:
+      file: MovieGrid.tsx
+      find: "    protected override getService() { return MovieService.baseUrl; }"
+      replace: |4
+              protected override getQuickSearchFields(): QuickSearchField[] {
+                  return [
+                      { name: "", title: "All" },
+                      { name: "Description", title: "Description" },
+                      { name: "Storyline", title: "Storyline" },
+                      { name: "Year", title: "Year" }
+                  ];
+              }
+
+              protected override getService() { return MovieService.baseUrl; }
+    editMs: 1300
+    highlight: ["8-17"]
+    spotlight: "line:8"
+    caption: "Return the fields the user can choose from"
+    hold: 1.8
+
+  - screen: app
+    goto: /MovieDB/Movie
+    click: ".quick-search-field-toggle"
+    waitFor: "#GridDiv .dropdown-item"
+    spotlight: ".quick-search-field-toggle"
+    caption: "A field selector appears next to the search box"
+    hold: 1.6
+
+  - screen: app
+    click: '#GridDiv .dropdown-item:text-is("Storyline")'
+    waitFor: "#GridDiv"
+    type: ticki
+    into: ".s-QuickSearchInput"
+    typeSpeed: 60
+    spotlight: ".s-GridContainer, #GridDiv"
+    caption: "Search only Storyline: ticki finds Fight Club"
+    hold: 2.2
+
+  # 5. use localized field titles instead of hardcoded strings
+  - edit:
+      file: MovieGrid.tsx
+      find: "import { EntityGrid, QuickSearchField } from '@serenity-is/corelib';"
+      replace: "import { EntityGrid, localText, QuickSearchField } from '@serenity-is/corelib';"
+    editMs: 500
+    highlight: ["1-1"]
+    spotlight: "line:1"
+    caption: "Import localText for translated field titles"
+    hold: 0.6
+
+  - edit:
+      file: MovieGrid.tsx
+      find: |-4
+              protected override getQuickSearchFields(): QuickSearchField[] {
+                  return [
+                      { name: "", title: "All" },
+                      { name: "Description", title: "Description" },
+                      { name: "Storyline", title: "Storyline" },
+                      { name: "Year", title: "Year" }
+                  ];
+              }
+      replace: |-4
+              protected override getQuickSearchFields(): QuickSearchField[] {
+                  const txt = (s: string) => localText(`Db.${MovieRow.localTextPrefix}.${s}`);
+                  const fld = MovieRow.Fields;
+                  return [
+                      { name: "", title: "All" },
+                      { name: fld.Description, title: txt(fld.Description) },
+                      { name: fld.Storyline, title: txt(fld.Storyline) },
+                      { name: fld.Year, title: txt(fld.Year) }
+                  ];
+              }
+    editMs: 1300
+    highlight: ["12-23"]
+    spotlight: "line:12"
+    caption: "Use MovieRow.Fields and localized titles"
+    hold: 2.4
+
+  - screen: app
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    spotlight: ".s-GridContainer, #GridDiv"
+    caption: "The same selector, now built from field and local-text metadata"
+    hold: 2.4

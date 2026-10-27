@@ -4,7 +4,8 @@
 
 Before we dive into the upcoming sections, it's essential to have some sample data. You have two options: manually entering data or saving time by using the sample data provided in a migration file. You can find the migration file [here](https://gist.github.com/volkanceylan/0b3e71de6247ad9963e33889f85003bc).
 
-<video alt="Customizing Quick Search Animation" controls>
+<video alt="Customizing Quick Search Animation" controls preload="metadata"
+  poster="img/05-customizing-quick-search-poster.png">
   <source src="img/05-customizing-quick-search.mp4" type="video/mp4">
 </video>
 

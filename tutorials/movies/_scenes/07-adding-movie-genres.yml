@@ -1,0 +1,439 @@
+# Storyboard for tutorials/movies/07-adding-movie-genres.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/movies/_scenes/07-adding-movie-genres.yml --stages
+# Render + publish:  pnpm media --id 07-adding-movie-genres --publish
+#
+# The chapter adds a Genre table and Movie.GenreId, generates the Genre module,
+# maps the join, and turns the numeric GenreId into a lookup editor.
+
+id: 07-adding-movie-genres
+title: Adding movie genres
+edits: "07"
+chrome: browser
+login: false
+
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+
+open: null
+files:
+  DefaultDB_20221114_1836_GenreTable.cs: { snippet: "DefaultDB_20221114_1836_GenreTable.cs" }
+  MovieDBNavigation.cs:
+    snippet: "MovieDBNavigation_07.cs"
+    fixturePath: Modules/MovieDB/MovieDBNavigation.cs
+  MovieRow.cs:
+    snippet: "MovieRow_07.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieRow.cs
+  MovieForm.cs:
+    snippet: "MovieForm_07.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieForm.cs
+  MovieColumns.cs:
+    snippet: "MovieColumns_07.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieColumns.cs
+  GenreRow.cs:
+    snippet: "GenreRow_07.cs"
+    fixturePath: Modules/MovieDB/Genre/GenreRow.cs
+
+verify:
+  MovieDBNavigation.cs: Modules/MovieDB/MovieDBNavigation.cs
+  MovieRow.cs: Modules/MovieDB/Movie/MovieRow.cs
+  MovieForm.cs: Modules/MovieDB/Movie/MovieForm.cs
+  MovieColumns.cs: Modules/MovieDB/Movie/MovieColumns.cs
+  GenreRow.cs: Modules/MovieDB/Genre/GenreRow.cs
+
+treeBefore:
+  from: "@06-adding-movie-kind-field/treeAfter"
+
+treeAfterMigration:
+  from: "@treeBefore"
+  add:
+    MovieTutorial.Web/Migrations/DefaultDB/:
+      - DefaultDB_20221114_1836_GenreTable.cs
+
+treeAfterSergen:
+  from: "@treeAfterMigration"
+  add:
+    MovieTutorial.Web/Modules/MovieDB/Genre/:
+      - GenreColumns.cs
+      - GenreDialog.tsx
+      - GenreEndpoint.cs
+      - GenreForm.cs
+      - GenreGrid.tsx
+      - GenrePage.cs
+      - GenrePage.tsx
+      - GenreRow.cs
+    MovieTutorial.Web/Modules/ServerTypes/MovieDB/:
+      - GenreColumns.ts
+      - GenreForm.ts
+      - GenreRow.ts
+      - GenreService.ts
+
+tree: "@treeBefore"
+
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+  posterAt: 72
+
+output:
+  mp4: ../img/07-adding-movie-genres.mp4
+  webp: null
+  poster: ../img/07-adding-movie-genres-poster.png
+
+budgets:
+  maxDuration: 140
+  maxBytes: 6_000_000
+
+appStages:
+  - id: genre
+    edits: 0
+  - id: nav
+    edits: 1
+  - id: mapped
+    edits: 6
+  - id: editor
+    edits: 8
+  - id: inplace
+    edits: 9
+
+steps:
+  # 1. add the Genre migration
+  - treeScroll: top
+    spotlight: "node:DefaultDB"
+    caption: "Add a second migration without touching the existing ones"
+    hold: 1.2
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "Right-click DefaultDB"
+    hold: 1.0
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Add a new item"
+    hold: 0.8
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Create the Genre migration"
+    hold: 0.8
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.6
+
+  - addItem: { name: "" }
+    type: DefaultDB_20221114_1836_GenreTable.cs
+    typeSpeed: 17
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.4
+
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfterMigration"
+    open: DefaultDB_20221114_1836_GenreTable.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:DefaultDB_20221114_1836_GenreTable.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "The Genre migration sits after the Movie migrations"
+    hold: 0.9
+
+  - code: 24
+    codeMs: 1800
+    spotlight: null
+    caption: null
+    hold: 0.7
+
+  - highlight: ["8-22"]
+    spotlight: null
+    caption: "Create the Genre table and add Movie.GenreId"
+    hold: 2.2
+
+  # 2. generate the Genre module with sergen
+  - terminal: { open: true }
+    bottomHeight: 430
+    spotlight: terminal
+    caption: "Run sergen after the migration"
+    hold: 1.0
+
+  - type: dotnet sergen g
+    typeSpeed: 55
+    spotlight: terminal
+    pointerAt: { x: 0.34, y: 0.29 }
+    caption: "Generate code for the new table"
+    hold: 0.5
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Available Connections", kind: section }
+        - { text: "> Default", kind: picked }
+        - { text: "  Northwind", kind: row }
+    spotlight: terminal
+    caption: "Pick the Default connection"
+    hold: 1.4
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Select tables for code generation (single/multiple)", kind: section }
+        - { text: "" }
+        - { text: "  [ ] dbo.Exceptions", kind: row }
+        - { text: "  [ ] dbo.Genre", kind: row }
+        - { text: "  [ ] dbo.Languages", kind: row }
+        - { text: "  [ ] dbo.Movie", kind: row }
+        - { text: "  [ ] dbo.Roles", kind: row }
+        - { text: "  [ ] dbo.Users", kind: row }
+        - { text: "" }
+        - { text: "(Press <space> to select/unselect, <enter> to accept)", kind: dim }
+    spotlight: terminal
+    caption: "Select Genre"
+    hold: 1.8
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Select tables for code generation (single/multiple)", kind: section }
+        - { text: "" }
+        - { text: "  [ ] dbo.Exceptions", kind: row }
+        - { text: "> [X] dbo.Genre", kind: picked }
+        - { text: "  [ ] dbo.Languages", kind: row }
+        - { text: "  [ ] dbo.Movie", kind: row }
+        - { text: "  [ ] dbo.Roles", kind: row }
+        - { text: "  [ ] dbo.Users", kind: row }
+        - { text: "" }
+        - { text: "(Press <space> to select/unselect, <enter> to accept)", kind: dim }
+    spotlight: terminal
+    caption: "dbo.Genre is selected"
+    hold: 1.2
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Enter a Module name for table **dbo.Genre** (**Default**): MovieDB", kind: row }
+        - { text: "" }
+        - { text: "Enter a class Identifier for table **dbo.Genre** (**Genre**): Genre", kind: row }
+        - { text: "Enter a Permission Key for table **dbo.Genre** (**Administration:General**): Administration:General", kind: row }
+    spotlight: terminal
+    caption: "MovieDB / Genre / Administration:General"
+    hold: 2.0
+
+  - terminal:
+      lines:
+        - { text: "" }
+        - { text: "Choose What to Generate", kind: section }
+        - { text: "> [X] All", kind: picked }
+        - { text: "  [X] Row", kind: row }
+        - { text: "  [X] Services", kind: row }
+        - { text: "  [X] User Interface", kind: row }
+        - { text: "  [X] Custom", kind: row }
+    spotlight: terminal
+    caption: "Generate everything"
+    hold: 1.6
+
+  - tree: "@treeAfterSergen"
+    terminal: { open: false }
+    open: GenreRow.cs
+    reveal: null
+    spotlight: "node:GenreRow.cs"
+    caption: "The Genre files appear in the MovieDB module"
+    hold: 1.4
+
+  # 3. show the generated Genres page
+  - screen: app
+    appStage: genre
+    goto: /MovieDB/Genre
+    waitFor: "#GridDiv"
+    spotlight: "#GridDiv"
+    caption: "The generated Genres page lists the sample genres"
+    hold: 2.2
+
+  # 4. move Genres under the customized Movie Database section
+  - open: MovieDBNavigation.cs
+    reveal: null
+    highlight: ["5-5"]
+    spotlight: "line:5"
+    caption: "Sergen used the default MovieDB section"
+    hold: 1.2
+
+  - edit:
+      file: MovieDBNavigation.cs
+      find: '[assembly: NavigationLink(int.MaxValue, "MovieDB/Genre", typeof(MyPages.GenrePage), icon: null)]'
+      replace: '[assembly: NavigationLink(6200, "Movie Database/Genres", typeof(MyPages.GenrePage), icon: "fa-thumb-tack")]'
+    editMs: 900
+    highlight: ["5-5"]
+    spotlight: null
+    caption: "Move Genres below Movies"
+    hold: 1.4
+
+  - screen: app
+    appStage: nav
+    goto: /MovieDB/Genre
+    waitFor: "#GridDiv"
+    spotlight: "#GridDiv"
+    caption: "Genres now lives under Movie Database"
+    hold: 2.0
+
+  # 5. map the join on the Movie entity
+  - open: MovieRow.cs
+    reveal: null
+    spotlight: "node:MovieRow.cs"
+    caption: "Add the GenreId field and its join"
+    hold: 0.9
+
+  - edit:
+      file: MovieRow.cs
+      insertBefore: '    [DisplayText("Movie Id")'
+      text: "    const string jGenre = nameof(jGenre);\n\n"
+    editMs: 500
+    highlight: ["9-10"]
+    spotlight: null
+    caption: "The join alias is shared by the attributes"
+    hold: 0.7
+
+  - edit:
+      file: MovieRow.cs
+      find: "    [DisplayText(\"Kind\"), NotNull, DefaultValue(MovieKind.Film)]\n    public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }"
+      replace: "    [DisplayText(\"Kind\"), NotNull, DefaultValue(MovieKind.Film)]\n    public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }\n\n    [DisplayText(\"Genre\"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]\n    public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }\n\n    [DisplayText(\"Genre\"), Expression($\"{jGenre}.Name\")]\n    public string? GenreName { get => fields.GenreName[this]; set => fields.GenreName[this] = value; }"
+    editMs: 1200
+    highlight: ["31-40"]
+    spotlight: null
+    caption: "GenreId is the foreign key; GenreName comes from the join"
+    hold: 1.6
+
+  - edit:
+      file: MovieRow.cs
+      find: "        public EnumField<MovieKind> Kind = null!;"
+      replace: "        public EnumField<MovieKind> Kind = null!;\n        public Int32Field GenreId = null!;\n        public StringField GenreName = null!;"
+    editMs: 700
+    highlight: ["43-45"]
+    spotlight: null
+    caption: "Add both fields to RowFields"
+    hold: 1.0
+
+  - open: MovieForm.cs
+    reveal: null
+    edit:
+      file: MovieForm.cs
+      find: "    public MovieKind? Kind { get; set; }"
+      replace: "    public MovieKind? Kind { get; set; }\n    public int? GenreId { get; set; }"
+    editMs: 700
+    highlight: ["15-16"]
+    spotlight: null
+    caption: "Move GenreId into the movie form"
+    hold: 1.0
+
+  - open: MovieColumns.cs
+    reveal: null
+    edit:
+      file: MovieColumns.cs
+      find: "    public MovieKind? Kind { get; set; }"
+      replace: "    public MovieKind? Kind { get; set; }\n    public string? GenreName { get; set; }"
+    editMs: 700
+    highlight: ["17-18"]
+    spotlight: null
+    caption: "Show the joined genre name in the grid"
+    hold: 1.0
+
+  # 6. see the integer field before adding the lookup editor
+  - screen: app
+    appStage: mapped
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    scroll: { selector: "#GridDiv .slick-viewport", left: 10000 }
+    spotlight: "#GridDiv"
+    caption: "The grid now has a Genre column"
+    hold: 2.0
+
+  - screen: app
+    appStage: mapped
+    goto: /MovieDB/Movie
+    click: .add-button
+    waitFor: .s-MovieDialog
+    spotlight: ".s-MovieDialog [name=GenreId]"
+    caption: "At first GenreId is just an integer input"
+    hold: 2.2
+
+  # 7. declare the lookup and use a lookup editor
+  - open: GenreRow.cs
+    reveal: null
+    edit:
+      file: GenreRow.cs
+      insertBefore: "public sealed class GenreRow"
+      text: |
+        [LookupScript]
+    editMs: 550
+    highlight: ["8-9"]
+    spotlight: null
+    caption: "GenreRow becomes a client-side lookup"
+    hold: 1.0
+
+  - open: MovieRow.cs
+    reveal: null
+    edit:
+      file: MovieRow.cs
+      insertBefore: "    public int? GenreId"
+      text: "    [LookupEditor(typeof(GenreRow))]\n"
+    editMs: 650
+    highlight: ["33-36"]
+    spotlight: null
+    caption: "Use the Genre lookup for GenreId"
+    hold: 1.2
+
+  - screen: app
+    appStage: editor
+    goto: /MovieDB/Movie
+    click: .add-button
+    waitFor: .s-MovieDialog
+    spotlight: ".s-MovieDialog [name=GenreId]"
+    caption: "GenreId is now a searchable dropdown"
+    hold: 2.2
+
+  # 8. allow adding a genre without leaving the dialog
+  - open: MovieRow.cs
+    reveal: null
+    highlight: ["33-36"]
+    spotlight: "line:33"
+    caption: "Enable InplaceAdd on the lookup editor"
+    hold: 0.9
+
+  - edit:
+      file: MovieRow.cs
+      find: "[LookupEditor(typeof(GenreRow))]"
+      replace: "[LookupEditor(typeof(GenreRow), InplaceAdd = true)]"
+    editMs: 600
+    highlight: ["33-33"]
+    spotlight: "line:33"
+    caption: "InplaceAdd shows the star button"
+    hold: 1.0
+
+  - screen: app
+    appStage: inplace
+    goto: /MovieDB/Movie
+    click: .add-button
+    waitFor: .s-MovieDialog
+    spotlight: ".s-MovieDialog [name=GenreId]"
+    caption: "The Genre dropdown can now add a new genre in place"
+    hold: 2.4

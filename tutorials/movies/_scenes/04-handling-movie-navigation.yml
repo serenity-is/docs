@@ -1,6 +1,6 @@
 # Storyboard for tutorials/movies/04-handling-movie-navigation.md
 #
-# Render + publish:  pnpm media app-fixture --edits 04   (once)
+# Render + publish:  pnpm media app-fixture --scenario ../web/Docs/tutorials/movies/_scenes/04-handling-movie-navigation.yml   (once)
 #                    pnpm media --id 04-handling-movie-navigation --publish
 #
 # The editor starts with the file sergen generated. The chapter changes the
@@ -22,7 +22,12 @@ stage:
 # file is opened by clicking it in the next step.
 open: null
 files:
-  MovieDBNavigation.cs: { snippet: "MovieDBNavigation.cs" }
+  MovieDBNavigation.cs:
+    snippet: "MovieDBNavigation.cs"
+    fixturePath: Modules/MovieDB/MovieDBNavigation.cs
+
+verify:
+  MovieDBNavigation.cs: Modules/MovieDB/MovieDBNavigation.cs
 
 # same generated project tree as chapter 02, but collapsed so the navigation
 # file is visible without scrolling through migrations and unrelated modules

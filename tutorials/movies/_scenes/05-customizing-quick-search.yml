@@ -1,6 +1,6 @@
 # Storyboard for tutorials/movies/05-customizing-quick-search.md
 #
-# Render + publish:  pnpm media app-fixture --edits 05   (once)
+# Render + publish:  pnpm media app-fixture --scenario ../web/Docs/tutorials/movies/_scenes/05-customizing-quick-search.yml   (once)
 #                    pnpm media --id 05-customizing-quick-search --publish
 #
 # The chapter adds sample data with a new migration, then broadens quick search
@@ -22,8 +22,16 @@ stage:
 open: null
 files:
   DefaultDB_20221114_1703_MovieData.cs: { snippet: "DefaultDB_20221114_1703_MovieData.cs" }
-  MovieRow.cs: { snippet: "MovieRow_05.cs" }
-  MovieGrid.tsx: { snippet: "MovieGrid_05.tsx" }
+  MovieRow.cs:
+    snippet: "MovieRow_05.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieRow.cs
+  MovieGrid.tsx:
+    snippet: "MovieGrid_05.tsx"
+    fixturePath: Modules/MovieDB/Movie/MovieGrid.tsx
+
+verify:
+  MovieRow.cs: Modules/MovieDB/Movie/MovieRow.cs
+  MovieGrid.tsx: Modules/MovieDB/Movie/MovieGrid.tsx
 
 treeBefore:
   from: "@02-generate-code/treeAfter"
@@ -219,8 +227,10 @@ steps:
 
   - edit:
       file: MovieGrid.tsx
-      find: "    protected override getService() { return MovieService.baseUrl; }"
+      find: "    protected override getService() { return MovieService.baseUrl; }\n}"
       replace: |4
+              protected override getService() { return MovieService.baseUrl; }
+
               protected override getQuickSearchFields(): QuickSearchField[] {
                   return [
                       { name: "", title: "All" },
@@ -229,10 +239,9 @@ steps:
                       { name: "Year", title: "Year" }
                   ];
               }
-
-              protected override getService() { return MovieService.baseUrl; }
+          }
     editMs: 1300
-    highlight: ["8-17"]
+    highlight: ["8-18"]
     spotlight: "line:8"
     caption: "Return the fields the user can choose from"
     hold: 1.8

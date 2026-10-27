@@ -9,5 +9,4 @@ export class MovieGrid extends EntityGrid<MovieRow> {
     protected override getDialogType() { return MovieDialog; }
     protected override getRowDefinition() { return MovieRow; }
     protected override getService() { return MovieService.baseUrl; }
-
 }

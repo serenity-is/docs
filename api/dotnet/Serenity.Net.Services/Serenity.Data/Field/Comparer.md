@@ -1,10 +1,14 @@
-# Field.comparer field
+# Field.Comparer property
 
-The comparer used by [`IndexCompare`](./IndexCompare.md) by default.
+Gets the comparer used by [`IndexCompare`](./IndexCompare.md) when no comparer is passed explicitly. Set the protected `comparer` field during field initialization to configure it.
 
 ```csharp
-protected internal IComparer? comparer;
+public IComparer? Comparer { get; }
 ```
+
+## Property Value
+
+The comparer.
 
 ## See Also
 

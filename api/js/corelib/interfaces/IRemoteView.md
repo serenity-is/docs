@@ -130,7 +130,7 @@ Event fired when the row count changes
 
 > `readonly` `optional` **onRowsChanged**: `EventEmitter`\<\{ `rows`: `number`[]; \}\>
 
-Defined in: [../sleekgrid/dist/index.d.ts:2501](https://github.com/serenity-is/serenity/blob/master/dist/index.d.ts#L2501)
+Defined in: [../sleekgrid/dist/index.d.ts:2501](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L2501)
 
 Event fired when specific view rows change (values or metadata).
 Payload is `{ rows }` with the list of affected view indices.
@@ -425,7 +425,7 @@ Array of filtered items
 
 > **getGrandTotals**(): `IGroupTotals`
 
-Defined in: [../sleekgrid/dist/index.d.ts:2469](https://github.com/serenity-is/serenity/blob/master/dist/index.d.ts#L2469)
+Defined in: [../sleekgrid/dist/index.d.ts:2469](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L2469)
 
 Gets grand totals aggregated over the entire data set.
 
@@ -533,7 +533,7 @@ The index of the item, or undefined if not found
 
 > **getItem**(`row`): `IGroupTotals`\<`any`\> \| `TItem` \| `Group`\<`TItem`\>
 
-Defined in: [../sleekgrid/dist/index.d.ts:2480](https://github.com/serenity-is/serenity/blob/master/dist/index.d.ts#L2480)
+Defined in: [../sleekgrid/dist/index.d.ts:2480](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L2480)
 
 Gets the item at the specified view row.
 
@@ -609,7 +609,7 @@ The item at the specified index
 
 > `optional` **getItemMetadata**(`row`): `ItemMetadata`\<`TItem`\>
 
-Defined in: [../sleekgrid/dist/index.d.ts:2486](https://github.com/serenity-is/serenity/blob/master/dist/index.d.ts#L2486)
+Defined in: [../sleekgrid/dist/index.d.ts:2486](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L2486)
 
 Gets row metadata (CSS classes, per-column overrides) for the specified view row.
 
@@ -681,7 +681,7 @@ Array of all items
 
 > **getLength**(): `number`
 
-Defined in: [../sleekgrid/dist/index.d.ts:2474](https://github.com/serenity-is/serenity/blob/master/dist/index.d.ts#L2474)
+Defined in: [../sleekgrid/dist/index.d.ts:2474](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L2474)
 
 Gets the total number of rows currently in the view (including group headers/totals).
 

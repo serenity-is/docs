@@ -1,12 +1,11 @@
-# QueryWithParams.Parent property
+# QueryWithParams.parent field
 
-Gets access to parent query if any.
+The parent query with param storage.
 
 ```csharp
-public IQueryWithParams? Parent { get; }
+protected QueryWithParams? parent;
 ```
 
 ## See Also
 
-* interface [IQueryWithParams](../IQueryWithParams.md)
 * class [QueryWithParams](../QueryWithParams.md)

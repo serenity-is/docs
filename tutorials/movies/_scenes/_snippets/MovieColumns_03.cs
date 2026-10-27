@@ -4,7 +4,7 @@ namespace MovieTutorial.MovieDB.Columns;
 [BasedOnRow(typeof(MovieRow), CheckNames = true)]
 public class MovieColumns
 {
-    [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+    [EditLink, DisplayText(TextKey = "Db.Shared.RecordId"), AlignRight]
     public int? MovieId { get; set; }
     [EditLink]
     public string? Title { get; set; }

@@ -1,6 +1,6 @@
-﻿import { EntityGrid } from '@serenity-is/corelib';
-import { MovieColumns, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
-import { MovieDialog } from './MovieDialog';
+﻿import { EntityGrid } from "@serenity-is/corelib";
+import { MovieColumns, MovieRow, MovieService } from "../../ServerTypes/MovieDB";
+import { MovieDialog } from "./MovieDialog";
 
 export class MovieGrid extends EntityGrid<MovieRow> {
     static override [Symbol.typeInfo] = this.registerClass("MovieTutorial.MovieDB.");

@@ -170,8 +170,8 @@ steps:
 
   - edit:
       file: MovieRow.cs
-      find: '[DisplayName("Description")]'
-      replace: '[DisplayName("Description"), Size(1000), QuickSearch]'
+      find: '[DisplayText("Description")]'
+      replace: '[DisplayText("Description"), Size(1000), QuickSearch]'
     editMs: 900
     highlight: ["16-16"]
     spotlight: "line:16"
@@ -180,8 +180,8 @@ steps:
 
   - edit:
       file: MovieRow.cs
-      find: '[DisplayName("Storyline")]'
-      replace: '[DisplayName("Storyline"), QuickSearch]'
+      find: '[DisplayText("Storyline")]'
+      replace: '[DisplayText("Storyline"), QuickSearch]'
     editMs: 600
     highlight: ["19-19"]
     spotlight: "line:19"
@@ -190,8 +190,8 @@ steps:
 
   - edit:
       file: MovieRow.cs
-      find: '[DisplayName("Year")]'
-      replace: '[DisplayName("Year"), QuickSearch(SearchType.Equals, numericOnly: 1)]'
+      find: '[DisplayText("Year")]'
+      replace: '[DisplayText("Year"), QuickSearch(SearchType.Equals, numericOnly: 1)]'
     editMs: 900
     highlight: ["22-22"]
     spotlight: "line:22"
@@ -217,8 +217,8 @@ steps:
 
   - edit:
       file: MovieGrid.tsx
-      find: "import { EntityGrid } from '@serenity-is/corelib';"
-      replace: "import { EntityGrid, QuickSearchField } from '@serenity-is/corelib';"
+      find: "import { EntityGrid } from \"@serenity-is/corelib\";"
+      replace: "import { EntityGrid, QuickSearchField } from \"@serenity-is/corelib\";"
     editMs: 700
     highlight: ["1-1"]
     spotlight: "line:1"
@@ -267,8 +267,8 @@ steps:
   # 5. use localized field titles instead of hardcoded strings
   - edit:
       file: MovieGrid.tsx
-      find: "import { EntityGrid, QuickSearchField } from '@serenity-is/corelib';"
-      replace: "import { EntityGrid, localText, QuickSearchField } from '@serenity-is/corelib';"
+      find: "import { EntityGrid, QuickSearchField } from \"@serenity-is/corelib\";"
+      replace: "import { EntityGrid, localText, QuickSearchField } from \"@serenity-is/corelib\";"
     editMs: 500
     highlight: ["1-1"]
     spotlight: "line:1"

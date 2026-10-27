@@ -89,13 +89,13 @@ steps:
 
   - highlight: ["28-28"]
     spotlight: "line:28"
-    caption: "Change Runtime's DisplayName on the entity"
+    caption: "Change Runtime's DisplayText on the entity"
     hold: 0.5
 
   - edit:
       file: MovieRow.cs
-      find: '[DisplayName("Runtime")]'
-      replace: '[DisplayName("Runtime (mins)")]'
+      find: '[DisplayText("Runtime")]'
+      replace: '[DisplayText("Runtime (mins)")]'
     editMs: 900
     highlight: ["28-28"]
     spotlight: "line:28"
@@ -120,7 +120,7 @@ steps:
   - edit:
       file: MovieColumns.cs
       find: '    public int? Runtime { get; set; }'
-      replace: "    [DisplayName(\"Runtime in Minutes\"), Width(150), AlignRight]\n    public int? Runtime { get; set; }"
+      replace: "    [DisplayText(\"Runtime in Minutes\"), Width(150), AlignRight]\n    public int? Runtime { get; set; }"
     editMs: 1000
     highlight: ["14-16"]
     spotlight: "line:14"
@@ -202,13 +202,13 @@ steps:
   - open: MovieRow.cs
     highlight: ["4-4"]
     spotlight: "line:4"
-    caption: "The row's DisplayName also names the page"
+    caption: "The row's DisplayText also names the page"
     hold: 0.8
 
   - edit:
       file: MovieRow.cs
-      find: '[DisplayName("Movie"), InstanceName("Movie")]'
-      replace: '[DisplayName("Movies"), InstanceName("Movie")]'
+      find: '[DisplayText("Movie"), InstanceName("Movie")]'
+      replace: '[DisplayText("Movies"), InstanceName("Movie")]'
     editMs: 750
     highlight: ["4-4"]
     spotlight: "line:4"

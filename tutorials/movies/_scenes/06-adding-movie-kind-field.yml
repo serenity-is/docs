@@ -1,0 +1,309 @@
+# Storyboard for tutorials/movies/06-adding-movie-kind-field.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/movies/_scenes/06-adding-movie-kind-field.yml --stages
+# Render + publish:  pnpm media --id 06-adding-movie-kind-field --publish
+#
+# The chapter adds a migration for the Kind column, a MovieKind enum, and the
+# matching row/form/columns fields, then shows the new dropdown and its default.
+
+id: 06-adding-movie-kind-field
+title: Adding a movie kind field
+edits: "06"
+chrome: browser
+login: false
+
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+
+open: null
+files:
+  DefaultDB_20221114_1825_MovieKind.cs: { snippet: "DefaultDB_20221114_1825_MovieKind.cs" }
+  MovieKind.cs: { snippet: "MovieKind.cs" }
+  MovieRow.cs:
+    snippet: "MovieRow_06.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieRow.cs
+  MovieForm.cs:
+    snippet: "MovieForm_06.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieForm.cs
+  MovieColumns.cs:
+    snippet: "MovieColumns_06.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieColumns.cs
+
+verify:
+  MovieRow.cs: Modules/MovieDB/Movie/MovieRow.cs
+  MovieForm.cs: Modules/MovieDB/Movie/MovieForm.cs
+  MovieColumns.cs: Modules/MovieDB/Movie/MovieColumns.cs
+
+fixtureFiles:
+  Modules/MovieDB/Movie/MovieKind.cs: |
+    namespace MovieTutorial.MovieDB;
+
+    [EnumKey("MovieDB.MovieKind")]
+    public enum MovieKind
+    {
+        [DescriptionText("Film")]
+        Film = 1,
+        [DescriptionText("TV Series")]
+        TvSeries = 2,
+        [DescriptionText("Mini Series")]
+        MiniSeries = 3
+    }
+
+treeBefore:
+  from: "@05-customizing-quick-search/treeAfter"
+
+treeAfterMigration:
+  from: "@treeBefore"
+  add:
+    MovieTutorial.Web/Migrations/DefaultDB/:
+      - DefaultDB_20221114_1825_MovieKind.cs
+
+treeAfter:
+  from: "@treeAfterMigration"
+  add:
+    MovieTutorial.Web/Modules/MovieDB/Movie/:
+      - MovieKind.cs
+
+tree: "@treeBefore"
+
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+  posterAt: 27
+
+output:
+  mp4: ../img/06-adding-movie-kind-field.mp4
+  webp: null
+  poster: ../img/06-adding-movie-kind-field-poster.png
+
+budgets:
+  maxDuration: 60
+  maxBytes: 3_500_000
+
+appStages:
+  - id: withKind
+    edits: 4
+  - id: default
+    edits: 5
+
+steps:
+  # 1. add the migration
+  - treeScroll: top
+    spotlight: "node:DefaultDB"
+    caption: "The existing migrations are never edited"
+    hold: 1.2
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "Right-click DefaultDB to add a migration"
+    hold: 1.0
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Add a new item"
+    hold: 0.8
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "New migration file"
+    hold: 0.8
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "Name the migration after its date and purpose"
+    hold: 0.6
+
+  - addItem: { name: "" }
+    type: DefaultDB_20221114_1825_MovieKind.cs
+    typeSpeed: 18
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.4
+
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfterMigration"
+    open: DefaultDB_20221114_1825_MovieKind.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:DefaultDB_20221114_1825_MovieKind.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "A new migration, separate from the existing ones"
+    hold: 0.8
+
+  - code: 13
+    codeMs: 1500
+    spotlight: null
+    caption: null
+    hold: 0.6
+
+  - highlight: ["8-12"]
+    spotlight: "line:8"
+    caption: "Add the Kind column with a default value"
+    hold: 1.8
+
+  # 2. add the enum
+  - contextMenu: { target: "node:Movie", menu: folder }
+    spotlight: "node:Movie"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "The enum belongs beside the Movie files"
+    hold: 1.0
+
+  - contextMenu: { target: "node:Movie", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    pointerAt: { x: 0.42, y: 0.5 }
+    hold: 0.7
+
+  - contextMenu: { target: "node:Movie", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    pointerAt: { x: 0.42, y: 0.5 }
+    hold: 0.7
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs", folder: "Movie\\" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.5
+
+  - addItem: { name: "" }
+    type: MovieKind.cs
+    typeSpeed: 25
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.4
+
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfter"
+    open: MovieKind.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:MovieKind.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Define the kinds used by the new column"
+    hold: 0.8
+
+  - code: 12
+    codeMs: 1000
+    spotlight: null
+    caption: null
+    hold: 0.5
+
+  - highlight: ["5-12"]
+    spotlight: "line:5"
+    caption: "Film, TV Series and Mini Series"
+    hold: 1.8
+
+  # 3. expose Kind on the entity
+  - open: MovieRow.cs
+    reveal: null
+    spotlight: "node:MovieRow.cs"
+    caption: "Expose the new column on the entity"
+    hold: 0.9
+
+  - edit:
+      file: MovieRow.cs
+      find: "    [DisplayText(\"Runtime (mins)\")]\n    public int? Runtime { get => fields.Runtime[this]; set => fields.Runtime[this] = value; }"
+      replace: "    [DisplayText(\"Runtime (mins)\")]\n    public int? Runtime { get => fields.Runtime[this]; set => fields.Runtime[this] = value; }\n\n    [DisplayText(\"Kind\"), NotNull]\n    public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }"
+    editMs: 900
+    highlight: ["28-34"]
+    spotlight: null
+    caption: "Kind is required, so it uses NotNull"
+    hold: 1.2
+
+  - edit:
+      file: MovieRow.cs
+      find: "        public Int32Field Runtime = null!;"
+      replace: "        public Int32Field Runtime = null!;\n        public EnumField<MovieKind> Kind = null!;"
+    editMs: 700
+    highlight: ["42-43"]
+    spotlight: null
+    caption: "Add the enum field to RowFields"
+    hold: 1.0
+
+  # 4. add Kind to the form and grid
+  - open: MovieForm.cs
+    reveal: null
+    edit:
+      file: MovieForm.cs
+      find: "    public int? Runtime { get; set; }"
+      replace: "    public int? Runtime { get; set; }\n    public MovieKind? Kind { get; set; }"
+    editMs: 700
+    highlight: ["12-14"]
+    spotlight: null
+    caption: "The form gets a Kind property"
+    hold: 1.0
+
+  - open: MovieColumns.cs
+    reveal: null
+    edit:
+      file: MovieColumns.cs
+      find: "    public int? Runtime { get; set; }"
+      replace: "    public int? Runtime { get; set; }\n    public MovieKind? Kind { get; set; }"
+    editMs: 700
+    highlight: ["16-18"]
+    spotlight: null
+    caption: "The grid gets a Kind column too"
+    hold: 1.0
+
+  # 5. run the app with the new field
+  - screen: app
+    appStage: withKind
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    scroll: { selector: "#GridDiv .slick-viewport", left: 10000 }
+    spotlight: ".s-GridContainer, #GridDiv"
+    caption: "Existing movies get the migration's default: Film"
+    hold: 2.2
+
+  - screen: app
+    appStage: withKind
+    goto: /MovieDB/Movie
+    click: ".add-button"
+    waitFor: ".s-MovieDialog"
+    spotlight: ".s-MovieDialog [name=Kind]"
+    caption: "New Movie asks for Kind, but it starts unselected"
+    hold: 2.2
+
+  # 6. give the required field a useful default
+  - open: MovieRow.cs
+    reveal: null
+    highlight: ["31-31"]
+    spotlight: "line:31"
+    caption: "Most movies are films, so set the default on Kind"
+    hold: 0.9
+
+  - edit:
+      file: MovieRow.cs
+      find: '[DisplayText("Kind"), NotNull]'
+      replace: '[DisplayText("Kind"), NotNull, DefaultValue(MovieKind.Film)]'
+    editMs: 700
+    highlight: ["31-31"]
+    spotlight: "line:31"
+    caption: "DefaultValue(MovieKind.Film)"
+    hold: 1.0
+
+
+  - screen: app
+    appStage: default
+    goto: /MovieDB/Movie
+    click: .add-button
+    waitFor: .s-MovieDialog
+    spotlight: ".s-MovieDialog [name=Kind]"
+    caption: "New Movie now starts with Film selected"
+    hold: 2.4

@@ -4,9 +4,8 @@
 
 In our movie grid and form, there is a field named "Runtime." This field expects an integer number in minutes, but its title doesn't indicate this. Let's change its title to "Runtime (mins)."
 
-<video alt="Customizing Movie UI Animation" controls preload="metadata"
-  poster="img/03-customizing-movie-ui-poster.png">
-  <source src="img/03-customizing-movie-ui.mp4" type="video/mp4">
+<video alt="Customizing Movie UI Animation" controls preload="metadata" poster="img/03-customizing-movie-ui-poster.png">
+  <source src="img/03-customizing-movie-ui.mp4" type="video/mp4" />
 </video>
 
 You can make this change by updating the entity itself, ensuring that its title changes everywhere. When Sergen generated code for the Movie table, it created an entity class named MovieRow. You can find it in the "Modules/MovieDB/Movie" directory.

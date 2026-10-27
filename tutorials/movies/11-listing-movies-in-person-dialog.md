@@ -3,7 +3,7 @@
 To display a list of movies that a person has acted in, we'll add a tab to the `PersonDialog`.
 
 <video alt="Listing Movies in Person Dialog Animation" controls>
-  <source src="img/11-listing-movies-in-person-dialog.mp4" type="video/mp4">
+  <source src="img/11-listing-movies-in-person-dialog.mp4" type="video/mp4" />
 </video>
 
 Serenity supports defining tabs in the form script.

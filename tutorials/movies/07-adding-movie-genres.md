@@ -5,7 +5,7 @@
 To store movie genres in your database, you should create a lookup table. While an enumeration is suitable for the "Kind" field, genres might change over time and are not static. Therefore, it's better to use a table to manage genres. 
 
 <video alt="Adding Movie Genres Animation" controls>
-  <source src="img/07-adding-movie-genres.mp4" type="video/mp4">
+  <source src="img/07-adding-movie-genres.mp4" type="video/mp4" />
 </video>
 
 Let's start by creating a migration to generate the Genre table and add a "GenreId" column to the Movie table.

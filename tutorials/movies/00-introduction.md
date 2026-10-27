@@ -7,7 +7,7 @@ This tutorial will guide you through the process of creating an editing interfac
 ## Creating a New Project Named "MovieTutorial"
 
 <video alt="Creating Project Animation" controls>
-  <source src="img/00-introduction.mp4" type="video/mp4">
+  <source src="img/00-introduction.mp4" type="video/mp4" />
 </video>
 
 To start a new project, launch Visual Studio and click "Create a New Project" on the welcome screen.

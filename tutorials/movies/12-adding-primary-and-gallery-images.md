@@ -3,7 +3,7 @@
 To add primary and gallery images to both Movie and Person records, start with a database migration:
 
 <video alt="Adding Primary and Gallery Images Animation" controls>
-  <source src="img/12-adding-primary-and-gallery-images.mp4" type="video/mp4">
+  <source src="img/12-adding-primary-and-gallery-images.mp4" type="video/mp4" />
 </video>
 
 ```csharp

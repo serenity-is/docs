@@ -3,7 +3,7 @@
 To include TV series and mini-series in your movie database, you'll need to add a new field called "MovieKind." Since we didn't include it during the initial table creation, we'll create a new migration to add it to our database.
 
 <video alt="Adding a Movie Kind Field Animation" controls>
-  <source src="img/06-adding-movie-kind-field.mp4" type="video/mp4">
+  <source src="img/06-adding-movie-kind-field.mp4" type="video/mp4" />
 </video>
 
 **Note:** Do not modify existing migrations, as they will not run again.

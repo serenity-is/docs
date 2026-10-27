@@ -5,7 +5,7 @@ To store a list of movies, we'll need a `Movie` table. While you could create th
 > Note: While we use FluentMigrator in our examples, it's important to clarify that Serenity does not have a direct dependency on migrations. You are not obligated to use migrations. Serenity functions without them. If you prefer, you can manually create tables in SQL Management Studio or work with an existing database.
 
 <video alt="Creating Movie Table Animation" controls>
-  <source src="img/01-creating-movie-table.mp4" type="video/mp4">
+  <source src="img/01-creating-movie-table.mp4" type="video/mp4" />
 </video>
 
 ## Locating the Migration Folder

@@ -2,7 +2,8 @@
 
 When Sergen generated code for the Movie table, it also created a navigation item entry. In Serene, navigation items are created using special assembly attributes.
 
-<video alt="Handling Movie Navigation Animation" controls>
+<video alt="Handling Movie Navigation Animation" controls preload="metadata"
+  poster="img/04-handling-movie-navigation-poster.png">
   <source src="img/04-handling-movie-navigation.mp4" type="video/mp4">
 </video>
 

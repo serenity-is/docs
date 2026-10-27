@@ -1,0 +1,171 @@
+# Storyboard for tutorials/movies/04-handling-movie-navigation.md
+#
+# Render + publish:  pnpm media app-fixture --edits 04   (once)
+#                    pnpm media --id 04-handling-movie-navigation --publish
+#
+# The editor starts with the file sergen generated. The chapter changes the
+# link title and icon, runs the app, then adds the Movie Database section while
+# the app is running, before showing the result in the real application.
+
+id: 04-handling-movie-navigation
+title: Handling movie navigation
+edits: "04"          # the fixture must be built with this profile
+chrome: browser      # the app steps show a browser window
+login: false         # already shown in 02b: sign in before the first frame
+
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+
+# start with the Solution Explorer, as the original chapter does. The generated
+# file is opened by clicking it in the next step.
+open: null
+files:
+  MovieDBNavigation.cs: { snippet: "MovieDBNavigation.cs" }
+
+# same generated project tree as chapter 02, but collapsed so the navigation
+# file is visible without scrolling through migrations and unrelated modules
+tree:
+  from: "@02-generate-code/treeAfter"
+  replace:
+    MovieTutorial.Web/Migrations: {}
+    MovieTutorial.Web/Imports: {}
+    MovieTutorial.Web/Modules/Administration: {}
+    MovieTutorial.Web/Modules/Common: {}
+    MovieTutorial.Web/Modules/Membership: {}
+    MovieTutorial.Web/Modules/MovieDB/Movie: {}
+    MovieTutorial.Web/Modules/ServerTypes: {}
+
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+  posterAt: 22
+
+output:
+  mp4: ../img/04-handling-movie-navigation.mp4
+  webp: null
+  poster: ../img/04-handling-movie-navigation-poster.png
+
+budgets:
+  maxDuration: 40
+  maxBytes: 3_000_000
+
+steps:
+  # 1. open the generated navigation file from the project tree
+  - click: "file:MovieDBNavigation.cs"
+    open: MovieDBNavigation.cs
+    spotlight: "file:MovieDBNavigation.cs"
+    treeScroll: selected
+    caption: null
+    hold: 0.8
+
+  - highlight: ["4-4"]
+    spotlight: "line:4"
+    caption: "Sergen uses int.MaxValue, MovieDB/Movie, and no icon"
+    hold: 2.2
+
+  # 2. first edit: the link title
+  - edit:
+      file: MovieDBNavigation.cs
+      find: '[assembly: NavigationLink(int.MaxValue, "MovieDB/Movie", typeof(MyPages.MoviePage), icon: null)]'
+      replace: '[assembly: NavigationLink(int.MaxValue, "Movie Database/Movies", typeof(MyPages.MoviePage), icon: null)]'
+    editMs: 1100
+    highlight: ["4-4"]
+    spotlight: "line:4"
+    caption: "Change the link title to Movie Database/Movies"
+    hold: 0.8
+
+  # 3. second edit: the icon
+  - edit:
+      file: MovieDBNavigation.cs
+      find: 'icon: null)]'
+      replace: 'icon: "fa-video-camera")]'
+    editMs: 700
+    highlight: ["4-4"]
+    spotlight: "line:4"
+    caption: "Give the link the video-camera icon"
+    hold: 1.0
+
+  # 4. run the application and let it show the new link
+  - click: "#tb-start"
+    debug: running
+    bottomTab: Output
+    output:
+      - "Build succeeded."
+      - "    0 Warning(s)"
+      - "    0 Error(s)"
+      - ""
+      - "Now listening on: https://localhost:50263"
+      - "Application started. Press Ctrl+C to shut down."
+      - "Serenity.Data.SqlConnections: Debug: SQL - SELECT ... FROM [Movie]"
+    status: "Web server is listening on port 50263"
+    spotlight: "#tb-start"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "Press F5 (or Start) to build and run the app"
+    hold: 2.2
+
+  # show the app opened by F5 while the first edits are running
+  - screen: app
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    spotlight: "#GridDiv"
+    caption: "The Movies page opens with the new title and icon"
+    hold: 2.2
+
+  # 5. with the app running, add the section above the link. Insert before the
+  # existing link, so the Movies item stays visible while the menu is typed.
+  - edit:
+      file: MovieDBNavigation.cs
+      insertBefore: '[assembly: NavigationLink(int.MaxValue, "Movie Database/Movies", typeof(MyPages.MoviePage), icon: "fa-video-camera")]'
+      text: |
+        [assembly: NavigationMenu(6000, "Movie Database", icon: "fa-film")]
+    editMs: 1400
+    highlight: ["4-5"]
+    spotlight: "line:4"
+    caption: "Add the Movie Database section item above the link"
+    hold: 1.6
+
+  - edit:
+      file: MovieDBNavigation.cs
+      find: 'int.MaxValue'
+      replace: '6100'
+    editMs: 400
+    highlight: ["4-5"]
+    spotlight: "line:5"
+    caption: "Order the link below the new section"
+    hold: 1.4
+
+  - highlight: ["4-5"]
+    spotlight: "line:4"
+    caption: "The section has its own order and icon"
+    hold: 1.4
+
+  # 6. the running app now shows the Movie Database section
+  - screen: app
+    goto: /
+    waitFor: "#s-sidebar"
+    spotlight: "#s-sidebar"
+    caption: "The Movie Database section is now in the left menu"
+    hold: 2.4
+
+  - screen: app
+    click: "#s-sidebar-menu li.has-children:has(a[href='/MovieDB/Movie']) > a"
+    waitFor: "#s-sidebar-menu a[href='/MovieDB/Movie']"
+    spotlight: "#s-sidebar-menu li.has-children:has(a[href='/MovieDB/Movie']) > a"
+    caption: "Expand it to reveal the Movies link"
+    hold: 1.6
+
+  - screen: app
+    click: "#s-sidebar-menu a[href='/MovieDB/Movie']"
+    waitFor: "#GridDiv"
+    spotlight: "#s-sidebar-menu a[href='/MovieDB/Movie']"
+    caption: "The Movies link opens the page sergen generated"
+    hold: 2.6
+
+  - screen: app
+    spotlight: null
+    caption: "The icon and title come straight from the attributes"
+    hold: 2.2

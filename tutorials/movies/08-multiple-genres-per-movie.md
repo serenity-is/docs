@@ -2,7 +2,7 @@
 
 As your requirements evolve, you might find the need to allow the selection of multiple genres for a single movie. To achieve this, you'll require a many-to-many (M-N) mapping table that can associate movies with multiple genres.
 
-<video alt="Multiple Genres per Movie Animation" controls>
+<video alt="Multiple Genres per Movie Animation" controls preload="metadata" poster="img/08-multiple-genres-per-movie-poster.png">
   <source src="img/08-multiple-genres-per-movie.mp4" type="video/mp4" />
 </video>
 

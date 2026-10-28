@@ -1,0 +1,506 @@
+# Storyboard for tutorials/movies/08-multiple-genres-per-movie.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/movies/_scenes/08-multiple-genres-per-movie.yml --stages
+# Render + publish:  pnpm media --id 08-multiple-genres-per-movie --publish
+#
+# The chapter replaces Movie.GenreId with a MovieGenres linking table, generates
+# its row and services, and turns GenreList into a multiple lookup + formatter.
+
+id: 08-multiple-genres-per-movie
+title: Multiple genres per movie
+edits: "08"
+chrome: browser
+login: false
+
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+
+open: null
+files:
+  DefaultDB_20221115_1405_MovieGenres.cs: { snippet: "DefaultDB_20221115_1405_MovieGenres.cs" }
+  MovieRow.cs:
+    snippet: "MovieRow_08.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieRow.cs
+  MovieForm.cs:
+    snippet: "MovieForm_08.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieForm.cs
+  MovieColumns.cs:
+    snippet: "MovieColumns_08.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieColumns.cs
+  GenreListFormatter.tsx:
+    snippet: "GenreListFormatter_08.tsx"
+    fixturePath: Modules/MovieDB/Movie/GenreListFormatter.tsx
+
+fixtureFiles:
+  Modules/MovieDB/Movie/GenreListFormatter.tsx: { snippet: "GenreListFormatter_08.tsx" }
+
+verify:
+  MovieRow.cs: Modules/MovieDB/Movie/MovieRow.cs
+  MovieForm.cs: Modules/MovieDB/Movie/MovieForm.cs
+  MovieColumns.cs: Modules/MovieDB/Movie/MovieColumns.cs
+
+treeBefore:
+  from: "@07-adding-movie-genres/treeAfterSergen"
+
+treeAfterMigration:
+  from: "@treeBefore"
+  add:
+    MovieTutorial.Web/Migrations/DefaultDB/:
+      - DefaultDB_20221115_1405_MovieGenres.cs
+
+treeAfterSergen:
+  from: "@treeAfterMigration"
+  add:
+    MovieTutorial.Web/Modules/MovieDB/MovieGenres/:
+      - MovieGenresEndpoint.cs
+      - MovieGenresRow.cs
+    MovieTutorial.Web/Modules/ServerTypes/MovieDB/:
+      - MovieGenresRow.ts
+      - MovieGenresService.ts
+
+treeAfterFormatter:
+  from: "@treeAfterSergen"
+  add:
+    MovieTutorial.Web/Modules/MovieDB/Movie/:
+      - GenreListFormatter.tsx
+
+tree: "@treeBefore"
+
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+  posterAt: 96
+
+output:
+  mp4: ../img/08-multiple-genres-per-movie.mp4
+  webp: null
+  poster: ../img/08-multiple-genres-per-movie-poster.png
+
+budgets:
+  maxDuration: 130
+  maxBytes: 6_000_000
+
+appStages:
+  - id: removed
+    edits: 5
+  - id: list
+    edits: 9
+  - id: formatted
+    edits: 10
+
+steps:
+  # 1. add the MovieGenres migration
+  - treeScroll: top
+    spotlight: "node:DefaultDB"
+    caption: "Add a migration for the many-to-many table"
+    hold: 1.2
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "Right-click DefaultDB"
+    hold: 1.0
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Add a new item"
+    hold: 0.7
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Create the MovieGenres migration"
+    hold: 0.7
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.6
+
+  - addItem: { name: "" }
+    type: DefaultDB_20221115_1405_MovieGenres.cs
+    typeSpeed: 17
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.4
+
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfterMigration"
+    open: DefaultDB_20221115_1405_MovieGenres.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:DefaultDB_20221115_1405_MovieGenres.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "The linking table migration"
+    hold: 0.8
+
+  - code: 24
+    codeMs: 1800
+    spotlight: null
+    caption: null
+    hold: 0.7
+
+  - highlight: ["8-24"]
+    spotlight: null
+    caption: "Create MovieGenres, copy GenreId, then remove the old column"
+    hold: 2.2
+
+  # 2. remove the single-genre mappings
+  - open: MovieRow.cs
+    reveal: null
+    highlight: ["36-41"]
+    spotlight: null
+    caption: "Remove the single-genre join from MovieRow"
+    hold: 1.1
+
+  - edit:
+      file: MovieRow.cs
+      find: "    const string jGenre = nameof(jGenre);\n\n"
+      replace: ""
+    editMs: 500
+    highlight: ["10-10"]
+    spotlight: null
+    caption: "The join alias is no longer needed"
+    hold: 0.6
+
+  - edit:
+      file: MovieRow.cs
+      find: "    [DisplayText(\"Genre\"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]\n    [LookupEditor(typeof(GenreRow), InplaceAdd = true)]\n    public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }\n\n    [DisplayText(\"Genre\"), Expression($\"{jGenre}.Name\")]\n    public string? GenreName { get => fields.GenreName[this]; set => fields.GenreName[this] = value; }\n\n"
+      replace: ""
+    editMs: 900
+    highlight: ["34-39"]
+    spotlight: null
+    caption: "Remove GenreId and GenreName"
+    hold: 1.2
+
+  - edit:
+      file: MovieRow.cs
+      find: "        public Int32Field GenreId = null!;\n        public StringField GenreName = null!;\n"
+      replace: ""
+    editMs: 550
+    highlight: ["49-51"]
+    spotlight: null
+    caption: "And their field objects"
+    hold: 0.8
+
+  - open: MovieForm.cs
+    reveal: null
+    edit:
+      file: MovieForm.cs
+      find: "    public MovieKind? Kind { get; set; }\n    public int? GenreId { get; set; }"
+      replace: "    public MovieKind? Kind { get; set; }"
+    editMs: 650
+    highlight: ["15-16"]
+    spotlight: null
+    caption: "Remove GenreId from the form"
+    hold: 0.9
+
+  - open: MovieColumns.cs
+    reveal: null
+    edit:
+      file: MovieColumns.cs
+      find: "    public MovieKind? Kind { get; set; }\n    public string? GenreName { get; set; }"
+      replace: "    public MovieKind? Kind { get; set; }"
+    editMs: 650
+    highlight: ["17-18"]
+    spotlight: null
+    caption: "Remove GenreName from the grid"
+    hold: 0.9
+
+  # 3. verify the page still works before adding the new mapping
+  - screen: app
+    appStage: removed
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    spotlight: "#GridDiv"
+    caption: "The Movies page still works, without the old Genre column"
+    hold: 2.2
+
+  # 4. generate MovieGenres row and services
+  - treeScroll: top
+    spotlight: "node:DefaultDB"
+    caption: "Generate code for the linking table"
+    hold: 0.8
+
+  - terminal: { open: true }
+    bottomHeight: 430
+    spotlight: terminal
+    caption: "Run sergen again"
+    hold: 0.9
+
+  - type: dotnet sergen g
+    typeSpeed: 55
+    spotlight: terminal
+    pointerAt: { x: 0.34, y: 0.29 }
+    caption: "Choose the new table"
+    hold: 0.5
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Available Connections", kind: section }
+        - { text: "> Default", kind: picked }
+        - { text: "  Northwind", kind: row }
+    spotlight: terminal
+    caption: "Pick the Default connection"
+    hold: 1.3
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Select tables for code generation (single/multiple)", kind: section }
+        - { text: "" }
+        - { text: "  [ ] dbo.Genre", kind: row }
+        - { text: "  [ ] dbo.Movie", kind: row }
+        - { text: "  [ ] dbo.MovieGenres", kind: row }
+        - { text: "  [ ] dbo.Roles", kind: row }
+        - { text: "" }
+        - { text: "(Press <space> to select/unselect, <enter> to accept)", kind: dim }
+    spotlight: terminal
+    caption: "Select MovieGenres"
+    hold: 1.7
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Select tables for code generation (single/multiple)", kind: section }
+        - { text: "" }
+        - { text: "  [ ] dbo.Genre", kind: row }
+        - { text: "  [ ] dbo.Movie", kind: row }
+        - { text: "> [X] dbo.MovieGenres", kind: picked }
+        - { text: "  [ ] dbo.Roles", kind: row }
+        - { text: "" }
+        - { text: "(Press <space> to select/unselect, <enter> to accept)", kind: dim }
+    spotlight: terminal
+    caption: "dbo.MovieGenres is selected"
+    hold: 1.1
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Enter a Module name for table **dbo.MovieGenres** (**Default**): MovieDB", kind: row }
+        - { text: "" }
+        - { text: "Enter a class Identifier for table **dbo.MovieGenres** (**MovieGenres**): MovieGenres", kind: row }
+        - { text: "Enter a Permission Key for table **dbo.MovieGenres** (**Administration:General**): Administration:General", kind: row }
+    spotlight: terminal
+    caption: "MovieDB / MovieGenres / Administration:General"
+    hold: 1.8
+
+  - terminal:
+      lines:
+        - { text: "" }
+        - { text: "Choose What to Generate", kind: section }
+        - { text: "  [ ] All", kind: row }
+        - { text: "> [X] Row", kind: picked }
+        - { text: "  [X] Services", kind: row }
+        - { text: "  [ ] User Interface", kind: row }
+        - { text: "  [ ] Custom", kind: row }
+    spotlight: terminal
+    caption: "Only the row and services are needed for a linking table"
+    hold: 1.8
+
+  - tree: "@treeAfterSergen"
+    terminal: { open: false }
+    open: null
+    spotlight: "node:MovieGenres"
+    caption: "MovieGenres has a row and a service endpoint"
+    hold: 1.3
+
+  # 5. add GenreList to MovieRow
+  - open: MovieRow.cs
+    reveal: null
+    highlight: ["33-34"]
+    spotlight: null
+    caption: "Add a non-mapped list of genre IDs"
+    hold: 1.0
+
+  - edit:
+      file: MovieRow.cs
+      find: "    [DisplayText(\"Kind\"), NotNull, DefaultValue(MovieKind.Film)]\n    public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }"
+      replace: "    [DisplayText(\"Kind\"), NotNull, DefaultValue(MovieKind.Film)]\n    public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }\n\n    [DisplayText(\"Genres\"), LookupEditor(typeof(GenreRow), Multiple = true), NotMapped]\n    [LinkingSetRelation(typeof(MovieGenresRow), nameof(MovieGenresRow.MovieId), nameof(MovieGenresRow.GenreId))]\n    public List<int>? GenreList { get => fields.GenreList[this]; set => fields.GenreList[this] = value; }"
+    editMs: 1000
+    highlight: ["33-39"]
+    spotlight: null
+    caption: "GenreList is a multiple lookup and a linking set"
+    hold: 1.5
+
+  - edit:
+      file: MovieRow.cs
+      find: "        public EnumField<MovieKind> Kind = null!;"
+      replace: "        public EnumField<MovieKind> Kind = null!;\n        public ListField<int> GenreList = null!;"
+    editMs: 550
+    highlight: ["49-50"]
+    spotlight: null
+    caption: "Add the ListField to RowFields"
+    hold: 0.9
+
+  - open: MovieForm.cs
+    reveal: null
+    edit:
+      file: MovieForm.cs
+      find: "    public MovieKind? Kind { get; set; }"
+      replace: "    public MovieKind? Kind { get; set; }\n    public List<int>? GenreList { get; set; }"
+    editMs: 550
+    highlight: ["15-16"]
+    spotlight: null
+    caption: "Expose the genre list in the form"
+    hold: 0.9
+
+  - open: MovieColumns.cs
+    reveal: null
+    edit:
+      file: MovieColumns.cs
+      find: "    public MovieKind? Kind { get; set; }"
+      replace: "    public MovieKind? Kind { get; set; }\n    [Width(200)]\n    public List<int>? GenreList { get; set; }"
+    editMs: 650
+    highlight: ["17-19"]
+    spotlight: null
+    caption: "Show the genre list in the grid"
+    hold: 1.0
+
+  # 6. show the multiple lookup before formatting
+  - screen: app
+    appStage: list
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    caption: "The new GenreList column starts as a list of ids"
+    hold: 1.6
+
+  - click: .add-button
+    waitFor: .s-MovieDialog
+    spotlight: ".s-MovieDialog [name=GenreList]"
+    caption: "The form now accepts multiple genres"
+    hold: 2.4
+
+  # 7. create the GenreListFormatter
+  - treeScroll: top
+    spotlight: "node:Movie"
+    caption: "Create a formatter next to MovieGrid.tsx"
+    hold: 1.0
+
+  - contextMenu: { target: "node:Movie", menu: folder }
+    spotlight: "node:Movie"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "Right-click the Movie folder"
+    hold: 0.9
+
+  - contextMenu: { target: "node:Movie", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Add a new item"
+    hold: 0.7
+
+  - contextMenu: { target: "node:Movie", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Create the formatter"
+    hold: 0.7
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.tsx", folder: "Movie\\" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.6
+
+  - addItem: { name: "" }
+    type: GenreListFormatter.tsx
+    typeSpeed: 18
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.4
+
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfterFormatter"
+    open: GenreListFormatter.tsx
+    reveal: 0
+    highlight: []
+    spotlight: "node:GenreListFormatter.tsx"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "A SlickGrid formatter for the genre list"
+    hold: 1.0
+
+  - code: 36
+    codeMs: 2200
+    spotlight: null
+    caption: null
+    hold: 0.8
+
+  - highlight: ["9-20"]
+    spotlight: null
+    caption: "Resolve genre names from the lookup on first paint"
+    hold: 2.4
+
+  # 8. attach the formatter to the grid column
+  - open: MovieColumns.cs
+    reveal: null
+    edit:
+      file: MovieColumns.cs
+      find: "    [Width(200)]\n    public List<int>? GenreList { get; set; }"
+      replace: "    [Width(200), GenreListFormatter]\n    public List<int>? GenreList { get; set; }"
+    editMs: 650
+    highlight: ["19-20"]
+    spotlight: null
+    caption: "Use GenreListFormatter for the GenreList column"
+    hold: 1.1
+
+  - screen: app
+    appStage: formatted
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    caption: "The grid is ready for genre names"
+    hold: 1.2
+
+  - screen: app
+    appStage: formatted
+    click: "#GridDiv a:has-text('Fight Club')"
+    waitFor: .s-MovieDialog
+    caption: "Add a few genres to Fight Club"
+    hold: 1.4
+
+  - screen: app
+    appStage: formatted
+    select2: { input: "[name=GenreList]", text: "Action" }
+    caption: "Choose Action"
+    hold: 1.0
+
+  - screen: app
+    appStage: formatted
+    select2: { input: "[name=GenreList]", text: "Drama" }
+    caption: "And Drama"
+    hold: 1.0
+
+  - screen: app
+    appStage: formatted
+    click: .s-MovieDialog .save-and-close-button
+    waitGone: .s-MovieDialog
+    caption: "Save the movie with both genres"
+    hold: 2.0
+
+  - screen: app
+    appStage: formatted
+    scroll: { selector: "#GridDiv .slick-viewport", left: 10000 }
+    spotlight: "#GridDiv"
+    caption: "The grid now shows genre names instead of IDs"
+    hold: 2.4

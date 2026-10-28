@@ -1,0 +1,316 @@
+# Storyboard for tutorials/movies/09-filtering-with-multiple-genres.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/movies/_scenes/09-filtering-with-multiple-genres.yml --stages
+# Render + publish:  pnpm media --id 09-filtering-with-multiple-genres --publish
+#
+# The chapter starts with the built-in QuickFilter for a LinkingSetRelation,
+# then replaces its request with a custom MovieListRequest and EXISTS filter.
+
+id: 09-filtering-with-multiple-genres
+title: Filtering with multiple genres
+edits: "09"
+chrome: browser
+login: false
+
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+
+open: null
+files:
+  MovieColumns.cs:
+    snippet: "MovieColumns_09.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieColumns.cs
+  MovieListRequest.cs:
+    snippet: "MovieListRequest_09.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieListRequest.cs
+  MovieListHandler.cs:
+    snippet: "MovieListHandler_09.cs"
+    fixturePath: Modules/MovieDB/Movie/RequestHandlers/MovieListHandler.cs
+  MovieEndpoint.cs:
+    snippet: "MovieEndpoint_09.cs"
+    fixturePath: Modules/MovieDB/Movie/MovieEndpoint.cs
+  MovieGrid.tsx:
+    snippet: "MovieGrid_09.tsx"
+    fixturePath: Modules/MovieDB/Movie/MovieGrid.tsx
+
+fixtureFiles:
+  Modules/MovieDB/Movie/MovieListRequest.cs: { snippet: "MovieListRequest_09.cs" }
+
+verify:
+  MovieColumns.cs: Modules/MovieDB/Movie/MovieColumns.cs
+  MovieListRequest.cs: Modules/MovieDB/Movie/MovieListRequest.cs
+  MovieListHandler.cs: Modules/MovieDB/Movie/RequestHandlers/MovieListHandler.cs
+  MovieEndpoint.cs: Modules/MovieDB/Movie/MovieEndpoint.cs
+  MovieGrid.tsx: Modules/MovieDB/Movie/MovieGrid.tsx
+
+treeBefore:
+  from: "@08-multiple-genres-per-movie/treeAfterFormatter"
+
+tree:
+  from: "@treeBefore"
+  replace:
+    MovieTutorial.Web/Migrations: {}
+    MovieTutorial.Web/Imports: {}
+    MovieTutorial.Web/Modules/Administration: {}
+    MovieTutorial.Web/Modules/Common: {}
+    MovieTutorial.Web/Modules/Membership: {}
+    MovieTutorial.Web/Modules/MovieDB/Genre: {}
+    MovieTutorial.Web/Modules/ServerTypes: {}
+
+treeAfterRequest:
+  from: "@tree"
+  add:
+    MovieTutorial.Web/Modules/MovieDB/Movie/:
+      - MovieListRequest.cs
+
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+  posterAt: 56
+
+output:
+  mp4: ../img/09-filtering-with-multiple-genres.mp4
+  webp: null
+  poster: ../img/09-filtering-with-multiple-genres-poster.png
+
+budgets:
+  maxDuration: 110
+  maxBytes: 5_000_000
+
+appStages:
+  - id: final
+    edits: 9
+
+steps:
+  # 1. try the built-in QuickFilter from LinkingSetRelation
+  - open: MovieColumns.cs
+    reveal: null
+    highlight: ["18-19"]
+    spotlight: null
+    caption: "A QuickFilter on GenreList is enough for a linking set"
+    hold: 1.1
+
+  - edit:
+      file: MovieColumns.cs
+      find: "    [Width(200), GenreListFormatter]"
+      replace: "    [Width(200), GenreListFormatter, QuickFilter]"
+    editMs: 650
+    highlight: ["18-19"]
+    spotlight: null
+    caption: "Enable the Genres quick filter"
+    hold: 1.2
+
+  # 3. declare a custom list request
+  - treeScroll: top
+    spotlight: "node:Movie"
+    caption: "Create a request type for the Genres filter"
+    hold: 0.9
+
+  - contextMenu: { target: "node:Movie", menu: folder }
+    spotlight: "node:Movie"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "Right-click the Movie folder"
+    hold: 0.8
+
+  - contextMenu: { target: "node:Movie", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Add a new item"
+    hold: 0.6
+
+  - contextMenu: { target: "node:Movie", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Create MovieListRequest"
+    hold: 0.6
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs", folder: "Movie\\" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.5
+
+  - addItem: { name: "" }
+    type: MovieListRequest.cs
+    typeSpeed: 18
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.4
+
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfterRequest"
+    open: MovieListRequest.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:MovieListRequest.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "MovieListRequest adds the Genres parameter"
+    hold: 1.0
+
+  - code: 6
+    codeMs: 900
+    spotlight: null
+    caption: null
+    hold: 0.6
+
+  - highlight: ["3-6"]
+    spotlight: null
+    caption: "The list handler will read this property"
+    hold: 1.2
+
+  # 4. point the handler and endpoint at the new request
+  - open: MovieListHandler.cs
+    reveal: null
+    highlight: ["1-1"]
+    spotlight: "line:1"
+    caption: "Use MovieListRequest instead of ListRequest"
+    hold: 1.0
+
+  - edit:
+      file: MovieListHandler.cs
+      find: "using MyRow = MovieTutorial.MovieDB.MovieRow;"
+      replace: "using MyRequest = MovieTutorial.MovieDB.MovieListRequest;\nusing MyRow = MovieTutorial.MovieDB.MovieRow;"
+    editMs: 600
+    highlight: ["1-2"]
+    spotlight: null
+    caption: "Alias the custom request"
+    hold: 0.9
+
+  - edit:
+      file: MovieListHandler.cs
+      find: "public interface IMovieListHandler : IListHandlerAsync<MyRow, ListRequest, ListResponse<MyRow>> { }\n\npublic class MovieListHandler(IRequestContext context) :\n    ListRequestHandlerAsync<MyRow, ListRequest, ListResponse<MyRow>>(context),\n    IMovieListHandler"
+      replace: "public interface IMovieListHandler : IListHandlerAsync<MyRow, MyRequest, ListResponse<MyRow>> { }\n\npublic class MovieListHandler(IRequestContext context) :\n    ListRequestHandlerAsync<MyRow, MyRequest, ListResponse<MyRow>>(context),\n    IMovieListHandler"
+    editMs: 900
+    highlight: ["5-10"]
+    spotlight: null
+    caption: "The handler now receives MovieListRequest"
+    hold: 1.1
+
+  - open: MovieEndpoint.cs
+    reveal: null
+    highlight: ["41-50"]
+    spotlight: null
+    caption: "Expose the same request on the service"
+    hold: 1.0
+
+  - edit:
+      file: MovieEndpoint.cs
+      find: "public Task<ListResponse<MyRow>> List(IDbConnection connection, ListRequest request,"
+      replace: "public Task<ListResponse<MyRow>> List(IDbConnection connection, MovieListRequest request,"
+    editMs: 650
+    highlight: ["41-42"]
+    spotlight: null
+    caption: "List takes MovieListRequest"
+    hold: 0.9
+
+  - edit:
+      file: MovieEndpoint.cs
+      find: "public async Task<FileContentResult> ListExcel(IDbConnection connection, ListRequest request,"
+      replace: "public async Task<FileContentResult> ListExcel(IDbConnection connection, MovieListRequest request,"
+    editMs: 650
+    highlight: ["48-49"]
+    spotlight: null
+    caption: "ListExcel follows the same contract"
+    hold: 0.9
+
+  # 5. move the quick filter value into MovieListRequest.Genres
+  - open: MovieGrid.tsx
+    reveal: null
+    highlight: ["1-2"]
+    spotlight: null
+    caption: "Import the request and the lookup editor"
+    hold: 1.0
+
+  - edit:
+      file: MovieGrid.tsx
+      find: "import { EntityGrid, localText, QuickSearchField } from \"@serenity-is/corelib\";\nimport { MovieColumns, MovieRow, MovieService } from \"../../ServerTypes/MovieDB\";"
+      replace: "import { EntityGrid, localText, LookupEditor, QuickSearchField, tryFirst } from \"@serenity-is/corelib\";\nimport { MovieColumns, MovieListRequest, MovieRow, MovieService } from \"../../ServerTypes/MovieDB\";"
+    editMs: 850
+    highlight: ["1-2"]
+    spotlight: null
+    caption: "Bring in MovieListRequest and LookupEditor"
+    hold: 1.1
+
+  - edit:
+      file: MovieGrid.tsx
+      find: "    protected override getQuickSearchFields(): QuickSearchField[] {"
+      replace: "    protected override getQuickFilters() {\n        let items = super.getQuickFilters();\n\n        const genreListFilter = tryFirst(items, x =>\n            x.field == MovieRow.Fields.GenreList);\n\n        genreListFilter && (genreListFilter.handler = h => {\n            const request = (h.request as MovieListRequest);\n            const values = (h.widget as LookupEditor).values;\n            request.Genres = values.map(x => parseInt(x, 10));\n            h.handled = true;\n        });\n\n        return items;\n    }\n\n    protected override getQuickSearchFields(): QuickSearchField[] {"
+    editMs: 1400
+    highlight: ["13-26"]
+    spotlight: null
+    caption: "Intercept the GenreList quick filter"
+    hold: 1.6
+
+  # 6. apply the EXISTS filter in the list handler
+  - open: MovieListHandler.cs
+    reveal: null
+    highlight: ["7-11"]
+    spotlight: null
+    caption: "Add the server-side filter"
+    hold: 1.0
+
+  - edit:
+      file: MovieListHandler.cs
+      find: "    IMovieListHandler\n{\n}"
+      replace: "    IMovieListHandler\n{\n    protected override async Task ApplyFiltersAsync(SqlQuery query,\n        CancellationToken cancellationToken = default)\n    {\n        await base.ApplyFiltersAsync(query, cancellationToken);\n\n        if (!Request.Genres.IsEmptyOrNull())\n        {\n            var fld = MyRow.Fields;\n            var mg = MovieGenresRow.Fields.As(\"mg\");\n\n            query.Where(Criteria.Exists(\n                query.SubQuery()\n                    .From(mg)\n                    .Select(\"1\")\n                    .Where(\n                        mg.MovieId == fld.MovieId &&\n                        mg.GenreId.In(Request.Genres))));\n        }\n    }\n}"
+    editMs: 1400
+    highlight: ["7-27"]
+    spotlight: null
+    caption: "Filter with EXISTS on MovieGenres"
+    hold: 1.8
+
+  # 7. run the custom filter
+  - screen: app
+    appStage: final
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    caption: "Start the custom-filter build"
+    hold: 1.2
+
+  - screen: app
+    appStage: final
+    click: "#GridDiv a:has-text('Fight Club')"
+    waitFor: .s-MovieDialog
+    caption: "Give Fight Club genres again"
+    hold: 1.0
+
+  - screen: app
+    appStage: final
+    select2: { input: "[name=GenreList]", text: "Action" }
+    caption: "Action"
+    hold: 0.7
+
+  - screen: app
+    appStage: final
+    select2: { input: "[name=GenreList]", text: "Drama" }
+    caption: "Drama"
+    hold: 0.7
+
+  - screen: app
+    appStage: final
+    click: .s-MovieDialog .save-and-close-button
+    waitGone: .s-MovieDialog
+    caption: "Save the movie"
+    hold: 1.3
+
+  - screen: app
+    appStage: final
+    select2: { input: "input[id$='QuickFilter_GenreList']", text: "Action" }
+    waitFor: "#GridDiv"
+    caption: "The custom request filters by MovieGenres"
+    hold: 1.8
+
+  - screen: app
+    appStage: final
+    scroll: { selector: "#GridDiv .slick-viewport", left: 10000 }
+    spotlight: "#GridDiv"
+    caption: "Only Fight Club remains in the grid"
+    hold: 2.2

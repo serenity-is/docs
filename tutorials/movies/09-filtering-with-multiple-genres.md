@@ -2,7 +2,7 @@
 
 In the past, when we had just one genre per movie, it was simple to apply a quick filter by adding a [QuickFilter] attribute to the GenreId field.
 
-<video alt="Filtering with Multiple Genres Animation" controls>
+<video alt="Filtering with Multiple Genres Animation" controls preload="metadata" poster="img/09-filtering-with-multiple-genres-poster.png">
   <source src="img/09-filtering-with-multiple-genres.mp4" type="video/mp4" />
 </video>
 

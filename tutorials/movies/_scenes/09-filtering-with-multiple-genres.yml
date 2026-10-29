@@ -6,16 +6,10 @@
 # The chapter starts with the built-in QuickFilter for a LinkingSetRelation,
 # then replaces its request with a custom MovieListRequest and EXISTS filter.
 
+extends: "_defaults"
 id: 09-filtering-with-multiple-genres
 title: Filtering with multiple genres
 edits: "09"
-chrome: browser
-login: false
-
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
-  solution: MovieTutorial.Web
 
 open: null
 files:
@@ -67,16 +61,7 @@ treeAfterRequest:
       - MovieListRequest.cs
 
 video:
-  width: 1400
-  height: 900
-  fps: 24
-  tail: 0.8
   posterAt: 56
-
-output:
-  mp4: ../img/09-filtering-with-multiple-genres.mp4
-  webp: null
-  poster: ../img/09-filtering-with-multiple-genres-poster.png
 
 budgets:
   maxDuration: 110

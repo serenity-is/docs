@@ -1,0 +1,37 @@
+# Defaults shared by the movie tutorial scenes.
+#
+# Scenes start with `extends: "_defaults"` (no extension needed, but `.yml` is
+# fine too). Maps are merged deeply, so a scene only states what it changes:
+#
+#     extends: "_defaults"
+#     id: 06-adding-movie-kind-field
+#     video: { posterAt: 44 }        # width/height/fps/tail come from here
+#
+# Lists and scalars replace the inherited value, and `null` wins, so a scene can
+# turn an inherited setting off.
+#
+# Only plain values belong here: `@references` inside this file would resolve
+# relative to the scene that imports it, which is rarely what you mean.
+
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+
+# 1400x900 is the frame size every chapter is published at; `{id}` in the
+# output paths becomes the scene id, so a scene never repeats its own name.
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+
+output:
+  mp4: ../img/{id}.mp4
+  webp: null
+  poster: ../img/{id}-poster.png
+
+# App steps show the mock browser; IDE-only scenes never open it.
+chrome: browser
+# The login page is chapter 02b's job; later chapters sign in before frame one.
+login: false

@@ -6,16 +6,10 @@
 # The chapter adds sample data with a new migration, then broadens quick search
 # on the server and adds a field selector on the client.
 
+extends: "_defaults"
 id: 05-customizing-quick-search
 title: Customizing quick search
 edits: "05"          # the fixture must be built with this profile
-chrome: browser      # the app steps show a browser window
-login: false         # already shown in 02b: sign in before the first frame
-
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
-  solution: MovieTutorial.Web
 
 # start with the Solution Explorer and add the sample-data migration through
 # the same Add New Item dialog used in chapter 01
@@ -55,16 +49,7 @@ treeAfter:
 tree: "@treeBefore"
 
 video:
-  width: 1400
-  height: 900
-  fps: 24
-  tail: 0.8
   posterAt: 38
-
-output:
-  mp4: ../img/05-customizing-quick-search.mp4
-  webp: null
-  poster: ../img/05-customizing-quick-search-poster.png
 
 budgets:
   maxDuration: 75

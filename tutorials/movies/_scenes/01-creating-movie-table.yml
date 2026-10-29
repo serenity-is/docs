@@ -3,29 +3,16 @@
 # Preview interactively:   pnpm media --id 01-creating-movie-table --preview
 # Render + publish:        pnpm media --id 01-creating-movie-table --publish
 
+extends: "_defaults"
 id: 01-creating-movie-table
 title: Creating the Movie table with a migration
-
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
-  solution: MovieTutorial.Web
 
 files:
   - DefaultDB_20141103_1400_Initial.cs
   - DefaultDB_20221114_1505_MovieTable.cs
 
 video:
-  width: 1400
-  height: 900
-  fps: 24
-  tail: 0.8
   posterAt: 12
-
-output:
-  mp4: ../img/01-creating-movie-table.mp4
-  webp: null
-  poster: ../img/01-creating-movie-table-poster.png
 
 budgets:
   maxDuration: 38

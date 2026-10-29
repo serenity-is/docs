@@ -6,16 +6,10 @@
 # The chapter replaces Movie.GenreId with a MovieGenres linking table, generates
 # its row and services, and turns GenreList into a multiple lookup + formatter.
 
+extends: "_defaults"
 id: 08-multiple-genres-per-movie
 title: Multiple genres per movie
 edits: "08"
-chrome: browser
-login: false
-
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
-  solution: MovieTutorial.Web
 
 open: null
 files:
@@ -88,16 +82,7 @@ treeFormatterCollapsed:
 tree: "@treeBefore"
 
 video:
-  width: 1400
-  height: 900
-  fps: 24
-  tail: 0.8
   posterAt: 96
-
-output:
-  mp4: ../img/08-multiple-genres-per-movie.mp4
-  webp: null
-  poster: ../img/08-multiple-genres-per-movie-poster.png
 
 budgets:
   maxDuration: 130

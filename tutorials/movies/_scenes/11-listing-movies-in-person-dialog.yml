@@ -3,16 +3,10 @@
 # Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/movies/_scenes/11-listing-movies-in-person-dialog.yml --stages
 # Render + publish:  pnpm media --id 11-listing-movies-in-person-dialog --publish
 
+extends: "_defaults"
 id: 11-listing-movies-in-person-dialog
 title: Listing movies in person dialog
 edits: "11"
-chrome: browser
-login: false
-
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
-  solution: MovieTutorial.Web
 
 open: null
 files:
@@ -81,16 +75,7 @@ treeAfterCss:
       - PersonDialog.css
 
 video:
-  width: 1400
-  height: 900
-  fps: 24
-  tail: 0.8
   posterAt: 73.5
-
-output:
-  mp4: ../img/11-listing-movies-in-person-dialog.mp4
-  webp: null
-  poster: ../img/11-listing-movies-in-person-dialog-poster.png
 
 budgets:
   maxDuration: 120

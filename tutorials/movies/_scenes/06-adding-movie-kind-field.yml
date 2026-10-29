@@ -6,16 +6,10 @@
 # The chapter adds a migration for the Kind column, a MovieKind enum, and the
 # matching row/form/columns fields, then shows the new dropdown and its default.
 
+extends: "_defaults"
 id: 06-adding-movie-kind-field
 title: Adding a movie kind field
 edits: "06"
-chrome: browser
-login: false
-
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
-  solution: MovieTutorial.Web
 
 open: null
 files:
@@ -69,16 +63,7 @@ treeAfter:
 tree: "@treeBefore"
 
 video:
-  width: 1400
-  height: 900
-  fps: 24
-  tail: 0.8
   posterAt: 27
-
-output:
-  mp4: ../img/06-adding-movie-kind-field.mp4
-  webp: null
-  poster: ../img/06-adding-movie-kind-field-poster.png
 
 budgets:
   maxDuration: 60
@@ -299,7 +284,6 @@ steps:
     spotlight: "line:31"
     caption: "DefaultValue(MovieKind.Film)"
     hold: 1.0
-
 
   - screen: app
     appStage: default

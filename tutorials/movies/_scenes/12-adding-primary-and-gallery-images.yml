@@ -2,15 +2,10 @@
 # Fixture: pnpm media app-fixture --scenario ../web/Docs/tutorials/movies/_scenes/12-adding-primary-and-gallery-images.yml --stages --force
 # Render: pnpm media --id 12-adding-primary-and-gallery-images --publish
 # Upload assets are cropped from the existing chapter 12 recording.
+extends: "_defaults"
 id: 12-adding-primary-and-gallery-images
 title: Managing Primary and Gallery Images
 edits: "12"
-chrome: browser
-login: false
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
-  solution: MovieTutorial.Web
 open: null
 
 files:
@@ -62,10 +57,6 @@ treeRows:
       - PersonDialog.css
 
 video: { width: 1400, height: 900, fps: 24, tail: 0.8, posterAt: 47 }
-output:
-  mp4: ../img/12-adding-primary-and-gallery-images.mp4
-  webp: null
-  poster: ../img/12-adding-primary-and-gallery-images-poster.png
 budgets: { maxDuration: 150, maxBytes: 6000000 }
 appStages:
   - { id: final, edits: 7 }

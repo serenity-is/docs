@@ -6,27 +6,20 @@
 # Sergen 10.x walks through: connection -> tables -> module/class/permission
 # prompts -> what to generate. The terminal lines below follow that flow.
 
+extends: "_defaults"
 id: 02-generate-code
 title: Generating code for the Movie table
-
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
 
 files:
   - DefaultDB_20221114_1505_MovieTable.cs
   - MovieRow.cs
 
 video:
-  width: 1400
-  height: 900
-  fps: 24
-  tail: 0.8
   posterAt: 19
 
+# the published file predates this scene's id
 output:
   mp4: ../img/02-generating-code-for-movie-table.mp4
-  webp: null
   poster: ../img/02-generating-code-for-movie-table-poster.png
 
 budgets:

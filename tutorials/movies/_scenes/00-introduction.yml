@@ -7,73 +7,35 @@
 # The tree at the end matches what `dotnet new serene -n MovieTutorial`
 # actually produces, so the video does not promise files that no longer exist.
 
+extends: "_defaults"
 id: 00-introduction
 title: Creating a new project named MovieTutorial
 
 stage:
-  theme: vs-dark
+  # the start window has no solution yet, and Visual Studio shows no name
   title: Microsoft Visual Studio
-  solution: StartSharp.Web
+  solution: ""
 
 files:
   - tsconfig.json
 
 video:
-  width: 1400
-  height: 900
-  fps: 24
-  tail: 0.8
   posterAt: 3
-
-output:
-  mp4: ../img/00-introduction.mp4
-  webp: null
-  poster: ../img/00-introduction-poster.png
 
 budgets:
   maxDuration: 26
   maxBytes: 2500000
 
-# MovieTutorial.Web as `dotnet new serene` leaves it: no demo data, no Movie
-# module yet. The solution node comes first, its child is the project.
-treeCreated:
-  "Solution 'MovieTutorial' (1 of 1 project)":
-    MovieTutorial.Web:
-      - Dependencies/
-      - Properties/
-      - .config/
-      - App_Data/
-      - Imports/:
-          - ClientTypes/
-          - MVC/
-      - Initialization/
-      - Migrations/:
-          - DefaultDB/
-      - Modules/:
-          - Administration/
-          - Common/
-          - Membership/
-          - ServerTypes/
-      - texts/:
-          - resources/
-      - Views/:
-          - Errors/
-          - Shared/
-      - wwwroot/:
-          - Content/
-      - .editorconfig
-      - .npmrc
-      - appsettings.Development.json
-      - appsettings.bundles.json
-      - appsettings.json
-      - MovieTutorial.Web.csproj
-      - MovieTutorial.Web.slnx
-      - package.json
-      - sergen.json
-      - tsbuild.js
-      - tsconfig.json
-      - tslint.json
-      - web.config
+# The project the wizard creates, used to scan the Solution Explorer instead of
+# restating it in YAML. The snapshot is a pristine template, not the fixture the
+# later chapters edit, so nothing from MovieDB shows up before it is created.
+projectFixture:
+  template: serene
+  package: Serene.Templates
+  name: MovieTutorial
+  directory: MovieTutorial.Web
+  solution: "Solution 'MovieTutorial' (1 of 1 project)"
+  project: MovieTutorial.Web
 
 steps:
   - startWindow: true
@@ -132,7 +94,7 @@ steps:
   - startWindow: false
     wizard: null
     solution: MovieTutorial.Web
-    tree: "@treeCreated"
+    tree: { fromProject: true }
     treeScroll: top
     open: tsconfig.json
     bottomTab: Output
@@ -144,7 +106,7 @@ steps:
       - "Time Elapsed 00:00:01.57"
       - "added 17 packages, and audited 18 packages in 3s"
       - "found 0 vulnerabilities"
-    spotlight: "node:MovieTutorial.Web"
-    pointerAt: { x: 0.5, y: 0.5 }
+    spotlight: tree
+    pointerAt: { x: 0.5, y: 0.22 }
     caption: "MovieTutorial.Web is a TypeScript and .NET web application"
     hold: 3.0

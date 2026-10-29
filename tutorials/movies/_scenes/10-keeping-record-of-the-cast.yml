@@ -3,15 +3,10 @@
 # Render: pnpm media --id 10-keeping-record-of-the-cast --publish
 # The editor, lookup and master/detail behavior run in the real fixture app.
 
+extends: "_defaults"
 id: 10-keeping-record-of-the-cast
 title: Keeping record of the cast
 edits: "10"
-chrome: browser
-login: false
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
-  solution: MovieTutorial.Web
 open: null
 
 files:
@@ -119,10 +114,6 @@ treeCast:
 tree: "@treeBefore"
 
 video: { width: 1400, height: 900, fps: 24, tail: 0.8, posterAt: 158 }
-output:
-  mp4: ../img/10-keeping-record-of-the-cast.mp4
-  webp: null
-  poster: ../img/10-keeping-record-of-the-cast-poster.png
 budgets: { maxDuration: 210, maxBytes: 8000000 }
 appStages:
   - { id: manual, edits: 22 }

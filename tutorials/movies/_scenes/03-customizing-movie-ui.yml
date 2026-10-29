@@ -7,16 +7,10 @@
 # each app step runs the application at that point in the chapter. `appStages`
 # builds one app copy per checkpoint, so the app really reflects the edits.
 
+extends: "_defaults"
 id: 03-customizing-movie-ui
 title: Customizing field captions, columns, editors and CSS
 edits: "03"          # the fixture must be built with this profile
-chrome: browser      # the app steps show a browser window
-login: false         # already shown in 02b: sign in before the first frame
-
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
-  solution: MovieTutorial.Web
 
 # the files come from the generated application itself, so the editor shows
 # exactly the code that is running -- including this chapter's edits
@@ -65,16 +59,7 @@ appStages:
     edits: 6
 
 video:
-  width: 1400
-  height: 900
-  fps: 24
-  tail: 0.8
   posterAt: 30
-
-output:
-  mp4: ../img/03-customizing-movie-ui.mp4
-  webp: null
-  poster: ../img/03-customizing-movie-ui-poster.png
 
 budgets:
   maxDuration: 56

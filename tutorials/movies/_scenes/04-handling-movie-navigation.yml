@@ -7,16 +7,10 @@
 # link title and icon, runs the app, then adds the Movie Database section while
 # the app is running, before showing the result in the real application.
 
+extends: "_defaults"
 id: 04-handling-movie-navigation
 title: Handling movie navigation
 edits: "04"          # the fixture must be built with this profile
-chrome: browser      # the app steps show a browser window
-login: false         # already shown in 02b: sign in before the first frame
-
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
-  solution: MovieTutorial.Web
 
 # start with the Solution Explorer, as the original chapter does. The generated
 # file is opened by clicking it in the next step.
@@ -43,16 +37,7 @@ tree:
     MovieTutorial.Web/Modules/ServerTypes: {}
 
 video:
-  width: 1400
-  height: 900
-  fps: 24
-  tail: 0.8
   posterAt: 22
-
-output:
-  mp4: ../img/04-handling-movie-navigation.mp4
-  webp: null
-  poster: ../img/04-handling-movie-navigation-poster.png
 
 budgets:
   maxDuration: 40

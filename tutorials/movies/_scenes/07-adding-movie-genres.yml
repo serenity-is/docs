@@ -6,16 +6,10 @@
 # The chapter adds a Genre table and Movie.GenreId, generates the Genre module,
 # maps the join, and turns the numeric GenreId into a lookup editor.
 
+extends: "_defaults"
 id: 07-adding-movie-genres
 title: Adding movie genres
 edits: "07"
-chrome: browser
-login: false
-
-stage:
-  theme: vs-dark
-  title: MovieTutorial - Microsoft Visual Studio
-  solution: MovieTutorial.Web
 
 open: null
 files:
@@ -74,16 +68,7 @@ treeAfterSergen:
 tree: "@treeBefore"
 
 video:
-  width: 1400
-  height: 900
-  fps: 24
-  tail: 0.8
   posterAt: 72
-
-output:
-  mp4: ../img/07-adding-movie-genres.mp4
-  webp: null
-  poster: ../img/07-adding-movie-genres-poster.png
 
 budgets:
   maxDuration: 140

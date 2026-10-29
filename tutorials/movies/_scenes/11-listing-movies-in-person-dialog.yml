@@ -1,0 +1,435 @@
+# Storyboard for tutorials/movies/11-listing-movies-in-person-dialog.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/movies/_scenes/11-listing-movies-in-person-dialog.yml --stages
+# Render + publish:  pnpm media --id 11-listing-movies-in-person-dialog --publish
+
+id: 11-listing-movies-in-person-dialog
+title: Listing movies in person dialog
+edits: "11"
+chrome: browser
+login: false
+
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+
+open: null
+files:
+  PersonForm.cs:
+    snippet: "PersonForm_11.cs"
+    fixturePath: Modules/MovieDB/Person/PersonForm.cs
+  PersonDialog.tsx:
+    snippet: "PersonDialog_11.tsx"
+    fixturePath: Modules/MovieDB/Person/PersonDialog.tsx
+  PersonMovieColumns.cs:
+    snippet: "PersonMovieColumns_11.cs"
+    fixturePath: Modules/MovieDB/Person/PersonMovieColumns.cs
+  PersonMovieGrid.tsx:
+    snippet: "PersonMovieGrid_11.tsx"
+    fixturePath: Modules/MovieDB/Person/PersonMovieGrid.tsx
+  PersonDialog.css:
+    snippet: "PersonDialog_11.css"
+    fixturePath: Modules/MovieDB/Person/PersonDialog.css
+
+fixtureFiles:
+  Modules/MovieDB/Person/PersonMovieColumns.cs: { snippet: "PersonMovieColumns_11.cs" }
+  Modules/MovieDB/Person/PersonMovieGrid.tsx: { snippet: "PersonMovieGrid_11.tsx" }
+  Modules/MovieDB/Person/PersonDialog.css: { snippet: "PersonDialog_11.css" }
+  Modules/MovieDB/Person/PersonDialog.tsx: { snippet: "PersonDialog_11_fixture.tsx" }
+
+verifyStage: final
+verify:
+  PersonForm.cs: Modules/MovieDB/Person/PersonForm.cs
+  PersonMovieColumns.cs: Modules/MovieDB/Person/PersonMovieColumns.cs
+  PersonMovieGrid.tsx: Modules/MovieDB/Person/PersonMovieGrid.tsx
+  PersonDialog.css: Modules/MovieDB/Person/PersonDialog.css
+
+treeBefore:
+  from: "@10-keeping-record-of-the-cast/treeCast"
+
+tree:
+  from: "@treeBefore"
+  replace:
+    MovieTutorial.Web/Migrations: {}
+    MovieTutorial.Web/Imports: {}
+    MovieTutorial.Web/Modules/Administration: {}
+    MovieTutorial.Web/Modules/Common: {}
+    MovieTutorial.Web/Modules/Membership: {}
+    MovieTutorial.Web/Modules/MovieDB/Genre: {}
+    MovieTutorial.Web/Modules/MovieDB/Movie: {}
+    MovieTutorial.Web/Modules/MovieDB/MovieCast: {}
+    MovieTutorial.Web/Modules/MovieDB/MovieGenres: {}
+    MovieTutorial.Web/Modules/ServerTypes: {}
+
+treeAfterColumns:
+  from: "@tree"
+  add:
+    MovieTutorial.Web/Modules/MovieDB/Person/:
+      - PersonMovieColumns.cs
+
+treeAfterGrid:
+  from: "@treeAfterColumns"
+  add:
+    MovieTutorial.Web/Modules/MovieDB/Person/:
+      - PersonMovieGrid.tsx
+
+treeAfterCss:
+  from: "@treeAfterGrid"
+  add:
+    MovieTutorial.Web/Modules/MovieDB/Person/:
+      - PersonDialog.css
+
+video:
+  width: 1400
+  height: 900
+  fps: 24
+  tail: 0.8
+  posterAt: 73.5
+
+output:
+  mp4: ../img/11-listing-movies-in-person-dialog.mp4
+  webp: null
+  poster: ../img/11-listing-movies-in-person-dialog-poster.png
+
+budgets:
+  maxDuration: 120
+  maxBytes: 5_000_000
+
+appStages:
+  - id: final
+    edits: 5
+
+steps:
+  # 1. add Person and Movies tabs to the form
+  - open: PersonForm.cs
+    reveal: null
+    highlight: ["7-12"]
+    spotlight: null
+    caption: "Define the first tab explicitly"
+    hold: 1.0
+
+  - edit:
+      file: PersonForm.cs
+      find: '    public string? FirstName { get; set; }'
+      replace: "    [Tab(\"Person\")]\n    public string? FirstName { get; set; }"
+    editMs: 550
+    highlight: ["7-8"]
+    spotlight: null
+    caption: "Person tab holds the existing fields"
+    hold: 0.9
+
+  - edit:
+      file: PersonForm.cs
+      find: "    public int? Height { get; set; }\n}"
+      replace: "    public int? Height { get; set; }\n\n    [Tab(\"Movies\"), SkipNameCheck]\n    public string? MoviesGrid { get; set; }\n}"
+    editMs: 750
+    highlight: ["12-15"]
+    spotlight: null
+    caption: "MoviesGrid is not a PersonRow property"
+    hold: 1.1
+
+  # 3. declare the columns for the movie grid
+  - treeScroll: top
+    spotlight: "node:Person"
+    caption: "Add a columns type for the person's movies"
+    hold: 0.9
+
+  - contextMenu: { target: "node:Person", menu: folder }
+    spotlight: "node:Person"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "Right-click the Person folder"
+    hold: 0.8
+
+  - contextMenu: { target: "node:Person", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Add a new item"
+    hold: 0.6
+
+  - contextMenu: { target: "node:Person", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Create PersonMovieColumns"
+    hold: 0.6
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs", folder: "Person\\" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.5
+
+  - addItem: { name: "" }
+    type: PersonMovieColumns.cs
+    typeSpeed: 18
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.4
+
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfterColumns"
+    open: PersonMovieColumns.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:PersonMovieColumns.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Two columns for the cast list"
+    hold: 0.9
+
+  - code: 11
+    codeMs: 1000
+    spotlight: null
+    caption: null
+    hold: 0.7
+
+  - highlight: ["3-8"]
+    spotlight: null
+    caption: "The grid uses MovieCastRow"
+    hold: 1.2
+
+  # 4. create the PersonMovieGrid editor
+  - treeScroll: top
+    spotlight: "node:Person"
+    caption: "Next, define the grid as an editor"
+    hold: 0.8
+
+  - contextMenu: { target: "node:Person", menu: folder }
+    spotlight: "node:Person"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    hold: 0.7
+
+  - contextMenu: { target: "node:Person", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    pointerAt: { x: 0.42, y: 0.5 }
+    hold: 0.6
+
+  - contextMenu: { target: "node:Person", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Create PersonMovieGrid"
+    hold: 0.6
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.tsx", folder: "Person\\" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.5
+
+  - addItem: { name: "" }
+    type: PersonMovieGrid.tsx
+    typeSpeed: 18
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.4
+
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfterGrid"
+    open: PersonMovieGrid.tsx
+    reveal: 0
+    highlight: []
+    spotlight: "node:PersonMovieGrid.tsx"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "A grid that filters MovieCast by PersonId"
+    hold: 0.9
+
+  - code: 44
+    codeMs: 2200
+    spotlight: null
+    caption: null
+    hold: 0.7
+
+  - highlight: ["12-22"]
+    spotlight: null
+    caption: "Cosmetic overrides keep the tab compact"
+    hold: 1.3
+
+  - highlight: ["31-43"]
+    editorLine: 36
+    spotlight: null
+    caption: "personId sets the equality filter and refreshes"
+    hold: 1.5
+
+  # 5. attach the editor and hide its label
+  - open: PersonForm.cs
+    reveal: null
+    highlight: ["14-15"]
+    spotlight: null
+    caption: "Use PersonMovieGrid for MoviesGrid"
+    hold: 0.8
+
+  - edit:
+      file: PersonForm.cs
+      find: "    [Tab(\"Movies\"), SkipNameCheck]\n    public string? MoviesGrid { get; set; }"
+      replace: "    [Tab(\"Movies\"), SkipNameCheck, PersonMovieGrid, LabelWidth(\"0\")]\n    public string? MoviesGrid { get; set; }"
+    editMs: 700
+    highlight: ["14-15"]
+    spotlight: null
+    caption: "The tab title is enough; hide the label"
+    hold: 1.1
+
+  # 6. set the person on the grid from the dialog
+  - open: PersonDialog.tsx
+    reveal: null
+    highlight: ["1-2"]
+    spotlight: null
+    caption: "Import the dialog stylesheet"
+    hold: 0.8
+
+  - edit:
+      file: PersonDialog.tsx
+      find: 'import { PersonForm, PersonRow, PersonService } from "../../ServerTypes/MovieDB";'
+      replace: "import { PersonForm, PersonRow, PersonService } from \"../../ServerTypes/MovieDB\";\nimport \"./PersonMovieGrid\";\nimport \"./PersonDialog.css\";"
+    editMs: 550
+    highlight: ["3-3"]
+    spotlight: null
+    caption: "Include PersonDialog.css"
+    hold: 0.9
+
+  - edit:
+      file: PersonDialog.tsx
+      find: "    protected form = new PersonForm(this);\n}"
+      replace: "    protected form = new PersonForm(this);\n\n    protected override afterLoadEntity() {\n        super.afterLoadEntity();\n\n        this.form.MoviesGrid.personId = this.entityId;\n    }\n}"
+    editMs: 800
+    highlight: ["11-18"]
+    spotlight: null
+    caption: "Pass the current person to the movie grid"
+    hold: 1.2
+
+  # 7. adjust the grid height in the tab
+  - treeScroll: top
+    spotlight: "node:Person"
+    caption: "Add PersonDialog.css"
+    hold: 0.8
+
+  - contextMenu: { target: "node:Person", menu: folder }
+    spotlight: "node:Person"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    hold: 0.6
+
+  - contextMenu: { target: "node:Person", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    pointerAt: { x: 0.42, y: 0.5 }
+    hold: 0.5
+
+  - contextMenu: { target: "node:Person", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Create PersonDialog.css"
+    hold: 0.5
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.css", folder: "Person\\" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.4
+
+  - addItem: { name: "" }
+    type: PersonDialog.css
+    typeSpeed: 18
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.4
+
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfterCss"
+    open: PersonDialog.css
+    reveal: 0
+    highlight: []
+    spotlight: "node:PersonDialog.css"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "The grid fills the tab height"
+    hold: 0.8
+
+  - code: 3
+    codeMs: 500
+    spotlight: null
+    caption: null
+    hold: 0.7
+
+  - highlight: ["1-3"]
+    spotlight: null
+    caption: "A fixed 500px height for the movie grid"
+    hold: 1.1
+
+  # 8. add a cast row, then see the person's movies
+  - screen: app
+    appStage: final
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv a:has-text('The Matrix')"
+    caption: "Open the movies grid"
+    hold: 1.0
+
+  - screen: app
+    appStage: final
+    click: "#GridDiv a:has-text('The Matrix')"
+    waitFor: .s-MovieDialog
+    caption: "Give The Matrix a cast member"
+    hold: 1.0
+
+  - screen: app
+    appStage: final
+    click: .s-MovieDialog .add-button
+    waitFor: .s-MovieCastEditDialog
+    caption: "Add a cast row"
+    hold: 0.7
+
+  - screen: app
+    appStage: final
+    select2: { input: ".s-MovieCastEditDialog [name=PersonId]", text: "Carrie-Anne Moss", multi: false }
+    caption: "Choose Carrie-Anne Moss"
+    hold: 0.7
+
+  - screen: app
+    appStage: final
+    type: Trinity
+    into: ".s-MovieCastEditDialog [name=Character]"
+    caption: "She played Trinity"
+    hold: 0.6
+
+  - screen: app
+    appStage: final
+    click: .s-MovieCastEditDialog .save-and-close-button
+    waitGone: .s-MovieCastEditDialog
+    caption: "Add the cast row"
+    hold: 0.8
+
+  - screen: app
+    appStage: final
+    click: .s-MovieDialog .save-and-close-button
+    waitGone: .s-MovieDialog
+    caption: "Save The Matrix and its cast"
+    hold: 1.2
+
+  - screen: app
+    appStage: final
+    goto: /MovieDB/Person
+    waitFor: "#GridDiv a:has-text('Carrie-Anne')"
+    caption: "Open the Person page"
+    hold: 1.0
+
+  - screen: app
+    appStage: final
+    click: "#GridDiv a:has-text('Carrie-Anne')"
+    waitFor: .s-PersonDialog
+    caption: "Open Carrie-Anne Moss"
+    hold: 1.3
+
+  - screen: app
+    appStage: final
+    click: ".s-PersonDialog a:has-text('Movies')"
+    waitFor: ".s-PersonMovieGrid .slick-row:has-text('The Matrix'):has-text('Trinity')"
+    spotlight: ".s-PersonMovieGrid"
+    caption: "The Movies tab lists her films"
+    hold: 2.2

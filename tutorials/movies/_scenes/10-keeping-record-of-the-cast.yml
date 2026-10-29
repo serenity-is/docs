@@ -1,0 +1,845 @@
+# Storyboard for tutorials/movies/10-keeping-record-of-the-cast.md
+# Fixture: pnpm media app-fixture --scenario ../web/Docs/tutorials/movies/_scenes/10-keeping-record-of-the-cast.yml --stages --force
+# Render: pnpm media --id 10-keeping-record-of-the-cast --publish
+# The editor, lookup and master/detail behavior run in the real fixture app.
+
+id: 10-keeping-record-of-the-cast
+title: Keeping record of the cast
+edits: "10"
+chrome: browser
+login: false
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+open: null
+
+files:
+  DefaultDB_20221115_1612_PersonAndMovieCast.cs: { snippet: "DefaultDB_20221115_1612_PersonAndMovieCast.cs" }
+  MovieDBNavigation.cs: { baseline: Modules/MovieDB/MovieDBNavigation.cs, fixturePath: Modules/MovieDB/MovieDBNavigation.cs }
+  Gender.cs: { snippet: "Gender_10.cs", fixturePath: Modules/MovieDB/Person/Gender.cs }
+  PersonRow.cs: { baseline: Modules/MovieDB/Person/PersonRow.cs, fixturePath: Modules/MovieDB/Person/PersonRow.cs }
+  PersonForm.cs: { baseline: Modules/MovieDB/Person/PersonForm.cs, fixturePath: Modules/MovieDB/Person/PersonForm.cs }
+  PersonColumns.cs: { baseline: Modules/MovieDB/Person/PersonColumns.cs, fixturePath: Modules/MovieDB/Person/PersonColumns.cs }
+  MovieCastEditor.tsx: { snippet: "MovieCastEditor_10.tsx", fixturePath: Modules/MovieDB/MovieCast/MovieCastEditor.tsx }
+  MovieCastEditDialog.tsx: { snippet: "MovieCastEditDialog_10.tsx", fixturePath: Modules/MovieDB/MovieCast/MovieCastEditDialog.tsx }
+  MovieCastEditDialog.css: { snippet: "MovieCastEditDialog_10.css", fixturePath: Modules/MovieDB/MovieCast/MovieCastEditDialog.css }
+  MovieCastRow.cs: { baseline: Modules/MovieDB/MovieCast/MovieCastRow.cs, fixturePath: Modules/MovieDB/MovieCast/MovieCastRow.cs }
+  MovieCastForm.cs: { baseline: Modules/MovieDB/MovieCast/MovieCastForm.cs, fixturePath: Modules/MovieDB/MovieCast/MovieCastForm.cs }
+  MovieCastColumns.cs: { baseline: Modules/MovieDB/MovieCast/MovieCastColumns.cs, fixturePath: Modules/MovieDB/MovieCast/MovieCastColumns.cs }
+  MovieRow.cs: { baseline: Modules/MovieDB/Movie/MovieRow.cs, fixturePath: Modules/MovieDB/Movie/MovieRow.cs }
+  MovieForm.cs: { baseline: Modules/MovieDB/Movie/MovieForm.cs, fixturePath: Modules/MovieDB/Movie/MovieForm.cs }
+  MovieDialog.tsx: { baseline: Modules/MovieDB/Movie/MovieDialog.tsx, fixturePath: Modules/MovieDB/Movie/MovieDialog.tsx }
+  MovieDeleteHandler.cs: { baseline: Modules/MovieDB/Movie/RequestHandlers/MovieDeleteHandler.cs, fixturePath: Modules/MovieDB/Movie/RequestHandlers/MovieDeleteHandler.cs }
+  MovieRetrieveHandler.cs: { baseline: Modules/MovieDB/Movie/RequestHandlers/MovieRetrieveHandler.cs, fixturePath: Modules/MovieDB/Movie/RequestHandlers/MovieRetrieveHandler.cs }
+  MovieSaveHandler.cs: { baseline: Modules/MovieDB/Movie/RequestHandlers/MovieSaveHandler.cs, fixturePath: Modules/MovieDB/Movie/RequestHandlers/MovieSaveHandler.cs }
+
+fixtureFiles:
+  Modules/MovieDB/Person/Gender.cs: { snippet: "Gender_10.cs" }
+  Modules/MovieDB/MovieCast/MovieCastEditor.tsx: { snippet: "MovieCastEditor_10.tsx" }
+  Modules/MovieDB/MovieCast/MovieCastEditDialog.tsx: { snippet: "MovieCastEditDialog_10.tsx" }
+  Modules/MovieDB/MovieCast/MovieCastEditDialog.css: { snippet: "MovieCastEditDialog_10.css" }
+fixtureDeletes:
+  - Modules/MovieDB/MovieCast/MovieCastPage.cs
+  - Modules/MovieDB/MovieCast/MovieCastPage.tsx
+  - Modules/MovieDB/MovieCast/MovieCastGrid.tsx
+  - Modules/MovieDB/MovieCast/MovieCastDialog.tsx
+verifyStage: final
+verify:
+  MovieDBNavigation.cs: Modules/MovieDB/MovieDBNavigation.cs
+  Gender.cs: Modules/MovieDB/Person/Gender.cs
+  PersonRow.cs: Modules/MovieDB/Person/PersonRow.cs
+  PersonForm.cs: Modules/MovieDB/Person/PersonForm.cs
+  PersonColumns.cs: Modules/MovieDB/Person/PersonColumns.cs
+  MovieCastEditor.tsx: Modules/MovieDB/MovieCast/MovieCastEditor.tsx
+  MovieCastEditDialog.tsx: Modules/MovieDB/MovieCast/MovieCastEditDialog.tsx
+  MovieCastEditDialog.css: Modules/MovieDB/MovieCast/MovieCastEditDialog.css
+  MovieCastRow.cs: Modules/MovieDB/MovieCast/MovieCastRow.cs
+  MovieCastForm.cs: Modules/MovieDB/MovieCast/MovieCastForm.cs
+  MovieCastColumns.cs: Modules/MovieDB/MovieCast/MovieCastColumns.cs
+  MovieRow.cs: Modules/MovieDB/Movie/MovieRow.cs
+  MovieForm.cs: Modules/MovieDB/Movie/MovieForm.cs
+  MovieDialog.tsx: Modules/MovieDB/Movie/MovieDialog.tsx
+  MovieDeleteHandler.cs: Modules/MovieDB/Movie/RequestHandlers/MovieDeleteHandler.cs
+  MovieRetrieveHandler.cs: Modules/MovieDB/Movie/RequestHandlers/MovieRetrieveHandler.cs
+  MovieSaveHandler.cs: Modules/MovieDB/Movie/RequestHandlers/MovieSaveHandler.cs
+
+treeBefore:
+  from: "@08-multiple-genres-per-movie/treeAfterFormatter"
+treeAfterMigration:
+  from: "@treeBefore"
+  add:
+    MovieTutorial.Web/Migrations/DefaultDB/:
+      - DefaultDB_20221115_1612_PersonAndMovieCast.cs
+treeGenerated:
+  from: "@treeAfterMigration"
+  replace:
+    MovieTutorial.Web/Migrations: {}
+    MovieTutorial.Web/Imports: {}
+    MovieTutorial.Web/Modules/Administration: {}
+    MovieTutorial.Web/Modules/Common: {}
+    MovieTutorial.Web/Modules/Membership: {}
+    MovieTutorial.Web/Modules/MovieDB/Genre: {}
+    MovieTutorial.Web/Modules/MovieDB/Movie: {}
+    MovieTutorial.Web/Modules/MovieDB/MovieGenres: {}
+    MovieTutorial.Web/Modules/ServerTypes: {}
+  add:
+    MovieTutorial.Web/Modules/MovieDB/Person/:
+      - PersonRow.cs
+      - PersonForm.cs
+      - PersonColumns.cs
+    MovieTutorial.Web/Modules/MovieDB/MovieCast/: {}
+treeAfterGender:
+  from: "@treeGenerated"
+  add:
+    MovieTutorial.Web/Modules/MovieDB/Person/:
+      - Gender.cs
+treeCastBefore:
+  from: "@treeAfterGender"
+  replace:
+    MovieTutorial.Web/Modules/MovieDB/Person: {}
+    MovieTutorial.Web/Modules/MovieDB/MovieCast:
+      - MovieCastRow.cs
+      - MovieCastForm.cs
+      - MovieCastColumns.cs
+      - MovieCastGrid.tsx
+      - MovieCastDialog.tsx
+      - MovieCastPage.cs
+      - MovieCastPage.tsx
+treeCast:
+  from: "@treeCastBefore"
+  replace:
+    MovieTutorial.Web/Modules/MovieDB/MovieCast:
+      - MovieCastRow.cs
+      - MovieCastForm.cs
+      - MovieCastColumns.cs
+      - MovieCastEditor.tsx
+      - MovieCastEditDialog.tsx
+      - MovieCastEditDialog.css
+tree: "@treeBefore"
+
+video: { width: 1400, height: 900, fps: 24, tail: 0.8, posterAt: 158 }
+output:
+  mp4: ../img/10-keeping-record-of-the-cast.mp4
+  webp: null
+  poster: ../img/10-keeping-record-of-the-cast-poster.png
+budgets: { maxDuration: 210, maxBytes: 8000000 }
+appStages:
+  - { id: manual, edits: 22 }
+  - { id: final, edits: 26 }
+
+steps:
+  # Migration: create the person and cast tables and seed three actors.
+  - treeScroll: top
+    spotlight: "node:DefaultDB"
+    caption: "Add the Person and MovieCast tables"
+    hold: 1.0
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "Right-click the DefaultDB migrations folder"
+    hold: 0.8
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    caption: "Add a new item"
+    hold: 0.6
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    hold: 0.6
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs", folder: "DefaultDB\\" }
+    spotlight: "#ai-name"
+    hold: 0.4
+  - addItem: { name: "" }
+    type: DefaultDB_20221115_1612_PersonAndMovieCast.cs
+    typeSpeed: 14
+    into: addItem.name
+    spotlight: "#ai-name"
+    hold: 0.4
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfterMigration"
+    open: DefaultDB_20221115_1612_PersonAndMovieCast.cs
+    reveal: 0
+    spotlight: null
+    caption: "Create the migration"
+    hold: 0.8
+  - code: 56
+    codeMs: 2000
+    spotlight: null
+    hold: 0.6
+  - highlight: ["8-24"]
+    spotlight: null
+    caption: "Person stores actors; MovieCast links a person to a movie and character"
+    hold: 2.0
+  - highlight: ["26-45"]
+    spotlight: null
+    caption: "Seed the people who played Neo, Trinity and Morpheus"
+    hold: 1.8
+
+  # Sergen runs after the migration, for both tables.
+  - terminal: { open: true }
+    bottomHeight: 430
+    spotlight: terminal
+    caption: "Generate Person and MovieCast with sergen"
+    hold: 0.8
+  - type: dotnet sergen g
+    typeSpeed: 50
+    spotlight: terminal
+    hold: 0.5
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "Select tables for code generation", kind: section }
+        - { text: "  [X] dbo.Person", kind: picked }
+        - { text: "  [X] dbo.MovieCast", kind: picked }
+        - { text: "Module: MovieDB     Permission: Administration:General", kind: row }
+        - { text: "Generate: All", kind: row }
+    spotlight: terminal
+    caption: "Generate both modules in MovieDB"
+    hold: 2.0
+  - highlight: []
+    spotlight: null
+    hold: 0.1
+  - terminal: { open: false }
+    bottomHeight: null
+    tree: "@treeGenerated"
+    open: MovieDBNavigation.cs
+    spotlight: null
+    caption: "Keep the Person page; cast will be edited inside a movie"
+    hold: 1.0
+  - edit:
+      file: MovieDBNavigation.cs
+      find: '[assembly: NavigationLink(int.MaxValue, "MovieDB/Person", typeof(MyPages.PersonPage), icon: null)]'
+      replace: '[assembly: NavigationLink(6300, "Movie Database/Person", typeof(MyPages.PersonPage), icon: "fa-users")]'
+    editMs: 650
+    highlight: ["6-6"]
+    spotlight: null
+    caption: "Add Person to the Movie Database menu"
+    hold: 1.0
+  - edit:
+      file: MovieDBNavigation.cs
+      find: '[assembly: NavigationLink(int.MaxValue, "MovieDB/Movie Cast", typeof(MyPages.MovieCastPage), icon: null)]'
+      replace: ''
+    editMs: 550
+    spotlight: null
+    caption: "Remove the separate Movie Cast navigation entry and page"
+    hold: 1.0
+
+  # Gender enum and full name lookup.
+  - treeScroll: top
+    spotlight: "node:Person"
+    caption: "Declare Gender next to PersonRow"
+    hold: 0.7
+  - contextMenu: { target: "node:Person", menu: folder }
+    spotlight: "node:Person"
+    click: true
+    caption: "Right-click the Person folder"
+    hold: 0.7
+  - contextMenu: { target: "node:Person", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    caption: "Add a new item"
+    hold: 0.6
+  - contextMenu: { target: "node:Person", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    hold: 0.6
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs", folder: "Person\\" }
+    spotlight: "#ai-name"
+    hold: 0.4
+  - addItem: { name: "" }
+    type: Gender.cs
+    typeSpeed: 18
+    into: addItem.name
+    spotlight: "#ai-name"
+    hold: 0.4
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfterGender"
+    open: Gender.cs
+    reveal: 0
+    spotlight: null
+    caption: "Declare the Gender enumeration"
+    hold: 0.7
+  - code: 9
+    codeMs: 900
+    spotlight: null
+    hold: 0.7
+  - open: PersonRow.cs
+    reveal: null
+    spotlight: null
+    caption: "Use the enumeration in the row"
+    hold: 0.8
+  - edit:
+      file: PersonRow.cs
+      find: '    public int? Gender { get => fields.Gender[this]; set => fields.Gender[this] = value; }'
+      replace: '    public Gender? Gender { get => fields.Gender[this]; set => fields.Gender[this] = value; }'
+    editMs: 650
+    highlight: ["26-26"]
+    spotlight: null
+    caption: "Gender becomes an enum"
+    hold: 0.8
+  - edit:
+      file: PersonRow.cs
+      find: '        public Int32Field Gender = null!;'
+      replace: '        public EnumField<Gender> Gender = null!;'
+    editMs: 500
+    highlight: ["38-38"]
+    spotlight: null
+    caption: "Use an EnumField in RowFields"
+    hold: 0.8
+  - open: PersonForm.cs
+    reveal: null
+    edit:
+      file: PersonForm.cs
+      find: '    public int? Gender { get; set; }'
+      replace: '    public Gender? Gender { get; set; }'
+    editMs: 500
+    highlight: ["11-11"]
+    spotlight: null
+    caption: "Use Gender in the form"
+    hold: 0.7
+  - open: PersonColumns.cs
+    reveal: null
+    edit:
+      file: PersonColumns.cs
+      find: '    public int? Gender { get; set; }'
+      replace: '    public Gender? Gender { get; set; }'
+    editMs: 500
+    highlight: ["14-14"]
+    spotlight: null
+    caption: "And in the grid columns"
+    hold: 0.7
+  - open: PersonRow.cs
+    reveal: null
+    edit:
+      file: PersonRow.cs
+      find: '    [DisplayText("First Name"), NotNull, QuickSearch, NameProperty]'
+      replace: '    [DisplayText("First Name"), NotNull]'
+    editMs: 600
+    highlight: ["13-13"]
+    spotlight: null
+    caption: "Move name and search metadata from FirstName"
+    hold: 0.9
+  - edit:
+      file: PersonRow.cs
+      find: "    public class RowFields : RowFieldsBase"
+      replace: "    [DisplayText(\"Full Name\"), Concat(\"t0.FirstName\", \"' '\", \"t0.LastName\"), QuickSearch, NameProperty]\n    public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }\n\n    public class RowFields : RowFieldsBase"
+    editMs: 900
+    highlight: ["31-33"]
+    spotlight: null
+    caption: "Calculate and search by FullName"
+    hold: 1.2
+  - edit:
+      file: PersonRow.cs
+      find: '        public StringField LastName = null!;'
+      replace: "        public StringField LastName = null!;\n        public StringField FullName = null!;"
+    editMs: 500
+    highlight: ["38-39"]
+    spotlight: null
+    caption: "Add its field object"
+    hold: 0.7
+  - edit:
+      file: PersonRow.cs
+      find: 'public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow'
+      replace: "[LookupScript]\npublic sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow"
+    editMs: 500
+    highlight: ["8-9"]
+    spotlight: null
+    caption: "Expose a lookup for selecting actors"
+    hold: 1.0
+
+  # See the generated Person page and full-name title in the real app.
+  - screen: app
+    appStage: final
+    goto: /MovieDB/Person
+    waitFor: "#GridDiv a:has-text('Carrie-Anne')"
+    caption: "The Person page displays the Gender enumeration"
+    hold: 1.2
+  - screen: app
+    appStage: final
+    click: "#GridDiv a:has-text('Carrie-Anne')"
+    waitFor: .s-PersonDialog
+    caption: "FullName becomes the dialog title"
+    hold: 1.3
+
+  # Use an in-memory grid and dialog for cast entries.
+  - tree: "@treeCastBefore"
+    treeScroll: top
+    spotlight: null
+    caption: "Remove the separate page and replace the generated grid and dialog"
+    hold: 1.0
+  - tree: "@treeCast"
+    spotlight: null
+    hold: 0.2
+  - open: MovieCastEditor.tsx
+    reveal: 0
+    spotlight: null
+    caption: "Replace the generated grid with an in-memory editor"
+    hold: 0.7
+  - code: 26
+    codeMs: 1800
+    spotlight: null
+    hold: 0.7
+  - highlight: ["5-12"]
+    spotlight: null
+    caption: "GridEditorBase uses the cast edit dialog"
+    hold: 1.2
+  - highlight: ["13-24"]
+    spotlight: null
+    caption: "Resolve PersonFullName when a cast member is added"
+    hold: 1.4
+  - open: MovieCastEditDialog.tsx
+    reveal: 0
+    spotlight: null
+    caption: "The cast dialog edits rows in memory"
+    hold: 0.6
+  - code: 13
+    codeMs: 900
+    spotlight: null
+    hold: 0.8
+  - open: MovieCastEditDialog.css
+    reveal: 0
+    spotlight: null
+    caption: "Keep the dialog compact"
+    hold: 0.5
+  - code: 3
+    codeMs: 450
+    spotlight: null
+    hold: 0.7
+  - open: MovieCastForm.cs
+    reveal: null
+    edit:
+      file: MovieCastForm.cs
+      find: "    public int? MovieId { get; set; }\n"
+      replace: ''
+    editMs: 500
+    spotlight: null
+    caption: "The movie supplies MovieId; the dialog only asks for actor and character"
+    hold: 1.0
+  - open: MovieCastRow.cs
+    reveal: null
+    edit:
+      file: MovieCastRow.cs
+      find: "    [DisplayText(\"Person\"), NotNull, ForeignKey(\"Person\", \"PersonId\"), LeftJoin(jPerson), TextualField(nameof(PersonFirstName))]\n    public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }"
+      replace: "    [DisplayText(\"Actor/Actress\"), NotNull, ForeignKey(typeof(PersonRow)), LeftJoin(jPerson), TextualField(nameof(PersonFullName))]\n    [AsyncLookupEditor(typeof(PersonRow))]\n    public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }"
+    editMs: 1000
+    highlight: ["19-21"]
+    spotlight: null
+    caption: "Choose an actor using the Person lookup"
+    hold: 1.1
+  - edit:
+      file: MovieCastRow.cs
+      find: "    [DisplayText(\"Person First Name\"), Expression($\"{jPerson}.[FirstName]\")]\n    public string? PersonFirstName { get => fields.PersonFirstName[this]; set => fields.PersonFirstName[this] = value; }"
+      replace: "    [DisplayText(\"Actor/Actress\"), Origin(jPerson, nameof(PersonRow.FullName))]\n    public string? PersonFullName { get => fields.PersonFullName[this]; set => fields.PersonFullName[this] = value; }"
+    editMs: 900
+    highlight: ["29-30"]
+    spotlight: null
+    caption: "Display the joined full name"
+    hold: 1.0
+  - edit:
+      file: MovieCastRow.cs
+      find: '        public StringField PersonFirstName = null!;'
+      replace: '        public StringField PersonFullName = null!;'
+    editMs: 500
+    highlight: ["40-40"]
+    spotlight: null
+    caption: "Rename the field object"
+    hold: 0.8
+  - open: MovieCastColumns.cs
+    reveal: null
+    edit:
+      file: MovieCastColumns.cs
+      find: "    [EditLink, DisplayText(TextKey = \"Db.Shared.RecordId\"), AlignRight]\n    public int? MovieCastId { get; set; }\n    public string? MovieTitle { get; set; }\n    public string? PersonFirstName { get; set; }\n    [EditLink]\n    public string? Character { get; set; }"
+      replace: "    [EditLink, Width(250)]\n    public string? PersonFullName { get; set; }\n    [EditLink, Width(250)]\n    public string? Character { get; set; }"
+    editMs: 900
+    highlight: ["7-10"]
+    spotlight: null
+    caption: "Show the actor and character in the cast grid"
+    hold: 1.1
+  - open: MovieDialog.tsx
+    reveal: null
+    edit:
+      file: MovieDialog.tsx
+      find: 'import "./MovieDialog.css";'
+      replace: "import \"./MovieDialog.css\";\nimport \"../MovieCast/MovieCastEditor\";"
+    editMs: 600
+    highlight: ["2-3"]
+    spotlight: null
+    caption: "Include the editor in the movie bundle"
+    hold: 0.9
+  - open: MovieForm.cs
+    reveal: null
+    edit:
+      file: MovieForm.cs
+      find: "    public string? Description { get; set; }"
+      replace: "    public string? Description { get; set; }\n\n    [DisplayText(\"Cast\"), MovieCastEditor, SkipNameCheck]\n    public List<MovieCastRow>? CastList { get; set; }\n"
+    editMs: 850
+    highlight: ["9-13"]
+    spotlight: null
+    caption: "Place the cast editor in the Movie form"
+    hold: 1.1
+  - open: MovieRow.cs
+    reveal: null
+    edit:
+      file: MovieRow.cs
+      find: '    public class RowFields : RowFieldsBase'
+      replace: "    [DisplayText(\"Cast List\"), NotMapped]\n    public List<MovieCastRow>? CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }\n\n    public class RowFields : RowFieldsBase"
+    editMs: 1000
+    highlight: ["38-40"]
+    spotlight: null
+    caption: "Declare a non-mapped list of cast rows"
+    hold: 1.5
+  - edit:
+      file: MovieRow.cs
+      find: '        public ListField<int> GenreList = null!;'
+      replace: "        public ListField<int> GenreList = null!;\n        public RowListField<MovieCastRow> CastList = null!;"
+    editMs: 600
+    highlight: ["51-52"]
+    spotlight: null
+    caption: "A RowListField holds the detail rows"
+    hold: 1.0
+
+  # First implement master/detail persistence explicitly.
+  - open: MovieSaveHandler.cs
+    reveal: null
+    edit:
+      file: MovieSaveHandler.cs
+      find: &saveBefore |-
+        public class MovieSaveHandler(IRequestContext context) :
+            SaveRequestHandlerAsync<MyRow, SaveRequest<MyRow>, SaveResponse>(context),
+            IMovieSaveHandler
+        {
+        }
+      replace: &saveManual |-
+        public class MovieSaveHandler : SaveRequestHandlerAsync<MyRow, SaveRequest<MyRow>, SaveResponse>, IMovieSaveHandler
+        {
+            private readonly IServiceResolver<IMovieCastDeleteHandler> movieCastDelete;
+            private readonly IServiceResolver<IMovieCastSaveHandler> movieCastSave;
+        
+            public MovieSaveHandler(IRequestContext context,
+                IServiceResolver<IMovieCastDeleteHandler> movieCastDelete,
+                IServiceResolver<IMovieCastSaveHandler> movieCastSave) : base(context)
+            {
+                this.movieCastDelete = movieCastDelete ?? throw new ArgumentNullException(nameof(movieCastDelete));
+                this.movieCastSave = movieCastSave ?? throw new ArgumentNullException(nameof(movieCastSave));
+            }
+        
+            protected override async Task AfterSaveAsync(CancellationToken cancellationToken = default)
+            {
+                await base.AfterSaveAsync(cancellationToken);
+        
+                if (Row.CastList == null)
+                    return;
+        
+                var mc = MovieCastRow.Fields;
+                var oldList = IsCreate ? new List<MovieCastRow>() 
+                    : await Connection.ListAsync<MovieCastRow>(mc.MovieId == Row.MovieId.Value, cancellationToken);
+        
+                var oldById = oldList.ToDictionary(x => x.MovieCastId.Value);
+                var newById = Row.CastList.ToLookup(x => x.MovieCastId);
+        
+                foreach (var row in oldList.Where(x => !newById.Contains(x.MovieCastId)))
+                {
+                    await movieCastDelete.Resolve().DeleteAsync(UnitOfWork,
+                        new() { EntityId = row.MovieCastId }, cancellationToken);
+                }
+        
+                foreach (var row in Row.CastList)
+                {
+                    var entity = row.Clone();
+                    entity.MovieId = Row.MovieId.Value;
+        
+                    if (row.MovieCastId == null || !oldById.ContainsKey(row.MovieCastId.Value))
+                    {
+                        entity.MovieCastId = null;
+                        await movieCastSave.Resolve().CreateAsync(UnitOfWork,
+                            new() { Entity = entity }, cancellationToken);
+                    }
+                    else
+                    {
+                        await movieCastSave.Resolve().UpdateAsync(UnitOfWork,
+                            new() { Entity = entity }, cancellationToken);
+                    }
+                }
+            }
+        }
+    editMs: 1800
+    spotlight: null
+    caption: "Save the cast in the same unit of work"
+    hold: 1.4
+  - highlight: ["28-37"]
+    spotlight: null
+    caption: "Compare the old and new lists and delete removed rows"
+    hold: 1.5
+  - highlight: ["40-54"]
+    spotlight: null
+    caption: "Create or update the remaining cast rows"
+    hold: 1.5
+  - highlight: []
+    spotlight: null
+    hold: 0.1
+  - open: MovieRetrieveHandler.cs
+    reveal: null
+    edit:
+      file: MovieRetrieveHandler.cs
+      find: &retrieveBefore |-
+        public class MovieRetrieveHandler(IRequestContext context) :
+            RetrieveRequestHandlerAsync<MyRow, RetrieveRequest, RetrieveResponse<MyRow>>(context),
+            IMovieRetrieveHandler
+        {
+        }
+      replace: &retrieveManual |-
+        public class MovieRetrieveHandler : RetrieveRequestHandlerAsync<MyRow, RetrieveRequest, RetrieveResponse<MyRow>>, IMovieRetrieveHandler
+        {
+            public MovieRetrieveHandler(IRequestContext context)
+                    : base(context)
+            {
+            }
+        
+            protected override async Task OnReturnAsync(CancellationToken cancellationToken = default)
+            {
+                await base.OnReturnAsync(cancellationToken);
+        
+                var mc = MovieCastRow.Fields;
+                Row.CastList = await Connection.ListAsync<MovieCastRow>(q => q
+                    .SelectTableFields()
+                    .Select(mc.PersonFullName)
+                    .Where(mc.MovieId == Row.MovieId.Value), cancellationToken);
+            }
+        }
+    editMs: 1800
+    spotlight: null
+    caption: "Load the cast with the movie"
+    hold: 1.4
+  - open: MovieDeleteHandler.cs
+    reveal: null
+    edit:
+      file: MovieDeleteHandler.cs
+      find: &deleteBefore |-
+        public class MovieDeleteHandler(IRequestContext context) :
+            DeleteRequestHandlerAsync<MyRow, DeleteRequest, DeleteResponse>(context),
+            IMovieDeleteHandler
+        {
+        }
+      replace: &deleteManual |-
+        public class MovieDeleteHandler : DeleteRequestHandlerAsync<MyRow, DeleteRequest, DeleteResponse>, IMovieDeleteHandler
+        {
+            public IServiceResolver<IMovieCastDeleteHandler> movieCastDelete;
+        
+            public MovieDeleteHandler(IRequestContext context, IServiceResolver<IMovieCastDeleteHandler> movieCastDelete)
+                : base(context)
+            {
+                this.movieCastDelete = movieCastDelete ?? throw new ArgumentNullException(nameof(movieCastDelete));
+            }
+        
+            protected override async Task OnBeforeDeleteAsync(CancellationToken cancellationToken = default)
+            {
+                await base.OnBeforeDeleteAsync(cancellationToken);
+        
+                var mc = MovieCastRow.Fields;
+                var detailIds = await Connection.QueryAsync<Int32>(
+                    new SqlQuery()
+                        .From(mc)
+                        .Select(mc.MovieCastId)
+                        .Where(mc.MovieId == Row.MovieId.Value), cancellationToken: cancellationToken);
+        
+                foreach (var detailID in detailIds)
+                {
+                    await movieCastDelete.Resolve().DeleteAsync(this.UnitOfWork, new()
+                    {
+                        EntityId = detailID
+                    }, cancellationToken);
+                }
+            }
+        }
+    editMs: 1800
+    spotlight: null
+    caption: "Delete cast rows before deleting the movie"
+    hold: 1.4
+
+  # Exercise the manual handlers before replacing them.
+  - screen: app
+    appStage: manual
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv a:has-text('The Matrix')"
+    caption: "Try the manual save and retrieve handlers"
+    hold: 1.0
+  - screen: app
+    appStage: manual
+    click: "#GridDiv a:has-text('The Matrix')"
+    waitFor: .s-MovieDialog
+    caption: "Open The Matrix"
+    hold: 0.8
+  - screen: app
+    appStage: manual
+    click: .s-MovieDialog .add-button
+    waitFor: .s-MovieCastEditDialog
+    caption: "Add Neo"
+    hold: 0.7
+  - screen: app
+    appStage: manual
+    select2: { input: ".s-MovieCastEditDialog [name=PersonId]", text: "Keanu Reeves", multi: false }
+    caption: "Choose Keanu Reeves"
+    hold: 0.6
+  - screen: app
+    appStage: manual
+    type: Neo
+    into: ".s-MovieCastEditDialog [name=Character]"
+    caption: "Enter the character"
+    hold: 0.6
+  - screen: app
+    appStage: manual
+    click: .s-MovieCastEditDialog .save-and-close-button
+    waitGone: .s-MovieCastEditDialog
+    caption: "Add the cast row"
+    hold: 0.8
+  - screen: app
+    appStage: manual
+    click: .s-MovieDialog .save-and-close-button
+    waitGone: .s-MovieDialog
+    caption: "Save the movie and its cast"
+    hold: 0.8
+  - screen: app
+    appStage: manual
+    click: "#GridDiv a:has-text('The Matrix')"
+    waitFor: ".s-MovieDialog .slick-cell:has-text('Keanu Reeves')"
+    caption: "The retrieve handler reloads the cast"
+    hold: 1.5
+
+  # The behavior replaces the three request-handler overrides.
+  - open: MovieSaveHandler.cs
+    reveal: null
+    spotlight: null
+    caption: "The save handler currently manages the cast manually"
+    hold: 1.4
+  - edit:
+      file: MovieSaveHandler.cs
+      find: *saveManual
+      replace: *saveBefore
+      animation: replace
+    editMs: 850
+    spotlight: null
+    caption: "Remove the manual save override"
+    hold: 1.0
+  - open: MovieRetrieveHandler.cs
+    reveal: null
+    spotlight: null
+    caption: "The retrieve handler also loads the cast manually"
+    hold: 1.2
+  - edit:
+      file: MovieRetrieveHandler.cs
+      find: *retrieveManual
+      replace: *retrieveBefore
+      animation: replace
+    editMs: 850
+    spotlight: null
+    caption: "Remove the manual retrieve override"
+    hold: 1.0
+  - open: MovieDeleteHandler.cs
+    reveal: null
+    spotlight: null
+    caption: "The delete handler currently removes cast rows manually"
+    hold: 1.2
+  - edit:
+      file: MovieDeleteHandler.cs
+      find: *deleteManual
+      replace: *deleteBefore
+      animation: replace
+    editMs: 850
+    spotlight: null
+    caption: "Remove the manual delete override"
+    hold: 1.0
+  - open: MovieRow.cs
+    reveal: null
+    edit:
+      file: MovieRow.cs
+      find: '    [DisplayText("Cast List"), NotMapped]'
+      replace: "    [DisplayText(\"Cast List\"), NotMapped]\n    [MasterDetailRelation(foreignKey: nameof(MovieCastRow.MovieId), ColumnsType = typeof(Columns.MovieCastColumns))]"
+    editMs: 800
+    highlight: ["38-39"]
+    spotlight: null
+    caption: "MasterDetailRelation replaces the manual handlers"
+    hold: 1.4
+
+  # Exercise real master/detail persistence.
+  - screen: app
+    appStage: final
+    goto: /MovieDB/Movie
+    waitFor: '#GridDiv'
+    caption: "Open The Matrix to edit its cast"
+    hold: 1.2
+  - screen: app
+    appStage: final
+    click: "#GridDiv a:has-text('The Matrix')"
+    waitFor: .s-MovieDialog
+    caption: "Add a cast member"
+    hold: 1.0
+  - screen: app
+    appStage: final
+    click: .s-MovieDialog .add-button
+    waitFor: .s-MovieCastEditDialog
+    caption: "The cast editor opens a detail dialog"
+    hold: 0.9
+  - screen: app
+    appStage: final
+    select2: { input: ".s-MovieCastEditDialog [name=PersonId]", text: "Keanu Reeves", multi: false }
+    caption: "Choose Keanu Reeves"
+    hold: 0.8
+  - screen: app
+    appStage: final
+    type: Neo
+    into: ".s-MovieCastEditDialog [name=Character]"
+    caption: "He plays Neo"
+    hold: 0.7
+  - screen: app
+    appStage: final
+    click: .s-MovieCastEditDialog .save-and-close-button
+    waitGone: .s-MovieCastEditDialog
+    caption: "The cast grid displays the actor's full name"
+    hold: 1.3
+  - screen: app
+    appStage: final
+    click: .s-MovieDialog .add-button
+    waitFor: .s-MovieCastEditDialog
+    caption: "Add Trinity too"
+    hold: 0.7
+  - screen: app
+    appStage: final
+    select2: { input: ".s-MovieCastEditDialog [name=PersonId]", text: "Carrie-Anne Moss", multi: false }
+    caption: "Choose Carrie-Anne Moss"
+    hold: 0.7
+  - screen: app
+    appStage: final
+    type: Trinity
+    into: ".s-MovieCastEditDialog [name=Character]"
+    caption: "Enter the character"
+    hold: 0.7
+  - screen: app
+    appStage: final
+    click: .s-MovieCastEditDialog .save-and-close-button
+    waitGone: .s-MovieCastEditDialog
+    caption: "Both cast entries are still in memory"
+    hold: 1.2
+  - screen: app
+    appStage: final
+    click: .s-MovieDialog .save-and-close-button
+    waitGone: .s-MovieDialog
+    caption: "Save the movie and its cast together"
+    hold: 1.2
+  - screen: app
+    appStage: final
+    click: "#GridDiv a:has-text('The Matrix')"
+    waitFor: .s-MovieDialog
+    caption: "Reopen The Matrix"
+    hold: 1.0
+  - screen: app
+    appStage: final
+    waitFor: ".s-MovieDialog .slick-cell:has-text('Keanu Reeves')"
+    spotlight: ".s-MovieDialog"
+    caption: "The cast was saved and loaded with the movie"
+    hold: 2.2

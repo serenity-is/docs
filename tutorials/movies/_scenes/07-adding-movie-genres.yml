@@ -36,6 +36,7 @@ files:
     snippet: "GenreRow_07.cs"
     fixturePath: Modules/MovieDB/Genre/GenreRow.cs
 
+verifyStage: inplace
 verify:
   MovieDBNavigation.cs: Modules/MovieDB/MovieDBNavigation.cs
   MovieRow.cs: Modules/MovieDB/Movie/MovieRow.cs
@@ -146,13 +147,14 @@ steps:
     tree: "@treeAfterMigration"
     open: DefaultDB_20221114_1836_GenreTable.cs
     reveal: 0
+    bottomHeight: 200
     highlight: []
     spotlight: "node:DefaultDB_20221114_1836_GenreTable.cs"
     pointerAt: { x: 0.42, y: 0.5 }
     caption: "The Genre migration sits after the Movie migrations"
     hold: 0.9
 
-  - code: 24
+  - code: 26
     codeMs: 1800
     spotlight: null
     caption: null
@@ -163,11 +165,20 @@ steps:
     caption: "Create the Genre table and add Movie.GenreId"
     hold: 2.2
 
-  # 2. generate the Genre module with sergen
+  # 2. run the app once, so the migration is applied to the database
+  - screen: app
+    appStage: genre
+    goto: /MovieDB/Movie
+    waitFor: "#GridDiv"
+    spotlight: null
+    caption: "Start the app so the new migration creates the Genre table"
+    hold: 2.2
+
+  # 3. generate the Genre module with sergen, now that the table exists
   - terminal: { open: true }
     bottomHeight: 430
     spotlight: terminal
-    caption: "Run sergen after the migration"
+    caption: "Now sergen can see the new Genre table"
     hold: 1.0
 
   - type: dotnet sergen g
@@ -255,13 +266,14 @@ steps:
 
   - tree: "@treeAfterSergen"
     terminal: { open: false }
+    bottomHeight: null
     open: GenreRow.cs
     reveal: null
     spotlight: "node:GenreRow.cs"
     caption: "The Genre files appear in the MovieDB module"
     hold: 1.4
 
-  # 3. show the generated Genres page
+  # 4. show the generated Genres page
   - screen: app
     appStage: genre
     goto: /MovieDB/Genre
@@ -270,7 +282,7 @@ steps:
     caption: "The generated Genres page lists the sample genres"
     hold: 2.2
 
-  # 4. move Genres under the customized Movie Database section
+  # 5. move Genres under the customized Movie Database section
   - open: MovieDBNavigation.cs
     reveal: null
     highlight: ["5-5"]
@@ -283,7 +295,7 @@ steps:
       find: '[assembly: NavigationLink(int.MaxValue, "MovieDB/Genre", typeof(MyPages.GenrePage), icon: null)]'
       replace: '[assembly: NavigationLink(6200, "Movie Database/Genres", typeof(MyPages.GenrePage), icon: "fa-thumb-tack")]'
     editMs: 900
-    highlight: ["5-5"]
+    highlight: ["6-6"]
     spotlight: null
     caption: "Move Genres below Movies"
     hold: 1.4
@@ -296,7 +308,7 @@ steps:
     caption: "Genres now lives under Movie Database"
     hold: 2.0
 
-  # 5. map the join on the Movie entity
+  # 6. map the join on the Movie entity
   - open: MovieRow.cs
     reveal: null
     spotlight: "node:MovieRow.cs"
@@ -328,7 +340,7 @@ steps:
       find: "        public EnumField<MovieKind> Kind = null!;"
       replace: "        public EnumField<MovieKind> Kind = null!;\n        public Int32Field GenreId = null!;\n        public StringField GenreName = null!;"
     editMs: 700
-    highlight: ["43-45"]
+    highlight: ["51-53"]
     spotlight: null
     caption: "Add both fields to RowFields"
     hold: 1.0
@@ -357,7 +369,7 @@ steps:
     caption: "Show the joined genre name in the grid"
     hold: 1.0
 
-  # 6. see the integer field before adding the lookup editor
+  # 7. see the integer field before adding the lookup editor
   - screen: app
     appStage: mapped
     goto: /MovieDB/Movie
@@ -376,7 +388,7 @@ steps:
     caption: "At first GenreId is just an integer input"
     hold: 2.2
 
-  # 7. declare the lookup and use a lookup editor
+  # 8. declare the lookup and use a lookup editor
   - open: GenreRow.cs
     reveal: null
     edit:
@@ -397,7 +409,7 @@ steps:
       insertBefore: "    public int? GenreId"
       text: "    [LookupEditor(typeof(GenreRow))]\n"
     editMs: 650
-    highlight: ["33-36"]
+    highlight: ["36-38"]
     spotlight: null
     caption: "Use the Genre lookup for GenreId"
     hold: 1.2
@@ -409,13 +421,20 @@ steps:
     waitFor: .s-MovieDialog
     spotlight: ".s-MovieDialog [name=GenreId]"
     caption: "GenreId is now a searchable dropdown"
-    hold: 2.2
+    hold: 1.2
 
-  # 8. allow adding a genre without leaving the dialog
+  - screen: app
+    appStage: editor
+    select2: { input: ".s-MovieDialog [name=GenreId]", multi: false }
+    spotlight: ".select2-drop-active"
+    caption: "The dropdown lists the genres from the lookup"
+    hold: 2.4
+
+  # 9. allow adding a genre without leaving the dialog
   - open: MovieRow.cs
     reveal: null
-    highlight: ["33-36"]
-    spotlight: "line:33"
+    highlight: ["36-38"]
+    spotlight: "line:37"
     caption: "Enable InplaceAdd on the lookup editor"
     hold: 0.9
 
@@ -424,8 +443,8 @@ steps:
       find: "[LookupEditor(typeof(GenreRow))]"
       replace: "[LookupEditor(typeof(GenreRow), InplaceAdd = true)]"
     editMs: 600
-    highlight: ["33-33"]
-    spotlight: "line:33"
+    highlight: ["37-37"]
+    spotlight: null
     caption: "InplaceAdd shows the star button"
     hold: 1.0
 
@@ -434,6 +453,14 @@ steps:
     goto: /MovieDB/Movie
     click: .add-button
     waitFor: .s-MovieDialog
-    spotlight: ".s-MovieDialog [name=GenreId]"
-    caption: "The Genre dropdown can now add a new genre in place"
+    spotlight: ".s-MovieDialog [name=GenreId] + .inplace-button"
+    caption: "InplaceAdd puts a star button next to the dropdown"
+    hold: 1.6
+
+  - screen: app
+    appStage: inplace
+    click: ".s-MovieDialog [name=GenreId] + .inplace-button"
+    waitFor: ".s-GenreDialog"
+    spotlight: ".s-GenreDialog"
+    caption: "The star button opens a Genre dialog without leaving the movie"
     hold: 2.4

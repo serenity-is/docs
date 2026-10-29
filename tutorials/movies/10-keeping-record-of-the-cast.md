@@ -18,7 +18,7 @@ For this purpose, you need a table named `MovieCast` with columns such as:
 
 You'll also require a `Person` table to store actors/actresses, as they may take on different roles in the future. It's advisable to name it "Person" since actors/actresses may transition into roles such as directors or screenwriters in the future.
 
-<video alt="Keeping Record of the Cast Animation" controls>
+<video alt="Keeping Record of the Cast Animation" controls preload="metadata" poster="img/10-keeping-record-of-the-cast-poster.png">
   <source src="img/10-keeping-record-of-the-cast.mp4" type="video/mp4" />
 </video>
 
@@ -308,7 +308,11 @@ export class MovieCastEditor<P = {}> extends GridEditorBase<MovieCastRow, P> {
 
 This editor class extends the `GridEditorBase` class from the Extensions package, designed for in-memory editing. It also serves as the base class for the Order Details editor used in the Order dialog.
 
-To reference this new editor type from the server side, ensure that you build the project and successfully complete the auto-transform process.
+To reference this new editor type from the server side, ensure that you build the project and successfully complete the auto-transform process. Import the editor from `MovieDialog.tsx` so it is included in the movie bundle:
+
+```typescript
+import "../MovieCast/MovieCastEditor";
+```
 
 ## Using MovieCastEditor in Movie Form
 
@@ -371,7 +375,7 @@ export class MovieCastEditDialog extends GridEditorDialog<MovieCastRow> {
     protected override getNameProperty() { return MovieCastRow.nameProperty; }
     protected override getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
 
-    protected form: MovieCastForm = new MovieCastForm(this.idPrefix);
+    protected form = new MovieCastForm(this);
 }
 ```
 

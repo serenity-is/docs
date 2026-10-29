@@ -38,6 +38,7 @@ files:
 fixtureFiles:
   Modules/MovieDB/Movie/MovieListRequest.cs: { snippet: "MovieListRequest_09.cs" }
 
+verifyStage: final
 verify:
   MovieColumns.cs: Modules/MovieDB/Movie/MovieColumns.cs
   MovieListRequest.cs: Modules/MovieDB/Movie/MovieListRequest.cs
@@ -310,7 +311,7 @@ steps:
 
   - screen: app
     appStage: final
-    scroll: { selector: "#GridDiv .slick-viewport", left: 10000 }
+    scroll: { selector: "#GridDiv .slick-viewport", left: 0 }
     spotlight: "#GridDiv"
     caption: "Only Fight Club remains in the grid"
     hold: 2.2

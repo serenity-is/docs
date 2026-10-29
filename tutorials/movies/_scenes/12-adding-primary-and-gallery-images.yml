@@ -1,0 +1,264 @@
+# Storyboard for tutorials/movies/12-adding-primary-and-gallery-images.md
+# Fixture: pnpm media app-fixture --scenario ../web/Docs/tutorials/movies/_scenes/12-adding-primary-and-gallery-images.yml --stages --force
+# Render: pnpm media --id 12-adding-primary-and-gallery-images --publish
+# Upload assets are cropped from the existing chapter 12 recording.
+id: 12-adding-primary-and-gallery-images
+title: Managing Primary and Gallery Images
+edits: "12"
+chrome: browser
+login: false
+stage:
+  theme: vs-dark
+  title: MovieTutorial - Microsoft Visual Studio
+  solution: MovieTutorial.Web
+open: null
+
+files:
+  DefaultDB_20221122_1151_PersonMovieImages.cs:
+    snippet: "DefaultDB_20221122_1151_PersonMovieImages.cs"
+    fixturePath: Migrations/DefaultDB/DefaultDB_20221122_1151_PersonMovieImages.cs
+  PersonRow.cs: { baseline: Modules/MovieDB/Person/PersonRow.cs, fixturePath: Modules/MovieDB/Person/PersonRow.cs }
+  MovieRow.cs: { baseline: Modules/MovieDB/Movie/MovieRow.cs, fixturePath: Modules/MovieDB/Movie/MovieRow.cs }
+  PersonForm.cs: { baseline: Modules/MovieDB/Person/PersonForm.cs, fixturePath: Modules/MovieDB/Person/PersonForm.cs }
+  MovieForm.cs: { baseline: Modules/MovieDB/Movie/MovieForm.cs, fixturePath: Modules/MovieDB/Movie/MovieForm.cs }
+
+# This disposable, localhost-only fixture uploads trusted scene assets. It
+# must not depend on an external ClamAV service to record offline.
+fixtureEdits:
+  - file: appsettings.json
+    find: "\"ClamAV\": {\n    \"Enabled\": true\n  }"
+    replace: "\"ClamAV\": {\n    \"Enabled\": false\n  }"
+
+# Applied after sergen so the chapter's edits add these fields exactly once.
+fixtureFiles:
+  Migrations/DefaultDB/DefaultDB_20221122_1151_PersonMovieImages.cs: { snippet: "DefaultDB_20221122_1151_PersonMovieImages.cs" }
+verifyStage: final
+verify:
+  DefaultDB_20221122_1151_PersonMovieImages.cs: Migrations/DefaultDB/DefaultDB_20221122_1151_PersonMovieImages.cs
+  PersonRow.cs: Modules/MovieDB/Person/PersonRow.cs
+  MovieRow.cs: Modules/MovieDB/Movie/MovieRow.cs
+  PersonForm.cs: Modules/MovieDB/Person/PersonForm.cs
+  MovieForm.cs: Modules/MovieDB/Movie/MovieForm.cs
+
+treeBefore:
+  from: "@10-keeping-record-of-the-cast/treeAfterMigration"
+treeAfterMigration:
+  from: "@treeBefore"
+  add:
+    MovieTutorial.Web/Migrations/DefaultDB/:
+      - DefaultDB_20221122_1151_PersonMovieImages.cs
+treeRows:
+  from: "@11-listing-movies-in-person-dialog/treeAfterCss"
+  replace:
+    MovieTutorial.Web/Migrations: {}
+    MovieTutorial.Web/Modules/MovieDB/Movie:
+      - MovieRow.cs
+      - MovieForm.cs
+    MovieTutorial.Web/Modules/MovieDB/Person:
+      - PersonRow.cs
+      - PersonForm.cs
+      - PersonMovieColumns.cs
+      - PersonMovieGrid.tsx
+      - PersonDialog.css
+
+video: { width: 1400, height: 900, fps: 24, tail: 0.8, posterAt: 47 }
+output:
+  mp4: ../img/12-adding-primary-and-gallery-images.mp4
+  webp: null
+  poster: ../img/12-adding-primary-and-gallery-images-poster.png
+budgets: { maxDuration: 150, maxBytes: 6000000 }
+appStages:
+  - { id: final, edits: 7 }
+
+steps:
+  # The migration adds the same two database columns to both tables.
+  - treeScroll: top
+    spotlight: "node:DefaultDB"
+    caption: "Add a migration for image fields"
+    hold: 1.0
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    click: true
+    caption: "Right-click the DefaultDB migrations folder"
+    hold: 0.8
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    caption: "Add a new item"
+    hold: 0.6
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    hold: 0.6
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs", folder: "DefaultDB\\" }
+    spotlight: "#ai-name"
+    hold: 0.4
+  - addItem: { name: "" }
+    type: DefaultDB_20221122_1151_PersonMovieImages.cs
+    typeSpeed: 14
+    into: addItem.name
+    spotlight: "#ai-name"
+    hold: 0.4
+  - click: "#ai-add"
+    addItem: null
+    tree: "@treeAfterMigration"
+    open: DefaultDB_20221122_1151_PersonMovieImages.cs
+    reveal: 0
+    bottomHeight: 200
+    spotlight: null
+    caption: "Add primary and gallery image columns"
+    hold: 0.8
+  - code: 18
+    codeMs: 1800
+    spotlight: null
+    hold: 0.8
+  - highlight: ["10-16"]
+    spotlight: null
+    caption: "The Person and Movie tables each get two string columns"
+    hold: 1.8
+
+  # Rows declare the upload editors and matching RowFields.
+  - tree: "@treeRows"
+    open: PersonRow.cs
+    reveal: null
+    editorLine: 30
+    spotlight: null
+    caption: "Add upload editors to PersonRow"
+    hold: 0.9
+  - edit:
+      file: PersonRow.cs
+      insertBefore: "    public class RowFields : RowFieldsBase"
+      text: "    [DisplayText(\"Primary Image\"), Size(100)]\n    [ImageUploadEditor(FilenameFormat = \"Person/PrimaryImage/~\")]\n    public string? PrimaryImage { get => fields.PrimaryImage[this]; set => fields.PrimaryImage[this] = value; }\n\n    [DisplayText(\"Gallery Images\")]\n    [MultipleImageUploadEditor(FilenameFormat = \"Person/GalleryImages/~\")]\n    public string? GalleryImages { get => fields.GalleryImages[this]; set => fields.GalleryImages[this] = value; }\n\n"
+    highlight: ["35-41"]
+    spotlight: null
+    caption: "A single primary image and a multiple-image gallery"
+    hold: 1.4
+  - edit:
+      file: PersonRow.cs
+      find: "        public Int32Field Height = null!;"
+      replace: "        public Int32Field Height = null!;\n        public StringField PrimaryImage = null!;\n        public StringField GalleryImages = null!;"
+    highlight: ["52-54"]
+    editorLine: 52
+    spotlight: null
+    caption: "Add the matching string fields"
+    hold: 1.0
+  - open: MovieRow.cs
+    reveal: null
+    editorLine: 38
+    spotlight: null
+    caption: "Add the same fields to MovieRow"
+    hold: 0.9
+  - edit:
+      file: MovieRow.cs
+      insertBefore: "    public class RowFields : RowFieldsBase"
+      text: "    [DisplayText(\"Primary Image\"), Size(100)]\n    [ImageUploadEditor(FilenameFormat = \"Movie/PrimaryImage/~\")]\n    public string? PrimaryImage { get => fields.PrimaryImage[this]; set => fields.PrimaryImage[this] = value; }\n\n    [DisplayText(\"Gallery Images\")]\n    [MultipleImageUploadEditor(FilenameFormat = \"Movie/GalleryImages/~\")]\n    public string? GalleryImages { get => fields.GalleryImages[this]; set => fields.GalleryImages[this] = value; }\n\n"
+    highlight: ["42-48"]
+    spotlight: null
+    caption: "Store movie uploads under the Movie folder"
+    hold: 1.4
+  - edit:
+      file: MovieRow.cs
+      find: "        public RowListField<MovieCastRow> CastList = null!;"
+      replace: "        public RowListField<MovieCastRow> CastList = null!;\n        public StringField PrimaryImage = null!;\n        public StringField GalleryImages = null!;"
+    highlight: ["61-63"]
+    editorLine: 61
+    spotlight: null
+    caption: "RowFields stores the file names"
+    hold: 1.0
+
+  # Person's uploads belong on its first tab; Movie gets the same two fields.
+  - open: PersonForm.cs
+    reveal: null
+    spotlight: null
+    caption: "Expose the upload fields on the Person tab"
+    hold: 0.8
+  - edit:
+      file: PersonForm.cs
+      find: "    public int? Height { get; set; }"
+      replace: "    public int? Height { get; set; }\n    public string? PrimaryImage { get; set; }\n    public string? GalleryImages { get; set; }"
+    highlight: ["13-15"]
+    spotlight: null
+    caption: "The row attributes choose the upload editors"
+    hold: 1.1
+  - open: MovieForm.cs
+    reveal: null
+    spotlight: null
+    caption: "Add image fields to the movie form too"
+    hold: 0.8
+  - edit:
+      file: MovieForm.cs
+      find: "    public List<int>? GenreList { get; set; }"
+      replace: "    public List<int>? GenreList { get; set; }\n    public string? PrimaryImage { get; set; }\n    public string? GalleryImages { get; set; }"
+    highlight: ["20-22"]
+    spotlight: null
+    caption: "Both forms now support primary and gallery images"
+    hold: 1.2
+
+  # Exercise real uploads and persistence through the Serene application.
+  - screen: app
+    appStage: final
+    goto: /MovieDB/Person
+    waitFor: "#GridDiv a:has-text('Keanu')"
+    caption: "Open the Person page"
+    spotlight: null
+    hold: 1.0
+  - screen: app
+    appStage: final
+    click: "#GridDiv a:has-text('Keanu')"
+    waitFor: ".s-PersonDialog .field.PrimaryImage input[type=file]"
+    caption: "Open Keanu Reeves"
+    hold: 1.0
+  - screen: app
+    appStage: final
+    upload:
+      input: ".s-PersonDialog .field.PrimaryImage input[type=file]"
+      button: ".s-PersonDialog .field.PrimaryImage .add-file-button"
+      file: "_assets/keanu-primary.png"
+    waitFor: ".s-PersonDialog .field.PrimaryImage .file-items .thumb"
+    waitForImages: ".s-PersonDialog .field.PrimaryImage .file-items .thumb"
+    caption: "Upload a primary image"
+    captionPosition: top
+    hold: 1.1
+  - screen: app
+    appStage: final
+    scroll: { selector: ".s-PersonDialog .tab-pane.active .categories", top: 1000 }
+    caption: "Add images to the gallery"
+    captionPosition: top
+    hold: 0.8
+  - screen: app
+    appStage: final
+    upload:
+      input: ".s-PersonDialog .field.GalleryImages input[type=file]"
+      button: ".s-PersonDialog .field.GalleryImages .add-file-button"
+      file: "_assets/keanu-gallery-1.png"
+    waitFor: ".s-PersonDialog .field.GalleryImages .file-items li:nth-child(1) .thumb"
+    waitForImages: ".s-PersonDialog .field.GalleryImages .file-items .thumb"
+    caption: "Add an image to the gallery"
+    captionPosition: top
+    hold: 1.0
+  - screen: app
+    appStage: final
+    upload:
+      input: ".s-PersonDialog .field.GalleryImages input[type=file]"
+      button: ".s-PersonDialog .field.GalleryImages .add-file-button"
+      file: "_assets/keanu-gallery-2.png"
+    waitFor: ".s-PersonDialog .field.GalleryImages .file-items li:nth-child(2) .thumb"
+    waitForImages: ".s-PersonDialog .field.GalleryImages .file-items .thumb"
+    caption: "The gallery accepts multiple images"
+    captionPosition: top
+    hold: 1.2
+  - screen: app
+    appStage: final
+    click: ".s-PersonDialog .save-and-close-button"
+    waitGone: ".s-PersonDialog"
+    caption: "Save the person and uploaded images"
+    hold: 1.0
+  - screen: app
+    appStage: final
+    click: "#GridDiv a:has-text('Keanu')"
+    waitFor: ".s-PersonDialog .field.GalleryImages .file-items li:nth-child(2) .thumb"
+    waitForImages: ".s-PersonDialog .file-items .thumb"
+    scroll: { selector: ".s-PersonDialog .tab-pane.active .categories", top: 1000 }
+    caption: "Reopen the person to verify the images were saved"
+    captionPosition: top
+    hold: 2.0

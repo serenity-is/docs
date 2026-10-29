@@ -11,6 +11,7 @@
 
 id: 02b-run-the-app
 title: Running the application and managing movies
+edits: "02"
 target: app
 chrome: browser
 
@@ -32,7 +33,7 @@ budgets:
 
 steps:
   # the site redirects to the login page
-  - goto: /MovieDB/Movie
+  - goto: /
     waitFor: "[name=Username]"
     spotlight: "[name=Username]"
     caption: "The site asks you to sign in"
@@ -52,15 +53,13 @@ steps:
     hold: 1.6
 
   - click: "[type=submit]"
-    waitFor: "#GridDiv"
+    waitFor: ".s-sidebar-link-text"
     spotlight: null
-    caption: "Signing in lands on the generated Movie page"
+    caption: "Signing in returns to the Dashboard"
     hold: 2.2
 
   # the generated module shows up in the navigation
-  - goto: /
-    waitFor: ".s-sidebar-link-text"
-    spotlight: '.s-sidebar-link-text:text-is("MovieDB")'
+  - spotlight: '.s-sidebar-link-text:text-is("MovieDB")'
     caption: "sergen added the MovieDB module to the navigation"
     hold: 1.6
 

@@ -36,6 +36,7 @@ files:
 fixtureFiles:
   Modules/MovieDB/Movie/GenreListFormatter.tsx: { snippet: "GenreListFormatter_08.tsx" }
 
+verifyStage: formatted
 verify:
   MovieRow.cs: Modules/MovieDB/Movie/MovieRow.cs
   MovieForm.cs: Modules/MovieDB/Movie/MovieForm.cs
@@ -62,6 +63,24 @@ treeAfterSergen:
 
 treeAfterFormatter:
   from: "@treeAfterSergen"
+  add:
+    MovieTutorial.Web/Modules/MovieDB/Movie/:
+      - GenreListFormatter.tsx
+
+# Keep the Movie folder visible when adding the formatter.
+treeCollapsed:
+  from: "@treeAfterSergen"
+  replace:
+    MovieTutorial.Web/Migrations: {}
+    MovieTutorial.Web/Imports: {}
+    MovieTutorial.Web/Modules/Administration: {}
+    MovieTutorial.Web/Modules/Common: {}
+    MovieTutorial.Web/Modules/Membership: {}
+    MovieTutorial.Web/Modules/MovieDB/Genre: {}
+    MovieTutorial.Web/Modules/MovieDB/MovieGenres: {}
+    MovieTutorial.Web/Modules/ServerTypes: {}
+treeFormatterCollapsed:
+  from: "@treeCollapsed"
   add:
     MovieTutorial.Web/Modules/MovieDB/Movie/:
       - GenreListFormatter.tsx
@@ -138,13 +157,14 @@ steps:
     tree: "@treeAfterMigration"
     open: DefaultDB_20221115_1405_MovieGenres.cs
     reveal: 0
+    bottomHeight: 200
     highlight: []
     spotlight: "node:DefaultDB_20221115_1405_MovieGenres.cs"
     pointerAt: { x: 0.42, y: 0.5 }
     caption: "The linking table migration"
     hold: 0.8
 
-  - code: 24
+  - code: 28
     codeMs: 1800
     spotlight: null
     caption: null
@@ -167,17 +187,17 @@ steps:
       file: MovieRow.cs
       find: "    const string jGenre = nameof(jGenre);\n\n"
       replace: ""
-    editMs: 500
+    editMs: 900
     highlight: ["10-10"]
     spotlight: null
     caption: "The join alias is no longer needed"
-    hold: 0.6
+    hold: 1.0
 
   - edit:
       file: MovieRow.cs
       find: "    [DisplayText(\"Genre\"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]\n    [LookupEditor(typeof(GenreRow), InplaceAdd = true)]\n    public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }\n\n    [DisplayText(\"Genre\"), Expression($\"{jGenre}.Name\")]\n    public string? GenreName { get => fields.GenreName[this]; set => fields.GenreName[this] = value; }\n\n"
       replace: ""
-    editMs: 900
+    editMs: 1200
     highlight: ["34-39"]
     spotlight: null
     caption: "Remove GenreId and GenreName"
@@ -187,8 +207,8 @@ steps:
       file: MovieRow.cs
       find: "        public Int32Field GenreId = null!;\n        public StringField GenreName = null!;\n"
       replace: ""
-    editMs: 550
-    highlight: ["49-51"]
+    editMs: 800
+    highlight: ["43-45"]
     spotlight: null
     caption: "And their field objects"
     hold: 0.8
@@ -199,8 +219,8 @@ steps:
       file: MovieForm.cs
       find: "    public MovieKind? Kind { get; set; }\n    public int? GenreId { get; set; }"
       replace: "    public MovieKind? Kind { get; set; }"
-    editMs: 650
-    highlight: ["15-16"]
+    editMs: 900
+    highlight: ["15-15"]
     spotlight: null
     caption: "Remove GenreId from the form"
     hold: 0.9
@@ -211,8 +231,8 @@ steps:
       file: MovieColumns.cs
       find: "    public MovieKind? Kind { get; set; }\n    public string? GenreName { get; set; }"
       replace: "    public MovieKind? Kind { get; set; }"
-    editMs: 650
-    highlight: ["17-18"]
+    editMs: 900
+    highlight: ["17-17"]
     spotlight: null
     caption: "Remove GenreName from the grid"
     hold: 0.9
@@ -317,8 +337,9 @@ steps:
     caption: "Only the row and services are needed for a linking table"
     hold: 1.8
 
-  - tree: "@treeAfterSergen"
+  - tree: "@treeCollapsed"
     terminal: { open: false }
+    bottomHeight: null
     open: null
     spotlight: "node:MovieGenres"
     caption: "MovieGenres has a row and a service endpoint"
@@ -337,7 +358,7 @@ steps:
       find: "    [DisplayText(\"Kind\"), NotNull, DefaultValue(MovieKind.Film)]\n    public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }"
       replace: "    [DisplayText(\"Kind\"), NotNull, DefaultValue(MovieKind.Film)]\n    public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }\n\n    [DisplayText(\"Genres\"), LookupEditor(typeof(GenreRow), Multiple = true), NotMapped]\n    [LinkingSetRelation(typeof(MovieGenresRow), nameof(MovieGenresRow.MovieId), nameof(MovieGenresRow.GenreId))]\n    public List<int>? GenreList { get => fields.GenreList[this]; set => fields.GenreList[this] = value; }"
     editMs: 1000
-    highlight: ["33-39"]
+    highlight: ["31-36"]
     spotlight: null
     caption: "GenreList is a multiple lookup and a linking set"
     hold: 1.5
@@ -347,7 +368,7 @@ steps:
       find: "        public EnumField<MovieKind> Kind = null!;"
       replace: "        public EnumField<MovieKind> Kind = null!;\n        public ListField<int> GenreList = null!;"
     editMs: 550
-    highlight: ["49-50"]
+    highlight: ["47-48"]
     spotlight: null
     caption: "Add the ListField to RowFields"
     hold: 0.9
@@ -381,13 +402,24 @@ steps:
     appStage: list
     goto: /MovieDB/Movie
     waitFor: "#GridDiv"
-    caption: "The new GenreList column starts as a list of ids"
-    hold: 1.6
+    scroll: { selector: "#GridDiv .slick-viewport", left: 10000 }
+    spotlight: "#GridDiv"
+    caption: "GenreList holds raw ids, not names, so the grid needs a formatter"
+    hold: 2.0
 
-  - click: .add-button
+  - screen: app
+    appStage: list
+    click: .add-button
     waitFor: .s-MovieDialog
     spotlight: ".s-MovieDialog [name=GenreList]"
     caption: "The form now accepts multiple genres"
+    hold: 1.2
+
+  - screen: app
+    appStage: list
+    select2: { input: ".s-MovieDialog [name=GenreList]" }
+    spotlight: ".select2-drop-active"
+    caption: "Any number of genres can be picked, and removed again"
     hold: 2.4
 
   # 7. create the GenreListFormatter
@@ -432,7 +464,7 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfterFormatter"
+    tree: "@treeFormatterCollapsed"
     open: GenreListFormatter.tsx
     reveal: 0
     highlight: []
@@ -460,7 +492,7 @@ steps:
       find: "    [Width(200)]\n    public List<int>? GenreList { get; set; }"
       replace: "    [Width(200), GenreListFormatter]\n    public List<int>? GenreList { get; set; }"
     editMs: 650
-    highlight: ["19-20"]
+    highlight: ["18-19"]
     spotlight: null
     caption: "Use GenreListFormatter for the GenreList column"
     hold: 1.1

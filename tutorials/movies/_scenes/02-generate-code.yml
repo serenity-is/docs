@@ -207,6 +207,8 @@ steps:
     hold: 2.2
 
   - tree: "@treeAfter"
+    terminal: { open: false }
+    bottomHeight: null
     open: MovieRow.cs
     highlight: ["13-14"]
     spotlight: "line:13"

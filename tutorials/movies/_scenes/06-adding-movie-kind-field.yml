@@ -212,6 +212,7 @@ steps:
   # 3. expose Kind on the entity
   - open: MovieRow.cs
     reveal: null
+    editorLine: 24
     spotlight: "node:MovieRow.cs"
     caption: "Expose the new column on the entity"
     hold: 0.9
@@ -283,6 +284,7 @@ steps:
   # 6. give the required field a useful default
   - open: MovieRow.cs
     reveal: null
+    editorLine: 31
     highlight: ["31-31"]
     spotlight: "line:31"
     caption: "Most movies are films, so set the default on Kind"

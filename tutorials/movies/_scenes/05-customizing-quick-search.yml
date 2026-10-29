@@ -69,6 +69,11 @@ output:
 budgets:
   maxDuration: 75
   maxBytes: 4_000_000
+appStages:
+  - { id: before, edits: 0 }
+  - { id: search, edits: 3 }
+  - { id: fields, edits: 5 }
+  - { id: final, edits: 7 }
 
 steps:
   # 1. add the sample data migration
@@ -155,11 +160,23 @@ steps:
     hold: 2.0
 
   - screen: app
+    appStage: before
     goto: /MovieDB/Movie
     waitFor: "#GridDiv"
     spotlight: ".s-GridContainer, #GridDiv"
     caption: "Seven sample movies are now in the grid"
-    hold: 2.4
+    hold: 1.8
+
+  - screen: app
+    appStage: before
+    type: Gandalf
+    into: ".s-QuickSearchInput"
+    typeSpeed: 55
+    executeSearch: true
+    waitGone: "#GridDiv .slick-row"
+    spotlight: ".s-GridContainer, #GridDiv"
+    caption: "Title-only search finds no Gandalf yet"
+    hold: 2.2
 
   # 3. enable quick search on Description and Storyline, and exact search on Year
   - open: MovieRow.cs
@@ -199,11 +216,19 @@ steps:
     hold: 1.2
 
   - screen: app
+    appStage: search
     goto: /MovieDB/Movie
     waitFor: "#GridDiv"
+    caption: "Reload the Movie grid"
+    hold: 1.0
+
+  - screen: app
+    appStage: search
     type: Gandalf
     into: ".s-QuickSearchInput"
     typeSpeed: 55
+    executeSearch: true
+    waitFor: "#GridDiv .slick-row:has-text('The Lord of the Rings')"
     spotlight: ".s-GridContainer, #GridDiv"
     caption: "Gandalf now finds The Lord of the Rings"
     hold: 2.2
@@ -247,6 +272,7 @@ steps:
     hold: 1.8
 
   - screen: app
+    appStage: fields
     goto: /MovieDB/Movie
     click: ".quick-search-field-toggle"
     waitFor: "#GridDiv .dropdown-item"
@@ -255,6 +281,7 @@ steps:
     hold: 1.6
 
   - screen: app
+    appStage: fields
     click: '#GridDiv .dropdown-item:text-is("Storyline")'
     waitFor: "#GridDiv"
     type: ticki
@@ -304,6 +331,7 @@ steps:
     hold: 2.4
 
   - screen: app
+    appStage: final
     goto: /MovieDB/Movie
     waitFor: "#GridDiv"
     spotlight: ".s-GridContainer, #GridDiv"

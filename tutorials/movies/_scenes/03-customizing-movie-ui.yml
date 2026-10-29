@@ -83,6 +83,7 @@ budgets:
 steps:
   # 1. the entity decides the caption everywhere
   - open: MovieRow.cs
+    editorLine: 22
     spotlight: "node:MovieRow.cs"
     caption: "MovieRow is the entity sergen generated"
     hold: 1.0

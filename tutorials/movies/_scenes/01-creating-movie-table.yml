@@ -140,7 +140,7 @@ steps:
     hold: 1.0
 
   # nothing is dimmed while the code types itself in, so it stays readable
-  - code: 18
+  - code: 19
     codeMs: 1800
     spotlight: null
     caption: null

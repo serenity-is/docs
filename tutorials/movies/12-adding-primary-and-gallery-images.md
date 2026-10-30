@@ -6,6 +6,8 @@ To add primary and gallery images to both Movie and Person records, start with a
   <source src="img/12-adding-primary-and-gallery-images.mp4" type="video/mp4" />
 </video>
 
+<a id="person-movie-images-snippet"></a>
+
 ```csharp
 using FluentMigrator;
 

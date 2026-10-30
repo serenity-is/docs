@@ -1,0 +1,40 @@
+# Where each snippet comes from.
+#
+# The tutorial chapters are the source of truth: a chapter marks the block a
+# scene shows (and a fixture writes) with an anchor, and a scene keeps naming the
+# file, not the chapter:
+#
+#     <a id="movie-table-migration-snippet"></a>
+#     ```csharp
+#     ...
+#     ```
+#
+# Name the block below, and the text is read from it. A name that is not listed
+# falls back to `_snippets/<name>`, so a file the chapters do not quote yet keeps
+# working. Run `node cli.mjs snippets` to see which anchors are missing or stale.
+
+DefaultDB_20221115_1405_MovieGenres.cs: 08-multiple-genres-per-movie.md#movie-genres-migration-snippet
+DefaultDB_20221114_1836_GenreTable.cs: 07-adding-movie-genres.md#genre-table-migration-snippet
+DefaultDB_20221114_1825_MovieKind.cs: 06-adding-movie-kind-field.md#movie-kind-migration-snippet
+MovieKind.cs: 06-adding-movie-kind-field.md#movie-kind-enum-snippet
+DefaultDB_20221114_1505_MovieTable.cs: 01-creating-movie-table.md#movie-table-migration-snippet
+Gender_10.cs: 10-keeping-record-of-the-cast.md#gender-10-snippet
+GenreListFormatter_08.tsx: 08-multiple-genres-per-movie.md#genre-list-formatter-snippet
+MovieListRequest_09.cs: 09-filtering-with-multiple-genres.md#movie-list-request-09-snippet
+PersonDialog_11.css: 11-listing-movies-in-person-dialog.md#person-dialog-11-snippet
+PersonMovieColumns_11.cs: 11-listing-movies-in-person-dialog.md#person-movie-columns-11-snippet
+DefaultDB_20221115_1612_PersonAndMovieCast.cs: 10-keeping-record-of-the-cast.md#person-and-movie-cast-snippet
+DefaultDB_20221122_1151_PersonMovieImages.cs: 12-adding-primary-and-gallery-images.md#person-movie-images-snippet
+
+# Not sourced from a chapter, and why:
+#
+#   DefaultDB_20221114_1703_MovieData.cs   the chapter elides the seed rows (`//...`)
+#   PersonMovieGrid_11.tsx                 the chapter quotes the grid in two parts
+#   PersonDialog_11.tsx                    the chapter elides the imports (`//...`)
+#   PersonDialog_11_fixture.tsx            a fixture-only variant the chapter never shows
+#   MovieCastEditor_10.tsx                 the chapter quotes the file before its edits
+#   MovieCastEditDialog_10.tsx             "(same: the CSS import is added later)"
+#   MovieCastEditDialog_10.css             "(same)"
+#
+# A snippet can only move here when the chapter quotes the file in full, in its
+# final state: the fixture writes exactly this text into the project.

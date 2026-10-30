@@ -17,7 +17,7 @@ stage:
   solution: ""
 
 files:
-  - tsconfig.json
+  tsconfig.json: { fromTemplate: tsconfig.json }
 
 video:
   posterAt: 3
@@ -30,10 +30,6 @@ budgets:
 # restating it in YAML. The snapshot is a pristine template, not the fixture the
 # later chapters edit, so nothing from MovieDB shows up before it is created.
 projectFixture:
-  template: serene
-  package: Serene.Templates
-  name: MovieTutorial
-  directory: MovieTutorial.Web
   solution: "Solution 'MovieTutorial' (1 of 1 project)"
   project: MovieTutorial.Web
 
@@ -94,7 +90,9 @@ steps:
   - startWindow: false
     wizard: null
     solution: MovieTutorial.Web
-    tree: { fromProject: true }
+    # the chapter is about what the project *is*, so the folders that carry the
+    # structure are opened instead of walking to a single file
+    tree: { expand: ["Imports", "Modules", "Views"] }
     treeScroll: top
     open: tsconfig.json
     bottomTab: Output

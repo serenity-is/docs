@@ -14,21 +14,11 @@ edits: "07"
 open: null
 files:
   DefaultDB_20221114_1836_GenreTable.cs: { snippet: "DefaultDB_20221114_1836_GenreTable.cs" }
-  MovieDBNavigation.cs:
-    snippet: "MovieDBNavigation_07.cs"
-    fixturePath: Modules/MovieDB/MovieDBNavigation.cs
-  MovieRow.cs:
-    snippet: "MovieRow_07.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieRow.cs
-  MovieForm.cs:
-    snippet: "MovieForm_07.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieForm.cs
-  MovieColumns.cs:
-    snippet: "MovieColumns_07.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieColumns.cs
-  GenreRow.cs:
-    snippet: "GenreRow_07.cs"
-    fixturePath: Modules/MovieDB/Genre/GenreRow.cs
+  MovieDBNavigation.cs: { stage: genre, fixture: Modules/MovieDB/MovieDBNavigation.cs }
+  MovieRow.cs: { stage: genre, fixture: Modules/MovieDB/Movie/MovieRow.cs }
+  MovieForm.cs: { stage: genre, fixture: Modules/MovieDB/Movie/MovieForm.cs }
+  MovieColumns.cs: { stage: genre, fixture: Modules/MovieDB/Movie/MovieColumns.cs }
+  GenreRow.cs: { stage: genre, fixture: Modules/MovieDB/Genre/GenreRow.cs }
 
 verifyStage: inplace
 verify:
@@ -37,35 +27,6 @@ verify:
   MovieForm.cs: Modules/MovieDB/Movie/MovieForm.cs
   MovieColumns.cs: Modules/MovieDB/Movie/MovieColumns.cs
   GenreRow.cs: Modules/MovieDB/Genre/GenreRow.cs
-
-treeBefore:
-  from: "@06-adding-movie-kind-field/treeAfter"
-
-treeAfterMigration:
-  from: "@treeBefore"
-  add:
-    MovieTutorial.Web/Migrations/DefaultDB/:
-      - DefaultDB_20221114_1836_GenreTable.cs
-
-treeAfterSergen:
-  from: "@treeAfterMigration"
-  add:
-    MovieTutorial.Web/Modules/MovieDB/Genre/:
-      - GenreColumns.cs
-      - GenreDialog.tsx
-      - GenreEndpoint.cs
-      - GenreForm.cs
-      - GenreGrid.tsx
-      - GenrePage.cs
-      - GenrePage.tsx
-      - GenreRow.cs
-    MovieTutorial.Web/Modules/ServerTypes/MovieDB/:
-      - GenreColumns.ts
-      - GenreForm.ts
-      - GenreRow.ts
-      - GenreService.ts
-
-tree: "@treeBefore"
 
 video:
   posterAt: 72
@@ -88,7 +49,8 @@ appStages:
 
 steps:
   # 1. add the Genre migration
-  - treeScroll: top
+  - tree: { expand: ["Migrations", "Migrations/DefaultDB"] }
+    treeScroll: top
     spotlight: "node:DefaultDB"
     caption: "Add a second migration without touching the existing ones"
     hold: 1.2
@@ -129,7 +91,7 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfterMigration"
+    tree: {}
     open: DefaultDB_20221114_1836_GenreTable.cs
     reveal: 0
     bottomHeight: 200
@@ -249,9 +211,7 @@ steps:
     caption: "Generate everything"
     hold: 1.6
 
-  - tree: "@treeAfterSergen"
-    terminal: { open: false }
-    bottomHeight: null
+  - bottomHeight: null
     open: GenreRow.cs
     reveal: null
     spotlight: "node:GenreRow.cs"

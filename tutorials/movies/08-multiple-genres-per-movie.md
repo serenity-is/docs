@@ -8,6 +8,8 @@ As your requirements evolve, you might find the need to allow the selection of m
 
 Let's begin by creating a migration to set up the `MovieGenres` table. Create a new migration file, `Migrations/DefaultDB/DefaultDB_20221115_1405_MovieGenres.cs`, and include the following content:
 
+<a id="movie-genres-migration-snippet"></a>
+
 ```csharp
 using FluentMigrator;
 
@@ -154,6 +156,8 @@ However, it would be more informative to have genre names instead of genre IDs. 
 ## Creating the `GenreListFormatter` Class
 
 It's time to create a SlickGrid column formatter. To do this, create a file named `GenreListFormatter.tsx` next to `MovieGrid.tsx`:
+
+<a id="genre-list-formatter-snippet"></a>
 
 ```typescript
 import { Formatter, Lookup, formatterTypeInfo, registerType } from "@serenity-is/corelib";

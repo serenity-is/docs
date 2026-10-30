@@ -14,18 +14,10 @@ edits: "08"
 open: null
 files:
   DefaultDB_20221115_1405_MovieGenres.cs: { snippet: "DefaultDB_20221115_1405_MovieGenres.cs" }
-  MovieRow.cs:
-    snippet: "MovieRow_08.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieRow.cs
-  MovieForm.cs:
-    snippet: "MovieForm_08.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieForm.cs
-  MovieColumns.cs:
-    snippet: "MovieColumns_08.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieColumns.cs
-  GenreListFormatter.tsx:
-    snippet: "GenreListFormatter_08.tsx"
-    fixturePath: Modules/MovieDB/Movie/GenreListFormatter.tsx
+  MovieRow.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieRow.cs }
+  MovieForm.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieForm.cs }
+  MovieColumns.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieColumns.cs }
+  GenreListFormatter.tsx: { stage: before, fixture: Modules/MovieDB/Movie/GenreListFormatter.tsx }
 
 fixtureFiles:
   Modules/MovieDB/Movie/GenreListFormatter.tsx: { snippet: "GenreListFormatter_08.tsx" }
@@ -35,51 +27,6 @@ verify:
   MovieRow.cs: Modules/MovieDB/Movie/MovieRow.cs
   MovieForm.cs: Modules/MovieDB/Movie/MovieForm.cs
   MovieColumns.cs: Modules/MovieDB/Movie/MovieColumns.cs
-
-treeBefore:
-  from: "@07-adding-movie-genres/treeAfterSergen"
-
-treeAfterMigration:
-  from: "@treeBefore"
-  add:
-    MovieTutorial.Web/Migrations/DefaultDB/:
-      - DefaultDB_20221115_1405_MovieGenres.cs
-
-treeAfterSergen:
-  from: "@treeAfterMigration"
-  add:
-    MovieTutorial.Web/Modules/MovieDB/MovieGenres/:
-      - MovieGenresEndpoint.cs
-      - MovieGenresRow.cs
-    MovieTutorial.Web/Modules/ServerTypes/MovieDB/:
-      - MovieGenresRow.ts
-      - MovieGenresService.ts
-
-treeAfterFormatter:
-  from: "@treeAfterSergen"
-  add:
-    MovieTutorial.Web/Modules/MovieDB/Movie/:
-      - GenreListFormatter.tsx
-
-# Keep the Movie folder visible when adding the formatter.
-treeCollapsed:
-  from: "@treeAfterSergen"
-  replace:
-    MovieTutorial.Web/Migrations: {}
-    MovieTutorial.Web/Imports: {}
-    MovieTutorial.Web/Modules/Administration: {}
-    MovieTutorial.Web/Modules/Common: {}
-    MovieTutorial.Web/Modules/Membership: {}
-    MovieTutorial.Web/Modules/MovieDB/Genre: {}
-    MovieTutorial.Web/Modules/MovieDB/MovieGenres: {}
-    MovieTutorial.Web/Modules/ServerTypes: {}
-treeFormatterCollapsed:
-  from: "@treeCollapsed"
-  add:
-    MovieTutorial.Web/Modules/MovieDB/Movie/:
-      - GenreListFormatter.tsx
-
-tree: "@treeBefore"
 
 video:
   posterAt: 96
@@ -98,7 +45,8 @@ appStages:
 
 steps:
   # 1. add the MovieGenres migration
-  - treeScroll: top
+  - tree: { expand: ["Migrations", "Migrations/DefaultDB"] }
+    treeScroll: top
     spotlight: "node:DefaultDB"
     caption: "Add a migration for the many-to-many table"
     hold: 1.2
@@ -139,7 +87,7 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfterMigration"
+    tree: {}
     open: DefaultDB_20221115_1405_MovieGenres.cs
     reveal: 0
     bottomHeight: 200
@@ -322,8 +270,7 @@ steps:
     caption: "Only the row and services are needed for a linking table"
     hold: 1.8
 
-  - tree: "@treeCollapsed"
-    terminal: { open: false }
+  - tree: { expand: ["Modules/MovieDB/MovieGenres"] }
     bottomHeight: null
     open: null
     spotlight: "node:MovieGenres"
@@ -449,7 +396,6 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeFormatterCollapsed"
     open: GenreListFormatter.tsx
     reveal: 0
     highlight: []

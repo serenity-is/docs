@@ -16,37 +16,12 @@ edits: "05"          # the fixture must be built with this profile
 open: null
 files:
   DefaultDB_20221114_1703_MovieData.cs: { snippet: "DefaultDB_20221114_1703_MovieData.cs" }
-  MovieRow.cs:
-    snippet: "MovieRow_05.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieRow.cs
-  MovieGrid.tsx:
-    snippet: "MovieGrid_05.tsx"
-    fixturePath: Modules/MovieDB/Movie/MovieGrid.tsx
+  MovieRow.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieRow.cs }
+  MovieGrid.tsx: { stage: before, fixture: Modules/MovieDB/Movie/MovieGrid.tsx }
 
 verify:
   MovieRow.cs: Modules/MovieDB/Movie/MovieRow.cs
   MovieGrid.tsx: Modules/MovieDB/Movie/MovieGrid.tsx
-
-treeBefore:
-  from: "@02-generate-code/treeAfter"
-  replace:
-    MovieTutorial.Web/Imports: {}
-    MovieTutorial.Web/Modules/Administration: {}
-    MovieTutorial.Web/Modules/Common: {}
-    MovieTutorial.Web/Modules/Membership: {}
-    MovieTutorial.Web/Modules/MovieDB/Movie: {}
-    MovieTutorial.Web/Modules/ServerTypes: {}
-    MovieTutorial.Web/texts: {}
-    MovieTutorial.Web/Views: {}
-    MovieTutorial.Web/wwwroot: {}
-
-treeAfter:
-  from: "@treeBefore"
-  add:
-    MovieTutorial.Web/Migrations/DefaultDB/:
-      - DefaultDB_20221114_1703_MovieData.cs
-
-tree: "@treeBefore"
 
 video:
   posterAt: 38
@@ -62,7 +37,8 @@ appStages:
 
 steps:
   # 1. add the sample data migration
-  - treeScroll: top
+  - tree: { expand: ["Migrations", "Migrations/DefaultDB"] }
+    treeScroll: top
     spotlight: "node:DefaultDB"
     caption: "The DefaultDB migrations run before the Movie table is used"
     hold: 1.6
@@ -105,7 +81,7 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfter"
+    tree: {}
     open: DefaultDB_20221114_1703_MovieData.cs
     reveal: 0
     highlight: []
@@ -272,6 +248,9 @@ steps:
     type: ticki
     into: ".s-QuickSearchInput"
     typeSpeed: 60
+    executeSearch: true
+    # the other rows are what proves the field filter ran at all
+    waitGone: "#GridDiv .slick-row:has-text('The Matrix')"
     spotlight: ".s-GridContainer, #GridDiv"
     caption: "Search only Storyline: ticki finds Fight Club"
     hold: 2.2

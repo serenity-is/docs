@@ -7,9 +7,10 @@ extends: "_defaults"
 id: 01-creating-movie-table
 title: Creating the Movie table with a migration
 
+edits: "01"
 files:
-  - DefaultDB_20141103_1400_Initial.cs
-  - DefaultDB_20221114_1505_MovieTable.cs
+  DefaultDB_20141103_1400_Initial.cs: { fixture: Migrations/DefaultDB/DefaultDB_20141103_1400_Initial.cs }
+  DefaultDB_20221114_1505_MovieTable.cs: { fixture: Migrations/DefaultDB/DefaultDB_20221114_1505_MovieTable.cs }
 
 video:
   posterAt: 12
@@ -20,50 +21,8 @@ budgets:
 
 # the project right after chapter 0: DefaultDB already holds the migrations
 # that come with the Serene template, but no Movie table yet
-treeBefore:
-  "Solution 'MovieTutorial' (1 of 1 project)":
-    MovieTutorial.Web:
-      - .config/
-      - App_Data/
-      - Imports/:
-          - ClientTypes/
-          - MVC/
-      - Initialization/
-      - Migrations/:
-          - DefaultDB/:
-              - DefaultDB_20141103_1400_Initial.cs
-              - DefaultDB_20141111_1130_Permissions.cs
-              - DefaultDB_20160515_0726_UserPreferences.cs
-              - DefaultDB_20161029_1300_ExceptionLog.cs
-      - Modules/:
-          - Administration/
-          - Common/
-          - Membership/
-          - ServerTypes/
-      - texts/:
-          - resources/
-      - Views/:
-          - Errors/
-          - Shared/
-      - wwwroot/:
-          - Content/
-      - .editorconfig
-      - appsettings.json
-      - MovieTutorial.Web.csproj
-      - MovieTutorial.Web.slnx
-      - package.json
-      - sergen.json
-      - tsconfig.json
-
-# the same tree once the new migration exists
-treeAfter:
-  from: "@treeBefore"
-  add:
-    MovieTutorial.Web/Migrations/DefaultDB/:
-      - DefaultDB_20221114_1505_MovieTable.cs
-
 steps:
-  - tree: "@treeBefore"
+  - tree: {}
     treeScroll: top
     open: DefaultDB_20141103_1400_Initial.cs
     spotlight: "node:DefaultDB"
@@ -117,7 +76,6 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfter"
     open: DefaultDB_20221114_1505_MovieTable.cs
     reveal: 0
     highlight: []

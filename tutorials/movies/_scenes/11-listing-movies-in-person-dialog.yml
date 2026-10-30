@@ -10,21 +10,13 @@ edits: "11"
 
 open: null
 files:
-  PersonForm.cs:
-    snippet: "PersonForm_11.cs"
-    fixturePath: Modules/MovieDB/Person/PersonForm.cs
+  PersonForm.cs: { stage: before, fixture: Modules/MovieDB/Person/PersonForm.cs }
   PersonDialog.tsx:
     snippet: "PersonDialog_11.tsx"
     fixturePath: Modules/MovieDB/Person/PersonDialog.tsx
-  PersonMovieColumns.cs:
-    snippet: "PersonMovieColumns_11.cs"
-    fixturePath: Modules/MovieDB/Person/PersonMovieColumns.cs
-  PersonMovieGrid.tsx:
-    snippet: "PersonMovieGrid_11.tsx"
-    fixturePath: Modules/MovieDB/Person/PersonMovieGrid.tsx
-  PersonDialog.css:
-    snippet: "PersonDialog_11.css"
-    fixturePath: Modules/MovieDB/Person/PersonDialog.css
+  PersonMovieColumns.cs: { stage: before, fixture: Modules/MovieDB/Person/PersonMovieColumns.cs }
+  PersonMovieGrid.tsx: { stage: before, fixture: Modules/MovieDB/Person/PersonMovieGrid.tsx }
+  PersonDialog.css: { stage: before, fixture: Modules/MovieDB/Person/PersonDialog.css }
 
 fixtureFiles:
   Modules/MovieDB/Person/PersonMovieColumns.cs: { snippet: "PersonMovieColumns_11.cs" }
@@ -39,41 +31,6 @@ verify:
   PersonMovieGrid.tsx: Modules/MovieDB/Person/PersonMovieGrid.tsx
   PersonDialog.css: Modules/MovieDB/Person/PersonDialog.css
 
-treeBefore:
-  from: "@10-keeping-record-of-the-cast/treeCast"
-
-tree:
-  from: "@treeBefore"
-  replace:
-    MovieTutorial.Web/Migrations: {}
-    MovieTutorial.Web/Imports: {}
-    MovieTutorial.Web/Modules/Administration: {}
-    MovieTutorial.Web/Modules/Common: {}
-    MovieTutorial.Web/Modules/Membership: {}
-    MovieTutorial.Web/Modules/MovieDB/Genre: {}
-    MovieTutorial.Web/Modules/MovieDB/Movie: {}
-    MovieTutorial.Web/Modules/MovieDB/MovieCast: {}
-    MovieTutorial.Web/Modules/MovieDB/MovieGenres: {}
-    MovieTutorial.Web/Modules/ServerTypes: {}
-
-treeAfterColumns:
-  from: "@tree"
-  add:
-    MovieTutorial.Web/Modules/MovieDB/Person/:
-      - PersonMovieColumns.cs
-
-treeAfterGrid:
-  from: "@treeAfterColumns"
-  add:
-    MovieTutorial.Web/Modules/MovieDB/Person/:
-      - PersonMovieGrid.tsx
-
-treeAfterCss:
-  from: "@treeAfterGrid"
-  add:
-    MovieTutorial.Web/Modules/MovieDB/Person/:
-      - PersonDialog.css
-
 video:
   posterAt: 73.5
 
@@ -87,7 +44,8 @@ appStages:
 
 steps:
   # 1. add Person and Movies tabs to the form
-  - open: PersonForm.cs
+  - tree: {}
+    open: PersonForm.cs
     reveal: null
     highlight: ["7-12"]
     spotlight: null
@@ -156,7 +114,7 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfterColumns"
+    tree: {}
     open: PersonMovieColumns.cs
     reveal: 0
     highlight: []
@@ -216,7 +174,6 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfterGrid"
     open: PersonMovieGrid.tsx
     reveal: 0
     highlight: []
@@ -328,7 +285,6 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfterCss"
     open: PersonDialog.css
     reveal: 0
     highlight: []

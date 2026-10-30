@@ -10,6 +10,8 @@ To include TV series and mini-series in your movie database, you'll need to add 
 
 1. Create a new migration file in *Migrations/DefaultDB/DefaultDB_20221114_1825_MovieKind.cs*:
 
+    <a id="movie-kind-migration-snippet"></a>
+
     ```csharp
     using FluentMigrator;
 
@@ -28,6 +30,8 @@ To include TV series and mini-series in your movie database, you'll need to add 
 
 2. Declare a `MovieKind` enumeration that defines the types of movies. You can create this enumeration in *Modules/MovieDB/Movie/MovieKind.cs*:
 
+
+    <a id="movie-kind-enum-snippet"></a>
     ```csharp
     namespace MovieTutorial.MovieDB;
 

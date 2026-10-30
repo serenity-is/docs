@@ -1,18 +1,19 @@
 # Storyboard for tutorials/movies/02-generating-code-for-movie-table.md
 #
-# Preview interactively:   pnpm media --id 02-generate-code --preview
-# Render + publish:        pnpm media --id 02-generate-code --publish
+# Preview interactively:   pnpm media --id 02-generating-code-for-movie-table --preview
+# Render + publish:        pnpm media --id 02-generating-code-for-movie-table --publish
 #
 # Sergen 10.x walks through: connection -> tables -> module/class/permission
 # prompts -> what to generate. The terminal lines below follow that flow.
 
 extends: "_defaults"
-id: 02-generate-code
+id: 02-generating-code-for-movie-table
 title: Generating code for the Movie table
 
+edits: "02"
 files:
-  - DefaultDB_20221114_1505_MovieTable.cs
-  - MovieRow.cs
+  DefaultDB_20221114_1505_MovieTable.cs: { fixture: Migrations/DefaultDB/DefaultDB_20221114_1505_MovieTable.cs }
+  MovieRow.cs: { fixture: Modules/MovieDB/Movie/MovieRow.cs }
 
 video:
   posterAt: 19
@@ -23,45 +24,13 @@ output:
   poster: ../img/02-generating-code-for-movie-table-poster.png
 
 budgets:
-  maxDuration: 32
+  maxDuration: 36
   maxBytes: 2500000
 
-# nothing generated yet: the migration exists, the Movie module does not.
-# Other scenes in this folder can reuse it as "@02-generate-code/treeProject".
-treeProject:
-  from: "@01-creating-movie-table/treeAfter"
-
-# sergen 10 adds endpoints, .tsx pages and request handlers as well, and the
-# server typings of the module; that is a patch on top of the project tree.
-treeAfter:
-  from: "@treeProject"
-  add:
-    MovieTutorial.Web/Modules/MovieDB/:
-      - Movie/:
-          - RequestHandlers/:
-              - MovieDeleteHandler.cs
-              - MovieListHandler.cs
-              - MovieRetrieveHandler.cs
-              - MovieSaveHandler.cs
-          - MovieColumns.cs
-          - MovieDialog.tsx
-          - MovieEndpoint.cs
-          - MovieForm.cs
-          - MovieGrid.tsx
-          - MoviePage.cs
-          - MoviePage.tsx
-          - MovieRow.cs
-      - MovieDBNavigation.cs
-    MovieTutorial.Web/Modules/ServerTypes/:
-      - MovieDB/:
-          - MovieColumns.ts
-          - MovieForm.ts
-          - MovieRow.ts
-          - MovieService.ts
-      - MovieDB.ts
-
+# The explorer is scanned from the chapter's own project copy, so nothing has
+# to restate what sergen generates.
 steps:
-  - tree: "@treeProject"
+  - tree: {}
     treeScroll: top
     open: DefaultDB_20221114_1505_MovieTable.cs
     highlight: ["10-17"]
@@ -199,12 +168,36 @@ steps:
     caption: "Everything is selected by default"
     hold: 2.2
 
-  - tree: "@treeAfter"
-    terminal: { open: false }
+  # sergen wrote the module, so Migrations is collapsed and the module walked
+  # to folder by folder, or the Movie folder would end up below the fold
+  - tree: { expand: ["Modules"] }
     bottomHeight: null
+    treeScroll: top
+    spotlight: "node:Modules"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Sergen added the module under Modules"
+    hold: 1.0
+
+  - tree: { expand: ["Modules", "Modules/MovieDB"] }
+    spotlight: "node:MovieDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "The MovieDB module holds every table of the database"
+    hold: 1.0
+
+  - tree: { expand: ["Modules", "Modules/MovieDB", "Modules/MovieDB/Movie"] }
+    spotlight: "node:Movie"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "One folder per table: row, columns, form, grid and page"
+    hold: 1.2
+
+  # clicking the row is what opens it
+  - tree: { expand: ["Modules", "Modules/MovieDB", "Modules/MovieDB/Movie"] }
+    # the click scrolled the row into place; leave the tree where it is
+    treeScroll: keep
+    click: "node:MovieRow.cs"
     open: MovieRow.cs
     highlight: ["13-14"]
     spotlight: "line:13"
-    pointerAt: { x: 0.5, y: 0.5 }
+    pointerAt: { x: 0.42, y: 0.57 }
     caption: "Attributes describe the field for every layer"
     hold: 3.0

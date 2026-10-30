@@ -12,13 +12,13 @@ open: null
 files:
   DefaultDB_20221115_1612_PersonAndMovieCast.cs: { snippet: "DefaultDB_20221115_1612_PersonAndMovieCast.cs" }
   MovieDBNavigation.cs: { baseline: Modules/MovieDB/MovieDBNavigation.cs, fixturePath: Modules/MovieDB/MovieDBNavigation.cs }
-  Gender.cs: { snippet: "Gender_10.cs", fixturePath: Modules/MovieDB/Person/Gender.cs }
+  Gender.cs: { fixture: Modules/MovieDB/Person/Gender.cs }
   PersonRow.cs: { baseline: Modules/MovieDB/Person/PersonRow.cs, fixturePath: Modules/MovieDB/Person/PersonRow.cs }
   PersonForm.cs: { baseline: Modules/MovieDB/Person/PersonForm.cs, fixturePath: Modules/MovieDB/Person/PersonForm.cs }
   PersonColumns.cs: { baseline: Modules/MovieDB/Person/PersonColumns.cs, fixturePath: Modules/MovieDB/Person/PersonColumns.cs }
-  MovieCastEditor.tsx: { snippet: "MovieCastEditor_10.tsx", fixturePath: Modules/MovieDB/MovieCast/MovieCastEditor.tsx }
-  MovieCastEditDialog.tsx: { snippet: "MovieCastEditDialog_10.tsx", fixturePath: Modules/MovieDB/MovieCast/MovieCastEditDialog.tsx }
-  MovieCastEditDialog.css: { snippet: "MovieCastEditDialog_10.css", fixturePath: Modules/MovieDB/MovieCast/MovieCastEditDialog.css }
+  MovieCastEditor.tsx: { fixture: Modules/MovieDB/MovieCast/MovieCastEditor.tsx }
+  MovieCastEditDialog.tsx: { fixture: Modules/MovieDB/MovieCast/MovieCastEditDialog.tsx }
+  MovieCastEditDialog.css: { fixture: Modules/MovieDB/MovieCast/MovieCastEditDialog.css }
   MovieCastRow.cs: { baseline: Modules/MovieDB/MovieCast/MovieCastRow.cs, fixturePath: Modules/MovieDB/MovieCast/MovieCastRow.cs }
   MovieCastForm.cs: { baseline: Modules/MovieDB/MovieCast/MovieCastForm.cs, fixturePath: Modules/MovieDB/MovieCast/MovieCastForm.cs }
   MovieCastColumns.cs: { baseline: Modules/MovieDB/MovieCast/MovieCastColumns.cs, fixturePath: Modules/MovieDB/MovieCast/MovieCastColumns.cs }
@@ -34,6 +34,13 @@ fixtureFiles:
   Modules/MovieDB/MovieCast/MovieCastEditor.tsx: { snippet: "MovieCastEditor_10.tsx" }
   Modules/MovieDB/MovieCast/MovieCastEditDialog.tsx: { snippet: "MovieCastEditDialog_10.tsx" }
   Modules/MovieDB/MovieCast/MovieCastEditDialog.css: { snippet: "MovieCastEditDialog_10.css" }
+# The cast editor replaces the generated MovieCast page, so the menu entry that
+# sergen adds for that page has to go as well.
+fixtureEdits:
+  - file: Modules/MovieDB/MovieDBNavigation.cs
+    find: '[assembly: NavigationLink(int.MaxValue, "MovieDB/Movie Cast", typeof(MyPages.MovieCastPage), icon: null)]'
+    replace: ""
+
 fixtureDeletes:
   - Modules/MovieDB/MovieCast/MovieCastPage.cs
   - Modules/MovieDB/MovieCast/MovieCastPage.tsx
@@ -59,60 +66,6 @@ verify:
   MovieRetrieveHandler.cs: Modules/MovieDB/Movie/RequestHandlers/MovieRetrieveHandler.cs
   MovieSaveHandler.cs: Modules/MovieDB/Movie/RequestHandlers/MovieSaveHandler.cs
 
-treeBefore:
-  from: "@08-multiple-genres-per-movie/treeAfterFormatter"
-treeAfterMigration:
-  from: "@treeBefore"
-  add:
-    MovieTutorial.Web/Migrations/DefaultDB/:
-      - DefaultDB_20221115_1612_PersonAndMovieCast.cs
-treeGenerated:
-  from: "@treeAfterMigration"
-  replace:
-    MovieTutorial.Web/Migrations: {}
-    MovieTutorial.Web/Imports: {}
-    MovieTutorial.Web/Modules/Administration: {}
-    MovieTutorial.Web/Modules/Common: {}
-    MovieTutorial.Web/Modules/Membership: {}
-    MovieTutorial.Web/Modules/MovieDB/Genre: {}
-    MovieTutorial.Web/Modules/MovieDB/Movie: {}
-    MovieTutorial.Web/Modules/MovieDB/MovieGenres: {}
-    MovieTutorial.Web/Modules/ServerTypes: {}
-  add:
-    MovieTutorial.Web/Modules/MovieDB/Person/:
-      - PersonRow.cs
-      - PersonForm.cs
-      - PersonColumns.cs
-    MovieTutorial.Web/Modules/MovieDB/MovieCast/: {}
-treeAfterGender:
-  from: "@treeGenerated"
-  add:
-    MovieTutorial.Web/Modules/MovieDB/Person/:
-      - Gender.cs
-treeCastBefore:
-  from: "@treeAfterGender"
-  replace:
-    MovieTutorial.Web/Modules/MovieDB/Person: {}
-    MovieTutorial.Web/Modules/MovieDB/MovieCast:
-      - MovieCastRow.cs
-      - MovieCastForm.cs
-      - MovieCastColumns.cs
-      - MovieCastGrid.tsx
-      - MovieCastDialog.tsx
-      - MovieCastPage.cs
-      - MovieCastPage.tsx
-treeCast:
-  from: "@treeCastBefore"
-  replace:
-    MovieTutorial.Web/Modules/MovieDB/MovieCast:
-      - MovieCastRow.cs
-      - MovieCastForm.cs
-      - MovieCastColumns.cs
-      - MovieCastEditor.tsx
-      - MovieCastEditDialog.tsx
-      - MovieCastEditDialog.css
-tree: "@treeBefore"
-
 video: { width: 1400, height: 900, fps: 24, tail: 0.8, posterAt: 158 }
 budgets: { maxDuration: 210, maxBytes: 8000000 }
 appStages:
@@ -121,7 +74,8 @@ appStages:
 
 steps:
   # Migration: create the person and cast tables and seed three actors.
-  - treeScroll: top
+  - tree: { expand: ["Migrations", "Migrations/DefaultDB"] }
+    treeScroll: top
     spotlight: "node:DefaultDB"
     caption: "Add the Person and MovieCast tables"
     hold: 1.0
@@ -151,7 +105,7 @@ steps:
     hold: 0.4
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfterMigration"
+    tree: {}
     open: DefaultDB_20221115_1612_PersonAndMovieCast.cs
     reveal: 0
     spotlight: null
@@ -197,7 +151,6 @@ steps:
     hold: 0.1
   - terminal: { open: false }
     bottomHeight: null
-    tree: "@treeGenerated"
     open: MovieDBNavigation.cs
     spotlight: null
     caption: "Keep the Person page; cast will be edited inside a movie"
@@ -250,7 +203,6 @@ steps:
     hold: 0.4
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfterGender"
     open: Gender.cs
     reveal: 0
     spotlight: null
@@ -359,13 +311,11 @@ steps:
     hold: 1.3
 
   # Use an in-memory grid and dialog for cast entries.
-  - tree: "@treeCastBefore"
-    treeScroll: top
+  - treeScroll: top
     spotlight: null
     caption: "Remove the separate page and replace the generated grid and dialog"
     hold: 1.0
-  - tree: "@treeCast"
-    spotlight: null
+  - spotlight: null
     hold: 0.2
   - open: MovieCastEditor.tsx
     reveal: 0

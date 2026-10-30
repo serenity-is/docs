@@ -22,6 +22,7 @@ Create a new migration file and name it `DefaultDB_20221114_1505_MovieTable.cs`.
 
 Your migration file should resemble the following:
 
+<a id="movie-table-migration-snippet"></a>
 ```csharp
 using FluentMigrator;
 

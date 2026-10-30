@@ -15,18 +15,10 @@ edits: "03"          # the fixture must be built with this profile
 # the files come from the generated application itself, so the editor shows
 # exactly the code that is running -- including this chapter's edits
 files:
-  MovieRow.cs:
-    snippet: "MovieRow_03.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieRow.cs
-  MovieColumns.cs:
-    snippet: "MovieColumns_03.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieColumns.cs
-  MovieForm.cs:
-    snippet: "MovieForm_03.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieForm.cs
-  MovieDialog.tsx:
-    snippet: "MovieDialog_03.tsx"
-    fixturePath: Modules/MovieDB/Movie/MovieDialog.tsx
+  MovieRow.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieRow.cs }
+  MovieColumns.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieColumns.cs }
+  MovieForm.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieForm.cs }
+  MovieDialog.tsx: { stage: before, fixture: Modules/MovieDB/Movie/MovieDialog.tsx }
   MovieDialog.css: { fixture: "Modules/MovieDB/Movie/MovieDialog.css" }
 
 verify:
@@ -67,7 +59,9 @@ budgets:
 
 steps:
   # 1. the entity decides the caption everywhere
-  - open: MovieRow.cs
+  - tree: {}
+    treeScroll: top
+    open: MovieRow.cs
     editorLine: 22
     spotlight: "node:MovieRow.cs"
     caption: "MovieRow is the entity sergen generated"

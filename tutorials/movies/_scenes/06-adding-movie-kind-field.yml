@@ -14,16 +14,10 @@ edits: "06"
 open: null
 files:
   DefaultDB_20221114_1825_MovieKind.cs: { snippet: "DefaultDB_20221114_1825_MovieKind.cs" }
-  MovieKind.cs: { snippet: "MovieKind.cs" }
-  MovieRow.cs:
-    snippet: "MovieRow_06.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieRow.cs
-  MovieForm.cs:
-    snippet: "MovieForm_06.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieForm.cs
-  MovieColumns.cs:
-    snippet: "MovieColumns_06.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieColumns.cs
+  MovieKind.cs: { fixture: Modules/MovieDB/Movie/MovieKind.cs }
+  MovieRow.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieRow.cs }
+  MovieForm.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieForm.cs }
+  MovieColumns.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieColumns.cs }
 
 verify:
   MovieRow.cs: Modules/MovieDB/Movie/MovieRow.cs
@@ -31,36 +25,7 @@ verify:
   MovieColumns.cs: Modules/MovieDB/Movie/MovieColumns.cs
 
 fixtureFiles:
-  Modules/MovieDB/Movie/MovieKind.cs: |
-    namespace MovieTutorial.MovieDB;
-
-    [EnumKey("MovieDB.MovieKind")]
-    public enum MovieKind
-    {
-        [DescriptionText("Film")]
-        Film = 1,
-        [DescriptionText("TV Series")]
-        TvSeries = 2,
-        [DescriptionText("Mini Series")]
-        MiniSeries = 3
-    }
-
-treeBefore:
-  from: "@05-customizing-quick-search/treeAfter"
-
-treeAfterMigration:
-  from: "@treeBefore"
-  add:
-    MovieTutorial.Web/Migrations/DefaultDB/:
-      - DefaultDB_20221114_1825_MovieKind.cs
-
-treeAfter:
-  from: "@treeAfterMigration"
-  add:
-    MovieTutorial.Web/Modules/MovieDB/Movie/:
-      - MovieKind.cs
-
-tree: "@treeBefore"
+  Modules/MovieDB/Movie/MovieKind.cs: { snippet: MovieKind.cs }
 
 video:
   posterAt: 27
@@ -77,7 +42,8 @@ appStages:
 
 steps:
   # 1. add the migration
-  - treeScroll: top
+  - tree: { expand: ["Migrations", "Migrations/DefaultDB"] }
+    treeScroll: top
     spotlight: "node:DefaultDB"
     caption: "The existing migrations are never edited"
     hold: 1.2
@@ -119,7 +85,7 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfterMigration"
+    tree: {}
     open: DefaultDB_20221114_1825_MovieKind.cs
     reveal: 0
     highlight: []
@@ -174,7 +140,6 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfter"
     open: MovieKind.cs
     reveal: 0
     highlight: []

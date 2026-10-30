@@ -35,27 +35,6 @@ verify:
   PersonForm.cs: Modules/MovieDB/Person/PersonForm.cs
   MovieForm.cs: Modules/MovieDB/Movie/MovieForm.cs
 
-treeBefore:
-  from: "@10-keeping-record-of-the-cast/treeAfterMigration"
-treeAfterMigration:
-  from: "@treeBefore"
-  add:
-    MovieTutorial.Web/Migrations/DefaultDB/:
-      - DefaultDB_20221122_1151_PersonMovieImages.cs
-treeRows:
-  from: "@11-listing-movies-in-person-dialog/treeAfterCss"
-  replace:
-    MovieTutorial.Web/Migrations: {}
-    MovieTutorial.Web/Modules/MovieDB/Movie:
-      - MovieRow.cs
-      - MovieForm.cs
-    MovieTutorial.Web/Modules/MovieDB/Person:
-      - PersonRow.cs
-      - PersonForm.cs
-      - PersonMovieColumns.cs
-      - PersonMovieGrid.tsx
-      - PersonDialog.css
-
 video: { width: 1400, height: 900, fps: 24, tail: 0.8, posterAt: 47 }
 budgets: { maxDuration: 150, maxBytes: 6000000 }
 appStages:
@@ -63,7 +42,8 @@ appStages:
 
 steps:
   # The migration adds the same two database columns to both tables.
-  - treeScroll: top
+  - tree: { expand: ["Migrations", "Migrations/DefaultDB"] }
+    treeScroll: top
     spotlight: "node:DefaultDB"
     caption: "Add a migration for image fields"
     hold: 1.0
@@ -92,7 +72,7 @@ steps:
     hold: 0.4
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfterMigration"
+    tree: {}
     open: DefaultDB_20221122_1151_PersonMovieImages.cs
     reveal: 0
     bottomHeight: 200
@@ -109,8 +89,7 @@ steps:
     hold: 1.8
 
   # Rows declare the upload editors and matching RowFields.
-  - tree: "@treeRows"
-    open: PersonRow.cs
+  - open: PersonRow.cs
     reveal: null
     editorLine: 30
     spotlight: null

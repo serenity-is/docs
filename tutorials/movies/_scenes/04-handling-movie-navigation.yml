@@ -16,26 +16,13 @@ edits: "04"          # the fixture must be built with this profile
 # file is opened by clicking it in the next step.
 open: null
 files:
-  MovieDBNavigation.cs:
-    snippet: "MovieDBNavigation.cs"
-    fixturePath: Modules/MovieDB/MovieDBNavigation.cs
+  MovieDBNavigation.cs: { stage: before, fixture: Modules/MovieDB/MovieDBNavigation.cs }
 
 verify:
   MovieDBNavigation.cs: Modules/MovieDB/MovieDBNavigation.cs
 
 # same generated project tree as chapter 02, but collapsed so the navigation
 # file is visible without scrolling through migrations and unrelated modules
-tree:
-  from: "@02-generate-code/treeAfter"
-  replace:
-    MovieTutorial.Web/Migrations: {}
-    MovieTutorial.Web/Imports: {}
-    MovieTutorial.Web/Modules/Administration: {}
-    MovieTutorial.Web/Modules/Common: {}
-    MovieTutorial.Web/Modules/Membership: {}
-    MovieTutorial.Web/Modules/MovieDB/Movie: {}
-    MovieTutorial.Web/Modules/ServerTypes: {}
-
 video:
   posterAt: 22
 
@@ -45,7 +32,8 @@ budgets:
 
 steps:
   # 1. open the generated navigation file from the project tree
-  - click: "file:MovieDBNavigation.cs"
+  - tree: { expand: ["Modules", "Modules/MovieDB"] }
+    click: "file:MovieDBNavigation.cs"
     open: MovieDBNavigation.cs
     spotlight: "file:MovieDBNavigation.cs"
     treeScroll: selected

@@ -1,8 +1,8 @@
 # Storyboard for the "After Generating Code" part of
 # tutorials/movies/02-generating-code-for-movie-table.md
 #
-# Preview:  pnpm media --id 02b-run-the-app --preview   (not supported yet)
-# Render:   pnpm media --id 02b-run-the-app --publish
+# Preview:  pnpm media --id 02b-running-the-application --preview   (not supported yet)
+# Render:   pnpm media --id 02b-running-the-application --publish
 #
 # Unlike the IDE scenes, this one records the *real* application built by
 # `pnpm media app-fixture`: a Serene app on SQLite, with the Movie module
@@ -10,7 +10,7 @@
 # patches, and `pnpm media` starts/stops the app around the take.
 
 extends: "_defaults"
-id: 02b-run-the-app
+id: 02b-running-the-application
 title: Running the application and managing movies
 edits: "02"
 login: true          # this chapter is the one that shows the sign-in page

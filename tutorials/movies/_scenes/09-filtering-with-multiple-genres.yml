@@ -13,21 +13,11 @@ edits: "09"
 
 open: null
 files:
-  MovieColumns.cs:
-    snippet: "MovieColumns_09.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieColumns.cs
-  MovieListRequest.cs:
-    snippet: "MovieListRequest_09.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieListRequest.cs
-  MovieListHandler.cs:
-    snippet: "MovieListHandler_09.cs"
-    fixturePath: Modules/MovieDB/Movie/RequestHandlers/MovieListHandler.cs
-  MovieEndpoint.cs:
-    snippet: "MovieEndpoint_09.cs"
-    fixturePath: Modules/MovieDB/Movie/MovieEndpoint.cs
-  MovieGrid.tsx:
-    snippet: "MovieGrid_09.tsx"
-    fixturePath: Modules/MovieDB/Movie/MovieGrid.tsx
+  MovieColumns.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieColumns.cs }
+  MovieListRequest.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieListRequest.cs }
+  MovieListHandler.cs: { stage: before, fixture: Modules/MovieDB/Movie/RequestHandlers/MovieListHandler.cs }
+  MovieEndpoint.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieEndpoint.cs }
+  MovieGrid.tsx: { stage: before, fixture: Modules/MovieDB/Movie/MovieGrid.tsx }
 
 fixtureFiles:
   Modules/MovieDB/Movie/MovieListRequest.cs: { snippet: "MovieListRequest_09.cs" }
@@ -39,26 +29,6 @@ verify:
   MovieListHandler.cs: Modules/MovieDB/Movie/RequestHandlers/MovieListHandler.cs
   MovieEndpoint.cs: Modules/MovieDB/Movie/MovieEndpoint.cs
   MovieGrid.tsx: Modules/MovieDB/Movie/MovieGrid.tsx
-
-treeBefore:
-  from: "@08-multiple-genres-per-movie/treeAfterFormatter"
-
-tree:
-  from: "@treeBefore"
-  replace:
-    MovieTutorial.Web/Migrations: {}
-    MovieTutorial.Web/Imports: {}
-    MovieTutorial.Web/Modules/Administration: {}
-    MovieTutorial.Web/Modules/Common: {}
-    MovieTutorial.Web/Modules/Membership: {}
-    MovieTutorial.Web/Modules/MovieDB/Genre: {}
-    MovieTutorial.Web/Modules/ServerTypes: {}
-
-treeAfterRequest:
-  from: "@tree"
-  add:
-    MovieTutorial.Web/Modules/MovieDB/Movie/:
-      - MovieListRequest.cs
 
 video:
   posterAt: 56
@@ -73,7 +43,8 @@ appStages:
 
 steps:
   # 1. try the built-in QuickFilter from LinkingSetRelation
-  - open: MovieColumns.cs
+  - tree: {}
+    open: MovieColumns.cs
     reveal: null
     highlight: ["18-19"]
     spotlight: null
@@ -132,7 +103,7 @@ steps:
 
   - click: "#ai-add"
     addItem: null
-    tree: "@treeAfterRequest"
+    tree: {}
     open: MovieListRequest.cs
     reveal: 0
     highlight: []

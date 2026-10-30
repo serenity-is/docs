@@ -12,6 +12,8 @@ Let's start by creating a migration to generate the Genre table and add a "Genre
 
 **Migrations/DefaultDB/DefaultDB_20221114_1836_GenreTable.cs**:
 
+<a id="genre-table-migration-snippet"></a>
+
 ```csharp
 using FluentMigrator;
 

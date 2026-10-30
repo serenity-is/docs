@@ -13,6 +13,16 @@
 # Only plain values belong here: `@references` inside this file would resolve
 # relative to the scene that imports it, which is rarely what you mean.
 
+# The pristine project every scene's Solution Explorer and template reads come
+# from; one snapshot serves them all, since a template is chapter-independent.
+projectFixture:
+  template: serene
+  package: Serene.Templates
+  name: MovieTutorial
+  directory: MovieTutorial.Web
+  solution: "Solution 'MovieTutorial' (1 of 1 project)"
+  project: MovieTutorial.Web
+
 stage:
   theme: vs-dark
   title: MovieTutorial - Microsoft Visual Studio

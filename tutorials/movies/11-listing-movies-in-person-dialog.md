@@ -39,6 +39,8 @@ For now, `MoviesGrid` contains a `StringEditor`. We need to define a grid with s
 
 First, declare the columns we'll use with the grid in the file `PersonMovieColumns.cs`, which should be located next to `PersonColumns.cs`:
 
+<a id="person-movie-columns-11-snippet"></a>
+
 ```cs
 namespace MovieTutorial.MovieDB.Columns;
 
@@ -218,6 +220,8 @@ You might have noticed that when you switch to the "Movies" tab, the grid is a b
 Because of this, `PersonMovieGrid` needs its height adjusted in the dialog. Create a `PersonDialog.css` next to the `PersonDialog.tsx`, then import the CSS file into the dialog. 
 
 Create `PersonDialog.css`:
+
+<a id="person-dialog-11-snippet"></a>
 
 ```css
 .s-MovieDB-PersonDialog .s-PersonMovieGrid > .grid-container {

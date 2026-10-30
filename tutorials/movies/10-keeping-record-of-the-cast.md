@@ -26,6 +26,8 @@ You'll also require a `Person` table to store actors/actresses, as they may take
 
 Now, let's create a migration with two tables. Create a migration script named `DefaultDB_20221115_1612_PersonAndMovieCast.cs` in the `Migrations/DefaultDB` directory:
 
+<a id="person-and-movie-cast-snippet"></a>
+
 ```csharp
 using FluentMigrator;
 
@@ -111,6 +113,8 @@ To represent the `Gender` column in the `Person` table as an enumeration, you ca
 ### Step 1: Declare the Gender Enumeration
 
 Create a new file named `Gender.cs` next to `PersonRow.cs`. In this file, define the `Gender` enumeration as follows:
+
+<a id="gender-10-snippet"></a>
 
 ```csharp
 namespace MovieTutorial.MovieDB;

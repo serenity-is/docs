@@ -1,0 +1,62 @@
+# How `pnpm media app-fixture` builds this tutorial's application.
+#
+# A shared input (the leading `_` keeps it out of `--list`): the template the
+# project is created from, the migrations each chapter adds and the sergen
+# answers. The project name and directory come from `projectFixture` in
+# `_defaults.yml`. The whole recipe is hashed into the chapter cache, so editing
+# it invalidates the chapters it shapes on its own.
+#
+# migrations[].file is read through _snippets.yml, i.e. from the chapter that
+# quotes it, so the fixture migrates the bytes the docs show. The FixtureSeed_
+# files are fixture-only data migrations (kept in _snippets/): they insert the
+# sample rows a chapter asks the reader to type in, with the chapter's values,
+# so a clip shows them instead of typing them. Their `fixture` prefix keeps them
+# out of the Solution Explorer.
+#
+#   minProfile             the chapter (edits profile) that adds it
+#   removeModule: false    every table after the first shares the CourseDB
+#                          module, so a later sergen run must not clear it
+
+template:
+  package: Serene.Templates
+  name: serene
+  version: 10.6.3
+  args: ["-D", "false"]          # no demo modules
+
+# pnpm 10+ blocks dependency build scripts; esbuild's postinstall downloads its
+# platform binary, so the install opts in explicitly
+install: ["install", "--allow-build=esbuild"]
+
+# a file database, so every build starts from an empty schema
+sqlite:
+  connectionString: "Data Source=App_Data/fixture.db"
+  providerName: "Microsoft.Data.Sqlite"
+
+# Every foreign key here is declared inside Create.Table, which SQLite accepts,
+# so nothing is stripped: sergen needs the keys to generate the joins
+# (CourseName, TermName, StudentFirstName) that chapters 05-08 edit.
+migrations:
+  - { file: DefaultDB_20250614_1700_Department.cs, target: Migrations/DefaultDB, minProfile: 1 }
+  - { file: FixtureSeed_20250614_1701_Department.cs, target: Migrations/DefaultDB, minProfile: 1 }
+  - { file: DefaultDB_20250614_1706_Terms.cs, target: Migrations/DefaultDB, minProfile: 2 }
+  - { file: FixtureSeed_20250614_1707_Terms.cs, target: Migrations/DefaultDB, minProfile: 2 }
+  - { file: DefaultDB_20250615_1220_Courses.cs, target: Migrations/DefaultDB, minProfile: 3 }
+  - { file: FixtureSeed_20250615_1221_Courses.cs, target: Migrations/DefaultDB, minProfile: 3 }
+  - { file: DefaultDB_20250616_1000_StudentsAndStudentCourses.cs, target: Migrations/DefaultDB, minProfile: 4 }
+  - { file: FixtureSeed_20250616_1001_Students.cs, target: Migrations/DefaultDB, minProfile: 4 }
+  - { file: DefaultDB_20250616_1200_Grades.cs, target: Migrations/DefaultDB, minProfile: 6 }
+  - { file: DefaultDB_20250707_1015_TeachersAndTeacherCourse.cs, target: Migrations/DefaultDB, minProfile: 6 }
+  # chapter 06 leaves Grades empty; the grades chapter 07's screenshots show
+  - { file: FixtureSeed_20250616_1201_Grades.cs, target: Migrations/DefaultDB, minProfile: 7 }
+
+# One `dotnet sergen g` run per entry, in the chapter that asks for it. SQLite
+# has no schemas, so a table carries no `dbo.` prefix. Teachers and
+# TeacherCourse are migrated but, as chapter 06 says, never generated.
+generate:
+  - { table: Department, module: CourseDB, identifier: Department, permission: "Administration:General", what: "*", minProfile: 1 }
+  - { table: Terms, module: CourseDB, identifier: Terms, permission: "Administration:General", what: "*", minProfile: 2, removeModule: false }
+  - { table: Courses, module: CourseDB, identifier: Courses, permission: "Administration:General", what: "*", minProfile: 3, removeModule: false }
+  - { table: Students, module: CourseDB, identifier: Students, permission: "Administration:General", what: "*", minProfile: 4, removeModule: false }
+  # chapter 04 generates a full page; chapter 05 deletes it (fixtureDeletes)
+  - { table: StudentCourses, module: CourseDB, identifier: StudentCourses, permission: "Administration:General", what: "*", minProfile: 4, removeModule: false }
+  - { table: Grades, module: CourseDB, identifier: Grades, permission: "Administration:General", what: "*", minProfile: 6, removeModule: false }

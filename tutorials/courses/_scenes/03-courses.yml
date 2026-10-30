@@ -1,0 +1,155 @@
+# Storyboard for tutorials/courses/03-courses.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/courses/_scenes/03-courses.yml --stages
+# Render:   pnpm media --id 03-courses --publish
+#
+# The chapter's new idea is the foreign key, so the clip follows it from the
+# migration to the row sergen generates (DepartmentName via a LeftJoin) and to
+# the grid's Department Name column. The four sample courses come from
+# _snippets/FixtureSeed_20250615_1221_Courses.cs.
+
+extends: "_defaults"
+id: 03-courses
+title: Creating the Courses table
+edits: "03"
+open: null         # nothing is open until the migration is created
+
+files:
+  DefaultDB_20250615_1220_Courses.cs: { snippet: "DefaultDB_20250615_1220_Courses.cs" }
+  CoursesRow.cs: { fixture: Modules/CourseDB/Courses/CoursesRow.cs }
+
+appStages:
+  - { id: app, edits: 0 }
+
+video:
+  posterAt: 24
+
+budgets:
+  maxDuration: 60
+  maxBytes: 3_500_000
+
+steps:
+  # 1. the migration
+  - tree:
+      expand: ["Migrations", "Migrations/DefaultDB"]
+      exclude: ["Migrations/DefaultDB/DefaultDB_20250615_1220_Courses.cs", "Modules/CourseDB/Courses"]
+    treeScroll: top
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Courses gets its own migration"
+    hold: 1.2
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    click: true
+    hold: 0.7
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    hold: 0.7
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "", folder: "DefaultDB\\" }
+    type: DefaultDB_20250615_1220_Courses.cs
+    typeSpeed: 24
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.6
+
+  - click: "#ai-add"
+    addItem: null
+    tree:
+      exclude: ["Modules/CourseDB/Courses"]
+    open: DefaultDB_20250615_1220_Courses.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:DefaultDB_20250615_1220_Courses.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    hold: 0.6
+
+  - code: 17
+    codeMs: 1800
+    spotlight: null
+    caption: null
+    hold: 0.8
+
+  - highlight: ["11-12"]
+    spotlight: "line:12"
+    caption: "DepartmentId is a foreign key to Department.Id"
+    hold: 2.6
+
+  - highlight: ["13-15"]
+    spotlight: "line:14"
+    caption: "A name, a unique code and the credits"
+    hold: 1.8
+
+  # 2. sergen
+  - highlight: []
+    spotlight: null
+    terminal: { open: true }
+    bottomHeight: 430
+    caption: "Run the app to migrate, then generate the code"
+    hold: 0.6
+
+  - type: dotnet sergen g
+    typeSpeed: 55
+    spotlight: terminal
+    pointerAt: { x: 0.34, y: 0.29 }
+    hold: 0.4
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Select tables for code generation (single/multiple)", kind: section }
+        - { text: "> [X] dbo.Courses", kind: picked }
+        - { text: "  [ ] dbo.Department", kind: row }
+        - { text: "  ...", kind: dim }
+        - { text: "" }
+        - { text: "Enter a Module name for table **dbo.Courses** (**Default**): CourseDB", kind: row }
+        - { text: "" }
+        - { text: "Choose What to Generate", kind: section }
+        - { text: "> [X] All", kind: picked }
+    spotlight: terminal
+    caption: "dbo.Courses, module CourseDB, generate All"
+    hold: 2.0
+
+  - tree: { expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/Courses"] }
+    terminal: { open: false }
+    bottomHeight: null
+    treeScroll: top
+    click: "node:CoursesRow.cs"
+    open: CoursesRow.cs
+    reveal: null
+    editorLine: 10
+    highlight: ["15-16"]
+    spotlight: "line:15"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Sergen turns the foreign key into a join"
+    hold: 2.2
+
+  - highlight: ["27-28"]
+    editorLine: 10
+    spotlight: "line:27"
+    caption: "DepartmentName comes from the joined Department row"
+    hold: 2.2
+
+  # 3. the page, with the chapter's sample courses
+  - screen: app
+    appStage: app
+    goto: /CourseDB/Courses
+    waitFor: "#GridDiv .slick-row"
+    spotlight: "#GridDiv"
+    caption: "CourseDB → Courses, with each course's department"
+    hold: 2.6
+
+  - screen: app
+    appStage: app
+    click: '#GridDiv a:has-text("Calculus I")'
+    waitFor: ".s-CoursesDialog"
+    spotlight: ".s-CoursesDialog"
+    caption: "Calculus I, MATH101, 3 credits"
+    hold: 2.2

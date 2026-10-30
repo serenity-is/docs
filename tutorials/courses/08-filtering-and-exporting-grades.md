@@ -4,6 +4,10 @@
 
 QuickFilter lets you narrow the grid down before exporting, and ColumnsPicker lets you choose which columns to include — so you can report on exactly the data you want. It's one of Serenity's handiest features for reporting.
 
+<video alt="Quick filters and Excel/PDF export" controls preload="metadata" poster="img/08-filtering-and-exporting-grades-poster.png">
+  <source src="img/08-filtering-and-exporting-grades.mp4" type="video/mp4" />
+</video>
+
 Add `[QuickFilter]` to the Grades columns you'll want to filter by:
 ```csharp
 namespace CourseTutorial.CourseDB.Columns;

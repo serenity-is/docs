@@ -3,6 +3,13 @@
 ## Create the Teachers and TeacherCourse Tables
 
 Teachers work like students — a teacher teaches courses, so we'll add a `Teachers` table plus a `TeacherCourse` join table that maps teachers to the courses they teach.
+
+<video alt="Creating the Teachers and Grades tables" controls preload="metadata" poster="img/06-teachers-and-grades-tables-poster.png">
+  <source src="img/06-teachers-and-grades-tables.mp4" type="video/mp4" />
+</video>
+
+<a id="teachers-and-teacher-course-migration-snippet"></a>
+
 ```csharp
 using FluentMigrator;
 
@@ -43,6 +50,8 @@ namespace CourseTutorial.Migrations.DefaultDB
 ## Create the Grades Table
 
 Each student gets a grade for each course, so let's add a `Grades` table. A grade row belongs to a student and a course (and a term), and stores the Midterm, Final, and Average values.
+
+<a id="grades-migration-snippet"></a>
 
 ```csharp
 using FluentMigrator;

@@ -1,7 +1,7 @@
 # Storyboard for tutorials/movies/00-introduction.md
 #
-# Preview interactively:   pnpm media --id 00-introduction --preview
-# Render + publish:        pnpm media --id 00-introduction --publish
+# Preview interactively:   pnpm media --id movies/00-introduction --preview
+# Render + publish:        pnpm media --id movies/00-introduction --publish
 #
 # This scene covers the start window and the "Create a new project" wizard.
 # The tree at the end matches what `dotnet new serene -n MovieTutorial`

@@ -29,3 +29,7 @@ Before you begin, start the application from your IDE or from the command line w
 - **Password:** `serenity`
 
 You'll need to be signed in to create records through the screens you build.
+
+<video alt="Running the application" controls preload="metadata" poster="img/00-introduction-poster.png">
+  <source src="img/00-introduction.mp4" type="video/mp4" />
+</video>

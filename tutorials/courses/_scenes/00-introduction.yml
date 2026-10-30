@@ -1,0 +1,103 @@
+# Storyboard for tutorials/courses/00-introduction.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/courses/_scenes/00-introduction.yml --stages
+# Render:   pnpm media --id courses/00-introduction --publish
+#
+# Why a tour and not a wizard: unlike the movie tutorial, this chapter does not
+# walk through creating the project. It says what the reader will build and how
+# to run the application and sign in. So the clip shows the project as the
+# template leaves it (no CourseDB yet), starts it, and signs in with the default
+# account on the real application. Nothing here pretends to be a step the
+# chapter does not describe.
+
+extends: "_defaults"
+id: 00-introduction
+title: Running the application
+edits: "00"          # the template as generated: no migration or module yet
+login: true          # this chapter is the one that shows the sign-in page
+
+files:
+  DefaultDB_20141103_1400_Initial.cs: { fixture: Migrations/DefaultDB/DefaultDB_20141103_1400_Initial.cs }
+
+appStages:
+  - { id: app, edits: 0 }
+
+video:
+  posterAt: 19
+
+budgets:
+  maxDuration: 32
+  maxBytes: 2_500_000
+
+steps:
+  - tree: { expand: ["Migrations", "Migrations/DefaultDB", "Modules"] }
+    treeScroll: top
+    open: DefaultDB_20141103_1400_Initial.cs
+    spotlight: "project:CourseTutorial.Web"
+    pointerAt: { x: 0.5, y: 0.45 }
+    caption: "CourseTutorial.Web is a Serene application"
+    hold: 2.4
+
+  - spotlight: "node:DefaultDB"
+    caption: "Its database schema comes from migrations in Migrations/DefaultDB"
+    hold: 2.2
+
+  - spotlight: "node:Modules"
+    caption: "Modules holds the features; each table you add becomes one"
+    hold: 2.2
+
+  # F5 runs the app: the Start button turns into Stop and the debug toolbar
+  # appears; `dotnet run` from the project folder does the same
+  - click: "#tb-start"
+    debug: running
+    spotlight: "#tb-start"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "Start it from the IDE (F5), or with dotnet run"
+    hold: 1.6
+
+  - bottomTab: Output
+    output:
+      - "Build succeeded."
+      - "    0 Warning(s)"
+      - "    0 Error(s)"
+      - ""
+      - "Now listening on: https://localhost:50263"
+      - "Application started. Press Ctrl+C to shut down."
+    status: "Web server is listening on port 50263"
+    spotlight: null
+    caption: "The application starts and opens in the browser"
+    hold: 1.6
+
+  # the real application from here on
+  - screen: app
+    appStage: app
+    goto: /
+    waitFor: "[name=Username]"
+    spotlight: "[name=Username]"
+    caption: "The site asks you to sign in"
+    hold: 2.0
+
+  - screen: app
+    appStage: app
+    type: admin
+    into: "[name=Username]"
+    typeSpeed: 90
+    spotlight: "[name=Username]"
+    hold: 0.4
+
+  - screen: app
+    appStage: app
+    type: serenity
+    into: "[name=Password]"
+    typeSpeed: 70
+    spotlight: "[name=Password]"
+    caption: "The default account is admin / serenity"
+    hold: 1.6
+
+  - screen: app
+    appStage: app
+    click: "[type=submit]"
+    waitFor: ".s-sidebar-link-text"
+    spotlight: null
+    caption: "Signed in: the screens you build will appear in this sidebar"
+    hold: 2.6

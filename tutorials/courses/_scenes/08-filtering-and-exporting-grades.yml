@@ -1,0 +1,160 @@
+# Storyboard for tutorials/courses/08-filtering-and-exporting-grades.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/courses/_scenes/08-filtering-and-exporting-grades.yml --stages
+# Render:   pnpm media --id 08-filtering-and-exporting-grades --publish
+#
+# The edits turn the generated GradesColumns into the file the chapter quotes,
+# and add the two export buttons to GradesGrid. The clip filters the seeded
+# grades down to the chapter's Calculus I rows and ends on the export buttons;
+# it does not click them (a download has nothing to show in a frame).
+
+extends: "_defaults"
+id: 08-filtering-and-exporting-grades
+title: Quick filters and Excel/PDF export
+edits: "08"
+
+files:
+  GradesColumns.cs: { stage: before, fixture: Modules/CourseDB/Grades/GradesColumns.cs }
+  GradesGrid.tsx: { stage: before, fixture: Modules/CourseDB/Grades/GradesGrid.tsx }
+
+verifyStage: final
+verify:
+  GradesColumns.cs: Modules/CourseDB/Grades/GradesColumns.cs
+  GradesGrid.tsx: Modules/CourseDB/Grades/GradesGrid.tsx
+
+appStages:
+  - { id: filters, edits: 4 }
+  - { id: final, edits: 6 }
+
+video:
+  posterAt: 34
+
+budgets:
+  maxDuration: 70
+  maxBytes: 4_000_000
+
+steps:
+  # 1. quick filters
+  - tree: { expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/Grades"] }
+    treeScroll: top
+    open: GradesColumns.cs
+    highlight: ["9-11"]
+    spotlight: "line:9"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Mark the columns to filter by with [QuickFilter]"
+    hold: 1.6
+
+  - edit:
+      file: GradesColumns.cs
+      insertBefore: "    public string? FullName { get; set; }"
+      text: "\n    [QuickFilter]\n"
+    editMs: 700
+    highlight: ["10-11"]
+    spotlight: null
+    caption: "Full name..."
+    hold: 0.6
+
+  - edit:
+      file: GradesColumns.cs
+      insertBefore: "    public string? CourseName { get; set; }"
+      text: "\n    [QuickFilter]\n"
+    editMs: 700
+    highlight: ["13-14"]
+    spotlight: null
+    caption: "...course name..."
+    hold: 0.6
+
+  - edit:
+      file: GradesColumns.cs
+      insertBefore: "    public string? TermName { get; set; }"
+      text: "\n    [QuickFilter]\n"
+    editMs: 700
+    highlight: ["16-17"]
+    spotlight: null
+    caption: "...and term name"
+    hold: 0.6
+
+  - edit:
+      file: GradesColumns.cs
+      insertBefore: "    public decimal? Midterm { get; set; }"
+      text: "\n"
+    editMs: 200
+    highlight: []
+    spotlight: null
+    caption: null
+    hold: 0.6
+
+  - screen: app
+    appStage: filters
+    goto: /CourseDB/Grades
+    waitFor: "#GridDiv .slick-row"
+    spotlight: ".quick-filters-bar"
+    caption: "A filter bar appears above the grid"
+    hold: 2.0
+
+  - screen: app
+    appStage: filters
+    type: Calculus I
+    into: "input[id$='QuickFilter_CourseName']"
+    typeSpeed: 70
+    executeSearch: true
+    waitGone: '#GridDiv .slick-cell:text-is("Physics I")'
+    spotlight: "#GridDiv"
+    caption: "Filter by course: only the Calculus I grades are left"
+    hold: 2.6
+
+  # 2. export buttons
+  - open: GradesGrid.tsx
+    highlight: []
+    spotlight: null
+    caption: "GradesGrid is the EntityGrid sergen generated"
+    hold: 1.2
+
+  - edit:
+      file: GradesGrid.tsx
+      insertBefore: "import { GradesColumns"
+      text: "import { ExcelExportHelper, PdfExportHelper } from \"@serenity-is/extensions\";\n"
+    editMs: 900
+    highlight: ["2-2"]
+    spotlight: null
+    caption: "Import the export helpers"
+    hold: 1.0
+
+  - edit:
+      file: GradesGrid.tsx
+      find: "    protected override getService() { return GradesService.baseUrl; }"
+      replace: "    protected override getService() { return GradesService.baseUrl; }\n\n    protected override getButtons() {\n        let buttons = super.getButtons();\n\n        // Excel export button\n        buttons.push(ExcelExportHelper.createToolButton({\n            grid: this,\n            service: GradesService.baseUrl + '/ListExcel',\n            separator: true\n        }));\n\n        // PDF export button\n        buttons.push(PdfExportHelper.createToolButton({\n            grid: this\n        }));\n\n        return buttons;\n    }"
+    editMs: 2600
+    highlight: ["14-31"]
+    spotlight: null
+    caption: "getButtons adds an Excel and a PDF button to the toolbar"
+    hold: 2.4
+
+  - highlight: ["18-22"]
+    spotlight: "line:18"
+    caption: "Excel asks the server's ListExcel endpoint for the same query"
+    hold: 2.0
+
+  - highlight: ["25-27"]
+    spotlight: "line:25"
+    caption: "PDF is generated in the browser from the grid's data"
+    hold: 2.0
+
+  - screen: app
+    appStage: final
+    goto: /CourseDB/Grades
+    waitFor: "#GridDiv .slick-row"
+    spotlight: ".s-Toolbar, .tool-buttons"
+    caption: "Excel and PDF buttons sit next to the column picker"
+    hold: 2.4
+
+  - screen: app
+    appStage: final
+    type: Calculus I
+    into: "input[id$='QuickFilter_CourseName']"
+    typeSpeed: 70
+    executeSearch: true
+    waitGone: '#GridDiv .slick-cell:text-is("Physics I")'
+    spotlight: "#GridDiv"
+    caption: "Both exports use the grid's filters, sorting and columns"
+    hold: 2.8

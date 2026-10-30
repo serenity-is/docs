@@ -45,3 +45,7 @@ output:
 chrome: browser
 # The login page is chapter 02b's job; later chapters sign in before frame one.
 login: false
+# ...and land on the Movie grid, which every later chapter starts from.
+signIn:
+  returnUrl: /MovieDB/Movie
+  waitFor: "#GridDiv"

@@ -4,6 +4,10 @@
 
 Next, the `Courses` table. Every course belongs to a department, has a name and a unique code, and carries a number of credits:
 
+<video alt="Creating the Courses table" controls preload="metadata" poster="img/03-courses-poster.png">
+  <source src="img/03-courses.mp4" type="video/mp4" />
+</video>
+
 - Auto-incrementing primary key `Id`  
 - `DepartmentId` — a foreign key to the `Department` table  
 - Required `Name` column (max 100 characters)  
@@ -11,6 +15,9 @@ Next, the `Courses` table. Every course belongs to a department, has a name and 
 - Required `Credit` column  
 
 The foreign key is what keeps each course tied to its department.
+
+<a id="courses-migration-snippet"></a>
+
 ```csharp
 using FluentMigrator;
 namespace CourseTutorial.Migrations.DefaultDB;

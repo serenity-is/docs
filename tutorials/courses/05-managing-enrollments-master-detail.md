@@ -4,6 +4,10 @@
 
 The idea is simple: an enrollment only makes sense in the context of a student, so instead of giving StudentCourses its own page, we'll manage each student's enrollments inside their dialog.
 
+<video alt="Managing enrollments with a master-detail editor" controls preload="metadata" poster="img/05-managing-enrollments-master-detail-poster.png">
+  <source src="img/05-managing-enrollments-master-detail.mp4" type="video/mp4" />
+</video>
+
 If StudentCourses had a standalone page, anyone could create enrollments without knowing which student they belong to — that makes it easy to end up with orphaned or inconsistent records. In practice, a course registration always belongs to a specific student, so we'll manage it within that relationship.
 
 After this change:
@@ -115,6 +119,8 @@ Adding and editing detail rows happens through a popup dialog. In a master–det
 Create a new file named `StudentCoursesEditDialog.tsx`:
 StudentCoursesEditDialog.tsx
 
+<a id="student-courses-edit-dialog-snippet"></a>
+
 ```typescript
 import { GridEditorDialog } from "@serenity-is/extensions";
 import { StudentCoursesForm, StudentCoursesRow } from "../../ServerTypes/CourseDB";
@@ -132,6 +138,8 @@ export class StudentCoursesEditDialog extends GridEditorDialog<StudentCoursesRow
 ## Wire the Editor to the Dialog
 
 Now we tell the grid editor which dialog to open when the user adds or edits a row. Update `StudentCoursesEditor.tsx`:
+
+<a id="student-courses-editor-snippet"></a>
 
 ```typescript
 import { GridEditorBase } from "@serenity-is/extensions";

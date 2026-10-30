@@ -4,6 +4,10 @@
 
 Next up is the `Terms` table, which stores academic terms like *Spring 2027* and *Fall 2026*.
 
+<video alt="Creating the Terms table" controls preload="metadata" poster="img/02-academic-terms-poster.png">
+  <source src="img/02-academic-terms.mp4" type="video/mp4" />
+</video>
+
 Like before, we'll create it with a timestamped migration. The `Terms` table has these columns:
 
 - An auto-incrementing primary key  
@@ -13,6 +17,8 @@ Like before, we'll create it with a timestamped migration. The `Terms` table has
 - An `IsRegistrationOpen` boolean (default `false`) — can students register for courses?  
 
 We're using `AutoReversingMigration` again so the migration can be rolled back cleanly while we develop.
+
+<a id="terms-migration-snippet"></a>
 
 ```csharp
 using FluentMigrator;

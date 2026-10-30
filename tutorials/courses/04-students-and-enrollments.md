@@ -3,6 +3,13 @@
 ## Create the Students and StudentCourses Tables
 
 Students and their course enrollments go hand in hand, so we'll create both tables in one migration — `Students` for the personal info, `StudentCourses` to link a student to a course (and optionally a term). Putting them together means the relationships exist from the very start.
+
+<video alt="Creating the Students and StudentCourses tables" controls preload="metadata" poster="img/04-students-and-enrollments-poster.png">
+  <source src="img/04-students-and-enrollments.mp4" type="video/mp4" />
+</video>
+
+<a id="students-and-student-courses-migration-snippet"></a>
+
 ```csharp
 using FluentMigrator;
 

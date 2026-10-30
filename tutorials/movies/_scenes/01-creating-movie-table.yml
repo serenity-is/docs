@@ -130,7 +130,7 @@ steps:
     caption: "Serenity runs the migrations when the application starts"
     hold: 2.2
 
-  - sqlExplorer: true
+  - sqlExplorer: { tables: ["dbo.Movie"], selected: "dbo.Movie" }
     treeScroll: top
     spotlight: "node:dbo.Movie"
     pointerAt: { x: 0.5, y: 0.5 }

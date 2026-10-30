@@ -1,0 +1,51 @@
+# How `pnpm media app-fixture` builds this tutorial's application.
+#
+# A shared input (the leading `_` keeps it out of `--list`): the template the
+# project is created from, the migrations each chapter adds and the sergen
+# answers. The project name and directory come from `projectFixture` in
+# `_defaults.yml`. The whole recipe is hashed into the chapter cache, so editing
+# it invalidates the chapters it shapes on its own.
+#
+# migrations[].file is read through _snippets.yml, i.e. from the chapter that
+# quotes it, so the fixture migrates the bytes the docs show.
+#
+#   minProfile             the chapter (edits profile) that adds it
+#   afterSergen            a column added to a table sergen already generated;
+#                          applied after sergen, or the chapter's manual edit
+#                          would duplicate the generated field
+#   sqliteStripForeignKeys SQLite cannot add a constraint to an existing table
+#   removeModule: false    a module generated in several passes keeps its files
+
+template:
+  package: Serene.Templates
+  name: serene
+  version: 10.6.3
+  args: ["-D", "false"]          # no demo modules
+
+# pnpm 10+ blocks dependency build scripts; esbuild's postinstall downloads its
+# platform binary, so the install opts in explicitly
+install: ["install", "--allow-build=esbuild"]
+
+# a file database, so every build starts from an empty schema
+sqlite:
+  connectionString: "Data Source=App_Data/fixture.db"
+  providerName: "Microsoft.Data.Sqlite"
+
+migrations:
+  - { file: DefaultDB_20221114_1505_MovieTable.cs, target: Migrations/DefaultDB }
+  - { file: DefaultDB_20221114_1703_MovieData.cs, target: Migrations/DefaultDB, minProfile: 5 }
+  - { file: DefaultDB_20221114_1825_MovieKind.cs, target: Migrations/DefaultDB, minProfile: 6, afterSergen: true }
+  - { file: DefaultDB_20221114_1836_GenreTable.cs, target: Migrations/DefaultDB, minProfile: 7, afterSergen: true, sqliteStripForeignKeys: true }
+  - { file: DefaultDB_20221115_1405_MovieGenres.cs, target: Migrations/DefaultDB, minProfile: 8, afterSergen: true, sqliteStripForeignKeys: true }
+  - { file: DefaultDB_20221115_1612_PersonAndMovieCast.cs, target: Migrations/DefaultDB, minProfile: 10, afterSergen: true }
+
+# One `dotnet sergen g` run per entry. SQLite has no schemas, so a table name
+# carries no prefix (it would be dbo.Movie on SQL Server). sergen reads the
+# table from the database, so an entry's minProfile is never before the
+# chapter whose migration creates it.
+generate:
+  - { table: Movie, module: MovieDB, identifier: Movie, permission: "Administration:General", what: "*", minProfile: 2 }
+  - { table: Genre, module: MovieDB, identifier: Genre, permission: "Administration:General", what: "*", afterSergen: true, minProfile: 7, removeModule: false }
+  - { table: MovieGenres, module: MovieDB, identifier: MovieGenres, permission: "Administration:General", what: "RS", afterSergen: true, minProfile: 8, removeModule: false }
+  - { table: Person, module: MovieDB, identifier: Person, permission: "Administration:General", what: "*", afterSergen: true, minProfile: 10, removeModule: false }
+  - { table: MovieCast, module: MovieDB, identifier: MovieCast, permission: "Administration:General", what: "*", afterSergen: true, minProfile: 10, removeModule: false }

@@ -1,0 +1,225 @@
+# Storyboard for tutorials/courses/07-grade-averages-and-student-names.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/courses/_scenes/07-grade-averages-and-student-names.yml --stages
+# Render:   pnpm media --id 07-grade-averages-and-student-names --publish
+#
+# Two halves, two app checkpoints: `average` after the server computes Average
+# (edits 1-3), `final` after the grid shows full names (all edits). The grades
+# on screen come from _snippets/FixtureSeed_20250616_1201_Grades.cs; the
+# Calculus I rows are the ones the chapter's screenshots show.
+
+extends: "_defaults"
+id: 07-grade-averages-and-student-names
+title: Calculating grade averages and showing full names
+edits: "07"
+
+files:
+  GradesForm.cs: { stage: before, fixture: Modules/CourseDB/Grades/GradesForm.cs }
+  GradesRow.cs: { stage: before, fixture: Modules/CourseDB/Grades/GradesRow.cs }
+  GradesSaveHandler.cs: { stage: before, fixture: Modules/CourseDB/Grades/RequestHandlers/GradesSaveHandler.cs }
+  GradesColumns.cs: { stage: before, fixture: Modules/CourseDB/Grades/GradesColumns.cs }
+  StudentsRow.cs: { stage: before, fixture: Modules/CourseDB/Students/StudentsRow.cs }
+
+verifyStage: final
+verify:
+  GradesForm.cs: Modules/CourseDB/Grades/GradesForm.cs
+  GradesRow.cs: Modules/CourseDB/Grades/GradesRow.cs
+  GradesSaveHandler.cs: Modules/CourseDB/Grades/RequestHandlers/GradesSaveHandler.cs
+  GradesColumns.cs: Modules/CourseDB/Grades/GradesColumns.cs
+  StudentsRow.cs: Modules/CourseDB/Students/StudentsRow.cs
+
+appStages:
+  - { id: average, edits: 3 }
+  - { id: final, edits: 9 }
+
+video:
+  posterAt: 49
+
+budgets:
+  maxDuration: 100
+  maxBytes: 5_000_000
+
+steps:
+  # 1. Average leaves the form...
+  - tree: { expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/Grades"] }
+    treeScroll: top
+    open: GradesForm.cs
+    highlight: ["12-12"]
+    spotlight: "line:12"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Average is a plain input, so it can disagree with the grades"
+    hold: 2.2
+
+  - edit:
+      file: GradesForm.cs
+      find: "\n    public decimal? Average { get; set; }"
+      replace: ""
+    editMs: 700
+    highlight: ["10-11"]
+    spotlight: null
+    caption: "Remove it from the form: the form ends with Midterm and Final"
+    hold: 1.6
+
+  # ...the row calculates it...
+  - open: GradesRow.cs
+    editorLine: 30
+    highlight: []
+    caption: "GradesRow learns to calculate it"
+    hold: 0.8
+
+  - edit:
+      file: GradesRow.cs
+      insertBefore: "    public class RowFields : RowFieldsBase"
+      text: "    public void CalculateAverage()\n    {\n        if (Midterm != null && Final != null)\n            Average = (Midterm + Final) / 2;\n    }\n\n"
+    editMs: 1600
+    highlight: ["43-47"]
+    spotlight: null
+    caption: "The mean of Midterm and Final, once both are known"
+    hold: 2.0
+
+  # ...and the save handler calls it
+  - open: GradesSaveHandler.cs
+    highlight: []
+    caption: "The save handler runs it before every save"
+    hold: 0.8
+
+  - edit:
+      file: GradesSaveHandler.cs
+      find: "    IGradesSaveHandler\n{\n}"
+      replace: "    IGradesSaveHandler\n{\n    protected override async Task BeforeSaveAsync(CancellationToken cancellationToken)\n    {\n        await base.BeforeSaveAsync(cancellationToken);\n\n        Row.CalculateAverage();\n    }\n}"
+    editMs: 1600
+    highlight: ["11-16"]
+    spotlight: null
+    caption: "BeforeSaveAsync: the handler sergen generates is asynchronous"
+    hold: 2.2
+
+  - screen: app
+    appStage: average
+    goto: /CourseDB/Grades
+    waitFor: "#GridDiv .slick-row"
+    spotlight: "#GridDiv"
+    # Average is the last column, right of the fold
+    scroll: { selector: "#GridDiv .slick-viewport", left: 10000 }
+    caption: "The grades, with their averages"
+    hold: 1.6
+
+  - screen: app
+    appStage: average
+    click: '#GridDiv a:text-is("2")'
+    waitFor: ".s-GradesDialog"
+    spotlight: ".s-GradesDialog"
+    caption: "Emily's Calculus I grade: no Average field any more"
+    hold: 1.8
+
+  - screen: app
+    appStage: average
+    type: 96
+    into: ".s-GradesDialog [name=Final]"
+    typeSpeed: 80
+    spotlight: ".s-GradesDialog [name=Final]"
+    caption: "Change the final grade to 96"
+    hold: 0.8
+
+  - screen: app
+    appStage: average
+    click: ".s-GradesDialog .save-and-close-button"
+    waitFor: '#GridDiv .slick-cell:text-is("87")'
+    scroll: { selector: "#GridDiv .slick-viewport", left: 10000 }
+    spotlight: "#GridDiv"
+    caption: "Saved: the server worked out Average = (78 + 96) / 2 = 87"
+    hold: 2.6
+
+  # 2. full names instead of first names
+  - open: GradesRow.cs
+    editorLine: 26
+    highlight: ["34-35"]
+    caption: "The grid shows StudentFirstName, a field sergen joined in"
+    hold: 1.6
+
+  - edit:
+      file: GradesRow.cs
+      find: "    [DisplayText(\"Student First Name\"), Origin(jStudent, nameof(StudentsRow.FirstName))]\n    public string? StudentFirstName { get => fields.StudentFirstName[this]; set => fields.StudentFirstName[this] = value; }"
+      replace: "    [DisplayText(\"Full Name\"), Origin(jStudent, nameof(StudentsRow.FullName))]\n    public string? FullName\n    {\n        get => fields.FullName[this];\n        set => fields.FullName[this] = value;\n    }"
+      animation: replace
+    editMs: 1800
+    highlight: ["34-39"]
+    spotlight: null
+    caption: "Replace it with FullName, from the same join"
+    hold: 1.8
+
+  - edit:
+      file: GradesRow.cs
+      find: "        public StringField StudentFirstName = null!;"
+      replace: "        public StringField FullName = null!;"
+    editorLine: 56
+    editMs: 800
+    highlight: ["63-63"]
+    spotlight: null
+    caption: "...and its field declaration"
+    hold: 1.4
+
+  - edit:
+      file: GradesRow.cs
+      find: "    [DisplayText(\"Student\"), NotNull, ForeignKey(typeof(StudentsRow)), LeftJoin(jStudent), TextualField(nameof(StudentFirstName))]"
+      replace: "    [DisplayText(\"Student\"), NotNull, ForeignKey(typeof(StudentsRow)), LeftJoin(jStudent), TextualField(nameof(FullName))]\n    [ServiceLookupEditor(typeof(StudentsRow), Service = \"CourseDB/Students/List\")]"
+    editorLine: 10
+    editMs: 1600
+    highlight: ["16-17"]
+    spotlight: null
+    caption: "StudentId shows FullName, and is picked from a student lookup"
+    hold: 2.2
+
+  - open: GradesColumns.cs
+    highlight: ["9-9"]
+    caption: "The grid's column follows"
+    hold: 0.8
+
+  - edit:
+      file: GradesColumns.cs
+      find: "    public string? StudentFirstName { get; set; }"
+      replace: "    public string? FullName { get; set; }"
+    editMs: 800
+    highlight: ["9-9"]
+    spotlight: null
+    hold: 1.2
+
+  - open: StudentsRow.cs
+    editorLine: 12
+    highlight: ["15-15", "21-21"]
+    caption: "A student's name is now their full name: move NameProperty and QuickSearch"
+    hold: 1.6
+
+  - edit:
+      file: StudentsRow.cs
+      find: "    [DisplayText(\"First Name\"), NotNull, QuickSearch, NameProperty]"
+      replace: "    [DisplayText(\"First Name\"), NotNull]"
+    editMs: 800
+    highlight: ["15-15"]
+    spotlight: null
+    hold: 0.8
+
+  - edit:
+      file: StudentsRow.cs
+      find: "    [DisplayText(\"Full Name\"), NotNull]"
+      replace: "    [DisplayText(\"Full Name\"), Size(201), NotNull, NameProperty, QuickSearch]"
+    editMs: 1000
+    highlight: ["21-21"]
+    spotlight: null
+    caption: "The lookup lists students by full name"
+    hold: 1.6
+
+  - screen: app
+    appStage: final
+    goto: /CourseDB/Grades
+    waitFor: "#GridDiv .slick-row"
+    spotlight: "#GridDiv"
+    caption: "The Grades screen shows each student's full name"
+    hold: 2.4
+
+  - screen: app
+    appStage: final
+    click: '#GridDiv a:text-is("2")'
+    waitFor: ".s-GradesDialog"
+    spotlight: ".s-GradesDialog"
+    caption: "...and the dialog picks the student by name"
+    hold: 2.4

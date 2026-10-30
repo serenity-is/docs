@@ -1,0 +1,141 @@
+# Storyboard for tutorials/courses/09-navigation-icons-and-column-headers.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/courses/_scenes/09-navigation-icons-and-column-headers.yml --stages
+# Render:   pnpm media --id 09-navigation-icons-and-column-headers --publish
+#
+# The chapter's note says to edit the NavigationLink lines sergen generated
+# rather than add new ones, so each line gets its icon in place; the result is
+# the file the chapter quotes. TermsColumns gets the two attribute lines the
+# chapter adds, leaving the other columns alone.
+
+extends: "_defaults"
+id: 09-navigation-icons-and-column-headers
+title: Navigation icons and column headers
+edits: "09"
+
+files:
+  CourseDBNavigation.cs: { stage: before, fixture: Modules/CourseDB/CourseDBNavigation.cs }
+  TermsColumns.cs: { stage: before, fixture: Modules/CourseDB/Terms/TermsColumns.cs }
+
+verifyStage: final
+verify:
+  CourseDBNavigation.cs: Modules/CourseDB/CourseDBNavigation.cs
+  TermsColumns.cs: Modules/CourseDB/Terms/TermsColumns.cs
+
+appStages:
+  - { id: icons, edits: 5 }
+  - { id: final, edits: 7 }
+
+video:
+  posterAt: 22
+
+budgets:
+  maxDuration: 60
+  maxBytes: 3_500_000
+
+steps:
+  # 1. icons
+  - tree: { expand: ["Modules", "Modules/CourseDB"] }
+    treeScroll: top
+    open: CourseDBNavigation.cs
+    highlight: ["4-8"]
+    spotlight: "node:CourseDBNavigation.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Sergen already added a NavigationLink per page, with no icon"
+    hold: 2.0
+
+  - edit:
+      file: CourseDBNavigation.cs
+      find: "typeof(MyPages.DepartmentPage), icon: null)]"
+      replace: "typeof(MyPages.DepartmentPage), icon: \"fa-building\")]"
+    editMs: 600
+    highlight: ["4-4"]
+    spotlight: null
+    caption: "Edit those lines, don't add new ones: one Line Awesome icon each"
+    hold: 0.6
+
+  - edit:
+      file: CourseDBNavigation.cs
+      find: "typeof(MyPages.TermsPage), icon: null)]"
+      replace: "typeof(MyPages.TermsPage), icon: \"fa-calendar-alt\")]"
+    editMs: 600
+    highlight: ["5-5"]
+    spotlight: null
+    hold: 0.4
+
+  - edit:
+      file: CourseDBNavigation.cs
+      find: "typeof(MyPages.CoursesPage), icon: null)]"
+      replace: "typeof(MyPages.CoursesPage), icon: \"fa-book\")]"
+    editMs: 600
+    highlight: ["6-6"]
+    spotlight: null
+    hold: 0.4
+
+  - edit:
+      file: CourseDBNavigation.cs
+      find: "typeof(MyPages.StudentsPage), icon: null)]"
+      replace: "typeof(MyPages.StudentsPage), icon: \"fa-user-graduate\")]"
+    editMs: 600
+    highlight: ["7-7"]
+    spotlight: null
+    hold: 0.4
+
+  - edit:
+      file: CourseDBNavigation.cs
+      find: "typeof(MyPages.GradesPage), icon: null)]"
+      replace: "typeof(MyPages.GradesPage), icon: \"fa-clipboard-list\")]"
+    editMs: 600
+    highlight: ["4-8"]
+    spotlight: null
+    caption: "Building, calendar, book, graduate, clipboard"
+    hold: 1.4
+
+  - screen: app
+    appStage: icons
+    goto: /
+    click: '.s-sidebar-link-text:text-is("CourseDB")'
+    waitFor: '.s-sidebar-link-text:text-is("Grades")'
+    spotlight: ".s-sidebar"
+    caption: "Each CourseDB page has its icon in the sidebar"
+    hold: 2.6
+
+  # 2. column headers
+  - open: TermsColumns.cs
+    highlight: ["13-14"]
+    spotlight: "line:13"
+    caption: "Rename a column in TermsColumns.cs, not in the row"
+    hold: 1.6
+
+  - edit:
+      file: TermsColumns.cs
+      insertBefore: "    public bool? IsActive { get; set; }"
+      text: "\n    [DisplayText(\"IsCurrent\"), Width(150), AlignRight]\n"
+    editMs: 1200
+    highlight: ["14-15"]
+    spotlight: null
+    caption: "A header, a width and an alignment for IsActive..."
+    hold: 1.0
+
+  - edit:
+      file: TermsColumns.cs
+      insertBefore: "    public bool? IsRegistrationOpen { get; set; }"
+      text: "\n    [DisplayText(\"IsEnrollmentOpen\"), Width(150), AlignRight]\n"
+    editMs: 1200
+    highlight: ["17-18"]
+    spotlight: null
+    caption: "...and for IsRegistrationOpen"
+    hold: 1.0
+
+  - highlight: ["7-12"]
+    spotlight: "line:7"
+    caption: "Keep every other column, or it disappears from the grid"
+    hold: 2.0
+
+  - screen: app
+    appStage: final
+    goto: /CourseDB/Terms
+    waitFor: "#GridDiv .slick-row"
+    spotlight: "#GridDiv"
+    caption: "The Terms grid shows IsCurrent and IsEnrollmentOpen"
+    hold: 2.8

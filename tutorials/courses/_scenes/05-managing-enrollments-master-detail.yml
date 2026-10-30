@@ -1,0 +1,286 @@
+# Storyboard for tutorials/courses/05-managing-enrollments-master-detail.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/courses/_scenes/05-managing-enrollments-master-detail.yml --stages
+# Render:   pnpm media --id 05-managing-enrollments-master-detail --publish
+#
+# The standalone StudentCourses page goes and enrollments move into the
+# student dialog. The two new TypeScript files are read from the chapter (it
+# quotes both whole and final); the C# changes are edit steps on the files as
+# chapter 04 left them. The files the chapter deletes, and the Grid it renames
+# to an Editor, are fixtureDeletes; the explorer drops their rows from the
+# step that removes them on.
+
+extends: "_defaults"
+id: 05-managing-enrollments-master-detail
+title: Managing enrollments with a master-detail editor
+edits: "05"
+
+files:
+  CourseDBNavigation.cs: { stage: before, fixture: Modules/CourseDB/CourseDBNavigation.cs }
+  StudentCoursesEditor.tsx: { snippet: "StudentCoursesEditor.tsx", fixturePath: Modules/CourseDB/StudentCourses/StudentCoursesEditor.tsx }
+  StudentCoursesEditDialog.tsx: { snippet: "StudentCoursesEditDialog.tsx", fixturePath: Modules/CourseDB/StudentCourses/StudentCoursesEditDialog.tsx }
+  StudentsForm.cs: { stage: before, fixture: Modules/CourseDB/Students/StudentsForm.cs }
+  StudentCoursesForm.cs: { stage: before, fixture: Modules/CourseDB/StudentCourses/StudentCoursesForm.cs }
+  StudentCoursesColumns.cs: { stage: before, fixture: Modules/CourseDB/StudentCourses/StudentCoursesColumns.cs }
+  StudentsRow.cs: { stage: before, fixture: Modules/CourseDB/Students/StudentsRow.cs }
+
+fixtureFiles:
+  Modules/CourseDB/StudentCourses/StudentCoursesEditor.tsx: { snippet: "StudentCoursesEditor.tsx" }
+  Modules/CourseDB/StudentCourses/StudentCoursesEditDialog.tsx: { snippet: "StudentCoursesEditDialog.tsx" }
+
+# the page files the chapter deletes; the grid is renamed to the editor above,
+# and the generated dialog is no longer referenced
+fixtureDeletes:
+  - Modules/CourseDB/StudentCourses/StudentCoursesPage.cs
+  - Modules/CourseDB/StudentCourses/StudentCoursesPage.tsx
+  - Modules/CourseDB/StudentCourses/StudentCoursesGrid.tsx
+  - Modules/CourseDB/StudentCourses/StudentCoursesDialog.tsx
+
+verifyStage: final
+verify:
+  CourseDBNavigation.cs: Modules/CourseDB/CourseDBNavigation.cs
+  StudentsForm.cs: Modules/CourseDB/Students/StudentsForm.cs
+  StudentCoursesForm.cs: Modules/CourseDB/StudentCourses/StudentCoursesForm.cs
+  StudentCoursesColumns.cs: Modules/CourseDB/StudentCourses/StudentCoursesColumns.cs
+  StudentsRow.cs: Modules/CourseDB/Students/StudentsRow.cs
+  StudentCoursesEditor.tsx: Modules/CourseDB/StudentCourses/StudentCoursesEditor.tsx
+  StudentCoursesEditDialog.tsx: Modules/CourseDB/StudentCourses/StudentCoursesEditDialog.tsx
+
+appStages:
+  - { id: removed, edits: 1 }
+  - { id: final, edits: 6 }
+
+video:
+  posterAt: 65
+
+budgets:
+  maxDuration: 125
+  maxBytes: 6_000_000
+
+steps:
+  # 1. no standalone page for a detail table
+  - tree:
+      expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/StudentCourses"]
+      exclude: ["Modules/CourseDB/StudentCourses/StudentCoursesEditor.tsx", "Modules/CourseDB/StudentCourses/StudentCoursesEditDialog.tsx"]
+    treeScroll: top
+    spotlight: "node:StudentCoursesPage.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "An enrollment belongs to a student, so StudentCourses needs no page"
+    hold: 2.2
+
+  - tree:
+      expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/StudentCourses"]
+      exclude: ["Modules/CourseDB/StudentCourses/StudentCoursesPage.cs", "Modules/CourseDB/StudentCourses/StudentCoursesPage.tsx", "Modules/CourseDB/StudentCourses/StudentCoursesEditor.tsx", "Modules/CourseDB/StudentCourses/StudentCoursesEditDialog.tsx"]
+    treeScroll: keep
+    spotlight: "node:StudentCourses"
+    caption: "Delete StudentCoursesPage.cs and StudentCoursesPage.tsx"
+    hold: 1.8
+
+  - open: CourseDBNavigation.cs
+    highlight: ["8-8"]
+    spotlight: "line:8"
+    caption: "...and the menu entry sergen added for the page"
+    hold: 1.6
+
+  - edit:
+      file: CourseDBNavigation.cs
+      find: "\n[assembly: NavigationLink(int.MaxValue, \"CourseDB/Student Courses\", typeof(MyPages.StudentCoursesPage), icon: null)]"
+      replace: ""
+    editMs: 700
+    highlight: []
+    spotlight: null
+    caption: null
+    hold: 0.8
+
+  - screen: app
+    appStage: removed
+    goto: /
+    click: '.s-sidebar-link-text:text-is("CourseDB")'
+    # the group's links are visible once it has expanded
+    waitFor: '.s-sidebar-link-text:text-is("Students")'
+    spotlight: ".s-sidebar"
+    caption: "Rebuild: Student Courses is gone from the menu"
+    hold: 2.4
+
+  # 2. the grid becomes a grid editor, with its own dialog
+  - tree:
+      expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/StudentCourses"]
+      exclude: ["Modules/CourseDB/StudentCourses/StudentCoursesPage.cs", "Modules/CourseDB/StudentCourses/StudentCoursesPage.tsx", "Modules/CourseDB/StudentCourses/StudentCoursesGrid.tsx", "Modules/CourseDB/StudentCourses/StudentCoursesDialog.tsx", "Modules/CourseDB/StudentCourses/StudentCoursesEditDialog.tsx"]
+    treeScroll: keep
+    open: StudentCoursesEditor.tsx
+    reveal: 0
+    spotlight: "node:StudentCoursesEditor.tsx"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Rename StudentCoursesGrid.tsx to StudentCoursesEditor.tsx"
+    hold: 1.2
+
+  - code: 11
+    codeMs: 1400
+    spotlight: null
+    caption: null
+    hold: 0.6
+
+  - highlight: ["5-6"]
+    spotlight: "line:5"
+    caption: "A GridEditorBase edits detail rows inside another dialog"
+    hold: 2.4
+
+  - highlight: ["9-10"]
+    spotlight: "line:9"
+    caption: "It opens StudentCoursesEditDialog, and its button reads Add"
+    hold: 2.2
+
+  - tree:
+      expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/StudentCourses"]
+      exclude: ["Modules/CourseDB/StudentCourses/StudentCoursesPage.cs", "Modules/CourseDB/StudentCourses/StudentCoursesPage.tsx", "Modules/CourseDB/StudentCourses/StudentCoursesGrid.tsx", "Modules/CourseDB/StudentCourses/StudentCoursesDialog.tsx"]
+    treeScroll: keep
+    open: StudentCoursesEditDialog.tsx
+    reveal: 0
+    highlight: []
+    spotlight: "node:StudentCoursesEditDialog.tsx"
+    caption: "The old dialog goes; StudentCoursesEditDialog replaces it"
+    hold: 1.2
+
+  - code: 10
+    codeMs: 1300
+    spotlight: null
+    caption: null
+    hold: 0.6
+
+  - highlight: ["4-5"]
+    spotlight: "line:4"
+    caption: "A GridEditorDialog: the add/edit popup of a grid editor"
+    hold: 2.2
+
+  # 3. the forms and the columns
+  - open: StudentsForm.cs
+    reveal: null
+    highlight: []
+    spotlight: null
+    caption: "Put the editor on the student form"
+    hold: 1.0
+
+  - edit:
+      file: StudentsForm.cs
+      find: "    public int? DepartmentId { get; set; }"
+      replace: "    public int? DepartmentId { get; set; }\n    [DisplayText(\"Courses\"), StudentCoursesEditor, SkipNameCheck]\n    public List<StudentCoursesRow>? CourseList { get; set; }"
+    editMs: 1400
+    highlight: ["12-13"]
+    spotlight: null
+    caption: "CourseList uses StudentCoursesEditor; no column of that name exists"
+    hold: 2.2
+
+  - open: StudentCoursesForm.cs
+    highlight: []
+    caption: "The student is implied by the dialog it is edited in"
+    hold: 0.8
+
+  - edit:
+      file: StudentCoursesForm.cs
+      insertBefore: "    public int? StudentId { get; set; }"
+      text: "    [Hidden]\n"
+    editMs: 600
+    highlight: ["7-8"]
+    spotlight: null
+    caption: "So StudentId is hidden"
+    hold: 1.6
+
+  - open: StudentCoursesColumns.cs
+    highlight: ["9-9"]
+    caption: "...and the student's name is no longer a column"
+    hold: 1.2
+
+  - edit:
+      file: StudentCoursesColumns.cs
+      find: "\n    public string? StudentFirstName { get; set; }"
+      replace: ""
+    editMs: 600
+    highlight: []
+    spotlight: null
+    hold: 1.0
+
+  # 4. the server side of the relation
+  - open: StudentsRow.cs
+    editorLine: 24
+    highlight: []
+    caption: "StudentsRow loads and saves the list with the student"
+    hold: 1.0
+
+  - edit:
+      file: StudentsRow.cs
+      find: "    public string? DepartmentName { get => fields.DepartmentName[this]; set => fields.DepartmentName[this] = value; }"
+      replace: "    public string? DepartmentName { get => fields.DepartmentName[this]; set => fields.DepartmentName[this] = value; }\n\n    [MasterDetailRelation(foreignKey: nameof(StudentCoursesRow.StudentId), ColumnsType = typeof(Columns.StudentCoursesColumns))]\n    [DisplayText(\"Course List\"), NotMapped]\n    public List<StudentCoursesRow>? CourseList { get => fields.CourseList[this]; set => fields.CourseList[this] = value; }"
+    editMs: 2200
+    highlight: ["33-35"]
+    spotlight: null
+    caption: "MasterDetailRelation: StudentCourses rows whose StudentId is this student"
+    hold: 2.6
+
+  - edit:
+      file: StudentsRow.cs
+      find: "        public StringField DepartmentName = null!;"
+      replace: "        public StringField DepartmentName = null!;\n        public RowListField<StudentCoursesRow> CourseList = null!;"
+    editMs: 900
+    highlight: ["47-47"]
+    spotlight: null
+    caption: "NotMapped: a list, not a column of Students"
+    hold: 1.8
+
+  # 5. the result: enrollments inside the student dialog
+  - screen: app
+    appStage: final
+    goto: /CourseDB/Students
+    waitFor: "#GridDiv .slick-row"
+    click: '#GridDiv a:has-text("John")'
+    spotlight: ".s-StudentsDialog"
+    caption: "The student dialog now has a Courses grid"
+    hold: 2.2
+
+  - screen: app
+    appStage: final
+    click: ".s-StudentCoursesEditor .add-button"
+    waitFor: ".s-StudentCoursesEditDialog"
+    spotlight: ".s-StudentCoursesEditDialog"
+    caption: "Add opens StudentCoursesEditDialog, without a Student field"
+    hold: 1.8
+
+  - screen: app
+    appStage: final
+    type: 1
+    into: ".s-StudentCoursesEditDialog [name=CourseId]"
+    typeSpeed: 80
+    spotlight: ".s-StudentCoursesEditDialog [name=CourseId]"
+    caption: "Course and term are plain ids for now: CS101 in Fall 2026"
+    hold: 0.4
+
+  - screen: app
+    appStage: final
+    type: 1
+    into: ".s-StudentCoursesEditDialog [name=TermId]"
+    typeSpeed: 80
+    spotlight: ".s-StudentCoursesEditDialog [name=TermId]"
+    hold: 1.0
+
+  - screen: app
+    appStage: final
+    click: ".s-StudentCoursesEditDialog .save-and-close-button"
+    waitGone: ".s-StudentCoursesEditDialog"
+    spotlight: ".s-StudentCoursesEditor"
+    caption: "The row is kept in the editor; its names fill in once saved"
+    hold: 1.8
+
+  - screen: app
+    appStage: final
+    click: ".s-StudentsDialog .save-and-close-button"
+    waitGone: ".s-StudentsDialog"
+    spotlight: null
+    caption: "Saving the student saves the enrollment with it"
+    hold: 1.2
+
+  - screen: app
+    appStage: final
+    click: '#GridDiv a:has-text("John")'
+    waitFor: ".s-StudentCoursesEditor .slick-row"
+    spotlight: ".s-StudentCoursesEditor"
+    caption: "Reopened: John Smith takes Introduction to Programming in Fall 2026"
+    hold: 2.8

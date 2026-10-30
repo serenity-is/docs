@@ -1,0 +1,255 @@
+# Storyboard for tutorials/courses/06-teachers-and-grades-tables.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/courses/_scenes/06-teachers-and-grades-tables.yml --stages
+# Render:   pnpm media --id 06-teachers-and-grades-tables --publish
+#
+# Two migrations; only Grades is generated (the chapter says Teachers and
+# TeacherCourse get no UI). The Grades grid starts empty, as in the chapter's
+# screenshot, and the clip enters one grade by hand, Average included: that
+# manual Average is exactly what chapter 07 sets out to fix.
+
+extends: "_defaults"
+id: 06-teachers-and-grades-tables
+title: Creating the Teachers and Grades tables
+edits: "06"
+open: null           # nothing is open until the first migration is created
+
+files:
+  DefaultDB_20250707_1015_TeachersAndTeacherCourse.cs: { snippet: "DefaultDB_20250707_1015_TeachersAndTeacherCourse.cs" }
+  DefaultDB_20250616_1200_Grades.cs: { snippet: "DefaultDB_20250616_1200_Grades.cs" }
+
+appStages:
+  - { id: app, edits: 0 }
+
+video:
+  posterAt: 44
+
+budgets:
+  maxDuration: 75
+  maxBytes: 4_000_000
+
+steps:
+  # 1. Teachers and TeacherCourse
+  - tree:
+      expand: ["Migrations", "Migrations/DefaultDB"]
+      exclude: ["Migrations/DefaultDB/DefaultDB_20250707_1015_TeachersAndTeacherCourse.cs", "Migrations/DefaultDB/DefaultDB_20250616_1200_Grades.cs", "Modules/CourseDB/Grades"]
+    treeScroll: top
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Two more migrations: teachers, then grades"
+    hold: 1.2
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    click: true
+    hold: 0.6
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    hold: 0.6
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "", folder: "DefaultDB\\" }
+    type: DefaultDB_20250707_1015_TeachersAndTeacherCourse.cs
+    typeSpeed: 16
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.5
+
+  - click: "#ai-add"
+    addItem: null
+    tree:
+      expand: ["Migrations", "Migrations/DefaultDB"]
+      exclude: ["Migrations/DefaultDB/DefaultDB_20250616_1200_Grades.cs", "Modules/CourseDB/Grades"]
+    open: DefaultDB_20250707_1015_TeachersAndTeacherCourse.cs
+    reveal: 0
+    highlight: []
+    spotlight: null
+    hold: 0.4
+
+  - code: 32
+    codeMs: 2200
+    spotlight: null
+    caption: null
+    hold: 0.6
+
+  - highlight: ["10-17"]
+    spotlight: "line:10"
+    caption: "Teachers mirror students, with a unique email"
+    hold: 2.0
+
+  - highlight: ["19-28"]
+    spotlight: "line:19"
+    caption: "TeacherCourse maps teachers to the courses they teach; no UI for now"
+    hold: 2.4
+
+  # 2. Grades
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    highlight: []
+    spotlight: "node:DefaultDB"
+    click: true
+    caption: null
+    hold: 0.5
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    hold: 0.5
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "", folder: "DefaultDB\\" }
+    type: DefaultDB_20250616_1200_Grades.cs
+    typeSpeed: 22
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.5
+
+  - click: "#ai-add"
+    addItem: null
+    tree:
+      expand: ["Migrations", "Migrations/DefaultDB"]
+      exclude: ["Modules/CourseDB/Grades"]
+    open: DefaultDB_20250616_1200_Grades.cs
+    reveal: 0
+    spotlight: null
+    hold: 0.4
+
+  - code: 26
+    codeMs: 2000
+    spotlight: null
+    hold: 0.6
+
+  - highlight: ["12-17"]
+    spotlight: "line:12"
+    caption: "A grade belongs to a student, a course and a term"
+    hold: 2.2
+
+  - highlight: ["18-20"]
+    spotlight: "line:18"
+    caption: "Midterm, Final and Average are decimals"
+    hold: 1.8
+
+  - highlight: ["22-24"]
+    spotlight: "line:22"
+    caption: "One grade per student, course and term"
+    hold: 1.8
+
+  # 3. sergen for Grades only
+  - highlight: []
+    spotlight: null
+    terminal: { open: true }
+    bottomHeight: 430
+    caption: "Run the app to migrate, then generate Grades"
+    hold: 0.6
+
+  - type: dotnet sergen g
+    typeSpeed: 55
+    spotlight: terminal
+    pointerAt: { x: 0.34, y: 0.29 }
+    hold: 0.4
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Select tables for code generation (single/multiple)", kind: section }
+        - { text: "  [ ] dbo.Department", kind: row }
+        - { text: "  ...", kind: dim }
+        - { text: "> [X] dbo.Grades", kind: picked }
+        - { text: "  [ ] dbo.Languages", kind: row }
+        - { text: "  ...", kind: dim }
+        - { text: "  [ ] dbo.TeacherCourse", kind: row }
+        - { text: "  [ ] dbo.Teachers", kind: row }
+        - { text: "" }
+        - { text: "Module: CourseDB     Generate: All", kind: row }
+    spotlight: terminal
+    caption: "Only dbo.Grades, in CourseDB, generate All"
+    hold: 2.2
+
+  - tree: { expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/Grades"] }
+    terminal: { open: false }
+    bottomHeight: null
+    treeScroll: top
+    spotlight: "node:Grades"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Grades joins the module"
+    hold: 1.4
+
+  # 4. the page, empty, and one grade entered by hand
+  - screen: app
+    appStage: app
+    goto: /CourseDB/Grades
+    waitFor: "#GridDiv"
+    spotlight: "#GridDiv"
+    caption: "CourseDB → Grades, empty for now"
+    hold: 1.8
+
+  - screen: app
+    appStage: app
+    click: ".add-button"
+    waitFor: ".s-GradesDialog"
+    spotlight: ".s-GradesDialog"
+    caption: "Student, course and term are ids; the grades are numbers"
+    hold: 1.6
+
+  - screen: app
+    appStage: app
+    type: 2
+    into: ".s-GradesDialog [name=StudentId]"
+    typeSpeed: 80
+    spotlight: ".s-GradesDialog [name=StudentId]"
+    caption: "Emily Johnson, Calculus I, Fall 2026"
+    hold: 0.2
+
+  - screen: app
+    appStage: app
+    type: 3
+    into: ".s-GradesDialog [name=CourseId]"
+    typeSpeed: 80
+    spotlight: ".s-GradesDialog [name=CourseId]"
+    hold: 0.2
+
+  - screen: app
+    appStage: app
+    type: 1
+    into: ".s-GradesDialog [name=TermId]"
+    typeSpeed: 80
+    spotlight: ".s-GradesDialog [name=TermId]"
+    hold: 0.3
+
+  - screen: app
+    appStage: app
+    type: 78
+    into: ".s-GradesDialog [name=Midterm]"
+    typeSpeed: 80
+    spotlight: ".s-GradesDialog [name=Midterm]"
+    hold: 0.2
+
+  - screen: app
+    appStage: app
+    type: 88
+    into: ".s-GradesDialog [name=Final]"
+    typeSpeed: 80
+    spotlight: ".s-GradesDialog [name=Final]"
+    hold: 0.2
+
+  - screen: app
+    appStage: app
+    type: 83
+    into: ".s-GradesDialog [name=Average]"
+    typeSpeed: 80
+    spotlight: ".s-GradesDialog [name=Average]"
+    caption: "Average has to be worked out and typed in by hand"
+    hold: 1.8
+
+  - screen: app
+    appStage: app
+    click: ".s-GradesDialog .save-and-close-button"
+    waitFor: "#GridDiv .slick-row"
+    spotlight: "#GridDiv"
+    caption: "The grade is saved, but the grid only knows the student's first name"
+    hold: 2.6

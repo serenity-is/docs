@@ -4,6 +4,10 @@
 
 Right now `Average` is a plain input, so a user can type anything into it — which invites mistakes. Let's compute it on the server from `Midterm` and `Final` instead.
 
+<video alt="Calculating grade averages and showing full names" controls preload="metadata" poster="img/07-grade-averages-and-student-names-poster.png">
+  <source src="img/07-grade-averages-and-student-names.mp4" type="video/mp4" />
+</video>
+
 ## Step 1 — Remove the Average field from the form
 
 Open `GradesForm.cs` and remove the `Average` property, so the form ends with `Midterm` and `Final`:
@@ -28,12 +32,12 @@ public void CalculateAverage()
 ```
 ## Step 3 — Call it from the SaveHandler
 
-Override `BeforeSave` in `GradesSaveHandler.cs` so the average is calculated before the record is saved:
+Sergen generates an asynchronous save handler (`SaveRequestHandlerAsync`), so override `BeforeSaveAsync` in `GradesSaveHandler.cs` to calculate the average before the record is saved:
 
 ```csharp
-protected override void BeforeSave()
+protected override async Task BeforeSaveAsync(CancellationToken cancellationToken)
 {
-    base.BeforeSave();
+    await base.BeforeSaveAsync(cancellationToken);
 
     Row.CalculateAverage();
 }

@@ -4,6 +4,10 @@
 
 A little icon next to each menu item makes the sidebar much easier to scan. Serenity templates like Serene and StartSharp ship with the **Line Awesome** icon library, a modern alternative to Font Awesome. It's largely compatible with Font Awesome 4.7 class names, so you can use classes like `fa-book` or `fa-user-graduate` in your `NavigationLink` attributes.
 
+<video alt="Navigation icons and column headers" controls preload="metadata" poster="img/09-navigation-icons-and-column-headers-poster.png">
+  <source src="img/09-navigation-icons-and-column-headers.mp4" type="video/mp4" />
+</video>
+
 Open the navigation file for your module (e.g., `Modules/CourseDB/CourseDBNavigation.cs`).
 
 > **Note:** Sergen may have already added `NavigationLink` attributes for your pages in this file. In that case, **edit the existing lines** to add icons rather than adding duplicate attributes — otherwise you'll end up with multiple menu entries for the same page.

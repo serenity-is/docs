@@ -1,0 +1,184 @@
+# Storyboard for tutorials/courses/02-academic-terms.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/courses/_scenes/02-academic-terms.yml --stages
+# Render:   pnpm media --id 02-academic-terms --publish
+#
+# Same shape as chapter 01, shorter: the reader has done it once. The two
+# sample terms come from _snippets/FixtureSeed_20250614_1707_Terms.cs.
+#
+# SQLite has no boolean type, so sergen generates IsActive and
+# IsRegistrationOpen as `int?` where SQL Server (the chapters' database) gives
+# `bool?`. The fixture edits below restore what the reader's sergen produces,
+# so the grid and dialog show check boxes and chapter 09's TermsColumns edit
+# finds the `bool?` the chapter quotes.
+
+extends: "_defaults"
+id: 02-academic-terms
+title: Creating the Terms table
+edits: "02"
+open: null         # nothing is open until the migration is created
+
+files:
+  DefaultDB_20250614_1706_Terms.cs: { snippet: "DefaultDB_20250614_1706_Terms.cs" }
+  TermsRow.cs: { fixture: Modules/CourseDB/Terms/TermsRow.cs }
+
+fixtureEdits:
+  - file: Modules/CourseDB/Terms/TermsRow.cs
+    find: "public int? IsActive {"
+    replace: "public bool? IsActive {"
+  - file: Modules/CourseDB/Terms/TermsRow.cs
+    find: "public int? IsRegistrationOpen {"
+    replace: "public bool? IsRegistrationOpen {"
+  - file: Modules/CourseDB/Terms/TermsRow.cs
+    find: "public Int32Field IsActive = null!;"
+    replace: "public BooleanField IsActive = null!;"
+  - file: Modules/CourseDB/Terms/TermsRow.cs
+    find: "public Int32Field IsRegistrationOpen = null!;"
+    replace: "public BooleanField IsRegistrationOpen = null!;"
+  - file: Modules/CourseDB/Terms/TermsColumns.cs
+    find: "    public int? IsActive { get; set; }\n    public int? IsRegistrationOpen { get; set; }"
+    replace: "    public bool? IsActive { get; set; }\n    public bool? IsRegistrationOpen { get; set; }"
+  - file: Modules/CourseDB/Terms/TermsForm.cs
+    find: "    public int? IsActive { get; set; }\n    public int? IsRegistrationOpen { get; set; }"
+    replace: "    public bool? IsActive { get; set; }\n    public bool? IsRegistrationOpen { get; set; }"
+
+appStages:
+  - { id: app, edits: 6 }
+
+video:
+  posterAt: 27
+
+budgets:
+  maxDuration: 60
+  maxBytes: 3_500_000
+
+steps:
+  # 1. the migration
+  - tree:
+      expand: ["Migrations", "Migrations/DefaultDB"]
+      exclude: ["Migrations/DefaultDB/DefaultDB_20250614_1706_Terms.cs", "Modules/CourseDB/Terms"]
+    treeScroll: top
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Add the Terms migration next to Department's"
+    hold: 1.4
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    click: true
+    hold: 0.8
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    hold: 0.6
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    hold: 0.6
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "", folder: "DefaultDB\\" }
+    type: DefaultDB_20250614_1706_Terms.cs
+    typeSpeed: 24
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "Its timestamp sorts after the Department migration"
+    hold: 0.8
+
+  - click: "#ai-add"
+    addItem: null
+    tree:
+      exclude: ["Modules/CourseDB/Terms"]
+    open: DefaultDB_20250614_1706_Terms.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:DefaultDB_20250614_1706_Terms.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    hold: 0.6
+
+  - code: 17
+    codeMs: 1800
+    spotlight: null
+    caption: null
+    hold: 0.8
+
+  - highlight: ["11-12"]
+    spotlight: "line:11"
+    caption: "A unique name, and the dates the term runs between"
+    hold: 2.2
+
+  - highlight: ["14-15"]
+    spotlight: "line:14"
+    caption: "Two flags that default to false: current term, registration open"
+    hold: 2.4
+
+  # 2. sergen, the same three answers as before
+  - highlight: []
+    spotlight: null
+    terminal: { open: true }
+    bottomHeight: 430
+    caption: "Run the app once to migrate, then generate the code"
+    hold: 0.8
+
+  - type: dotnet sergen g
+    typeSpeed: 55
+    spotlight: terminal
+    pointerAt: { x: 0.34, y: 0.29 }
+    hold: 0.4
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Select tables for code generation (single/multiple)", kind: section }
+        - { text: "  [ ] dbo.Department", kind: row }
+        - { text: "  ..." , kind: dim }
+        - { text: "> [X] dbo.Terms", kind: picked }
+        - { text: "" }
+        - { text: "Enter a Module name for table **dbo.Terms** (**Default**): CourseDB", kind: row }
+        - { text: "" }
+        - { text: "Choose What to Generate", kind: section }
+        - { text: "> [X] All", kind: picked }
+    spotlight: terminal
+    caption: "dbo.Terms, module CourseDB, generate All"
+    hold: 2.2
+
+  - tree: { expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/Terms"] }
+    terminal: { open: false }
+    bottomHeight: null
+    treeScroll: top
+    spotlight: "node:Terms"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Terms joins Department in the CourseDB module"
+    hold: 1.4
+
+  - tree: { expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/Terms"] }
+    treeScroll: keep
+    click: "node:TermsRow.cs"
+    open: TermsRow.cs
+    reveal: null
+    editorLine: 8
+    highlight: ["22-26"]
+    spotlight: "line:22"
+    caption: "The two flags are booleans on the row"
+    hold: 2.0
+
+  # 3. the page, with the chapter's sample terms
+  - screen: app
+    appStage: app
+    goto: /CourseDB/Terms
+    waitFor: "#GridDiv .slick-row"
+    spotlight: "#GridDiv"
+    caption: "CourseDB → Terms, with the sample terms Fall 2026 and Spring 2027"
+    hold: 2.6
+
+  - screen: app
+    appStage: app
+    click: '#GridDiv a:has-text("Fall 2026")'
+    waitFor: ".s-TermsDialog"
+    spotlight: ".s-TermsDialog"
+    caption: "Fall 2026 is the active term, and registration is open"
+    hold: 2.6

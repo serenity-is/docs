@@ -1,0 +1,24 @@
+# Where each snippet comes from.
+#
+# The tutorial chapters are the source of truth: a chapter marks the block a
+# scene shows (and the fixture migrates) with an anchor, and a scene keeps
+# naming the file, not the chapter. A name that is not listed falls back to
+# `_snippets/<name>`. Run `pnpm media snippets` to see which anchors are missing
+# or stale.
+
+DefaultDB_20250614_1700_Department.cs: 01-department-table.md#department-migration-snippet
+DefaultDB_20250614_1706_Terms.cs: 02-academic-terms.md#terms-migration-snippet
+DefaultDB_20250615_1220_Courses.cs: 03-courses.md#courses-migration-snippet
+DefaultDB_20250616_1000_StudentsAndStudentCourses.cs: 04-students-and-enrollments.md#students-and-student-courses-migration-snippet
+DefaultDB_20250707_1015_TeachersAndTeacherCourse.cs: 06-teachers-and-grades-tables.md#teachers-and-teacher-course-migration-snippet
+DefaultDB_20250616_1200_Grades.cs: 06-teachers-and-grades-tables.md#grades-migration-snippet
+StudentCoursesEditor.tsx: 05-managing-enrollments-master-detail.md#student-courses-editor-snippet
+StudentCoursesEditDialog.tsx: 05-managing-enrollments-master-detail.md#student-courses-edit-dialog-snippet
+
+# Not sourced from a chapter, and why:
+#
+#   FixtureSeed_*.cs   fixture-only sample rows; the chapters ask the reader to
+#                      type them in the UI and never quote a migration for them
+#
+# A snippet can only move here when the chapter quotes the file in full, in its
+# final state: the fixture writes exactly this text into the project.

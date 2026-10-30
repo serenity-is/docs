@@ -1,0 +1,283 @@
+# Storyboard for tutorials/courses/01-department-table.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/courses/_scenes/01-department-table.yml --stages
+# Render:   pnpm media --id 01-department-table --publish
+#
+# The chapter creates the table and generates its code, so the scene's project
+# (scanned for the explorer) already holds both. The steps before the migration
+# exists, and before sergen runs, exclude what does not exist yet; a viewer
+# never sees a file before the step that creates it.
+#
+# The three sample departments come from a fixture-only seed migration
+# (_snippets/FixtureSeed_20250614_1701_Department.cs), so the clip shows them
+# instead of typing them.
+
+extends: "_defaults"
+id: 01-department-table
+title: Creating the Department table
+edits: "01"
+
+files:
+  DefaultDB_20141103_1400_Initial.cs: { fixture: Migrations/DefaultDB/DefaultDB_20141103_1400_Initial.cs }
+  DefaultDB_20250614_1700_Department.cs: { snippet: "DefaultDB_20250614_1700_Department.cs" }
+  DepartmentRow.cs: { fixture: Modules/CourseDB/Department/DepartmentRow.cs }
+
+appStages:
+  - { id: app, edits: 0 }
+
+video:
+  posterAt: 50
+
+budgets:
+  maxDuration: 95
+  maxBytes: 4_500_000
+
+steps:
+  # 1. the migration
+  - tree:
+      expand: ["Migrations", "Migrations/DefaultDB"]
+      exclude: ["Migrations/DefaultDB/DefaultDB_20250614_1700_Department.cs", "Modules/CourseDB", "Modules/ServerTypes/CourseDB", "Modules/ServerTypes/CourseDB.ts"]
+    treeScroll: top
+    open: DefaultDB_20141103_1400_Initial.cs
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Migrations live in Migrations/DefaultDB"
+    hold: 1.8
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    click: true
+    caption: "Right-click the folder to add a new item"
+    hold: 1.2
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "Add", submenu: true }
+    spotlight: "menuitem:Add"
+    hold: 0.8
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    hold: 0.8
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "FileName.cs", folder: "DefaultDB\\" }
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "Name it after the date and the table"
+    hold: 0.8
+
+  # the default name is replaced, so the box starts empty
+  - addItem: { name: "" }
+    type: DefaultDB_20250614_1700_Department.cs
+    typeSpeed: 22
+    into: addItem.name
+    spotlight: "#ai-name"
+    caption: "The timestamp keeps migrations in order"
+    hold: 0.8
+
+  - click: "#ai-add"
+    addItem: null
+    tree:
+      exclude: ["Modules/CourseDB", "Modules/ServerTypes/CourseDB", "Modules/ServerTypes/CourseDB.ts"]
+    open: DefaultDB_20250614_1700_Department.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:DefaultDB_20250614_1700_Department.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "A new migration appears in the folder"
+    hold: 1.0
+
+  # nothing is dimmed while the code types itself in, so it stays readable
+  - code: 13
+    codeMs: 1600
+    spotlight: null
+    caption: null
+    hold: 0.8
+
+  - highlight: ["9-11"]
+    spotlight: "line:9"
+    caption: "Up() creates the Department table with two columns"
+    hold: 2.0
+
+  - highlight: ["10-10"]
+    spotlight: "line:10"
+    caption: "IdentityKey makes Id the auto-incrementing primary key"
+    hold: 2.0
+
+  - highlight: ["11-11"]
+    spotlight: "line:11"
+    caption: "Name is required and unique"
+    hold: 1.8
+
+  # 2. run it: Serenity applies pending migrations on startup
+  - click: "#tb-start"
+    debug: running
+    highlight: []
+    spotlight: "#tb-start"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "Start the app: pending migrations run on startup"
+    hold: 1.4
+
+  - bottomTab: Output
+    output:
+      - "Build succeeded."
+      - "    0 Warning(s)"
+      - "    0 Error(s)"
+      - ""
+      - "Now listening on: https://localhost:50263"
+      - "Application started. Press Ctrl+C to shut down."
+      - "Serenity.Data.SqlConnections: Debug: SQL - BEGIN TRANSACTION"
+      - "Serenity.Data.SqlConnections: Debug: SQL - CREATE TABLE [dbo].[Department]..."
+      - "Serenity.Data.SqlConnections: Debug: SQL - COMMIT"
+    status: "Web server is listening on port 50263"
+    spotlight: null
+    caption: "The application creates the table"
+    hold: 1.8
+
+  - sqlExplorer: { tables: ["dbo.Department"], selected: "dbo.Department" }
+    treeScroll: top
+    spotlight: "node:dbo.Department"
+    pointerAt: { x: 0.5, y: 0.5 }
+    caption: "dbo.Department is in the database"
+    hold: 2.0
+
+  # 3. sergen
+  - sqlExplorer: false
+    contextMenu: { target: "node:CourseTutorial.Web" }
+    spotlight: "node:CourseTutorial.Web"
+    pointerAt: { x: 0.42, y: 0.5 }
+    click: true
+    caption: "Generate the code from a terminal in the project folder"
+    hold: 1.2
+
+  - contextMenu: { target: "node:CourseTutorial.Web", focus: "Open in Terminal" }
+    spotlight: "menuItem:Open in Terminal"
+    hold: 1.0
+
+  - contextMenu: null
+    click: "menuItem:Open in Terminal"
+    terminal: { open: true }
+    bottomHeight: 430
+    spotlight: terminal
+    caption: "A PowerShell opens in the project folder"
+    hold: 1.0
+
+  - type: dotnet sergen g
+    typeSpeed: 55
+    spotlight: terminal
+    pointerAt: { x: 0.34, y: 0.29 }
+    caption: "Run sergen, Serenity's code generator"
+    hold: 0.6
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Available Connections", kind: section }
+        - { text: "> Default", kind: picked }
+    spotlight: terminal
+    caption: "Pick the Default connection"
+    hold: 1.4
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Select tables for code generation (single/multiple)", kind: section }
+        - { text: "" }
+        - { text: "> [X] dbo.Department", kind: picked }
+        - { text: "  [ ] dbo.Exceptions", kind: row }
+        - { text: "  [ ] dbo.Languages", kind: row }
+        - { text: "  [ ] dbo.RolePermissions", kind: row }
+        - { text: "  [ ] dbo.Roles", kind: row }
+        - { text: "  [ ] dbo.UserPermissions", kind: row }
+        - { text: "  [ ] dbo.UserPreferences", kind: row }
+        - { text: "  [ ] dbo.UserRoles", kind: row }
+        - { text: "  [ ] dbo.Users", kind: row }
+        - { text: "  [ ] dbo.VersionInfo", kind: row }
+        - { text: "" }
+        - { text: "(Press <space> to select/unselect, <enter> to accept)", kind: dim }
+    caption: "Space selects dbo.Department, Enter continues"
+    hold: 1.8
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Enter a Module name for table **dbo.Department** (**Default**): ", kind: row }
+    caption: "The module is CourseDB"
+    hold: 0.4
+    typeTail: CourseDB
+    tailSpeed: 70
+
+  - terminal:
+      lines:
+        - { text: "" }
+        - { text: "Choose What to Generate", kind: section }
+        - { text: "> [X] All", kind: picked }
+        - { text: "  [X] Row", kind: row }
+        - { text: "  [X] Services", kind: row }
+        - { text: "  [X] User Interface", kind: row }
+        - { text: "  [X] Custom", kind: row }
+        - { text: "" }
+        - { text: "(Press <space> to select/unselect, up and down to navigate, <enter> to accept)", kind: dim }
+    caption: "Keep All: row, service, page, grid and dialog"
+    hold: 1.8
+
+  # sergen wrote the module: walk to it one folder at a time
+  - tree: { expand: ["Modules", "Modules/CourseDB"] }
+    bottomHeight: null
+    terminal: { open: false }
+    treeScroll: top
+    spotlight: "node:CourseDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Sergen created the CourseDB module"
+    hold: 1.2
+
+  - tree: { expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/Department"] }
+    spotlight: "node:Department"
+    caption: "One folder per table: row, columns, form, grid, dialog and page"
+    hold: 1.6
+
+  - tree: { expand: ["Modules", "Modules/CourseDB", "Modules/CourseDB/Department"] }
+    treeScroll: keep
+    click: "node:DepartmentRow.cs"
+    open: DepartmentRow.cs
+    reveal: null
+    highlight: ["13-14"]
+    spotlight: "line:13"
+    caption: "DepartmentRow maps the table; Name is its display name"
+    hold: 2.2
+
+  # 4. the generated page, with the chapter's sample departments
+  - screen: app
+    appStage: app
+    goto: /
+    waitFor: ".s-sidebar-link-text"
+    spotlight: '.s-sidebar-link-text:text-is("CourseDB")'
+    caption: "CourseDB is in the sidebar now"
+    hold: 1.6
+
+  - screen: app
+    appStage: app
+    click: '.s-sidebar-link-text:text-is("CourseDB")'
+    hold: 0.6
+
+  - screen: app
+    appStage: app
+    clickVisible: '.s-sidebar-link-text:text-is("Department")'
+    waitFor: "#GridDiv .slick-row"
+    spotlight: "#GridDiv"
+    caption: "The sample departments: Computer Science, Mathematics, Physics"
+    hold: 2.4
+
+  - screen: app
+    appStage: app
+    click: ".add-button"
+    waitFor: ".s-DepartmentDialog"
+    spotlight: ".s-DepartmentDialog"
+    caption: "New Department asks for a name, the table's only input"
+    hold: 2.2

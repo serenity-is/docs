@@ -4,6 +4,10 @@
 
 Our system starts with the tables that everything else hangs off of, so let's begin with `Department` — every course, student, and teacher will belong to one.
 
+<video alt="Creating the Department table" controls preload="metadata" poster="img/01-department-table-poster.png">
+  <source src="img/01-department-table.mp4" type="video/mp4" />
+</video>
+
 We'll create it with a migration. The name carries a timestamp (`20250614_1700`), which keeps migrations in a clear order and avoids clashes when several people work on the same project.
 
 The `Department` table only needs two columns for now:
@@ -12,6 +16,8 @@ The `Department` table only needs two columns for now:
 - A `Name` column to store the department name, marked as unique
 
 We're using `AutoReversingMigration`, which means FluentMigrator can roll the table back automatically if we ever need to undo it during development.
+
+<a id="department-migration-snippet"></a>
 
 ```csharp
 using FluentMigrator;

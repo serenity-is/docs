@@ -1,0 +1,156 @@
+# Storyboard for tutorials/courses/04-students-and-enrollments.md
+#
+# Fixture:  pnpm media app-fixture --scenario ../web/Docs/tutorials/courses/_scenes/04-students-and-enrollments.yml --stages
+# Render:   pnpm media --id 04-students-and-enrollments --publish
+#
+# One migration, two tables, two sergen runs. The chapter ends by saying the
+# standalone StudentCourses page is about to go (chapter 05), so the clip ends
+# on that page. The four sample students come from
+# _snippets/FixtureSeed_20250616_1001_Students.cs.
+
+extends: "_defaults"
+id: 04-students-and-enrollments
+title: Creating the Students and StudentCourses tables
+edits: "04"
+open: null         # nothing is open until the migration is created
+
+files:
+  DefaultDB_20250616_1000_StudentsAndStudentCourses.cs: { snippet: "DefaultDB_20250616_1000_StudentsAndStudentCourses.cs" }
+
+appStages:
+  - { id: app, edits: 0 }
+
+video:
+  posterAt: 32
+
+budgets:
+  maxDuration: 66
+  maxBytes: 3_800_000
+
+steps:
+  # 1. the migration
+  - tree:
+      expand: ["Migrations", "Migrations/DefaultDB"]
+      exclude: ["Migrations/DefaultDB/DefaultDB_20250616_1000_StudentsAndStudentCourses.cs", "Modules/CourseDB/Students", "Modules/CourseDB/StudentCourses"]
+    treeScroll: top
+    spotlight: "node:DefaultDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Students and their enrollments share one migration"
+    hold: 1.2
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder }
+    spotlight: "node:DefaultDB"
+    click: true
+    hold: 0.7
+
+  - contextMenu: { target: "node:DefaultDB", menu: folder, focus: "New Item...", submenu: true }
+    spotlight: "menuitem:New Item..."
+    hold: 0.7
+
+  - contextMenu: null
+    click: "menuitem:New Item..."
+    addItem: { name: "", folder: "DefaultDB\\" }
+    type: DefaultDB_20250616_1000_StudentsAndStudentCourses.cs
+    typeSpeed: 18
+    into: addItem.name
+    spotlight: "#ai-name"
+    pointerAt: { x: 0.5, y: 0.5 }
+    hold: 0.6
+
+  - click: "#ai-add"
+    addItem: null
+    tree:
+      exclude: ["Modules/CourseDB/Students", "Modules/CourseDB/StudentCourses"]
+    open: DefaultDB_20250616_1000_StudentsAndStudentCourses.cs
+    reveal: 0
+    highlight: []
+    spotlight: "node:DefaultDB_20250616_1000_StudentsAndStudentCourses.cs"
+    pointerAt: { x: 0.42, y: 0.5 }
+    hold: 0.6
+
+  - code: 33
+    codeMs: 2400
+    spotlight: null
+    caption: null
+    hold: 0.8
+
+  - highlight: ["10-17"]
+    spotlight: "line:10"
+    caption: "Students: name fields, birth date and a department"
+    hold: 2.2
+
+  - highlight: ["19-26"]
+    spotlight: "line:19"
+    caption: "StudentCourses links a student to a course, and optionally a term"
+    hold: 2.4
+
+  - highlight: ["28-30"]
+    spotlight: "line:28"
+    caption: "A student takes a course once per term"
+    hold: 2.0
+
+  # 2. sergen, once per table
+  - highlight: []
+    spotlight: null
+    terminal: { open: true }
+    bottomHeight: 430
+    caption: "Run the app to migrate, then generate both tables"
+    hold: 0.6
+
+  - type: dotnet sergen g
+    typeSpeed: 55
+    spotlight: terminal
+    pointerAt: { x: 0.34, y: 0.29 }
+    hold: 0.4
+
+  - terminal:
+      reset: true
+      lines:
+        - { text: "Table Code Generation", kind: title }
+        - { text: "" }
+        - { text: "Select tables for code generation (single/multiple)", kind: section }
+        - { text: "  [ ] dbo.Courses", kind: row }
+        - { text: "  [ ] dbo.Department", kind: row }
+        - { text: "  ...", kind: dim }
+        - { text: "> [X] dbo.StudentCourses", kind: picked }
+        - { text: "  [X] dbo.Students", kind: picked }
+        - { text: "  [ ] dbo.Terms", kind: row }
+        - { text: "" }
+        - { text: "Module: CourseDB     Generate: All", kind: row }
+    spotlight: terminal
+    caption: "Select dbo.Students and dbo.StudentCourses, module CourseDB"
+    hold: 2.2
+
+  - tree: { expand: ["Modules", "Modules/CourseDB"] }
+    terminal: { open: false }
+    bottomHeight: null
+    treeScroll: top
+    spotlight: "node:CourseDB"
+    pointerAt: { x: 0.42, y: 0.5 }
+    caption: "Students and StudentCourses join the module"
+    hold: 1.8
+
+  # 3. both pages
+  - screen: app
+    appStage: app
+    goto: /CourseDB/Students
+    waitFor: "#GridDiv .slick-row"
+    spotlight: "#GridDiv"
+    caption: "CourseDB → Students, with the four sample students"
+    hold: 2.6
+
+  - screen: app
+    appStage: app
+    click: '#GridDiv a:has-text("John")'
+    waitFor: ".s-StudentsDialog"
+    spotlight: ".s-StudentsDialog"
+    caption: "Each student belongs to a department"
+    hold: 2.2
+
+  - screen: app
+    appStage: app
+    goto: /CourseDB/StudentCourses
+    waitFor: "#GridDiv"
+    spotlight: "#GridDiv"
+    caption: "StudentCourses got a page too; the next chapter moves it into the student dialog"
+    hold: 2.8

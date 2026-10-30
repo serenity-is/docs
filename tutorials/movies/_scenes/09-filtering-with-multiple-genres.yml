@@ -14,7 +14,7 @@ edits: "09"
 open: null
 files:
   MovieColumns.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieColumns.cs }
-  MovieListRequest.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieListRequest.cs }
+  MovieListRequest.cs: { stage: final, fixture: Modules/MovieDB/Movie/MovieListRequest.cs }
   MovieListHandler.cs: { stage: before, fixture: Modules/MovieDB/Movie/RequestHandlers/MovieListHandler.cs }
   MovieEndpoint.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieEndpoint.cs }
   MovieGrid.tsx: { stage: before, fixture: Modules/MovieDB/Movie/MovieGrid.tsx }
@@ -39,7 +39,7 @@ budgets:
 
 appStages:
   - id: final
-    edits: 9
+    edits: 8
 
 steps:
   # 1. try the built-in QuickFilter from LinkingSetRelation

@@ -14,9 +14,9 @@ files:
   PersonDialog.tsx:
     snippet: "PersonDialog_11.tsx"
     fixturePath: Modules/MovieDB/Person/PersonDialog.tsx
-  PersonMovieColumns.cs: { stage: before, fixture: Modules/MovieDB/Person/PersonMovieColumns.cs }
-  PersonMovieGrid.tsx: { stage: before, fixture: Modules/MovieDB/Person/PersonMovieGrid.tsx }
-  PersonDialog.css: { stage: before, fixture: Modules/MovieDB/Person/PersonDialog.css }
+  PersonMovieColumns.cs: { stage: final, fixture: Modules/MovieDB/Person/PersonMovieColumns.cs }
+  PersonMovieGrid.tsx: { stage: final, fixture: Modules/MovieDB/Person/PersonMovieGrid.tsx }
+  PersonDialog.css: { stage: final, fixture: Modules/MovieDB/Person/PersonDialog.css }
 
 fixtureFiles:
   Modules/MovieDB/Person/PersonMovieColumns.cs: { snippet: "PersonMovieColumns_11.cs" }

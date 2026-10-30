@@ -12,10 +12,10 @@ files:
   DefaultDB_20221122_1151_PersonMovieImages.cs:
     snippet: "DefaultDB_20221122_1151_PersonMovieImages.cs"
     fixturePath: Migrations/DefaultDB/DefaultDB_20221122_1151_PersonMovieImages.cs
-  PersonRow.cs: { baseline: Modules/MovieDB/Person/PersonRow.cs, fixturePath: Modules/MovieDB/Person/PersonRow.cs }
-  MovieRow.cs: { baseline: Modules/MovieDB/Movie/MovieRow.cs, fixturePath: Modules/MovieDB/Movie/MovieRow.cs }
-  PersonForm.cs: { baseline: Modules/MovieDB/Person/PersonForm.cs, fixturePath: Modules/MovieDB/Person/PersonForm.cs }
-  MovieForm.cs: { baseline: Modules/MovieDB/Movie/MovieForm.cs, fixturePath: Modules/MovieDB/Movie/MovieForm.cs }
+  PersonRow.cs: { stage: before, fixture: Modules/MovieDB/Person/PersonRow.cs }
+  MovieRow.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieRow.cs }
+  PersonForm.cs: { stage: before, fixture: Modules/MovieDB/Person/PersonForm.cs }
+  MovieForm.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieForm.cs }
 
 # This disposable, localhost-only fixture uploads trusted scene assets. It
 # must not depend on an external ClamAV service to record offline.

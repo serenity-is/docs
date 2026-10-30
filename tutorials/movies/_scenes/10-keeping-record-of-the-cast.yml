@@ -11,23 +11,23 @@ open: null
 
 files:
   DefaultDB_20221115_1612_PersonAndMovieCast.cs: { snippet: "DefaultDB_20221115_1612_PersonAndMovieCast.cs" }
-  MovieDBNavigation.cs: { baseline: Modules/MovieDB/MovieDBNavigation.cs, fixturePath: Modules/MovieDB/MovieDBNavigation.cs }
+  MovieDBNavigation.cs: { stage: before, fixture: Modules/MovieDB/MovieDBNavigation.cs }
   Gender.cs: { fixture: Modules/MovieDB/Person/Gender.cs }
-  PersonRow.cs: { baseline: Modules/MovieDB/Person/PersonRow.cs, fixturePath: Modules/MovieDB/Person/PersonRow.cs }
-  PersonForm.cs: { baseline: Modules/MovieDB/Person/PersonForm.cs, fixturePath: Modules/MovieDB/Person/PersonForm.cs }
-  PersonColumns.cs: { baseline: Modules/MovieDB/Person/PersonColumns.cs, fixturePath: Modules/MovieDB/Person/PersonColumns.cs }
+  PersonRow.cs: { stage: before, fixture: Modules/MovieDB/Person/PersonRow.cs }
+  PersonForm.cs: { stage: before, fixture: Modules/MovieDB/Person/PersonForm.cs }
+  PersonColumns.cs: { stage: before, fixture: Modules/MovieDB/Person/PersonColumns.cs }
   MovieCastEditor.tsx: { fixture: Modules/MovieDB/MovieCast/MovieCastEditor.tsx }
   MovieCastEditDialog.tsx: { fixture: Modules/MovieDB/MovieCast/MovieCastEditDialog.tsx }
   MovieCastEditDialog.css: { fixture: Modules/MovieDB/MovieCast/MovieCastEditDialog.css }
-  MovieCastRow.cs: { baseline: Modules/MovieDB/MovieCast/MovieCastRow.cs, fixturePath: Modules/MovieDB/MovieCast/MovieCastRow.cs }
-  MovieCastForm.cs: { baseline: Modules/MovieDB/MovieCast/MovieCastForm.cs, fixturePath: Modules/MovieDB/MovieCast/MovieCastForm.cs }
-  MovieCastColumns.cs: { baseline: Modules/MovieDB/MovieCast/MovieCastColumns.cs, fixturePath: Modules/MovieDB/MovieCast/MovieCastColumns.cs }
-  MovieRow.cs: { baseline: Modules/MovieDB/Movie/MovieRow.cs, fixturePath: Modules/MovieDB/Movie/MovieRow.cs }
-  MovieForm.cs: { baseline: Modules/MovieDB/Movie/MovieForm.cs, fixturePath: Modules/MovieDB/Movie/MovieForm.cs }
-  MovieDialog.tsx: { baseline: Modules/MovieDB/Movie/MovieDialog.tsx, fixturePath: Modules/MovieDB/Movie/MovieDialog.tsx }
-  MovieDeleteHandler.cs: { baseline: Modules/MovieDB/Movie/RequestHandlers/MovieDeleteHandler.cs, fixturePath: Modules/MovieDB/Movie/RequestHandlers/MovieDeleteHandler.cs }
-  MovieRetrieveHandler.cs: { baseline: Modules/MovieDB/Movie/RequestHandlers/MovieRetrieveHandler.cs, fixturePath: Modules/MovieDB/Movie/RequestHandlers/MovieRetrieveHandler.cs }
-  MovieSaveHandler.cs: { baseline: Modules/MovieDB/Movie/RequestHandlers/MovieSaveHandler.cs, fixturePath: Modules/MovieDB/Movie/RequestHandlers/MovieSaveHandler.cs }
+  MovieCastRow.cs: { stage: before, fixture: Modules/MovieDB/MovieCast/MovieCastRow.cs }
+  MovieCastForm.cs: { stage: before, fixture: Modules/MovieDB/MovieCast/MovieCastForm.cs }
+  MovieCastColumns.cs: { stage: before, fixture: Modules/MovieDB/MovieCast/MovieCastColumns.cs }
+  MovieRow.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieRow.cs }
+  MovieForm.cs: { stage: before, fixture: Modules/MovieDB/Movie/MovieForm.cs }
+  MovieDialog.tsx: { stage: before, fixture: Modules/MovieDB/Movie/MovieDialog.tsx }
+  MovieDeleteHandler.cs: { stage: before, fixture: Modules/MovieDB/Movie/RequestHandlers/MovieDeleteHandler.cs }
+  MovieRetrieveHandler.cs: { stage: before, fixture: Modules/MovieDB/Movie/RequestHandlers/MovieRetrieveHandler.cs }
+  MovieSaveHandler.cs: { stage: before, fixture: Modules/MovieDB/Movie/RequestHandlers/MovieSaveHandler.cs }
 
 fixtureFiles:
   Modules/MovieDB/Person/Gender.cs: { snippet: "Gender_10.cs" }
@@ -70,7 +70,7 @@ video: { width: 1400, height: 900, fps: 24, tail: 0.8, posterAt: 158 }
 budgets: { maxDuration: 210, maxBytes: 8000000 }
 appStages:
   - { id: manual, edits: 22 }
-  - { id: final, edits: 26 }
+  - { id: final, edits: 27 }
 
 steps:
   # Migration: create the person and cast tables and seed three actors.

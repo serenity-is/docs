@@ -116,6 +116,7 @@
       * [Lookups](framework/dynamic-scripts/lookups.md)
       * [Script Generation](framework/dynamic-scripts/script-generation.md)
     * [Script & CSS Bundling](framework/script-bundling.md)
+    * [Static Assets](framework/static-assets.md)
     * [Web Security](framework/security.md)    
   * [Code Generator \(Sergen\)](sergen/code_generator_sergen.md)
     * [Sergen Commands](sergen/sergen_commands.md)

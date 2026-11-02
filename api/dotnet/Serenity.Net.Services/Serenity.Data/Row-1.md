@@ -42,4 +42,4 @@ public abstract class Row<TFields> : IEditableRow, IRow<TFields>
 * interface [IRow&lt;TFields&gt;](./IRow-1.md)
 * interface [IEditableRow](./IEditableRow.md)
 * class [RowFieldsBase](./RowFieldsBase.md)
-* **Source:** *[Row.cs](https://github.com/serenity-is/Serenity/blob/842eeed9c1017bb2110e654fdf17bd169a31f7a0/src/services/Entity/Row/Row.cs)*
+* **Source:** *[Row.cs](https://github.com/serenity-is/Serenity/blob/090f59bd1ba489cacd572f4dfffdb4a12f4c29d9/src/services/Entity/Row/Row.cs)*

@@ -18,4 +18,4 @@ public class UserPreferenceEndpoint : ServiceEndpoint
 ## See Also
 
 * class [ServiceEndpoint](../../Serenity.Net.Web/Serenity.Services/ServiceEndpoint.md)
-* **Source:** *[UserPreferenceEndpoint.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/UserPreference/UserPreferenceEndpoint.cs)*
+* **Source:** *[UserPreferenceEndpoint.cs](https://github.com/serenity-is/Serenity/blob/2c80b21cf8d9747d731a836a6ac43f15dfa25689/common-features/src/extensions/Modules/UserPreference/UserPreferenceEndpoint.cs)*

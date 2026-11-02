@@ -31,4 +31,4 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IBehaviorFactory](./IBehaviorFactory.md)
-* **Source:** *[DefaultBehaviorFactory.cs](https://github.com/serenity-is/Serenity/blob/95342587aebf71b494e0c09221452e4fd9429d1b/src/services/RequestHandlers/Behavior/DefaultBehaviorFactory.cs)*
+* **Source:** *[DefaultBehaviorFactory.cs](https://github.com/serenity-is/Serenity/blob/090f59bd1ba489cacd572f4dfffdb4a12f4c29d9/src/services/RequestHandlers/Behavior/DefaultBehaviorFactory.cs)*

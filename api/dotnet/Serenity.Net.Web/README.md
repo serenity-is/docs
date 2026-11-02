@@ -109,6 +109,7 @@
 | static class [ExcelContentResult](./Serenity.Web/ExcelContentResult.md) | Excel content result helper methods. |
 | class [FeatureBarrierAttribute](./Serenity.Web/FeatureBarrierAttribute.md) | An attribute that can be placed on MVC controllers, controller actions, or Razor pages to require all or any of a set of features to be enabled. Note that if no IFeatureToggles service is registered, the feature barrier will always pass. |
 | class [FileWatcher](./Serenity.Web/FileWatcher.md) | Default file watcher implementation for the physical file system. |
+| class [FilteredFileProvider](./Serenity.Web/FilteredFileProvider.md) | A file provider that only exposes the files of another file provider that a filter accepts, e.g. by the include / exclude patterns of [`StaticAssetPatternFilter`](./Serenity.Web/StaticAssetPatternFilter.md). Directories are always exposed, their contents are filtered. |
 | static class [FilterPanelTexts](./Serenity.Web/FilterPanelTexts.md) |  |
 | class [FormScriptRegistration](./Serenity.Web/FormScriptRegistration.md) | Contains registration methods for FormScript types. |
 | static class [FormValidationTexts](./Serenity.Web/FormValidationTexts.md) |  |
@@ -116,6 +117,7 @@
 | static class [HtmlCspExtensions](./Serenity.Web/HtmlCspExtensions.md) | Contains CSP related extension methods for HTML helpers and HTTP contexts. |
 | static class [HtmlImportMapExtensions](./Serenity.Web/HtmlImportMapExtensions.md) | Contains import map related extension methods for HTML helpers and HTTP contexts. |
 | static class [HtmlLayoutFilesExtensions](./Serenity.Web/HtmlLayoutFilesExtensions.md) | Contains extensions for including layout CSS and JS files declared with [`LayoutCssFileAttribute`](./Serenity.Web/LayoutCssFileAttribute.md) / [`LayoutScriptFileAttribute`](./Serenity.Web/LayoutScriptFileAttribute.md). |
+| static class [HtmlLazyTypesExtensions](./Serenity.Web/HtmlLazyTypesExtensions.md) | Contains extensions for the client side types that are loaded when they are first requested. |
 | static class [HtmlScriptExtensions](./Serenity.Web/HtmlScriptExtensions.md) | Contains Serenity related helper methods that can be used in Razor CSHTML files. |
 | class [HttpContextItemsAccessor](./Serenity.Web/HttpContextItemsAccessor.md) | Default implementation of IHttpContextItemsAccessor that reads the HttpContext items. |
 | class [HttpContextUserAccessor](./Serenity.Web/HttpContextUserAccessor.md) | Default implementation of IUserAccessor that reads the current user from the HTTP context. |
@@ -145,6 +147,7 @@
 | class [LayoutScriptFileAttribute](./Serenity.Web/LayoutScriptFileAttribute.md) | Declares a JS file that should be included in the layout on every page, usually rendered with `@Html.LayoutScriptFiles()`. This is intended for dynamically loaded libraries that need their scripts to be available on all pages, without depending on a page specific entry point. The declared files are also exposed as a predefined dynamic bundle named [`ScriptName`](./Serenity.Web/LayoutScriptBundleScript/ScriptName.md), which can be referenced from a bundle definition (e.g. `dynamic://Bundle.LayoutScriptFiles`). Note that the predefined bundle is generated once and cached, so it does not follow feature toggles dynamically; use `@Html.LayoutScriptFiles()` for that. |
 | class [LayoutScriptFileOptions](./Serenity.Web/LayoutScriptFileOptions.md) | Options for layout script files declared with [`LayoutScriptFileAttribute`](./Serenity.Web/LayoutScriptFileAttribute.md). |
 | class [LayoutScriptFileProvider](./Serenity.Web/LayoutScriptFileProvider.md) | Default implementation of [`ILayoutScriptFileProvider`](./Serenity.Web/ILayoutScriptFileProvider.md), which discovers [`LayoutScriptFileAttribute`](./Serenity.Web/LayoutScriptFileAttribute.md)s from the type source, filters them by the registered IFeatureToggles and an optional filter, and returns them ordered with duplicates removed. |
+| class [LazyLoadTypesAttribute](./Serenity.Web/LazyLoadTypesAttribute.md) | Declares the client side types implementing the `LazyLoadInclude` marker of corelib and the module that loads them, which is generated for a project that has such types. `Html.LazyTypes()` renders these for the default `Config.lazyTypeLoader`, which uses them to load a type when it is first requested from a type registry. |
 | class [LocalTextDataScript](./Serenity.Web/LocalTextDataScript.md) | Local text data script to access local texts from an external app like mobile. |
 | class [LocalTextScript](./Serenity.Web/LocalTextScript.md) | Local text dynamic script. |
 | abstract class [LookupScript](./Serenity.Web/LookupScript.md) | Dynamic script type for lookup scripts. |
@@ -153,6 +156,7 @@
 | class [NuglifyMinifier](./Serenity.Web/NuglifyMinifier.md) | Default implementation of [`IScriptMinifier`](./Serenity.Web/IScriptMinifier.md) and [`ICssMinifier`](./Serenity.Web/ICssMinifier.md) using the Nuglify library. |
 | class [PageAuthorizeAttribute](./Serenity.Web/PageAuthorizeAttribute.md) | Authorizes access to a controller action. Optionally checks the permission provided as the first argument. Use special permission key `?` to check for logged-in users, and `*` to allow anyone including anonymous access. |
 | static class [PagerTexts](./Serenity.Web/PagerTexts.md) |  |
+| class [PrefixedFileProvider](./Serenity.Web/PrefixedFileProvider.md) | A file provider that exposes the contents of another file provider under a path prefix, e.g. files of a package's wwwroot under "/Serenity.Corelib". |
 | static class [PropertyGridTexts](./Serenity.Web/PropertyGridTexts.md) |  |
 | static class [QuickSearchTexts](./Serenity.Web/QuickSearchTexts.md) |  |
 | class [RecaptchaPropertyProcessor](./Serenity.Web/RecaptchaPropertyProcessor.md) | Property processor that passes the recaptcha site key to the client side. |
@@ -166,6 +170,8 @@
 | class [ScriptMinifyOptions](./Serenity.Web/ScriptMinifyOptions.md) | Set of options for script minifying. |
 | class [ScriptMinifyResult](./Serenity.Web/ScriptMinifyResult.md) | Result returned from a script minifier. |
 | static class [SelectEditorTexts](./Serenity.Web/SelectEditorTexts.md) |  |
+| static class [SerenityStaticAssets](./Serenity.Web/SerenityStaticAssets.md) | Serves static assets of packages that don't use the static web assets SDK (e.g. Serenity.Corelib) while running from the build output. The build writes a manifest named "[ApplicationName].serenitystaticassets.json" next to the application assembly, which lists the asset folders (project wwwroot or package staticwebassets folders) and their base paths. A published application has these files under its wwwroot, and no manifest. |
+| class [StaticAssetPatternFilter](./Serenity.Web/StaticAssetPatternFilter.md) | Decides which files of a static asset folder (e.g. a project's wwwroot) are served, using the same include / exclude patterns that are used to select the files to publish / pack, so that a file that would not be published is not served while running from the build output either. Patterns are relative to the asset folder (e.g. **/*.tmp), as in the manifest. When a folder is passed, patterns are MSBuild style and relative to the project folder instead (e.g. wwwroot\**, wwwroot\**\*.tmp, **\node_modules\**), and converted to be relative to the asset folder: patterns that start with the folder (wwwroot\) lose that prefix, patterns that start with **\ are kept, others can't match files under the folder and are ignored. |
 | static class [TemplateHelper](./Serenity.Web/TemplateHelper.md) | Helper methods for CSHTML templating. |
 | static class [VirtualPathUtility](./Serenity.Web/VirtualPathUtility.md) | Extension methods providing partial compatibility with the legacy `VirtualPathUtility`. |
 | class [WebRootFileWatcher](./Serenity.Web/WebRootFileWatcher.md) | Default implementation of [`IWebRootFileWatcher`](./Serenity.Web/IWebRootFileWatcher.md). It reuses physical file providers rooted at `wwwroot` / `staticwebassets` so that watching multiple files in the same directory does not create a new provider each time. Watching is only done in development. |

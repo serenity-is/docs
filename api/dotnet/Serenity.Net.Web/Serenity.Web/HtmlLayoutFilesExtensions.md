@@ -16,4 +16,4 @@ public static class HtmlLayoutFilesExtensions
 
 ## See Also
 
-* **Source:** *[HtmlLayoutFilesExtensions.cs](https://github.com/serenity-is/Serenity/blob/9a2446d846f519fbbaf51efc2ecb18e288be61be/src/web/Mvc/Html/HtmlLayoutFilesExtensions.cs)*
+* **Source:** *[HtmlLayoutFilesExtensions.cs](https://github.com/serenity-is/Serenity/blob/3ee4ed336eca3c73bc3d291124715a793a825afd/src/web/Mvc/Html/HtmlLayoutFilesExtensions.cs)*

@@ -19,6 +19,7 @@ public class LayoutScriptFileProvider : ILayoutScriptFileProvider
 | --- | --- |
 | [LayoutScriptFileProvider](LayoutScriptFileProvider/LayoutScriptFileProvider.md)(…) | Default implementation of [`ILayoutScriptFileProvider`](./ILayoutScriptFileProvider.md), which discovers [`LayoutScriptFileAttribute`](./LayoutScriptFileAttribute.md)s from the type source, filters them by the registered IFeatureToggles and an optional filter, and returns them ordered with duplicates removed. |
 | [GetFiles](LayoutScriptFileProvider/GetFiles.md)() |  |
+| [GetModuleFiles](LayoutScriptFileProvider/GetModuleFiles.md)() |  |
 
 ## Exceptions
 
@@ -33,4 +34,4 @@ Initializes a new instance of the [`LayoutScriptFileProvider`](./LayoutScriptFil
 ## See Also
 
 * interface [ILayoutScriptFileProvider](./ILayoutScriptFileProvider.md)
-* **Source:** *[LayoutScriptFileProvider.cs](https://github.com/serenity-is/Serenity/blob/9a2446d846f519fbbaf51efc2ecb18e288be61be/src/web/Mvc/Bundling/LayoutScriptFiles/LayoutScriptFileProvider.cs)*
+* **Source:** *[LayoutScriptFileProvider.cs](https://github.com/serenity-is/Serenity/blob/3ee4ed336eca3c73bc3d291124715a793a825afd/src/web/Mvc/Bundling/LayoutScriptFiles/LayoutScriptFileProvider.cs)*

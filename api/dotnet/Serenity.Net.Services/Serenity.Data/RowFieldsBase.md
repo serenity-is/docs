@@ -37,6 +37,7 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHasDialect, IHaveJoins
 | [Initialize](RowFieldsBase/Initialize.md)(…) | Initializes the specified annotations. |
 | [LockAlias](RowFieldsBase/LockAlias.md)() | Locks the alias. |
 | [ReplaceAliasWith](RowFieldsBase/ReplaceAliasWith.md)(…) | Replaces the alias with. |
+| static readonly [PotentiallySensitiveFieldNames](RowFieldsBase/PotentiallySensitiveFieldNames.md) | Field names that are potentially sensitive (e.g. password hash, secret, API key, 2FA data), and thus should not be selected, filtered, sorted, inserted or updated by default unless the developer explicitly allows it via the corresponding attributes. This is a name based heuristic: rows implementing interfaces like [`IPasswordRow`](./IPasswordRow.md) are additionally protected in request handlers, as their sensitive fields may have arbitrary names. |
 | static [ParseDatabaseAndSchema](RowFieldsBase/ParseDatabaseAndSchema.md)(…) | Parses the database and schema. |
 
 ## Protected Members
@@ -57,4 +58,4 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHasDialect, IHaveJoins
 * interface [IHaveJoins](./IHaveJoins.md)
 * class [Field](./Field.md)
 * interface [IHasDialect](./IHasDialect.md)
-* **Source:** *[RowFieldsBase.cs](https://github.com/serenity-is/Serenity/blob/7edd645ba75e793ae1b5dde3b3d9bdd92c42b8b6/src/services/Entity/Row/RowFieldsBase.cs)*
+* **Source:** *[RowFieldsBase.cs](https://github.com/serenity-is/Serenity/blob/5c175f02197df67df43976601a0e7738eb45c9f3/src/services/Entity/Row/RowFieldsBase.cs)*

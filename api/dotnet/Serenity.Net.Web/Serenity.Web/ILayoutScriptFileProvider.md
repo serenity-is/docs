@@ -11,8 +11,9 @@ public interface ILayoutScriptFileProvider
 
 | name | description |
 | --- | --- |
-| [GetFiles](ILayoutScriptFileProvider/GetFiles.md)() | Gets the list of app relative (`~/`) JS file urls to include in the layout, in the order they should be included, with duplicates removed. |
+| [GetFiles](ILayoutScriptFileProvider/GetFiles.md)() | Gets the list of app relative (`~/`) JS file urls to include in the layout, in the order they should be included, with duplicates removed. These don't include the ES modules, see [`GetModuleFiles`](./ILayoutScriptFileProvider/GetModuleFiles.md). |
+| [GetModuleFiles](ILayoutScriptFileProvider/GetModuleFiles.md)() | Gets the list of app relative (`~/`) urls of the ES modules to include in the layout, in the order they should be included, with duplicates removed. |
 
 ## See Also
 
-* **Source:** *[LayoutScriptFileProvider.cs](https://github.com/serenity-is/Serenity/blob/9a2446d846f519fbbaf51efc2ecb18e288be61be/src/web/Mvc/Bundling/LayoutScriptFiles/LayoutScriptFileProvider.cs)*
+* **Source:** *[LayoutScriptFileProvider.cs](https://github.com/serenity-is/Serenity/blob/3ee4ed336eca3c73bc3d291124715a793a825afd/src/web/Mvc/Bundling/LayoutScriptFiles/LayoutScriptFileProvider.cs)*

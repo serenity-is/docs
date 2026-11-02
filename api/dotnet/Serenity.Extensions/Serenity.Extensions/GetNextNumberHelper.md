@@ -15,4 +15,4 @@ public static class GetNextNumberHelper
 
 ## See Also
 
-* **Source:** *[GetNextNumberHelper.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/GetNextNumber/GetNextNumberHelper.cs)*
+* **Source:** *[GetNextNumberHelper.cs](https://github.com/serenity-is/Serenity/blob/090f59bd1ba489cacd572f4dfffdb4a12f4c29d9/common-features/src/extensions/Modules/GetNextNumber/GetNextNumberHelper.cs)*

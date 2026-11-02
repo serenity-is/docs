@@ -13,6 +13,7 @@ public class LayoutScriptFileAttribute : Attribute
 | name | description |
 | --- | --- |
 | [LayoutScriptFileAttribute](LayoutScriptFileAttribute/LayoutScriptFileAttribute.md)(…) | Creates a new instance of the attribute. |
+| [Module](LayoutScriptFileAttribute/Module.md) { get; set; } | Gets or sets a value indicating whether the file is an ES module, which is rendered with its own `type="module"` script tag and never concatenated to a bundle, as its imports are relative to its own URL. Defaults to `true` for files under an `esm` folder and `.mjs` files. |
 | [Order](LayoutScriptFileAttribute/Order.md) { get; set; } | Gets or sets the order among the included files. Files with a lower order are included first. Defaults to `0`. |
 | [Path](LayoutScriptFileAttribute/Path.md) { get; } | Gets the app relative (`~/`) JS file path. |
 | [RequireAnyFeature](LayoutScriptFileAttribute/RequireAnyFeature.md) { get; set; } | Gets or sets a value indicating whether any of the [`RequireFeatures`](./LayoutScriptFileAttribute/RequireFeatures.md) should be enabled instead of all of them. |
@@ -20,4 +21,4 @@ public class LayoutScriptFileAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[LayoutScriptFileAttribute.cs](https://github.com/serenity-is/Serenity/blob/9a2446d846f519fbbaf51efc2ecb18e288be61be/src/web/Mvc/Bundling/LayoutScriptFiles/LayoutScriptFileAttribute.cs)*
+* **Source:** *[LayoutScriptFileAttribute.cs](https://github.com/serenity-is/Serenity/blob/3ee4ed336eca3c73bc3d291124715a793a825afd/src/web/Mvc/Bundling/LayoutScriptFiles/LayoutScriptFileAttribute.cs)*

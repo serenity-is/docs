@@ -25,7 +25,7 @@ Options type for the widget.
 
 > **new SlickPager**\<`P`\>(`props`): `SlickPager`\<`P`\>
 
-Defined in: [src/ui/datagrid/slickpager.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.tsx#L22)
+Defined in: [src/ui/datagrid/slickpager.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.tsx#L24)
 
 Creates a pager for the view specified in the options.
 
@@ -171,7 +171,7 @@ Returns the widget's props/options.
 
 > **\_changePage**(`ctype`): `boolean`
 
-Defined in: [src/ui/datagrid/slickpager.tsx:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.tsx#L84)
+Defined in: [src/ui/datagrid/slickpager.tsx:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.tsx#L88)
 
 Changes the current page based on the requested navigation action.
 
@@ -195,7 +195,7 @@ True if the page change was handled, false otherwise.
 
 > **\_updatePager**(): `void`
 
-Defined in: [src/ui/datagrid/slickpager.tsx:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.tsx#L130)
+Defined in: [src/ui/datagrid/slickpager.tsx:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.tsx#L136)
 
 Refreshes the pager UI from the current view paging info.
 

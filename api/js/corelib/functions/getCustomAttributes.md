@@ -4,7 +4,7 @@
 
 > **getCustomAttributes**\<`TAttr`\>(`type`, `attrType`, `inherit`): `TAttr`[]
 
-Defined in: [src/base/system.ts:539](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L539)
+Defined in: [src/base/system.ts:643](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L643)
 
 Get all custom attributes of a type.
 

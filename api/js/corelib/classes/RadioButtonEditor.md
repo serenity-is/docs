@@ -220,7 +220,7 @@ Sets whether the editor is read-only.
 
 > **get** **value**(): `string`
 
-Defined in: [src/ui/editors/radiobuttoneditor.tsx:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L120)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L114)
 
 Returns the currently selected radio value.
 
@@ -234,7 +234,7 @@ The selected value.
 
 > **set** **value**(`v`): `void`
 
-Defined in: [src/ui/editors/radiobuttoneditor.tsx:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L151)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L145)
 
 Sets the selected radio value.
 
@@ -272,7 +272,7 @@ Adds the widget's CSS class to its DOM node.
 
 > `protected` **addRadio**(`value`, `text`): `void`
 
-Defined in: [src/ui/editors/radiobuttoneditor.tsx:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L100)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L94)
 
 Adds a radio button for the given value and text.
 
@@ -555,7 +555,7 @@ The matching element, or null if not found.
 
 > **get\_readOnly**(): `boolean`
 
-Defined in: [src/ui/editors/radiobuttoneditor.tsx:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L159)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L153)
 
 Returns whether the editor is read-only.
 
@@ -575,7 +575,7 @@ True when read-only.
 
 > **get\_value**(): `string`
 
-Defined in: [src/ui/editors/radiobuttoneditor.tsx:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L108)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L102)
 
 Returns the currently selected radio value.
 
@@ -793,7 +793,7 @@ The rendered contents.
 
 > **set\_readOnly**(`value`): `void`
 
-Defined in: [src/ui/editors/radiobuttoneditor.tsx:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L167)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L161)
 
 Sets whether the editor is read-only.
 
@@ -819,7 +819,7 @@ True to enable read-only mode.
 
 > **set\_value**(`value`): `void`
 
-Defined in: [src/ui/editors/radiobuttoneditor.tsx:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L128)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L122)
 
 Sets the selected radio value.
 

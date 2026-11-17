@@ -2,7 +2,7 @@
 
 # Interface: ServiceOptions\<TResponse\>
 
-Defined in: [src/base/servicetypes.ts:277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L277)
+Defined in: [src/base/servicetypes.ts:412](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L412)
 
 Options for [serviceCall](../functions/serviceCall.md) / [serviceRequest](../functions/serviceRequest.md) / `serviceFetch`.
 Extends the native `RequestInit` so any `fetch` option (e.g. `signal`, `cache`) can be passed through.
@@ -25,7 +25,7 @@ Expected service response type (must extend [ServiceResponse](ServiceResponse.md
 
 > `optional` **allowRedirect**: `boolean`
 
-Defined in: [src/base/servicetypes.ts:279](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L279)
+Defined in: [src/base/servicetypes.ts:414](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L414)
 
 When true (default), a `403` with a `Location` header triggers a top-window redirect.
 
@@ -39,7 +39,7 @@ When true (default), a `403` with a `Location` header triggers a top-window redi
 
 > `optional` **async**: `boolean`
 
-Defined in: [src/base/servicetypes.ts:281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L281)
+Defined in: [src/base/servicetypes.ts:416](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L416)
 
 When `false` a synchronous XHR is used (blocks the UI). Prefer `true` (default).
 
@@ -53,7 +53,7 @@ When `false` a synchronous XHR is used (blocks the UI). Prefer `true` (default).
 
 > `optional` **blockUI**: `boolean`
 
-Defined in: [src/base/servicetypes.ts:283](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L283)
+Defined in: [src/base/servicetypes.ts:418](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L418)
 
 When true (default) the UI is blocked with a loading indicator for the duration of the request.
 
@@ -67,7 +67,7 @@ When true (default) the UI is blocked with a loading indicator for the duration 
 
 > `optional` **errorMode**: `"none"` \| `"alert"` \| `"notification"`
 
-Defined in: [src/base/servicetypes.ts:293](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L293)
+Defined in: [src/base/servicetypes.ts:428](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L428)
 
 How service errors are surfaced to the user. `"alert"` shows a dialog, `"notification"` shows a toast, `"none"` suppresses default handling.
 
@@ -77,7 +77,7 @@ How service errors are surfaced to the user. `"alert"` shows a dialog, `"notific
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [src/base/servicetypes.ts:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L285)
+Defined in: [src/base/servicetypes.ts:420](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L420)
 
 Extra HTTP headers merged with defaults (`Accept: application/json`, `Content-Type: application/json`, `X-CSRF-TOKEN` when same-origin).
 
@@ -91,7 +91,7 @@ Extra HTTP headers merged with defaults (`Accept: application/json`, `Content-Ty
 
 > `optional` **request**: `any`
 
-Defined in: [src/base/servicetypes.ts:287](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L287)
+Defined in: [src/base/servicetypes.ts:422](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L422)
 
 Request DTO serialized as JSON in the POST body.
 
@@ -101,7 +101,7 @@ Request DTO serialized as JSON in the POST body.
 
 > `optional` **service**: `string`
 
-Defined in: [src/base/servicetypes.ts:289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L289)
+Defined in: [src/base/servicetypes.ts:424](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L424)
 
 Service endpoint key (e.g. `"Administration/User/List"`). Resolved via `~/Services/` when relative. Mutually exclusive with `url`.
 
@@ -111,7 +111,7 @@ Service endpoint key (e.g. `"Administration/User/List"`). Resolved via `~/Servic
 
 > `optional` **url**: `string`
 
-Defined in: [src/base/servicetypes.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L291)
+Defined in: [src/base/servicetypes.ts:426](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L426)
 
 Absolute or `~/`-prefixed URL. When provided `service` is ignored.
 
@@ -121,7 +121,7 @@ Absolute or `~/`-prefixed URL. When provided `service` is ignored.
 
 > `optional` **onCleanup**(): `void`
 
-Defined in: [src/base/servicetypes.ts:295](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L295)
+Defined in: [src/base/servicetypes.ts:430](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L430)
 
 Callback invoked after the request finishes regardless of success or failure (after `blockUI` is undone).
 
@@ -135,7 +135,7 @@ Callback invoked after the request finishes regardless of success or failure (af
 
 > `optional` **onError**(`response`, `info?`): `boolean` \| `void`
 
-Defined in: [src/base/servicetypes.ts:302](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L302)
+Defined in: [src/base/servicetypes.ts:437](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L437)
 
 Custom error handler. Return `true` to indicate the error was handled and suppress default error display.
 
@@ -165,7 +165,7 @@ HTTP-level error details.
 
 > `optional` **onSuccess**(`response`): `void`
 
-Defined in: [src/base/servicetypes.ts:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L307)
+Defined in: [src/base/servicetypes.ts:442](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L442)
 
 Success callback invoked with the parsed response when `Error` is not set.
 

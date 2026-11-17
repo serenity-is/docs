@@ -39,6 +39,26 @@ Current error message, if any
 
 ***
 
+### hasMore?
+
+> `optional` **hasMore**: `boolean`
+
+Defined in: [src/slick/iremoteview.ts:311](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L311)
+
+Whether there are more rows after the current page, for a view that is [indeterminate](#indeterminate).
+
+***
+
+### indeterminate?
+
+> `optional` **indeterminate**: `boolean`
+
+Defined in: [src/slick/iremoteview.ts:309](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L309)
+
+Whether the view pages without knowing the total number of the rows, so only whether there are more after the page.
+
+***
+
 ### loading
 
 > **loading**: `boolean`
@@ -73,6 +93,7 @@ Number of rows requested per page
 
 > **totalCount**: `number`
 
-Defined in: [src/slick/iremoteview.ts:304](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L304)
+Defined in: [src/slick/iremoteview.ts:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L307)
 
-Total number of items available
+Total number of items available, or the number of the rows known so far when the view is [indeterminate](#indeterminate), which
+is more than the rows up to the current page only when there are more.

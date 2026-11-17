@@ -4,7 +4,7 @@
 
 > **peekScriptData**(`name`): `any`
 
-Defined in: [src/base/scriptdata.ts:317](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L317)
+Defined in: [src/base/scriptdata.ts:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L330)
 
 Returns cached script data without triggering a fetch.
 

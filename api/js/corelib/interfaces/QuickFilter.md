@@ -26,7 +26,7 @@ Props/options type for the widget.
 
 > `optional` **cssClass**: `string`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L48)
+Defined in: [src/ui/datagrid/quickfilter.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L53)
 
 Extra CSS class applied to the filter item container.
 
@@ -36,7 +36,7 @@ Extra CSS class applied to the filter item container.
 
 > `optional` **displayText**: (`w`, `label`) => `string`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L54)
+Defined in: [src/ui/datagrid/quickfilter.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L59)
 
 Returns human-readable text for the active filter display.
 
@@ -60,7 +60,7 @@ Returns human-readable text for the active filter display.
 
 > `optional` **element**: (`e`) => `void`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L42)
+Defined in: [src/ui/datagrid/quickfilter.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L47)
 
 Optional callback to customize the filter container element.
 
@@ -90,7 +90,7 @@ Field name associated with the quick filter.
 
 > `optional` **handler**: (`h`) => `void`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L36)
+Defined in: [src/ui/datagrid/quickfilter.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L41)
 
 Callback invoked when the list request is prepared; may mutate the request.
 
@@ -110,7 +110,7 @@ Callback invoked when the list request is prepared; may mutate the request.
 
 > `optional` **init**: (`w`) => `void`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L44)
+Defined in: [src/ui/datagrid/quickfilter.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L49)
 
 Callback invoked after the widget instance is created for additional setup.
 
@@ -130,7 +130,7 @@ Callback invoked after the widget instance is created for additional setup.
 
 > `optional` **loadState**: (`w`, `state`) => `void`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L50)
+Defined in: [src/ui/datagrid/quickfilter.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L55)
 
 Restores persisted filter state into the widget.
 
@@ -154,7 +154,7 @@ Restores persisted filter state into the widget.
 
 > `optional` **options**: `P` & `object`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L40)
+Defined in: [src/ui/datagrid/quickfilter.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L45)
 
 Options passed to the widget constructor; merged with [WidgetProps](../type-aliases/WidgetProps.md).
 
@@ -185,7 +185,7 @@ Optional id for the widget's DOM node.
 
 > `optional` **saveState**: (`w`) => `any`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L52)
+Defined in: [src/ui/datagrid/quickfilter.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L57)
 
 Persists widget state for grid settings.
 
@@ -205,7 +205,7 @@ Persists widget state for grid settings.
 
 > `optional` **separator**: `boolean`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L46)
+Defined in: [src/ui/datagrid/quickfilter.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L51)
 
 When true, a visual separator is rendered before this filter.
 
@@ -215,7 +215,7 @@ When true, a visual separator is rendered before this filter.
 
 > `optional` **title**: `string`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L38)
+Defined in: [src/ui/datagrid/quickfilter.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L43)
 
 Title / label shown for the filter.
 
@@ -223,22 +223,11 @@ Title / label shown for the filter.
 
 ### type?
 
-> `optional` **type**: \{(`options?`): `TWidget`; `prototype`: `TWidget`; \}
+> `optional` **type**: \{(`options?`): `TWidget`; `prototype`: `TWidget`; \} \| `PromiseLike`\<\{(`options?`): `TWidget`; `prototype`: `TWidget`; \}\>
 
-Defined in: [src/ui/datagrid/quickfilter.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L34)
+Defined in: [src/ui/datagrid/quickfilter.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L39)
 
-Widget constructor used to create the filter editor.
-
-#### Parameters
-
-##### options?
-
-`P`
-
-#### Returns
-
-`TWidget`
-
-#### prototype
-
-> **prototype**: `TWidget`
+Widget constructor used to create the filter editor, or a promise for it when the type has to be loaded.
+In that case a placeholder widget that only holds a value is used until the type is loaded, so
+[handler](#handler), [loadState](#loadstate), [saveState](#savestate) and [displayText](#displaytext) may be called with it,
+while [element](#element) and [init](#init) are only called for the actual widget.

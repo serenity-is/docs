@@ -2,7 +2,7 @@
 
 # Interface: DataGridSubmitEvent
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1874](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1874)
+Defined in: [src/ui/datagrid/datagrid.tsx:1875](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1875)
 
 Event raised to determine whether the grid view submit should proceed.
 
@@ -16,7 +16,7 @@ Event raised to determine whether the grid view submit should proceed.
 
 > `optional` **cancel**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1876](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1876)
+Defined in: [src/ui/datagrid/datagrid.tsx:1877](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1877)
 
 When true, the submit is cancelled.
 
@@ -26,7 +26,7 @@ When true, the submit is cancelled.
 
 > **dataGrid**: [`DataGrid`](../classes/DataGrid.md)\<`any`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1862](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1862)
+Defined in: [src/ui/datagrid/datagrid.tsx:1863](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1863)
 
 The data grid that raised the event.
 

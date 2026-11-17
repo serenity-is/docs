@@ -4,7 +4,7 @@
 
 > **resetCspNonce**(): `void`
 
-Defined in: [src/base/config.ts:129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/config.ts#L129)
+Defined in: [src/base/config.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/config.ts#L134)
 
 Re-reads [Config.cspNonce](../variables/Config.md#cspnonce) from the DOM.
 

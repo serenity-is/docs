@@ -595,7 +595,7 @@ Static emitter also fired after any grid is initialized.
 
 > **addCellCssStyles**(`key`, `hash`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3218](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3218)
+Defined in: [src/grid/sleekgrid.tsx:3217](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3217)
 
 Adds a per-cell CSS hash under `key` and applies it to rendered rows.
 
@@ -645,7 +645,7 @@ Auto-fits resizable column widths to the available viewport width.
 
 > **cancelCurrentEdit**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4559](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4559)
+Defined in: [src/grid/sleekgrid.tsx:4564](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4564)
 
 Cancels the active editor (if any) by delegating to `makeActiveCellNormal()`.
 
@@ -665,7 +665,7 @@ Always `true`.
 
 > **canCellBeActive**(`row`, `cell`, `tab?`): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4367](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4367)
+Defined in: [src/grid/sleekgrid.tsx:4372](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4372)
 
 Checks whether `row`/`cell` may become the active (focusable) cell.
 Consults row/column metadata and `focusable` flags.
@@ -704,7 +704,7 @@ When `true`, additionally checks `tabbable`.
 
 > **canCellBeSelected**(`row`, `cell`): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4419](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4419)
+Defined in: [src/grid/sleekgrid.tsx:4424](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4424)
 
 Checks whether `row`/`cell` is selectable (from row/column metadata `selectable`).
 
@@ -736,7 +736,7 @@ Cell index.
 
 > **clearTextSelection**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3806](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3806)
+Defined in: [src/grid/sleekgrid.tsx:3811](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3811)
 
 Clears any active text selection, handling IE `selection` when present.
 
@@ -781,7 +781,7 @@ When `true`, invalidates and re-renders visible rows.
 
 > **commitCurrentEdit**(`opt?`): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4476](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4476)
+Defined in: [src/grid/sleekgrid.tsx:4481](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4481)
 
 Commits the active editor value (if any), running validation and either
 executing an [EditCommand](../interfaces/EditCommand.md) via `editCommandHandler` or directly.
@@ -831,7 +831,7 @@ Clears all `on*` emitters and instance-owned properties.
 
 > **editActiveCell**(`editor?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3867](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3867)
+Defined in: [src/grid/sleekgrid.tsx:3872](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3872)
 
 Forces the active cell into edit mode (or keeps it active) using `editor` when provided.
 
@@ -857,7 +857,7 @@ Optional editor class override.
 
 > **flashCell**(`row`, `cell`, `speed?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3272](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3272)
+Defined in: [src/grid/sleekgrid.tsx:3271](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3271)
 
 Briefly toggles the `cellFlashingCssClass` on `row`/`cell` for animation.
 
@@ -895,7 +895,7 @@ Millisecond interval between toggles.
 
 > **focus**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3696](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3696)
+Defined in: [src/grid/sleekgrid.tsx:3701](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3701)
 
 Focuses the active focus sink so subsequent keystrokes reach the grid.
 
@@ -960,7 +960,7 @@ Optional event whose target is used to resolve the canvas.
 
 > **getActiveCell**(): [`RowCell`](../interfaces/RowCell.md)
 
-Defined in: [src/grid/sleekgrid.tsx:4000](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4000)
+Defined in: [src/grid/sleekgrid.tsx:4005](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4005)
 
 Returns the active `row`/`cell`, or `null` when none is active.
 
@@ -978,7 +978,7 @@ Returns the active `row`/`cell`, or `null` when none is active.
 
 > **getActiveCellNode**(): `HTMLElement`
 
-Defined in: [src/grid/sleekgrid.tsx:4011](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4011)
+Defined in: [src/grid/sleekgrid.tsx:4016](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4016)
 
 Returns the DOM node for the active cell, or `null`.
 
@@ -1092,7 +1092,7 @@ Optional cell hint for pinned-band disambiguation.
 
 > **getCellCssStyles**(`key`): [`CellStylesHash`](../type-aliases/CellStylesHash.md)
 
-Defined in: [src/grid/sleekgrid.tsx:3262](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3262)
+Defined in: [src/grid/sleekgrid.tsx:3261](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3261)
 
 Returns the hash for `key` as stored by `setCellCssStyles`/`addCellCssStyles`.
 
@@ -1118,7 +1118,7 @@ Namespace key.
 
 > **getCellEditor**(): [`Editor`](../interfaces/Editor.md)
 
-Defined in: [src/grid/sleekgrid.tsx:3993](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3993)
+Defined in: [src/grid/sleekgrid.tsx:3998](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3998)
 
 Returns the currently active editor, if any.
 
@@ -1136,7 +1136,7 @@ Returns the currently active editor, if any.
 
 > **getCellFromEvent**(`e`): `object`
 
-Defined in: [src/grid/sleekgrid.tsx:3628](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3628)
+Defined in: [src/grid/sleekgrid.tsx:3633](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3633)
 
 Resolves `row`/`cell` for an event targeting a cell.
 
@@ -1170,7 +1170,7 @@ DOM event whose `target` lies inside the desired cell.
 
 > **getCellFromNode**(`cellNode`): `number`
 
-Defined in: [src/grid/sleekgrid.tsx:3575](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3575)
+Defined in: [src/grid/sleekgrid.tsx:3580](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3580)
 
 Reads the column index from a cell's `data-c` or legacy `.l#` class.
 
@@ -1196,7 +1196,7 @@ Cell element.
 
 > **getCellFromPoint**(`x`, `y`): `object`
 
-Defined in: [src/grid/sleekgrid.tsx:3554](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3554)
+Defined in: [src/grid/sleekgrid.tsx:3559](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3559)
 
 Resolves a `row`/`cell` for the given content-space point.
 
@@ -1236,7 +1236,7 @@ Vertical pixel offset.
 
 > **getCellNode**(`row`, `cell`): `HTMLElement`
 
-Defined in: [src/grid/sleekgrid.tsx:4314](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4314)
+Defined in: [src/grid/sleekgrid.tsx:4319](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4319)
 
 Returns the cell DOM node for `row`/`cell` if rendered (`rowsCache` hit).
 
@@ -1268,7 +1268,7 @@ Cell index.
 
 > **getCellNodeBox**(`row`, `cell`): `object`
 
-Defined in: [src/grid/sleekgrid.tsx:3653](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3653)
+Defined in: [src/grid/sleekgrid.tsx:3658](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3658)
 
 Returns the pixel bounds of a cell's box in canvas coordinates.
 
@@ -1316,7 +1316,7 @@ Cell index.
 
 > **getColspan**(`row`, `cell`): `number`
 
-Defined in: [src/grid/sleekgrid.tsx:4170](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4170)
+Defined in: [src/grid/sleekgrid.tsx:4175](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4175)
 
 Returns column span for `row`/`cell` via row metadata (`colspan`), or `1`.
 
@@ -1376,7 +1376,7 @@ Matching column or `null`.
 
 > **getColumnFromNode**(`cellNode`): [`Column`](../interfaces/Column.md)\<`TItem`\>
 
-Defined in: [src/grid/sleekgrid.tsx:3595](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3595)
+Defined in: [src/grid/sleekgrid.tsx:3600](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3600)
 
 Resolves the column definition from a cell's node.
 
@@ -1761,7 +1761,7 @@ Cell/column index.
 
 > **getGridPosition**(): [`Position`](../interfaces/Position.md)
 
-Defined in: [src/grid/sleekgrid.tsx:3963](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3963)
+Defined in: [src/grid/sleekgrid.tsx:3968](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3968)
 
 Returns the absolute box of the grid container (for editor positioning).
 
@@ -1969,7 +1969,7 @@ Returns the (legacy) pre-header panel node inside the grouping panel.
 
 > **getRenderedRange**(`viewportTop?`, `viewportLeft?`): [`ViewRange`](../interfaces/ViewRange.md)
 
-Defined in: [src/grid/sleekgrid.tsx:2547](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2547)
+Defined in: [src/grid/sleekgrid.tsx:2546](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2546)
 
 Returns the rendered range including buffers (expanded beyond the viewport).
 
@@ -2001,7 +2001,7 @@ Optional scroll left override.
 
 > **getRowFromNode**(`rowNode`): `number`
 
-Defined in: [src/grid/sleekgrid.tsx:3610](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3610)
+Defined in: [src/grid/sleekgrid.tsx:3615](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3615)
 
 Resolves the view row index from a row node (`data-row` or cache).
 
@@ -2055,7 +2055,7 @@ Object with `width` and `height` in pixels.
 
 > **getScrollContainerX**(): `HTMLElement`
 
-Defined in: [src/grid/sleekgrid.tsx:2399](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2399)
+Defined in: [src/grid/sleekgrid.tsx:2398](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2398)
 
 Returns the horizontal scroll container (main body viewport).
 
@@ -2069,7 +2069,7 @@ Returns the horizontal scroll container (main body viewport).
 
 > **getScrollContainerY**(): `HTMLElement`
 
-Defined in: [src/grid/sleekgrid.tsx:2406](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2406)
+Defined in: [src/grid/sleekgrid.tsx:2405](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2405)
 
 Returns the vertical scroll container (main body viewport).
 
@@ -2083,7 +2083,7 @@ Returns the vertical scroll container (main body viewport).
 
 > **getSelectedRows**(): `number`[]
 
-Defined in: [src/grid/sleekgrid.tsx:4577](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4577)
+Defined in: [src/grid/sleekgrid.tsx:4582](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4582)
 
 Returns selected view rows (delegates to the attached selection model).
 
@@ -2205,7 +2205,7 @@ Returns the unique CSS-namespace UID for this grid instance.
 
 > **getViewport**(`viewportTop?`, `viewportLeft?`): [`ViewRange`](../interfaces/ViewRange.md)
 
-Defined in: [src/grid/sleekgrid.tsx:2515](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2515)
+Defined in: [src/grid/sleekgrid.tsx:2514](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2514)
 
 Returns the current visible viewport range.
 
@@ -2269,7 +2269,7 @@ Optional cell hint.
 
 > **getVisibleRange**(`viewportTop?`, `viewportLeft?`): [`ViewRange`](../interfaces/ViewRange.md)
 
-Defined in: [src/grid/sleekgrid.tsx:2524](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2524)
+Defined in: [src/grid/sleekgrid.tsx:2523](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2523)
 
 Returns the visible (clipped to viewport) range.
 
@@ -2301,7 +2301,7 @@ Optional scroll left override.
 
 > **gotoCell**(`row`, `cell`, `forceEdit?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4444](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4444)
+Defined in: [src/grid/sleekgrid.tsx:4449](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4449)
 
 Navigates to `row`/`cell`, optionally forcing edit mode.
 
@@ -2466,7 +2466,7 @@ View row indices to invalidate.
 
 > **navigate**(`dir`): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4260](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4260)
+Defined in: [src/grid/sleekgrid.tsx:4265](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4265)
 
 Generic navigation dispatcher used by the key handler.
 
@@ -2492,7 +2492,7 @@ Direction (`"up"`, `"down"`, `"left"`, `"right"`, `"next"`, `"prev"`, `"home"`, 
 
 > **navigateBottom**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4123](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4123)
+Defined in: [src/grid/sleekgrid.tsx:4128](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4128)
 
 Navigates to the last data row.
 
@@ -2510,7 +2510,7 @@ Navigates to the last data row.
 
 > **navigateDown**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4205](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4205)
+Defined in: [src/grid/sleekgrid.tsx:4210](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4210)
 
 Navigates one row downward.
 
@@ -2528,7 +2528,7 @@ Navigates one row downward.
 
 > **navigateLeft**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4198](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4198)
+Defined in: [src/grid/sleekgrid.tsx:4203](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4203)
 
 Navigates one cell to the left.
 
@@ -2546,7 +2546,7 @@ Navigates one cell to the left.
 
 > **navigateNext**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4219](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4219)
+Defined in: [src/grid/sleekgrid.tsx:4224](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4224)
 
 Navigates to the next tabbable cell (including next row wrap).
 
@@ -2564,7 +2564,7 @@ Navigates to the next tabbable cell (including next row wrap).
 
 > **navigatePageDown**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4102](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4102)
+Defined in: [src/grid/sleekgrid.tsx:4107](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4107)
 
 Scrolls by one page downward (or paging gap) and updates active cell if navigable.
 
@@ -2582,7 +2582,7 @@ Scrolls by one page downward (or paging gap) and updates active cell if navigabl
 
 > **navigatePageUp**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4109](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4109)
+Defined in: [src/grid/sleekgrid.tsx:4114](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4114)
 
 Scrolls by one page upward and updates active cell if navigable.
 
@@ -2600,7 +2600,7 @@ Scrolls by one page upward and updates active cell if navigable.
 
 > **navigatePrev**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4226](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4226)
+Defined in: [src/grid/sleekgrid.tsx:4231](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4231)
 
 Navigates to the previous tabbable cell (including wrap to prior row).
 
@@ -2618,7 +2618,7 @@ Navigates to the previous tabbable cell (including wrap to prior row).
 
 > **navigateRight**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4191](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4191)
+Defined in: [src/grid/sleekgrid.tsx:4196](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4196)
 
 Navigates one cell to the right.
 
@@ -2636,7 +2636,7 @@ Navigates one cell to the right.
 
 > **navigateRowEnd**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4240](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4240)
+Defined in: [src/grid/sleekgrid.tsx:4245](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4245)
 
 Navigates to the last focusable cell in the active row.
 
@@ -2654,7 +2654,7 @@ Navigates to the last focusable cell in the active row.
 
 > **navigateRowStart**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4233](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4233)
+Defined in: [src/grid/sleekgrid.tsx:4238](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4238)
 
 Navigates to the first focusable cell in the active row.
 
@@ -2672,7 +2672,7 @@ Navigates to the first focusable cell in the active row.
 
 > **navigateTop**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4116](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4116)
+Defined in: [src/grid/sleekgrid.tsx:4121](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4121)
 
 Navigates to the first data row.
 
@@ -2690,7 +2690,7 @@ Navigates to the first data row.
 
 > **navigateToRow**(`row`): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4132](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4132)
+Defined in: [src/grid/sleekgrid.tsx:4137](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4137)
 
 Navigates to a specific row, preserving current column when possible.
 
@@ -2718,7 +2718,7 @@ Target row index.
 
 > **navigateUp**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4212](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4212)
+Defined in: [src/grid/sleekgrid.tsx:4217](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4217)
 
 Navigates one row upward.
 
@@ -2774,7 +2774,7 @@ Grid plugin to add.
 
 > **removeCellCssStyles**(`key`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3233](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3233)
+Defined in: [src/grid/sleekgrid.tsx:3232](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3232)
 
 Removes styles previously added via [SleekGrid.addCellCssStyles](#addcellcssstyles).
 
@@ -2800,7 +2800,7 @@ Namespace key.
 
 > **render**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:2934](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2934)
+Defined in: [src/grid/sleekgrid.tsx:2933](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2933)
 
 Synchronously renders rows/cells for the current viewport, with throttling.
 Coalesces calls via a pending `_hRender` timeout when scrolling fast.
@@ -2859,7 +2859,7 @@ When provided, visibility is set to these ids before reorder.
 
 > **resetActiveCell**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3689](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3689)
+Defined in: [src/grid/sleekgrid.tsx:3694](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3694)
 
 Clears the currently active cell (without scrolling).
 
@@ -2896,7 +2896,7 @@ Call when the container size changes externally.
 
 > **scrollActiveCellIntoView**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4018](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4018)
+Defined in: [src/grid/sleekgrid.tsx:4023](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4023)
 
 Scrolls the active cell into view if one exists.
 
@@ -2914,7 +2914,7 @@ Scrolls the active cell into view if one exists.
 
 > **scrollCellIntoView**(`row`, `cell`, `doPaging?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3714](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3714)
+Defined in: [src/grid/sleekgrid.tsx:3719](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3719)
 
 Ensures `row`/`cell` is visible, paging when needed.
 
@@ -2952,7 +2952,7 @@ When `true`, pages before scrolling.
 
 > **scrollColumnIntoView**(`cell`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3729](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3729)
+Defined in: [src/grid/sleekgrid.tsx:3734](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3734)
 
 Horizontally scrolls `cell` into view.
 
@@ -2978,7 +2978,7 @@ Target visible cell index.
 
 > **scrollRowIntoView**(`row`, `doPaging?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4029](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4029)
+Defined in: [src/grid/sleekgrid.tsx:4034](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4034)
 
 Vertically scrolls `row` into view (pads for frozen rows).
 
@@ -3010,7 +3010,7 @@ When `true`, page-bumps instead of minimal scroll.
 
 > **scrollRowToTop**(`row`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4061](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4061)
+Defined in: [src/grid/sleekgrid.tsx:4066](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4066)
 
 Scrolls so that `row` is at the top of the viewport.
 
@@ -3036,7 +3036,7 @@ Target row.
 
 > **setActiveCell**(`row`, `cell`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4327](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4327)
+Defined in: [src/grid/sleekgrid.tsx:4332](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4332)
 
 Activates the cell at `row`/`cell` (no-op if un-navigable or out of bounds).
 
@@ -3068,7 +3068,7 @@ Target cell.
 
 > **setActiveRow**(`row`, `cell`, `suppressScrollIntoView?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4348](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4348)
+Defined in: [src/grid/sleekgrid.tsx:4353](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4353)
 
 Marks a row as active (for row-selection integration) without necessarily changing the active cell DOM.
 
@@ -3106,7 +3106,7 @@ When `true`, does not scroll the row/cell into view.
 
 > **setCellCssStyles**(`key`, `hash`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3249](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3249)
+Defined in: [src/grid/sleekgrid.tsx:3248](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3248)
 
 Replaces styles for `key` and notifies `onCellCssStylesChanged`.
 
@@ -3372,7 +3372,7 @@ Whether to show.
 
 > **setSelectedRows**(`rows`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4589](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4589)
+Defined in: [src/grid/sleekgrid.tsx:4594](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4594)
 
 Sets selection from view row indices via the attached selection model.
 
@@ -3648,7 +3648,7 @@ New title attribute.
 
 > **updatePagingStatusFromView**(`pagingInfo`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:2391](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2391)
+Defined in: [src/grid/sleekgrid.tsx:2390](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2390)
 
 Updates add-new-row paging state from a paging descriptor.
 
@@ -3710,7 +3710,7 @@ View row index.
 
 > **updateRowCount**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:2414](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2414)
+Defined in: [src/grid/sleekgrid.tsx:2413](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2413)
 
 Recomputes virtual/real scroll heights, page offsets and active cell state
 after row count or scrollbar visibility changes.

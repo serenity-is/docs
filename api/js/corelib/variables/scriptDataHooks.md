@@ -4,7 +4,7 @@
 
 > `const` **scriptDataHooks**: `object`
 
-Defined in: [src/base/scriptdata.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L52)
+Defined in: [src/base/scriptdata.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L65)
 
 Global hooks for script-data loading.
 Allows tests or custom bootstrapping to intercept `fetchScriptData` / `ensureScriptDataSync`.

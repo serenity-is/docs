@@ -4,4 +4,4 @@
 
 > `const` **SelectEditorTexts**: *typeof* `SelectEditor` = `textsProxy.Controls.SelectEditor`
 
-Defined in: [src/base/texts/webtexts.ts:293](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/texts/webtexts.ts#L293)
+Defined in: [src/base/texts/webtexts.ts:294](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/texts/webtexts.ts#L294)

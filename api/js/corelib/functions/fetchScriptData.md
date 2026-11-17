@@ -4,7 +4,7 @@
 
 > **fetchScriptData**\<`TData`\>(`name`): `Promise`\<`TData`\>
 
-Defined in: [src/base/scriptdata.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L74)
+Defined in: [src/base/scriptdata.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L87)
 
 Fetches a dynamic script payload by name via the `~/DynamicData/` endpoint.
 Results are de-duplicated per `name + hash` while a request is in flight and the request

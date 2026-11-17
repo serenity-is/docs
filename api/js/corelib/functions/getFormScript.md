@@ -4,7 +4,7 @@
 
 > **getFormScript**(`key`): `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
 
-Defined in: [src/base/scriptdata.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L223)
+Defined in: [src/base/scriptdata.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L236)
 
 Loads a `FormScript` bundle for the given key.
 

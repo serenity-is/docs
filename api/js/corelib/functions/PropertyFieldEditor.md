@@ -4,7 +4,7 @@
 
 > **PropertyFieldEditor**(`props`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L50)
+Defined in: [src/ui/widgets/propertygrid.tsx:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L66)
 
 Creates and initializes the editor widget for a property field, applying
 editor params, max length, placeholder and editor addons.

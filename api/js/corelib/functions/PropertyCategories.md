@@ -4,7 +4,7 @@
 
 > **PropertyCategories**(`props`): `HTMLElement`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:287](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L287)
+Defined in: [src/ui/widgets/propertygrid.tsx:303](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L303)
 
 Renders the categories container and populates it with fields for the given
 property items, grouping them by category.

@@ -2,7 +2,7 @@
 
 # Interface: PropertyItemsData
 
-Defined in: [src/base/propertyitem.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L182)
+Defined in: [src/base/propertyitem.ts:224](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L224)
 
 Metadata bundle for a form or columns set.
 
@@ -12,7 +12,7 @@ Metadata bundle for a form or columns set.
 
 > **additionalItems**: [`PropertyItem`](PropertyItem.md)[]
 
-Defined in: [src/base/propertyitem.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L186)
+Defined in: [src/base/propertyitem.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L228)
 
 Extra fields not shown by default but available via column picker or customization (e.g. audit fields).
 
@@ -22,6 +22,6 @@ Extra fields not shown by default but available via column picker or customizati
 
 > **items**: [`PropertyItem`](PropertyItem.md)[]
 
-Defined in: [src/base/propertyitem.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L184)
+Defined in: [src/base/propertyitem.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L226)
 
 Primary fields / columns in display order.

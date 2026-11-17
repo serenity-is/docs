@@ -4,4 +4,4 @@
 
 > `const` **HtmlContentEditorTexts**: *typeof* `HtmlContentEditor` = `textsProxy.Controls.HtmlContentEditor`
 
-Defined in: [src/base/texts/webtexts.ts:289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/texts/webtexts.ts#L289)
+Defined in: [src/base/texts/webtexts.ts:290](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/texts/webtexts.ts#L290)

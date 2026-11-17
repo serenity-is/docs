@@ -2,7 +2,7 @@
 
 # Enumeration: RetrieveColumnSelection
 
-Defined in: [src/base/servicetypes.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L107)
+Defined in: [src/base/servicetypes.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L112)
 
 Column-selection variant used by `Retrieve` handlers.
 Lowercase naming is kept for backward compatibility with legacy endpoints.
@@ -13,7 +13,7 @@ Lowercase naming is kept for backward compatibility with legacy endpoints.
 
 > **details**: `0`
 
-Defined in: [src/base/servicetypes.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L109)
+Defined in: [src/base/servicetypes.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L114)
 
 Detail columns.
 
@@ -23,7 +23,7 @@ Detail columns.
 
 > **idOnly**: `4`
 
-Defined in: [src/base/servicetypes.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L117)
+Defined in: [src/base/servicetypes.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L122)
 
 Only the identity column.
 
@@ -33,7 +33,7 @@ Only the identity column.
 
 > **keyOnly**: `1`
 
-Defined in: [src/base/servicetypes.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L111)
+Defined in: [src/base/servicetypes.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L116)
 
 Only key columns.
 
@@ -43,7 +43,7 @@ Only key columns.
 
 > **list**: `2`
 
-Defined in: [src/base/servicetypes.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L113)
+Defined in: [src/base/servicetypes.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L118)
 
 List columns.
 
@@ -53,7 +53,7 @@ List columns.
 
 > **lookup**: `5`
 
-Defined in: [src/base/servicetypes.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L119)
+Defined in: [src/base/servicetypes.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L124)
 
 Lookup columns.
 
@@ -63,6 +63,6 @@ Lookup columns.
 
 > **none**: `3`
 
-Defined in: [src/base/servicetypes.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L115)
+Defined in: [src/base/servicetypes.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L120)
 
 No columns.

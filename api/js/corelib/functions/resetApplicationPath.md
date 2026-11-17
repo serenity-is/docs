@@ -4,7 +4,7 @@
 
 > **resetApplicationPath**(): `void`
 
-Defined in: [src/base/config.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/config.ts#L112)
+Defined in: [src/base/config.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/config.ts#L117)
 
 Re-reads [Config.applicationPath](../variables/Config.md#applicationpath) from the DOM.
 

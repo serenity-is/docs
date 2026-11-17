@@ -4,7 +4,7 @@
 
 > **getRemoteData**\<`TData`\>(`key`): `TData`
 
-Defined in: [src/base/scriptdata.ts:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L253)
+Defined in: [src/base/scriptdata.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L266)
 
 Synchronous version of [getRemoteDataAsync](getRemoteDataAsync.md) for legacy compatibility. Blocks the UI thread.
 

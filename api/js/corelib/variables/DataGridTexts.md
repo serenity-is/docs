@@ -4,4 +4,4 @@
 
 > `const` **DataGridTexts**: *typeof* `DataGrid` = `textsProxy.Controls.DataGrid`
 
-Defined in: [src/base/texts/webtexts.ts:283](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/texts/webtexts.ts#L283)
+Defined in: [src/base/texts/webtexts.ts:284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/texts/webtexts.ts#L284)

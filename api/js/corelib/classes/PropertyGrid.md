@@ -2,7 +2,7 @@
 
 # Class: PropertyGrid\<P\>
 
-Defined in: [src/ui/widgets/propertygrid.tsx:409](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L409)
+Defined in: [src/ui/widgets/propertygrid.tsx:425](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L425)
 
 A widget that renders a set of [PropertyItem](../interfaces/PropertyItem.md)s as a form, organizing
 them into categories and/or tabs, and manages loading/saving values to and
@@ -109,7 +109,7 @@ A unique name for this widget instance, used for event namespacing.
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/widgets/propertygrid.tsx:411](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L411)
+Defined in: [src/ui/widgets/propertygrid.tsx:427](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L427)
 
 #### Overrides
 
@@ -175,7 +175,7 @@ Returns the widget's props/options.
 
 > **get** **value**(): `any`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:620](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L620)
+Defined in: [src/ui/widgets/propertygrid.tsx:872](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L872)
 
 Gets the current values of all editors as an object.
 
@@ -187,7 +187,7 @@ Gets the current values of all editors as an object.
 
 > **set** **value**(`val`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:628](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L628)
+Defined in: [src/ui/widgets/propertygrid.tsx:880](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L880)
 
 Loads values from an object into all editors.
 
@@ -317,6 +317,30 @@ The callback to run after rendering.
 
 ***
 
+### attachValidationRules()
+
+> `protected` **attachValidationRules**(`fieldElement`): `void`
+
+Defined in: [src/ui/widgets/propertygrid.tsx:488](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L488)
+
+Adds the validation rules of a field, see [PropertyItem.validationRules](../interfaces/PropertyItem.md#validationrules), to the element of its editor as a
+custom rule of the validator, once its editor is loaded. The editor has to be one the validator validates, i.e. an
+input, a select or a text area, like for the required fields.
+
+#### Parameters
+
+##### fieldElement
+
+[`PropertyFieldElement`](../type-aliases/PropertyFieldElement.md)
+
+The field.
+
+#### Returns
+
+`void`
+
+***
+
 ### byId()
 
 > `protected` **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
@@ -355,7 +379,7 @@ A [Fluent](../functions/Fluent.md) wrapper for the matching element.
 
 > `protected` **canModifyItem**(`item`): `boolean`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:672](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L672)
+Defined in: [src/ui/widgets/propertygrid.tsx:924](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L924)
 
 Determines whether a property item may be modified in the current mode.
 
@@ -428,11 +452,36 @@ The change event handler.
 
 ***
 
+### checkValidationRules()
+
+> `protected` **checkValidationRules**(`fieldElement`): `string`
+
+Defined in: [src/ui/widgets/propertygrid.tsx:510](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L510)
+
+Checks the value of a field by its validation rules, unless it is read only, as its value can't be changed then.
+Hidden fields are not validated by the validator.
+
+#### Parameters
+
+##### fieldElement
+
+[`PropertyFieldElement`](../type-aliases/PropertyFieldElement.md)
+
+The field.
+
+#### Returns
+
+`string`
+
+The message of the first rule its value is not valid by, or null.
+
+***
+
 ### commitEdits()
 
 > **commitEdits**(): `Promise`\<`boolean`\>
 
-Defined in: [src/ui/widgets/propertygrid.tsx:605](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L605)
+Defined in: [src/ui/widgets/propertygrid.tsx:857](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L857)
 
 Commits pending edits on all editors that support it.
 
@@ -469,7 +518,7 @@ True to defer rendering.
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:452](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L452)
+Defined in: [src/ui/widgets/propertygrid.tsx:676](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L676)
 
 Destroys all field editors and clears the grid contents.
 
@@ -487,7 +536,7 @@ Destroys all field editors and clears the grid contents.
 
 > **enumerateItems**(`callback`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:500](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L500)
+Defined in: [src/ui/widgets/propertygrid.tsx:737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L737)
 
 Invokes a callback for each rendered field with its property item and
 editor widget.
@@ -544,7 +593,7 @@ The matching element, or null if not found.
 
 > **get\_editors**(): [`Widget`](Widget.md)\<`any`\>[]
 
-Defined in: [src/ui/widgets/propertygrid.tsx:475](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L475)
+Defined in: [src/ui/widgets/propertygrid.tsx:702](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L702)
 
 Returns the editor widgets for all rendered fields.
 
@@ -560,7 +609,7 @@ Array of editor widgets.
 
 > **get\_idPrefix**(): `string`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:491](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L491)
+Defined in: [src/ui/widgets/propertygrid.tsx:718](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L718)
 
 Returns the id prefix used by this grid.
 
@@ -576,7 +625,7 @@ The id prefix.
 
 > **get\_items**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
-Defined in: [src/ui/widgets/propertygrid.tsx:483](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L483)
+Defined in: [src/ui/widgets/propertygrid.tsx:710](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L710)
 
 Returns the property items for all rendered fields.
 
@@ -592,7 +641,7 @@ Array of property items.
 
 > **get\_mode**(): [`PropertyGridMode`](../enumerations/PropertyGridMode.md)
 
-Defined in: [src/ui/widgets/propertygrid.tsx:514](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L514)
+Defined in: [src/ui/widgets/propertygrid.tsx:751](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L751)
 
 Returns the current grid mode (insert or update).
 
@@ -601,6 +650,47 @@ Returns the current grid mode (insert or update).
 [`PropertyGridMode`](../enumerations/PropertyGridMode.md)
 
 The current [PropertyGridMode](../enumerations/PropertyGridMode.md).
+
+***
+
+### getConditionStates()
+
+> `protected` **getConditionStates**(): `Map`\<[`PropertyFieldElement`](../type-aliases/PropertyFieldElement.md), [`PropertyFieldConditionState`](../interfaces/PropertyFieldConditionState.md)\>
+
+Defined in: [src/ui/widgets/propertygrid.tsx:561](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L561)
+
+Gets what the conditions make of the fields that have some, for the current values of the fields. A field hidden by
+its own condition also hides the fields whose visibility conditions are on it, as they depend on a field that can't
+be seen.
+
+#### Returns
+
+`Map`\<[`PropertyFieldElement`](../type-aliases/PropertyFieldElement.md), [`PropertyFieldConditionState`](../interfaces/PropertyFieldConditionState.md)\>
+
+The states by the field elements.
+
+***
+
+### getConditionValue()
+
+> `protected` **getConditionValue**(`name`): `any`
+
+Defined in: [src/ui/widgets/propertygrid.tsx:542](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L542)
+
+Gets the current value of a field, for the conditions of the others, which is undefined when there is no such
+field, or its editor is not loaded yet.
+
+#### Parameters
+
+##### name
+
+`string`
+
+The name of the field.
+
+#### Returns
+
+`any`
 
 ***
 
@@ -664,6 +754,23 @@ The matching attribute, or null.
 
 ***
 
+### getEditorsLoading()
+
+> **getEditorsLoading**(): `Promise`\<`void`\>
+
+Defined in: [src/ui/widgets/propertygrid.tsx:727](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L727)
+
+Gets a promise for the editors that are still loading, as their types are loaded on demand, e.g. a lazily loaded
+editor. The values can't be saved, see [save](#save), until they are loaded.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+The promise, or null when all the editors are loaded.
+
+***
+
 ### getGridField()
 
 > **getGridField**(): [`Fluent`](../interfaces/Fluent.md)
@@ -681,6 +788,20 @@ A [Fluent](../functions/Fluent.md) wrapper for the grid field.
 #### Inherited from
 
 [`Widget`](Widget.md).[`getGridField`](Widget.md#getgridfield)
+
+***
+
+### hasConditions()
+
+> `protected` **hasConditions**(): `boolean`
+
+Defined in: [src/ui/widgets/propertygrid.tsx:533](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L533)
+
+Gets whether any field has conditions on the values of the others.
+
+#### Returns
+
+`boolean`
 
 ***
 
@@ -746,7 +867,7 @@ True if a legacy template was rendered.
 
 > **load**(`source`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:561](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L561)
+Defined in: [src/ui/widgets/propertygrid.tsx:798](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L798)
 
 Loads values from a source object into all field editors.
 
@@ -788,7 +909,7 @@ this method should not be overridden. Override renderContents() instead.
 
 > `protected` **renderContents**(): `any`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:420](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L420)
+Defined in: [src/ui/widgets/propertygrid.tsx:439](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L439)
 
 Renders the property grid contents, building categories/tabs and loading
 the initial value.
@@ -809,7 +930,7 @@ The rendered contents.
 
 > **save**(`target?`): `any`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:592](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L592)
+Defined in: [src/ui/widgets/propertygrid.tsx:833](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L833)
 
 Saves all field editor values into a target object.
 
@@ -833,7 +954,7 @@ The object containing the saved values.
 
 > **set\_mode**(`value`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:522](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L522)
+Defined in: [src/ui/widgets/propertygrid.tsx:759](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L759)
 
 Sets the grid mode and refreshes the interface.
 
@@ -896,11 +1017,43 @@ The continuation invoked with the result.
 
 ***
 
+### updateConditionContainers()
+
+> `protected` **updateConditionContainers**(): `void`
+
+Defined in: [src/ui/widgets/propertygrid.tsx:643](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L643)
+
+Hides the categories and the tabs whose fields are all hidden, when they have a field with a visibility condition,
+so the others are left as they were.
+
+#### Returns
+
+`void`
+
+***
+
+### updateConditions()
+
+> **updateConditions**(): `void`
+
+Defined in: [src/ui/widgets/propertygrid.tsx:615](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L615)
+
+Updates the fields whose conditions changed by the current values of the fields, and the categories and tabs
+they are in. A field whose conditions didn't change is left as it is, e.g. one a dialog made read only itself.
+It is called as the values change, and can be called after setting the value of an editor in code, which
+doesn't tell it.
+
+#### Returns
+
+`void`
+
+***
+
 ### updateFieldElement()
 
 > `protected` **updateFieldElement**(`fieldElement`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:720](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L720)
+Defined in: [src/ui/widgets/propertygrid.tsx:976](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L976)
 
 Updates a single field element in the current mode.
 
@@ -922,9 +1075,9 @@ The field element to update.
 
 > **updateInterface**(): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:727](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L727)
+Defined in: [src/ui/widgets/propertygrid.tsx:984](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L984)
 
-Refreshes the read-only/required state and visibility of all fields.
+Refreshes the read-only/required state and visibility of all fields, including what their conditions make of them.
 
 #### Returns
 
@@ -956,7 +1109,7 @@ An [IdPrefixType](../type-aliases/IdPrefixType.md) proxy for this widget's id pr
 
 > `static` **canModifyItem**(`item`, `mode?`): `boolean`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:641](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L641)
+Defined in: [src/ui/widgets/propertygrid.tsx:893](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L893)
 
 Determines whether a property item may be modified in the given mode,
 taking insert/update permissions into account.
@@ -1074,7 +1227,7 @@ The widget name.
 
 > `static` **loadFieldValue**(`source`, `fieldElement`, `mode?`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:536](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L536)
+Defined in: [src/ui/widgets/propertygrid.tsx:773](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L773)
 
 Loads a field's value from a source object into its editor, applying
 defaults in insert mode.
@@ -1189,7 +1342,7 @@ The editor type info.
 
 > `static` **saveFieldValue**(`target`, `fieldElement`, `canModify?`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:576](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L576)
+Defined in: [src/ui/widgets/propertygrid.tsx:817](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L817)
 
 Saves a field's editor value into a target object when the item is
 modifiable.
@@ -1223,9 +1376,9 @@ Whether the item may be modified; defaults to the
 
 ### updateFieldElement()
 
-> `static` **updateFieldElement**(`fieldElement`, `mode?`, `canModify?`): `void`
+> `static` **updateFieldElement**(`fieldElement`, `mode?`, `canModify?`, `conditions?`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:683](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L683)
+Defined in: [src/ui/widgets/propertygrid.tsx:937](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L937)
 
 Updates a field element's editor read-only/required state and visibility
 based on the item and mode.
@@ -1249,6 +1402,13 @@ The grid mode.
 `boolean`
 
 Whether the item may be modified.
+
+##### conditions?
+
+[`PropertyFieldConditionState`](../interfaces/PropertyFieldConditionState.md)
+
+What the conditions of the field make of it, which only add to the rest, e.g. a field hidden
+  by a permission stays hidden.
 
 #### Returns
 

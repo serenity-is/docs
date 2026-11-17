@@ -68,7 +68,7 @@ The element to attach the combobox to.
 
 ### formatResult()?
 
-> `optional` **formatResult**: (`p1`) => [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
+> `optional` **formatResult**: (`result`, `container`, `query`) => [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
 
 Defined in: [src/ui/editors/combobox.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L74)
 
@@ -76,9 +76,17 @@ Formatter for result items.
 
 #### Parameters
 
-##### p1
+##### result
 
 [`ComboboxItem`](ComboboxItem.md)\<`TSource`\>
+
+##### container
+
+`HTMLElement`
+
+##### query
+
+[`Select2QueryOptions`](Select2QueryOptions.md)
 
 #### Returns
 
@@ -88,7 +96,7 @@ Formatter for result items.
 
 ### formatSelection()?
 
-> `optional` **formatSelection**: (`p1`) => [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
+> `optional` **formatSelection**: (`item`) => [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
 
 Defined in: [src/ui/editors/combobox.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L72)
 
@@ -96,7 +104,7 @@ Formatter for the selected item.
 
 #### Parameters
 
-##### p1
+##### item
 
 [`ComboboxItem`](ComboboxItem.md)\<`TSource`\>
 

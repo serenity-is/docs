@@ -4,7 +4,7 @@
 
 > **getRemoteDataAsync**\<`TData`\>(`key`): `Promise`\<`TData`\>
 
-Defined in: [src/base/scriptdata.ts:243](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L243)
+Defined in: [src/base/scriptdata.ts:256](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L256)
 
 Loads a `RemoteData` script by key.
 

@@ -4,7 +4,7 @@
 
 > **PropertyFieldLineBreak**(`props`): `HTMLElement`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L132)
+Defined in: [src/ui/widgets/propertygrid.tsx:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L148)
 
 Renders a line-break element when the item's form CSS class requests one at
 the current breakpoint, or null otherwise.

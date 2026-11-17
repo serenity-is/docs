@@ -8,11 +8,22 @@ Options for the slick pager control.
 
 ## Properties
 
+### indeterminatePaging?
+
+> `optional` **indeterminatePaging**: `boolean`
+
+Defined in: [src/slick/slicktypes.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L75)
+
+Whether to page without the total number of the rows: no last page button, no total of the pages, and a next page button
+that is only enabled while there are more rows. Default is the setting of the view, see [RemoteViewOptions.indeterminatePaging](RemoteViewOptions.md#indeterminatepaging).
+
+***
+
 ### onChangePage()?
 
 > `optional` **onChangePage**: (`newPage`) => `void`
 
-Defined in: [src/slick/slicktypes.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L72)
+Defined in: [src/slick/slicktypes.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L77)
 
 Callback when page changes.
 
@@ -34,7 +45,7 @@ New page index (1-based).
 
 > `optional` **onRowsPerPageChange**: (`n`) => `void`
 
-Defined in: [src/slick/slicktypes.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L74)
+Defined in: [src/slick/slicktypes.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L79)
 
 Callback when rows-per-page changes.
 

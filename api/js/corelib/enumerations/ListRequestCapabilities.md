@@ -2,17 +2,38 @@
 
 # Enumeration: ListRequestCapabilities
 
-Defined in: [src/base/servicetypes.ts:164](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L164)
+Defined in: [src/base/servicetypes.ts:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L269)
 
 Specifies the capabilities of a list request handler.
 
 ## Enumeration Members
 
+### AggregateOptions
+
+> **AggregateOptions**: `983040`
+
+Defined in: [src/base/servicetypes.ts:322](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L322)
+
+Combined aggregate, group, entity exclusion and time zone options. Only the entity exclusion is in ListHandler,
+and all of them are in ProListHandler.
+
+***
+
+### Aggregates
+
+> **Aggregates**: `65536`
+
+Defined in: [src/base/servicetypes.ts:311](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L311)
+
+The handler calculates Aggregates from all the rows the request matches.
+
+***
+
 ### Baseline
 
-> **Baseline**: `65535`
+> **Baseline**: `327679`
 
-Defined in: [src/base/servicetypes.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L211)
+Defined in: [src/base/servicetypes.ts:329](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L329)
 
 Stable baseline for current ListRequest capabilities. Do not add future capabilities
 to this value; they require explicit opt-in.
@@ -23,7 +44,7 @@ to this value; they require explicit opt-in.
 
 > **ColumnOptions**: `1792`
 
-Defined in: [src/base/servicetypes.ts:192](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L192)
+Defined in: [src/base/servicetypes.ts:297](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L297)
 
 Combined column-selection, include-column, and exclude-column options.
 
@@ -33,7 +54,7 @@ Combined column-selection, include-column, and exclude-column options.
 
 > **ColumnSelection**: `256`
 
-Defined in: [src/base/servicetypes.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L186)
+Defined in: [src/base/servicetypes.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L291)
 
 The source applies ColumnSelection.
 
@@ -43,7 +64,7 @@ The source applies ColumnSelection.
 
 > **ContainsField**: `2`
 
-Defined in: [src/base/servicetypes.ts:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L170)
+Defined in: [src/base/servicetypes.ts:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L275)
 
 The source applies ContainsField together with ContainsText.
 
@@ -53,7 +74,7 @@ The source applies ContainsField together with ContainsText.
 
 > **ContainsText**: `1`
 
-Defined in: [src/base/servicetypes.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L168)
+Defined in: [src/base/servicetypes.ts:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L273)
 
 The source applies ContainsText.
 
@@ -63,7 +84,7 @@ The source applies ContainsText.
 
 > **Criteria**: `8`
 
-Defined in: [src/base/servicetypes.ts:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L174)
+Defined in: [src/base/servicetypes.ts:279](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L279)
 
 The source applies Criteria.
 
@@ -73,7 +94,7 @@ The source applies Criteria.
 
 > **DistinctFields**: `2048`
 
-Defined in: [src/base/servicetypes.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L194)
+Defined in: [src/base/servicetypes.ts:299](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L299)
 
 The source applies DistinctFields.
 
@@ -83,7 +104,7 @@ The source applies DistinctFields.
 
 > **EqualityFilter**: `4`
 
-Defined in: [src/base/servicetypes.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L172)
+Defined in: [src/base/servicetypes.ts:277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L277)
 
 The source applies EqualityFilter.
 
@@ -93,9 +114,19 @@ The source applies EqualityFilter.
 
 > **ExcludeColumns**: `1024`
 
-Defined in: [src/base/servicetypes.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L190)
+Defined in: [src/base/servicetypes.ts:295](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L295)
 
 The source applies ExcludeColumns.
+
+***
+
+### ExcludeEntities
+
+> **ExcludeEntities**: `262144`
+
+Defined in: [src/base/servicetypes.ts:315](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L315)
+
+The handler honors ExcludeEntities.
 
 ***
 
@@ -103,7 +134,7 @@ The source applies ExcludeColumns.
 
 > **ExcludeTotalCount**: `16384`
 
-Defined in: [src/base/servicetypes.ts:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L200)
+Defined in: [src/base/servicetypes.ts:305](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L305)
 
 The source honors ExcludeTotalCount.
 
@@ -113,7 +144,7 @@ The source honors ExcludeTotalCount.
 
 > **ExportColumns**: `4096`
 
-Defined in: [src/base/servicetypes.ts:196](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L196)
+Defined in: [src/base/servicetypes.ts:301](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L301)
 
 The source applies ExportColumns.
 
@@ -123,9 +154,19 @@ The source applies ExportColumns.
 
 > **FilteringOptions**: `15`
 
-Defined in: [src/base/servicetypes.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L176)
+Defined in: [src/base/servicetypes.ts:281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L281)
 
 Combined text-search, equality-filter, and criteria options.
+
+***
+
+### GroupBy
+
+> **GroupBy**: `131072`
+
+Defined in: [src/base/servicetypes.ts:313](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L313)
+
+The handler calculates the aggregates of the groups of GroupBy.
 
 ***
 
@@ -133,7 +174,7 @@ Combined text-search, equality-filter, and criteria options.
 
 > **IncludeColumns**: `512`
 
-Defined in: [src/base/servicetypes.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L188)
+Defined in: [src/base/servicetypes.ts:293](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L293)
 
 The source applies IncludeColumns.
 
@@ -143,7 +184,7 @@ The source applies IncludeColumns.
 
 > **IncludeDeleted**: `128`
 
-Defined in: [src/base/servicetypes.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L184)
+Defined in: [src/base/servicetypes.ts:289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L289)
 
 The source applies IncludeDeleted.
 
@@ -153,9 +194,20 @@ The source applies IncludeDeleted.
 
 > **IncludeMore**: `32768`
 
-Defined in: [src/base/servicetypes.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L202)
+Defined in: [src/base/servicetypes.ts:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L307)
 
 The handler supports the IncludeMore request option.
+
+***
+
+### ListHandler
+
+> **ListHandler**: `327679`
+
+Defined in: [src/base/servicetypes.ts:336](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L336)
+
+The capabilities of ListRequestHandler itself, without the behaviors of Serenity.Pro.Extensions. Currently
+equivalent to Baseline. May include capabilities added to it in the future.
 
 ***
 
@@ -163,7 +215,7 @@ The handler supports the IncludeMore request option.
 
 > **Localize**: `8192`
 
-Defined in: [src/base/servicetypes.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L198)
+Defined in: [src/base/servicetypes.ts:303](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L303)
 
 The source applies Localize.
 
@@ -173,7 +225,7 @@ The source applies Localize.
 
 > **None**: `0`
 
-Defined in: [src/base/servicetypes.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L166)
+Defined in: [src/base/servicetypes.ts:271](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L271)
 
 No ListRequest properties are supported.
 
@@ -183,9 +235,20 @@ No ListRequest properties are supported.
 
 > **PagingOptions**: `49248`
 
-Defined in: [src/base/servicetypes.ts:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L204)
+Defined in: [src/base/servicetypes.ts:309](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L309)
 
 Combined paging options, including the IncludeMore option.
+
+***
+
+### ProListHandler
+
+> **ProListHandler**: `1048575`
+
+Defined in: [src/base/servicetypes.ts:341](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L341)
+
+The capabilities of ListRequestHandler with the behaviors of Serenity.Pro.Extensions, which are the ones of
+ListHandler and AggregateOptions. May include capabilities added to them in the future.
 
 ***
 
@@ -193,7 +256,7 @@ Combined paging options, including the IncludeMore option.
 
 > **Skip**: `32`
 
-Defined in: [src/base/servicetypes.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L180)
+Defined in: [src/base/servicetypes.ts:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L285)
 
 The source applies Skip.
 
@@ -203,7 +266,7 @@ The source applies Skip.
 
 > **Sort**: `16`
 
-Defined in: [src/base/servicetypes.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L178)
+Defined in: [src/base/servicetypes.ts:283](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L283)
 
 The source applies sorting.
 
@@ -211,9 +274,9 @@ The source applies sorting.
 
 ### SourceAdapter
 
-> **SourceAdapter**: `51327`
+> **SourceAdapter**: `1034367`
 
-Defined in: [src/base/servicetypes.ts:206](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L206)
+Defined in: [src/base/servicetypes.ts:324](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L324)
 
 Capabilities supported by the in-memory list request source adapter by default.
 
@@ -223,6 +286,16 @@ Capabilities supported by the in-memory list request source adapter by default.
 
 > **Take**: `64`
 
-Defined in: [src/base/servicetypes.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L182)
+Defined in: [src/base/servicetypes.ts:287](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L287)
 
 The source applies Take.
+
+***
+
+### TimeZone
+
+> **TimeZone**: `524288`
+
+Defined in: [src/base/servicetypes.ts:317](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L317)
+
+The handler groups the dates by the days of the TimeZone of the request.

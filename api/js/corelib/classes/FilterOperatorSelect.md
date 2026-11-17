@@ -42,7 +42,7 @@ Widget props including the source operators.
 
 > `protected` **cascadeLink**: [`CascadedWidgetLink`](CascadedWidgetLink.md)\<[`Widget`](Widget.md)\<`any`\>\>
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:867](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L867)
+Defined in: [src/ui/editors/comboboxeditor.tsx:875](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L875)
 
 #### Inherited from
 
@@ -54,7 +54,7 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:867](https://github.com/serenity-
 
 > `readonly` **domNode**: `HTMLInputElement`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L77)
+Defined in: [src/ui/editors/comboboxeditor.tsx:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L81)
 
 The hidden input element that backs the combobox editor.
 
@@ -82,7 +82,7 @@ The id prefix used for this widget's child element ids.
 
 > `protected` **lastCreateTerm**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L82)
+Defined in: [src/ui/editors/comboboxeditor.tsx:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L86)
 
 #### Inherited from
 
@@ -94,7 +94,7 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:82](https://github.com/serenity-i
 
 > **onInitNewEntity**: (`entity`) => `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1146)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1154)
 
 Callback invoked to initialize a new entity for in-place add.
 
@@ -118,7 +118,7 @@ Callback invoked to initialize a new entity for in-place add.
 
 > **openDialogAsPanel**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1281)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1289)
 
 Whether the in-place add dialog opens as a panel.
 
@@ -186,7 +186,7 @@ Defined in: [src/ui/widgets/widget.ts:334](https://github.com/serenity-is/sereni
 
 > **get** **cascadeField**(): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:937](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L937)
+Defined in: [src/ui/editors/comboboxeditor.tsx:945](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L945)
 
 Returns the cascade field name.
 
@@ -200,7 +200,7 @@ The cascade field.
 
 > **set** **cascadeField**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:951](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L951)
+Defined in: [src/ui/editors/comboboxeditor.tsx:959](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L959)
 
 Sets the cascade field name.
 
@@ -228,7 +228,7 @@ The field name used for cascading.
 
 > **get** **cascadeFrom**(): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:904](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L904)
+Defined in: [src/ui/editors/comboboxeditor.tsx:912](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L912)
 
 Returns the cascade-from parent id.
 
@@ -242,7 +242,7 @@ The parent id.
 
 > **set** **cascadeFrom**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:921](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L921)
+Defined in: [src/ui/editors/comboboxeditor.tsx:929](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L929)
 
 Sets the cascade-from parent id.
 
@@ -270,7 +270,7 @@ The parent editor id to cascade from.
 
 > **get** **cascadeValue**(): `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:967](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L967)
+Defined in: [src/ui/editors/comboboxeditor.tsx:975](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L975)
 
 Returns the cascade value.
 
@@ -284,7 +284,7 @@ The cascade value.
 
 > **set** **cascadeValue**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:985](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L985)
+Defined in: [src/ui/editors/comboboxeditor.tsx:993](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L993)
 
 Sets the cascade value.
 
@@ -332,7 +332,7 @@ Returns a Fluent(this.domNode) object
 
 > **get** **filterField**(): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1001](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1001)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1009](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1009)
 
 Returns the filter field name.
 
@@ -346,7 +346,7 @@ The filter field.
 
 > **set** **filterField**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1015](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1015)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1023](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1023)
 
 Sets the filter field name.
 
@@ -374,7 +374,7 @@ The field name used for filtering.
 
 > **get** **filterValue**(): `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1031](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1031)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1039](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1039)
 
 Returns the filter value.
 
@@ -388,7 +388,7 @@ The filter value.
 
 > **set** **filterValue**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1049](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1049)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1057](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1057)
 
 Sets the filter value.
 
@@ -416,7 +416,7 @@ The filter value to apply.
 
 > **get** `protected` **itemById**(): `object`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:448](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L448)
+Defined in: [src/ui/editors/comboboxeditor.tsx:456](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L456)
 
 ##### Returns
 
@@ -426,7 +426,7 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:448](https://github.com/serenity-
 
 > **set** `protected` **itemById**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:455](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L455)
+Defined in: [src/ui/editors/comboboxeditor.tsx:463](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L463)
 
 ##### Parameters
 
@@ -448,7 +448,7 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:455](https://github.com/serenity-
 
 > **get** **items**(): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`TItem`\>[]
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:429](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L429)
+Defined in: [src/ui/editors/comboboxeditor.tsx:437](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L437)
 
 Returns the items in the editor.
 
@@ -462,7 +462,7 @@ The items.
 
 > **set** **items**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:438](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L438)
+Defined in: [src/ui/editors/comboboxeditor.tsx:446](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L446)
 
 Sets the items in the editor.
 
@@ -550,7 +550,7 @@ Sets whether the editor is read-only.
 
 > **get** **selectedItem**(): `TItem`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:750](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L750)
+Defined in: [src/ui/editors/comboboxeditor.tsx:758](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L758)
 
 Returns the currently selected item.
 
@@ -572,7 +572,7 @@ The selected item, or null.
 
 > **get** **selectedItems**(): `TItem`[]
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:764](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L764)
+Defined in: [src/ui/editors/comboboxeditor.tsx:772](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L772)
 
 Returns the currently selected items.
 
@@ -594,7 +594,7 @@ The selected items.
 
 > **get** **selectionLoadState**(): `"error"` \| `"loading"` \| `"idle"`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L150)
+Defined in: [src/ui/editors/comboboxeditor.tsx:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L158)
 
 Returns the current state of the initial selection load.
 "idle" means there is no pending or failed load. It does not guarantee
@@ -616,7 +616,7 @@ that an item is currently selected.
 
 > **get** **text**(): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:824](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L824)
+Defined in: [src/ui/editors/comboboxeditor.tsx:832](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L832)
 
 Returns the display text of the current selection.
 
@@ -638,7 +638,7 @@ The comma-joined display text of the selected item(s).
 
 > **get** **value**(): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:721](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L721)
+Defined in: [src/ui/editors/comboboxeditor.tsx:729](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L729)
 
 Returns the current value.
 
@@ -652,7 +652,7 @@ The value.
 
 > **set** **value**(`v`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:742](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L742)
+Defined in: [src/ui/editors/comboboxeditor.tsx:750](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L750)
 
 Sets the current value.
 
@@ -680,7 +680,7 @@ The single value to set.
 
 > **get** **values**(): `string`[]
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:791](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L791)
+Defined in: [src/ui/editors/comboboxeditor.tsx:799](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L799)
 
 Returns the current values.
 
@@ -694,7 +694,7 @@ The values.
 
 > **set** **values**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:805](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L805)
+Defined in: [src/ui/editors/comboboxeditor.tsx:813](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L813)
 
 Sets the current values.
 
@@ -720,7 +720,7 @@ The array of selected values to set.
 
 > `protected` **abortPendingQuery**(): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:319](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L319)
+Defined in: [src/ui/editors/comboboxeditor.tsx:327](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L327)
 
 Aborts any pending search query.
 
@@ -756,7 +756,7 @@ Adds the widget's CSS class to its DOM node.
 
 > `protected` **addInplaceCreate**(`addTitle`, `editTitle`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:506](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L506)
+Defined in: [src/ui/editors/comboboxeditor.tsx:514](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L514)
 
 Adds the in-place create button.
 
@@ -788,7 +788,7 @@ Title for the edit button.
 
 > **addItem**(`item`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:477](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L477)
+Defined in: [src/ui/editors/comboboxeditor.tsx:485](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L485)
 
 Adds an item to the editor.
 
@@ -814,7 +814,7 @@ The item to add.
 
 > **addOption**(`key`, `text`, `source?`, `disabled?`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:492](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L492)
+Defined in: [src/ui/editors/comboboxeditor.tsx:500](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L500)
 
 Adds an option to the editor.
 
@@ -952,7 +952,7 @@ The callback to run after rendering.
 
 > `protected` **allowClear**(): `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:303](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L303)
+Defined in: [src/ui/editors/comboboxeditor.tsx:311](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L311)
 
 Whether the selection can be cleared.
 
@@ -972,7 +972,7 @@ True when clear is allowed.
 
 > `protected` **asyncSearch**(`query`): `PromiseLike`\<[`ComboboxSearchResult`](../interfaces/ComboboxSearchResult.md)\<[`FilterOperator`](../interfaces/FilterOperator.md)\>\>
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L138)
+Defined in: [src/ui/editors/comboboxeditor.tsx:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L146)
 
 Performs an asynchronous search.
 
@@ -1034,7 +1034,7 @@ A [Fluent](../functions/Fluent.md) wrapper for the matching element.
 
 > `protected` **cascadeItems**(`items`): [`FilterOperator`](../interfaces/FilterOperator.md)[]
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1058](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1058)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1066](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1066)
 
 Filters items by the cascade value.
 
@@ -1115,7 +1115,7 @@ The change event handler.
 
 > **clearItems**(): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L465)
+Defined in: [src/ui/editors/comboboxeditor.tsx:473](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L473)
 
 Clears all items from the editor.
 
@@ -1133,7 +1133,7 @@ Clears all items from the editor.
 
 > `protected` **createEditDialog**(`callback`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1136)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1144)
 
 Creates an edit dialog for in-place add.
 
@@ -1180,9 +1180,9 @@ True to defer rendering.
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L119)
+Defined in: [src/ui/editors/comboboxeditor.tsx:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L123)
 
-Disposes the combobox and delegates to the base destroy.
+Disposes the combobox, unbinds the cascade link and delegates to the base destroy.
 
 #### Returns
 
@@ -1198,7 +1198,7 @@ Disposes the combobox and delegates to the base destroy.
 
 > `protected` **editDialogDataChange**(): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1182)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1190)
 
 Hook invoked when the edit dialog data changes.
 
@@ -1236,7 +1236,7 @@ Null.
 
 > **ensureSelectionLoaded**(): `Promise`\<`void`\>
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L160)
+Defined in: [src/ui/editors/comboboxeditor.tsx:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L168)
 
 Waits for the current initial selection load, if necessary.
 
@@ -1258,7 +1258,7 @@ pending load.
 
 > `protected` **filterItems**(`items`): [`FilterOperator`](../interfaces/FilterOperator.md)[]
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1085](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1085)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1093](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1093)
 
 Filters items by the filter value.
 
@@ -1320,7 +1320,7 @@ The matching element, or null if not found.
 
 > `protected` **get\_cascadeField**(): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:929](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L929)
+Defined in: [src/ui/editors/comboboxeditor.tsx:937](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L937)
 
 Returns the cascade field name.
 
@@ -1340,7 +1340,7 @@ The cascade field.
 
 > `protected` **get\_cascadeFrom**(): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:896](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L896)
+Defined in: [src/ui/editors/comboboxeditor.tsx:904](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L904)
 
 Returns the cascade-from parent id.
 
@@ -1360,7 +1360,7 @@ The parent id.
 
 > `protected` **get\_cascadeValue**(): `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:959](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L959)
+Defined in: [src/ui/editors/comboboxeditor.tsx:967](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L967)
 
 Returns the cascade value.
 
@@ -1380,7 +1380,7 @@ The cascade value.
 
 > **get\_delimited**(): `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:421](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L421)
+Defined in: [src/ui/editors/comboboxeditor.tsx:429](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L429)
 
 Returns whether the value is delimited.
 
@@ -1400,7 +1400,7 @@ True when delimited.
 
 > `protected` **get\_filterField**(): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:993](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L993)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1001](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1001)
 
 Returns the filter field name.
 
@@ -1420,7 +1420,7 @@ The filter field.
 
 > `protected` **get\_filterValue**(): `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1023](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1023)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1031](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1031)
 
 Returns the filter value.
 
@@ -1440,7 +1440,7 @@ The filter value.
 
 > `protected` **get\_itemByKey**(): `object`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:676](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L676)
+Defined in: [src/ui/editors/comboboxeditor.tsx:684](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L684)
 
 Returns the item-by-id map.
 
@@ -1460,7 +1460,7 @@ The item map.
 
 > `protected` **get\_items**(): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<[`FilterOperator`](../interfaces/FilterOperator.md)\>[]
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:668](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L668)
+Defined in: [src/ui/editors/comboboxeditor.tsx:676](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L676)
 
 Returns the items in the editor.
 
@@ -1480,7 +1480,7 @@ The items.
 
 > **get\_readOnly**(): `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:832](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L832)
+Defined in: [src/ui/editors/comboboxeditor.tsx:840](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L840)
 
 Returns whether the editor is read-only.
 
@@ -1500,7 +1500,7 @@ True when read-only.
 
 > `protected` **get\_text**(): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:813](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L813)
+Defined in: [src/ui/editors/comboboxeditor.tsx:821](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L821)
 
 Returns the display text of the current selection.
 
@@ -1520,7 +1520,7 @@ The text.
 
 > **get\_value**(): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:713](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L713)
+Defined in: [src/ui/editors/comboboxeditor.tsx:721](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L721)
 
 Returns the current value.
 
@@ -1540,7 +1540,7 @@ The value.
 
 > `protected` **get\_values**(): `string`[]
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:783](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L783)
+Defined in: [src/ui/editors/comboboxeditor.tsx:791](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L791)
 
 Returns the current values.
 
@@ -1560,7 +1560,7 @@ The values.
 
 > `protected` **getCascadeFromValue**(`parent`): `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:863](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L863)
+Defined in: [src/ui/editors/comboboxeditor.tsx:871](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L871)
 
 Returns the cascade value from a parent widget.
 
@@ -1588,7 +1588,7 @@ The cascade value.
 
 > `protected` **getComboboxContainer**(): `HTMLElement`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:660](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L660)
+Defined in: [src/ui/editors/comboboxeditor.tsx:668](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L668)
 
 Returns the combobox container element.
 
@@ -1628,7 +1628,7 @@ Combobox options.
 
 > **getCreateSearchChoice**(`getName`): (`s`) => `object`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:581](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L581)
+Defined in: [src/ui/editors/comboboxeditor.tsx:589](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L589)
 
 Returns a callback that creates a search choice for a term.
 
@@ -1734,7 +1734,7 @@ The matching attribute, or null.
 
 > `protected` **getDialogType**(): [`DialogType`](../type-aliases/DialogType.md) \| `PromiseLike`\<[`DialogType`](../type-aliases/DialogType.md)\>
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1111)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1119)
 
 Returns the dialog type used for in-place add.
 
@@ -1754,7 +1754,7 @@ The dialog type.
 
 > `protected` **getDialogTypeKey**(): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1124)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1132)
 
 [DEPRECATED] Override getDialogType() instead
 
@@ -1772,7 +1772,7 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:1124](https://github.com/serenity
 
 > **getEditValue**(`property`, `target`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:647](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L647)
+Defined in: [src/ui/editors/comboboxeditor.tsx:655](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L655)
 
 Gets the edit value into a target object.
 
@@ -1824,7 +1824,7 @@ A [Fluent](../functions/Fluent.md) wrapper for the grid field.
 
 > `protected` **getIconField**(): `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L260)
+Defined in: [src/ui/editors/comboboxeditor.tsx:268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L268)
 
 Gets the name of the icon field.
 
@@ -1844,7 +1844,7 @@ The name of the icon field.
 
 > `protected` **getIdField**(): `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L211)
+Defined in: [src/ui/editors/comboboxeditor.tsx:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L219)
 
 Returns the id field name.
 
@@ -1864,7 +1864,7 @@ The id field.
 
 > `protected` **getPageSize**(): `number`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L203)
+Defined in: [src/ui/editors/comboboxeditor.tsx:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L211)
 
 Returns the page size for paged searches.
 
@@ -1884,7 +1884,7 @@ The page size.
 
 > **getSelectedItemAsync**(): `Promise`\<[`FilterOperator`](../interfaces/FilterOperator.md)\>
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L168)
+Defined in: [src/ui/editors/comboboxeditor.tsx:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L176)
 
 Waits for the current initial selection load and returns the selected item.
 
@@ -1904,7 +1904,7 @@ The selected item, or null when nothing is selected.
 
 > **getSelectedItemsAsync**(): `Promise`\<[`FilterOperator`](../interfaces/FilterOperator.md)[]\>
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L177)
+Defined in: [src/ui/editors/comboboxeditor.tsx:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L185)
 
 Waits for the current initial selection load and returns the selected items.
 
@@ -1924,7 +1924,7 @@ The selected items.
 
 > `protected` **getTextField**(): `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L231)
+Defined in: [src/ui/editors/comboboxeditor.tsx:239](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L239)
 
 Returns the text field name.
 
@@ -1944,7 +1944,7 @@ The text field.
 
 > `protected` **getTypeDelay**(): `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L186)
+Defined in: [src/ui/editors/comboboxeditor.tsx:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L194)
 
 Returns the type delay for searching.
 
@@ -1964,7 +1964,7 @@ The delay in milliseconds.
 
 > `protected` **hasAsyncSource**(): `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L129)
+Defined in: [src/ui/editors/comboboxeditor.tsx:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L137)
 
 Whether the editor has an asynchronous item source.
 
@@ -2004,7 +2004,7 @@ This widget instance.
 
 > `protected` **initNewEntity**(`entity`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1152)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1160)
 
 Initializes a new entity with cascade/filter values.
 
@@ -2030,7 +2030,7 @@ The new entity.
 
 > `protected` **inplaceCreateClick**(`e`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1204)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1212](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1212)
 
 Handles the in-place create button click.
 
@@ -2074,7 +2074,7 @@ Renders the widget's contents and runs any queued after-render callbacks.
 
 > `protected` **isAutoComplete**(): `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:572](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L572)
+Defined in: [src/ui/editors/comboboxeditor.tsx:580](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L580)
 
 Whether arbitrary values are allowed.
 
@@ -2094,7 +2094,7 @@ True when auto-complete is enabled.
 
 > `protected` **isMultiple**(): `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:312](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L312)
+Defined in: [src/ui/editors/comboboxeditor.tsx:320](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L320)
 
 Whether multiple items can be selected.
 
@@ -2114,7 +2114,7 @@ True when multiple.
 
 > `protected` **itemDisabled**(`item`): `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:252](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L252)
+Defined in: [src/ui/editors/comboboxeditor.tsx:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L260)
 
 Whether an item is disabled.
 
@@ -2142,7 +2142,7 @@ True when disabled.
 
 > `protected` **itemIcon**(`item`): [`IconClassName`](../type-aliases/IconClassName.md)
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L269)
+Defined in: [src/ui/editors/comboboxeditor.tsx:277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L277)
 
 Returns the icon of an item.
 
@@ -2170,7 +2170,7 @@ The item icon.
 
 > `protected` **itemId**(`item`): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L220)
+Defined in: [src/ui/editors/comboboxeditor.tsx:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L228)
 
 Returns the id of an item.
 
@@ -2198,7 +2198,7 @@ The item id.
 
 > `protected` **itemText**(`item`): `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L240)
+Defined in: [src/ui/editors/comboboxeditor.tsx:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L248)
 
 Returns the display text of an item.
 
@@ -2246,7 +2246,7 @@ True if a legacy template was rendered.
 
 > `protected` **mapItem**(`item`): [`ComboboxItem`](../interfaces/ComboboxItem.md)
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:280](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L280)
+Defined in: [src/ui/editors/comboboxeditor.tsx:288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L288)
 
 Maps an item to a combobox item.
 
@@ -2274,7 +2274,7 @@ The combobox item.
 
 > `protected` **mapItems**(`items`): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`any`\>[]
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:295](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L295)
+Defined in: [src/ui/editors/comboboxeditor.tsx:303](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L303)
 
 Maps a list of items to combobox items.
 
@@ -2302,7 +2302,7 @@ The combobox items.
 
 > **openDropdown**(): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1276](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1276)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1284)
 
 Opens the combobox dropdown.
 
@@ -2360,7 +2360,7 @@ The rendered contents.
 
 > `protected` **set\_cascadeField**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:945](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L945)
+Defined in: [src/ui/editors/comboboxeditor.tsx:953](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L953)
 
 Sets the cascade field name.
 
@@ -2386,7 +2386,7 @@ The cascade field.
 
 > `protected` **set\_cascadeFrom**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:912](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L912)
+Defined in: [src/ui/editors/comboboxeditor.tsx:920](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L920)
 
 Sets the cascade-from parent id.
 
@@ -2412,7 +2412,7 @@ The parent id.
 
 > `protected` **set\_cascadeValue**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:975](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L975)
+Defined in: [src/ui/editors/comboboxeditor.tsx:983](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L983)
 
 Sets the cascade value and refreshes items.
 
@@ -2438,7 +2438,7 @@ The cascade value.
 
 > `protected` **set\_filterField**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1009](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1009)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1017](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1017)
 
 Sets the filter field name.
 
@@ -2464,7 +2464,7 @@ The filter field.
 
 > `protected` **set\_filterValue**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1039](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1039)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1047](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1047)
 
 Sets the filter value and refreshes items.
 
@@ -2490,7 +2490,7 @@ The filter value.
 
 > **set\_readOnly**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:851](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L851)
+Defined in: [src/ui/editors/comboboxeditor.tsx:859](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L859)
 
 Sets whether the editor is read-only.
 
@@ -2516,7 +2516,7 @@ True to enable read-only mode.
 
 > **set\_value**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:729](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L729)
+Defined in: [src/ui/editors/comboboxeditor.tsx:737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L737)
 
 Sets the current value.
 
@@ -2542,7 +2542,7 @@ The value to set.
 
 > `protected` **set\_values**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:799](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L799)
+Defined in: [src/ui/editors/comboboxeditor.tsx:807](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L807)
 
 Sets the current values.
 
@@ -2568,7 +2568,7 @@ The values to set.
 
 > `protected` **setCascadeFrom**(`value`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:873](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L873)
+Defined in: [src/ui/editors/comboboxeditor.tsx:881](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L881)
 
 Sets the cascade-from parent id.
 
@@ -2594,7 +2594,7 @@ The parent id.
 
 > `protected` **setEditDialogReadOnly**(`dialog`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1170)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1178)
 
 Sets the edit dialog to read-only.
 
@@ -2620,7 +2620,7 @@ The dialog.
 
 > **setEditValue**(`source`, `property`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:632](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L632)
+Defined in: [src/ui/editors/comboboxeditor.tsx:640](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L640)
 
 Sets the edit value from a source object.
 
@@ -2652,7 +2652,7 @@ The property item.
 
 > `protected` **setTermOnNewEntity**(`entity`, `term`, `dialog`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1191)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1199](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1199)
 
 Sets the search term on a new entity.
 
@@ -2735,7 +2735,7 @@ The continuation invoked with the result.
 
 > `protected` **updateItems**(): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:1104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1104)
+Defined in: [src/ui/editors/comboboxeditor.tsx:1112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L1112)
 
 Refreshes the items in the editor.
 
@@ -2773,7 +2773,7 @@ An [IdPrefixType](../type-aliases/IdPrefixType.md) proxy for this widget's id pr
 
 > `protected` **useInplaceAdd**(): `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:561](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L561)
+Defined in: [src/ui/editors/comboboxeditor.tsx:569](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L569)
 
 Whether in-place add is enabled.
 
@@ -2832,7 +2832,7 @@ The created widget instance.
 
 > `static` **createDefaultElement**(): `HTMLInputElement`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L75)
+Defined in: [src/ui/editors/comboboxeditor.tsx:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L79)
 
 Creates the default hidden input element for the combobox.
 
@@ -2852,7 +2852,7 @@ The hidden input element.
 
 > `static` **filterByText**\<`TItem`\>(`items`, `getText`, `term`): `TItem`[]
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:687](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L687)
+Defined in: [src/ui/editors/comboboxeditor.tsx:695](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L695)
 
 Filters items by text, matching the term against the item text.
 

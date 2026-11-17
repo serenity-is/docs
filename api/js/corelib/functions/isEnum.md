@@ -4,7 +4,7 @@
 
 > **isEnum**(`type`): `boolean`
 
-Defined in: [src/base/system.ts:374](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L374)
+Defined in: [src/base/system.ts:478](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L478)
 
 Check if a type is an enum. A type is considered an enum if it is not a function
 and it's [Symbol.typeInfo].typeKind is "enum".

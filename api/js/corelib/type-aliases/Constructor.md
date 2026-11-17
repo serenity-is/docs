@@ -4,7 +4,7 @@
 
 > **Constructor**\<`T`\> = (...`args`) => `T`
 
-Defined in: [src/index.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/index.ts#L135)
+Defined in: [src/index.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/index.ts#L138)
 
 ## Type Parameters
 

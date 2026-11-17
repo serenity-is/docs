@@ -2,7 +2,7 @@
 
 # Interface: QuickFilterItemData\<TWidget\>
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L27)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L28)
 
 Per-item data attached to a quick filter element for state persistence and display.
 
@@ -20,7 +20,7 @@ Widget type that backs the quick filter.
 
 > `optional` **displayText**: (`w`, `l`) => `string`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L29)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L30)
 
 Returns the human-readable text for the active filter display.
 
@@ -44,7 +44,7 @@ Returns the human-readable text for the active filter display.
 
 > `optional` **loadState**: (`w`, `state`) => `void`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L33)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L34)
 
 Restores persisted widget state.
 
@@ -68,7 +68,7 @@ Restores persisted widget state.
 
 > `optional` **saveState**: (`w`) => `any`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L31)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L32)
 
 Persists the widget state for grid settings.
 

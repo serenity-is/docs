@@ -4,7 +4,7 @@
 
 > **handleScriptDataError**(`name`, `status?`, `statusText?`, `shouldThrow?`): `string`
 
-Defined in: [src/base/scriptdata.ts:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L265)
+Defined in: [src/base/scriptdata.ts:278](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L278)
 
 Shows a suitable error message for errors occurred during loading of a dynamic script data.
 

@@ -2,7 +2,7 @@
 
 # Interface: ComboboxEditorOptions
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L61)
+Defined in: [src/ui/editors/comboboxeditor.tsx:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L65)
 
 Options for the [ComboboxEditor](../classes/ComboboxEditor.md).
 
@@ -35,7 +35,7 @@ Whether the selection can be cleared.
 
 > `optional` **autoComplete**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L55)
+Defined in: [src/ui/editors/comboboxeditor.tsx:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L57)
 
 Whether arbitrary values are allowed.
 
@@ -49,7 +49,7 @@ Whether arbitrary values are allowed.
 
 > `optional` **cascadeField**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L35)
+Defined in: [src/ui/editors/comboboxeditor.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L37)
 
 Field used for cascading.
 
@@ -63,7 +63,7 @@ Field used for cascading.
 
 > `optional` **cascadeFrom**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
+Defined in: [src/ui/editors/comboboxeditor.tsx:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L35)
 
 Id of the parent editor to cascade from.
 
@@ -77,7 +77,7 @@ Id of the parent editor to cascade from.
 
 > `optional` **cascadeValue**: `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L37)
+Defined in: [src/ui/editors/comboboxeditor.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L39)
 
 Value used for cascading.
 
@@ -105,7 +105,7 @@ Whether multiple items can be selected.
 
 > `optional` **dialogType**: `string` \| [`DialogType`](../type-aliases/DialogType.md) \| `PromiseLike`\<[`DialogType`](../type-aliases/DialogType.md)\>
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L53)
+Defined in: [src/ui/editors/comboboxeditor.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L55)
 
 Dialog type used for in-place add.
 
@@ -119,7 +119,7 @@ Dialog type used for in-place add.
 
 > `optional` **filterField**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L39)
+Defined in: [src/ui/editors/comboboxeditor.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L41)
 
 Field used for filtering.
 
@@ -133,7 +133,7 @@ Field used for filtering.
 
 > `optional` **filterValue**: `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L41)
+Defined in: [src/ui/editors/comboboxeditor.tsx:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L43)
 
 Value used for filtering.
 
@@ -143,11 +143,25 @@ Value used for filtering.
 
 ***
 
+### iconField?
+
+> `optional` **iconField**: `string`
+
+Defined in: [src/ui/editors/comboboxeditor.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L27)
+
+Name of the item field containing the icon class.
+
+#### Inherited from
+
+[`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`iconField`](ComboboxCommonOptions.md#iconfield)
+
+***
+
 ### inplaceAdd?
 
 > `optional` **inplaceAdd**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L49)
+Defined in: [src/ui/editors/comboboxeditor.tsx:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L51)
 
 Whether in-place add is enabled.
 
@@ -161,7 +175,7 @@ Whether in-place add is enabled.
 
 > `optional` **inplaceAddPermission**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L51)
+Defined in: [src/ui/editors/comboboxeditor.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L53)
 
 Permission required for in-place add.
 
@@ -196,3 +210,17 @@ Whether multiple items can be selected.
 #### Inherited from
 
 [`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`multiple`](ComboboxCommonOptions.md#multiple)
+
+***
+
+### openDialogAsPanel?
+
+> `optional` **openDialogAsPanel**: `boolean`
+
+Defined in: [src/ui/editors/comboboxeditor.tsx:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L59)
+
+Whether the in-place add dialog opens as a panel.
+
+#### Inherited from
+
+[`ComboboxInplaceAddOptions`](ComboboxInplaceAddOptions.md).[`openDialogAsPanel`](ComboboxInplaceAddOptions.md#opendialogaspanel)

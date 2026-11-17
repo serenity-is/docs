@@ -4,7 +4,7 @@
 
 > **peekTypeInfo**(`type`): [`TypeInfo`](../type-aliases/TypeInfo.md)\<`string`\>
 
-Defined in: [src/base/system-internal.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L133)
+Defined in: [src/base/system-internal.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L137)
 
 ## Parameters
 

@@ -64,6 +64,20 @@ Text for the empty option.
 
 ***
 
+### iconField?
+
+> `optional` **iconField**: `string`
+
+Defined in: [src/ui/editors/comboboxeditor.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L27)
+
+Name of the item field containing the icon class.
+
+#### Inherited from
+
+[`SelectEditorOptions`](SelectEditorOptions.md).[`iconField`](SelectEditorOptions.md#iconfield)
+
+***
+
 ### items?
 
 > `optional` **items**: `any`[]

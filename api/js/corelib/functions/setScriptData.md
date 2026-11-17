@@ -4,7 +4,7 @@
 
 > **setScriptData**(`name`, `value`): `void`
 
-Defined in: [src/base/scriptdata.ts:352](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L352)
+Defined in: [src/base/scriptdata.ts:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L365)
 
 Stores a script data value in the in-memory cache and dispatches a `scriptdatachange.<name>` DOM event.
 

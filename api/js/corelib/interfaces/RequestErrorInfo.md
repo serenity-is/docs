@@ -2,7 +2,7 @@
 
 # Interface: RequestErrorInfo
 
-Defined in: [src/base/servicetypes.ts:263](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L263)
+Defined in: [src/base/servicetypes.ts:398](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L398)
 
 HTTP-level error details supplied to [ServiceOptions.onError](ServiceOptions.md#onerror) alongside the service error payload.
 
@@ -12,7 +12,7 @@ HTTP-level error details supplied to [ServiceOptions.onError](ServiceOptions.md#
 
 > `optional` **responseText**: `string`
 
-Defined in: [src/base/servicetypes.ts:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L269)
+Defined in: [src/base/servicetypes.ts:404](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L404)
 
 Raw response body text when the response could not be parsed as JSON.
 
@@ -22,7 +22,7 @@ Raw response body text when the response could not be parsed as JSON.
 
 > `optional` **status**: `number`
 
-Defined in: [src/base/servicetypes.ts:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L265)
+Defined in: [src/base/servicetypes.ts:400](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L400)
 
 HTTP status code (e.g. `403`, `500`).
 
@@ -32,6 +32,6 @@ HTTP status code (e.g. `403`, `500`).
 
 > `optional` **statusText**: `string`
 
-Defined in: [src/base/servicetypes.ts:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L267)
+Defined in: [src/base/servicetypes.ts:402](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L402)
 
 HTTP status text (e.g. `"Forbidden"`).

@@ -4,4 +4,4 @@
 
 > `const` **DateTimeEditorTexts**: *typeof* `DateTimeEditor` = `textsProxy.Controls.DateTimeEditor`
 
-Defined in: [src/base/texts/webtexts.ts:284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/texts/webtexts.ts#L284)
+Defined in: [src/base/texts/webtexts.ts:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/texts/webtexts.ts#L285)

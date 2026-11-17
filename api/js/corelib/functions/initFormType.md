@@ -4,7 +4,7 @@
 
 > **initFormType**(`typ`, `nameWidgetPairs`): `void`
 
-Defined in: [src/base/system.ts:386](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L386)
+Defined in: [src/base/system.ts:490](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L490)
 
 Initialize a form type. This is used in the XYZForm.ts files that are generated
 by the Serenity server typings code generator. It defines getters that call this.w() to

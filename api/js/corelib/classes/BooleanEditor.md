@@ -2,7 +2,7 @@
 
 # Class: BooleanEditor\<P\>
 
-Defined in: [src/ui/editors/booleaneditor.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L9)
+Defined in: [src/ui/editors/booleaneditor.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L36)
 
 An editor that renders a checkbox for boolean values.
 
@@ -14,7 +14,7 @@ An editor that renders a checkbox for boolean values.
 
 ### P
 
-`P` = \{ \}
+`P` *extends* [`BooleanEditorOptions`](../interfaces/BooleanEditorOptions.md) = [`BooleanEditorOptions`](../interfaces/BooleanEditorOptions.md)
 
 Widget props type.
 
@@ -24,9 +24,9 @@ Widget props type.
 
 > **new BooleanEditor**\<`P`\>(`props`): `BooleanEditor`\<`P`\>
 
-Defined in: [src/ui/editors/editorwidget.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L34)
+Defined in: [src/ui/editors/booleaneditor.tsx:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L50)
 
-Creates an editor widget.
+Creates a boolean editor.
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Widget props.
 
 `BooleanEditor`\<`P`\>
 
-#### Inherited from
+#### Overrides
 
 [`EditorWidget`](EditorWidget.md).[`constructor`](EditorWidget.md#constructor)
 
@@ -50,7 +50,7 @@ Widget props.
 
 > `readonly` **domNode**: `HTMLInputElement`
 
-Defined in: [src/ui/editors/booleaneditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L17)
+Defined in: [src/ui/editors/booleaneditor.tsx:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L44)
 
 The checkbox input element that backs the editor.
 
@@ -106,7 +106,7 @@ A unique name for this widget instance, used for event namespacing.
 
 > `static` **\[typeInfo\]**: [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/editors/booleaneditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L10)
+Defined in: [src/ui/editors/booleaneditor.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L37)
 
 #### Overrides
 
@@ -212,7 +212,7 @@ Sets whether the editor is read-only.
 
 > **get** **value**(): `boolean`
 
-Defined in: [src/ui/editors/booleaneditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L23)
+Defined in: [src/ui/editors/booleaneditor.tsx:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L65)
 
 Returns the current boolean value.
 
@@ -226,7 +226,7 @@ True when the checkbox is checked.
 
 > **set** **value**(`value`): `void`
 
-Defined in: [src/ui/editors/booleaneditor.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L37)
+Defined in: [src/ui/editors/booleaneditor.tsx:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L79)
 
 Sets the boolean value.
 
@@ -521,7 +521,7 @@ The matching element, or null if not found.
 
 > `protected` **get\_value**(): `boolean`
 
-Defined in: [src/ui/editors/booleaneditor.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L31)
+Defined in: [src/ui/editors/booleaneditor.tsx:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L73)
 
 Returns the current boolean value.
 
@@ -715,7 +715,7 @@ The rendered contents.
 
 > `protected` **set\_value**(`value`): `void`
 
-Defined in: [src/ui/editors/booleaneditor.tsx:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L43)
+Defined in: [src/ui/editors/booleaneditor.tsx:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L85)
 
 Sets the boolean value.
 
@@ -841,7 +841,7 @@ The created widget instance.
 
 > `static` **createDefaultElement**(): `HTMLInputElement`
 
-Defined in: [src/ui/editors/booleaneditor.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L14)
+Defined in: [src/ui/editors/booleaneditor.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/booleaneditor.tsx#L41)
 
 Creates the default checkbox input element.
 

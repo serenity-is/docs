@@ -4,7 +4,7 @@
 
 > **addCustomAttribute**(`type`, `attr`): `void`
 
-Defined in: [src/base/system.ts:489](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L489)
+Defined in: [src/base/system.ts:593](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L593)
 
 Attaches a custom attribute instance to a type's metadata.
 JavaScript has no native attribute support, so Serenity stores attributes on `typeInfo.customAttributes`.

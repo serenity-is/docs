@@ -26,7 +26,7 @@ Whether this is the after phase of the operation.
 
 > **dataGrid**: [`DataGrid`](../classes/DataGrid.md)\<`any`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1862](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1862)
+Defined in: [src/ui/datagrid/datagrid.tsx:1863](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1863)
 
 The data grid that raised the event.
 

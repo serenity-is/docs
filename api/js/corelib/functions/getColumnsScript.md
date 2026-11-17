@@ -4,7 +4,7 @@
 
 > **getColumnsScript**(`key`): `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
 
-Defined in: [src/base/scriptdata.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L214)
+Defined in: [src/base/scriptdata.ts:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L227)
 
 Loads a `ColumnsScript` bundle for the given key.
 

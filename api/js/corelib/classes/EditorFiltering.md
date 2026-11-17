@@ -290,9 +290,10 @@ The error.
 
 > **createEditor**(): `void`
 
-Defined in: [src/ui/filtering/editorfiltering.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/editorfiltering.ts#L84)
+Defined in: [src/ui/filtering/editorfiltering.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/editorfiltering.ts#L98)
 
-Creates the editor for the current operator.
+Creates the editor for the current operator. If its type has to be loaded, it is created when the
+type is loaded, and until then the state methods work with the state that will be applied to it.
 
 #### Returns
 
@@ -462,9 +463,9 @@ The editor options.
 
 > **getEditorText**(): `string`
 
-Defined in: [src/ui/filtering/basefiltering.ts:333](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L333)
+Defined in: [src/ui/filtering/editorfiltering.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/editorfiltering.ts#L182)
 
-Returns the display text of the current editor value.
+Returns the display text of the current editor value, which is the state while the editor is loading.
 
 #### Returns
 
@@ -472,7 +473,7 @@ Returns the display text of the current editor value.
 
 The editor text.
 
-#### Inherited from
+#### Overrides
 
 [`BaseEditorFiltering`](BaseEditorFiltering.md).[`getEditorText`](BaseEditorFiltering.md#geteditortext)
 
@@ -482,7 +483,7 @@ The editor text.
 
 > **getEditorValue**(): `any`
 
-Defined in: [src/ui/filtering/baseeditorfiltering.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/baseeditorfiltering.ts#L124)
+Defined in: [src/ui/filtering/editorfiltering.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/editorfiltering.ts#L167)
 
 Returns the current editor value.
 
@@ -492,7 +493,7 @@ Returns the current editor value.
 
 The editor value.
 
-#### Inherited from
+#### Overrides
 
 [`BaseEditorFiltering`](BaseEditorFiltering.md).[`getEditorValue`](BaseEditorFiltering.md#geteditorvalue)
 
@@ -550,7 +551,7 @@ The title.
 
 > **initQuickFilter**(`filter`): `void`
 
-Defined in: [src/ui/filtering/editorfiltering.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/editorfiltering.ts#L111)
+Defined in: [src/ui/filtering/editorfiltering.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/editorfiltering.ts#L198)
 
 Initializes a quick filter using the editor type.
 
@@ -596,9 +597,9 @@ True when the field is not required.
 
 > **loadState**(`state`): `void`
 
-Defined in: [src/ui/filtering/baseeditorfiltering.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/baseeditorfiltering.ts#L95)
+Defined in: [src/ui/filtering/editorfiltering.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/editorfiltering.ts#L148)
 
-Loads persisted state into the editor.
+Loads persisted state into the editor, or keeps it until the editor is created.
 
 #### Parameters
 
@@ -612,7 +613,7 @@ The persisted state.
 
 `void`
 
-#### Inherited from
+#### Overrides
 
 [`BaseEditorFiltering`](BaseEditorFiltering.md).[`loadState`](BaseEditorFiltering.md#loadstate)
 
@@ -650,7 +651,7 @@ The format string.
 
 > **saveState**(): `any`
 
-Defined in: [src/ui/filtering/baseeditorfiltering.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/baseeditorfiltering.ts#L112)
+Defined in: [src/ui/filtering/editorfiltering.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/editorfiltering.ts#L159)
 
 Saves the editor state for persistence.
 
@@ -660,7 +661,7 @@ Saves the editor state for persistence.
 
 The saved state.
 
-#### Inherited from
+#### Overrides
 
 [`BaseEditorFiltering`](BaseEditorFiltering.md).[`saveState`](BaseEditorFiltering.md#savestate)
 
@@ -768,7 +769,7 @@ True when an editor is used.
 
 > `protected` **useIdField**(): `boolean`
 
-Defined in: [src/ui/filtering/editorfiltering.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/editorfiltering.ts#L103)
+Defined in: [src/ui/filtering/editorfiltering.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/editorfiltering.ts#L190)
 
 Whether to use the id field for the criteria.
 

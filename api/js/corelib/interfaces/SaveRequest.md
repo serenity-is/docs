@@ -2,7 +2,7 @@
 
 # Interface: SaveRequest\<TEntity\>
 
-Defined in: [src/base/servicetypes.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L39)
+Defined in: [src/base/servicetypes.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L41)
 
 Request DTO for `Create` / `Update` service handlers.
 
@@ -24,7 +24,7 @@ Row / entity type being saved.
 
 > `optional` **Entity**: `TEntity`
 
-Defined in: [src/base/servicetypes.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L43)
+Defined in: [src/base/servicetypes.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L45)
 
 Entity fields to persist. For updates only modified fields need to be sent, depending on handler.
 
@@ -34,7 +34,7 @@ Entity fields to persist. For updates only modified fields need to be sent, depe
 
 > `optional` **EntityId**: `any`
 
-Defined in: [src/base/servicetypes.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L41)
+Defined in: [src/base/servicetypes.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L43)
 
 Primary key of the entity to update; omit for inserts (server generates the key).
 
@@ -44,7 +44,7 @@ Primary key of the entity to update; omit for inserts (server generates the key)
 
 > `optional` **Localizations**: `object`
 
-Defined in: [src/base/servicetypes.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L45)
+Defined in: [src/base/servicetypes.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L47)
 
 Per-language patches for localizable rows, keyed by language ID (e.g. `{ "en": { Name: "Hello" } }`).
 

@@ -4,7 +4,7 @@
 
 > **reloadLookupAsync**\<`TItem`\>(`key`): `Promise`\<[`Lookup`](../classes/Lookup.md)\<`TItem`\>\>
 
-Defined in: [src/base/scriptdata.ts:328](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L328)
+Defined in: [src/base/scriptdata.ts:341](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L341)
 
 Forces a reload of a lookup from the server, bypassing the client-side cache.
 Note this only clears the browser cache entry; it does not invalidate server-side caches.

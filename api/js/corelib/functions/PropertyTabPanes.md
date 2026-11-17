@@ -4,7 +4,7 @@
 
 > **PropertyTabPanes**(`_?`): `HTMLElement`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:335](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L335)
+Defined in: [src/ui/widgets/propertygrid.tsx:351](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L351)
 
 Renders the container that holds the tab panes.
 

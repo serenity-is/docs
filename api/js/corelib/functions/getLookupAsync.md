@@ -4,7 +4,7 @@
 
 > **getLookupAsync**\<`TItem`\>(`key`): `Promise`\<[`Lookup`](../classes/Lookup.md)\<`TItem`\>\>
 
-Defined in: [src/base/scriptdata.ts:233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L233)
+Defined in: [src/base/scriptdata.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L246)
 
 Loads a lookup by key.
 

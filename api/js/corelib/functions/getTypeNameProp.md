@@ -4,7 +4,7 @@
 
 > **getTypeNameProp**(`type`): `string`
 
-Defined in: [src/base/system-internal.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L145)
+Defined in: [src/base/system-internal.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L149)
 
 ## Parameters
 

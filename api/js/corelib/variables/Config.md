@@ -85,9 +85,9 @@ set to `false` to allow Unicode/IDN addresses.
 
 ### lazyTypeLoader()
 
-> **lazyTypeLoader**: (`typeKey`, `kind`) => `any`
+> **lazyTypeLoader**: (`typeKey`, `kind`, `availabilityCheck?`) => `any`
 
-Optional callback to lazily resolve a type that is not yet in the type registry.
+Callback to lazily resolve a type that is not yet in the type registry.
 
 #### Parameters
 
@@ -103,18 +103,28 @@ Full type name being requested, e.g. `"MyApp.MyEditor"`.
 
 Category of the type, used to narrow search/loading.
 
+##### availabilityCheck?
+
+`boolean`
+
+When true, only checks whether the type can be loaded, without loading it, and
+should synchronously return a boolean. As the result is only checked for being truthy, a loader that doesn't
+support this is considered to have a type whenever it returns something for it, which also loads it.
+
 #### Returns
 
 `any`
 
-The resolved type, a promise for it, or `null` if unavailable.
+The resolved type, a promise for it, or `null` if unavailable. With `availabilityCheck`, whether
+the type can be loaded.
 
 #### Remarks
 
 Useful with code-splitting / lazy chunk loading. Called with the requested type key
 and a `kind` hint (`"dialog"`, `"editor"`, `"enum"`, `"formatter"`, `"filtering"`, …).
 May return the type synchronously or a `Promise` resolving to it; returning `null`/`undefined`
-signals "not found".
+signals "not found". By default, it loads the types implementing `LazyLoadInclude` that are listed
+in the JSON block rendered by `Html.LazyTypes()`, so wrap the existing value when overriding it.
 
 #### Example
 

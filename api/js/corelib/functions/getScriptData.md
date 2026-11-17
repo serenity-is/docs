@@ -4,7 +4,7 @@
 
 > **getScriptData**\<`TData`\>(`name`, `reload?`): `Promise`\<`TData`\>
 
-Defined in: [src/base/scriptdata.ts:140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L140)
+Defined in: [src/base/scriptdata.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L153)
 
 Returns cached script data if available, otherwise fetches it via `~/DynamicData/` and caches the result.
 

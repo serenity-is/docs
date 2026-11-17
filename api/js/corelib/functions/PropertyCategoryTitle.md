@@ -4,7 +4,7 @@
 
 > **PropertyCategoryTitle**(`props`): `HTMLElement`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L202)
+Defined in: [src/ui/widgets/propertygrid.tsx:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L218)
 
 Renders a category title with localized text.
 

@@ -366,6 +366,12 @@ Default persistence storage. Default is null
 
 Default row height. Default is null.
 
+#### serverAggregates
+
+> **serverAggregates**: `boolean`
+
+Controls whether the views of the grids ask the server for the aggregates of the summary options, e.g. the totals in the footer, from all the rows and not only the page. Grids can override it in getViewOptions. Default is null, which is false.
+
 ***
 
 ### isComponent
@@ -396,7 +402,7 @@ Static event raised after any grid is initialized.
 
 > **get** **allColumns**(): `Column`\<`any`\>[]
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1837](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1837)
+Defined in: [src/ui/datagrid/datagrid.tsx:1838](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1838)
 
 All columns including hidden ones.
 
@@ -414,7 +420,7 @@ All columns from the underlying SleekGrid.
 
 > **get** **columns**(): `Column`\<`TItem`\>[]
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1839](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1839)
+Defined in: [src/ui/datagrid/datagrid.tsx:1840](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1840)
 
 The currently visible columns.
 
@@ -450,7 +456,7 @@ Returns a Fluent(this.domNode) object
 
 > **get** **initialSettings**(): [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1841](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1841)
+Defined in: [src/ui/datagrid/datagrid.tsx:1842](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1842)
 
 The initial persisted settings captured at startup.
 
@@ -462,7 +468,7 @@ The initial persisted settings captured at startup.
 
 > **set** **initialSettings**(`value`): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1843](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1843)
+Defined in: [src/ui/datagrid/datagrid.tsx:1844](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1844)
 
 Sets the initial persisted settings.
 
@@ -504,7 +510,7 @@ Returns the widget's props/options.
 
 > **get** **readOnly**(): `boolean`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1341](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1341)
+Defined in: [src/ui/datagrid/datagrid.tsx:1342](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1342)
 
 Whether the grid is in read-only mode.
 
@@ -518,7 +524,7 @@ Whether the grid is in read-only mode.
 
 > **set** **readOnly**(`value`): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1349](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1349)
+Defined in: [src/ui/datagrid/datagrid.tsx:1350](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1350)
 
 Sets whether the grid is in read-only mode.
 
@@ -542,7 +548,7 @@ Sets whether the grid is in read-only mode.
 
 > **get** **sleekGrid**(): `ISleekGrid`\<`TItem`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1804](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1804)
+Defined in: [src/ui/datagrid/datagrid.tsx:1805](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1805)
 
 The underlying SleekGrid instance.
 
@@ -556,7 +562,7 @@ The current SleekGrid instance.
 
 > **set** **sleekGrid**(`value`): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1809](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1809)
+Defined in: [src/ui/datagrid/datagrid.tsx:1810](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1810)
 
 Sets the underlying SleekGrid instance.
 
@@ -580,7 +586,7 @@ SleekGrid instance to set.
 
 > **get** **slickGrid**(): `ISleekGrid`\<`TItem`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1815](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1815)
+Defined in: [src/ui/datagrid/datagrid.tsx:1816](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1816)
 
 ##### Deprecated
 
@@ -676,7 +682,7 @@ Scale factor (e.g. `1.1` for 10% wider).
 
 > **get** `static` **defaultPersistanceStorage**(): [`SettingStorage`](../interfaces/SettingStorage.md)
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1849](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1849)
+Defined in: [src/ui/datagrid/datagrid.tsx:1850](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1850)
 
 ##### Deprecated
 
@@ -692,7 +698,7 @@ The current persistence storage.
 
 > **set** `static` **defaultPersistanceStorage**(`value`): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1854](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1854)
+Defined in: [src/ui/datagrid/datagrid.tsx:1855](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1855)
 
 ##### Deprecated
 
@@ -770,7 +776,7 @@ Default row height used when creating grids.
 
 > `protected` **addBooleanFilter**(`field`, `title?`, `yes?`, `no?`): [`SelectEditor`](SelectEditor.md)
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1554](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1554)
+Defined in: [src/ui/datagrid/datagrid.tsx:1555](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1555)
 
 Adds a boolean quick filter for the specified field.
 
@@ -830,7 +836,7 @@ Adds the widget's CSS class to its DOM node.
 
 > `protected` **addDateRangeFilter**(`field`, `title?`): [`DateEditor`](DateEditor.md)
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1512)
+Defined in: [src/ui/datagrid/datagrid.tsx:1513](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1513)
 
 Adds a date range quick filter for the specified field.
 
@@ -860,7 +866,7 @@ The created date editor.
 
 > `protected` **addDateTimeRangeFilter**(`field`, `title?`): [`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1532](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1532)
+Defined in: [src/ui/datagrid/datagrid.tsx:1533](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1533)
 
 Adds a date-time range quick filter for the specified field.
 
@@ -890,7 +896,7 @@ The created date-time editor.
 
 > `protected` **addFilterSeparator**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1476](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1476)
+Defined in: [src/ui/datagrid/datagrid.tsx:1477](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1477)
 
 Adds a separator to the quick filter bar.
 
@@ -904,7 +910,7 @@ Adds a separator to the quick filter bar.
 
 > `protected` **addQuickFilter**\<`TWidget`, `P`\>(`opt`): `TWidget`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1502](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1502)
+Defined in: [src/ui/datagrid/datagrid.tsx:1503](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1503)
 
 Adds a quick filter to the quick filter bar.
 
@@ -1096,7 +1102,7 @@ Subscribes to view events for filtering, submitting, and processing data.
 
 > `protected` **booleanQuickFilter**(`field`, `title?`, `yes?`, `no?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`SelectEditor`](SelectEditor.md)\<[`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>, [`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1566](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1566)
+Defined in: [src/ui/datagrid/datagrid.tsx:1567](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1567)
 
 Creates a boolean quick filter definition.
 
@@ -1391,7 +1397,7 @@ The created grid instance.
 
 > `protected` **createToolbar**(`buttons`): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1040](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1040)
+Defined in: [src/ui/datagrid/datagrid.tsx:1041](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1041)
 
 Creates the toolbar with the given buttons.
 
@@ -1443,7 +1449,7 @@ The remote view instance.
 
 > `protected` **dateRangeQuickFilter**(`field`, `title?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateEditor`](DateEditor.md)\<[`DateEditorOptions`](../interfaces/DateEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1522](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1522)
+Defined in: [src/ui/datagrid/datagrid.tsx:1523](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1523)
 
 Creates a date range quick filter definition.
 
@@ -1473,7 +1479,7 @@ A quick filter definition.
 
 > `protected` **dateTimeRangeQuickFilter**(`field`, `title?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1542](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1542)
+Defined in: [src/ui/datagrid/datagrid.tsx:1543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1543)
 
 Creates a date-time range quick filter definition.
 
@@ -1542,7 +1548,7 @@ Cleans up event subscriptions, widgets, and the underlying grid.
 
 > `protected` **determineText**(`getKey`): `string`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1485](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1485)
+Defined in: [src/ui/datagrid/datagrid.tsx:1486](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1486)
 
 Resolves a localized text using the grid's local text db prefix.
 
@@ -1616,7 +1622,7 @@ Entity instance or identifier to edit.
 
 > **EditLink**(`props`): `any`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1107)
+Defined in: [src/ui/datagrid/datagrid.tsx:1108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1108)
 
 Renders an edit link for the item in current row. Returns a DocumentFragment for non-data rows, and an anchor element otherwise.
 
@@ -1800,7 +1806,7 @@ The widget instance.
 
 > **get\_readOnly**(): `boolean`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1357](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1357)
+Defined in: [src/ui/datagrid/datagrid.tsx:1358](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1358)
 
 Returns whether the grid is in read-only mode.
 
@@ -1852,7 +1858,7 @@ Tool button definitions.
 
 > `protected` **getColumns**(): `Column`\<`TItem`\>[]
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1203)
+Defined in: [src/ui/datagrid/datagrid.tsx:1204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1204)
 
 #### Returns
 
@@ -1868,7 +1874,7 @@ override createColumns
 
 > `protected` **getColumnsKey**(): `string`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1153)
+Defined in: [src/ui/datagrid/datagrid.tsx:1154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1154)
 
 Returns the columns key used to load property items.
 
@@ -1936,7 +1942,7 @@ The space-separated CSS class string.
 
 > **getCurrentSettings**(`flags?`): [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1754](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1754)
+Defined in: [src/ui/datagrid/datagrid.tsx:1755](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1755)
 
 Returns the current grid settings snapshot.
 
@@ -2016,7 +2022,7 @@ Array of sort descriptors.
 
 > **getElement**(): `HTMLElement`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1788](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1788)
+Defined in: [src/ui/datagrid/datagrid.tsx:1789](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1789)
 
 Returns the root DOM element of the grid widget.
 
@@ -2036,7 +2042,7 @@ The grid container element.
 
 > **getFilterStore**(): [`FilterStore`](FilterStore.md)
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1829](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1829)
+Defined in: [src/ui/datagrid/datagrid.tsx:1830](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1830)
 
 Returns the filter store owned by the grid.
 
@@ -2056,7 +2062,7 @@ The filter store, or null if no filter bar exists.
 
 > **getGrid**(): `ISleekGrid`\<`TItem`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1796](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1796)
+Defined in: [src/ui/datagrid/datagrid.tsx:1797](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1797)
 
 Returns the underlying SleekGrid instance.
 
@@ -2076,7 +2082,7 @@ The grid instance.
 
 > `protected` **getGridCanLoad**(): `boolean`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1279](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1279)
+Defined in: [src/ui/datagrid/datagrid.tsx:1280](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1280)
 
 Determines whether the grid can load data, notifying onCanSubmit subscribers.
 
@@ -2112,7 +2118,7 @@ A [Fluent](../functions/Fluent.md) wrapper for the grid field.
 
 > `protected` **getIdProperty**(): `string`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1423](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1423)
+Defined in: [src/ui/datagrid/datagrid.tsx:1424](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1424)
 
 Returns the id property name for this grid.
 
@@ -2164,7 +2170,7 @@ The title text, or null for no title.
 
 > `protected` **getIsActiveProperty**(): `string`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1448](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1448)
+Defined in: [src/ui/datagrid/datagrid.tsx:1449](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1449)
 
 Returns the is-active property name for this grid.
 
@@ -2180,7 +2186,7 @@ The is-active property name.
 
 > `protected` **getIsDeletedProperty**(): `string`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1438](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1438)
+Defined in: [src/ui/datagrid/datagrid.tsx:1439](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1439)
 
 Returns the is-deleted property name for this grid.
 
@@ -2272,7 +2278,7 @@ The grid items.
 
 > `protected` **getItemType**(): `string`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1088](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1088)
+Defined in: [src/ui/datagrid/datagrid.tsx:1089](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1089)
 
 Returns the item type key for this grid.
 
@@ -2288,7 +2294,7 @@ The item type key.
 
 > `protected` **getLocalTextDbPrefix**(): `string`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1393](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1393)
+Defined in: [src/ui/datagrid/datagrid.tsx:1394](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1394)
 
 Returns the local text database prefix for this grid.
 
@@ -2304,7 +2310,7 @@ The local text db prefix.
 
 > `protected` **getLocalTextPrefix**(): `string`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1409](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1409)
+Defined in: [src/ui/datagrid/datagrid.tsx:1410](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1410)
 
 Returns the local text prefix for this grid.
 
@@ -2336,7 +2342,7 @@ Pager options.
 
 > `protected` **getPersistedSettings**(): [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md) \| `Promise`\<[`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1630](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1630)
+Defined in: [src/ui/datagrid/datagrid.tsx:1631](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1631)
 
 Retrieves the persisted grid settings from storage.
 
@@ -2352,7 +2358,7 @@ The persisted settings, or a promise resolving to them.
 
 > `protected` **getPersistenceKey**(): `string`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1603](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1603)
+Defined in: [src/ui/datagrid/datagrid.tsx:1604](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1604)
 
 Returns the key used to store grid settings.
 
@@ -2368,7 +2374,7 @@ The persistence key.
 
 > `protected` **getPersistenceStorage**(): [`SettingStorage`](../interfaces/SettingStorage.md)
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1593](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1593)
+Defined in: [src/ui/datagrid/datagrid.tsx:1594](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1594)
 
 Returns the storage used for grid persistence.
 
@@ -2384,7 +2390,7 @@ The persistence storage.
 
 > `protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1161)
+Defined in: [src/ui/datagrid/datagrid.tsx:1162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1162)
 
 Returns the property items for this grid.
 
@@ -2400,7 +2406,7 @@ The property items.
 
 > `protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1169)
+Defined in: [src/ui/datagrid/datagrid.tsx:1170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1170)
 
 Loads the property items data, either from script data or local items.
 
@@ -2416,7 +2422,7 @@ The property items data.
 
 > `protected` **getPropertyItemsDataAsync**(): `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1193)
+Defined in: [src/ui/datagrid/datagrid.tsx:1194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1194)
 
 Asynchronously loads the property items data.
 
@@ -2464,7 +2470,7 @@ The quick search fields, or null for none.
 
 > `protected` **getRowDefinition**(): [`IRowDefinition`](../interfaces/IRowDefinition.md)
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1383](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1383)
+Defined in: [src/ui/datagrid/datagrid.tsx:1384](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1384)
 
 Returns the row definition for this grid.
 
@@ -2480,7 +2486,7 @@ The row definition, or null for none.
 
 > `protected` **getSlickOptions**(): `GridOptions`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1247)
+Defined in: [src/ui/datagrid/datagrid.tsx:1248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1248)
 
 Returns the SleekGrid options for this grid.
 
@@ -2496,7 +2502,7 @@ Grid options.
 
 > **getTitle**(): `string`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1052](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1052)
+Defined in: [src/ui/datagrid/datagrid.tsx:1053](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1053)
 
 Returns the current grid title text.
 
@@ -2512,7 +2518,7 @@ The title text, or null if no title is set.
 
 > **getView**(): [`IRemoteView`](../interfaces/IRemoteView.md)\<`TItem`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1821](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1821)
+Defined in: [src/ui/datagrid/datagrid.tsx:1822](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1822)
 
 Returns the remote view used for paging and server communication.
 
@@ -2548,7 +2554,7 @@ Remote view options.
 
 > `protected` **gridPersistenceFlags**(): [`GridPersistenceFlags`](../interfaces/GridPersistenceFlags.md)
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1620](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1620)
+Defined in: [src/ui/datagrid/datagrid.tsx:1621](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1621)
 
 Returns the default persistence flags for this grid.
 
@@ -2762,7 +2768,7 @@ Hook for subclasses to initialize the grid after creation.
 
 > `protected` **internalRefresh**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1331](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1331)
+Defined in: [src/ui/datagrid/datagrid.tsx:1332](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1332)
 
 Performs the actual data refresh by populating the view.
 
@@ -2794,7 +2800,7 @@ Renders the widget's contents and runs any queued after-render callbacks.
 
 > `protected` **invokeSubmitHandlers**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1573](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1573)
+Defined in: [src/ui/datagrid/datagrid.tsx:1574](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1574)
 
 Invokes the quick filter submit handlers with the current view params.
 
@@ -2856,7 +2862,7 @@ The item id.
 
 > `protected` **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../type-aliases/Format.md)\<`TItem`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1101)
+Defined in: [src/ui/datagrid/datagrid.tsx:1102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1102)
 
 Creates a formatter that renders a link to an item.
 
@@ -3050,7 +3056,7 @@ True when the view can load.
 
 > **persistenceLock**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1720](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1720)
+Defined in: [src/ui/datagrid/datagrid.tsx:1721](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1721)
 
 Increments the persistence lock, preventing settings from being persisted.
 
@@ -3064,7 +3070,7 @@ Increments the persistence lock, preventing settings from being persisted.
 
 > **persistenceUnlock**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1727](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1727)
+Defined in: [src/ui/datagrid/datagrid.tsx:1728](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1728)
 
 Decrements the persistence lock.
 
@@ -3078,7 +3084,7 @@ Decrements the persistence lock.
 
 > **persistSettings**(`flags?`): `void` \| `Promise`\<`void`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1736](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1736)
+Defined in: [src/ui/datagrid/datagrid.tsx:1737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1737)
 
 Persists the current grid settings to storage.
 
@@ -3102,7 +3108,7 @@ Void or a promise that resolves when the write completes.
 
 > `protected` **populateLock**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1264](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1264)
+Defined in: [src/ui/datagrid/datagrid.tsx:1265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1265)
 
 Locks the view against population.
 
@@ -3116,7 +3122,7 @@ Locks the view against population.
 
 > `protected` **populateUnlock**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1271](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1271)
+Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1272)
 
 Unlocks the view population.
 
@@ -3170,7 +3176,7 @@ The processed columns.
 
 > **prepareSubmit**(): `boolean`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1293](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1293)
+Defined in: [src/ui/datagrid/datagrid.tsx:1294](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1294)
 
 Prepares submit arguments in this.view.params by calling this.view.onSubmit if available, or this.handleViewSubmit if not.
 Note that if getGridCanLoad returns false, the prepared arguments might be in an incomplete state.
@@ -3210,7 +3216,7 @@ Property items and additional items for the grid.
 
 > `protected` **propertyItemsToColumns**(`propertyItems`): `Column`\<`any`\>[]
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1232)
+Defined in: [src/ui/datagrid/datagrid.tsx:1233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1233)
 
 Converts property items to grid columns, wrapping edit-link columns.
 
@@ -3234,7 +3240,7 @@ The grid columns.
 
 > `protected` **quickFilterChange**(`e`): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1583](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1583)
+Defined in: [src/ui/datagrid/datagrid.tsx:1584](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1584)
 
 Handles quick filter changes by persisting settings and refreshing.
 
@@ -3256,7 +3262,7 @@ Change event.
 
 > **refresh**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1305](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1305)
+Defined in: [src/ui/datagrid/datagrid.tsx:1306](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1306)
 
 Refreshes the grid data, waiting for visibility if configured to do so.
 
@@ -3270,7 +3276,7 @@ Refreshes the grid data, waiting for visibility if configured to do so.
 
 > `protected` **refreshIfNeeded**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1321)
+Defined in: [src/ui/datagrid/datagrid.tsx:1322](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1322)
 
 Refreshes the grid if a refresh was requested while hidden.
 
@@ -3324,7 +3330,7 @@ The rendered contents.
 
 > `protected` **resizeCanvas**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1462](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1462)
+Defined in: [src/ui/datagrid/datagrid.tsx:1463](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1463)
 
 Resizes the underlying grid canvas.
 
@@ -3338,7 +3344,7 @@ Resizes the underlying grid canvas.
 
 > `protected` **restoreSettings**(`settings?`, `flags?`): `void` \| `Promise`\<`void`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1655](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1655)
+Defined in: [src/ui/datagrid/datagrid.tsx:1656](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1656)
 
 Restores grid settings from the given settings or from storage.
 
@@ -3368,7 +3374,7 @@ Void or a promise that resolves when restoration completes.
 
 > `protected` **restoreSettingsFrom**(`settings`, `flags?`): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1671](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1671)
+Defined in: [src/ui/datagrid/datagrid.tsx:1672](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1672)
 
 Restores grid state from a persisted settings snapshot.
 
@@ -3412,7 +3418,7 @@ The row count.
 
 > **set\_readOnly**(`value`): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1365)
+Defined in: [src/ui/datagrid/datagrid.tsx:1366](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1366)
 
 Sets whether the grid is in read-only mode and updates the interface.
 
@@ -3530,7 +3536,7 @@ The items to display.
 
 > **setTitle**(`value`): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1064](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1064)
+Defined in: [src/ui/datagrid/datagrid.tsx:1065](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1065)
 
 Sets the grid title text, creating or removing the title element as needed.
 
@@ -3566,7 +3572,7 @@ Prepares all view parameters and notifies the onSetViewParams subscribers.
 
 > `protected` **subDialogDataChange**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1469](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1469)
+Defined in: [src/ui/datagrid/datagrid.tsx:1470](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1470)
 
 Refreshes the grid when a sub-dialog reports a data change.
 
@@ -3661,7 +3667,7 @@ The widget instance, or null if not found.
 
 > **updateInterface**(): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1375](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1375)
+Defined in: [src/ui/datagrid/datagrid.tsx:1376](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1376)
 
 Updates the toolbar interface to reflect the current grid state.
 
@@ -3757,7 +3763,7 @@ Handles view data changes by notifying subscribers and relaying out.
 
 > `protected` **wrapFormatterWithEditLink**(`column`, `item`): `void`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1212](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1212)
+Defined in: [src/ui/datagrid/datagrid.tsx:1213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1213)
 
 Wraps a column formatter with an edit link formatter.
 

@@ -2,7 +2,7 @@
 
 # Class: EditorAttribute
 
-Defined in: [src/base/system.ts:445](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L445)
+Defined in: [src/base/system.ts:549](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L549)
 
 Attribute that marks a class as a Serenity editor.
 Added automatically by [registerEditor](../functions/registerEditor.md) / [editorTypeInfo](../functions/editorTypeInfo.md). Can also be applied manually via `classTypeInfo`.
@@ -31,7 +31,7 @@ Added automatically by [registerEditor](../functions/registerEditor.md) / [edito
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/base/system.ts:446](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L446)
+Defined in: [src/base/system.ts:550](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L550)
 
 #### Overrides
 

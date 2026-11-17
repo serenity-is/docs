@@ -2,7 +2,7 @@
 
 # Interface: ServiceError
 
-Defined in: [src/base/servicetypes.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L6)
+Defined in: [src/base/servicetypes.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L8)
 
 Error payload returned by Serenity service endpoints inside a [ServiceResponse](ServiceResponse.md).
 The server populates at least `Code` or `Message`; other fields are optional and
@@ -14,7 +14,7 @@ depend on the handler / validation layer.
 
 > `optional` **Arguments**: `string`
 
-Defined in: [src/base/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L10)
+Defined in: [src/base/servicetypes.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L12)
 
 Optional comma-separated or serialized arguments that parameterize the error message (e.g. field names).
 
@@ -24,7 +24,7 @@ Optional comma-separated or serialized arguments that parameterize the error mes
 
 > `optional` **Code**: `string`
 
-Defined in: [src/base/servicetypes.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L8)
+Defined in: [src/base/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L10)
 
 Machine-readable error code (e.g. `"NotLoggedIn"`, `"ValidationError"`, `"AccessDenied"`).
 
@@ -34,7 +34,7 @@ Machine-readable error code (e.g. `"NotLoggedIn"`, `"ValidationError"`, `"Access
 
 > `optional` **Details**: `string`
 
-Defined in: [src/base/servicetypes.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L14)
+Defined in: [src/base/servicetypes.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L16)
 
 Detailed / technical information (e.g. stack trace or inner exception) — only when diagnostics are enabled.
 
@@ -44,7 +44,7 @@ Detailed / technical information (e.g. stack trace or inner exception) — only 
 
 > `optional` **ErrorId**: `string`
 
-Defined in: [src/base/servicetypes.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L16)
+Defined in: [src/base/servicetypes.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L18)
 
 Correlation / error ID assigned server-side for log lookup.
 
@@ -54,6 +54,6 @@ Correlation / error ID assigned server-side for log lookup.
 
 > `optional` **Message**: `string`
 
-Defined in: [src/base/servicetypes.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L12)
+Defined in: [src/base/servicetypes.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L14)
 
 Human-readable, possibly localized, error message suitable for display.

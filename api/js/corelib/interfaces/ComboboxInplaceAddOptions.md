@@ -2,7 +2,7 @@
 
 # Interface: ComboboxInplaceAddOptions
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L47)
+Defined in: [src/ui/editors/comboboxeditor.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L49)
 
 Options for in-place add functionality in combobox editors.
 
@@ -16,7 +16,7 @@ Options for in-place add functionality in combobox editors.
 
 > `optional` **autoComplete**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L55)
+Defined in: [src/ui/editors/comboboxeditor.tsx:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L57)
 
 Whether arbitrary values are allowed.
 
@@ -26,7 +26,7 @@ Whether arbitrary values are allowed.
 
 > `optional` **dialogType**: `string` \| [`DialogType`](../type-aliases/DialogType.md) \| `PromiseLike`\<[`DialogType`](../type-aliases/DialogType.md)\>
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L53)
+Defined in: [src/ui/editors/comboboxeditor.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L55)
 
 Dialog type used for in-place add.
 
@@ -36,7 +36,7 @@ Dialog type used for in-place add.
 
 > `optional` **inplaceAdd**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L49)
+Defined in: [src/ui/editors/comboboxeditor.tsx:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L51)
 
 Whether in-place add is enabled.
 
@@ -46,6 +46,16 @@ Whether in-place add is enabled.
 
 > `optional` **inplaceAddPermission**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L51)
+Defined in: [src/ui/editors/comboboxeditor.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L53)
 
 Permission required for in-place add.
+
+***
+
+### openDialogAsPanel?
+
+> `optional` **openDialogAsPanel**: `boolean`
+
+Defined in: [src/ui/editors/comboboxeditor.tsx:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L59)
+
+Whether the in-place add dialog opens as a panel.

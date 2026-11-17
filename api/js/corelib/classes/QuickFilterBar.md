@@ -2,7 +2,7 @@
 
 # Class: QuickFilterBar\<P\>
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L41)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L42)
 
 A bar that renders quick filters for a grid, including date ranges, boolean
 toggles, and custom filter widgets, and submits their values with list requests.
@@ -25,7 +25,7 @@ Options type for the widget.
 
 > **new QuickFilterBar**\<`P`\>(`props`): `QuickFilterBar`\<`P`\>
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L49)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L50)
 
 Creates a quick filter bar and adds all configured filters.
 
@@ -79,7 +79,7 @@ The id prefix used for this widget's child element ids.
 
 > **onChange**: (`e`) => `void`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:425](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L425)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:467](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L467)
 
 Callback invoked when a quick filter value changes.
 
@@ -127,7 +127,7 @@ A unique name for this widget instance, used for event namespacing.
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L43)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L44)
 
 #### Overrides
 
@@ -191,7 +191,7 @@ Returns the widget's props/options.
 
 > **add**\<`TWidget`, `TOptions`\>(`opt`): `TWidget`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L86)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L87)
 
 Adds a quick filter widget to the bar and wires its submit handler.
 
@@ -217,7 +217,7 @@ Quick filter definition.
 
 `TWidget`
 
-The created widget instance.
+The created widget instance, or a placeholder if the type of the widget has to be loaded.
 
 ***
 
@@ -225,7 +225,7 @@ The created widget instance.
 
 > **addBoolean**(`field`, `title?`, `yes?`, `no?`): [`SelectEditor`](SelectEditor.md)
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:381](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L381)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:423](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L423)
 
 Adds a boolean quick filter for the specified field.
 
@@ -285,7 +285,7 @@ Adds the widget's CSS class to its DOM node.
 
 > **addDateRange**(`field`, `title?`): [`DateEditor`](DateEditor.md)
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L194)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L236)
 
 Adds a date range quick filter for the specified field.
 
@@ -315,7 +315,7 @@ The created date editor.
 
 > **addDateTimeRange**(`field`, `title?`): [`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:283](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L283)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:325](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L325)
 
 Adds a date-time range quick filter for the specified field.
 
@@ -345,7 +345,7 @@ The created date-time editor.
 
 > **addSeparator**(): `void`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L77)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L78)
 
 Adds a visual separator to the bar.
 
@@ -561,7 +561,7 @@ True to defer rendering.
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:432](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L432)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:474](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L474)
 
 Cleans up submit handlers and delegates to the base destroy.
 
@@ -579,7 +579,7 @@ Cleans up submit handlers and delegates to the base destroy.
 
 > **find**\<`TWidget`\>(`type`, `field`): `TWidget`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:451](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L451)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:493](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L493)
 
 Finds the widget instance for a quick filter by field name.
 
@@ -787,7 +787,7 @@ True if a legacy template was rendered.
 
 > **onSubmit**(`request`): `void`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:441](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L441)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:483](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L483)
 
 Invokes all registered submit handlers with the given list request.
 
@@ -894,7 +894,7 @@ The continuation invoked with the result.
 
 > **tryFind**\<`TWidget`\>(`type`, `field`): `TWidget`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:463](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L463)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:505](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L505)
 
 Tries to find the widget instance for a quick filter by field name.
 
@@ -950,7 +950,7 @@ An [IdPrefixType](../type-aliases/IdPrefixType.md) proxy for this widget's id pr
 
 > `static` **boolean**(`field`, `title?`, `yes?`, `no?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`SelectEditor`](SelectEditor.md)\<[`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>, [`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:393](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L393)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:435](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L435)
 
 Creates a boolean quick filter definition for the specified field.
 
@@ -1051,7 +1051,7 @@ A new `div` element.
 
 > `static` **dateRange**(`field`, `title?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateEditor`](DateEditor.md)\<[`DateEditorOptions`](../interfaces/DateEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L204)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L246)
 
 Creates a date range quick filter definition for the specified field.
 
@@ -1081,7 +1081,7 @@ A quick filter definition for a date range.
 
 > `static` **dateTimeRange**(`field`, `title?`, `useUtc?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:294](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L294)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:336](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L336)
 
 Creates a date-time range quick filter definition for the specified field.
 
@@ -1117,7 +1117,7 @@ A quick filter definition for a date-time range.
 
 > `static` **getItemData**\<`TWidget`\>(`filterItem`): [`QuickFilterItemData`](../interfaces/QuickFilterItemData.md)\<`TWidget`\>
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L70)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L71)
 
 Returns the per-item data attached to a quick filter element, if any.
 

@@ -4,7 +4,7 @@
 
 > **ensureScriptDataSync**\<`TData`\>(`name`, `dynJS?`): `TData`
 
-Defined in: [src/base/scriptdata.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L163)
+Defined in: [src/base/scriptdata.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L176)
 
 Synchronous (blocking) version of [getScriptData](getScriptData.md) for legacy compatibility.
 Avoid in new code — it performs a synchronous XHR and blocks the UI thread.

@@ -2,7 +2,7 @@
 
 # Interface: DataGridFilteringEvent\<TItem\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1883](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1883)
+Defined in: [src/ui/datagrid/datagrid.tsx:1884](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1884)
 
 Event raised while filtering items in the view.
 
@@ -24,7 +24,7 @@ Row type displayed in the grid.
 
 > **dataGrid**: [`DataGrid`](../classes/DataGrid.md)\<`any`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1862](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1862)
+Defined in: [src/ui/datagrid/datagrid.tsx:1863](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1863)
 
 The data grid that raised the event.
 
@@ -38,7 +38,7 @@ The data grid that raised the event.
 
 > **isMatch**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1887](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1887)
+Defined in: [src/ui/datagrid/datagrid.tsx:1888](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1888)
 
 Whether the item matches the filter; subscribers may change this.
 
@@ -48,6 +48,6 @@ Whether the item matches the filter; subscribers may change this.
 
 > **item**: `TItem`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1885](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1885)
+Defined in: [src/ui/datagrid/datagrid.tsx:1886](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1886)
 
 The item being filtered.

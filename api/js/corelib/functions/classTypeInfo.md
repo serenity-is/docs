@@ -4,7 +4,7 @@
 
 > **classTypeInfo**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/base/system.ts:601](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L601)
+Defined in: [src/base/system.ts:705](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L705)
 
 Creates [ClassTypeInfo](../type-aliases/ClassTypeInfo.md) for a class. Use as `static override [Symbol.typeInfo] = classTypeInfo("MyApp.MyClass")`.
 

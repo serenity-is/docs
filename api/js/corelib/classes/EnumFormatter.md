@@ -146,7 +146,7 @@ Registered enum object.
 
 `any`
 
-Enum numeric value.
+Enum value, numeric or string.
 
 #### Returns
 

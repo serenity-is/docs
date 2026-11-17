@@ -4,7 +4,7 @@
 
 > **PropertyCategory**(`props`): `HTMLElement`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:215](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L215)
+Defined in: [src/ui/widgets/propertygrid.tsx:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L231)
 
 Renders a collapsible category container holding its child fields.
 

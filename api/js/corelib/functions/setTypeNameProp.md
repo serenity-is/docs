@@ -4,7 +4,7 @@
 
 > **setTypeNameProp**(`type`, `value`): `void`
 
-Defined in: [src/base/system-internal.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L149)
+Defined in: [src/base/system-internal.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L153)
 
 ## Parameters
 

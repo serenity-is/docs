@@ -2,7 +2,7 @@
 
 # Interface: ListRequest
 
-Defined in: [src/base/servicetypes.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L126)
+Defined in: [src/base/servicetypes.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L133)
 
 Request DTO for `List` handlers (grid data source).
 Supports paging, sorting, filtering and column selection.
@@ -13,11 +13,22 @@ Supports paging, sorting, filtering and column selection.
 
 ## Properties
 
+### Aggregates?
+
+> `optional` **Aggregates**: [`AggregateBy`](AggregateBy.md)[]
+
+Defined in: [src/base/servicetypes.ts:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L170)
+
+Values to calculate from all the rows the request matches, and not only from the returned page, e.g. the sum of a field.
+They are returned in [ListResponse.Aggregates](ListResponse.md#aggregates). A handler that doesn't support aggregates ignores this.
+
+***
+
 ### ColumnSelection?
 
 > `optional` **ColumnSelection**: [`ColumnSelection`](../enumerations/ColumnSelection.md)
 
-Defined in: [src/base/servicetypes.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L148)
+Defined in: [src/base/servicetypes.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L155)
 
 Preset that controls which columns are returned. See [ColumnSelection](../enumerations/ColumnSelection.md).
 
@@ -27,7 +38,7 @@ Preset that controls which columns are returned. See [ColumnSelection](../enumer
 
 > `optional` **ContainsField**: `string`
 
-Defined in: [src/base/servicetypes.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L138)
+Defined in: [src/base/servicetypes.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L145)
 
 When set, `ContainsText` is applied only to this field instead of all searchable fields.
 
@@ -37,7 +48,7 @@ When set, `ContainsText` is applied only to this field instead of all searchable
 
 > `optional` **ContainsText**: `string`
 
-Defined in: [src/base/servicetypes.ts:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L136)
+Defined in: [src/base/servicetypes.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L143)
 
 Quick-search text applied across searchable fields (or [ContainsField](#containsfield) when specified).
 
@@ -47,7 +58,7 @@ Quick-search text applied across searchable fields (or [ContainsField](#contains
 
 > `optional` **Criteria**: `any`[]
 
-Defined in: [src/base/servicetypes.ts:140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L140)
+Defined in: [src/base/servicetypes.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L147)
 
 Advanced filter criteria tree (Serenity `Criteria` format: `[field, op, value]` or nested `["and", [...]]`).
 
@@ -57,7 +68,7 @@ Advanced filter criteria tree (Serenity `Criteria` format: `[field, op, value]` 
 
 > `optional` **DistinctFields**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L156)
+Defined in: [src/base/servicetypes.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L163)
 
 Fields to apply `DISTINCT` on (server-dependent).
 
@@ -67,7 +78,7 @@ Fields to apply `DISTINCT` on (server-dependent).
 
 > `optional` **EqualityFilter**: `any`
 
-Defined in: [src/base/servicetypes.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L142)
+Defined in: [src/base/servicetypes.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L149)
 
 Simple equality filter map, e.g. `{ Status: 1 }`. Combined with `Criteria` via AND.
 
@@ -77,9 +88,19 @@ Simple equality filter map, e.g. `{ Status: 1 }`. Combined with `Criteria` via A
 
 > `optional` **ExcludeColumns**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L152)
+Defined in: [src/base/servicetypes.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L159)
 
 Explicit deny-list of columns to exclude.
+
+***
+
+### ExcludeEntities?
+
+> `optional` **ExcludeEntities**: `boolean`
+
+Defined in: [src/base/servicetypes.ts:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L174)
+
+When true no entities are returned, only what is calculated from them, like the total count and the aggregates.
 
 ***
 
@@ -87,7 +108,7 @@ Explicit deny-list of columns to exclude.
 
 > `optional` **ExcludeTotalCount**: `boolean`
 
-Defined in: [src/base/servicetypes.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L146)
+Defined in: [src/base/servicetypes.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L153)
 
 When true the server may skip computing `TotalCount` for performance.
 
@@ -97,9 +118,19 @@ When true the server may skip computing `TotalCount` for performance.
 
 > `optional` **ExportColumns**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L154)
+Defined in: [src/base/servicetypes.ts:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L161)
 
 Columns to export when `List` is used for export; defaults to visible columns.
+
+***
+
+### GroupBy?
+
+> `optional` **GroupBy**: [`GroupBy`](GroupBy.md)[]
+
+Defined in: [src/base/servicetypes.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L172)
+
+Fields to group the rows by for the aggregates, the outermost first, so they are also calculated for each group.
 
 ***
 
@@ -107,7 +138,7 @@ Columns to export when `List` is used for export; defaults to visible columns.
 
 > `optional` **IncludeColumns**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L150)
+Defined in: [src/base/servicetypes.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L157)
 
 Explicit allow-list of columns to include (overrides `ColumnSelection`).
 
@@ -117,7 +148,7 @@ Explicit allow-list of columns to include (overrides `ColumnSelection`).
 
 > `optional` **IncludeDeleted**: `boolean`
 
-Defined in: [src/base/servicetypes.ts:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L144)
+Defined in: [src/base/servicetypes.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L151)
 
 When true, soft-deleted rows are included in results.
 
@@ -127,7 +158,7 @@ When true, soft-deleted rows are included in results.
 
 > `optional` **IncludeMore**: `boolean`
 
-Defined in: [src/base/servicetypes.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L132)
+Defined in: [src/base/servicetypes.ts:139](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L139)
 
 When true, request whether more records are available beyond the returned page.
 
@@ -137,7 +168,7 @@ When true, request whether more records are available beyond the returned page.
 
 > `optional` **Localize**: `string`
 
-Defined in: [src/base/servicetypes.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L158)
+Defined in: [src/base/servicetypes.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L165)
 
 Language ID for localized field selection (e.g. `"en"`, `"tr"`).
 
@@ -147,7 +178,7 @@ Language ID for localized field selection (e.g. `"en"`, `"tr"`).
 
 > `optional` **Skip**: `number`
 
-Defined in: [src/base/servicetypes.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L128)
+Defined in: [src/base/servicetypes.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L135)
 
 Number of records to skip (offset) for paging.
 
@@ -157,7 +188,7 @@ Number of records to skip (offset) for paging.
 
 > `optional` **Sort**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L134)
+Defined in: [src/base/servicetypes.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L141)
 
 Sort expressions, e.g. `["Name ASC", "Age DESC"]`.
 
@@ -167,6 +198,18 @@ Sort expressions, e.g. `["Name ASC", "Age DESC"]`.
 
 > `optional` **Take**: `number`
 
-Defined in: [src/base/servicetypes.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L130)
+Defined in: [src/base/servicetypes.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L137)
 
 Maximum number of records to take (page size). Omit or 0 for server default.
+
+***
+
+### TimeZone?
+
+> `optional` **TimeZone**: `string`
+
+Defined in: [src/base/servicetypes.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L180)
+
+The time zone of the user, an IANA one like `Europe/Istanbul`, as `Intl.DateTimeFormat().resolvedOptions().timeZone`
+gives. It tells where the days start for the intervals of `GroupBy`, so the dates and times of the fields that are UTC
+are grouped by the days the user sees. It doesn't change the filters, or the dates that are returned.

@@ -4,7 +4,7 @@
 
 > **interfaceTypeInfo**\<`TypeName`\>(`typeName`, `intf?`): [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/base/system.ts:667](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L667)
+Defined in: [src/base/system.ts:771](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L771)
 
 Creates [InterfaceTypeInfo](../type-aliases/InterfaceTypeInfo.md) for an interface.
 

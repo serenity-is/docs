@@ -4,7 +4,7 @@
 
 > **InterfaceType** = `Function` & `object`
 
-Defined in: [src/base/system.ts:592](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L592)
+Defined in: [src/base/system.ts:696](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L696)
 
 Interface type — a constructor function carrying an [InterfaceTypeInfo](InterfaceTypeInfo.md) via `[Symbol.typeInfo]`.
 

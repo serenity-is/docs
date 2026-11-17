@@ -16,7 +16,7 @@ The response returned by a file upload service.
 
 > `optional` **Error**: [`ServiceError`](ServiceError.md)
 
-Defined in: [src/base/servicetypes.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L25)
+Defined in: [src/base/servicetypes.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L27)
 
 Error information when the request failed; `undefined` on success.
 

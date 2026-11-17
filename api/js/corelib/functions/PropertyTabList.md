@@ -4,7 +4,7 @@
 
 > **PropertyTabList**(`props?`): `HTMLElement`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:323](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L323)
+Defined in: [src/ui/widgets/propertygrid.tsx:339](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L339)
 
 Renders the tab list (nav) element for the property tabs.
 

@@ -4,7 +4,7 @@
 
 > **formatterTypeInfo**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/base/system.ts:646](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L646)
+Defined in: [src/base/system.ts:750](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L750)
 
 Creates [FormatterTypeInfo](../type-aliases/FormatterTypeInfo.md) for a formatter class. Automatically includes [ISlickFormatter](../classes/ISlickFormatter.md).
 

@@ -4,4 +4,4 @@
 
 > `const` **PagerTexts**: *typeof* `Pager` = `textsProxy.Controls.Pager`
 
-Defined in: [src/base/texts/webtexts.ts:290](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/texts/webtexts.ts#L290)
+Defined in: [src/base/texts/webtexts.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/texts/webtexts.ts#L291)

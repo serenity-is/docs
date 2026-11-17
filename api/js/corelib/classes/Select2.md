@@ -392,7 +392,7 @@ The Select2 instance, or null.
 
 > `static` **highlightMatch**(`text`, `term`): [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.tsx:845](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L845)
+Defined in: [src/ui/editors/select2.tsx:847](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L847)
 
 Highlights the matching portion of text for a search term.
 
@@ -422,7 +422,7 @@ The highlighted result.
 
 > `static` **stripDiacritics**(`str`): `string`
 
-Defined in: [src/ui/editors/select2.tsx:863](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L863)
+Defined in: [src/ui/editors/select2.tsx:865](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L865)
 
 Strips diacritics from a string for accent-insensitive matching.
 

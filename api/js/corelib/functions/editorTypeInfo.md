@@ -4,7 +4,7 @@
 
 > **editorTypeInfo**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/base/system.ts:625](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L625)
+Defined in: [src/base/system.ts:729](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L729)
 
 Creates [EditorTypeInfo](../type-aliases/EditorTypeInfo.md) for an editor class. Like [classTypeInfo](classTypeInfo.md) but automatically adds [EditorAttribute](../classes/EditorAttribute.md).
 

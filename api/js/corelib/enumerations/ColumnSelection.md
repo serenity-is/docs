@@ -2,7 +2,7 @@
 
 # Enumeration: ColumnSelection
 
-Defined in: [src/base/servicetypes.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L88)
+Defined in: [src/base/servicetypes.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L90)
 
 Controls which columns are selected when listing entities.
 Mirrors the server-side `ColumnSelection` enum and is used by `ListRequest.ColumnSelection`.
@@ -13,7 +13,7 @@ Mirrors the server-side `ColumnSelection` enum and is used by `ListRequest.Colum
 
 > **Details**: `2`
 
-Defined in: [src/base/servicetypes.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L94)
+Defined in: [src/base/servicetypes.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L96)
 
 Detail view columns (more fields than `List`).
 
@@ -23,7 +23,7 @@ Detail view columns (more fields than `List`).
 
 > **IdOnly**: `4`
 
-Defined in: [src/base/servicetypes.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L98)
+Defined in: [src/base/servicetypes.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L100)
 
 Only the identity column.
 
@@ -33,7 +33,7 @@ Only the identity column.
 
 > **KeyOnly**: `1`
 
-Defined in: [src/base/servicetypes.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L92)
+Defined in: [src/base/servicetypes.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L94)
 
 Only key (ID) columns.
 
@@ -43,7 +43,7 @@ Only key (ID) columns.
 
 > **List**: `0`
 
-Defined in: [src/base/servicetypes.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L90)
+Defined in: [src/base/servicetypes.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L92)
 
 Default view columns (what the grid shows).
 
@@ -53,7 +53,7 @@ Default view columns (what the grid shows).
 
 > **Lookup**: `5`
 
-Defined in: [src/base/servicetypes.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L100)
+Defined in: [src/base/servicetypes.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L102)
 
 Columns needed for lookup display (usually ID + display field).
 
@@ -63,6 +63,6 @@ Columns needed for lookup display (usually ID + display field).
 
 > **None**: `3`
 
-Defined in: [src/base/servicetypes.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L96)
+Defined in: [src/base/servicetypes.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L98)
 
 No columns (only aggregates / counts).

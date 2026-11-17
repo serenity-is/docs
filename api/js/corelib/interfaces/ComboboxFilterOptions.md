@@ -2,7 +2,7 @@
 
 # Interface: ComboboxFilterOptions
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L31)
+Defined in: [src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
 
 Options for cascading and filtering combobox editors.
 
@@ -16,7 +16,7 @@ Options for cascading and filtering combobox editors.
 
 > `optional` **cascadeField**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L35)
+Defined in: [src/ui/editors/comboboxeditor.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L37)
 
 Field used for cascading.
 
@@ -26,7 +26,7 @@ Field used for cascading.
 
 > `optional` **cascadeFrom**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
+Defined in: [src/ui/editors/comboboxeditor.tsx:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L35)
 
 Id of the parent editor to cascade from.
 
@@ -36,7 +36,7 @@ Id of the parent editor to cascade from.
 
 > `optional` **cascadeValue**: `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L37)
+Defined in: [src/ui/editors/comboboxeditor.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L39)
 
 Value used for cascading.
 
@@ -46,7 +46,7 @@ Value used for cascading.
 
 > `optional` **filterField**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L39)
+Defined in: [src/ui/editors/comboboxeditor.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L41)
 
 Field used for filtering.
 
@@ -56,6 +56,6 @@ Field used for filtering.
 
 > `optional` **filterValue**: `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L41)
+Defined in: [src/ui/editors/comboboxeditor.tsx:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L43)
 
 Value used for filtering.

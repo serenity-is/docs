@@ -2,7 +2,7 @@
 
 # Function: registerEnum()
 
-> **registerEnum**(`target`, `enumKey?`, `name?`): `void`
+> **registerEnum**(`target`, `optOrEnumKey?`, `name?`): `void`
 
 Defined in: [src/types/decorators.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L54)
 
@@ -16,11 +16,9 @@ Registers an enum with optional keys.
 
 Enum object.
 
-### enumKey?
+### optOrEnumKey?
 
-`string`
-
-Legacy lookup key.
+`string` | \{ `enumIcons?`: `Record`\<`number`, `string`\>; `enumKey?`: `string`; \}
 
 ### name?
 

@@ -4,7 +4,7 @@
 
 > **UIFieldSet** = [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
 
-Defined in: [src/base/propertyitem.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L193)
+Defined in: [src/base/propertyitem.ts:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L235)
 
 Alias for [PropertyItemsData](../interfaces/PropertyItemsData.md).
 Prefer UIFieldSet for new code; `PropertyItemsData` is kept for compatibility.

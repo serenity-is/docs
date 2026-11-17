@@ -2,7 +2,7 @@
 
 # Interface: PagingOptions
 
-Defined in: [src/slick/slicktypes.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L84)
+Defined in: [src/slick/slicktypes.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L89)
 
 Paging state for a remote/slick data view.
 
@@ -12,7 +12,7 @@ Paging state for a remote/slick data view.
 
 > `optional` **page**: `number`
 
-Defined in: [src/slick/slicktypes.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L88)
+Defined in: [src/slick/slicktypes.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L93)
 
 Current page (1-based).
 
@@ -22,6 +22,6 @@ Current page (1-based).
 
 > `optional` **rowsPerPage**: `number`
 
-Defined in: [src/slick/slicktypes.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L86)
+Defined in: [src/slick/slicktypes.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L91)
 
 Rows per page.

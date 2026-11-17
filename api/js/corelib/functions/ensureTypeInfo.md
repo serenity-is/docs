@@ -4,7 +4,7 @@
 
 > **ensureTypeInfo**(`type`): [`TypeInfo`](../type-aliases/TypeInfo.md)\<`string`\>
 
-Defined in: [src/base/system-internal.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L120)
+Defined in: [src/base/system-internal.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L124)
 
 ## Parameters
 

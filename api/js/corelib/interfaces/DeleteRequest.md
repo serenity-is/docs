@@ -2,7 +2,7 @@
 
 # Interface: DeleteRequest
 
-Defined in: [src/base/servicetypes.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L59)
+Defined in: [src/base/servicetypes.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L61)
 
 Request DTO for `Delete` handlers (soft or hard delete depending on row / handler).
 
@@ -16,6 +16,6 @@ Request DTO for `Delete` handlers (soft or hard delete depending on row / handle
 
 > `optional` **EntityId**: `any`
 
-Defined in: [src/base/servicetypes.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L61)
+Defined in: [src/base/servicetypes.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L63)
 
 Primary key of the entity to delete.

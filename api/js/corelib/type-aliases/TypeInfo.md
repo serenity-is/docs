@@ -36,6 +36,26 @@ Enum flags
 
 ***
 
+### enumIcons?
+
+> `optional` **enumIcons**: `Record`\<`string` \| `number`, `string`\>
+
+Defined in: [src/base/system-internal.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L43)
+
+Icon classes mapping enum values (numeric or string) to icon class names
+
+***
+
+### enumKind?
+
+> `optional` **enumKind**: `"numeric"` \| `"string"`
+
+Defined in: [src/base/system-internal.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L41)
+
+Whether the enum has string members (a StringEnum), which is determined when it is registered
+
+***
+
 ### interfaces?
 
 > `optional` **interfaces**: `any`[]
@@ -50,7 +70,7 @@ Implemented interfaces
 
 > `optional` **registered**: `boolean`
 
-Defined in: [src/base/system-internal.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L41)
+Defined in: [src/base/system-internal.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L45)
 
 Registered flag
 

@@ -4,7 +4,7 @@
 
 > **registerType**(`type`): `void`
 
-Defined in: [src/base/system.ts:687](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L687)
+Defined in: [src/base/system.ts:791](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L791)
 
 Registers a type that already has a `static [Symbol.typeInfo]` declaration.
 Called automatically by the `static { registerType(this); }` block that follows the typeInfo declaration.

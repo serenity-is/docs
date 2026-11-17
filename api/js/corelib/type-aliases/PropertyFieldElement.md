@@ -4,7 +4,7 @@
 
 > **PropertyFieldElement** = `HTMLElement` & `object`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L12)
+Defined in: [src/ui/widgets/propertygrid.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L14)
 
 A field element rendered by the property grid, augmented with the editor
 widget, its loading promise and the associated [PropertyItem](../interfaces/PropertyItem.md).

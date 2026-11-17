@@ -2,7 +2,7 @@
 
 # Interface: RetrieveResponse\<TEntity\>
 
-Defined in: [src/base/servicetypes.ts:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L253)
+Defined in: [src/base/servicetypes.ts:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L388)
 
 Response DTO for `Retrieve` handlers.
 
@@ -24,7 +24,7 @@ Row / entity type.
 
 > `optional` **Entity**: `TEntity`
 
-Defined in: [src/base/servicetypes.ts:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L255)
+Defined in: [src/base/servicetypes.ts:390](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L390)
 
 The retrieved entity, or `undefined` if not found (depending on handler).
 
@@ -34,7 +34,7 @@ The retrieved entity, or `undefined` if not found (depending on handler).
 
 > `optional` **Error**: [`ServiceError`](ServiceError.md)
 
-Defined in: [src/base/servicetypes.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L25)
+Defined in: [src/base/servicetypes.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L27)
 
 Error information when the request failed; `undefined` on success.
 
@@ -48,7 +48,7 @@ Error information when the request failed; `undefined` on success.
 
 > `optional` **Localizations**: `object`
 
-Defined in: [src/base/servicetypes.ts:257](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L257)
+Defined in: [src/base/servicetypes.ts:392](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L392)
 
 Per-language values for localizable fields, keyed by language ID.
 

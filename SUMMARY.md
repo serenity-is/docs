@@ -175,6 +175,7 @@
 * StartSharp
   * [Introduction](startsharp/README.md)
   * Features
+    * [Dashboards](startsharp/features/dashboards.md)
     * [Premium Themes](startsharp/features/premium-themes.md)
     * [Step by Step Wizard](startsharp/features/step-by-step-wizard.md)
     * [Card View & React](startsharp/features/card-view-react.md)

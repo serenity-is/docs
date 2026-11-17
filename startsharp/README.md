@@ -82,6 +82,7 @@ The features listed below are only available in StartSharp):
 
 > You may access this feature list in order also from the left navigation under **StartSharp/Features**, or by clicking **Next Page** button on bottom right of this page.
 
+* [Dashboards](features/dashboards.md)
 * [Premium Themes](features/premium-themes.md)
 * [Step by Step Wizard](features/step-by-step-wizard.md)
 * [Card View & React](features/card-view-react.md)

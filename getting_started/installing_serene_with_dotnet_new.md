@@ -97,10 +97,10 @@ For example, to exclude demo modules such as `Northwind` and `Basic Samples`, ty
 
 > `-D` (or `--DemoModules`) is `true` by default, so pass `false` to exclude the demo modules.
 
-The `startsharp` template accepts similar boolean options, all of which default to `true`, e.g. `-dm/--demo-modules`, `-dx/--data-explorer`, `-ec/--email-client`, `-mt/--meeting`, `-os/--openid-server`, `-oc/--openid-client`, `-T/--TwoFactorAuthenticator`, and `-wl/--worklog`.
+The `startsharp` template accepts similar boolean options, all of which default to `true`, e.g. `-dm/--demo-modules`, `-db/--dashboards`, `-dx/--data-explorer`, `-ec/--email-client`, `-mt/--meeting`, `-os/--openid-server`, `-oc/--openid-client`, `-ta/--two-factor-authenticator`, and `-wl/--worklog`.
 
 For example, to exclude the demo modules and other pro modules in StartSharp, keeping only the OpenId server and Data Explorer:
 
 ```
-~/Projects> dotnet new startsharp -n HelloSerenity -dm false -ec false -mt false -T false -wl false
+~/Projects> dotnet new startsharp -n HelloSerenity -dm false -db false -ec false -mt false -ta false -wl false
 ```

@@ -3,7 +3,7 @@
 Sort order for records, defaults to the text field.
 
 ```csharp
-public object? Sort { get; set; }
+public string[]? Sort { get; set; }
 ```
 
 ## See Also

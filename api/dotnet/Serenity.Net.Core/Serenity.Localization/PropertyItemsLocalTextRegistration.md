@@ -17,4 +17,4 @@ public static class PropertyItemsLocalTextRegistration
 
 ## See Also
 
-* **Source:** *[PropertyItemsLocalTextRegistration.cs](https://github.com/serenity-is/Serenity/blob/090f59bd1ba489cacd572f4dfffdb4a12f4c29d9/src/core/Localization/PropertyItemsLocalTextRegistration.cs)*
+* **Source:** *[PropertyItemsLocalTextRegistration.cs](https://github.com/serenity-is/Serenity/blob/dfc36d281396433b9fb533e17d3860d79b2b4732/src/core/Localization/PropertyItemsLocalTextRegistration.cs)*

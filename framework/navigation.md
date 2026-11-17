@@ -108,6 +108,26 @@ Use the icon browser at [https://serenity.is/icons](https://serenity.is/icons) t
 
 If you need to add navigation items dynamically (e.g. from a database), implement [INavigationItemSource](../api/dotnet/Serenity.Net.Core/Serenity.Navigation/INavigationItemSource.md) and return the attributes from `GetItems()`. Serenity discovers `INavigationItemSource` implementations through the type source and merges their items with the assembly-level attributes.
 
+### Caching dynamic items
+
+The navigation model is cached, so items added at runtime only show up when the cache is invalidated. A navigation model factory
+should therefore depend on both the user permission generation key and
+[`NavigationCaching.ItemsGroupKey`](../api/dotnet/Serenity.Net.Core/Serenity.Navigation/NavigationCaching.md)
+(`"Navigation.Items"`), which a source expires when it changes what it returns, without having to know how the factory
+caches its model:
+
+```cs
+Items = cache.GetLocalStoreOnly("LeftNavigationModel:NavigationItems:" +
+    (userAccessor.User?.GetIdentifier() ?? "-1"),
+    TimeSpan.Zero,
+    [UserPermissionRow.Fields.GenerationKey, NavigationCaching.ItemsGroupKey],
+    () => NavigationHelper.GetNavigationItems(permissions, typeSource, serviceProvider,
+        url => ToAbsolute(url)!))!
+```
+
+To invalidate the items, call `cache.ExpireGroupItems(NavigationCaching.ItemsGroupKey)` where the source changes, e.g.
+after saving rows that add or remove navigation entries.
+
 ## Feature-Gated Navigation Items
 
 Every [NavigationItemAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Navigation/NavigationItemAttribute.md) has two feature-toggle members:

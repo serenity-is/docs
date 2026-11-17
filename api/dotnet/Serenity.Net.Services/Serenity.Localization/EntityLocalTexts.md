@@ -15,4 +15,4 @@ public static class EntityLocalTexts
 
 ## See Also
 
-* **Source:** *[EntityLocalTexts.cs](https://github.com/serenity-is/Serenity/blob/842eeed9c1017bb2110e654fdf17bd169a31f7a0/src/services/Entity/Extensions/EntityLocalTexts.cs)*
+* **Source:** *[EntityLocalTexts.cs](https://github.com/serenity-is/Serenity/blob/b1dab073ad31646cd015787ead45f6004717e72a/src/services/Entity/Extensions/EntityLocalTexts.cs)*

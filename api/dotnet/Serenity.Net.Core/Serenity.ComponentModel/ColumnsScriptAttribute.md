@@ -14,9 +14,11 @@ public sealed class ColumnsScriptAttribute : Attribute
 | --- | --- |
 | [ColumnsScriptAttribute](ColumnsScriptAttribute/ColumnsScriptAttribute.md)() | Initializes a new instance of the [`ColumnsScriptAttribute`](./ColumnsScriptAttribute.md) class. The key of the columns script will be the full name of the type this is placed on. |
 | [ColumnsScriptAttribute](ColumnsScriptAttribute/ColumnsScriptAttribute.md)(…) | Initializes a new instance of the [`ColumnsScriptAttribute`](./ColumnsScriptAttribute.md) class. |
-| [Key](ColumnsScriptAttribute/Key.md) { get; } | Gets the key. |
+| [InferKey](ColumnsScriptAttribute/InferKey.md) { get; set; } | Indicates whether the key should be inferred automatically from the type name, module name and namespace. |
+| [Key](ColumnsScriptAttribute/Key.md) { get; } | Gets the key. If no key is set, and InferKey is true, the key will be inferred automatically from the type name, module name and namespace. If InferKey is false, the key is full type name of the type this attribute is placed on. |
 | [LocalTextPrefix](ColumnsScriptAttribute/LocalTextPrefix.md) { get; set; } | If set, modifies the local text prefix that should be used instead of the automatically calculated one from Key and Namespace |
+| static [AutoColumnsKeyFor](ColumnsScriptAttribute/AutoColumnsKeyFor.md)(…) | Gets the automatically inferred columns key for the specified type. |
 
 ## See Also
 
-* **Source:** *[ColumnsScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Extensibility/ColumnsScriptAttribute.cs)*
+* **Source:** *[ColumnsScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/1ae08f36779a1f22f8f4600e4e68d4a9c8a89382/src/core/ComponentModel/Extensibility/ColumnsScriptAttribute.cs)*

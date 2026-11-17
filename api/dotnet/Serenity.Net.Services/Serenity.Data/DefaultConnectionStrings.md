@@ -45,4 +45,4 @@ Creates a new instance of [`DefaultConnectionStrings`](./DefaultConnectionString
 
 * interface [IConnectionKeyFallbacks](./IConnectionKeyFallbacks.md)
 * interface [IConnectionStrings](./IConnectionStrings.md)
-* **Source:** *[DefaultConnectionStrings.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Data/Connections/DefaultConnectionStrings.cs)*
+* **Source:** *[DefaultConnectionStrings.cs](https://github.com/serenity-is/Serenity/blob/64f4d46040be54ec435d5a0cabde26e1c69fe085/src/services/Data/Connections/DefaultConnectionStrings.cs)*

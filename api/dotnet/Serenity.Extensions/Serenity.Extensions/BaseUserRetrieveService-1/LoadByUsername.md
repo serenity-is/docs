@@ -1,6 +1,6 @@
 # BaseUserRetrieveService&lt;TRow&gt;.LoadByUsername method
 
-Loads the user by the specified username from database.
+Loads the user by the specified username from database. If the row implements [`INormalizedUsernameRow`](../INormalizedUsernameRow.md), the normalized username field is used.
 
 ```csharp
 protected override IUserDefinition? LoadByUsername(string username)

@@ -534,6 +534,26 @@ Mark user ID properties on other rows with [`UserIdFieldType`](../../api/dotnet/
 
 Migrations should use the same options: `.AsUserIdType(userEntityOptions)` selects the user ID column type, and `.UserIdForeignKey(userEntityOptions, "FK_Name")` targets the configured user table and ID column. For `Guid` or `string` IDs, use a primary key rather than an auto-incrementing identity and supply IDs through the application's chosen strategy.
 
+### SystemUserId
+
+When user IDs are not database-generated (`Guid` or `string`), the initial migration can't rely on an identity column to
+create the `admin` user, and rows created by the application itself need a user to be attributed to.
+`UserEntityOptions.SystemUserId` is that user:
+
+```csharp
+services.Configure<UserEntityOptions>(options =>
+{
+    options.RowType = typeof(Administration.UserRow);
+    options.SystemUserId = "00000000-0000-0000-0000-000000000001"; // required for Guid / string IDs
+});
+```
+
+- It defaults to `1` for `Int32` / `Int64` IDs, and must be set for `Guid` / `String` IDs.
+- `MigrationUtils.GetSystemUserId(userEntityOptions)` returns it (or the default), and
+  `MigrationUtils.HasIdentityUserId(userEntityOptions)` tells whether the user ID is database-generated.
+- When it is not generated, the initial migration creates the `Users` table with a **plain primary key** and seeds the
+admin row with the configured id.
+
 ## Size, Scale, and NotNull
 
 - [Size](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/SizeAttribute.md) — sets the max length (for strings) or numeric precision.
@@ -619,18 +639,29 @@ You can specify generation keys or linked row types to control what gets invalid
 
 ## Computed Field Expressions
 
-Beyond `[Expression]`, Serenity provides convenience attributes for common computed fields:
+Beyond `[Expression]`, Serenity provides convenience attributes for common computed fields, all translated for every supported dialect:
 
-- [Concat](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/ConcatAttribute.md) — concatenates fields in a database-agnostic way (handles NULLs as empty strings).
+- [Concat](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/ConcatAttribute.md) — concatenates fields in a database-agnostic way. An empty string is already null in Oracle, so its `CONCAT` is no longer wrapped in `COALESCE(..., '')` (which also failed on `NVARCHAR2` arguments); it is a plain `CONCAT` chain.
+- [Cast](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/CastAttribute.md) — converts a value to `Int32`, `Int64`, `Decimal` (with `Precision` / `Scale`), `String` (with `Size`) or `Date` (drops the time). Only types that have an equivalent in all supported engines are allowed.
+- [Replace](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/ReplaceAttribute.md), [Substring](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/SubstringAttribute.md) — `REPLACE(expr, search, replacement)` and `SUBSTRING(expr, start, length)` (start is 1-based).
+- [Trim](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/TrimAttribute.md) / `TrimLeft` / `TrimRight` — removes spaces; `Leading` and `Trailing` options choose the sides (SQL Server before 2017 has no `TRIM`, so it becomes `LTRIM(RTRIM(...))`; Firebird has neither `LTRIM` nor `RTRIM`). The options are `init`-only.
 - `CaseAttribute` / `CaseSwitchAttribute` — CASE expressions.
-- `DateDiffAttribute` / `DatePartAttribute` — date difference/part expressions.
+- [DateAdd](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/DateAddAttribute.md) — adds (or subtracts) date parts, clamping the end of a month, e.g. January 31 plus a month is February 28.
+- [DateDiff](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/DateDiffAttribute.md) / `DatePartAttribute` — `DateDiff` now counts the **part boundaries crossed**, like SQL Server's `DATEDIFF`: from 23:00 to 01:00 of the next day is one day, not zero. This changed the result of existing `[DateDiff]` fields for every engine (SQLite `STRFTIME`, PostgreSQL `DATE_TRUNC`, Oracle `TRUNC`, MySQL `DATE_FORMAT`).
 - `SqlNowAttribute` / `SqlUtcNowAttribute` / `SqlDateTimeOffsetAttribute` — current date/time expressions.
 - `DateTimeKindAttribute` — sets the `DateTimeKind` for a date field.
 
 ```cs
 [DisplayText("Full Name"), Concat("t0.FirstName", "' '", "t0.LastName"), QuickSearch, NameProperty]
 public string? FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
+
+[DisplayText("Expiry"), DateAdd(DateParts.Month, 3, "t0.OrderDate")]
+public DateTime? ExpiryDate { get => fields.ExpiryDate[this]; set => fields.ExpiryDate[this] = value; }
 ```
+
+> `SqlDateTimeOffset` uses `CURRENT_TIMESTAMP` on PostgreSQL and `SYSDATETIMEOFFSET()` on SQL Server, and `SqlUtcNow`
+> uses Firebird 4's time zone support. Oracle parameters are bound **by name** (`BindByName`), so repeated or reordered
+> expression parameters get the right values.
 
 ## MinSelectLevel and SelectLevel
 

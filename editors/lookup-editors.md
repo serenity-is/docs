@@ -104,6 +104,11 @@ The `change` event raised by `setValue` is marked with a dataset flag, so listen
 
 - When the editor is given a single id, it sends an equality criteria instead of an `IN` list.
 - When `idList` is empty, it returns early without a service round trip.
+- A **local (in-process)** service lookup now maps the request keys to the list capabilities explicitly instead of looking
+  them up by name in the capabilities enum, so custom request properties that are not list options are no longer dropped,
+  unrelated option names are not matched, and unsupported ones are still removed.
+- `ComboboxOptions.formatResult` receives the result, the container and the `Select2QueryOptions`, like the Select2
+  formatter, so a custom result renderer can use the query it belongs to.
 
 ## Cascaded Editors
 
@@ -119,7 +124,8 @@ public string CityID { get; set; }
 
 When the parent changes, the child editor reloads and filters its options to those matching the parent value.
 
-The `CascadedWidgetLink` class implements this behavior — it links a child widget to a parent widget and reacts to the parent's changes.
+The `CascadedWidgetLink` class implements this behavior — it links a child widget to a parent widget and reacts to the parent's changes. `CheckLookupEditor` and `ComboboxEditor` unbind their cascade link when they are destroyed, instead of
+leaving a handler on the parent widget.
 
 See [How To: Setup Cascaded Editors](../howto/how_to_setup_cascaded_editors.md) for a full example.
 

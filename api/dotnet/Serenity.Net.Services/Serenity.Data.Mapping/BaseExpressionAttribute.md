@@ -25,4 +25,4 @@ public abstract class BaseExpressionAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[BaseExpressionAttribute.cs](https://github.com/serenity-is/Serenity/blob/9f7b8ce8c15c9bc21e16a225e837ed032d6fdb9f/src/services/Data/Mapping/BaseExpressionAttribute.cs)*
+* **Source:** *[BaseExpressionAttribute.cs](https://github.com/serenity-is/Serenity/blob/b3dd582d5e3c463e59a4dcee62b7c96f3610b91d/src/services/Data/Mapping/BaseExpressionAttribute.cs)*

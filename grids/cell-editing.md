@@ -98,6 +98,15 @@ The grid exposes editing methods:
 - `commitCurrentEdit()` — commits the current edit.
 - `cancelCurrentEdit()` — cancels the current edit.
 
+### Keyboard behaviour
+
+- Pressing **Escape** while a cell is being edited consumes the keystroke, so it cancels the edit without also closing a
+  containing dialog or leaving the field.
+- Drag plugins (column reordering, row moving, ...) don't intercept a press that starts inside an open editor, so text
+  selection works while a cell is being edited.
+- A column whose `maxWidth` is `null`, `undefined` or `0` is treated as unlimited when the column is autosized.
+
+
 ## Custom Cell Editors
 
 A custom cell editor implements the `Editor` contract. The simplest approach is to extend `BaseCellEdit` (from the SleekGrid source) or implement `Editor` directly:

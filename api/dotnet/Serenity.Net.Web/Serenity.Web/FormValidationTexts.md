@@ -10,6 +10,7 @@ public static class FormValidationTexts
 | name | description |
 | --- | --- |
 | static readonly [CaptchaMismatch](FormValidationTexts/CaptchaMismatch.md) |  |
+| static readonly [Compare](FormValidationTexts/Compare.md) |  |
 | static readonly [DateInvalid](FormValidationTexts/DateInvalid.md) |  |
 | static readonly [DayHourAndMin](FormValidationTexts/DayHourAndMin.md) |  |
 | static readonly [Decimal](FormValidationTexts/Decimal.md) |  |
@@ -21,13 +22,16 @@ public static class FormValidationTexts
 | static readonly [IncorrectPassword](FormValidationTexts/IncorrectPassword.md) |  |
 | static readonly [Int64](FormValidationTexts/Int64.md) |  |
 | static readonly [Integer](FormValidationTexts/Integer.md) |  |
+| static readonly [Invalid](FormValidationTexts/Invalid.md) |  |
 | static readonly [InvalidFormMessage](FormValidationTexts/InvalidFormMessage.md) |  |
 | static readonly [MaxDate](FormValidationTexts/MaxDate.md) |  |
 | static readonly [MaxLength](FormValidationTexts/MaxLength.md) |  |
 | static readonly [MinDate](FormValidationTexts/MinDate.md) |  |
 | static readonly [MinLength](FormValidationTexts/MinLength.md) |  |
 | static readonly [PasswordConfirm](FormValidationTexts/PasswordConfirm.md) |  |
+| static readonly [Pattern](FormValidationTexts/Pattern.md) |  |
 | static readonly [Range](FormValidationTexts/Range.md) |  |
+| static readonly [RangeLength](FormValidationTexts/RangeLength.md) |  |
 | static readonly [Required](FormValidationTexts/Required.md) |  |
 | static readonly [UniqueConstraint](FormValidationTexts/UniqueConstraint.md) |  |
 | static readonly [Url](FormValidationTexts/Url.md) |  |
@@ -37,4 +41,4 @@ public static class FormValidationTexts
 
 ## See Also
 
-* **Source:** *[FormValidationTexts.cs](https://github.com/serenity-is/Serenity/blob/3d68185adc9ca553692b97b9f6c6c7321881b983/src/web/texts/FormValidationTexts.cs)*
+* **Source:** *[FormValidationTexts.cs](https://github.com/serenity-is/Serenity/blob/b1dab073ad31646cd015787ead45f6004717e72a/src/web/texts/FormValidationTexts.cs)*

@@ -2,7 +2,7 @@
 
 Serenity generates client-side artifacts — dynamic scripts, TypeScript typings, and interfaces — from your server-side types. This is driven by a set of **attributes** you place on rows, forms, columns, and other classes, combined with the **type source** that discovers them.
 
-This topic covers the attributes that cause scripts and typings to be generated. For how types are discovered in the first place, see [Initialization and Startup](initialization.md) (the `ITypeSource` section).
+This topic covers the attributes that cause scripts and typings to be generated. For how types are discovered in the first place, see [Initialization and Startup](../initialization.md) (the `ITypeSource` section).
 
 ## Dynamic Script Attributes
 
@@ -10,7 +10,7 @@ These attributes mark a type so that a dynamic script is generated and registere
 
 ### `[ColumnsScript]`
 
-[ColumnsScriptAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/ColumnsScriptAttribute.md) marks a class as a **columns script** — an array of `PropertyItem` objects describing the grid columns. It's accessed from the client with `Serenity.getColumns("Key")`.
+[ColumnsScriptAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/ColumnsScriptAttribute.md) marks a class as a **columns script** — an array of `PropertyItem` objects describing the grid columns. It's accessed from the client with `Serenity.getColumns("Key")`.
 
 ```cs
 [ColumnsScript]
@@ -23,11 +23,14 @@ public class OrderColumns
 ```
 
 - Without a key, the key is the full name of the type.
+- `InferKey = true` derives a shorter key from the `[Module]` attribute or the namespace, dropping the root namespace,
+  the `.Columns` segment and the `Columns` suffix (`MovieDB.Movie.Columns.MovieColumns` → `Movie.Movie`). See
+  [Forms & Editors](../forms-editors.md#form-keys-and-inferkey) for the rules.
 - `LocalTextPrefix` overrides the automatically calculated local text prefix.
 
-### `[FormScript]`
+The registered key and the generated `columnsKey` are resolved the same way, so they always match.
 
-[FormScriptAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/FormScriptAttribute.md) marks a class as a **form script** — an array of `PropertyItem` objects describing the form fields. It's accessed from the client with `Serenity.getForm("Key")`.
+[FormScriptAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/FormScriptAttribute.md) marks a class as a **form script** — an array of `PropertyItem` objects describing the form fields. It's accessed from the client with `Serenity.getForm("Key")`.
 
 ```cs
 [FormScript]
@@ -40,11 +43,11 @@ public class OrderForm
 ```
 
 - Without a key, the key is the full name of the type.
+- `InferKey = true` derives a shorter key (`MovieDB.Movie.Forms.MovieForm` → `Movie.Movie`). Generated templates and the
+  demo Northwind forms use it, so the same rules apply to the runtime script and the generated `formKey`.
 - `LocalTextPrefix` overrides the automatically calculated local text prefix.
 
-### `[LookupScript]`
-
-[LookupScriptAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/LookupScriptAttribute.md) marks a row or a custom lookup class as having a **lookup script**, accessible from the client via `getLookup("Key")`.
+[LookupScriptAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/LookupScriptAttribute.md) marks a row or a custom lookup class as having a **lookup script**, accessible from the client via `getLookup("Key")`.
 
 ```cs
 [LookupScript]
@@ -57,11 +60,11 @@ public sealed class CustomerRow : Row<CustomerRow.RowFields>, IIdRow, INameRow
 - Without a key, the key is auto-determined from the module and type name (e.g. `Northwind.Customer`).
 - When placed on a row, only the ID and name fields are transferred to the client by default for security/performance; add `[LookupInclude]` to properties you need on the client.
 
-See [Lookups](dynamic-scripts/lookups.md) for details.
+See [Lookups](lookups.md) for details.
 
 ### `[DataScript]`
 
-[DataScriptAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/DataScriptAttribute.md) marks a type as a **remote data script**, accessible from the client with `Serenity.getRemoteData("Key")`.
+[DataScriptAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/DataScriptAttribute.md) marks a type as a **remote data script**, accessible from the client with `Serenity.getRemoteData("Key")`.
 
 ```cs
 [DataScript("MyData", Permission = SpecialPermissionKeys.LoggedIn)]
@@ -77,7 +80,7 @@ Options include `Permission` (`SpecialPermissionKeys.LoggedIn` for logged-in use
 
 ### `[DynamicScript]`
 
-[DynamicScriptAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/DynamicScriptAttribute.md) is the abstract base for dynamic script attributes. It provides the `Key`, `CacheDuration`, and `CacheGroupKey` members that the concrete attributes above build on.
+[DynamicScriptAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/DynamicScriptAttribute.md) is the abstract base for dynamic script attributes. It provides the `Key`, `CacheDuration`, and `CacheGroupKey` members that the concrete attributes above build on.
 
 ## Code Generation Attributes
 
@@ -85,7 +88,7 @@ These attributes control what the code generator (`sergen` / `Serenity.Pro.Coder
 
 ### `[GenerateInterface]`
 
-[GenerateInterfaceAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/GenerateInterfaceAttribute.md) marks a class so that its accompanying interface is generated by the `InterfaceSourceGenerator`. This is used in StartSharp to generate handler interfaces (e.g. `ILanguageSaveHandler`) from handler classes. See [Generating Handler Interfaces](../services/generate_interface.md).
+[GenerateInterfaceAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/GenerateInterfaceAttribute.md) marks a class so that its accompanying interface is generated by the `InterfaceSourceGenerator`. This is used in StartSharp to generate handler interfaces (e.g. `ILanguageSaveHandler`) from handler classes. See [Generating Handler Interfaces](../../services/generate_interface.md).
 
 ```cs
 [GenerateInterface]
@@ -99,11 +102,11 @@ public class LanguageSaveHandler(IRequestContext context)
 
 ### `[GenerateFields]`
 
-[GenerateFieldsAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/GenerateFieldsAttribute.md) marks a row class so that its fields are generated by the `RowFieldsGenerator`. This lets you write a row with partial properties and have the `RowFields` class generated for you.
+[GenerateFieldsAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/GenerateFieldsAttribute.md) marks a row class so that its fields are generated by the `RowFieldsGenerator`. This lets you write a row with partial properties and have the `RowFields` class generated for you.
 
 ### `[NonInterfaceMember]`
 
-[NonInterfaceMemberAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/NonInterfaceMemberAttribute.md) excludes a property or method from the automatically generated interface when using `[GenerateInterface]`.
+[NonInterfaceMemberAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/NonInterfaceMemberAttribute.md) excludes a property or method from the automatically generated interface when using `[GenerateInterface]`.
 
 ```cs
 [GenerateInterface]
@@ -114,11 +117,29 @@ public class MyHandler : ...
 }
 ```
 
+### Lazy type loader
+
+Types that are only referenced by their **keys** on the client side — editors of dynamically generated property items,
+dialogs opened by name, validation rules — can be registered for lazy loading by implementing the `LazyLoadInclude` marker
+of corelib (optionally with a group: `LazyLoadInclude<"NorthwindDialogs">`). The server typings generator then emits
+`LazyTypeLoader.mts`, which imports each type (or each group of types) with a **literal dynamic import**, so the bundler
+splits them into chunks, and declares them with `[assembly: LazyLoadTypes(...)]`.
+
+[LazyLoadTypesAttribute](../../api/dotnet/Serenity.Net.Web/Serenity.Web/LazyLoadTypesAttribute.md) lists the app-relative path
+of that module with the type keys, and `Html.LazyTypes()` renders them for the default `Config.lazyTypeLoader`, which loads
+a type the first time a type registry asks for it. Serene and StartSharp layouts include it in the head:
+
+```cshtml
+@Html.LazyTypes()
+```
+
+See [Type Registration](../ui/type-registration.md#lazy-loading-types) for the client side.
+
 ## Other Extensibility Attributes
 
 ### `[NestedPermissionKeys]`
 
-[NestedPermissionKeysAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/NestedPermissionKeysAttribute.md) marks a static class that contains permission keys (with optional nested classes). The permission keys are registered and listed by the permission key lister. See [Authorization](authorization.md).
+[NestedPermissionKeysAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/NestedPermissionKeysAttribute.md) marks a static class that contains permission keys (with optional nested classes). The permission keys are registered and listed by the permission key lister. See [Authorization](../authorization.md).
 
 ```cs
 [NestedPermissionKeys]
@@ -130,15 +151,15 @@ public static class PermissionKeys
 
 ### `[NestedLocalTexts]`
 
-[NestedLocalTextsAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/NestedLocalTextsAttribute.md) marks a static class containing `LocalText` fields, which are registered as local texts. See [Localization](localization.md).
+[NestedLocalTextsAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/NestedLocalTextsAttribute.md) marks a static class containing `LocalText` fields, which are registered as local texts. See [Localization](../localization.md).
 
 ### `[EnumKey]`
 
-[EnumKeyAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/EnumKeyAttribute.md) overrides the prefix used to generate local text keys for an enum. See [Localization](localization.md).
+[EnumKeyAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/EnumKeyAttribute.md) overrides the prefix used to generate local text keys for an enum (or a `Serenity.StringEnum`). `[EnumKey(InferKey = true)]`, or the parameterless `[EnumKey]`, derives the key from the `[Module]` attribute or the namespace instead of a spelled-out string. See [Localization](../localization.md#enumkey-attribute).
 
 ### `[JsonLocalTextAssets]`
 
-[JsonLocalTextAssetsAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/JsonLocalTextAssetsAttribute.md) is an assembly-level attribute that registers a folder of JSON local text files packed as static web assets for the assembly.
+[JsonLocalTextAssetsAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/JsonLocalTextAssetsAttribute.md) is an assembly-level attribute that registers a folder of JSON local text files packed as static web assets for the assembly.
 
 ```cs
 [assembly: JsonLocalTextAssets("texts")]
@@ -146,16 +167,16 @@ public static class PermissionKeys
 
 ### `[DefaultSectionKey]`
 
-[DefaultSectionKeyAttribute](../api/dotnet/Serenity.Net.Core/Serenity/DefaultSectionKeyAttribute.md) declares the default configuration section key for an options class. For example, `LocalTextPackages` uses it to map to the `LocalTextPackages` section of `appsettings.json`.
+[DefaultSectionKeyAttribute](../../api/dotnet/Serenity.Net.Core/Serenity/DefaultSectionKeyAttribute.md) declares the default configuration section key for an options class. For example, `LocalTextPackages` uses it to map to the `LocalTextPackages` section of `appsettings.json`.
 
 ### `LocalTextPackages`
 
-[LocalTextPackages](../api/dotnet/Serenity.Net.Core/Serenity.Web/LocalTextPackages.md) is the options class (backed by the `LocalTextPackages` section of `appsettings.json`) that controls which local text packages are generated and their include patterns.
+[LocalTextPackages](../../api/dotnet/Serenity.Net.Core/Serenity.Web/LocalTextPackages.md) is the options class (backed by the `LocalTextPackages` section of `appsettings.json`) that controls which local text packages are generated and their include patterns.
 
 ## See Also
 
-- [Initialization and Startup](initialization.md) — the type source that discovers these attributes
-- [Dynamic Scripts](dynamic-scripts/readme.md)
-- [Lookups](dynamic-scripts/lookups.md)
-- [Generating Handler Interfaces](../services/generate_interface.md)
-- [Annotation Types](data-access/annotation-types.md)
+- [Initialization and Startup](../initialization.md) — the type source that discovers these attributes
+- [Dynamic Scripts](readme.md)
+- [Lookups](lookups.md)
+- [Generating Handler Interfaces](../../services/generate_interface.md)
+- [Annotation Types](../data-access/annotation-types.md)

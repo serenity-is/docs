@@ -2,6 +2,8 @@
 
 Adds local text translations defined implicitly by DescriptionAttribute attributes in enumeration classes. Only enum values that have a DescriptionAttribute are added as local text. By default, enums are registered in the format "Enums.{EnumerationTypeFullName}.{EnumValueName}", where EnumerationTypeFullName is the full name of the enumeration type. This can be overridden by attaching an [`EnumKeyAttribute`](../../Serenity.ComponentModel/EnumKeyAttribute.md).
 
+The members of [`StringEnum`](../../Serenity/StringEnum.md) types are registered with the same keys, so a string enumeration can't share a member name with an enum that has the same key.
+
 ```csharp
 public static void AddEnumTexts(this ILocalTextRegistry registry, ITypeSource typeSource, 
     string languageID = "")

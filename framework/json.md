@@ -80,6 +80,21 @@ public Task<SaveResponse> Create(IUnitOfWork uow, SaveRequest<MyRow> request,
 
 the `request` parameter is deserialized from the JSON body automatically — no attribute needed. You only add `[JsonRequest]` manually when an action isn't on a `ServiceEndpoint`, or when you need to override its defaults. See [Service Endpoints](../services/service_endpoints.md).
 
+## Enum and String Enum Values
+
+`EnumJsonConverter` maps a numeric enum stored as a number, accepting any valid combination of a `[Flags]` enum (including ones backed by `ulong`).
+
+A `StringEnumField<T>` is a `StringField` that rejects a JSON value which is not a member of the string enum, so a value like a retired member (or a typo) never reaches the row. The check lives in the `ConvertJsonValue` hook, which `StringField` now calls for every value it reads from JSON:
+
+```cs
+public class CategoryField : StringEnumField<WidgetCategory>
+{
+    // EnumType is typeof(WidgetCategory) by default; set it to null to accept any text
+}
+```
+
+See [Field Types](data-access/field-types.md#string-enums) for the `StringEnum` type itself.
+
 ## Legacy `JsonSettings` (Newtonsoft.Json)
 
 [JsonSettings](../api/dotnet/Serenity.Net.Core/Serenity/JsonSettings.md) provides the older Newtonsoft.Json `JsonSerializerSettings` presets (`Tolerant`, `TolerantIncludeNulls`, `Strict`, `StrictIncludeNulls`). It is kept only for **backward compatibility** — a few internal components that still rely on Newtonsoft.Json (such as `JsonField`, the code generator, dynamic scripts, and `JsonServiceClient`) reference it.

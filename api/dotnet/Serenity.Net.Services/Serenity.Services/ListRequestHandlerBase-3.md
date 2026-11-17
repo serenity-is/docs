@@ -26,6 +26,7 @@ public abstract class ListRequestHandlerBase<TRow, TListRequest, TListResponse> 
 | [Connection](ListRequestHandlerBase-3/Connection.md) { get; protected set; } | Gets the current connection. |
 | [Context](ListRequestHandlerBase-3/Context.md) { get; } | Gets the request context. |
 | [DistinctFields](ListRequestHandlerBase-3/DistinctFields.md) { get; protected set; } | Gets the list of distinct fields. |
+| [ExecutionMode](ListRequestHandlerBase-3/ExecutionMode.md) { get; protected set; } | Gets why the handler is being executed, e.g. QueryCapture while it is only building its query for a CaptureQuery call. |
 | [HandlerSettings](ListRequestHandlerBase-3/HandlerSettings.md) { get; } | Gets the request handler settings (default / maximum page size), as returned by [`GetHandlerSettings`](./ListRequestHandlerBase-3/GetHandlerSettings.md). |
 | [Localizer](ListRequestHandlerBase-3/Localizer.md) { get; } | Gets the localizer from the request context. |
 | [Permissions](ListRequestHandlerBase-3/Permissions.md) { get; } | Gets the permission service from the request context. |
@@ -93,4 +94,4 @@ Initializes a new instance of the class.
 * interface [IRow](../Serenity.Data/IRow.md)
 * class [ListRequest](./ListRequest.md)
 * class [ListResponse&lt;T&gt;](./ListResponse-1.md)
-* **Source:** *[ListRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/842eeed9c1017bb2110e654fdf17bd169a31f7a0/src/services/RequestHandlers/List/ListRequestHandlerBase.cs)*
+* **Source:** *[ListRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/6144b41ef39a82d81dd7e4950b256ff86e79a141/src/services/RequestHandlers/List/ListRequestHandlerBase.cs)*

@@ -19,9 +19,12 @@ public class ConnectionStringInfo : IConnectionString
 | name | description |
 | --- | --- |
 | [ConnectionStringInfo](ConnectionStringInfo/ConnectionStringInfo.md)(…) | Contains a connection string, its key, and provider name. |
+| [Collation](ConnectionStringInfo/Collation.md) { get; set; } | Gets the default collation to use if the database for this connection is created by the application, or null to use the default of the server. |
+| [Comparer](ConnectionStringInfo/Comparer.md) { get; set; } | Gets the comparer specification of this connection, if any. |
 | [ConnectionKey](ConnectionStringInfo/ConnectionKey.md) { get; } | Gets the connection key. |
 | [ConnectionString](ConnectionStringInfo/ConnectionString.md) { get; } | Gets the connection string. |
 | [Dialect](ConnectionStringInfo/Dialect.md) { get; } | Gets the dialect. |
+| [PartialContainment](ConnectionStringInfo/PartialContainment.md) { get; set; } | Gets a value indicating whether a SQL Server database for this connection is created as a partially contained database, if it is created by the application. |
 | [ProviderName](ConnectionStringInfo/ProviderName.md) { get; } | Gets the name of the provider. |
 
 ## Remarks
@@ -31,4 +34,4 @@ Initializes a new instance of the [`ConnectionStringInfo`](./ConnectionStringInf
 ## See Also
 
 * interface [IConnectionString](./IConnectionString.md)
-* **Source:** *[ConnectionStringInfo.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Connections/ConnectionStringInfo.cs)*
+* **Source:** *[ConnectionStringInfo.cs](https://github.com/serenity-is/Serenity/blob/64f4d46040be54ec435d5a0cabde26e1c69fe085/src/services/Data/Connections/ConnectionStringInfo.cs)*

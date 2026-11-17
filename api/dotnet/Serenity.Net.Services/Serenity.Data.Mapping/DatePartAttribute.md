@@ -35,4 +35,4 @@ Creates a new instance
 ## See Also
 
 * class [BaseExpressionAttribute](./BaseExpressionAttribute.md)
-* **Source:** *[DatePartAttribute.cs](https://github.com/serenity-is/Serenity/blob/03d9544633af3a843d9921adc3e91fceec981ad4/src/services/Data/Mapping/DatePartAttribute.cs)*
+* **Source:** *[DatePartAttribute.cs](https://github.com/serenity-is/Serenity/blob/01c6c1a2f1de9878f233eb29c6ac73cb685eb01b/src/services/Data/Mapping/DatePartAttribute.cs)*

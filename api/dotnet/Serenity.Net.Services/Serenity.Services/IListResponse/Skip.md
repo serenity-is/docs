@@ -3,7 +3,7 @@
 Number of records skipped, passed from the ListRequest
 
 ```csharp
-public int Skip { get; }
+public int Skip { get; set; }
 ```
 
 ## See Also

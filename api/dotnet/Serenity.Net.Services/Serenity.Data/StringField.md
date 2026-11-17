@@ -27,6 +27,12 @@ public class StringField : GenericClassField<string>
 | override [ValueFromJson](StringField/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
 | override [ValueToJson](StringField/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
 
+## Protected Members
+
+| name | description |
+| --- | --- |
+| virtual [ConvertJsonValue](StringField/ConvertJsonValue.md)(…) | Converts or validates a non-null string value read from JSON before it is set on the row. It is not called for a JSON null. Derived fields can override it to reject a value by throwing, in which case the row is left unassigned for this field. |
+
 ## Remarks
 
 Initializes a new instance of the [`StringField`](./StringField.md) class.
@@ -34,4 +40,4 @@ Initializes a new instance of the [`StringField`](./StringField.md) class.
 ## See Also
 
 * class [GenericClassField&lt;TValue&gt;](./GenericClassField-1.md)
-* **Source:** *[StringField.cs](https://github.com/serenity-is/Serenity/blob/2de63af061ea10761df9dab64bc27e8de387af4a/src/services/Entity/FieldTypes/StringField.cs)*
+* **Source:** *[StringField.cs](https://github.com/serenity-is/Serenity/blob/a75b99310ca194a360f1da1b131f539fd279c957/src/services/Entity/FieldTypes/StringField.cs)*

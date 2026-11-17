@@ -25,6 +25,10 @@ interface QuickFilter<TWidget, P> {
 
 The `QuickFilterBar` widget renders the filters and submits their values with list requests. When a filter changes, the grid reloads with the new criteria.
 
+A quick filter's `type` can also be a **promise-like** widget type (a lazy import) when the editor is only loaded on
+demand: the bar renders a placeholder, and the saved state, value and handlers are kept until the real widget is ready
+(`EditorFiltering` behaves the same way).
+
 ### Adding a Quick Filter
 
 Quick filters are usually defined by marking a column with `quickFilter: true` in the columns script:

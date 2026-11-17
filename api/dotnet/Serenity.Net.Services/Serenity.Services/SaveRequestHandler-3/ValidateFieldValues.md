@@ -1,7 +1,6 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.ValidateFieldValues method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Validates field values via [`ICustomValidator`](../../Serenity/ICustomValidator.md) interface.
+Validates the values of the assigned fields by the validation rules of their properties, i.e. their ValidationAttributes, like ValidateRangeAttribute, and the ones their other attributes imply, see IImpliesValidation. A rule that is only checked by the forms is skipped.
 
 ```csharp
 protected virtual void ValidateFieldValues()

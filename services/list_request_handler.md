@@ -50,9 +50,15 @@ First we should have a look at what members a ListRequest object have:
       public HashSet<string>? ExcludeColumns { get; set; }
       public SortBy[]? DistinctFields { get; set; }
       public List<string>? ExportColumns { get; set; }
+      public List<AggregateBy>? Aggregates { get; set; }   // 10.7.0
+      public List<GroupBy>? GroupBy { get; set; }          // 10.7.0
+      public bool ExcludeEntities { get; set; }             // 10.7.0
+      public string? TimeZone { get; set; }                 // 10.7.0
       // ...
   }
 ```
+
+> The client side `ListRequest` declares the same members, except that `Sort` and `DistinctFields` are string arrays (`"Name DESC"`) on the client.
 
 
 ### ListRequest.Skip and ListRequest.Take Parameters
@@ -422,10 +428,17 @@ Not every list endpoint (or handler) supports every `ListRequest` option. A [Lis
 | `IncludeDeleted` | Applies soft-delete inclusion |
 | `ColumnSelection`, `IncludeColumns`, `ExcludeColumns` | Column options |
 | `DistinctFields`, `ExportColumns`, `Localize` | Other options |
-| `FilteringOptions`, `PagingOptions`, `ColumnOptions` | Combined sets |
+| `Aggregates`, `GroupBy`, `ExcludeEntities`, `TimeZone` | Calculated data and grouping options (see [Aggregates and Grouping](#aggregates-and-grouping)) |
+| `FilteringOptions`, `PagingOptions`, `ColumnOptions`, `AggregateOptions` | Combined sets |
 | `Baseline` | The fixed standard set (will not grow in future releases) |
-| `All` | Currently same as `Baseline` (may grow in the future) |
-| `SourceAdapter` | What the in-memory source adapter supports by default |
+| `ListHandler` | What `ListRequestHandler` itself supports — currently the same as `Baseline` |
+| `ProListHandler` | `ListHandler` + `AggregateOptions`, what a handler with the `Serenity.Pro.Extensions` behaviors supports |
+| `All` | Currently the same as `ProListHandler` (may grow in the future) |
+| `SourceAdapter` | What the in-memory source adapter supports by default: filtering, sorting, paging, distinct fields and the aggregate options |
+
+> In 10.7.0 the old `ProBaseline` value was **removed** — `ListHandler` is the baseline that now includes
+> `ExcludeEntities`, and `ProListHandler` replaced it. `All` aliases `ProListHandler`. Code that checked
+> `ProBaseline` should check `ProListHandler`.
 
 Endpoint actions can declare their supported capabilities with the [ListRequestCapabilitiesAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Services/ListRequestCapabilitiesAttribute.md), optionally excluding specific options:
 
@@ -459,6 +472,65 @@ Paged lists usually run a `COUNT(*)` just to fill `TotalCount`. Setting `Include
 ```
 
 `More` is computed from the rows actually read (before entity post-processing), so it stays correct even when a processed entity is dropped.
+
+## Aggregates and Grouping
+
+Since 10.7.0 a list request can ask the server to calculate values from **all** the rows it matches, instead of from the
+page that is returned, and to calculate them per group:
+
+```cs
+var response = await handler.ListAsync(connection, new ListRequest
+{
+    Aggregates = [
+        new AggregateBy("Freight", AggregateType.Sum),
+        new AggregateBy(null, AggregateType.Count)   // number of rows
+    ],
+    GroupBy = [
+        new GroupBy("OrderDate", descending: true, interval: DateGroupInterval.Month),
+        new GroupBy("ShipCountry")
+    ],
+    TimeZone = "Europe/Istanbul",
+    ExcludeEntities = true
+});
+
+response.Aggregates!.Values!["sum"]["Freight"]; // grand total
+response.Aggregates.Groups![0].Count;          // rows of the latest month
+```
+
+| Member | Meaning |
+| --- | --- |
+| `AggregateBy.Field` | The field to calculate over; optional for `AggregateType.Count` |
+| `AggregateBy.Type` | `Sum`, `Avg`, `Min`, `Max`, `Count` or `DistinctCount` |
+| `GroupBy.Field` | A field to group by, the **outermost first** (groups are nested) |
+| `GroupBy.Descending` | Order of the groups; set from the view's sort order when it sorts by that field |
+| `GroupBy.Interval` | A `DateGroupInterval` (`Year`, `Quarter`, `Month`, `Week`, `Day`, `Hour`) for date fields |
+| `ExcludeEntities` | Ask only for the count and the aggregates |
+| `TimeZone` | An IANA (`Europe/Istanbul`) or Windows zone id, telling where the days start for intervals |
+
+The response carries an `AggregateGroup` tree in `ListResponse<T>.Aggregates`:
+
+| Member | Meaning |
+| --- | --- |
+| `Key` | The value of the group's field (the start of the interval for date groups), null at the root |
+| `Count` | Number of rows in the group |
+| `Values` | `Values["sum"]["Freight"]`, keyed by aggregate type (`count`, `sum`, `avg`, `min`, `max`, `distinct`) |
+| `Groups` | The groups of the next level, in order |
+| `More` | True when the level has more groups than were returned (there is a per-level cap) |
+
+- `ExcludeEntities` makes the handler read a single row (skip 0, take 1) and clear the entities, since only the count and
+the aggregates are wanted. The base `ListRequestHandler` honors **only** this option.
+- Aggregates, grouping and the time zone are filled in by the `ListAggregatesBehavior` of `Serenity.Pro.Extensions`, or by a
+list source adapter that supports them. A Serene project without pro features ignores these request options, so grids keep
+calculating totals from the loaded page. Clients detect support with the `Aggregates`, `GroupBy`, `ExcludeEntities` and
+`TimeZone` capabilities (`AggregateOptions` / `ProListHandler`).
+- `TimeZone` only changes where intervals start; filters and returned dates are unaffected. Use
+`request.GetTimeZoneInfo()` to resolve it, which throws `ValidationError("InvalidTimeZone")` for an unknown id.
+- The members of `IListResponse` (`Entities`, `TotalCount`, `Skip`, `Take`, `More`, `Aggregates`) are now **settable**, and
+`ListResponse<T>.Entities` converts any assigned `IList` into a `List<T>`, so a behavior that already counted the rows can
+supply the totals and avoid a second count.
+
+On the client, `RemoteView.serverAggregates` asks for these values and uses them for the footer and group totals — see
+[RemoteView and Data Management](../grids/remoteview.md#server-side-aggregates).
 
 ## Server-Side Page Size Limits
 
@@ -559,6 +631,30 @@ public interface IListMapFieldExpressionBehavior
     string MapFieldExpression(IListRequestHandler handler, SqlQuery query, IField field);
 }
 ```
+
+### Query capture
+
+A list handler can also be run only to **build the query** it would execute, so that query can be used as the source of
+another one (for example an entity query of a data source):
+
+- `IListQueryCapture` / `IListQueryCaptureAsync` expose `CaptureQuery(connection, request)` without executing the query.
+- The capability is found through `handler.GetQueryCapture()`, which unwraps the request processor wrappers
+  (`IListRequestProcessorWrapper`) and adapts a synchronous handler to the async interface.
+- `IListRequestHandler.ExecutionMode` is `ListExecutionMode.QueryCapture` in that case, so handlers and behaviors know why
+  they run — e.g. to apply a filter to the query instead of post-processing rows.
+- A captured query skips key ordering, sort, paging, total count and the post-execution steps, so a handler that drops
+  rows in `ProcessEntity` or `OnReturn` would silently lose its filter. `GetPostQueryOverrides()` reports those methods
+  when overridden; a consumer can then refuse the handler, unless the entity declares
+  `[EntityQuery(EntityQueryMode.ListHandler)]` to confirm that all of its filtering happens in the query.
+
+`[EntityQuery(mode)]` on a row declares how an entity may be used as a query source:
+
+| `EntityQueryMode` | Reading it |
+| --- | --- |
+| `ListHandler` (default) | Through its list handler's query, with all its filters. A handler that drops rows after the query is refused unless the row explicitly confirms this mode. |
+| `Behaviors` | Through a generic list handler with the entity's list behaviors. |
+| `Unfiltered` | From its table and joins, with its permissions but without the list handler/behavior filters. Don't use it for rows that must be filtered, e.g. multi-tenant ones. |
+| `Disabled` | The entity can't be used by such a consumer. |
 
 ## See Also
 

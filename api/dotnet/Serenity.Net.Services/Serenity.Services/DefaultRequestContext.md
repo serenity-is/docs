@@ -4,7 +4,7 @@
 Default implementation for a [`IRequestContext`](./IRequestContext.md).
 
 ```csharp
-public class DefaultRequestContext : IHasHandlerSettings, IRequestContext
+public class DefaultRequestContext : IHasHandlerSettings, IRequestContext, IServiceProviderAccessor
 ```
 
 | parameter | description |
@@ -15,6 +15,7 @@ public class DefaultRequestContext : IHasHandlerSettings, IRequestContext
 | permissions | Permissions |
 | userAccessor | User access |
 | handlerSettings | Request handler settings |
+| serviceProviderAccessor | Gives the services of the current request, which the context gives as its [`ServiceProvider`](./DefaultRequestContext/ServiceProvider.md), e.g. for the validation rules a save handler checks. |
 
 ## Public Members
 
@@ -26,13 +27,14 @@ public class DefaultRequestContext : IHasHandlerSettings, IRequestContext
 | [HandlerSettings](DefaultRequestContext/HandlerSettings.md) { get; } |  |
 | [Localizer](DefaultRequestContext/Localizer.md) { get; } |  |
 | [Permissions](DefaultRequestContext/Permissions.md) { get; } |  |
+| [ServiceProvider](DefaultRequestContext/ServiceProvider.md) { get; } | Gets the services of the current request, which are looked up on each call, as the context is a singleton, or none when it is not given the IServiceProviderAccessor. |
 | [User](DefaultRequestContext/User.md) { get; } |  |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Any of the arguments is `null`. |
+| ArgumentNullException | Any of the required arguments is `null`. |
 
 ## Remarks
 
@@ -44,4 +46,5 @@ If you need scoped implementations of any of these dependencies, register your o
 
 * interface [IHasHandlerSettings](./IHasHandlerSettings.md)
 * interface [IRequestContext](./IRequestContext.md)
-* **Source:** *[DefaultRequestContext.cs](https://github.com/serenity-is/Serenity/blob/df6fb676c90d207452f30ac96d17cc9ba967a264/src/services/RequestHandlers/Repository/DefaultRequestContext.cs)*
+* interface [IServiceProviderAccessor](../../Serenity.Net.Core/Serenity/IServiceProviderAccessor.md)
+* **Source:** *[DefaultRequestContext.cs](https://github.com/serenity-is/Serenity/blob/b1dab073ad31646cd015787ead45f6004717e72a/src/services/RequestHandlers/Repository/DefaultRequestContext.cs)*

@@ -62,6 +62,25 @@ public enum FeatureKeys
 - Members marked with `[DefaultValue(false)]` are disabled by default (unless explicitly enabled in configuration).
 - [RequiresFeature](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/RequiresFeatureAttribute.md) attributes on the enum or its members declare dependencies: a feature is only enabled when all (or any, via `RequireAny`) of its dependencies are enabled.
 
+## Unknown Features
+
+A typo in a feature key used to enable a feature silently, since an undeclared key is enabled unless configuration
+says otherwise. `ConfigurationFeatureToggles` can now tell a key that is declared anywhere from one that isn't:
+
+| Member | Meaning |
+| --- | --- |
+| `knownFeatures` | The keys that are declared. `AddApplicationPartsFeatureToggles` collects them from the scanned `[FeatureKeySet]` enums |
+| `disableUnknown` | Disable unknown keys instead of only reporting them |
+| `onUnknownFeature` | Callback invoked once per unknown key, e.g. to log it |
+| `UnknownFeatures` | The keys that were queried but not declared |
+
+A key counts as **declared** when it is in `knownFeatures`, in `disableByDefault`, in the dependency map, or when it
+appears in the configuration (even with a value that can't be parsed). Merely referencing a key from a
+`[RequiresFeature]` does not declare it. Feature keys are matched **case insensitively** everywhere, and dependency map
+entries that differ only by case, or have null values, are tolerated.
+
+Serene and StartSharp disable unknown keys, so a feature that is mistyped stays off and a warning points at the typo.
+
 ## Checking Features
 
 Inject `IFeatureToggles` and call `IsEnabled`:

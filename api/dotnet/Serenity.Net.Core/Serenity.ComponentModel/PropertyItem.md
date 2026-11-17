@@ -15,6 +15,7 @@ public class PropertyItem
 | [Alignment](PropertyItem/Alignment.md) { get; set; } | Gets or sets the alignment of the column. Only applies to column, not editors. |
 | [AllowHide](PropertyItem/AllowHide.md) { get; set; } | Gets or sets the allow hide flag for columns. |
 | [Category](PropertyItem/Category.md) { get; set; } | Gets or sets the category of the property in form. Only meaningful for forms. |
+| [ClearWhenHidden](PropertyItem/ClearWhenHidden.md) { get; set; } | Gets or sets whether the value of the property is saved as empty while a condition hides it in forms, instead of being kept, see [`ClearWhenHidden`](./VisibleWhenAttribute/ClearWhenHidden.md). |
 | [Collapsed](PropertyItem/Collapsed.md) { get; set; } | Gets or sets the initial collapsed status of the category this property is in. |
 | [Collapsible](PropertyItem/Collapsible.md) { get; set; } | Gets or sets the collapsible flag for the category this property is in. Should only be set for the first field in the category. |
 | [CssClass](PropertyItem/CssClass.md) { get; set; } | Gets or sets the CSS class that should be applied to the grid column, e.g. data cells for this property. Only used in grids. |
@@ -58,8 +59,10 @@ public class PropertyItem
 | [QuickFilterParams](PropertyItem/QuickFilterParams.md) { get; set; } | Gets or sets the quick filter parameters. |
 | [QuickFilterSeparator](PropertyItem/QuickFilterSeparator.md) { get; set; } | Gets or sets the quick filter separator flag. |
 | [ReadOnly](PropertyItem/ReadOnly.md) { get; set; } | Gets or sets the read only flag of the property in forms. |
+| [ReadOnlyWhen](PropertyItem/ReadOnlyWhen.md) { get; set; } | Gets or sets the conditions on other fields that make the property read only in forms when they are all met, see [`ReadOnlyWhenAttribute`](./ReadOnlyWhenAttribute.md). |
 | [ReadPermission](PropertyItem/ReadPermission.md) { get; set; } | Gets or sets the read permission. If user doesn't have this permission, they won't see it in grid / form. |
 | [Required](PropertyItem/Required.md) { get; set; } | Gets or sets the required flag of the property in forms. |
+| [RequiredWhen](PropertyItem/RequiredWhen.md) { get; set; } | Gets or sets the conditions on other fields that make the property required in forms when they are all met, see [`RequiredWhenAttribute`](./RequiredWhenAttribute.md). |
 | [Resizable](PropertyItem/Resizable.md) { get; set; } | Gets or sets the resizable flag of a column. |
 | [ShowSelection](PropertyItem/ShowSelection.md) { get; set; } | Gets or sets the apply selected CSS flag of a column. |
 | [SkipOnLoad](PropertyItem/SkipOnLoad.md) { get; set; } | Gets or sets the ignore on load flag, which, when true, the field won't be read from the entity on load. |
@@ -73,7 +76,9 @@ public class PropertyItem
 | [Unbound](PropertyItem/Unbound.md) { get; set; } | Gets or sets the unbound flag, which when true the generated field won't have a field name and the grid / form won't try to load or save any value for it. |
 | [Updatable](PropertyItem/Updatable.md) { get; set; } | Gets or sets the updatable flag of the property. If it is false, property won't be serialized back in edit forms and it will be readonly. |
 | [UpdatePermission](PropertyItem/UpdatePermission.md) { get; set; } | Gets or sets the update permission. If user doesn't have this permission, field won't be serialized back in edit record forms and it will be readonly. |
+| [ValidationRules](PropertyItem/ValidationRules.md) { get; set; } | Gets or sets the validation rules the forms check for the property, from its validation attributes, see [`GetClientRule`](./ValidationRules/GetClientRule.md), with the implied text keys of their own messages. |
 | [Visible](PropertyItem/Visible.md) { get; set; } | Gets or sets the visible flag. Only used for columns. |
+| [VisibleWhen](PropertyItem/VisibleWhen.md) { get; set; } | Gets or sets the conditions on other fields that must all be met for the property to be visible in forms, see [`VisibleWhenAttribute`](./VisibleWhenAttribute.md). |
 | [Width](PropertyItem/Width.md) { get; set; } | Gets or sets the width of the column. Does not apply to forms. |
 | [WidthSet](PropertyItem/WidthSet.md) { get; set; } | Gets or sets the width explicitly set flag. If property has a [Width] attribute this property is true. If property column width is automatically calculated by Serenity based on field metadata, it is false. |
 | [ShouldSerializeEditorParams](PropertyItem/ShouldSerializeEditorParams.md)() | Should the EditorParams property be serialized by JSON.NET, used to reduce JSON size. |
@@ -85,4 +90,4 @@ public class PropertyItem
 
 ## See Also
 
-* **Source:** *[PropertyItem.cs](https://github.com/serenity-is/Serenity/blob/2a28525933e32e2024b92a826ed8ec67fa1a48e0/src/core/ComponentModel/PropertyGrid/PropertyItem.cs)*
+* **Source:** *[PropertyItem.cs](https://github.com/serenity-is/Serenity/blob/b1dab073ad31646cd015787ead45f6004717e72a/src/core/ComponentModel/PropertyGrid/PropertyItem.cs)*

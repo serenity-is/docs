@@ -160,7 +160,6 @@ The template's `UserDefinition` class (in `Modules/Common/AppServices/Models/Use
 ### IUserProvider
 
 `IUserProvider` is a combination interface that merges the user-related abstractions into one:
-
 ```cs
 public interface IUserProvider : IUserAccessor, IUserRetrieveService, IUserClaimCreator,
     IImpersonator, IRemoveCachedUser, IRemoveAll
@@ -187,6 +186,54 @@ public class SomeService(IUserProvider users)
 ```
 
 > Note: `DefaultUserProvider` implements `IImpersonator`, but its impersonation methods throw if the underlying `IUserAccessor` does not implement `IImpersonator`. The template's `UserAccessor` does, so impersonation works out of the box.
+
+### Listing users and roles (`IUserListService` / `IRoleListService`)
+
+`IUserRetrieveService` only knows the user it is asked for, which makes a picker that lists users a query of its own.
+Since 10.7.0 the abstractions package provides two list services for editors [IUserListService](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IUserListService.md)
+and [IRoleListService](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IRoleListService.md), with implementations in
+`Serenity.Extensions`:
+
+| Interface | Base implementation | Options |
+| --- | --- | --- |
+| `IUserListService.ListUsers(UserListOptions)` | [BaseUserListService&lt;TRow&gt;](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BaseUserListService-1.md) | `ContainsText`, `UserIds`, `Usernames`, `Take` |
+| `IRoleListService.ListRoles(RoleListOptions)` | [BaseRoleListService&lt;TRow&gt;](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BaseRoleListService-1.md) | `ContainsText`, `Take` |
+
+They **select only what a list item needs**, so nothing like a password hash is loaded, and they only give the data — the
+endpoint exposing them needs its own permission. Ids and usernames are chunked (500 at a time) to stay below the
+parameter limits, normalized usernames are used when the row has them, and users asked for by id or username are listed
+whatever their state. Register them with `AddUserListService` / `AddRoleListService`:
+
+```cs
+services.AddUserListService<AppServices.UserListService>();
+services.AddRoleListService<AppServices.RoleListService>();
+```
+
+#### Stable role keys
+
+Permissions are stored against a role's **key**, so a renamed role keeps its permissions when the row implements
+[IRoleKeyRow](../api/dotnet/Serenity.Extensions/Serenity.Extensions/IRoleKeyRow.md) (`RoleKeyField`). `IRoleDefinition.RoleKey`
+returns it, and `role.GetKeyOrName()` returns the key, or the name when there is none — which is what the roles of a user and
+the permissions of a role are stored with (the permission key is `Role:` followed by it).
+
+#### Normalized username and email
+
+Username and email lookups used to depend on the database collation, so "Admin" and "admin" matched on SQL Server's
+default collation but not on a case sensitive one. The rows implementing
+[INormalizedUsernameRow](../api/dotnet/Serenity.Extensions/Serenity.Extensions/INormalizedUsernameRow.md) /
+[INormalizedEmailRow](../api/dotnet/Serenity.Extensions/Serenity.Extensions/INormalizedEmailRow.md) carry a normalized copy of
+these values, and `BaseUserRetrieveService.NormalizeUsername` / `NormalizeEmail` compose Unicode and fold case (including
+Turkish `ı` / `İ`) to produce it:
+
+```cs
+[DisplayText("Normalized Username"), Size(100), NotNull]
+public string? NormalizedUsername { get => fields.NormalizedUsername[this]; set => fields.NormalizedUsername[this] = value; }
+```
+
+The Serene and StartSharp templates add `NormalizedUsername` (unique index, not null) and `NormalizedEmail` (indexed)
+columns with backfill migrations that use the SQL equivalent of the normalizer, keep them in sync in user save, sign-up and
+LDAP sync, and use them for duplicate checks and login throttling. Keep them in sync in your own user save/sign-up code if
+you write it yourself.
 
 ## Permission Keys
 

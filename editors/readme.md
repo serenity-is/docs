@@ -72,10 +72,10 @@ The `PropertyGrid` uses these interfaces to load entity values into editors and 
 | Editor | Description |
 | --- | --- |
 | [SelectEditor](../api/js/corelib/classes/SelectEditor.md) | Dropdown from a static list. |
-| [EnumEditor](../api/js/corelib/classes/EnumEditor.md) | Dropdown from an enum. |
+| [EnumEditor](../api/js/corelib/classes/EnumEditor.md) | Dropdown from an enum or a `StringEnum`; the `flags` option stores the OR of the selected members. |
 | [ComboboxEditor](../api/js/corelib/classes/ComboboxEditor.md) | Combobox with search. |
 | [RadioButtonEditor](../api/js/corelib/classes/RadioButtonEditor.md) | Radio button group. |
-| [BooleanEditor](../api/js/corelib/classes/BooleanEditor.md) | Checkbox. |
+| [BooleanEditor](../api/js/corelib/classes/BooleanEditor.md) | Checkbox; the `labelPosition` option places the caption after it (`start`, `end`, `endAligned`). |
 | [CheckTreeEditor](../api/js/corelib/classes/CheckTreeEditor.md) | Checkbox tree. |
 
 ### Lookup Editors
@@ -111,6 +111,9 @@ See [Lookup Editors](lookup-editors.md) for details.
 | --- | --- |
 | [Recaptcha](../api/js/corelib/classes/Recaptcha.md) | reCAPTCHA widget. |
 | [CascadedWidgetLink](../api/js/corelib/classes/CascadedWidgetLink.md) | Links a parent editor to a child editor (cascading). |
+
+> `ColorEditor` (with a `ColorPickerPanel` popover) and `DateRangeEditor` (with predefined ranges) are part of StartSharp's
+> pro extensions, not of corelib.
 
 ## How Editors Are Selected
 

@@ -16,4 +16,4 @@ public class DistinctValuesRegistration
 
 ## See Also
 
-* **Source:** *[DistinctValuesRegistration.cs](https://github.com/serenity-is/Serenity/blob/eef6be1d7741640aed4ce405c3b44984620b84be/src/web/DynamicScript/PropertyEditor/DistinctValuesRegistration.cs)*
+* **Source:** *[DistinctValuesRegistration.cs](https://github.com/serenity-is/Serenity/blob/dfc36d281396433b9fb533e17d3860d79b2b4732/src/web/DynamicScript/PropertyEditor/DistinctValuesRegistration.cs)*

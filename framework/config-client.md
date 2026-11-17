@@ -65,6 +65,19 @@ resetApplicationPath();
 Config.lazyTypeLoader = async (typeKey) => await import(`./editors/${typeKey}`);
 ```
 
+The default loader handles the types marked with the `LazyLoadInclude` marker, using the JSON block rendered by
+`@Html.LazyTypes()` in the layout head (see [Type Registration](ui/type-registration.md#lazy-loading-types)). It is called
+with the requested type key and a `kind` hint (`"dialog"`, `"editor"`, `"enum"`, `"formatter"`, `"filtering"`, ...), and
+can also be asked to only check availability (third argument) without importing a module — which the registries use to
+decide whether a type exists before requesting it.
+
+If you replace it, wrap the existing value, since the default loader is what resolves the types code generation declared:
+
+```ts
+const defaultLoader = Config.lazyTypeLoader;
+Config.lazyTypeLoader = (key, kind, checkOnly) => defaultLoader(key, kind, checkOnly) ?? myOwnLoader(key, kind);
+```
+
 ## getWindowLocation
 
 `getWindowLocation()` returns the location object the framework should navigate. Use it instead of touching `window.location` directly:

@@ -86,6 +86,14 @@ import { registerEnum } from "@serenity-is/corelib";
 registerEnum(MyEnum, "MyApp.MyEnum");
 ```
 
+For a `[Flags]` enum, pass `enumFlags` so `Enum.toString` returns a named member, or the fewest members that make the value
+(like .NET). Enum members can also declare `[IconClass]`, which the server emits as `enumIcons` and is exposed through
+`Enum.getIconClass`.
+
+A server-side `Serenity.StringEnum` (a class of string constants, stored as text) is generated as a const object plus a
+union type and a `registerEnum` call, so `EnumEditor`, `EnumSelectFormatter` and `RadioButtonEditor` handle string values
+instead of their old numeric-only workarounds.
+
 ## Interfaces
 
 Interfaces that need to be discoverable (for example, value interfaces like `IGetEditValue`) declare `interfaceTypeInfo`:
@@ -102,8 +110,34 @@ Registered types are available through the singleton registries:
 - `FormatterTypeRegistry` — looks up formatters by key.
 - `DialogTypeRegistry` — looks up dialogs by key.
 - `EnumTypeRegistry` — looks up enums by key.
+- `ValidationRuleTypeRegistry` — looks up validation rule classes by key.
 
 These are used internally by the `PropertyGrid`, grids, and dialogs to instantiate the right type for a given key.
+
+### Lazy Loading Types
+
+A type that is only referenced **by key** — for example the editor of a dynamically generated property item, a dialog
+opened by name, or a custom validation rule — doesn't have to be imported by the code that uses it. Mark the class with the
+`LazyLoadInclude` marker interface and code generation registers it, so the type is loaded when a registry first asks for
+it:
+
+```ts
+export class MyCustomEditor extends Widget<MyCustomEditorOptions> implements LazyLoadInclude {
+    static override [Symbol.typeInfo] = this.registerEditor("MyApp.MyCustomEditor");
+}
+```
+
+- Each type gets its own chunk, unless a **group** name is given: `implements LazyLoadInclude<"NorthwindDialogs">` puts
+  all the types of that group into a single chunk, so eight entity dialogs share one download.
+- The generated `LazyTypeLoader.mts` uses **literal dynamic imports**, so bundlers can split the types into chunks.
+- `LazyLoadTypesAttribute` (rendered by `@Html.LazyTypes()` in the layout head, which both templates have) declares the
+  content-hashed module URLs and the type keys as JSON.
+- `Config.lazyTypeLoader` is the default loader. It uses that JSON to import a module when a registry asks for a type, and
+  can also answer availability checks without importing it. Override it if you serve chunks from elsewhere, wrapping the
+  existing value.
+- `QuickFilterBar` and `EditorFiltering` accept promise-like widget types with placeholders, preserving saved state, values
+  and handlers until the real widget is ready, and `PropertyGrid.getEditorsLoading()` reports editors that are still
+  loading.
 
 ## Legacy Decorators
 
@@ -112,7 +146,9 @@ The `@Decorators.*` decorators (`@Decorators.registerClass`, `@Decorators.regist
 ## See Also
 
 - [classTypeInfo](../../api/js/corelib/functions/classTypeInfo.md), [editorTypeInfo](../../api/js/corelib/functions/editorTypeInfo.md), [formatterTypeInfo](../../api/js/corelib/functions/formatterTypeInfo.md), [registerType](../../api/js/corelib/functions/registerType.md) — type info helpers.
+- [LazyLoadInclude](../../api/js/corelib/interfaces/LazyLoadInclude.md), [Config](../../api/js/corelib/variables/Config.md) — lazy loading of types.
+- [ValidationRule](../../api/js/corelib/classes/ValidationRule.md) — the base of the rule classes the forms check.
 - [Widget](../../api/js/corelib/classes/Widget.md) — the `registerClass` / `registerEditor` static methods.
-- [EditorTypeRegistry](../../api/js/corelib/variables/EditorTypeRegistry.md), [FormatterTypeRegistry](../../api/js/corelib/variables/FormatterTypeRegistry.md), [DialogTypeRegistry](../../api/js/corelib/variables/DialogTypeRegistry.md), [EnumTypeRegistry](../../api/js/corelib/variables/EnumTypeRegistry.md) — the registries.
+- [EditorTypeRegistry](../../api/js/corelib/variables/EditorTypeRegistry.md), [FormatterTypeRegistry](../../api/js/corelib/variables/FormatterTypeRegistry.md), [DialogTypeRegistry](../../api/js/corelib/variables/DialogTypeRegistry.md), [EnumTypeRegistry](../../api/js/corelib/variables/EnumTypeRegistry.md), [ValidationRuleTypeRegistry](../../api/js/corelib/variables/ValidationRuleTypeRegistry.md) — the registries.
 - [Widgets](../../widgets/README.md) — the widget system.
 - [Frontend Framework Overview](readme.md) — the three client-side packages and how they fit together.

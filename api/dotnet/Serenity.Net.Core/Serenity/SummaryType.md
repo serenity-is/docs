@@ -20,4 +20,4 @@ public enum SummaryType
 
 ## See Also
 
-* **Source:** *[SummaryType.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/SummaryType.cs)*
+* **Source:** *[SummaryType.cs](https://github.com/serenity-is/Serenity/blob/b05e6ba57343d309378314e7469e032d43885daf/src/core/ComponentModel/Columns/SummaryType.cs)*

@@ -28,8 +28,10 @@
 | abstract class [BasePermissionKeyLister](./Serenity.Extensions/BasePermissionKeyLister.md) | Base class for permission key listers that enumerate permission keys from a type source, including nested, assembly, and type-level permissions. |
 | abstract class [BasePermissionService&lt;TUserPermissionRow,TUserRoleRow&gt;](./Serenity.Extensions/BasePermissionService-2.md) | Base permission service that provides common functionality for permission services. |
 | abstract class [BasePermissionService](./Serenity.Extensions/BasePermissionService.md) | Base permission service that provides common functionality for permission services. |
+| abstract class [BaseRoleListService&lt;TRow&gt;](./Serenity.Extensions/BaseRoleListService-1.md) | Base role list service that lists the roles from their rows. The name of a role is the name field of the row, and its key is read from it when it has [`IRoleKeyRow`](./Serenity.Extensions/IRoleKeyRow.md). |
 | abstract class [BaseRolePermissionService&lt;TRolePermissionRow&gt;](./Serenity.Extensions/BaseRolePermissionService-1.md) | Base permission service that provides common functionality for permission services. |
 | class [BaseTranslationOptions](./Serenity.Extensions/BaseTranslationOptions.md) | Options for the translation feature. |
+| abstract class [BaseUserListService&lt;TRow&gt;](./Serenity.Extensions/BaseUserListService-1.md) | Base user list service that lists the users from their rows. The username is the name field of the row, and the display name, email and active state are read from it when it has IDisplayNameRow, IEmailRow and IIsActiveRow. Only these fields are selected, so nothing like the password hash is loaded. |
 | abstract class [BaseUserRetrieveService&lt;TRow&gt;](./Serenity.Extensions/BaseUserRetrieveService-1.md) | Base user retrieve service that provides common functionality for user retrieve services. |
 | abstract class [BaseUserRetrieveService](./Serenity.Extensions/BaseUserRetrieveService.md) | Base user retrieve service that provides common functionality for user retrieve services. |
 | static class [BasicProgressDialogTexts](./Serenity.Extensions/BasicProgressDialogTexts.md) | Local text keys for the basic progress dialog. |
@@ -60,22 +62,28 @@
 | interface [IDataMigrations](./Serenity.Extensions/IDataMigrations.md) | Applies the migrations of the application. Implemented by the project template (`AppServices.DataMigrations`) and resolved by [`RunMigrationsIf`](./Serenity.Extensions/HostMigrationExtensions/RunMigrationsIf.md) for the `migrate` command, and by `Startup` on every normal start. |
 | interface [IEmailQueue](./Serenity.Extensions/IEmailQueue.md) | Abstraction for an email queue that stores messages to be sent later. |
 | interface [IEmailSender](./Serenity.Extensions/IEmailSender.md) | Abstraction for sending email messages. |
+| interface [INormalizedEmailRow](./Serenity.Extensions/INormalizedEmailRow.md) | Implemented by user rows that store the value calculated by [`NormalizeEmail`](./Serenity.Extensions/BaseUserRetrieveService/NormalizeEmail.md) in a separate field. Users are looked up by that field when they request a password reset, instead of comparing the email by the collation of its column. |
+| interface [INormalizedUsernameRow](./Serenity.Extensions/INormalizedUsernameRow.md) | Implemented by user rows that store the value calculated by [`NormalizeUsername`](./Serenity.Extensions/BaseUserRetrieveService/NormalizeUsername.md) in a separate field. [`BaseUserRetrieveService`](./Serenity.Extensions/BaseUserRetrieveService-1.md) looks these users up by that field, instead of comparing the username by the collation of its column. |
+| interface [IRoleKeyRow](./Serenity.Extensions/IRoleKeyRow.md) | Implemented by role rows that have a key besides their name, which does not change when the role is renamed. [`BaseRoleListService`](./Serenity.Extensions/BaseRoleListService-1.md) lists it as the key of the role. |
 | interface [ITranslateTextHandler](./Serenity.Extensions/ITranslateTextHandler.md) | Interface for handlers that translate texts. |
 | abstract class [MembershipPageBase&lt;TUserRow&gt;](./Serenity.Extensions/MembershipPageBase-1.md) | Base class for membership pages that provides common helpers for password hashing, salt generation, and user lookup. |
 | class [MembershipSettings](./Serenity.Extensions/MembershipSettings.md) | Settings for membership. |
 | abstract class [MigrationAttributeBase](./Serenity.Extensions/MigrationAttributeBase.md) | Base attribute for migration attributes that validates the migration version format. |
 | class [MigrationKeyAttribute](./Serenity.Extensions/MigrationKeyAttribute.md) | Marks a migration with a version key. |
+| static class [MigrationTagUtils](./Serenity.Extensions/MigrationTagUtils.md) | Tag matching utilities for migrations that use dimensioned tags, e.g. `db:Default` for the database a migration targets, or `env:Staging` for the environments it may run in. |
 | static class [MigrationUtils](./Serenity.Extensions/MigrationUtils.md) | Helper methods for FluentMigrator migrations, including table creation with identity keys and database type detection. |
 | class [PasswordStrengthRules](./Serenity.Extensions/PasswordStrengthRules.md) | The password strength rules. |
 | class [PasswordStrengthRulesDataScript](./Serenity.Extensions/PasswordStrengthRulesDataScript.md) | This declares a dynamic script with key 'PasswordStrengthRules' that will be available from client side. |
 | static class [PasswordStrengthValidationTexts](./Serenity.Extensions/PasswordStrengthValidationTexts.md) | Local text keys for password strength validation. |
 | class [PasswordStrengthValidator](./Serenity.Extensions/PasswordStrengthValidator.md) | Validates passwords against the configured password strength rules. |
+| static class [RegexWithDefault](./Serenity.Extensions/RegexWithDefault.md) | Combines a regular expression that adds to a default one, so that configuring a pattern can't lose what the default covers by accident, like sensitive tables. Leaving out the default takes setting an option for that. |
 | class [ReportTree](./Serenity.Extensions/ReportTree.md) | A tree of report categories and reports. |
 | class [ResetPasswordEmailModel](./Serenity.Extensions/ResetPasswordEmailModel.md) | The model for the reset password email. |
 | static class [ResetPasswordFormTexts](./Serenity.Extensions/ResetPasswordFormTexts.md) | Local text keys for the reset password form. |
 | class [ResetPasswordOptions](./Serenity.Extensions/ResetPasswordOptions.md) | A class that mirrors the `ResetPasswordOptions` script type. |
 | class [ResetPasswordRequest](./Serenity.Extensions/ResetPasswordRequest.md) | The request model for a reset password service. |
 | class [ResetPasswordResponse](./Serenity.Extensions/ResetPasswordResponse.md) | The response model for a reset password service. |
+| class [SampleDataAttribute](./Serenity.Extensions/SampleDataAttribute.md) | Marks a migration that adds sample data, so it only runs when the migration runner requests either all the sample data via [`AllTag`](./Serenity.Extensions/SampleDataAttribute/AllTag.md), or the sample data of a module via [`GetTag`](./Serenity.Extensions/SampleDataAttribute/GetTag.md), e.g. `sample:Dashboards`. |
 | class [SendResetPasswordResponse](./Serenity.Extensions/SendResetPasswordResponse.md) | The response model for a send reset password service. |
 | static class [SetPasswordFormTexts](./Serenity.Extensions/SetPasswordFormTexts.md) | Local text keys for the set password form. |
 | class [SingleLineTextFormatterAttribute](./Serenity.Extensions/SingleLineTextFormatterAttribute.md) | An attribute that sets the formatter type to `Serenity.Extensions.SingleLineTextFormatter` and its options. |

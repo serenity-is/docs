@@ -19,6 +19,8 @@ public abstract class BaseUserRetrieveService : IRemoveAll, IRemoveCachedUser, I
 | virtual [ByUsername](BaseUserRetrieveService/ByUsername.md)(…) |  |
 | virtual [RemoveAll](BaseUserRetrieveService/RemoveAll.md)() |  |
 | virtual [RemoveCachedUser](BaseUserRetrieveService/RemoveCachedUser.md)(…) |  |
+| static [NormalizeEmail](BaseUserRetrieveService/NormalizeEmail.md)(…) | Gets the normalized form of the specified email, using the same rule as [`NormalizeUsername`](./BaseUserRetrieveService/NormalizeUsername.md). This is the value to store in the field provided by [`INormalizedEmailRow`](./INormalizedEmailRow.md). |
+| static [NormalizeUsername](BaseUserRetrieveService/NormalizeUsername.md)(…) | Gets the normalized form of the specified username, which allows looking it up and comparing it case insensitively, without depending on the collation of the database. This is the value to store in the field provided by [`INormalizedUsernameRow`](./INormalizedUsernameRow.md). |
 
 ## Protected Members
 
@@ -41,4 +43,4 @@ public abstract class BaseUserRetrieveService : IRemoveAll, IRemoveCachedUser, I
 * interface [IRemoveAll](../../Serenity.Net.Core/Serenity.Abstractions/IRemoveAll.md)
 * interface [IRemoveCachedUser](../../Serenity.Net.Core/Serenity.Abstractions/IRemoveCachedUser.md)
 * interface [IUserRetrieveService](../../Serenity.Net.Core/Serenity.Abstractions/IUserRetrieveService.md)
-* **Source:** *[BaseUserRetrieveService.cs](https://github.com/serenity-is/Serenity/blob/f681c4775d515f42ae248938da92305df66f5c02/common-features/src/extensions/Modules/Authorization/BaseUserRetrieveService.cs)*
+* **Source:** *[BaseUserRetrieveService.cs](https://github.com/serenity-is/Serenity/blob/c23ad0526a306b9ddfab6f55b122c219de50f57f/common-features/src/extensions/Modules/Authorization/BaseUserRetrieveService.cs)*

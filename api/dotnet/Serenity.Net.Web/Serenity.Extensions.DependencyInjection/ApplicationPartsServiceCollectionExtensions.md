@@ -16,4 +16,4 @@ public static class ApplicationPartsServiceCollectionExtensions
 
 ## See Also
 
-* **Source:** *[ApplicationPartsServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/b25593854f2e2d2560030f357d1bb7a1cbd85e65/src/web/Mvc/TypeSources/ApplicationPartsServiceCollectionExtensions.cs)*
+* **Source:** *[ApplicationPartsServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/189d74ef8b4435303b33b9c8727ebb0103fedb38/src/web/Mvc/TypeSources/ApplicationPartsServiceCollectionExtensions.cs)*

@@ -6,11 +6,11 @@ small builders for the data-manipulation (DML) statements:
 
 | Builder | Generates |
 | --- | --- |
-| [`SqlInsert`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlInsert.md) | `INSERT INTO ...` |
-| [`SqlUpdate`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlUpdate.md) | `UPDATE ... SET ... WHERE ...` |
-| [`SqlDelete`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlDelete.md) | `DELETE FROM ... WHERE ...` |
+| [`SqlInsert`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlInsert.md) | `INSERT INTO ...` |
+| [`SqlUpdate`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlUpdate.md) | `UPDATE ... SET ... WHERE ...` |
+| [`SqlDelete`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlDelete.md) | `DELETE FROM ... WHERE ...` |
 
-All three derive from [`QueryWithParams`](../api/dotnet/Serenity.Net.Services/Serenity.Data/QueryWithParams.md),
+All three derive from [`QueryWithParams`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/QueryWithParams.md),
 so the values you pass are turned into auto-named parameters rather than being
 concatenated into the SQL string. This keeps your queries safe from SQL injection
 and gives them the same parameter handling as `SqlQuery`.
@@ -18,7 +18,7 @@ and gives them the same parameter handling as `SqlQuery`.
 These builders are **low level**. They perform no validation, no permission
 check, and do not call any service behaviors or request handlers. When you work
 with entities inside a request handler you will normally use the
-[request handlers](../services/README.md) or the CRUD helpers in
+[request handlers](../../services/README.md) or the CRUD helpers in
 [Entity CRUD & Query Helpers](entity-crud.md). Reach for the builders
 below when you need to run a bare `INSERT` / `UPDATE` / `DELETE` directly on a
 connection — for example in a migration, a background job, or when you are
@@ -73,7 +73,7 @@ new SqlInsert(fld.TableName)
 
 ## SqlInsert
 
-[`SqlInsert`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlInsert.md)
+[`SqlInsert`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlInsert.md)
 generates `INSERT INTO table (col1, col2, ...) VALUES (v1, v2, ...)`.
 
 ```csharp
@@ -90,7 +90,7 @@ the order of the columns.
 
 ### Running an Insert
 
-Use [`SqlHelper.Execute`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlHelper.md)
+Use [`SqlHelper.Execute`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlHelper.md)
 to execute the insert:
 
 ```csharp
@@ -163,7 +163,7 @@ it via `ToUpsertString(keyFields)`.
 
 ## SqlUpdate
 
-[`SqlUpdate`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlUpdate.md)
+[`SqlUpdate`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlUpdate.md)
 generates `UPDATE table SET col = val, ... WHERE ...`.
 
 ```csharp
@@ -198,7 +198,7 @@ new SqlUpdate(fld.TableName)
 ```
 
 Because `SqlUpdate` implements `IFilterableQuery`, the
-[`WhereEqual`](../api/dotnet/Serenity.Net.Services/Serenity.Data/FilterableQueryExtensions.md)
+[`WhereEqual`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/FilterableQueryExtensions.md)
 helper is also available for a safe, parameterized equality filter:
 
 ```csharp
@@ -211,7 +211,7 @@ new SqlUpdate(fld.TableName)
 
 ## SqlDelete
 
-[`SqlDelete`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlDelete.md)
+[`SqlDelete`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlDelete.md)
 generates `DELETE FROM table WHERE ...`.
 
 ```csharp
@@ -238,7 +238,7 @@ new SqlDelete(Fld.TableName)
 
 ## ExpectedRows
 
-[`ExpectedRows`](../api/dotnet/Serenity.Net.Services/Serenity.Data/ExpectedRows.md)
+[`ExpectedRows`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ExpectedRows.md)
 controls how the number of affected rows is validated after an `UPDATE` or
 `DELETE`:
 
@@ -254,7 +254,7 @@ table.
 ## Executing the Query
 
 The builders are executed through the
-[`SqlHelper`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlHelper.md)
+[`SqlHelper`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlHelper.md)
 extension methods, which take care of opening the connection, building the
 command, adding parameters, logging, and honoring any
 `ISqlOperationInterceptor`:

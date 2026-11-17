@@ -44,7 +44,7 @@ This is the sample used by the Northwind demo (`OrderRowAnnotations`), and it's 
 
 ## The `[AnnotationType]` Attribute
 
-[AnnotationTypeAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/AnnotationTypeAttribute.md) declares that a class is an annotation type for another type:
+[AnnotationTypeAttribute](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/AnnotationTypeAttribute.md) declares that a class is an annotation type for another type:
 
 ```cs
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
@@ -71,7 +71,7 @@ The attribute is `AllowMultiple`, so one annotation class can annotate several t
 
 ### `IAnnotationTypeRegistry`
 
-[IAnnotationTypeRegistry](../api/dotnet/Serenity.Net.Core/Serenity.Reflection/IAnnotationTypeRegistry.md) is the abstraction that answers "which annotation types apply to a given type?":
+[IAnnotationTypeRegistry](../../api/dotnet/Serenity.Net.Core/Serenity.Reflection/IAnnotationTypeRegistry.md) is the abstraction that answers "which annotation types apply to a given type?":
 
 ```cs
 public interface IAnnotationTypeRegistry
@@ -82,7 +82,7 @@ public interface IAnnotationTypeRegistry
 
 ### `AnnotationTypeRegistry`
 
-[AnnotationTypeRegistry](../api/dotnet/Serenity.Net.Core/Serenity.Reflection/AnnotationTypeRegistry.md) is the default implementation. It discovers all types decorated with `[AnnotationType]` through the type source, and `GetAnnotationTypesFor(type)` returns the ones that match the given type according to the `AnnotatedType`, `Inherited`, `Namespaces`, and `Properties` rules above.
+[AnnotationTypeRegistry](../../api/dotnet/Serenity.Net.Core/Serenity.Reflection/AnnotationTypeRegistry.md) is the default implementation. It discovers all types decorated with `[AnnotationType]` through the type source, and `GetAnnotationTypesFor(type)` returns the ones that match the given type according to the `AnnotatedType`, `Inherited`, `Namespaces`, and `Properties` rules above.
 
 It is registered as a singleton by `AddEntities()` (called from `AddServiceHandlers` in `Startup.cs`):
 
@@ -94,7 +94,7 @@ services.TryAddSingleton<IAnnotationTypeRegistry, AnnotationTypeRegistry>();
 
 ### `IAnnotatedType` and `AnnotationTypeExtensions`
 
-Once you have the annotation types for a row, [AnnotationTypeExtensions](../api/dotnet/Serenity.Net.Core/Serenity.Reflection/AnnotationTypeExtensions.md) provides `GetAnnotatedType()`, which returns an [IAnnotatedType](../api/dotnet/Serenity.Net.Core/Serenity.Reflection/IAnnotatedType.md):
+Once you have the annotation types for a row, [AnnotationTypeExtensions](../../api/dotnet/Serenity.Net.Core/Serenity.Reflection/AnnotationTypeExtensions.md) provides `GetAnnotatedType()`, which returns an [IAnnotatedType](../../api/dotnet/Serenity.Net.Core/Serenity.Reflection/IAnnotatedType.md):
 
 ```cs
 public interface IAnnotatedType
@@ -199,6 +199,6 @@ They're optional — you can always put attributes directly on the row — but t
 
 ## See Also
 
-- [Entities (Rows)](data-access/entities.md)
-- [Forms & Editors](attributes/attributes.md)
-- [Dynamic Scripts](dynamic-scripts/readme.md)
+- [Entities (Rows)](entities.md)
+- [Attributes](../../attributes/attributes.md)
+- [Dynamic Scripts](../dynamic-scripts/readme.md)

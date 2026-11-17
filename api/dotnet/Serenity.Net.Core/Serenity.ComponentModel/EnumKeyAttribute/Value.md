@@ -3,7 +3,7 @@
 Gets the enum key.
 
 ```csharp
-public string Value { get; }
+public string? Value { get; }
 ```
 
 ## Property Value

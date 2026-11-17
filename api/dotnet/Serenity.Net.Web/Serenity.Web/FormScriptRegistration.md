@@ -16,4 +16,4 @@ public class FormScriptRegistration
 
 ## See Also
 
-* **Source:** *[FormScriptRegistration.cs](https://github.com/serenity-is/Serenity/blob/996e620854dd44715465a4898d52f11f4fdf110b/src/web/DynamicScript/DynamicScript/FormScriptRegistration.cs)*
+* **Source:** *[FormScriptRegistration.cs](https://github.com/serenity-is/Serenity/blob/1ae08f36779a1f22f8f4600e4e68d4a9c8a89382/src/web/DynamicScript/DynamicScript/FormScriptRegistration.cs)*

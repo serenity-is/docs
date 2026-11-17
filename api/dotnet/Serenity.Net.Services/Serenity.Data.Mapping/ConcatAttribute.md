@@ -20,4 +20,4 @@ public class ConcatAttribute : BaseExpressionAttribute
 ## See Also
 
 * class [BaseExpressionAttribute](./BaseExpressionAttribute.md)
-* **Source:** *[ConcatAttribute.cs](https://github.com/serenity-is/Serenity/blob/9f7b8ce8c15c9bc21e16a225e837ed032d6fdb9f/src/services/Data/Mapping/ConcatAttribute.cs)*
+* **Source:** *[ConcatAttribute.cs](https://github.com/serenity-is/Serenity/blob/2b2dc408169894d8cc7befbe94a14eef08d49400/src/services/Data/Mapping/ConcatAttribute.cs)*

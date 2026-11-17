@@ -3,7 +3,7 @@
 List of entities
 
 ```csharp
-public IList Entities { get; }
+public IList Entities { get; set; }
 ```
 
 ## See Also

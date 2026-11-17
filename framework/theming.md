@@ -124,6 +124,29 @@ Stylesheets that override icons through the old font glyphs (`content: "\f..."` 
 
 The templates still bundle the Line Awesome stylesheet, which keeps the Font Awesome–compatible `fa-*` classes working for navigation and custom markup, but the framework itself no longer depends on an icon font.
 
+## Form and Field Styling
+
+A few classes decide the layout of a form field, and it's worth knowing them when you write custom CSS:
+
+| Class | Placed on | Meaning |
+| --- | --- | --- |
+| `editor` | the editor element | The real editor widget. Code that looks up a field's editor relies on it. |
+| `editor-like` | the select2 container, or a wrapper | Gets the editor's **width and layout** styling, but is not the editor |
+| `.field` | the field container | Holds the caption, the editor and the validation icon |
+| `.input-group` | an editor with addons | Lets the editor and its addons share the row |
+| `.vx` | the validation icon | The error/valid icon of the field |
+
+The Select2 container used to copy the input's classes, including `editor`, and was inserted before the input, so code that
+looked up a field's editor found the container instead. It now adapts the class to `editor-like`
+(`adaptContainerCssClass`), and an editor wrapped in an input group gets the same class, so both still get the editor's
+width/layout styling without claiming to be the editor. If you target `.editor` in your own CSS for layout purposes, add
+`.editor-like` next to it.
+
+For the validation icon: it has `flex: 0 0 auto` so it keeps its intrinsic size next to the caption text, it is revealed
+when the error element is nested in an input group (`.input-group:has(> .error)~.vx`), and a field's input group flexes and
+shrinks (`flex: 1 1 0.01%`, `min-width: 0`, `width: auto`) so it shares the row with the icon instead of pushing it out of
+view.
+
 ## Grid Styling
 
 SleekGrid provides CSS classes for grid elements (headers, rows, cells, etc.). The grid's `s-` class (e.g. `s-OrderGrid`) can be used to scope grid-specific styles:
@@ -133,6 +156,10 @@ SleekGrid provides CSS classes for grid elements (headers, rows, cells, etc.). T
     /* header styles */
 }
 ```
+
+Disabled pager buttons (e.g. the next button in
+[indeterminate paging](../grids/remoteview.md#indeterminate-load-more-paging)) are styled with a reduced opacity and no
+pointer events by the theme.
 
 ## See Also
 

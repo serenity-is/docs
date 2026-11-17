@@ -8,8 +8,6 @@
 | static class [ArgumentExceptions](./Serenity/ArgumentExceptions.md) | This class contains methods for creating ArgumentException and subclasses while avoiding analyzer warnings regarding mismatched argument names. |
 | enum [CaptureOperationType](./Serenity/CaptureOperationType.md) | Contains capture logging operation types |
 | interface [ICriteria](./Serenity/ICriteria.md) | Shared criteria interface. |
-| interface [ICustomValidator](./Serenity/ICustomValidator.md) | Custom validator abstraction. |
-| interface [IValidationContext](./Serenity/IValidationContext.md) | Validation context abstraction. |
 | struct [OptionalValue&lt;T&gt;](./Serenity/OptionalValue-1.md) | An optional value returned by some methods like interceptors. It can be used to indicate that the result is optional and if default is returned, the operation should continue normally. |
 | static class [PrefixHelper](./Serenity/PrefixHelper.md) | Contains static methods to determine prefix length for a list E.g. to find the prefix that all the columns of a table have |
 
@@ -34,7 +32,7 @@
 | class [ByteArrayField](./Serenity.Data/ByteArrayField.md) | Field with a byte[] value. |
 | class [CaptureLogAttribute](./Serenity.Data/CaptureLogAttribute.md) | Enables capture logging for a row type. |
 | class [ComparerAttribute](./Serenity.Data/ComparerAttribute.md) | Specifies the comparer used to compare the values of a row's fields (for example, for change detection or dirty tracking). Can be applied to a row class to affect all of its fields, or to a single field property to override the row, connection or global setting. |
-| static class [ComparerResolver](./Serenity.Data/ComparerResolver.md) | Parses comparer specifications like "Ordinal", "OrdinalIgnoreCase", "CurrentCulture", "CurrentCultureIgnoreCase", "tr-TR" or "tr-TR:IgnoreCase" into a StringComparer. |
+| static class [ComparerResolver](./Serenity.Data/ComparerResolver.md) | Parses comparer specifications like "Ordinal", "OrdinalIgnoreCase", "CurrentCulture", "CurrentCultureIgnoreCase", "tr-TR", "tr-TR:IgnoreCase" or "tr-TR:IgnoreCase:IgnoreAccents" into a StringComparer. |
 | static class [ConnectionExtensions](./Serenity.Data/ConnectionExtensions.md) | Contains DB connection related extensions. |
 | class [ConnectionKeyFallbackAttribute](./Serenity.Data/ConnectionKeyFallbackAttribute.md) | Declares a fallback connection key for a logical connection key. When a connection key is not present in configuration, the fallback connection key is used. |
 | class [ConnectionStringEntry](./Serenity.Data/ConnectionStringEntry.md) | A connection string setting. |
@@ -201,6 +199,9 @@
 | static class [SetFieldByStatementExtensions](./Serenity.Data/SetFieldByStatementExtensions.md) | Extension methods for classes implementing [`ISetFieldByStatement`](./Serenity.Data/ISetFieldByStatement.md). |
 | class [SingleField](./Serenity.Data/SingleField.md) | Field with a Single value. |
 | static class [Sql](./Serenity.Data/Sql.md) | Contains SQL expression generation helpers. |
+| static class [SqlCollationMapper](./Serenity.Data/SqlCollationMapper.md) | Maps an engine independent [`SqlCollationSpec`](./Serenity.Data/SqlCollationSpec.md) to the name of a collation of a database engine. |
+| struct [SqlCollationSpec](./Serenity.Data/SqlCollationSpec.md) | An engine independent description of the comparison a collation should perform. |
+| enum [SqlCollationTarget](./Serenity.Data/SqlCollationTarget.md) | What a collation is mapped for, as the available collations can differ between them. |
 | class [SqlCommandDumper](./Serenity.Data/SqlCommandDumper.md) | Generates a debug version of a SQL command, including DECLARE statements for its parameters, so that it can be executed or inspected outside of the original connection. Based on the answer by Mitch at http://stackoverflow.com/questions/265192/get-the-generated-sql-statement-from-a-sqlcommand-object. |
 | static class [SqlConversions](./Serenity.Data/SqlConversions.md) | Value to SQL constant expression conversions. |
 | class [SqlDebugDumper](./Serenity.Data/SqlDebugDumper.md) | Formats a debug version of a query, replacing parameters with SQL constants, fixing brackets, database caret references etc. |
@@ -219,6 +220,7 @@
 | enum [SqlUnionType](./Serenity.Data/SqlUnionType.md) | Type of SQL UNIONs. |
 | class [SqlUpdate](./Serenity.Data/SqlUpdate.md) | Generates queries of the form `UPDATE tablename SET field1 = value1, field2 = value2 ... fieldN = valueN WHERE [filter]`. |
 | class [StreamField](./Serenity.Data/StreamField.md) | Field with a Stream value. |
+| class [StringEnumField&lt;TStringEnum&gt;](./Serenity.Data/StringEnumField-1.md) | Field with a string value that is one of the members of a StringEnum type. Like [`EnumField`](./Serenity.Data/EnumField-1.md), a value that is not one of the members is rejected while the value is deserialized from JSON, so it never reaches the row. |
 | class [StringField](./Serenity.Data/StringField.md) | Field with a String value. |
 | static class [T0ReferenceRemover](./Serenity.Data/T0ReferenceRemover.md) | Removes T0. references in SQL expression. |
 | class [TimeSpanField](./Serenity.Data/TimeSpanField.md) | Field with a TimeSpan value. |
@@ -244,9 +246,11 @@
 | abstract class [BaseExpressionAttribute](./Serenity.Data.Mapping/BaseExpressionAttribute.md) | Specifies SQL expression this property corresponds to. You may use brackets ([]) to escape identifiers. Brackets will be converted to database specific quotes. |
 | class [CaseAttribute](./Serenity.Data.Mapping/CaseAttribute.md) | Case expression attribute. |
 | class [CaseSwitchAttribute](./Serenity.Data.Mapping/CaseSwitchAttribute.md) | Case expression with simple switch value. |
+| class [CastAttribute](./Serenity.Data.Mapping/CastAttribute.md) | Cast expression attribute, which converts a value to one of the types that have an equivalent in all supported databases: Int32, Int64, Decimal with [`Precision`](./Serenity.Data.Mapping/CastAttribute/Precision.md) and [`Scale`](./Serenity.Data.Mapping/CastAttribute/Scale.md), String with [`Size`](./Serenity.Data.Mapping/CastAttribute/Size.md), and Date, which drops the time. Converting a number with a fraction to an integer truncates it in SQL Server and SQLite, while it rounds it in the others. SQLite has no decimal type, so a decimal is a REAL there. |
 | class [ColumnAttribute](./Serenity.Data.Mapping/ColumnAttribute.md) | Explicitly specifies the database column name for property. Use this attribute if matching column name in database is different than the property name. |
 | class [ConcatAttribute](./Serenity.Data.Mapping/ConcatAttribute.md) | Concat expression attribute. |
-| class [DateDiffAttribute](./Serenity.Data.Mapping/DateDiffAttribute.md) | DateDiff expression attribute |
+| class [DateAddAttribute](./Serenity.Data.Mapping/DateAddAttribute.md) | DateAdd expression attribute, which adds a number of date parts to a date like DATEADD of SQL Server. Adding months or years to the end of a month gives the last day of the target month when it is shorter, e.g. January 31 plus one month is February 28. |
+| class [DateDiffAttribute](./Serenity.Data.Mapping/DateDiffAttribute.md) | DateDiff expression attribute, which returns the number of date part boundaries crossed between two dates like DATEDIFF of SQL Server, e.g. one day from 23:00 to 01:00 of the next day, and one year from December 31 to January 1, rather than the number of complete units between them. |
 | class [DatePartAttribute](./Serenity.Data.Mapping/DatePartAttribute.md) | DatePart expression attribute |
 | class [ExpressionAttribute](./Serenity.Data.Mapping/ExpressionAttribute.md) | Specifies SQL expression this property corresponds to. You may use brackets ([]) to escape identifiers. Brackets will be converted to database specific quotes. |
 | class [ForeignKeyAttribute](./Serenity.Data.Mapping/ForeignKeyAttribute.md) | Specifies that this property is a foreign key to another field in a primary key table. There is no need for foreign key to exist in database actually. It is not checked. This is mostly used for joins. |
@@ -265,6 +269,7 @@
 | class [OuterApplyAttribute](./Serenity.Data.Mapping/OuterApplyAttribute.md) | Adds an OUTER APPLY to the row. |
 | class [PrimaryKeyAttribute](./Serenity.Data.Mapping/PrimaryKeyAttribute.md) | Marks the property as part of the primary key. |
 | class [QuickSearchAttribute](./Serenity.Data.Mapping/QuickSearchAttribute.md) | Marks the property so that it should be included in quick text searches. |
+| class [ReplaceAttribute](./Serenity.Data.Mapping/ReplaceAttribute.md) | Replace expression attribute, which replaces all occurrences of a string in another one like REPLACE of SQL Server. |
 | class [ScaleAttribute](./Serenity.Data.Mapping/ScaleAttribute.md) | Determines numeric scale (decimal places) for the field. |
 | enum [SearchType](./Serenity.Data.Mapping/SearchType.md) | Quick search type enumeration. |
 | class [SetFieldFlagsAttribute](./Serenity.Data.Mapping/SetFieldFlagsAttribute.md) | Used to turn on (include) or turn off (exclude) field flags. |
@@ -272,8 +277,12 @@
 | class [SqlDateTimeOffsetAttribute](./Serenity.Data.Mapping/SqlDateTimeOffsetAttribute.md) | Dialect specific SQL expression for current date/time with timezone. |
 | class [SqlNowAttribute](./Serenity.Data.Mapping/SqlNowAttribute.md) | Dialect specific SQL expression for current date/time in server's timezone. |
 | class [SqlUtcNowAttribute](./Serenity.Data.Mapping/SqlUtcNowAttribute.md) | Dialect specific SQL expression for UTC date/time. |
+| class [SubstringAttribute](./Serenity.Data.Mapping/SubstringAttribute.md) | Substring expression attribute, which returns a part of a string like SUBSTRING of SQL Server. |
 | class [TableNameAttribute](./Serenity.Data.Mapping/TableNameAttribute.md) | Determines table name for the row. |
 | class [TextualFieldAttribute](./Serenity.Data.Mapping/TextualFieldAttribute.md) | Determines textual field for this field. This is placed on foreign keys and specifies which field in joined table (view fields in this row that originates from foreign table) should be used for display / filtering. |
+| class [TrimAttribute](./Serenity.Data.Mapping/TrimAttribute.md) | Trim expression attribute, which removes the spaces at the start, at the end, or both, of a string, like TRIM, LTRIM and RTRIM of SQL Server. |
+| class [TrimLeftAttribute](./Serenity.Data.Mapping/TrimLeftAttribute.md) | Trim expression attribute that only removes the spaces at the start of a string, like LTRIM of SQL Server. |
+| class [TrimRightAttribute](./Serenity.Data.Mapping/TrimRightAttribute.md) | Trim expression attribute that only removes the spaces at the end of a string, like RTRIM of SQL Server. |
 | class [UniqueAttribute](./Serenity.Data.Mapping/UniqueAttribute.md) | Defines a unique constraint on the field. Sets the Unique flag and, by default, makes [`UniqueFieldSaveBehavior`](./Serenity.Services/UniqueFieldSaveBehavior.md) check the constraint before save by running an existence query, so that a user friendly validation error is returned instead of a database exception. The actual database unique index (if any) remains authoritative. |
 | class [UniqueConstraintAttribute](./Serenity.Data.Mapping/UniqueConstraintAttribute.md) | Adds a unique constraint check to the row. By default [`UniqueConstraintSaveBehavior`](./Serenity.Services/UniqueConstraintSaveBehavior.md) checks the constraint before save by running an existence query, so that a user friendly validation error is returned instead of a database exception. The actual database unique index (if any) remains authoritative. |
 | class [UpdatableExtensionAttribute](./Serenity.Data.Mapping/UpdatableExtensionAttribute.md) | Marks the JOIN as an updatable extension. |
@@ -388,6 +397,9 @@
 
 | public type | description |
 | --- | --- |
+| class [AggregateBy](./Serenity.Services/AggregateBy.md) | A value to calculate from all the rows a list request matches, and from the rows of each of its groups, e.g. the sum of a field. It is in the response under the key of its type, then the name of its field, see [`Values`](./Serenity.Services/AggregateGroup/Values.md). |
+| class [AggregateGroup](./Serenity.Services/AggregateGroup.md) | The aggregates of a list request for a set of rows: all the rows the request matches at the root, see [`Aggregates`](./Serenity.Services/ListResponse-1/Aggregates.md), and the rows of a group under it, one level for each [`GroupBy`](./Serenity.Services/ListRequest/GroupBy.md). They are calculated from all the rows, and not from the page that is returned. |
+| enum [AggregateType](./Serenity.Services/AggregateType.md) | The kind of a value that is calculated from the rows of a list request, see [`AggregateBy`](./Serenity.Services/AggregateBy.md). The values of the ones that are also in SummaryType are the same. |
 | class [AsyncToSyncDeleteBehaviorWrapper](./Serenity.Services/AsyncToSyncDeleteBehaviorWrapper.md) | Wraps an [`IDeleteBehaviorAsync`](./Serenity.Services/IDeleteBehaviorAsync.md) implementation and exposes it as an [`IDeleteBehaviorSync`](./Serenity.Services/IDeleteBehaviorSync.md) by blocking on its async methods. This allows synchronous delete request handlers to run asynchronous delete behaviors. |
 | class [AsyncToSyncListBehaviorWrapper](./Serenity.Services/AsyncToSyncListBehaviorWrapper.md) | Wraps an [`IListBehaviorAsync`](./Serenity.Services/IListBehaviorAsync.md) implementation and exposes it as an [`IListBehaviorSync`](./Serenity.Services/IListBehaviorSync.md) by blocking on its async methods. This allows synchronous list request handlers to run asynchronous list behaviors. |
 | class [AsyncToSyncRetrieveBehaviorWrapper](./Serenity.Services/AsyncToSyncRetrieveBehaviorWrapper.md) | Wraps an [`IRetrieveBehaviorAsync`](./Serenity.Services/IRetrieveBehaviorAsync.md) implementation and exposes it as an [`IRetrieveBehaviorSync`](./Serenity.Services/IRetrieveBehaviorSync.md) by blocking on its async methods. This allows synchronous retrieve request handlers to run asynchronous retrieve behaviors. |
@@ -414,6 +426,8 @@
 | class [CompanionHandlerTypeAttribute](./Serenity.Services/CompanionHandlerTypeAttribute.md) | Specifies the companion (other mode) handler interface for a request processor interface, e.g. [`ISaveRequestProcessorAsync`](./Serenity.Services/ISaveRequestProcessorAsync.md) as companion of [`ISaveRequestProcessor`](./Serenity.Services/ISaveRequestProcessor.md), together with a wrapper type that adapts a custom handler of the companion interface to this interface. |
 | static class [DataValidation](./Serenity.Services/DataValidation.md) | Contains validation related helper methods for service handlers |
 | static class [DataValidationTexts](./Serenity.Services/DataValidationTexts.md) |  |
+| enum [DateGroupInterval](./Serenity.Services/DateGroupInterval.md) | The interval the values of a date field are grouped by, see [`Interval`](./Serenity.Services/GroupBy/Interval.md). The rows of an interval are one group, whose key is the start of the interval, e.g. the first day of the month. |
+| static class [DateGroupIntervalExtensions](./Serenity.Services/DateGroupIntervalExtensions.md) | Extension methods for [`DateGroupInterval`](./Serenity.Services/DateGroupInterval.md) |
 | class [DefaultBehaviorFactory](./Serenity.Services/DefaultBehaviorFactory.md) | Default [`IBehaviorFactory`](./Serenity.Services/IBehaviorFactory.md) implementation. |
 | class [DefaultBehaviorProvider](./Serenity.Services/DefaultBehaviorProvider.md) | Default implementation for [`IBehaviorProvider`](./Serenity.Services/IBehaviorProvider.md). |
 | class [DefaultHandlerActivator](./Serenity.Services/DefaultHandlerActivator.md) | Default implementation of the [`IHandlerActivator`](./Serenity.Services/IHandlerActivator.md). |
@@ -431,7 +445,10 @@
 | abstract class [DeleteRequestHandlerBase&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](./Serenity.Services/DeleteRequestHandlerBase-3.md) | Abstract base class for delete request handlers that share state and mode neutral helper methods between synchronous and asynchronous delete request handlers. |
 | class [DeleteResponse](./Serenity.Services/DeleteResponse.md) | The response object returned from a delete service |
 | class [DisplayOrderFilterHelper](./Serenity.Services/DisplayOrderFilterHelper.md) | Display order related helper methods |
+| class [EntityQueryAttribute](./Serenity.Services/EntityQueryAttribute.md) | Specifies how an entity is read when it is used as a source of another query, e.g. by an entity query of a data source, or that it can't be used so. See [`EntityQueryMode`](./Serenity.Services/EntityQueryMode.md). |
+| enum [EntityQueryMode](./Serenity.Services/EntityQueryMode.md) | Specifies how an entity is read when it is used as a source of another query, e.g. by an entity query of a data source, see [`EntityQueryAttribute`](./Serenity.Services/EntityQueryAttribute.md). Each mode decides which filters of the application apply, e.g. those limiting the rows to a tenant or the user's own records. |
 | class [GenericHandlerTypeAttribute](./Serenity.Services/GenericHandlerTypeAttribute.md) | Assigns the generic handler type (e.g. [`SaveRequestHandler`](./Serenity.Services/SaveRequestHandler-1.md) for a handler interface (like [`ISaveRequestHandler`](./Serenity.Services/ISaveRequestHandler.md)). |
+| class [GroupBy](./Serenity.Services/GroupBy.md) | A field the rows a list request matches are grouped by, for the aggregates of each group, see [`GroupBy`](./Serenity.Services/ListRequest/GroupBy.md). |
 | interface [IBehaviorFactory](./Serenity.Services/IBehaviorFactory.md) | Behavior factory abstraction |
 | interface [IBehaviorProvider](./Serenity.Services/IBehaviorProvider.md) | Interface abstraction for behavior provider which resolves list of behavior instances of a specified type, like [`ISaveBehavior`](./Serenity.Services/ISaveBehavior.md) etc. |
 | interface [ICreateHandler&lt;TRow&gt;](./Serenity.Services/ICreateHandler-1.md) | Interface for create request handlers |
@@ -468,6 +485,8 @@
 | interface [IListHandlerAsync&lt;TRow,TListRequest&gt;](./Serenity.Services/IListHandlerAsync-2.md) | Interface for async list request handlers with a custom list request type. |
 | interface [IListHandlerAsync&lt;TRow,TListRequest,TListResponse&gt;](./Serenity.Services/IListHandlerAsync-3.md) | Interface for async list request handlers with custom list request / response types. |
 | interface [IListMapFieldExpressionBehavior](./Serenity.Services/IListMapFieldExpressionBehavior.md) | An extension for list behaviors that can map fields to custom expressions within a ListRequestHandler lifecycle. Note that the first behavior that returns a non-null value will be used. |
+| interface [IListQueryCapture](./Serenity.Services/IListQueryCapture.md) | Implemented by list handlers that can build the query they would execute for a request without executing it, to use it as a source of another query. Use [`GetQueryCapture`](./Serenity.Services/ListQueryCaptureExtensions/GetQueryCapture.md) to find this capability through a list request processor, which may be a sync / async wrapper. |
+| interface [IListQueryCaptureAsync](./Serenity.Services/IListQueryCaptureAsync.md) | Implemented by async list handlers that can build the query they would execute for a request without executing it, to use it as a source of another query. Use [`GetQueryCapture`](./Serenity.Services/ListQueryCaptureExtensions/GetQueryCapture.md) to find this capability through a list request processor, which may be a sync / async wrapper. |
 | interface [IListRequestHandler](./Serenity.Services/IListRequestHandler.md) | Represents a ListRequestHandler. Is used with ListBehavior objects. |
 | interface [IListRequestProcessor](./Serenity.Services/IListRequestProcessor.md) | Abstraction for list request handlers with a Process method. |
 | interface [IListRequestProcessorAsync](./Serenity.Services/IListRequestProcessorAsync.md) | Abstraction for list request handlers with an async Process method. |
@@ -520,6 +539,8 @@
 | class [JsonServiceClient](./Serenity.Services/JsonServiceClient.md) | A JSON service client implementation |
 | class [JsonSortByConverter](./Serenity.Services/JsonSortByConverter.md) | Serialize/deserialize a SortBy object as string |
 | class [LinkingSetRelationBehavior](./Serenity.Services/LinkingSetRelationBehavior.md) | Behavior class that handles [`LinkingSetRelationAttribute`](./Serenity.Data.Mapping/LinkingSetRelationAttribute.md). |
+| enum [ListExecutionMode](./Serenity.Services/ListExecutionMode.md) | Specifies why a list request handler is being executed. Handlers and list behaviors can check it through [`ExecutionMode`](./Serenity.Services/IListRequestHandler/ExecutionMode.md) and act differently, or refuse, when they are not executed to return rows to a list request. |
+| static class [ListQueryCaptureExtensions](./Serenity.Services/ListQueryCaptureExtensions.md) | Extensions to find the query capture capability of list handlers. |
 | class [ListRequest](./Serenity.Services/ListRequest.md) | The request model for a List service. |
 | class [ListRequestHandler&lt;TRow&gt;](./Serenity.Services/ListRequestHandler-1.md) | Base generic class for list request handlers that use [`ListRequest`](./Serenity.Services/ListRequest.md) as the request type, and [`ListResponse`](./Serenity.Services/ListResponse-1.md) as the response type. |
 | class [ListRequestHandler&lt;TRow,TListRequest&gt;](./Serenity.Services/ListRequestHandler-2.md) | Base generic class for list request handlers that use a custom list request as the request type, and [`ListResponse`](./Serenity.Services/ListResponse-1.md) as the response type. |
@@ -542,7 +563,6 @@
 | class [RetrieveRequestHandlerAsync&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](./Serenity.Services/RetrieveRequestHandlerAsync-3.md) | Generic base class for asynchronous retrieve request handlers |
 | abstract class [RetrieveRequestHandlerBase&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](./Serenity.Services/RetrieveRequestHandlerBase-3.md) | Abstract base class for retrieve request handlers that share state and mode neutral helper methods between synchronous and asynchronous retrieve request handlers. |
 | class [RetrieveResponse&lt;T&gt;](./Serenity.Services/RetrieveResponse-1.md) | The service response model for a Retrieve service |
-| class [RowValidationContext](./Serenity.Services/RowValidationContext.md) | A validation context for rows |
 | class [SaveRequest&lt;TEntity&gt;](./Serenity.Services/SaveRequest-1.md) | The service model for a Save (Create / Update) service. |
 | class [SaveRequestHandler&lt;TRow&gt;](./Serenity.Services/SaveRequestHandler-1.md) | Base generic class for save request handlers that use [`SaveRequest`](./Serenity.Services/SaveRequest-1.md) as the request type, and [`SaveResponse`](./Serenity.Services/SaveResponse.md) as the response type. |
 | class [SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](./Serenity.Services/SaveRequestHandler-3.md) | Generic base class for save request handlers |
@@ -577,6 +597,7 @@
 | class [UpdateInsertLogBehavior](./Serenity.Services/UpdateInsertLogBehavior.md) | Behavior class that handles assignment of relevant fields for rows with [`IInsertLogRow`](./Serenity.Data/IInsertLogRow.md) and [`IUpdateLogRow`](./Serenity.Data/IUpdateLogRow.md) interfaces |
 | class [UploadedFile](./Serenity.Services/UploadedFile.md) | Uploaded file item which is used by multiple upload editors to store file information in a string field as JSON array. |
 | class [ValidateParentBehavior](./Serenity.Services/ValidateParentBehavior.md) | Validation behavior for rows that have a parent record via [`IParentIdRow`](./Serenity.Data/IParentIdRow.md) interface. |
+| class [ValidationServiceProvider](./Serenity.Services/ValidationServiceProvider.md) | The services of the ValidationContext a validation rule is checked in by a request handler: its own ones first, e.g. the connection in its transaction and the localizer of the request, then the ones of the request, when the request context gives them, see IServiceProviderAccessor. |
 
 ## Serenity.Services.SqlErrors namespace
 

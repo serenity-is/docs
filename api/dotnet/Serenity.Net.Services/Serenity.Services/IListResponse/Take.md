@@ -3,7 +3,7 @@
 Number of records taken, passed from the ListRequest
 
 ```csharp
-public int Take { get; }
+public int Take { get; set; }
 ```
 
 ## See Also

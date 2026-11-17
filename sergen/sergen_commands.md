@@ -193,3 +193,29 @@ $ dotnet sergen generate --ni --table dbo.Region --overwrite:skip
 ```
 
 A refused overwrite returns exit code `13`, so a script can tell it apart from other failures. `--help` can be combined with a command, and `dotnet sergen generate --help` documents all the switches for the generator.
+
+## Generated On Build
+
+When a project uses the Pro.Coder source generators, they already produce the client types (`mvc`, `clienttypes`) and the
+view paths during the build, so running those commands would write duplicates of them. In that case `sergen` refuses with
+the **exit code `14`** (`GeneratedOnBuild`) and tells you to use `dotnet build` instead:
+
+```sh
+$ dotnet sergen mvc
+# The source generators of Pro.Coder generate the client types and view paths of this project while it builds ...
+$ echo $?
+14
+```
+
+The `servertypings` command can still be run (e.g. from a CI script that wants its output), and `--force` overrides the
+refusal for the others.
+
+## Version Mismatch
+
+A `sergen` tool that is a different version than the project's `Serenity.Net.Web` package generates code from a different
+framework version, which is hard to spot. When it runs as `dotnet sergen`, sergen warns about it:
+
+- `This is Sergen {0}, but the project uses Serenity.Net.Web {1} ...` — update the version in
+  `.config/dotnet-tools.json` and run `dotnet tool restore`, or run `sergen doctor` for details.
+- `This project runs sergen as '{0}' but this one is '{1}' ...` — the project has its own sergen location, which may be a
+  different version.

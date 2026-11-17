@@ -1,7 +1,7 @@
 # DateDiffAttribute class
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-DateDiff expression attribute
+DateDiff expression attribute, which returns the number of date part boundaries crossed between two dates like DATEDIFF of SQL Server, e.g. one day from 23:00 to 01:00 of the next day, and one year from December 31 to January 1, rather than the number of complete units between them.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
@@ -18,7 +18,7 @@ public class DateDiffAttribute : BaseExpressionAttribute
 
 | name | description |
 | --- | --- |
-| [DateDiffAttribute](DateDiffAttribute/DateDiffAttribute.md)(…) | DateDiff expression attribute |
+| [DateDiffAttribute](DateDiffAttribute/DateDiffAttribute.md)(…) | DateDiff expression attribute, which returns the number of date part boundaries crossed between two dates like DATEDIFF of SQL Server, e.g. one day from 23:00 to 01:00 of the next day, and one year from December 31 to January 1, rather than the number of complete units between them. |
 | [End](DateDiffAttribute/End.md) { get; } | Date expression 2. |
 | [Part](DateDiffAttribute/Part.md) { get; } | Date part. |
 | [Start](DateDiffAttribute/Start.md) { get; } | Date expression 1. |
@@ -37,4 +37,4 @@ Creates a new instance
 ## See Also
 
 * class [BaseExpressionAttribute](./BaseExpressionAttribute.md)
-* **Source:** *[DateDiffAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Mapping/DateDiffAttribute.cs)*
+* **Source:** *[DateDiffAttribute.cs](https://github.com/serenity-is/Serenity/blob/01c6c1a2f1de9878f233eb29c6ac73cb685eb01b/src/services/Data/Mapping/DateDiffAttribute.cs)*

@@ -20,6 +20,7 @@ public class WrappedProperty : IPropertyInfo
 | [PropertyType](WrappedProperty/PropertyType.md) { get; } | Gets the type of the property. |
 | [GetAttribute&lt;TAttr&gt;](WrappedProperty/GetAttribute.md)(…) | Gets the attribute. |
 | [GetAttributes&lt;TAttr&gt;](WrappedProperty/GetAttributes.md)(…) | Gets the attributes. |
+| static [GetImplementedInterfaceProperties](WrappedProperty/GetImplementedInterfaceProperties.md)(…) | Gets the properties of the interfaces that a property implements, in the type it was obtained from, ordered by the full names of the interfaces, so the result doesn't depend on the order the runtime lists them in. |
 
 ## Remarks
 
@@ -28,4 +29,4 @@ Initializes a new instance of the [`WrappedProperty`](./WrappedProperty.md) clas
 ## See Also
 
 * interface [IPropertyInfo](./IPropertyInfo.md)
-* **Source:** *[WrappedProperty.cs](https://github.com/serenity-is/Serenity/blob/af6455dc18348a2cdf0c31a262347ee13ea922cf/src/core/Reflection/WrappedProperty.cs)*
+* **Source:** *[WrappedProperty.cs](https://github.com/serenity-is/Serenity/blob/139827c0d64d7cacac31f2ec4d72112fcfe40f45/src/core/Reflection/WrappedProperty.cs)*

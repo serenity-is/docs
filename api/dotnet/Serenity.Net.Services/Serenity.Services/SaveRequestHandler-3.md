@@ -42,6 +42,9 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 | virtual [PerformAuditing](SaveRequestHandler-3/PerformAuditing.md)() | Performs auditing |
 | virtual [PrepareQuery](SaveRequestHandler-3/PrepareQuery.md)() | Prepares the query for selecting old record in an update operation. |
 | virtual [SetInternalFields](SaveRequestHandler-3/SetInternalFields.md)() | Sets values for internal fields |
+| virtual [ValidateFieldValue](SaveRequestHandler-3/ValidateFieldValue.md)(…) | Checks the value of a field by a validation rule. |
+| virtual [ValidateFieldValues](SaveRequestHandler-3/ValidateFieldValues.md)() | Validates the values of the assigned fields by the validation rules of their properties, i.e. their ValidationAttributes, like ValidateRangeAttribute, and the ones their other attributes imply, see IImpliesValidation. A rule that is only checked by the forms is skipped. |
+| virtual [ValidateForm](SaveRequestHandler-3/ValidateForm.md)(…) | Validates the row by a form, i.e. by what the form checks in the browser that the row doesn't, see FormValidationAttribute. It is called for the form of [`GetValidationForm`](./SaveRequestHandlerBase-3/GetValidationForm.md), and can be called for others. |
 | virtual [ValidateRequest](SaveRequestHandler-3/ValidateRequest.md)() | Validates the request by checking insert / update permissions. |
 
 ## See Also
@@ -53,4 +56,4 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [SaveRequest&lt;TEntity&gt;](./SaveRequest-1.md)
 * class [SaveResponse](./SaveResponse.md)
-* **Source:** *[SaveRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/8ebae29aba9c0164fa5c8a76801f7bca72290c39/src/services/RequestHandlers/Save/SaveRequestHandler.cs)*
+* **Source:** *[SaveRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/b1dab073ad31646cd015787ead45f6004717e72a/src/services/RequestHandlers/Save/SaveRequestHandler.cs)*

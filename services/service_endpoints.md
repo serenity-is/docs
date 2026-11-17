@@ -136,7 +136,13 @@ This attribute restricts Create, Update, and Delete actions to HTTP POST only, d
 
 > Additionally, there are security implications as actions with the GET method might be prone to certain attacks.
 
-List and Retrieve methods do not modify anything, so they are allowed to be called with GET requests, such as typing in a browser address bar.
+List and Retrieve methods do not modify anything, but they can still be called with GET, which means they can be triggered by a link, an image tag or a prefetch, and they don't enforce the row-level permissions by themselves.
+
+> Since 10.7.0 the framework's own endpoints — the Northwind demo modules, the Serene administration endpoints and the
+> StartSharp / pro features endpoints — add `[HttpPost]` together with `[AuthorizeRetrieve]` / `[AuthorizeList]` to their
+> retrieve and list (including list Excel) actions, so a read enforces the same row-level permission checks as the rest
+> of the CRUD surface and can't be triggered by another verb (the `FileExplorer` endpoint uses `ServiceAuthorize`, and the
+> Data Explorer list and translation endpoints are POST only). Do the same in your own endpoints.
 
 Even though List and Retrieve can be called via GET, Serenity always utilizes HTTP POST when invoking services using its methods (e.g., via the `serviceCall` method) and disables caching to prevent unexpected outcomes.
 

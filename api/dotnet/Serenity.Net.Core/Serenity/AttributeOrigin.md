@@ -12,7 +12,7 @@ public enum AttributeOrigin
 | name | value | description |
 | --- | --- | --- |
 | Explicit | `0` | Only attributes explicitly declared on the property itself. This does not include attributes that are inherited from base classes or interfaces, intrinsic attributes, annotation-derived attributes, or attributes from based on fields. It only includes attributes that are directly applied to the property. |
-| Inherit | `1` | Attributes inherited from base classes or interfaces. This includes attributes that are declared on base classes or interfaces and are inherited by the property. |
+| Inherit | `1` | Attributes inherited from base classes or interfaces. This includes attributes that are declared on base classes or interfaces and are inherited by the property. The attributes of the members of the interfaces the property implements are inherited like the ones of base classes: an attribute of a type that doesn't allow multiple is only used when the property doesn't have one of the same type itself. |
 | Intrinsic | `2` | Attributes intrinsicly defined by [`IIntrinsicPropertyAttributeProvider`](../Serenity.Reflection/IIntrinsicPropertyAttributeProvider.md) |
 | Annotation | `4` | Attributes derived from annotations, such as [`AnnotationTypeAttribute`](../Serenity.ComponentModel/AnnotationTypeAttribute.md). |
 | BasedOnField | `8` | From the row field that the property is based on, if any. This is used for properties that are based on fields via BasedOnRow attribute. If a property is based on a field, then attributes from that field can be considered as well. If this flag is included, then attributes from the based on field whether explicitly declared, inherited, intrinsic, or annotation-derived will be included in the search for attributes, as Field object has an attribute list that does not include source for the attributes and there can be dynamic fields that are not based on a property but still have attributes. |
@@ -22,4 +22,4 @@ public enum AttributeOrigin
 
 ## See Also
 
-* **Source:** *[AttributeOrigin.cs](https://github.com/serenity-is/Serenity/blob/a4ffb9b6867f00f7f71ede2a5fcfa8dd476c9648/src/core/Reflection/AttributeOrigin.cs)*
+* **Source:** *[AttributeOrigin.cs](https://github.com/serenity-is/Serenity/blob/dfc36d281396433b9fb533e17d3860d79b2b4732/src/core/Reflection/AttributeOrigin.cs)*

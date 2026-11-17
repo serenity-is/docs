@@ -1,4 +1,36 @@
-# TwoLevelCacheExtensions.GetLocalStoreOnly&lt;TItem&gt; method
+# TwoLevelCacheExtensions.GetLocalStoreOnly&lt;TItem&gt; method (1 of 2)
+
+Tries to read a value from local cache, and if it is not found there, or any of the groups it depends on is expired, produces the value by calling a loader function and adds it to local cache. The distributed cache is only used for the generations of the groups. An item can also expire about 5 seconds later on other servers, as the generations are cached locally for that long.
+
+```csharp
+public static TItem? GetLocalStoreOnly<TItem>(this ITwoLevelCache cache, string cacheKey, 
+    TimeSpan localExpiration, IReadOnlyList<string> groupKeys, Func<TItem?>? loader)
+    where TItem : class
+```
+
+| parameter | description |
+| --- | --- |
+| TItem | Data type |
+| cache | Two level cache |
+| cacheKey | The item key for local cache |
+| localExpiration | Local expiration |
+| groupKeys | Group keys that hold the generations. Expiring any of them expires the item. |
+| loader | The delegate that will be called to generate value, if not found in local cache or the found item is expired. |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | *groupKeys* is empty. |
+
+## See Also
+
+* interface [ITwoLevelCache](../../Serenity.Abstractions/ITwoLevelCache.md)
+* class [TwoLevelCacheExtensions](../TwoLevelCacheExtensions.md)
+
+---
+
+# TwoLevelCacheExtensions.GetLocalStoreOnly&lt;TItem&gt; method (2 of 2)
 
 Tries to read a value from local cache. If it is not found there produces value by calling a loader function and adds the value to local cache for a given expiration time. By using a generation (item version) key, all items on local cache that are members of this group can be expired at once.
 

@@ -77,6 +77,50 @@ public static void RegisterDataProviders()
 
 As listed above, only the SQL Server and the `SQLite` connection factories are registered by default. If you want to use another type of server, you should uncomment the relevant line there, and add the NuGet reference for its client library in the project file.
 
+### Comparer and collation
+
+Two settings of a connection entry are easy to confuse:
+
+| Setting | Purpose |
+| --- | --- |
+| `Comparer` | How Serenity compares string values **in memory** (change tracking, unique checks, local sorting): `Ordinal`, `OrdinalIgnoreCase`, `Invariant`, `tr-TR`, `tr-TR:IgnoreCase`, ... |
+| `Collation` | The collation used when the **database is created** by the application, in the engine's own format (e.g. `Turkish_100_CI_AS`) |
+
+`Collation` can also be one of the `SqlCollationMapper` keywords, which **translate the `Comparer`** into a collation name for the target engine instead of hardcoding one:
+
+| Keyword | No exact match |
+| --- | --- |
+| `automap` | Throws |
+| `automaptolerant` | Accepts a collation that only differs in case/accent sensitivity |
+| `tryautomap` | Uses no collation (the server default) |
+| `tryautomaptolerant` | Same, but still uses a case/accent-only match when available |
+
+```json
+{
+  "Data": {
+    "Default": {
+      "ConnectionString": "...",
+      "ProviderName": "Microsoft.Data.SqlClient",
+      "Comparer": "tr-TR:IgnoreCase",
+      "Collation": "automap",
+      "PartialContainment": true
+    }
+  }
+}
+```
+
+- Mapping needs the comparer to be `Ordinal`, `Invariant` or a specific culture — a collation can't depend on the culture of the process. The engine-specific names are resolved by `SqlCollationMapper` (`SqlCollationSpec` describes the comparison in an engine-independent way: culture, `IgnoreCase`, `IgnoreAccents`).
+- `PartialContainment` creates a SQL Server database as a **partially contained** database (the "contained database authentication" setting of the server must be enabled first; such a database can't use replication, change data capture or change tracking). When attaching an existing SQL Server file, no `COLLATE` / `CONTAINMENT` is used, since the file already has both.
+- In a migration, `migration.MapCollation(comparer)` and `migration.TryMapCollation(comparer)` return the **column** collation for a comparer (the `Try` variant returns `null` instead of throwing when there is no match), ready to pass to `AsString(...).Collation(...)`:
+
+```cs
+Create.Table("Codes")
+    .WithColumn("Code").AsString(20).NotNullable()
+        .Collation(Migration.MapCollation("tr-TR:IgnoreCase"));
+```
+
+- `MigrationUtils.EnsureDatabase(key, contentRoot, sqlConnections, collation, partialContainment)` creates a database with the collation (SQL Server / MySQL / Firebird `COLLATE`, on Firebird it changes the default collation of the database character set; PostgreSQL uses `TEMPLATE template0` with the locale or ICU collation), defaulting to the connection's `Collation`. It is rejected for SQLite and Oracle, which have no such option, and does nothing when the database already exists. `MigrationUtils.ClearAllPools(key, sqlConnections)` clears only the pools of that connection's provider, instead of every pool in the process.
+
 The default implementations for the `ISqlConnections` and other related services are registered via an [AddSqlConnections](../../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/DataServiceCollectionExtensions.md) call. You may not see it in the `Startup.cs` file as it is indirectly called by the `AddServiceHandlers` method.
 
 ### The default connection key

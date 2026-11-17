@@ -21,4 +21,4 @@ public class ForeignKeyAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[ForeignKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/9bdd88fd415201195fde6c80a27910d26410d8c6/src/services/Data/Mapping/ForeignKeyAttribute.cs)*
+* **Source:** *[ForeignKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/dfc36d281396433b9fb533e17d3860d79b2b4732/src/services/Data/Mapping/ForeignKeyAttribute.cs)*

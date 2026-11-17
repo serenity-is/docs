@@ -26,6 +26,20 @@ The default implementation, [`DefaultPropertyItemProvider`](../api/dotnet/Sereni
 3. For each public property of the type, creates a `PropertyInfoSource` and runs it through every processor, which fills in the `PropertyItem` fields from the property's attributes.
 4. Optionally validates property names against the row when `CheckNames = true` (throwing if a property doesn't match a field — see `[SkipNameCheck]`).
 
+### Where the attributes come from
+
+The processors read a property's attributes through `GetPropertyAttributes`, not reflection directly, so a property
+item also sees:
+
+- attributes inherited from base classes,
+- attributes exposed by the property's **combination attributes** (`IIntrinsicPropertyAttributeProvider`),
+- attributes declared on the members of the **interfaces** the property implements.
+
+So a `[Required]`, `[Size]`, `[Editor]` or `[VisibleWhen]` declared on an interface property applies to every row that
+implements it, exactly like one written on the property. `BasePropertyOrderAttribute` (see
+[Forms & Editors](forms-editors.md#ordering-inherited-properties)) then orders the inherited properties. See
+[Reflection](reflection.md#property-attribute-resolution) for the precedence rules.
+
 ## Property Processors
 
 [`IPropertyProcessor`](../api/dotnet/Serenity.Net.Services/Serenity.PropertyGrid/IPropertyProcessor.md) is the extension point that turns a property + its attributes into a `PropertyItem`. Each processor has a `Priority` (processors run in ascending order), and the lifecycle is:
@@ -52,12 +66,34 @@ Because the metadata is built from attributes, most customization is declarative
 - **`ICustomizePropertyItems`** — a form/columns type can implement this to tweak the generated `PropertyItemsData` after processing (used by `PropertyItemsScript`).
 - **`IPropertyItemProvider` replacement** — replace the default provider in DI if you need to change the whole pipeline.
 
+## Rules and Conditions in the Metadata
+
+Two groups of `PropertyItem` members describe behaviour that used to be UI-only, and are now shared with the server:
+
+**Validation** — `validationRules` is an array of `ClientValidationRule` (`rule`, `params`, `textKey`, `message`) built
+from the property's `Validate*` attributes and from the rules its other attributes imply
+(`IImpliesValidation`, e.g. an email editor implies `ValidateEmail`). The forms check them with the matching
+`ValidationRule` class, the save handlers check the same attributes. A rule is left out when its `ValidationSide` is
+`Server`.
+
+**Conditions** — `visibleWhen`, `readOnlyWhen`, `requiredWhen` (`PropertyCondition[]`, each with `field`, `values`,
+`isNot`) and `clearWhenHidden`, from `[VisibleWhen]` / `[ReadOnlyWhen]` / `[RequiredWhen]`. Enum values are sent as
+their numbers, like editors have them. The `PropertyGrid` evaluates them as values load and change;
+`[RequiredWhen]` is enforced on the server too.
+
+```cs
+[VisibleWhen(nameof(Kind), MovieKind.Series), RequiredWhen(nameof(Kind), MovieKind.Series)]
+public int? SeasonCount { get; set; }
+```
+
 ## See Also
 
 - [Grid Columns](grid-columns.md)
 - [Forms & Editors](forms-editors.md)
+- [Validation](../services/validation.md) — the rules behind `validationRules`
+- [Reflection](reflection.md) — how attributes are resolved
 - [Dynamic Scripts](dynamic-scripts/readme.md)
-- [Annotation Types](annotation-types.md)
+- [Annotation Types](data-access/annotation-types.md)
 - API reference: [`IPropertyItemProvider`](../api/dotnet/Serenity.Net.Services/Serenity.PropertyGrid/IPropertyItemProvider.md),
   [`DefaultPropertyItemProvider`](../api/dotnet/Serenity.Net.Services/Serenity.PropertyGrid/DefaultPropertyItemProvider.md),
   [`IPropertyProcessor`](../api/dotnet/Serenity.Net.Services/Serenity.PropertyGrid/IPropertyProcessor.md),

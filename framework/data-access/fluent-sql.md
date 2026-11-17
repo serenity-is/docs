@@ -492,6 +492,21 @@ FROM Person
 ORDER BY PersonID 
 ```
 
+## Rebuilding a Query
+
+Sometimes the same sources, filters and joins are wanted with different columns or without the ordering. `ClearSelect()`
+removes the selected columns (and any `INTO` / `DISTINCT`), and `ClearOrderBy()` removes the `ORDER BY` expressions:
+
+```csharp
+// a query already built with its sources, filters and joins
+query.ClearSelect()
+    .ClearOrderBy()
+    .Select("SUM(t0.Freight)");
+```
+
+This is how server-side aggregates are selected from the same query a list handler built (see
+[Aggregates and Grouping](../../services/list_request_handler.md#aggregates-and-grouping)).
+
 ## GroupBy Method
 
 ```csharp
@@ -707,7 +722,7 @@ var query = new SqlQuery()
 ## Joins
 
 `SqlQuery` can add `INNER`, `LEFT`, and `RIGHT` joins. The join methods take an
-[`Alias`](../api/dotnet/Serenity.Net.Services/Serenity.Data/Alias.md) and an
+[`Alias`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/Alias.md) and an
 `ICriteria` for the `ON` clause:
 
 ```csharp
@@ -761,7 +776,7 @@ subquery.
 ## UNION
 
 `Union` appends a second `SELECT` to the query. The union type is controlled by
-[`SqlUnionType`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlUnionType.md):
+[`SqlUnionType`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlUnionType.md):
 `Union`, `UnionAll`, `Intersect`, `IntersectAll`, `Except`, or `ExceptAll`.
 
 After you call `Union`, the current query is cloned as the first part and its
@@ -792,7 +807,7 @@ SELECT Firstname FROM Person WHERE Age < 5
 ## Executing a Query
 
 A `SqlQuery` is not executed until you run it. The
-[`SqlHelper`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlHelper.md)
+[`SqlHelper`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlHelper.md)
 extensions run it against an `IDbConnection`:
 
 ```csharp
@@ -815,7 +830,7 @@ var count = SqlHelper.ExecuteScalar(connection, query);
 
 You can also load results straight into a row using `GetFirst`, `GetSingle`,
 `List`, and `ForEach` from
-[`EntitySqlHelper`](../api/dotnet/Serenity.Net.Services/Serenity.Data/EntitySqlHelper.md).
+[`EntitySqlHelper`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/EntitySqlHelper.md).
 To load into a row, pass the row to `From` and select its table fields:
 
 ```csharp

@@ -5,7 +5,8 @@ Default implementation for a [`IRequestContext`](../IRequestContext.md).
 ```csharp
 public DefaultRequestContext(IBehaviorProvider behaviors, ITwoLevelCache cache, 
     ITextLocalizer localizer, IPermissionService permissions, IUserAccessor userAccessor, 
-    IOptions<RequestHandlerSettings>? handlerSettings = null)
+    IOptions<RequestHandlerSettings>? handlerSettings = null, 
+    IServiceProviderAccessor? serviceProviderAccessor = null)
 ```
 
 | parameter | description |
@@ -16,12 +17,13 @@ public DefaultRequestContext(IBehaviorProvider behaviors, ITwoLevelCache cache,
 | permissions | Permissions |
 | userAccessor | User access |
 | handlerSettings | Request handler settings |
+| serviceProviderAccessor | Gives the services of the current request, which the context gives as its [`ServiceProvider`](./ServiceProvider.md), e.g. for the validation rules a save handler checks. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Any of the arguments is `null`. |
+| ArgumentNullException | Any of the required arguments is `null`. |
 
 ## Remarks
 
@@ -37,4 +39,5 @@ If you need scoped implementations of any of these dependencies, register your o
 * interface [IPermissionService](../../../Serenity.Net.Core/Serenity.Abstractions/IPermissionService.md)
 * interface [IUserAccessor](../../../Serenity.Net.Core/Serenity.Abstractions/IUserAccessor.md)
 * class [RequestHandlerSettings](../RequestHandlerSettings.md)
+* interface [IServiceProviderAccessor](../../../Serenity.Net.Core/Serenity/IServiceProviderAccessor.md)
 * class [DefaultRequestContext](../DefaultRequestContext.md)

@@ -1,14 +1,14 @@
 # SQL Dialects
 
 Serenity is database-agnostic. The dialect abstraction
-([`ISqlDialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/ISqlDialect.md))
+([`ISqlDialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ISqlDialect.md))
 describes the SQL syntax and behavior of a particular database server type (and
 version), so that `SqlQuery`, the criteria system, and the SQL builders can
 generate queries that are correct for the target database.
 
 ## `ISqlDialect`
 
-[`ISqlDialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/ISqlDialect.md)
+[`ISqlDialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ISqlDialect.md)
 is a large interface, but you rarely need to implement it yourself. Each built-in
 dialect exposes a shared `Instance`, which is what you pass around. The members
 control how Serenity generates SQL:
@@ -28,7 +28,7 @@ example `CanUseConcat` defaults to `true` and `AutoQuotedIdentifiers` defaults t
 
 ## `ServerType`
 
-[`ServerType`](../api/dotnet/Serenity.Net.Services/Serenity.Data/ServerType.md)
+[`ServerType`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ServerType.md)
 is an enum of the server families Serenity knows about:
 
 `Firebird`, `MySql`, `Oracle`, `Postgres`, `Sqlite`, `SqlServer`
@@ -42,23 +42,23 @@ Serenity ships a dialect for each supported server, exposed as a static
 
 | Dialect | Server |
 | --- | --- |
-| [`FirebirdDialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/FirebirdDialect.md) | Firebird |
-| [`MySqlDialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/MySqlDialect.md) | MySQL |
-| [`PostgresDialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/PostgresDialect.md) | PostgreSQL |
-| [`SqliteDialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqliteDialect.md) | SQLite |
-| [`SqlServer2000Dialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlServer2000Dialect.md) | SQL Server 2000 |
-| [`SqlServer2005Dialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlServer2005Dialect.md) | SQL Server 2005 |
-| [`SqlServer2008Dialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlServer2008Dialect.md) | SQL Server 2008 |
-| [`SqlServer2012Dialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlServer2012Dialect.md) | SQL Server 2012+ |
-| [`OracleDialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/OracleDialect.md) | Oracle |
-| [`Oracle12cDialect`](../api/dotnet/Serenity.Net.Services/Serenity.Data/Oracle12cDialect.md) | Oracle 12c |
+| [`FirebirdDialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/FirebirdDialect.md) | Firebird |
+| [`MySqlDialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/MySqlDialect.md) | MySQL |
+| [`PostgresDialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/PostgresDialect.md) | PostgreSQL |
+| [`SqliteDialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqliteDialect.md) | SQLite |
+| [`SqlServer2000Dialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlServer2000Dialect.md) | SQL Server 2000 |
+| [`SqlServer2005Dialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlServer2005Dialect.md) | SQL Server 2005 |
+| [`SqlServer2008Dialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlServer2008Dialect.md) | SQL Server 2008 |
+| [`SqlServer2012Dialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlServer2012Dialect.md) | SQL Server 2012+ |
+| [`OracleDialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/OracleDialect.md) | Oracle |
+| [`Oracle12cDialect`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/Oracle12cDialect.md) | Oracle 12c |
 
 > SQL Server dialects inherit from one another, so `SqlServer2012Dialect` is a
 > `SqlServer2008Dialect`, which is a `SqlServer2005Dialect`, etc.
 
 ## Resolving a Dialect
 
-[`ISqlDialectMapper`](../api/dotnet/Serenity.Net.Services/Serenity.Data/ISqlDialectMapper.md)
+[`ISqlDialectMapper`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ISqlDialectMapper.md)
 maps a provider name or a dialect type name to an `ISqlDialect` instance:
 
 ```csharp
@@ -69,7 +69,7 @@ public interface ISqlDialectMapper
 ```
 
 The default implementation,
-[`DefaultSqlDialectMapper`](../api/dotnet/Serenity.Net.Services/Serenity.Data/DefaultSqlDialectMapper.md),
+[`DefaultSqlDialectMapper`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/DefaultSqlDialectMapper.md),
 maps well-known ADO.NET provider names:
 
 | Provider name | Dialect |
@@ -89,7 +89,7 @@ dialect.
 
 ## `SqlSettings`
 
-[`SqlSettings`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlSettings.md)
+[`SqlSettings`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlSettings.md)
 holds global SQL configuration:
 
 - `DefaultDialect` — the dialect used when one isn't otherwise determined. It
@@ -121,7 +121,7 @@ holds global SQL configuration:
 If you need a server that isn't covered, implement `ISqlDialect` (or derive from
 a built-in dialect and override the members that differ) and register it. A
 custom dialect can also implement
-[`ISqlExpressionTranslator`](../api/dotnet/Serenity.Net.Services/Serenity.Data/ISqlExpressionTranslator.md)
+[`ISqlExpressionTranslator`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ISqlExpressionTranslator.md)
 to customize the SQL generated for dynamic expression attributes (such as
 `ConcatExpressionAttribute`):
 

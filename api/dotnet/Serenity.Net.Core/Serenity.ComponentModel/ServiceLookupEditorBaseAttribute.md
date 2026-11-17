@@ -41,6 +41,7 @@ public abstract class ServiceLookupEditorBaseAttribute : CustomEditorAttribute
 | [Multiple](ServiceLookupEditorBaseAttribute/Multiple.md) { get; set; } | Allow multiple selection. Make sure your field is a List. You may also set CommaSeparated to use a string field. |
 | [OpenDialogAsPanel](ServiceLookupEditorBaseAttribute/OpenDialogAsPanel.md) { get; set; } | Opens dialogs as a panel (default value is null, which uses the panel attribute on the dialog class). |
 | [PageSize](ServiceLookupEditorBaseAttribute/PageSize.md) { get; set; } | Page size used while loading records, default 100. |
+| [QuickSearchFields](ServiceLookupEditorBaseAttribute/QuickSearchFields.md) { get; set; } | Quick search fields list. |
 | [Service](ServiceLookupEditorBaseAttribute/Service.md) { get; set; } | List service URL, e.g. Northwind/Customer/List. It can be an absolute or relative URL to ~/Services. |
 | [Sort](ServiceLookupEditorBaseAttribute/Sort.md) { get; set; } | Sort order for records, defaults to the text field. |
 | [TextField](ServiceLookupEditorBaseAttribute/TextField.md) { get; set; } | Name of the text field. |
@@ -58,4 +59,4 @@ Initializes a new instance of the [`ServiceLookupEditorBaseAttribute`](./Service
 ## See Also
 
 * class [CustomEditorAttribute](./CustomEditorAttribute.md)
-* **Source:** *[ServiceLookupEditorBaseAttribute.cs](https://github.com/serenity-is/Serenity/blob/b7f2b207458f6ea9d7a46806c5ad7bf38d6c9e28/src/core/ComponentModel/PropertyGrid/EditorTypes/ServiceLookupEditorBaseAttribute.cs)*
+* **Source:** *[ServiceLookupEditorBaseAttribute.cs](https://github.com/serenity-is/Serenity/blob/ff6db6ca45b88df8a99890d94a3bbf7666af76de/src/core/ComponentModel/PropertyGrid/EditorTypes/ServiceLookupEditorBaseAttribute.cs)*

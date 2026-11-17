@@ -42,6 +42,9 @@ public class SaveRequestHandlerAsync<TRow, TSaveRequest, TSaveResponse> :
 | virtual [PerformAuditingAsync](SaveRequestHandlerAsync-3/PerformAuditingAsync.md)(…) | Performs auditing |
 | virtual [PrepareQueryAsync](SaveRequestHandlerAsync-3/PrepareQueryAsync.md)(…) | Prepares the query for selecting old record in an update operation. |
 | virtual [SetInternalFieldsAsync](SaveRequestHandlerAsync-3/SetInternalFieldsAsync.md)(…) | Sets values for internal fields |
+| virtual [ValidateFieldValueAsync](SaveRequestHandlerAsync-3/ValidateFieldValueAsync.md)(…) | Checks the value of a field by a validation rule asynchronously, see CancellationToken). |
+| virtual [ValidateFieldValuesAsync](SaveRequestHandlerAsync-3/ValidateFieldValuesAsync.md)(…) | Validates the values of the assigned fields by the validation rules of their properties, like [`ValidateFieldValues`](./SaveRequestHandler-3/ValidateFieldValues.md), awaiting the rules that can be checked asynchronously, see IAsyncValidationRule. |
+| virtual [ValidateFormAsync](SaveRequestHandlerAsync-3/ValidateFormAsync.md)(…) | Validates the row by a form, i.e. by what the form checks in the browser that the row doesn't, see FormValidationAttribute, awaiting the rules that can be checked asynchronously. It is called for the form of [`GetValidationForm`](./SaveRequestHandlerBase-3/GetValidationForm.md), and can be called for others. |
 | virtual [ValidateRequestAsync](SaveRequestHandlerAsync-3/ValidateRequestAsync.md)(…) | Validates the request by checking insert / update permissions. |
 
 ## See Also
@@ -53,4 +56,4 @@ public class SaveRequestHandlerAsync<TRow, TSaveRequest, TSaveResponse> :
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [SaveRequest&lt;TEntity&gt;](./SaveRequest-1.md)
 * class [SaveResponse](./SaveResponse.md)
-* **Source:** *[SaveRequestHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/8ebae29aba9c0164fa5c8a76801f7bca72290c39/src/services/RequestHandlers/Save/SaveRequestHandlerAsync.cs)*
+* **Source:** *[SaveRequestHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/b1dab073ad31646cd015787ead45f6004717e72a/src/services/RequestHandlers/Save/SaveRequestHandlerAsync.cs)*

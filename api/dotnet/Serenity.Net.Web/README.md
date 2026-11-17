@@ -97,7 +97,7 @@
 | class [DataScriptRegistration](./Serenity.Web/DataScriptRegistration.md) | Contains helper methods for data script registration. |
 | static class [DateTimeEditorTexts](./Serenity.Web/DateTimeEditorTexts.md) |  |
 | class [DefaultFileWatcherFactory](./Serenity.Web/DefaultFileWatcherFactory.md) | Default implementation of [`IFileWatcherFactory`](./Serenity.Web/IFileWatcherFactory.md) that keeps created watchers alive for the lifetime of the factory. |
-| class [DefaultLocalTextInitializer](./Serenity.Web/DefaultLocalTextInitializer.md) | Default ILocalTextInitializer that registers base texts and JSON texts from the `App_Data/texts` folder. |
+| class [DefaultLocalTextInitializer](./Serenity.Web/DefaultLocalTextInitializer.md) | Default ILocalTextInitializer that registers base texts and JSON texts from the `App_Data/texts` folder, then the texts of the IDynamicLocalTextSource services, which are kept in the data of the application. |
 | class [DefaultUploadFileResponder](./Serenity.Web/DefaultUploadFileResponder.md) | Default implementation of the upload file responder. |
 | class [DefaultUploadStorage](./Serenity.Web/DefaultUploadStorage.md) | Default IUploadStorage implementation which uses a combined upload storage of two DiskUploadStorage instances. |
 | static class [DialogTexts](./Serenity.Web/DialogTexts.md) |  |

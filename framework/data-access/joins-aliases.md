@@ -1,16 +1,16 @@
 # Joins & Aliases
 
 SQL queries refer to tables through short aliases (e.g. `FROM Person p`). Serenity
-models this with the [`Alias`](../api/dotnet/Serenity.Net.Services/Serenity.Data/Alias.md)
+models this with the [`Alias`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/Alias.md)
 type, and the `INNER` / `LEFT` / `RIGHT` / `CROSS APPLY` / `OUTER APPLY` clauses
-with the [`Join`](../api/dotnet/Serenity.Net.Services/Serenity.Data/Join.md)
+with the [`Join`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/Join.md)
 family of classes. Together they let you build prefixed field expressions and
 describe joins in a type-safe way.
 
 ## Alias
 
-[`Alias`](../api/dotnet/Serenity.Net.Services/Serenity.Data/Alias.md) implements
-[`IAlias`](../api/dotnet/Serenity.Net.Services/Serenity.Data/IAlias.md), which
+[`Alias`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/Alias.md) implements
+[`IAlias`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/IAlias.md), which
 exposes `Name` (the short name), `NameDot` (`name.`), and `Table` (the table
 name). There are several ways to create one:
 
@@ -60,7 +60,7 @@ Subqueries created by `SubQueryFrom(fields, out aliased)` participate in the que
 
 ## `AliasExtensions`
 
-[`AliasExtensions`](../api/dotnet/Serenity.Net.Services/Serenity.Data/AliasExtensions.md)
+[`AliasExtensions`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/AliasExtensions.md)
 provides a single helper:
 
 - `alias.WithNoLock()` — returns a new alias that appends `WITH(NOLOCK)` to the
@@ -74,17 +74,17 @@ new SqlQuery()
 
 ## Join Classes
 
-The [`Join`](../api/dotnet/Serenity.Net.Services/Serenity.Data/Join.md) base
+The [`Join`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/Join.md) base
 class is an `Alias` that also carries the `ON` criteria, the join's dictionary,
 and the set of aliases it references. The concrete classes add the SQL keyword:
 
 | Class | SQL keyword |
 | --- | --- |
-| [`InnerJoin`](../api/dotnet/Serenity.Net.Services/Serenity.Data/InnerJoin.md) | `INNER JOIN` |
-| [`LeftJoin`](../api/dotnet/Serenity.Net.Services/Serenity.Data/LeftJoin.md) | `LEFT JOIN` |
-| [`RightJoin`](../api/dotnet/Serenity.Net.Services/Serenity.Data/RightJoin.md) | `RIGHT JOIN` |
-| [`CrossApply`](../api/dotnet/Serenity.Net.Services/Serenity.Data/CrossApply.md) | `CROSS APPLY` |
-| [`OuterApply`](../api/dotnet/Serenity.Net.Services/Serenity.Data/OuterApply.md) | `OUTER APPLY` |
+| [`InnerJoin`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/InnerJoin.md) | `INNER JOIN` |
+| [`LeftJoin`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/LeftJoin.md) | `LEFT JOIN` |
+| [`RightJoin`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/RightJoin.md) | `RIGHT JOIN` |
+| [`CrossApply`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/CrossApply.md) | `CROSS APPLY` |
+| [`OuterApply`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/OuterApply.md) | `OUTER APPLY` |
 
 Each join is constructed with a table (or subquery) name, an alias, and an `ON`
 criteria:
@@ -104,7 +104,7 @@ new OuterApply(
 ```
 
 The `Join` classes implement
-[`ISqlJoin`](../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/ISqlJoin.md),
+[`ISqlJoin`](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/ISqlJoin.md),
 the interface used by the mapping attributes (`LeftJoinAttribute`,
 `InnerJoinAttribute`, `OuterApplyAttribute`) and by behavior/UI code to read
 join metadata (`Alias`, `ToTable`, `OnCriteria`, `PropertyPrefix`, `RowType`).

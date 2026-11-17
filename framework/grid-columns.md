@@ -21,7 +21,7 @@ public class OrderColumns
 }
 ```
 
-The `[ColumnsScript]` attribute marks the class so that a columns script is generated and registered. See [Script Generation](script-generation.md) for the attribute itself.
+The `[ColumnsScript]` attribute marks the class so that a columns script is generated and registered. See [Script Generation](dynamic-scripts/script-generation.md) for the attribute itself.
 
 ## `[ColumnsScript]` in Detail
 
@@ -111,7 +111,7 @@ These attributes apply to columns-class properties and set the corresponding `Pr
 | [FormatterTypeAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/FormatterTypeAttribute.md) | `formatterType` | The formatter used to render the cell (e.g. `Date`, `Number`, `Enum`) |
 | `FormatterOptionAttribute` | `formatterParams` | Options passed to the formatter |
 | `DisplayFormatAttribute` | `format` | Display format for date/number formatters |
-| `SummaryTypeAttribute` | `summaryType` | Aggregation shown in the grid footer (e.g. `Sum`, `Avg`) |
+| `SummaryTypeAttribute` | `summaryType` | Aggregation shown in the grid footer (e.g. `Sum`, `Avg`); its members now have localized texts, and `AggregateType` (server-side aggregates) uses the same numbers |
 
 ### Filtering
 
@@ -128,5 +128,5 @@ These attributes apply to columns-class properties and set the corresponding `Pr
 
 - [Script Generation](dynamic-scripts/script-generation.md)
 - [Dynamic Scripts](dynamic-scripts/readme.md)
-- [Forms & Editors](attributes/attributes.md)
+- [Forms & Editors](../attributes/attributes.md)
 - [Formatter Types](../grids/formatter_types.md)

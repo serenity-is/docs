@@ -89,10 +89,14 @@ files on disk that `UseStaticFiles` serves.
 **At build time** the web project asks each referenced project, and each NuGet package that ships assets, where its folder
 is and which files it contains. It writes a small manifest next to the application assembly,
 `<YourApp>.serenitystaticassets.json`. The manifest is copied to the output directory, but is *not* published.
-
 Each entry has the base path (e.g. `Serenity.Extensions`), the folder, and the include / exclude patterns that decide which
 files are used. Pattern lists shared by many libraries are written once and referenced by index, so the file stays small
 (a few KB) even with dozens of libraries.
+
+The manifest is also propagated to **referencing projects** (for example a functional test project that needs the manifest
+next to its assembly): the asset roots are resolved in a target that runs before `AssignTargetPaths` in
+`GetCopyToOutputDirectoryItems`, so the manifest item exists in time to be copied regardless of build order or
+incrementality.
 
 **While running from the build output** (development), `UseSerenityStaticAssets()` reads the manifest and adds the folders
 to the web root file provider. Files are then served directly from the project folders, or from the NuGet cache for files

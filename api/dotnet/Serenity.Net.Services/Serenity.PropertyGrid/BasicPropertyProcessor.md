@@ -18,6 +18,7 @@ public class BasicPropertyProcessor : PropertyProcessor
 | [BasicPropertyProcessor](BasicPropertyProcessor/BasicPropertyProcessor.md)(…) | Basic property processor |
 | override [Priority](BasicPropertyProcessor/Priority.md) { get; } | Gets the priority. |
 | override [Process](BasicPropertyProcessor/Process.md)(…) | Sets properties of a PropertyItem by analysing a property source |
+| static [SetServiceLookupParams](BasicPropertyProcessor/SetServiceLookupParams.md)(…) | Sets the options of a service lookup editor that its attribute doesn't give, like the service, the id, text and icon fields, the capabilities, and the columns to include, as they are for a property with the attribute. It does nothing for other attributes. Options that are already in the dictionary are left as they are. |
 
 ## See Also
 

@@ -337,17 +337,17 @@ Name LIKE @p1 ESCAPE '!' AND -- @p1 = N'%50!%%'
 Code LIKE @p2 ESCAPE '!' -- @p2 = N'a!_b%'
 ```
 
-Use [LikeEscaped](../api/dotnet/Serenity.Net.Services/Serenity.Data/BaseCriteria/LikeEscaped.md) / [NotLikeEscaped](../api/dotnet/Serenity.Net.Services/Serenity.Data/BaseCriteria/NotLikeEscaped.md) with a pre-escaped mask when you need an explicit escape character (defaults to `!`):
+Use [LikeEscaped](../../api/dotnet/Serenity.Net.Services/Serenity.Data/BaseCriteria/LikeEscaped.md) / [NotLikeEscaped](../../api/dotnet/Serenity.Net.Services/Serenity.Data/BaseCriteria/NotLikeEscaped.md) with a pre-escaped mask when you need an explicit escape character (defaults to `!`):
 
 ```cs
 q.Where(fld.Name.LikeEscaped(pattern, escape: '\\'));
 ```
 
-[Criteria.EscapeLikeWildcards](../api/dotnet/Serenity.Net.Services/Serenity.Data/Criteria/EscapeLikeWildcards.md) escapes a literal value for a given escape character (escaping the escape character itself first, then `%`, `_` and `[`), returning the value unchanged when there is nothing to escape.
+[Criteria.EscapeLikeWildcards](../../api/dotnet/Serenity.Net.Services/Serenity.Data/Criteria/EscapeLikeWildcards.md) escapes a literal value for a given escape character (escaping the escape character itself first, then `%`, `_` and `[`), returning the value unchanged when there is nothing to escape.
 
 ### UPPER() Function Criteria
 
-For case-insensitive `LIKE` queries, all the `LIKE` methods accept an `upper` parameter that wraps both sides in an `UPPER(...)` function call — the resulting [FunctionCallCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/FunctionCallCriteria.md) / [UpperFunctionCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/UpperFunctionCriteria.md) is rendered by the server and can also be produced by the client's `Criteria` helpers:
+For case-insensitive `LIKE` queries, all the `LIKE` methods accept an `upper` parameter that wraps both sides in an `UPPER(...)` function call — the resulting [FunctionCallCriteria](../../api/dotnet/Serenity.Net.Services/Serenity.Data/FunctionCallCriteria.md) / [UpperFunctionCriteria](../../api/dotnet/Serenity.Net.Services/Serenity.Data/UpperFunctionCriteria.md) is rendered by the server and can also be produced by the client's `Criteria` helpers:
 
 ```cs
 q.Where(fld.Name.StartsWith("admin", upper: true));
@@ -495,31 +495,31 @@ WHERE
 
 The criteria system is built from a small set of classes that derive from `BaseCriteria`:
 
-- [Criteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/Criteria.md) — a field name or SQL expression (the most common).
-- [ValueCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/ValueCriteria.md) — wraps a value; used internally when you compare a field to an inline value (e.g. `field == 5`). It snapshots the passed values in its constructor, so a criteria can no longer be changed after creation.
-- [ParamCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/ParamCriteria.md) — an explicitly named parameter (`@myparam`).
-- [ConstantCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/ConstantCriteria.md) — a constant value that isn't parameterized.
+- [Criteria](../../api/dotnet/Serenity.Net.Services/Serenity.Data/Criteria.md) — a field name or SQL expression (the most common).
+- [ValueCriteria](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ValueCriteria.md) — wraps a value; used internally when you compare a field to an inline value (e.g. `field == 5`). It snapshots the passed values in its constructor, so a criteria can no longer be changed after creation.
+- [ParamCriteria](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ParamCriteria.md) — an explicitly named parameter (`@myparam`).
+- [ConstantCriteria](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ConstantCriteria.md) — a constant value that isn't parameterized.
 - `BinaryCriteria` — combines two criteria with an operator (e.g. `a & b`).
 - `UnaryCriteria` — applies a unary operator (e.g. `!a`, `a.IsNull()`).
-- [FunctionCallCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/FunctionCallCriteria.md) — a function call (e.g. `UPPER(...)`).
-- [UpperFunctionCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/UpperFunctionCriteria.md) — an `UPPER(...)` function call.
+- [FunctionCallCriteria](../../api/dotnet/Serenity.Net.Services/Serenity.Data/FunctionCallCriteria.md) — a function call (e.g. `UPPER(...)`).
+- [UpperFunctionCriteria](../../api/dotnet/Serenity.Net.Services/Serenity.Data/UpperFunctionCriteria.md) — an `UPPER(...)` function call.
 
 ## CriteriaOperator
 
-[CriteriaOperator](../api/dotnet/Serenity.Net.Services/Serenity.Data/CriteriaOperator.md) is the enum of operators used by criteria: `Paren`, `Not`, `IsNull`, `IsNotNull`, `Exists`, `AND`, `OR`, `XOR`, `EQ`, `NE`, `GT`, `GE`, `LT`, `LE`, `In`, `NotIn`, `Like`, `NotLike`, and others. It's used internally by the criteria classes and by the JSON converter.
+[CriteriaOperator](../../api/dotnet/Serenity.Net.Services/Serenity.Data/CriteriaOperator.md) is the enum of operators used by criteria: `Paren`, `Not`, `IsNull`, `IsNotNull`, `Exists`, `AND`, `OR`, `XOR`, `EQ`, `NE`, `GT`, `GE`, `LT`, `LE`, `In`, `NotIn`, `Like`, `NotLike`, and others. It's used internally by the criteria classes and by the JSON converter.
 
 ## JSON Serialization of Criteria
 
 Criteria objects can be serialized to and from JSON. This is used when a client sends a criteria (e.g. a filter) to a service.
 
-- [JsonCriteriaConverter](../api/dotnet/Serenity.Net.Services/Serenity.Data/JsonCriteriaConverter.md) — serializes/deserializes a `BaseCriteria` to/from a JSON array structure (e.g. `["Field", ">", 5]`).
-- [JsonSafeCriteriaConverter](../api/dotnet/Serenity.Net.Services/Serenity.Data/JsonSafeCriteriaConverter.md) — like the above, but validates the criteria on deserialization for safety.
+- [JsonCriteriaConverter](../../api/dotnet/Serenity.Net.Services/Serenity.Data/JsonCriteriaConverter.md) — serializes/deserializes a `BaseCriteria` to/from a JSON array structure (e.g. `["Field", ">", 5]`).
+- [JsonSafeCriteriaConverter](../../api/dotnet/Serenity.Net.Services/Serenity.Data/JsonSafeCriteriaConverter.md) — like the above, but validates the criteria on deserialization for safety.
 
 For `LIKE` criteria with an escape character, the serialized array contains a fourth member with the escape character (e.g. `["Name", "like", "%50!%%", "!"]`). Binary criteria without an escape character serialize as a three-element array. The client-side `Criteria.parse` supports the `ESCAPE` syntax as well — see [Criteria (Client-Side)](../ui/criteria.md).
 
 ## Validating User-Provided Criteria
 
-When you accept a criteria from a client (e.g. a filter in a `ListRequest`), you should validate it to prevent SQL injection. [SafeCriteriaValidator](../api/dotnet/Serenity.Net.Services/Serenity.Data/SafeCriteriaValidator.md) does this:
+When you accept a criteria from a client (e.g. a filter in a `ListRequest`), you should validate it to prevent SQL injection. [SafeCriteriaValidator](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SafeCriteriaValidator.md) does this:
 
 ```cs
 var validator = new SafeCriteriaValidator();
@@ -535,4 +535,4 @@ The `JsonSafeCriteriaConverter` applies this validation automatically when deser
 
 ## BaseCriteriaVisitor
 
-[BaseCriteriaVisitor](../api/dotnet/Serenity.Net.Services/Serenity.Data/BaseCriteriaVisitor.md) is a visitor that walks a criteria tree. It's the base for `SafeCriteriaValidator` and can be used to inspect or transform criteria (e.g. to rewrite field references).
+[BaseCriteriaVisitor](../../api/dotnet/Serenity.Net.Services/Serenity.Data/BaseCriteriaVisitor.md) is a visitor that walks a criteria tree. It's the base for `SafeCriteriaValidator` and can be used to inspect or transform criteria (e.g. to rewrite field references).

@@ -1,4 +1,4 @@
-# TwoLevelCacheExtensions.Get&lt;TItem&gt; method (1 of 2)
+# TwoLevelCacheExtensions.Get&lt;TItem&gt; method (1 of 3)
 
 Tries to read a value from local cache. If it is not found there, tries the distributed cache. If neither contains the specified key, produces value by calling a loader function and adds the value to local and distributed cache for a given expiration time. By using a group key, all items on both cache types that are members of this group can be expired at once.
 
@@ -28,7 +28,41 @@ To not check group generation every time an item is requested, generation number
 
 ---
 
-# TwoLevelCacheExtensions.Get&lt;TItem&gt; method (2 of 2)
+# TwoLevelCacheExtensions.Get&lt;TItem&gt; method (2 of 3)
+
+Tries to read a value from local cache. If it is not found there, tries the distributed cache. If neither contains the specified key, or any of the groups it depends on is expired, produces value by calling a loader function and adds the value to local and distributed cache for a given expiration time. An item can also expire about 5 seconds later on other servers, as the generations are cached locally for that long.
+
+```csharp
+public static TItem? Get<TItem>(this ITwoLevelCache cache, string cacheKey, 
+    TimeSpan localExpiration, TimeSpan remoteExpiration, IReadOnlyList<string> groupKeys, 
+    Func<TItem?> loader)
+    where TItem : class
+```
+
+| parameter | description |
+| --- | --- |
+| TItem | Data type |
+| cache | Two level cache |
+| cacheKey | The item key for local and distributed cache |
+| localExpiration | Local expiration |
+| remoteExpiration | Distributed cache expiration (is usually same with local expiration) |
+| groupKeys | Group keys that hold the generations. Expiring any of them expires the item. |
+| loader | The delegate that will be called to generate value, if not found in local cache, or distributed cache, or all found items are expired. |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | *groupKeys* is empty. |
+
+## See Also
+
+* interface [ITwoLevelCache](../../Serenity.Abstractions/ITwoLevelCache.md)
+* class [TwoLevelCacheExtensions](../TwoLevelCacheExtensions.md)
+
+---
+
+# TwoLevelCacheExtensions.Get&lt;TItem&gt; method (3 of 3)
 
 Tries to read a value from local cache. If it is not found there, tries the distributed cache. If neither contains the specified key, produces value by calling a loader function and adds the value to local and distributed cache for a given expiration time. By using a group key, all items on both cache types that are members of this group can be expired at once.
 

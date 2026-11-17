@@ -4,7 +4,7 @@ Every row has a nested `RowFields` class that holds its field objects and table 
 
 ## `RowFieldsBase`
 
-[RowFieldsBase](../api/dotnet/Serenity.Net.Services/Serenity.Data/RowFieldsBase.md) is the base class for a row's fields collection. It's a `Collection<Field>` that also implements `IAlias` and `IHaveJoins`, so it carries:
+[RowFieldsBase](../../api/dotnet/Serenity.Net.Services/Serenity.Data/RowFieldsBase.md) is the base class for a row's fields collection. It's a `Collection<Field>` that also implements `IAlias` and `IHaveJoins`, so it carries:
 
 - **Table metadata** — the table name, schema, connection key, and the default alias (`T0`).
 - **Field lookup** — fields are indexed by name and property name, so they can be found quickly.
@@ -35,7 +35,7 @@ The framework matches the `Name` field to the `Name` property by name, and initi
 
 ## Resolving Fields
 
-The fields instance for a row type is resolved through [IRowFieldsProvider](../api/dotnet/Serenity.Net.Services/Serenity.Data/IRowFieldsProvider.md):
+The fields instance for a row type is resolved through [IRowFieldsProvider](../../api/dotnet/Serenity.Net.Services/Serenity.Data/IRowFieldsProvider.md):
 
 ```cs
 public interface IRowFieldsProvider
@@ -50,7 +50,7 @@ public interface IRowFieldsProvider
 
 ### `DefaultRowFieldsProvider`
 
-[DefaultRowFieldsProvider](../api/dotnet/Serenity.Net.Services/Serenity.Data/DefaultRowFieldsProvider.md) is the default implementation. It creates fields instances through the DI container (`ActivatorUtilities.CreateInstance`), caches them per type (and per type+alias), and initializes them:
+[DefaultRowFieldsProvider](../../api/dotnet/Serenity.Net.Services/Serenity.Data/DefaultRowFieldsProvider.md) is the default implementation. It creates fields instances through the DI container (`ActivatorUtilities.CreateInstance`), caches them per type (and per type+alias), and initializes them:
 
 - Applies annotation types for the row (via `IAnnotationTypeRegistry`).
 - Determines the SQL dialect from the connection string.
@@ -59,7 +59,7 @@ public interface IRowFieldsProvider
 
 ### `FallbackRowFieldsProvider`
 
-[FallbackRowFieldsProvider](../api/dotnet/Serenity.Net.Services/Serenity.Data/FallbackRowFieldsProvider.md) is a fallback that creates fields instances without DI (used in contexts where the service provider isn't available, e.g. in the code generator).
+[FallbackRowFieldsProvider](../../api/dotnet/Serenity.Net.Services/Serenity.Data/FallbackRowFieldsProvider.md) is a fallback that creates fields instances without DI (used in contexts where the service provider isn't available, e.g. in the code generator).
 
 ## Public Names
 
@@ -120,7 +120,7 @@ public sealed class MyUserRow : Row<MyUserRow.RowFields>, IPasswordRow
 
 String values are compared with a per-field comparer so that change detection, unique checks and local (in-memory) operations can honor a database's collation (e.g. case-insensitive or Turkish culture):
 
-- [ComparerAttribute](../api/dotnet/Serenity.Net.Services/Serenity.Data/ComparerAttribute.md) can be applied to a row class (affecting all of its fields) or to a single field property to override the row, connection or global setting. [ComparerResolver](../api/dotnet/Serenity.Net.Services/Serenity.Data/ComparerResolver.md) parses specifications like `"OrdinalIgnoreCase"`, `"tr-TR"` or `"tr-TR:IgnoreCase"` into a `StringComparer`:
+- [ComparerAttribute](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ComparerAttribute.md) can be applied to a row class (affecting all of its fields) or to a single field property to override the row, connection or global setting. [ComparerResolver](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ComparerResolver.md) parses specifications like `"OrdinalIgnoreCase"`, `"tr-TR"` or `"tr-TR:IgnoreCase"` into a `StringComparer`:
 
 ```cs
 [Comparer("OrdinalIgnoreCase")] // applies to all string fields of this row
@@ -139,7 +139,7 @@ public sealed class CodeRow : Row<CodeRow.RowFields>, IIdRow
 
 ## `IRowTypeRegistry`
 
-[IRowTypeRegistry](../api/dotnet/Serenity.Net.Services/Serenity.Data/IRowTypeRegistry.md) provides a registry of all row types in the application:
+[IRowTypeRegistry](../../api/dotnet/Serenity.Net.Services/Serenity.Data/IRowTypeRegistry.md) provides a registry of all row types in the application:
 
 ```cs
 public interface IRowTypeRegistry
@@ -152,19 +152,49 @@ public interface IRowTypeRegistry
 - `AllRowTypes` — all row types discovered through the type source.
 - `ByConnectionKey(connectionKey)` — row types for a given connection key.
 
-[DefaultRowTypeRegistry](../api/dotnet/Serenity.Net.Services/Serenity.Data/DefaultRowTypeRegistry.md) is the default implementation, which scans the type source for `IRow` types.
+[DefaultRowTypeRegistry](../../api/dotnet/Serenity.Net.Services/Serenity.Data/DefaultRowTypeRegistry.md) is the default implementation, which scans the type source for `IRow` types.
 
 `IRowTypeRegistry` is used by services that need to find rows by connection or table (e.g. the `ValidateParentBehavior`, report generators, and the schema provider).
 
-## `RowValidationContext`
+## `GetPropertyAttribute` / `GetPropertyAttributes`
 
-[RowValidationContext](../api/dotnet/Serenity.Net.Services/Serenity.Services/RowValidationContext.md) is the validation context passed to `ICustomValidator` implementations when validating a row. It provides:
+Row fields are properties, and Serenity resolves their attributes with the
+[`ReflectionExtensions.GetPropertyAttribute`](../../api/dotnet/Serenity.Net.Core/Serenity/ReflectionExtensions.md)
+/ `GetPropertyAttributes` extension methods rather than with
+`GetCustomAttribute`, so a property also gets the attributes declared on the
+members of the interfaces it implements, and the ones exposed by its
+*combination attributes* (see [`WrappedProperty`](../reflection.md#wrappedproperty)):
 
-- `Connection` — the connection used for validation.
-- `Row` — the row being validated.
-- `Value` — the current field value.
-- `Localizer` — the text localizer.
-- `GetFieldValue(fieldName)` — reads a field value by name (used for cross-field validation).
+```cs
+var size = property.GetPropertyAttribute<SizeAttribute>()?.Value;
+var columns = property.GetPropertyAttributes<ColumnAttribute>().ToList();
+```
+
+The precedence is the usual one: own and inherited attributes win, attributes
+whose type allows multiple instances (`AllowMultiple`, e.g. `[Tag]`) are
+appended from interfaces, explicit interface implementations are ignored, and
+interfaces are ordered deterministically. This means a property can declare its
+`[IdProperty]`, `[NameProperty]`, `[Column]` or `[Size]` on a shared interface:
+
+```cs
+public interface IHasCode
+{
+    [Size(20), Column("Code")]
+    string? Code { get; set; }
+}
+
+public sealed class MyRow : Row<MyRow.RowFields>, IIdRow, IHasCode
+{
+    [IdProperty]
+    public int? Id { get => fields.Id[this]; set => fields.Id[this] = value; }
+
+    public string? Code { get => fields.Code[this]; set => fields.Code[this] = value; }
+}
+```
+
+Validation, property grids, row mapping, localization, reporting and the server
+typings all use this resolution, so interface-level attributes behave like ones
+written on the property itself. See [Reflection](../reflection.md) for the details.
 
 ## See Also
 
@@ -173,3 +203,5 @@ public interface IRowTypeRegistry
 - [Mapping](mapping.md)
 - [Field Flags](field-flags.md)
 - [Fluent SQL](fluent-sql.md)
+- [Reflection](../reflection.md) — `WrappedProperty` and attribute resolution
+- [Validation](../../services/validation.md) — the rules a field is checked by

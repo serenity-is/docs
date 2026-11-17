@@ -14,9 +14,11 @@ public sealed class FormScriptAttribute : Attribute
 | --- | --- |
 | [FormScriptAttribute](FormScriptAttribute/FormScriptAttribute.md)() | Initializes a new instance of the [`FormScriptAttribute`](./FormScriptAttribute.md) class. The key of the form script will be the full name of the type this is placed on. |
 | [FormScriptAttribute](FormScriptAttribute/FormScriptAttribute.md)(…) | Initializes a new instance of the [`FormScriptAttribute`](./FormScriptAttribute.md) class. |
-| [Key](FormScriptAttribute/Key.md) { get; } | Gets the key. |
+| [InferKey](FormScriptAttribute/InferKey.md) { get; set; } | Indicates whether the key should be inferred automatically from the type name, module name and namespace. For compat, this defaults to false, resulting in using the full type name as the key. |
+| [Key](FormScriptAttribute/Key.md) { get; } | Gets the key. If no key is set, and InferKey is true, the key will be inferred automatically from the type name, module name and namespace. If InferKey is false, the key is full type name of the type this attribute is placed on. |
 | [LocalTextPrefix](FormScriptAttribute/LocalTextPrefix.md) { get; set; } | If set, modifies the local text prefix that should be used instead of the automatically calculated one from Key and Namespace |
+| static [AutoFormKeyFor](FormScriptAttribute/AutoFormKeyFor.md)(…) | Gets the automatically inferred form key for the specified type. |
 
 ## See Also
 
-* **Source:** *[FormScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Extensibility/FormScriptAttribute.cs)*
+* **Source:** *[FormScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/1ae08f36779a1f22f8f4600e4e68d4a9c8a89382/src/core/ComponentModel/Extensibility/FormScriptAttribute.cs)*

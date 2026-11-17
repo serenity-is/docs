@@ -16,6 +16,7 @@ public class ListResponse<T> : ServiceResponse, IListResponse
 | name | description |
 | --- | --- |
 | [ListResponse](ListResponse-1/ListResponse.md)() | The default constructor. |
+| [Aggregates](ListResponse-1/Aggregates.md) { get; set; } | The aggregates of all the rows the request matches, and of their groups, when [`Aggregates`](./ListRequest/Aggregates.md) or [`GroupBy`](./ListRequest/GroupBy.md) is requested. It is null when the handler doesn't support aggregates, in which case they can only be calculated from the entities that are returned. |
 | [Entities](ListResponse-1/Entities.md) { get; set; } | Entities |
 | [More](ListResponse-1/More.md) { get; set; } | Whether more records are available beyond the returned page, when requested. |
 | [Skip](ListResponse-1/Skip.md) { get; set; } |  |
@@ -27,4 +28,4 @@ public class ListResponse<T> : ServiceResponse, IListResponse
 
 * class [ServiceResponse](./ServiceResponse.md)
 * interface [IListResponse](./IListResponse.md)
-* **Source:** *[ListResponse.cs](https://github.com/serenity-is/Serenity/blob/7942b778cba1362623aa070554117a88735f249a/src/services/Models/ListResponse.cs)*
+* **Source:** *[ListResponse.cs](https://github.com/serenity-is/Serenity/blob/2b2dc408169894d8cc7befbe94a14eef08d49400/src/services/Models/ListResponse.cs)*

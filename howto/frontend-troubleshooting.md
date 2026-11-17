@@ -70,6 +70,16 @@ If a signal-driven DOM update doesn't appear:
 - Validation rules are attached with `addValidationRule` and run on form submit.
 - A rule returns `null`/empty for valid, a string for invalid.
 - If a field isn't validated, check that it has a `name` attribute and is inside the form.
+- Rules the server declared for a field (`PropertyItem.validationRules`) are attached by the `PropertyGrid` through the
+  `ValidationRuleTypeRegistry`, and skipped for read-only and hidden fields — if a field's server rule isn't applied, make
+  sure the rule class is registered by its type key (`static override [Symbol.typeInfo] = this.registerRule("MyApp.")`) and,
+  for a rule implementing `LazyLoadInclude`, that the layout head includes `@Html.LazyTypes()`.
+- A lazily loaded editor can't save its value until its widget exists: wait for `PropertyGrid.getEditorsLoading()` before
+  saving.
+- A field hidden by a `visibleWhen` condition is not validated (and is not required) — see
+  [Conditional Fields](../editors/propertygrid.md#conditional-fields).
+- If code that looks up a field's editor finds a select2 container instead, it is targeting the container, which now carries
+  `editor-like` rather than `editor`.
 
 ## Service Errors
 

@@ -272,6 +272,32 @@ services.AddSingleton<ILocalTextInitializer, MyTextInitializer>();
 
 Please note that the order is important here, e.g. the texts added later will override the texts that may be added before them for the same text key and language ID pairs.
 
+### Texts kept in application data
+
+When the texts live in your own tables (user-editable labels, dashboard titles, ...), implement
+[IDynamicLocalTextSource](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IDynamicLocalTextSource.md)
+instead of replacing the initializer. Its `AddTexts(registry)` is called by `DefaultLocalTextInitializer` **after** the base
+and JSON texts (so it only fills in what's missing), and it is called again whenever the texts are re-initialized, e.g. after
+the translations are reset:
+
+```cs
+public class MyTextSource(IMyTextRepository repository) : IDynamicLocalTextSource
+{
+    public void AddTexts(ILocalTextRegistry registry)
+    {
+        foreach (var text in repository.List())
+            registry.Add(text.LanguageId, text.Key, text.Text);
+    }
+}
+
+services.AddSingleton<IDynamicLocalTextSource, MyTextSource>();
+```
+
+Such texts can also be surfaced on the *Administration / Translations* page by implementing
+[ITranslationKeyProvider](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/ITranslationKeyProvider.md): its `GetKeys()`
+returns the keys with the source text each is meant to be translated from, so the page lists them next to the registered
+texts (only the keys and their source texts, not the translations).
+
 # JSON Local Texts
 
 Serenity supports local text registration through JSON files containing a simple key/value dictionary:
@@ -553,4 +579,19 @@ Enums.Something.Value1|          |First Value
 Enums.Something.Value2|          |Second Value
 
 Please note that overriding the enum key is NOT recommended, as it is known to cause problems while using modular TypeScript.
+
+Since 10.7.0 the key can also be **inferred** instead of spelled out, with `[EnumKey(InferKey = true)]` or the
+parameterless `[EnumKey]` (which implies `InferKey`). The key is derived the same way as form and columns keys: from the
+`[Module]` attribute when the type has one, otherwise from the namespace, dropping the root namespace and a trailing
+`.Entities` / `.Enums` segment:
+
+```cs
+namespace MovieDB.Movie.Entities;
+
+[EnumKey] // "Movie.MovieKind", not "MovieDB.Movie.Entities.MovieKind"
+public enum MovieKind { /* ... */ }
+```
+
+`[EnumKey]` also works on a `Serenity.StringEnum` class, whose member texts are registered under the same
+`Enums.<key>.<name>` keys.
 

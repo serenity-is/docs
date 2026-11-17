@@ -88,12 +88,12 @@ You may also turn off persistance for a grid class by returning *null* from this
 By default, all settings noted at start are saved, like visible columns, widths, filters etc. You may choose to not persist / restore specific settings. This is controlled by *gridPersistanceFlags* method:
 
 ```ts
-import { GridPersistanceFlags } from '@serenity-is/corelib';
+import { GridPersistenceFlags } from '@serenity-is/corelib';
 
 export class OrderGrid<P={}> extends EntityGrid<OrderRow, P> {
     // ...
         
-    protected gridPersistanceFlags(): GridPersistanceFlags {
+    protected gridPersistanceFlags(): GridPersistenceFlags {
         return {
             columnWidths: false // We don't want to save column widths
         };
@@ -101,10 +101,11 @@ export class OrderGrid<P={}> extends EntityGrid<OrderRow, P> {
 }
 ```
 
-Here is the set of complete flags: [GridPersistanceFlags](/api/js/corelib/interfaces/GridPersistanceFlags.md)
+Here is the set of complete flags: [GridPersistenceFlags](../api/js/corelib/interfaces/GridPersistenceFlags.md)
 
 ```ts
-interface GridPersistanceFlags {
+interface GridPersistenceFlags {
+    columnPinning?: boolean;
     columnWidths?: boolean;
     columnVisibility?: boolean;
     sortColumns?: boolean;
@@ -161,8 +162,11 @@ export class OrderGrid<P={}> extends EntityGrid<OrderRow, P> {
 If you need to save / restore settings manually, you may use methods below:
 
 ```ts
-protected getCurrentSettings(flags?: GridPersistanceFlags): PersistedGridSettings;
-protected restoreSettings(settings?: PersistedGridSettings, flags?: GridPersistanceFlags): void;
+protected getCurrentSettings(flags?: GridPersistenceFlags): PersistedGridSettings;
+protected restoreSettings(settings?: PersistedGridSettings, flags?: GridPersistenceFlags): void;
 ```
 
 These are protected methods of DataGrid, so can only be called from subclasses.
+
+> The old misspelled type name `GridPersistanceFlags` (and the `gridPersistanceFlags` method that it types) is kept as a
+> deprecated alias for backwards compatibility; new code should use `GridPersistenceFlags`.

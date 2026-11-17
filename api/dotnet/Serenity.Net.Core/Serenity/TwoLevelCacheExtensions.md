@@ -12,12 +12,12 @@ public static class TwoLevelCacheExtensions
 | name | description |
 | --- | --- |
 | static [ExpireGroupItems](TwoLevelCacheExtensions/ExpireGroupItems.md)(…) | Changes a group generation value, so that all items that depend on it are expired. |
-| static [Get&lt;TItem&gt;](TwoLevelCacheExtensions/Get.md)(…) | Tries to read a value from local cache. If it is not found there, tries the distributed cache. If neither contains the specified key, produces value by calling a loader function and adds the value to local and distributed cache for a given expiration time. By using a group key, all items on both cache types that are members of this group can be expired at once. (2 methods) |
-| static [GetLocalStoreOnly&lt;TItem&gt;](TwoLevelCacheExtensions/GetLocalStoreOnly.md)(…) | Tries to read a value from local cache. If it is not found there produces value by calling a loader function and adds the value to local cache for a given expiration time. By using a generation (item version) key, all items on local cache that are members of this group can be expired at once. |
+| static [Get&lt;TItem&gt;](TwoLevelCacheExtensions/Get.md)(…) | Tries to read a value from local cache. If it is not found there, tries the distributed cache. If neither contains the specified key, produces value by calling a loader function and adds the value to local and distributed cache for a given expiration time. By using a group key, all items on both cache types that are members of this group can be expired at once. (3 methods) |
+| static [GetLocalStoreOnly&lt;TItem&gt;](TwoLevelCacheExtensions/GetLocalStoreOnly.md)(…) | Tries to read a value from local cache. If it is not found there produces value by calling a loader function and adds the value to local cache for a given expiration time. By using a generation (item version) key, all items on local cache that are members of this group can be expired at once. (2 methods) |
 | static [Remove](TwoLevelCacheExtensions/Remove.md)(…) | Removes a key from local, distributed caches, and removes their generation version information. |
 | static [Set&lt;TItem&gt;](TwoLevelCacheExtensions/Set.md)(…) | Creates or overrides a specified entry in the local and distributed cache. (2 methods) |
 | static [SetLocalStoreOnly&lt;TItem&gt;](TwoLevelCacheExtensions/SetLocalStoreOnly.md)(…) | Creates or overrides a specified entry in the local cache. |
 
 ## See Also
 
-* **Source:** *[TwoLevelCacheExtensions.cs](https://github.com/serenity-is/Serenity/blob/eef6be1d7741640aed4ce405c3b44984620b84be/src/core/Caching/TwoLevelCacheExtensions.cs)*
+* **Source:** *[TwoLevelCacheExtensions.cs](https://github.com/serenity-is/Serenity/blob/56991f31ee4d57ba97b6838d28dbc96c25d113f7/src/core/Caching/TwoLevelCacheExtensions.cs)*

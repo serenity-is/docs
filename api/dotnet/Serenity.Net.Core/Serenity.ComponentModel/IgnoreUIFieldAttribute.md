@@ -3,8 +3,10 @@
 
 Skips a property while generating a grid column, form field, or report form parameter list. Use this to ignore a property for UI, but still use it for other purposes like JSON serialization. This might be useful for example when a type is used as a Service Request and Form Declaration at the same time. Unlike TransformIgnoreAttribute, this will generate the property in request types, but skip it in UI generation.
 
+It can also be placed on the members of a [`StringEnum`](../Serenity/StringEnum.md), like [`TransformIgnoreAttribute`](./TransformIgnoreAttribute.md), to keep them out of the generated type on the client. Such members are still valid values on the server.
+
 ```csharp
-[AttributeUsage(AttributeTargets.Property)]
+[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
 public class IgnoreUIFieldAttribute : Attribute
 ```
 
@@ -16,4 +18,4 @@ public class IgnoreUIFieldAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[IgnoreUIFieldAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/IgnoreUIFieldAttribute.cs)*
+* **Source:** *[IgnoreUIFieldAttribute.cs](https://github.com/serenity-is/Serenity/blob/a75b99310ca194a360f1da1b131f539fd279c957/src/core/ComponentModel/PropertyGrid/IgnoreUIFieldAttribute.cs)*

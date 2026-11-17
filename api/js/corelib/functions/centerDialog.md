@@ -4,7 +4,7 @@
 
 > **centerDialog**(`el`): `void`
 
-Defined in: [src/compat/layout.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L221)
+Defined in: [src/compat/layout.ts:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L231)
 
 Centers a jQuery UI dialog containing the given element within the viewport.
 Compat shim for `centerDialog`. Requires jQuery and jQuery UI `position`; clamps negative `left` / `top` to `0`.

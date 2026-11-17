@@ -1,7 +1,7 @@
 # ComparerResolver class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Parses comparer specifications like "Ordinal", "OrdinalIgnoreCase", "CurrentCulture", "CurrentCultureIgnoreCase", "tr-TR" or "tr-TR:IgnoreCase" into a StringComparer.
+Parses comparer specifications like "Ordinal", "OrdinalIgnoreCase", "CurrentCulture", "CurrentCultureIgnoreCase", "tr-TR", "tr-TR:IgnoreCase" or "tr-TR:IgnoreCase:IgnoreAccents" into a StringComparer.
 
 ```csharp
 public static class ComparerResolver
@@ -16,4 +16,4 @@ public static class ComparerResolver
 
 ## See Also
 
-* **Source:** *[ComparerResolver.cs](https://github.com/serenity-is/Serenity/blob/f828b609b385564332aeeec6f0d6a031cde4142f/src/services/Data/SqlHelpers/ComparerResolver.cs)*
+* **Source:** *[ComparerResolver.cs](https://github.com/serenity-is/Serenity/blob/64f4d46040be54ec435d5a0cabde26e1c69fe085/src/services/Data/SqlHelpers/ComparerResolver.cs)*

@@ -318,6 +318,20 @@ CachedProfile LoadProfileFromDB(IDbConnection connection, int userID)
 }
 ```
 
+#### Depending on several groups
+
+An item often depends on more than one group of data. Overloads of `Get` and `GetLocalStoreOnly` that take a
+`IReadOnlyList<string>` of group keys make an item expire when **any** of its groups changes, so it doesn't have to be
+copied or duplicated into one group:
+
+```cs
+var navigation = cache.GetLocalStoreOnly("LeftNavigationModel:" + userId, TimeSpan.Zero,
+    [UserPermissionRow.Fields.GenerationKey, NavigationCaching.ItemsGroupKey],
+    () => BuildNavigation(userId));
+```
+
+The single-group overloads are unchanged and stay compatible, so existing code keeps working.
+
 ## TwoLevelCache.GetLocalStoreOnly Method
 
 If you only want to store items in the local cache and not distributed cache, GetLocalStoreOnly can be useful.

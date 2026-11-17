@@ -32,10 +32,17 @@ public enum ListRequestCapabilities
 | ExcludeTotalCount | `0x4000` | The source honors ExcludeTotalCount. |
 | IncludeMore | `0x8000` | The handler supports the IncludeMore request option. |
 | PagingOptions | `0xC060` | Combined paging options, including the IncludeMore option. |
-| SourceAdapter | `0xC87F` | Capabilities supported by the in-memory list request source adapter by default. |
-| Baseline | `0xFFFF` | Fixed set of baseline capabilities. This value will not be expanded with future capabilities added to `ListRequest` or `ListRequestHandler` implementations. |
-| All | `0xFFFF` | Currently equivalent to Baseline. May include capabilities added to `ListRequest` and `ListRequestHandler` implementations in the future. |
+| Aggregates | `0x10000` | The handler calculates Aggregates from all the rows the request matches. |
+| GroupBy | `0x20000` | The handler calculates the aggregates of the groups of GroupBy. |
+| ExcludeEntities | `0x40000` | The handler honors ExcludeEntities. |
+| TimeZone | `0x80000` | The handler groups the dates by the days of the TimeZone of the request. |
+| AggregateOptions | `0xF0000` | Combined aggregate, group, entity exclusion and time zone options. Only the entity exclusion is in ListHandler, and all of them are in ProListHandler. |
+| SourceAdapter | `0xFC87F` | Capabilities supported by the in-memory list request source adapter by default. |
+| Baseline | `0x4FFFF` | Fixed set of baseline capabilities. This value will not be expanded with future capabilities added to `ListRequest` or `ListRequestHandler` implementations. |
+| ListHandler | `0x4FFFF` | The capabilities of `ListRequestHandler` itself, without the behaviors of Serenity.Pro.Extensions. Currently equivalent to Baseline. May include capabilities added to it in the future. |
+| ProListHandler | `0xFFFFF` | The capabilities of `ListRequestHandler` with the behaviors of Serenity.Pro.Extensions, which are the ones of ListHandler and AggregateOptions. May include capabilities added to them in the future. |
+| All | `0xFFFFF` | All the capabilities, which are currently the ones of ProListHandler. May include capabilities added to `ListRequest` and `ListRequestHandler` implementations in the future. |
 
 ## See Also
 
-* **Source:** *[ListRequestCapabilities.cs](https://github.com/serenity-is/Serenity/blob/7942b778cba1362623aa070554117a88735f249a/src/core/ComponentModel/Services/ListRequestCapabilities.cs)*
+* **Source:** *[ListRequestCapabilities.cs](https://github.com/serenity-is/Serenity/blob/fe192008ef3eb7ca797fe26e985938f11d067e66/src/core/ComponentModel/Services/ListRequestCapabilities.cs)*

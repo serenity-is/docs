@@ -7,7 +7,7 @@ into a Serenity query, write a migration, or debug the SQL Serenity generates.
 
 ## `BracketLocator`
 
-[`BracketLocator`](../api/dotnet/Serenity.Net.Services/Serenity.Data/BracketLocator.md)
+[`BracketLocator`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/BracketLocator.md)
 finds and replaces the `[Identifier]` brackets used by SQL Server in an SQL
 expression, so the expression can be targeted at a different dialect:
 
@@ -25,12 +25,12 @@ Execute.Sql(BracketLocator.ReplaceBrackets(
     connection.GetDialect()));
 ```
 
-It also powers [`SqlConversions.Translate`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlConversions.md),
+It also powers [`SqlConversions.Translate`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlConversions.md),
 which is the modern replacement for the obsolete `SqlHelper.FixCommandText`.
 
 ## `JoinAliasLocator`
 
-[`JoinAliasLocator`](../api/dotnet/Serenity.Net.Services/Serenity.Data/JoinAliasLocator.md)
+[`JoinAliasLocator`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/JoinAliasLocator.md)
 finds the aliases referenced in an SQL expression:
 
 - `Locate(expression)` — returns a `HashSet<string>` of the aliases found (the
@@ -46,7 +46,7 @@ automatically (`EnsureJoinsInExpression`). You generally don't call it directly.
 
 ## `T0ReferenceRemover`
 
-[`T0ReferenceRemover`](../api/dotnet/Serenity.Net.Services/Serenity.Data/T0ReferenceRemover.md)
+[`T0ReferenceRemover`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/T0ReferenceRemover.md)
 removes the `t0.` prefix from an SQL expression:
 
 - `RemoveT0Aliases(expression)` — strips leading `t0.` / `T0.` references, e.g.
@@ -58,7 +58,7 @@ queries do. `SqlUpdate.RemoveT0Reference` is the helper that wraps it.
 
 ## `ParamPrefixReplacer`
 
-[`ParamPrefixReplacer`](../api/dotnet/Serenity.Net.Services/Serenity.Data/ParamPrefixReplacer.md)
+[`ParamPrefixReplacer`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ParamPrefixReplacer.md)
 replaces the `@` parameter prefix in an SQL expression:
 
 - `Replace(expression, paramPrefix)` — turns `@p1` into `:p1` (for Oracle) or the

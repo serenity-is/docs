@@ -18,4 +18,4 @@ public class SqlDateTimeOffsetAttribute : BaseExpressionAttribute
 ## See Also
 
 * class [BaseExpressionAttribute](./BaseExpressionAttribute.md)
-* **Source:** *[SqlDateTimeOffsetAttribute.cs](https://github.com/serenity-is/Serenity/blob/1a8f0b8d86a82010fb35e1c2b9f853493e7f539f/src/services/Data/Mapping/SqlDateTimeOffsetAttribute.cs)*
+* **Source:** *[SqlDateTimeOffsetAttribute.cs](https://github.com/serenity-is/Serenity/blob/01c6c1a2f1de9878f233eb29c6ac73cb685eb01b/src/services/Data/Mapping/SqlDateTimeOffsetAttribute.cs)*

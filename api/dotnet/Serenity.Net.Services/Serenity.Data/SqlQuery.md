@@ -15,6 +15,8 @@ public class SqlQuery : QueryWithParams, IFilterableQuery, IGetExpressionByName,
 | [SqlQuery](SqlQuery/SqlQuery.md)() | Creates a new SqlQuery instance. |
 | [CountRecords](SqlQuery/CountRecords.md) { get; set; } | Gets/sets the flag to get the total record count when paging is used by SKIP/TAKE. A secondary query without SKIP/TAKE is generated to get total record count, when this property is true. |
 | [Text](SqlQuery/Text.md) { get; } | Gets current query text. |
+| [ClearOrderBy](SqlQuery/ClearOrderBy.md)() | Removes the ORDER BY expressions. |
+| [ClearSelect](SqlQuery/ClearSelect.md)() | Removes the selected columns, e.g. to select others from the same sources, filters and joins. |
 | [Clone](SqlQuery/Clone.md)() | Creates a clone of the query. |
 | [Dialect](SqlQuery/Dialect.md)(…) | Sets the dialect (SQL server type / version) for query. |
 | [Distinct](SqlQuery/Distinct.md)(…) | Sets DISTINCT flag. |
@@ -53,4 +55,4 @@ public class SqlQuery : QueryWithParams, IFilterableQuery, IGetExpressionByName,
 * interface [IGetExpressionByName](./IGetExpressionByName.md)
 * interface [ISqlQuery](./ISqlQuery.md)
 * interface [ISqlQueryExtensible](./ISqlQueryExtensible.md)
-* **Source:** *[SqlQuery.cs](https://github.com/serenity-is/Serenity/blob/d07b67482bbb00074c10975037c021ac4de205eb/src/services/Data/FluentSql/SqlQuery.cs)*
+* **Source:** *[SqlQuery.cs](https://github.com/serenity-is/Serenity/blob/6144b41ef39a82d81dd7e4950b256ff86e79a141/src/services/Data/FluentSql/SqlQuery.cs)*

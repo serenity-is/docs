@@ -21,4 +21,4 @@ public static class EnumMapper
 
 ## See Also
 
-* **Source:** *[EnumMapper.cs](https://github.com/serenity-is/Serenity/blob/0c34357a17d56458ca5b7a3be25f42666b9eb050/src/core/Helpers/EnumMapper.cs)*
+* **Source:** *[EnumMapper.cs](https://github.com/serenity-is/Serenity/blob/1ae08f36779a1f22f8f4600e4e68d4a9c8a89382/src/core/Helpers/EnumMapper.cs)*

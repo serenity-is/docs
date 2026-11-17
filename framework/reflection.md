@@ -18,7 +18,28 @@ public interface IPropertyInfo
 
 ## `WrappedProperty`
 
-[WrappedProperty](../api/dotnet/Serenity.Net.Core/Serenity.Reflection/WrappedProperty.md) is the default implementation of `IPropertyInfo` that wraps a `PropertyInfo`. It caches the property's attributes and supports the `AttributeOrigin` filtering.
+[WrappedProperty](../api/dotnet/Serenity.Net.Core/Serenity.Reflection/WrappedProperty.md) is the default implementation of `IPropertyInfo` that wraps a `PropertyInfo`. It caches the property's attributes and supports the `AttributeOrigin` filtering. A wrapped property also resolves the members of the interfaces its property implements, so a property receives the attributes its interface members declare (`GetImplementedInterfaceProperties`, `AllowsMultiple`).
+
+## Property attribute resolution
+
+Property items, validation, row mapping, localization, reporting and the server typings don't call `GetCustomAttribute` on a property directly. They use the [`ReflectionExtensions.GetPropertyAttribute`](../api/dotnet/Serenity.Net.Core/Serenity/ReflectionExtensions.md) / `GetPropertyAttributes` extension methods, which resolve attributes *as Serenity sees them*:
+
+- the property's own attributes, and the inherited ones from base classes,
+- the ones exposed by its **combination attributes** (`IIntrinsicPropertyAttributeProvider.PropertyAttributes`),
+- the ones declared on the members of the **interfaces** the property implements.
+
+Rules:
+
+- Own and base attributes **win**. An attribute set directly on a property is not shadowed by the same attribute type coming from a combination attribute, unless the type allows multiple instances (`AllowsMultiple`, e.g. `Tag`), in which case they are all kept.
+- Repeatable attributes from interfaces are appended; explicit interface implementations are ignored; interfaces are ordered deterministically.
+- Combination attributes are read from `CustomAttributes` **metadata** instead of `GetCustomAttributes`, so their constructors never run during reflection. This is what makes an attribute that refers to its own row and reads its attributes in its constructor (e.g. a `ForeignKey`-based one) safe from infinite recursion.
+
+```cs
+var size = property.GetPropertyAttribute<SizeAttribute>()?.Value;
+foreach (var column in property.GetPropertyAttributes<ColumnAttribute>()) { /* ... */ }
+```
+
+The RowFields source generator (StartSharp) applies the same resolution for `[IdProperty]`, `[NameProperty]`, `[Column]` and `[Size]`, so generated code matches what the runtime resolves.
 
 ## `AttributeOrigin`
 
@@ -35,7 +56,7 @@ public interface IPropertyInfo
 | `ExcludeInherit` | `Intrinsic` + `Annotation` + `BasedOnField` (no inherited) |
 | `ExcludeBasedOnField` | `Inherit` + `Intrinsic` + `Annotation` (no based-on-field) |
 
-This is how the property item providers combine attributes from a row, its annotation types, and its based-on field into a single view. See [Annotation Types](annotation-types.md) and [Grid Columns](grid-columns.md).
+This is how the property item providers combine attributes from a row, its annotation types, and its based-on field into a single view. See [Annotation Types](data-access/annotation-types.md) and [Grid Columns](grid-columns.md).
 
 ## `CodeWriter`
 
